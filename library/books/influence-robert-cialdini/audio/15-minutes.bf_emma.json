@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "influence-robert-cialdini",
+  "duration": "15-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.93,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/influence-robert-cialdini/scripts/15-minutes.md",
+  "source_script_sha256": "029cdaf67e12925c21b87a4f69c6d2d8da49de9f7d4927560325e73837be150e",
+  "pronunciation_dictionary_sha256": "a2e6c9988d8bc8e6168c775061936cd555f1bbfff628c9f3e8fbcaabcae13908",
+  "pronunciation_terms": [
+    "Cialdini",
+    "Werther"
+  ],
+  "pronunciation_entries_sha256": "1b3358d74995364411d0dbf2aa8a31d7ba13d53ad29e3d9ddf6c59a6cb707121",
+  "script_words": 2137,
+  "audio_seconds": 807.993,
+  "measured_wpm": 158.69,
+  "generated_at": "2026-08-13T12:41:39.544256+00:00"
+}

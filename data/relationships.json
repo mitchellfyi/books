@@ -541,6 +541,114 @@
         "library/books/the-courage-to-be-disliked-kishimi/book.json#sefad-review"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "unreasonable-hospitality-written-by-will-guidara",
+      "source_id": "unreasonable-hospitality-guidara",
+      "target_id": "will-guidara",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/unreasonable-hospitality-guidara/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "socratic-method-written-by-ward-farnsworth",
+      "source_id": "the-socratic-method-farnsworth",
+      "target_id": "ward-farnsworth",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/the-socratic-method-farnsworth/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "farther-reaches-written-by-abraham-maslow",
+      "source_id": "the-farther-reaches-of-human-nature-maslow",
+      "target_id": "abraham-maslow",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/the-farther-reaches-of-human-nature-maslow/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "at-home-written-by-bill-bryson",
+      "source_id": "at-home-bryson",
+      "target_id": "bill-bryson",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/at-home-bryson/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "short-history-written-by-bill-bryson",
+      "source_id": "a-short-history-of-nearly-everything-bryson",
+      "target_id": "bill-bryson",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/a-short-history-of-nearly-everything-bryson/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "influence-written-by-robert-cialdini",
+      "source_id": "influence-robert-cialdini",
+      "target_id": "robert-cialdini",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/influence-robert-cialdini/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "48-laws-written-by-robert-greene",
+      "source_id": "the-48-laws-of-power-greene",
+      "target_id": "robert-greene",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/the-48-laws-of-power-greene/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "supercommunicators-written-by-charles-duhigg",
+      "source_id": "supercommunicators-duhigg",
+      "target_id": "charles-duhigg",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/supercommunicators-duhigg/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "supercommunicators-related-to-power-of-habit",
+      "source_id": "supercommunicators-duhigg",
+      "target_id": "the-power-of-habit-duhigg",
+      "type": "related-to",
+      "basis": "explicit",
+      "description": "Same author, same formula a decade apart: case-story journalism wrapped around one behavioural framework — habits there, conversations here.",
+      "source_refs": [
+        "library/books/supercommunicators-duhigg/book.json#prh-supercommunicators"
+      ],
+      "confidence": "high"
     }
   ]
 }
