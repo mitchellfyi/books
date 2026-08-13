@@ -909,6 +909,18 @@
         "library/books/why-nations-fail-acemoglu/book.json"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "meditations-written-by-marcus-aurelius",
+      "source_id": "meditations-aurelius",
+      "target_id": "marcus-aurelius",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/meditations-aurelius/book.json"
+      ],
+      "confidence": "high"
     }
   ]
 }

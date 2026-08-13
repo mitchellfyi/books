@@ -367,6 +367,30 @@
       "source_url": "https://en.wikipedia.org/wiki/Daron_Acemoglu",
       "verified_at": "2026-08-13",
       "notes": "Turkish [aˈdʒemoːɫu] (Wikipedia lead IPA): the c is a j sound and the ğ is silent — 'ah-jem-OH-loo'. The unassisted phonemizer produced 'a-SEM-oh-gloo' (ɐsˈɛməɡlˌuː), which is wrong."
+    },
+    {
+      "term": "Epictetus",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ˌɛpɪktˈiːtəs",
+        "en-us": "ˌɛpɪktˈiːtəs"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Epictetus",
+      "verified_at": "2026-08-13",
+      "notes": "Standard English /ˌɛpɪkˈtiːtəs/ 'ep-ik-TEE-təs'. The unassisted phonemizer stressed the first syllable with a short second vowel (ˈɛpɪktˌɛtəs)."
+    },
+    {
+      "term": "Commodus",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "kˈɒmədəs",
+        "en-us": "kˈɑːmədəs"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Commodus",
+      "verified_at": "2026-08-13",
+      "notes": "Standard English /ˈkɒmədəs/ 'KOM-ə-dəs'. The unassisted phonemizer produced 'kə-MOD-əs' (kəmˈɒdəs) with wrong stress."
     }
   ]
 }

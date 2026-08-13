@@ -5,137 +5,441 @@
   "content_type": "non-fiction",
   "editorial": {
     "compression_fit": "medium",
-    "complexity": "medium",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "The themes compress; the book does not, because it is a practice rather than an argument — repetition is its method. Fifteen minutes carries what the notebooks are, the core exercises, and the honest account of the man; the value of the full text is doing the reps, which no summary replaces."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "The private notebooks of a Roman emperor — written at night on military campaigns around 170–180 AD, never meant for readers — in which the most powerful man alive coaches himself, entry by entry, to face mortality, anger, flattery, and duty like a Stoic.",
+    "verdict": "The most trustworthy self-help book ever written, because it sold nothing and was addressed to no one — read it not for original philosophy (scholars agree there is little) but as the original of every thought-distancing practice now sold back to us, tested under the heaviest load imaginable.",
+    "source_ids": [
+      "wikipedia-meditations",
+      "rees-verdict",
+      "hays-introduction"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Twelve books of undated personal notes, opening with a ledger of debts — what Marcus learned from each person in his life — then years of nightly self-instruction from the Danube wars: prepare in the morning for the difficult people you will meet; you have power over your judgments, not events; picture the whole of things from above and see how small this grievance is; you could leave life right now — let that decide what you do and say. The notes repeat, circle, and correct themselves, because they were exercises: philosophy done, not argued. Never intended for publication, the manuscript survived antiquity by luck, was first printed in 1558, and became one of the most continuously read books in the world.",
+      "source_ids": [
+        "wikipedia-meditations",
+        "hays-introduction"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Disturbance comes not from events but from judgments about events, which are the one thing fully in your power — so the work of a good life is daily practice: correcting impressions, accepting what you do not control, doing your duty to the common good, and keeping death visible so that the present moment is used rather than deferred.",
+      "source_ids": [
+        "wikipedia-meditations",
+        "hays-introduction"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "private-notebooks",
+      "title": "A book that was never a book",
+      "claim": "Meditations is the private self-training of a working emperor — no audience, no argument, no sales pitch — which is the source of both its form and its unmatched credibility.",
+      "explanation": "Written in Greek in camp during the Danube wars, titled by tradition 'To Himself', the notes were exercises: the same corrections run again and again because the point was the running, not the record. The manuscript survived by a thread — one Byzantine bishop's copy — and reached print only in 1558.",
+      "representative_example": "Book One is a gratitude ledger: person by person, what he owes his grandfather, his mother, his teachers — an emperor counting debts.",
+      "why_it_matters": "Every other book in the advice genre wants something from its reader; this one did not know it had readers, which is why eighteen centuries of them have trusted it.",
+      "caveat": "The privacy cuts both ways: no structure, heavy repetition, and doctrine assumed rather than explained — newcomers meet Stoicism mid-practice.",
+      "source_ids": [
+        "wikipedia-meditations",
+        "hays-introduction"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "judgment-not-events",
+      "title": "The disturbance is in the judgment",
+      "claim": "Events cannot touch the mind; only the mind's verdicts on events can — and verdicts can be revised.",
+      "explanation": "The book's working move, inherited from Epictetus: when troubled, locate the opinion doing the troubling and take it back. Pain, insult, and loss arrive as impressions; suffering begins where assent is given. Marcus drills the discipline nightly — on flatterers, on betrayal, on his own temper — because assent is a habit, and habits are trained.",
+      "representative_example": "His formula for insult: take away the thought 'I have been harmed' and the harm itself is taken away.",
+      "why_it_matters": "It is the load-bearing move of the entire modern thought-distancing tradition, from cognitive therapy to its BookTok paraphrases — here in the original, from a man being flattered and betrayed at imperial scale.",
+      "caveat": "Applied without limits it shades into denying real injury; the Stoics meant it for the mind's sovereignty, not as an excuse others can use to dismiss your circumstances.",
+      "source_ids": [
+        "wikipedia-meditations",
+        "hays-introduction"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "dichotomy-of-control",
+      "title": "Yours, and not yours",
+      "claim": "Everything divides into what is up to you — judgment, intention, effort — and what is not: outcomes, reputation, others' behaviour, the length of your life. Peace is refusing to invest in the second column.",
+      "explanation": "Marcus applies the dichotomy to a ruler's inventory: armies lose, plagues come, colleagues disappoint, praise and slander both arrive unearned. The notes return endlessly to the same audit — is this mine to control? — and to the release that follows honest answers.",
+      "representative_example": "His morning preparation: today I will meet the meddling, the ungrateful, the arrogant — and none of them can implicate me in ugliness, because my choices are not theirs to make.",
+      "why_it_matters": "The audit is portable to any inbox, diagnosis, or election night: it converts anxiety's raw material into two lists, one actionable.",
+      "caveat": "Modern readers note the risk of quietism — the dichotomy counsels excellence within your role, not resignation from it, a distinction Marcus' own relentless campaigning embodies.",
+      "source_ids": [
+        "wikipedia-meditations",
+        "hays-introduction"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "cosmic-perspective",
+      "title": "The view from above and the shortness of everything",
+      "claim": "Zoom out — in space to the whole earth, in time to the whole of history — and grievances, fame, and even empires shrink to their true size.",
+      "explanation": "Marcus' signature exercise: picture human affairs from far above, the armies as ant columns, the feasts and funerals repeating identically down the generations; list the courts of dead emperors and note that everyone in them is dust, including those who buried the rest. Not nihilism — the smallness is medicine for vanity and fear, clearing the day for what actually matters.",
+      "representative_example": "'Everything is only for a day, both that which remembers and that which is remembered.'",
+      "why_it_matters": "It is the antidote he mixed for the most flattered man alive, and it scales down perfectly to timelines and news cycles.",
+      "caveat": "Taken neat it can flatten meaning along with vanity; Marcus pairs it, deliberately, with duty — the small things still must be done well.",
+      "source_ids": [
+        "wikipedia-meditations"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "memento-mori",
+      "title": "Keep death visible; it is a to-do list",
+      "claim": "You could leave life right now — and holding that fact steady is what converts mortality from terror into instruction: act, speak, and think accordingly.",
+      "explanation": "Death saturates the notebooks — his teachers' deaths, his children's (he buried most of them), his own approaching — and is always turned the same way: not morbidity but triage. What would you stop tolerating, stop deferring, stop pretending, if you believed the deadline? Marcus wrote the reminder nightly because emperors, too, procrastinate on their lives.",
+      "representative_example": "'Perfection of character is this: to live each day as if it were your last, without frenzy, without apathy, without pretence.'",
+      "why_it_matters": "It is the oldest productivity system on record, and the only one whose deadline is guaranteed to hold.",
+      "caveat": "The consolations attached — return to nature, the cosmos recycling us — are Stoic doctrine that modern readers may take as metaphor or leave.",
+      "source_ids": [
+        "wikipedia-meditations"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "common-good",
+      "title": "Made for cooperation: the social half everyone skips",
+      "claim": "The modern excerpt culture reads Meditations as self-optimisation; half the book is the opposite — relentless instruction in duty to others.",
+      "explanation": "Marcus' Stoicism is social to the bone: humans are made for each other like hands, like eyelids; what injures the hive injures the bee; the only wealth is doing good to others; even the difficult are kin, to be corrected gently or endured. The self-command exists for the sake of the role — emperor, father, colleague — not instead of it.",
+      "representative_example": "His refrain when tired of people: they act as they do from ignorance of good and evil — your job is to teach or to bear, never to hate.",
+      "why_it_matters": "It separates the book sharply from the self-care register it gets quoted into: this is an ethics of service wearing a private notebook.",
+      "caveat": "The service was to an empire whose wars and persecutions history audits separately — the notebooks' gentleness and the reign's record sit in documented tension.",
+      "source_ids": [
+        "wikipedia-meditations",
+        "wikipedia-marcus"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "practice-not-theory",
+      "title": "Spiritual exercises, not philosophy — and that's the achievement",
+      "claim": "Scholars agree the book adds little original doctrine — it is Epictetus, absorbed — and modern scholarship reads it as the great surviving example of philosophy as daily practice.",
+      "explanation": "The documented verdict runs both ways: 'unendingly moving and inspiring', in one scholar's words, and not an original contribution to Stoic theory. The influential modern reading — the Hays introduction carries it to general readers — treats the repetitions as spiritual exercises: the ancient understanding of philosophy as something you do every day to reshape yourself, of which these notebooks are the purest surviving specimen.",
+      "representative_example": "The same handful of corrections — judgment, control, death, duty — rehearsed hundreds of times across twelve books: reps, not chapters.",
+      "why_it_matters": "It sets the right expectations: read it as a treatise and it disappoints; read it as a practice log to practise with, and it has no equal.",
+      "caveat": "This is also the honest limit for raters: judged as argued content the book is thin; its greatness lives in a category most rating rubrics were not built for.",
+      "source_ids": [
+        "rees-verdict",
+        "hays-introduction",
+        "wikipedia-meditations"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Book One: Debts and Lessons",
+      "purpose": "The gratitude ledger.",
+      "summary": "Person by person — family, teachers, the gods — what Marcus owes and to whom: character presented as inheritance consciously accepted.",
+      "idea_ids": [
+        "private-notebooks",
+        "common-good"
+      ],
+      "source_ids": [
+        "wikipedia-meditations"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Books Two to Twelve: The Exercises",
+      "purpose": "The practice itself.",
+      "summary": "Undated notes cycling through the core corrections — judgment over events, the control audit, the view from above, death as instruction, duty to the hive — written from camp, repeated until they hold.",
+      "idea_ids": [
+        "judgment-not-events",
+        "dichotomy-of-control",
+        "cosmic-perspective",
+        "memento-mori"
+      ],
+      "source_ids": [
+        "wikipedia-meditations",
+        "hays-introduction"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "One ledger of debts, then eleven books of short undated entries — aphorisms, self-reproaches, arguments compressed to reminders — with no narrative and no intended order.",
+    "voice": "A man talking to himself with total honesty: stern, weary, tender, repetitive — the second person throughout, because the reader was him.",
+    "pace": "Not designed for continuous reading; centuries of readers take it in daily fragments, which is how it was written.",
+    "evidence_style": "None — assertion and exercise; the Stoic system underneath is assumed, not argued, and newcomers meet doctrine mid-practice.",
+    "example_style": "His own life, unnamed colleagues and flatterers, dead emperors, nature's cycles.",
+    "repetition": "Extreme and constitutive: the repetition is the method — spiritual exercises are reps.",
+    "prerequisites": "None, though a translation with a good introduction (Hays) supplies the Stoic frame the notes assume.",
+    "source_ids": [
+      "wikipedia-meditations",
+      "hays-introduction",
+      "goodreads-meditations"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 0.0,
-      "confidence": "low",
-      "summary": "TODO: give the content-only verdict behind the score.",
+      "score": 6.2,
+      "confidence": "medium",
+      "summary": "Worthwhile with an asterisk the rubric cannot see: as argued content it is thin — no structure, no evidence, doctrine assumed, endlessly repeated — but its insight density and practical usability per sentence are the highest in this catalogue, and eighteen centuries of continuous use is a replication record no modern book can match.",
       "dimensions": [
-        { "id": "explanatory-power", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "evidence-and-reasoning", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "insight-value", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "practical-utility", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "completeness-and-calibration", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] }
+        {
+          "id": "explanatory-power",
+          "score": 5.5,
+          "rationale": "The implicit model — judgment causes disturbance; control divides in two — is powerful and clear, but the book asserts and drills it rather than explaining or defending it; the system's machinery lives offstage in Stoic theory.",
+          "source_ids": [
+            "hays-introduction",
+            "wikipedia-meditations"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.0,
+          "rationale": "No arguments, no engagement with alternatives, no evidence beyond one practitioner's testimony — but that testimony is unique: private, unperformed, and produced under maximal load, which is its own kind of validity.",
+          "source_ids": [
+            "rees-verdict",
+            "wikipedia-meditations"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 8.0,
+          "rationale": "The densest collection of durable reframes in the catalogue: the judgment move, the control audit, the view from above, death-as-triage, the hive ethic — originals of ideas whole modern genres resell.",
+          "source_ids": [
+            "hays-introduction",
+            "goodreads-meditations"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 7.5,
+          "rationale": "It is a practice manual — the original one: the exercises are usable verbatim tonight, and the book's intended use, daily fragments, fits modern reading better than most modern books.",
+          "source_ids": [
+            "hays-introduction",
+            "goodreads-meditations"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.5,
+          "rationale": "Honest to its bones about the author's own failures, but a private practice log has no obligations to coverage: doctrine unexplained, objections unengaged, and the reign's darker record outside the frame.",
+          "source_ids": [
+            "wikipedia-marcus",
+            "rees-verdict"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.0,
+          "rationale": "Aphoristic sentence-level density against massive whole-book repetition — the repetition is the pedagogy, but readers seeking coverage rather than practice will find twelve books saying twelve things.",
+          "source_ids": [
+            "goodreads-meditations",
+            "wikipedia-meditations"
+          ]
+        }
       ],
       "basis": "inference"
     },
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "meaning": {
+      "text": "The notebooks' meaning is their existence: the most powerful man in the world, holding absolute license, spent his nights instructing himself in restraint, duty, and death — proof by demonstration that self-command is a practice available under any circumstances, and that no external victory substitutes for it.",
+      "source_ids": [
+        "wikipedia-meditations",
+        "wikipedia-marcus"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Run the control audit on today's worry: judgment, intention, and effort are yours; outcomes, opinions, and durations are not.",
+        "source_ids": [
+          "hays-introduction"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Prepare in the morning for the difficult people you will certainly meet — and decide in advance that their conduct will not choose yours.",
+        "source_ids": [
+          "wikipedia-meditations"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "When a grievance swells, take the view from above until it resumes its actual size.",
+        "source_ids": [
+          "wikipedia-meditations"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use death as triage, not terror: if the deadline were believed, what would you stop deferring today?",
+        "source_ids": [
+          "wikipedia-meditations"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "One of the most continuously read books in existence: nearly lost, saved by a single Byzantine copy, printed in 1558, and since then the bedside book of generals, presidents, and prisoners — today the founding text of a global Stoicism revival and the acknowledged ancestor of the entire thought-distancing tradition, clinical and popular alike.",
+      "source_ids": [
+        "wikipedia-meditations",
+        "goodreads-meditations"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Marcus Aurelius ruled Rome from 161 to 180 through plague and continuous war, and wrote these notes to himself in camp because he needed them: a Stoic by training — Epictetus via his teacher Rusticus — using philosophy nightly to remain governable while governing. There was no purpose beyond the practice; publication was an accident of survival.",
+      "source_ids": [
+        "wikipedia-marcus",
+        "wikipedia-meditations"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "weak",
+      "strengths": [
+        "Perfectly unperformed: no audience, no market, no persona to sell.",
+        "Practice tested under maximal real-world load for two decades.",
+        "Eighteen centuries of reader replication across every culture that met it."
+      ],
+      "weaknesses": [
+        "No argument, evidence, or engagement with alternatives — doctrine assumed.",
+        "Philosophically derivative by scholarly consensus.",
+        "The practitioner's reign includes documented history the notebooks never audit."
+      ],
+      "source_ids": [
+        "rees-verdict",
+        "wikipedia-meditations",
+        "wikipedia-marcus"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Eighteen centuries of near-veneration with two standing footnotes: scholars agree the philosophy is inherited rather than original — the achievement is the practice — and modern historians keep the emperor's full record, wars and persecutions included, in view beside the notebooks' gentleness.",
+      "praise": [
+        "The documented scholarly register: 'unendingly moving and inspiring'.",
+        "Continuously read since 1558 across every tradition; the modern Stoicism revival's founding text.",
+        "Its exercises visibly ancestral to cognitive therapy's core moves."
+      ],
+      "criticism": [
+        "Not original philosophy: Epictetus absorbed, scholars agree.",
+        "Structureless and heavily repetitive for cover-to-cover readers.",
+        "The philosopher-king halo survives partly by not auditing the reign."
+      ],
+      "source_ids": [
+        "rees-verdict",
+        "wikipedia-meditations",
+        "wikipedia-marcus",
+        "goodreads-meditations"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers who met thought-distancing in modern packaging and want the source",
+        "Anyone carrying unchosen responsibility",
+        "Daily-fragment readers: it was written for that cadence",
+        "Newcomers to Stoicism, via an edition with a good introduction"
+      ],
+      "not_for": [
+        "Readers wanting argued philosophy — read Epictetus' Discourses for the engine",
+        "Cover-to-cover readers allergic to repetition",
+        "Anyone seeking the historical Marcus: the notebooks are not the reign"
+      ],
+      "topics": [
+        "Stoicism",
+        "Mortality and impermanence",
+        "Self-command and anger",
+        "Duty and the common good",
+        "The dichotomy of control"
+      ],
+      "source_ids": [
+        "hays-introduction",
+        "goodreads-meditations"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A systematic treatise — the theory lives in Epictetus and the Stoa",
+        "A memoir or history of the reign",
+        "A book with an intended reader: structure and onboarding were never its jobs"
+      ],
+      "omissions": [
+        "Any explanation of the Stoic system the notes assume",
+        "Any engagement with rival schools",
+        "The political record of the man doing the writing"
+      ],
+      "missing_or_weak": [
+        "Judged as content: no evidence, no argument, maximal repetition — the rubric's categories mostly do not apply",
+        "Translation choice materially changes the book; older public-domain versions read as sermons"
+      ],
+      "dated_or_contested": [
+        "Stoic physics — the rational cosmos, providence, return to nature — underwrites consolations modern readers may take as metaphor; the philosopher-king reputation is contested against the reign's documented record."
+      ],
+      "source_ids": [
+        "rees-verdict",
+        "wikipedia-marcus",
+        "hays-introduction"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read it — this is the rare case where the full text is the practice: a few entries a night, in a modern translation (Hays), used the way its author used it; it is short, free in every library on Earth, and built precisely for interrupted, tired, daily reading.",
+      "summary_is_enough_if": "Stop at a summary only if you wanted to know what the book is and where its famous moves come from; the exercises themselves transfer, but their effect comes from repetition the summary cannot do for you.",
+      "skip_if": "Skip it if you want the arguments underneath — go to Epictetus — or if aphoristic repetition without structure defeats you; and skip the Victorian public-domain translations, which bury the voice.",
+      "format_advice": "The Hays translation in print, kept somewhere you sit at night; audio works poorly — the entries need pauses the format fights.",
+      "source_ids": [
+        "hays-introduction",
+        "goodreads-meditations"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What is the judgment move, and how does it differ from denying that anything happened?",
+      "What belongs in each column of the control audit?",
+      "Why do scholars call the book unoriginal, and why doesn't that lower its standing?"
+    ],
+    "application_prompts": [
+      "Tomorrow morning, run Marcus' preparation: name the difficult encounters coming and decide your conduct in advance.",
+      "Tonight, write three entries of your own ledger of debts: who shaped you, and what exactly do you owe them?",
+      "Next grievance: view from above until it resumes actual size, then ask what duty remains."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "",
+    "review_notes": "An eighteen-century public-domain classic documented across the scholarly record; themes and exercises verified against the documented scholarship and the standard modern edition's framing.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
-      "notes": []
+      "notes": [
+        "Identity verified: private notes c. 170–180 in Koine Greek, first printed 1558; modern anchor edition Modern Library/Hays 2003 (9780812968255, 256pp).",
+        "The originality caveat (Rees; Epictetus inherited) and the reign-versus-notebooks tension are carried as documented counterweights to the veneration.",
+        "Famous lines are paraphrased or quoted only where the documented record carries them; translation variance is flagged.",
+        "Rating scored on content with the honest note that the rubric undermeasures a practice text; the eighteen-century reception lives in importance, not the score.",
+        "Narration reviewed against the product contract: content-first, the practice framing central.",
+        "Pronunciation: Epictetus (ep-ik-TEE-təs) and Commodus (KOM-ə-dəs) were mispronounced by the phonemizer and added to the dictionary; Aurelius verified correct; the French scholar of spiritual exercises is referenced without name in narration to avoid an unverifiable pronunciation."
+      ]
     }
   }
 }

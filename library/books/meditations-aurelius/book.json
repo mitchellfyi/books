@@ -4,27 +4,137 @@
   "id": "meditations-aurelius",
   "type": "book",
   "title": "Meditations",
-  "alternate_titles": [],
+  "alternate_titles": ["Ta eis heauton (To Himself)"],
   "author_ids": ["marcus-aurelius"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "c. 170–180 (first printed 1558)",
+    "original_language": "Koine Greek",
+    "editions": [
+      {
+        "label": "Modern Library, Gregory Hays translation (paperback)",
+        "publisher": "Modern Library",
+        "publication_date": "2003-05-06",
+        "isbn_10": "0812968255",
+        "isbn_13": "9780812968255",
+        "format": "Paperback",
+        "pages": 256
+      }
+    ],
+    "contents": [
+      "Book 1: Debts and Lessons — what he learned from each person in his life",
+      "Books 2–12: undated private notes from the Danube campaigns — on mortality, judgment, duty, anger, impermanence, and the discipline of the present moment",
+      "Recurring exercises: the morning preparation for difficult people, the view from above, the dichotomy of control, objects stripped to their materials, memento mori"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "acceptance",
+      "emotional-regulation",
+      "non-fiction",
+      "personal-development",
+      "philosophy",
+      "self-awareness"
+    ],
+    "audiences": [
+      "Readers who met thought-distancing in modern self-help and want the source",
+      "Anyone carrying responsibility they did not choose",
+      "Students of Stoicism and ancient philosophy",
+      "Readers who want a book to live with rather than finish"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-meditations",
+        "title": "Meditations",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Meditations",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "The work's nature (private notes, Ta eis heauton, Koine Greek, c. 170–180, twelve books, never intended for publication), the precarious transmission (Arethas' copy, first printing 1558), core themes, major translations, and the documented reception including the originality debate.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; claims traced where used."
+      },
+      {
+        "id": "openlibrary-hays",
+        "title": "Meditations: A New Translation (Gregory Hays)",
+        "author_or_publisher": "Open Library",
+        "url": "https://openlibrary.org/isbn/9780812968255",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "The standard modern edition: Modern Library paperback, 2003-05-06, 256pp, ISBN 9780812968255, Hays translation with introduction.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Catalogue metadata."
+      },
+      {
+        "id": "wikipedia-marcus",
+        "title": "Marcus Aurelius",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Marcus_Aurelius",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "The author's reign (161–180, last of the Five Good Emperors), the composition context (Antonine Plague, Marcomannic Wars on the Danube), the Stoic education via Junius Rusticus and Epictetus, and the Commodus succession.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary."
+      },
+      {
+        "id": "rees-verdict",
+        "title": "Scholarly assessment (as documented in the work's reception record)",
+        "author_or_publisher": "D. A. Rees",
+        "url": "https://en.wikipedia.org/wiki/Meditations",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The documented scholarly double verdict: 'unendingly moving and inspiring' while not a work of original philosophy — the practice, not the theory, is the achievement.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation."
+      },
+      {
+        "id": "hays-introduction",
+        "title": "Introduction to Meditations (Modern Library edition)",
+        "author_or_publisher": "Gregory Hays",
+        "url": "https://www.penguinrandomhouse.com/books/163109/meditations-by-marcus-aurelius-gregory-hays/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The standard modern scholarly framing: the notes as spiritual exercises — a practice repeated for its effect on the practitioner, not an argued treatise — following the French scholarship on ancient philosophy as a way of life.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "A translator's introduction; sympathetic by role."
+      },
+      {
+        "id": "goodreads-meditations",
+        "title": "Meditations",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/30659.Meditations",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "One of the platform's most-rated philosophy titles: enduring, exceptionally warm reception across eighteen centuries of readers, with recurring notes on repetition and translation choice mattering.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/title": ["wikipedia-meditations"],
+      "/alternate_titles": ["wikipedia-meditations"],
+      "/author_ids": ["wikipedia-meditations"],
+      "/bibliography/first_published": ["wikipedia-meditations"],
+      "/bibliography/original_language": ["wikipedia-meditations"],
+      "/bibliography/editions/0": ["openlibrary-hays"],
+      "/bibliography/contents": ["wikipedia-meditations", "hays-introduction"],
+      "/discovery/tag_ids": ["wikipedia-meditations"],
+      "/discovery/audiences": ["goodreads-meditations", "hays-introduction"],
+      "/discovery/formats_available": ["goodreads-meditations"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "An eighteen-century public-domain classic: themes, structure, and reception documented across the scholarly record; the Hays edition anchors modern bibliographic detail.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

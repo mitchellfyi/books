@@ -4,22 +4,89 @@
   "id": "marcus-aurelius",
   "type": "author",
   "name": "Marcus Aurelius",
-  "alternate_names": [],
+  "alternate_names": ["Marcus Aurelius Antoninus"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "Roman emperor from 161 to 180 AD, the last of the Five Good Emperors, and — through notebooks he never meant anyone to read — antiquity's most read Stoic.",
+      "source_ids": ["wikipedia-marcus"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in 121 AD and marked early for rule, Marcus was adopted into the imperial succession and educated by the empire's best teachers — among them Junius Rusticus, who put Epictetus' discourses in his hands and turned him to Stoicism. He ruled from 161, first with his adoptive brother Lucius Verus, then alone, through catastrophe upon catastrophe: the Parthian war, the Antonine Plague that killed millions, and the long Marcomannic Wars that kept him campaigning on the Danube frontier, where the Meditations were written at night in camp. He died at the front in 180, and his son Commodus — his one conspicuous failure of judgement, historians note — squandered the succession the adoptive system had protected for a century.",
+      "source_ids": ["wikipedia-marcus"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "He was a practising Stoic, not a philosopher by profession: the notebooks are a working ruler's nightly self-discipline, applying doctrine he learned from Epictetus and his teachers to anger, grief, flattery, plague, and the certainty of death. He wrote in Greek, philosophy's language, to himself alone.",
+      "source_ids": ["wikipedia-marcus", "wikipedia-meditations"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Supreme practical authority — no author in this catalogue tested his ideas under heavier load — and no theoretical originality: scholars agree the philosophy is Epictetus' Stoicism, absorbed and lived rather than extended.",
+      "source_ids": ["rees-verdict", "wikipedia-meditations"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "The perspective is the book's authenticity: an absolute ruler auditing himself with no audience, which is why readers trust it. The limits are documented: the reign the notebooks accompanied included wars of conquest and persecutions of Christians whose relation to the emperor's personal role historians still debate; the philosopher-king reputation is partly a later construction, and the man who wrote against anger also chose Commodus.",
+      "source_ids": ["wikipedia-marcus"],
+      "basis": "synthesis"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Meditations",
+      "year": 180,
+      "kind": "Book",
+      "relationship": "The private notebooks, c. 170–180; subject of this profile's book entry.",
+      "source_ids": ["wikipedia-meditations"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-marcus",
+        "title": "Marcus Aurelius",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Marcus_Aurelius",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Dates, reign, education, the plague and Danube wars, death, and the Commodus succession with its historiographic debates.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary."
+      },
+      {
+        "id": "wikipedia-meditations",
+        "title": "Meditations",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Meditations",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "The notebooks' nature, language, composition context, and transmission.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary."
+      },
+      {
+        "id": "rees-verdict",
+        "title": "Scholarly assessment (as documented in the work's reception record)",
+        "author_or_publisher": "D. A. Rees",
+        "url": "https://en.wikipedia.org/wiki/Meditations",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The documented verdict on practice over originality.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation."
+      }
+    ],
+    "citations": {
+      "/name": ["wikipedia-marcus"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs; the biography is documented far beyond them.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
