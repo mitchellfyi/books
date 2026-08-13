@@ -41,7 +41,10 @@ rules here.
    every check is true; never use review notes to excuse a known error.
 8. Derive the configured narration scripts from `content.json`, compare
    adjacent lengths with the loss test, and set the shortest sufficient
-   recommended level. Use `./bookflow audio <book-id>` for local audio; do not
+   recommended level. Complete every configured duration. Keep research
+   sources, coverage, methodology, workflow and production notes out of the
+   narration; start with the book itself and end on content or a reading
+   decision. Use `./bookflow audio <book-id>` for local audio; do not
    reproduce its word-count, ordering, freshness, or TTS logic manually. Read
    `docs/tts.md`, listen to the shortest output, and check the title, author,
    technical terms, abbreviations and numbers. Add only verified corrections
@@ -50,6 +53,8 @@ rules here.
    `./bookflow build`. Fix every in-scope failure. Mark the queue entry `done`
    only when the repository definition of done is met. If genuinely blocked,
    record the reason and set the entry to `blocked` instead of inventing data.
+   When the owner requested commits, commit this completed book before
+   claiming the next one; never include an unfinished next book in that commit.
 
 ## Handoff
 

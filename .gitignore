@@ -10,6 +10,7 @@ dist/
 # Python bytecode
 __pycache__/
 .DS_Store
+.playwright-mcp/
 
 # Locally downloaded text-to-speech model assets.
 models/

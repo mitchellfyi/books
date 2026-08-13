@@ -43,8 +43,8 @@ In Claude Code:
 The two commands use the same canonical
 [skill](.agents/skills/process-next-book/SKILL.md); the Claude project path is
 a symlink, so its instructions cannot drift. The skill claims one ready book,
-researches and reviews it, calculates its content-only rating, derives each
-useful narration length, hands local audio generation to `bookflow`, validates
+researches and reviews it, calculates its content-only rating, derives every
+configured narration length, hands local audio generation to `bookflow`, validates
 the repository, and updates the queue. If a CLI session was already open when
 the skill directory was first added, restart it. As a discovery fallback, use
 this plain prompt: `Read .agents/skills/process-next-book/SKILL.md and follow it
@@ -52,6 +52,11 @@ to process the next queued book.` See the official [Codex skill
 guide](https://developers.openai.com/codex/skills) and [Claude Code skill
 guide](https://code.claude.com/docs/en/slash-commands) for discovery and
 invocation details.
+
+Narration contains the book treatment only. Sources, coverage, fact-checking
+notes and production details stay in the structured records and sidecars; they
+are never read aloud. Every configured duration must have a transcript and
+local audio before a book is complete.
 
 The rating total is deterministic once its evidence-backed component scores
 are filled:

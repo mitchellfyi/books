@@ -20,6 +20,15 @@ This is not a contest to produce the most text. Use the shortest treatment that 
 - Be critical when evidence, reasoning, omissions, or delivery warrant it. Do not manufacture balance when the evidence is one-sided.
 - Write for the product rather than transcribing. Use exact wording only when it improves accuracy, and cite it.
 - Never imply that a partial sample or other summary is the full book.
+- Keep research machinery out of narration. Scripts must not mention sources,
+  citations, coverage labels, fact-checking, workflow status, provenance,
+  production, or how the summary was assembled. Do not announce the brief or
+  its running time. Start with the book and finish with a useful idea or clear
+  reading decision. Research detail belongs in JSON, never in spoken copy.
+- Make narration genuinely engaging: open with the book's most arresting idea
+  or story, keep momentum, use vivid concrete examples, vary sentence rhythm,
+  and land an ending that stays with the listener. Entertain with the book's
+  own material, never with invented colour.
 
 ## Source of truth
 
@@ -156,17 +165,18 @@ tells a later agent where deepening would help most:
   and detailed secondary accounts.
 - `full-book`: checked against a full copy.
 
-Maximise real coverage through free, lawful full-text routes before settling
-for less: the owner's own copies, public-library ebook lending (Libby),
-Internet Archive / Open Library lending, publisher samples, Google Books
-preview, author-published excerpts, and detailed chapter-level secondary
-accounts. Do not use pirated copies — with library lending available they
-are an unnecessary risk, and scraped text is unreliable evidence anyway.
+The owner often already owns the physical book; online research substitutes
+for scanning it. Use the richest lawfully accessible material you can reach:
+the owner's own copies, library ebook lending (Libby), Internet Archive / Open
+Library lending, publisher samples, Google Books preview, author-published
+excerpts, full-text search tools, and detailed chapter-level secondary
+accounts. Record what you actually used.
 
 Two rules survive because they protect the owner, not a policy: never invent
 specifics no source supports (a wrong "fact" corrupts the buying decision),
 and keep `coverage` truthful so nobody re-researches or over-trusts a
-profile by mistake.
+profile by mistake. Coverage limits belong in `workflow` metadata only —
+never in the narration or the reader-facing text.
 
 ## Length model
 
@@ -262,14 +272,14 @@ uncertainties are recorded.
 
 ### 5. Derive scripts, choose the length, and generate audio
 
-Draft every level from the same `content.json`. Compare
-adjacent drafts with the loss test, set `editorial.recommended_level` and its
-`rationale`, mark the kept levels `complete`, and drop a drafted level that
-can only pad or only truncate. An absent optional script is a finding, not a
-gap. Update scripts after changing `content.json`, then validate.
+Draft every configured level from the same `content.json`. Compare adjacent
+drafts with the loss test and set `editorial.recommended_level` and its
+`rationale`. Every level must be complete even when a longer version adds
+context rather than changing the decision. Update scripts after changing
+`content.json`, then validate.
 
 Generate audio in listening-priority order — the recommended level first,
-then the configured discovery level, then the remaining kept levels. Running
+then the configured discovery level, then every remaining level. Running
 the command without a level does this automatically:
 
 ```bash
@@ -339,7 +349,12 @@ Precision and economy matter as much as correctness. Agents working here:
 
 ## Definition of done
 
-A completed book has valid structured files; the fullest treatment its sources allow, with coverage recorded; distinct, sourced ideas; a complete book map; a current content-only rating; clear reading experience, evidence, reception, audience, omissions, and decision advice; a passed adversarial quality review; every required configured script within tolerance; checked pronunciation; locally generated current audio; useful graph links; a queue entry marked `done`; and no unresolved validation errors. Optional depth is included only when earned. The text is concise enough to scan, natural enough to hear, and honest enough to trust.
+A completed book has valid structured files; the fullest treatment its sources allow, with coverage recorded; distinct, sourced ideas; a complete book map; a current content-only rating; clear reading experience, evidence, reception, audience, omissions, and decision advice; a passed adversarial quality review; every configured script within tolerance; checked pronunciation; locally generated current audio for every level; useful graph links; a queue entry marked `done`; and no unresolved validation errors. The text is concise enough to scan, natural enough to hear, and honest enough to trust.
+
+When the owner asks to process the queue and commit the work, commit shared
+workflow changes first, then make one focused commit after each completed
+book. Never combine a half-finished book with the next one, and do not push
+unless the owner asks.
 
 Before handing off any change, run:
 

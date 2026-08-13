@@ -27,7 +27,7 @@
       "minutes": 30,
       "target_words": 4500,
       "purpose": "Add warranted depth for dense, broad, technical, or unusually important books.",
-      "required": false
+      "required": true
     }
   },
   "playback_speeds": [1, 1.1, 1.25, 1.5, 2],

@@ -30,6 +30,17 @@ ROOT = Path(__file__).resolve().parent.parent
 errors: list[str] = []
 warnings: list[str] = []
 
+NARRATION_META_PATTERNS = {
+    r"\bthis (?:brief|summary|transcript)\b": "announces the summary",
+    r"\bover the next\b": "announces the running time",
+    r"\byou will hear\b": "announces what the narration will do",
+    r"\bcoverage note\b": "mentions internal coverage metadata",
+    r"\b(?:sources?|citations?) (?:used|consulted|for this)\b": "describes research provenance",
+    r"\b(?:based|researched|sourced|compiled) (?:on|from) (?:the )?(?:publisher|sources?|reviews?|interviews?)\b": "describes research provenance",
+    r"\bnot (?:been )?checked against (?:a )?full (?:copy|book|text)\b": "describes research coverage",
+    r"https?://": "contains a raw URL",
+}
+
 
 def err(msg: str) -> None:
     errors.append(msg)
@@ -396,10 +407,9 @@ def main() -> int:
                     low, high = target * (1 - tolerance), target * (1 + tolerance)
                     if not (low <= entry["words"] <= high):
                         err(f"{rel(sp)}: {entry['words']} words is outside {target}±{tolerance:.0%}")
-                if duration == "30-minutes" and meta.get("status") == "complete" and content \
-                        and content.get("editorial", {}).get("recommended_level") != "30-minutes":
-                    warn(f"{rel(sp)}: a 30-minutes script is kept although content.json "
-                         "recommends a shorter level; confirm it passes the loss test")
+                    for pattern, problem in NARRATION_META_PATTERNS.items():
+                        if re.search(pattern, body, flags=re.IGNORECASE):
+                            err(f"{rel(sp)}: narration {problem}; keep research metadata out of audio")
 
             # audio + sidecar, one pair per voice: <level>.<voice>.<format> + .json
             audio_files = list((d / "audio").glob(f"{duration}.*")) if (d / "audio").exists() else []
