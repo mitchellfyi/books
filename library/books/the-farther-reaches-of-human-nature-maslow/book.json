@@ -5,7 +5,9 @@
   "type": "book",
   "title": "The Farther Reaches of Human Nature",
   "alternate_titles": [],
-  "author_ids": ["abraham-maslow"],
+  "author_ids": [
+    "abraham-maslow"
+  ],
   "bibliography": {
     "first_published": "1971",
     "original_language": "English",
@@ -52,7 +54,11 @@
       "Coaches, educators, and leaders drawn to growth-centred views of people",
       "Readers of positive psychology curious about its ancestry"
     ],
-    "formats_available": ["Hardcover", "Paperback", "Ebook"]
+    "formats_available": [
+      "Hardcover",
+      "Paperback",
+      "Ebook"
+    ]
   },
   "research": {
     "sources": [
@@ -127,19 +133,60 @@
         "independence": "community",
         "quality": "medium",
         "limitations": "Self-selected raters."
+      },
+      {
+        "id": "koltko-rivera-rediscovering",
+        "title": "Rediscovering the Later Version of Maslow's Hierarchy of Needs: Self-Transcendence and Opportunities for Theory, Research, and Unification",
+        "author_or_publisher": "Mark E. Koltko-Rivera, Review of General Psychology",
+        "url": "https://www.researchgate.net/publication/232510315_Rediscovering_the_Later_Version_of_Maslow's_Hierarchy_of_Needs_Self-Transcendence_and_Opportunities_for_Theory_Research_and_Unification",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Peer-reviewed documentation that late Maslow placed self-transcendence above self-actualization, that the amended model rests on the material collected in this book, and that textbook renditions omitted the revision.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Focuses on the transcendence amendment rather than reviewing the whole collection."
       }
     ],
     "citations": {
-      "/title": ["semantic-scholar-farther", "internet-archive-farther"],
-      "/author_ids": ["semantic-scholar-farther", "internet-archive-farther"],
-      "/bibliography/first_published": ["semantic-scholar-farther", "internet-archive-farther"],
-      "/bibliography/original_language": ["internet-archive-farther"],
-      "/bibliography/editions/0": ["internet-archive-farther", "semantic-scholar-farther"],
-      "/bibliography/editions/1": ["amazon-farther-edition"],
-      "/bibliography/contents": ["internet-archive-farther", "bu-review-farther", "sloww-farther"],
-      "/discovery/tag_ids": ["bu-review-farther", "sloww-farther"],
-      "/discovery/audiences": ["bu-review-farther", "goodreads-farther", "sloww-farther"],
-      "/discovery/formats_available": ["amazon-farther-edition"]
+      "/title": [
+        "semantic-scholar-farther",
+        "internet-archive-farther"
+      ],
+      "/author_ids": [
+        "semantic-scholar-farther",
+        "internet-archive-farther"
+      ],
+      "/bibliography/first_published": [
+        "semantic-scholar-farther",
+        "internet-archive-farther"
+      ],
+      "/bibliography/original_language": [
+        "internet-archive-farther"
+      ],
+      "/bibliography/editions/0": [
+        "internet-archive-farther",
+        "semantic-scholar-farther"
+      ],
+      "/bibliography/editions/1": [
+        "amazon-farther-edition"
+      ],
+      "/bibliography/contents": [
+        "internet-archive-farther",
+        "bu-review-farther",
+        "sloww-farther"
+      ],
+      "/discovery/tag_ids": [
+        "bu-review-farther",
+        "sloww-farther"
+      ],
+      "/discovery/audiences": [
+        "bu-review-farther",
+        "goodreads-farther",
+        "sloww-farther"
+      ],
+      "/discovery/formats_available": [
+        "amazon-farther-edition"
+      ]
     }
   },
   "workflow": {

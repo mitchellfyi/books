@@ -363,6 +363,16 @@
       "description": "Philosophical negatives: Greene treats conversation as position warfare and a changed mind as defeat; Farnsworth treats argument as joint inquiry and a changed mind as the entire victory. Read together they map what a question can be used for.",
       "source_refs": [],
       "confidence": "medium"
+    },
+    {
+      "id": "farther-reaches-contrasts-with-determined",
+      "source_id": "the-farther-reaches-of-human-nature-maslow",
+      "target_id": "determined-sapolsky",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Maslow's final message — we are self-evolvers, responsible for choosing growth — is nearly the exact claim Sapolsky's neuroscience of no-free-will exists to demolish; together they frame the deepest open question under all self-improvement writing.",
+      "source_refs": [],
+      "confidence": "medium"
     }
   ]
 }

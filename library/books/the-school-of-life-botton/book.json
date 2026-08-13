@@ -3,28 +3,279 @@
   "schema_version": 1,
   "id": "the-school-of-life-botton",
   "type": "book",
-  "title": "The School of Life",
-  "alternate_titles": [],
-  "author_ids": ["alain-de-botton"],
+  "title": "The School of Life: An Emotional Education",
+  "alternate_titles": ["The School of Life"],
+  "author_ids": ["the-school-of-life", "alain-de-botton"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2019",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "UK Hamish Hamilton edition",
+        "publisher": "Hamish Hamilton",
+        "publication_date": "2019-09-05",
+        "isbn_10": "0241382319",
+        "isbn_13": "9780241382318",
+        "format": "Hardcover",
+        "pages": 320
+      },
+      {
+        "label": "UK Penguin paperback",
+        "publisher": "Penguin Books",
+        "publication_date": "2020",
+        "isbn_10": "0241985838",
+        "isbn_13": "9780241985830",
+        "format": "Paperback",
+        "pages": 320
+      }
+    ],
+    "contents": [
+      "Introduction",
+      "I: Self",
+      "II: Others",
+      "III: Relationships",
+      "IV: Work",
+      "V: Culture",
+      "Acknowledgements",
+      "Permissions",
+      "Index"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": ["acceptance", "communication", "emotional-regulation", "empathy", "human-nature", "motivation", "non-fiction", "personal-development", "philosophy", "psychology", "relationships", "self-awareness", "self-help", "work"],
+    "audiences": [
+      "Readers seeking a humane introduction to self-knowledge, emotional maturity, love, work, and the uses of culture",
+      "People who find clinical psychology too technical but want more depth than slogan-based self-help",
+      "Readers questioning romantic ideals about instinct, perfect partners, vocation, success, or happiness",
+      "People willing to use philosophy, art, and psychotherapy as prompts for reflection rather than as settled science"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "penguin-sample",
+        "title": "The School of Life: An Emotional Education — sample",
+        "author_or_publisher": "Alain de Botton, The School of Life, and Penguin Books",
+        "url": "https://cdn.penguin.co.uk/dam-assets/books/9780241985830/9780241985830-sample.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Title, joint attribution, publication history, paperback ISBN, contents, introduction, core argument, declared method, and opening of Part I.",
+        "limitations": "Publisher sample rather than the complete book."
+      },
+      {
+        "id": "google-books",
+        "title": "The School of Life: An Emotional Education",
+        "author_or_publisher": "The School of Life and Alain de Botton; Hamish Hamilton via Google Books",
+        "url": "https://books.google.com/books/about/The_School_of_Life.html?id=MNr3vwEACAAJ",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Bibliographic identity, School of Life authorship, de Botton contribution, first publication date, hardcover ISBN, length, and description.",
+        "limitations": "Catalogue metadata and description, not full-text evidence."
+      },
+      {
+        "id": "worldcat",
+        "title": "The school of life: an emotional education",
+        "author_or_publisher": "OCLC WorldCat",
+        "url": "https://search.worldcat.org/title/The-school-of-life-%3A-an-emotional-education/oclc/1124073781",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent bibliographic confirmation of The School of Life and Alain de Botton as contributors, anthology form, publisher, and date.",
+        "limitations": "Catalogue record; contributor roles can vary across editions."
+      },
+      {
+        "id": "school-book-page",
+        "title": "An Emotional Education",
+        "author_or_publisher": "The School of Life",
+        "url": "https://shop.theschooloflife.com/products/an-emotional-education",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Institutional description, topics, intended reader benefit, paperback format, and page count.",
+        "limitations": "Sales copy from the book's publisher and collective author."
+      },
+      {
+        "id": "full-text-copy",
+        "title": "The School of Life: An Emotional Education",
+        "author_or_publisher": "The School of Life; FlipHTML5 host",
+        "url": "https://fliphtml5.com/fzqli/idcl/The_School_of_Life_%3A_An_emotional_education-The_School_of_Life_/",
+        "type": "book",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Full-book structure and detailed coverage of Self, Others, Relationships, Work, and Culture; title page identifies the work as introduced by Alain de Botton.",
+        "limitations": "Third-party flipbook host with uncertain edition provenance; checked against the publisher sample and catalogues for identity and structure."
+      },
+      {
+        "id": "official-introduction",
+        "title": "Emotional Education: An Introduction",
+        "author_or_publisher": "The School of Life",
+        "url": "https://www.theschooloflife.com/article/emotional-education-an-introduction/",
+        "type": "author",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "The wider project: emotional skills can be taught, modern education neglects them, and useful self-help can draw on culture without academic language.",
+        "limitations": "Institutional essay closely aligned with the book, not independent validation."
+      },
+      {
+        "id": "smh-review",
+        "title": "The School of Life: An Emotional Education — review",
+        "author_or_publisher": "Andrew Leigh; Sydney Morning Herald",
+        "url": "https://www.andrewleigh.com/the_school_of_life_an_emotional_education_review_sydney_morning_herald",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent assessment of authorship, eighteen acknowledged contributors, smooth curation, practical lessons, accessibility, strongest arguments, and the view that it is engaging but not de Botton's best work.",
+        "limitations": "Single trade review and not an empirical evidence audit."
+      },
+      {
+        "id": "erraticus-review",
+        "title": "The School of Life Preaches Pessimism over Romanticism",
+        "author_or_publisher": "Drew Van Schoelandt; Erraticus",
+        "url": "https://erraticus.co/2019/11/05/pessimism-romanticism-school-of-life-de-botton/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent reading of the anti-Romantic argument, careful curation, self-help orientation, diagnostic value, and lack of philosophical depth or a full treatment plan.",
+        "limitations": "Philosophy magazine review rather than peer-reviewed criticism."
+      },
+      {
+        "id": "rock-review",
+        "title": "Book Review: The School of Life — An Emotional Education",
+        "author_or_publisher": "Natalie Salvo; 100% Rock Magazine",
+        "url": "https://100percentrock.com/2020/04/book-review-the-school-of-life-an-emotional-education-by-the-school-of-life/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent praise for worthy insights and criticism that the formal, broad presentation can bury its strongest material.",
+        "limitations": "General-interest review with limited evidence analysis."
+      },
+      {
+        "id": "goodreads",
+        "title": "The School of Life: An Emotional Education",
+        "author_or_publisher": "Goodreads reader community",
+        "url": "https://www.goodreads.com/book/show/46220398-the-school-of-life",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large-scale reader reception and recurring praise for warmth and quotable insight alongside criticism of repetition, obvious advice, and breadth.",
+        "limitations": "Self-selected, mutable ratings across editions; not used in the content score."
+      },
+      {
+        "id": "storygraph",
+        "title": "Reviews — The School of Life, An Emotional Education",
+        "author_or_publisher": "The StoryGraph reader community",
+        "url": "https://app.thestorygraph.com/book_reviews/ae1d3d13-55bd-47d5-aece-5c040a7b888a",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "A second reader aggregate, including the balance of high average approval with some non-completion and comments on accessibility, pragmatism, and note-taking value.",
+        "limitations": "Self-selected and mutable; editions and reviewer expertise are uncontrolled."
+      },
+      {
+        "id": "ei-construct-review",
+        "title": "Emotional Intelligence: An Integrative Meta-Analysis and Cascading Model",
+        "author_or_publisher": "Dana L. Joseph and Daniel A. Newman; Journal of Applied Psychology",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20085406/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "The need to distinguish ability emotional intelligence from mixed models that overlap with personality and self-perception.",
+        "limitations": "Work-performance meta-analysis, not a direct test of this book's curriculum."
+      },
+      {
+        "id": "sel-meta-analysis",
+        "title": "The Impact of Enhancing Students' Social and Emotional Learning: A Meta-Analysis of School-Based Universal Interventions",
+        "author_or_publisher": "Joseph Durlak et al.; Child Development, indexed by the Office of Justice Programs",
+        "url": "https://www.ojp.gov/library/publications/impact-enhancing-students-social-and-emotional-learning-meta-analysis-school",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Broad evidence from 213 school programmes that structured social and emotional skills can be taught and can improve several student outcomes.",
+        "limitations": "School-age programmes with defined curricula; does not validate this adult anthology or every claim in it."
+      },
+      {
+        "id": "childhood-relationships-review",
+        "title": "Intergenerational transmission of parent-child relationship qualities to adult romantic relationships: A systematic review",
+        "author_or_publisher": "Mengya Xia et al.; Marriage & Family Review, indexed by PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33904162/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Evidence that parent-child attachment and interaction quality can be associated with later romantic relationship functioning.",
+        "limitations": "Forty dyadic studies with varied measures; mechanisms, context, and gender matter, so the evidence does not justify a simple deterministic script."
+      },
+      {
+        "id": "maltreatment-meta-analysis",
+        "title": "Childhood Emotional Maltreatment and Romantic Relationships: A Meta-Analysis",
+        "author_or_publisher": "Emily K. Fitzgerald and colleagues; Trauma, Violence, & Abuse",
+        "url": "https://doi.org/10.1177/1524838020975895",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "A modest association between childhood emotional maltreatment and poorer adult romantic relationship well-being.",
+        "limitations": "The average association is small and weaker in more rigorous studies; it cannot establish an inevitable adult pattern for an individual."
+      },
+      {
+        "id": "psychodynamic-meta-analysis",
+        "title": "Psychodynamic therapy and cognitive-behavioral therapy in the treatment of depressive disorders: a meta-analysis of randomized controlled trials",
+        "author_or_publisher": "American Psychological Association; indexed by PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38324666/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Evidence that manualised psychodynamic therapy can perform similarly to manualised cognitive behavioural therapy for adult depressive disorders.",
+        "limitations": "Treatment-specific evidence for depression; it neither validates informal introspection nor makes psychotherapy universally suitable."
+      },
+      {
+        "id": "nhs-crisis-guidance",
+        "title": "Where to get urgent help for mental health",
+        "author_or_publisher": "NHS",
+        "url": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/behaviours/where-to-get-urgent-help-for-mental-health/",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Counterevidence to any romantic reading of breakdown: severe distress or danger can require urgent professional help.",
+        "limitations": "UK service guidance, not a scholarly analysis of the book's language."
+      }
+    ],
+    "citations": {
+      "/title": ["penguin-sample", "google-books", "worldcat"],
+      "/alternate_titles": ["penguin-sample", "google-books"],
+      "/author_ids": ["penguin-sample", "google-books", "worldcat", "smh-review"],
+      "/bibliography/first_published": ["penguin-sample", "google-books", "worldcat"],
+      "/bibliography/original_language": ["penguin-sample"],
+      "/bibliography/editions/0": ["google-books", "worldcat"],
+      "/bibliography/editions/1": ["penguin-sample", "school-book-page"],
+      "/bibliography/contents": ["penguin-sample", "full-text-copy"],
+      "/discovery/tag_ids": ["penguin-sample", "full-text-copy", "school-book-page"],
+      "/discovery/audiences": ["school-book-page", "smh-review", "erraticus-review"],
+      "/discovery/formats_available": ["school-book-page", "google-books"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "full-book",
+    "coverage_notes": "The complete book was reviewed through a readable third-party copy and cross-checked against the Penguin sample, two library catalogues, the collective author's pages, three independent reviews, two reader aggregates, five specialist evidence sources, and NHS crisis guidance. The third-party copy's edition provenance is uncertain, so exact metadata comes from publisher and catalogue records.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

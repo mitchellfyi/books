@@ -12,18 +12,29 @@
   "card": {
     "one_sentence": "Maslow's posthumous capstone: late essays and lectures mapping the upper range of human nature — self-actualization, peak experiences, and the transcendence he placed above his famous pyramid.",
     "verdict": "A visionary, generative, historically important book whose ideas shaped everything from positive psychology to management training — read it for the vocabulary and the vision, not for evidence, which even Maslow admitted was a promissory note.",
-    "source_ids": ["bu-review-farther", "sloww-farther", "goodreads-farther"],
+    "source_ids": [
+      "bu-review-farther",
+      "sloww-farther",
+      "goodreads-farther"
+    ],
     "basis": "synthesis"
   },
   "overview": {
     "synopsis": {
       "text": "Assembled by Bertha Maslow and Henry Geiger after Maslow's death in 1970, the book collects his final essays and lectures on the psychology of health rather than sickness: what self-actualizing people are like, how creativity and education serve growth, what values the fully human life pursues, and the late proposal that transcendence — not self-actualization — is the true top of human motivation.",
-      "source_ids": ["bu-review-farther", "internet-archive-farther", "sloww-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "internet-archive-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     },
     "core_argument": {
       "text": "Psychology has studied damaged and average people and mistaken the results for human nature; study people at their best and a different picture appears — a species with higher needs for meaning, truth, beauty, and justice that are as real as hunger, whose frustration produces sicknesses of the soul, and whose fulfilment points beyond the self entirely.",
-      "source_ids": ["bu-review-farther", "sloww-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     }
   },
@@ -36,7 +47,10 @@
       "representative_example": "His 'growing tip' image: as with a plant, the growth of the species happens in a small advanced fraction.",
       "why_it_matters": "It reframes human nature as a range with an underexplored top, the premise beneath coaching, positive psychology, and human-potential thinking since.",
       "caveat": "Choosing who counts as 'best' smuggles the conclusion into the sample — the method's circularity is its standard criticism.",
-      "source_ids": ["bu-review-farther", "sloww-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -47,7 +61,11 @@
       "representative_example": "His list of actualizing behaviours: experiencing fully, choosing growth in each choice-point, honesty, judgement, courage to be unpopular, and dedication to work.",
       "why_it_matters": "It converts the most famous concept in pop psychology from a destination into a daily practice.",
       "caveat": "The behaviours are observations about admired lives, not tested interventions.",
-      "source_ids": ["sloww-farther", "bu-review-farther", "internet-archive-farther"],
+      "source_ids": [
+        "sloww-farther",
+        "bu-review-farther",
+        "internet-archive-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -58,7 +76,10 @@
       "representative_example": "The book's caution, noted by reviewers: peaks cannot be forced, and chasing them corrupts them; the quieter 'plateau experience' comes with maturity.",
       "why_it_matters": "It legitimised studying experiences that behaviourism excluded, opening the road to research on flow, awe, and wellbeing.",
       "caveat": "Self-reported transcendent moments are hard evidence for personal meaning, weak evidence for metaphysics.",
-      "source_ids": ["bu-review-farther", "sloww-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -69,7 +90,10 @@
       "representative_example": "The fusion claim: in the healthiest people, facts and values stop being separate categories — what is and what ought pull together.",
       "why_it_matters": "It is an empirical-sounding bridge between psychology and the oldest questions of philosophy, and the seed of his religion-without-revelation naturalism.",
       "caveat": "The list is introspective taxonomy, not measurement; philosophers note it settles none of the classical disputes it touches.",
-      "source_ids": ["sloww-farther", "bu-review-farther"],
+      "source_ids": [
+        "sloww-farther",
+        "bu-review-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -80,7 +104,10 @@
       "representative_example": "His diagnosis of prosperous malaise: people with every deficiency need met who are nonetheless sick from a starvation the culture cannot name.",
       "why_it_matters": "It predicted the meaning-crisis conversation half a century early and gave it a vocabulary.",
       "caveat": "The clinical status of metapathologies is asserted from observation, never established.",
-      "source_ids": ["sloww-farther", "bu-review-farther"],
+      "source_ids": [
+        "sloww-farther",
+        "bu-review-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -91,7 +118,10 @@
       "representative_example": "Maslow's classroom question — who here will write the great book, be the great leader? — met with embarrassed silence he read as the complex in action.",
       "why_it_matters": "It names a failure mode the deficiency-based psychologies cannot even see: neurosis as the refusal of growth.",
       "caveat": "It resists falsification: any avoidance can be redescribed as fleeing greatness.",
-      "source_ids": ["bu-review-farther", "sloww-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -102,7 +132,10 @@
       "representative_example": "His line that the goal of education is ultimately the self-actualization of a person, the becoming fully human.",
       "why_it_matters": "This is the channel through which Maslow flowed into management, education reform, and organisational thinking.",
       "caveat": "The institutional essays are the most dated: programmatic hopes with little design detail.",
-      "source_ids": ["sloww-farther", "bu-review-farther"],
+      "source_ids": [
+        "sloww-farther",
+        "bu-review-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -113,7 +146,11 @@
       "representative_example": "His formulation that we have become self-evolvers: responsible now for our own evolution.",
       "why_it_matters": "It corrects the individualist reading of his own hierarchy, a correction most textbook pyramids still omit.",
       "caveat": "Left unfinished at his death; the essays sketch a programme rather than deliver a psychology.",
-      "source_ids": ["sloww-farther", "bu-review-farther"],
+      "source_ids": [
+        "sloww-farther",
+        "bu-review-farther",
+        "koltko-rivera-rediscovering"
+      ],
       "basis": "synthesis"
     }
   ],
@@ -123,8 +160,14 @@
       "title": "Health and pathology",
       "purpose": "Reframe psychology around growth.",
       "summary": "A humanistic biology; neurosis recast as failed growth rather than mere disorder; and the flagship essay on self-actualizing as observable, choosable behaviour.",
-      "idea_ids": ["study-the-best", "self-actualization-as-process"],
-      "source_ids": ["internet-archive-farther", "bu-review-farther"],
+      "idea_ids": [
+        "study-the-best",
+        "self-actualization-as-process"
+      ],
+      "source_ids": [
+        "internet-archive-farther",
+        "bu-review-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -132,8 +175,14 @@
       "title": "Creativeness",
       "purpose": "Locate creativity in health rather than talent.",
       "summary": "Primary creativeness as the birthright of the healthy: the creative attitude, its emotional blocks, and the social need for creative people, treated as psychology rather than aesthetics.",
-      "idea_ids": ["self-actualization-as-process", "peak-experiences"],
-      "source_ids": ["internet-archive-farther", "sloww-farther"],
+      "idea_ids": [
+        "self-actualization-as-process",
+        "peak-experiences"
+      ],
+      "source_ids": [
+        "internet-archive-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -141,8 +190,15 @@
       "title": "Values",
       "purpose": "Make value a subject of science.",
       "summary": "Fusions of facts and values, being-psychology, and the B-values: the argument that what the best people love tells us what humans are for, and that science cannot stay neutral about it.",
-      "idea_ids": ["b-values", "peak-experiences"],
-      "source_ids": ["internet-archive-farther", "bu-review-farther", "sloww-farther"],
+      "idea_ids": [
+        "b-values",
+        "peak-experiences"
+      ],
+      "source_ids": [
+        "internet-archive-farther",
+        "bu-review-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -150,8 +206,13 @@
       "title": "Education and society",
       "purpose": "Apply the framework to institutions.",
       "summary": "Education aimed at full humanness rather than skill alone; synergic societies where individual growth and the common good reinforce; the most hopeful and most dated stretch of the book.",
-      "idea_ids": ["growth-centred-institutions"],
-      "source_ids": ["sloww-farther", "internet-archive-farther"],
+      "idea_ids": [
+        "growth-centred-institutions"
+      ],
+      "source_ids": [
+        "sloww-farther",
+        "internet-archive-farther"
+      ],
       "basis": "synthesis"
     },
     {
@@ -159,8 +220,15 @@
       "title": "Metamotivation and transcendence",
       "purpose": "Complete and surpass the hierarchy.",
       "summary": "The metaneeds and their pathologies, unitive consciousness, and the final move: transcendence above self-actualization, humanity as self-evolver — the unfinished top floor of the framework, left as a programme at his death.",
-      "idea_ids": ["metamotivation", "transcendence-above-the-pyramid", "jonah-complex"],
-      "source_ids": ["sloww-farther", "bu-review-farther"],
+      "idea_ids": [
+        "metamotivation",
+        "transcendence-above-the-pyramid",
+        "jonah-complex"
+      ],
+      "source_ids": [
+        "sloww-farther",
+        "bu-review-farther"
+      ],
       "basis": "synthesis"
     }
   ],
@@ -172,7 +240,11 @@
     "example_style": "Portraits of self-actualizing people, classroom moments, and lists — of behaviours, values, pathologies — rather than cases or data.",
     "repetition": "Substantial: the same core claims return in multiple essays, which readers experience as either deepening or padding.",
     "prerequisites": "None, though knowing the hierarchy of needs enriches the late corrections to it.",
-    "source_ids": ["bu-review-farther", "goodreads-farther", "sloww-farther"],
+    "source_ids": [
+      "bu-review-farther",
+      "goodreads-farther",
+      "sloww-farther"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
@@ -186,76 +258,113 @@
           "id": "explanatory-power",
           "score": 7.0,
           "rationale": "The vocabulary — self-actualization as behaviour, metaneeds, the Jonah complex, transcendence above the pyramid — gives durable names to real phenomena of growth and its evasion.",
-          "source_ids": ["bu-review-farther", "sloww-farther"]
+          "source_ids": [
+            "bu-review-farther",
+            "sloww-farther"
+          ]
         },
         {
           "id": "evidence-and-reasoning",
           "score": 4.5,
           "rationale": "The method is candidly pre-scientific: hand-picked exemplars, introspection, and assertion, with the sample circularity critics have pressed for fifty years; Maslow himself framed it as a promissory programme.",
-          "source_ids": ["bu-review-farther", "goodreads-farther"]
+          "source_ids": [
+            "bu-review-farther",
+            "goodreads-farther"
+          ]
         },
         {
           "id": "insight-value",
           "score": 7.0,
           "rationale": "The affluent-malaise diagnosis, the growth-fear insight, and the transcendence correction to his own pyramid remain genuinely illuminating and ahead of their time.",
-          "source_ids": ["sloww-farther", "bu-review-farther"]
+          "source_ids": [
+            "sloww-farther",
+            "bu-review-farther"
+          ]
         },
         {
           "id": "practical-utility",
           "score": 5.5,
           "rationale": "The self-actualizing behaviours are usable as orientation, but the book offers inspiration rather than method: no practices, measures, or designs.",
-          "source_ids": ["sloww-farther", "goodreads-farther"]
+          "source_ids": [
+            "sloww-farther",
+            "goodreads-farther"
+          ]
         },
         {
           "id": "completeness-and-calibration",
           "score": 5.0,
           "rationale": "Honest about its programmatic status, silent on rival explanations and cultural boundedness; the transcendence material is explicitly unfinished.",
-          "source_ids": ["bu-review-farther", "goodreads-farther"]
+          "source_ids": [
+            "bu-review-farther",
+            "goodreads-farther"
+          ]
         },
         {
           "id": "information-efficiency",
           "score": 4.5,
           "rationale": "The posthumous assembly repeats core ideas across essays and preserves lecture meanders; the book's useful content fits in a fraction of its pages.",
-          "source_ids": ["goodreads-farther", "bu-review-farther"]
+          "source_ids": [
+            "goodreads-farther",
+            "bu-review-farther"
+          ]
         }
       ],
       "basis": "inference"
     },
     "meaning": {
       "text": "The book completes psychology's third force by pointing past it: the study of human nature at its best ends, in Maslow's final reckoning, beyond the self — a scientist arriving, by his own route, at territory religions had mapped and psychology had refused to enter.",
-      "source_ids": ["bu-review-farther", "sloww-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     },
     "lessons": [
       {
         "text": "Judge your picture of human nature by who it was drawn from; averages of the diminished are not the ceiling.",
-        "source_ids": ["bu-review-farther"],
+        "source_ids": [
+          "bu-review-farther"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Practise actualization as choices: growth over safety, honesty over pose, work over drift — daily, not someday.",
-        "source_ids": ["sloww-farther"],
+        "source_ids": [
+          "sloww-farther"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Take meaning-hunger seriously as a need: its frustration is a real sickness with real symptoms.",
-        "source_ids": ["sloww-farther", "bu-review-farther"],
+        "source_ids": [
+          "sloww-farther",
+          "bu-review-farther"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Watch for the Jonah complex in yourself: the flight from your own possibilities wears very reasonable disguises.",
-        "source_ids": ["bu-review-farther"],
+        "source_ids": [
+          "bu-review-farther"
+        ],
         "basis": "synthesis"
       }
     ],
     "importance": {
       "text": "The capstone of the psychologist whose pyramid became the most reproduced diagram in the social sciences; this book seeded transpersonal psychology, fed the human-potential movement, and anticipated positive psychology and the meaning-crisis discourse by decades.",
-      "source_ids": ["bu-review-farther", "semantic-scholar-farther", "sloww-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "semantic-scholar-farther",
+        "sloww-farther"
+      ],
       "basis": "synthesis"
     },
     "author_and_purpose": {
       "text": "Maslow spent his last years, after a major heart attack, racing to sketch the top of his framework; he died in June 1970 with the work unfinished, and his wife Bertha, with Henry Geiger, assembled these essays as the closest thing to his final statement.",
-      "source_ids": ["bu-review-farther", "amazon-farther-edition"],
+      "source_ids": [
+        "bu-review-farther",
+        "amazon-farther-edition"
+      ],
       "basis": "synthesis"
     },
     "evidence_quality": {
@@ -271,7 +380,10 @@
         "Later research left the hierarchy and its extensions with, at best, mixed empirical support.",
         "Cultural boundedness of what counts as the highest human life goes unexamined."
       ],
-      "source_ids": ["bu-review-farther", "goodreads-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "goodreads-farther"
+      ],
       "basis": "synthesis"
     },
     "reception": {
@@ -286,7 +398,11 @@
         "Repetitive and uneven, as lecture transcripts sit beside finished essays.",
         "Dated institutional hopes; the utopian passages have not aged well."
       ],
-      "source_ids": ["bu-review-farther", "goodreads-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "goodreads-farther",
+        "koltko-rivera-rediscovering"
+      ],
       "basis": "synthesis"
     },
     "audience": {
@@ -310,7 +426,11 @@
         "Humanistic psychology",
         "Meaning"
       ],
-      "source_ids": ["bu-review-farther", "sloww-farther", "goodreads-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "sloww-farther",
+        "goodreads-farther"
+      ],
       "basis": "synthesis"
     },
     "scope": {
@@ -335,7 +455,10 @@
         "The utopian social passages read as artefacts of their era.",
         "Transpersonal psychology's scientific standing remains contested."
       ],
-      "source_ids": ["bu-review-farther", "goodreads-farther"],
+      "source_ids": [
+        "bu-review-farther",
+        "goodreads-farther"
+      ],
       "basis": "synthesis"
     },
     "decision": {
@@ -343,7 +466,10 @@
       "summary_is_enough_if": "The brief is enough if you want the concepts — actualization as behaviour, metaneeds, the Jonah complex, transcendence above the pyramid — with their standing honestly labelled.",
       "skip_if": "Skip it if you need current evidence or practical method; read a modern treatment of motivation research instead and keep Maslow as history.",
       "format_advice": "Print or ebook for dipping essay by essay; it is not built for straight-through listening, and the repetition is most audible in audio.",
-      "source_ids": ["goodreads-farther", "bu-review-farther"],
+      "source_ids": [
+        "goodreads-farther",
+        "bu-review-farther"
+      ],
       "basis": "inference"
     }
   },
