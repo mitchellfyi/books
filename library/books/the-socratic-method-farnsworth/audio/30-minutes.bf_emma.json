@@ -13,14 +13,15 @@
   "output_format": "mp3",
   "source_script": "library/books/the-socratic-method-farnsworth/scripts/30-minutes.md",
   "source_script_sha256": "d9ef04c1efbfffdce0c2d960482354382eb471b91ea7a5a2335f34e9da35ced6",
-  "pronunciation_dictionary_sha256": "09636851dc40f9d861f2b7a993ff82c8fd9df24f4152972007facc639a86a240",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "elenchus",
+    "Epictetus",
     "Plato"
   ],
-  "pronunciation_entries_sha256": "fcadc25b70bf641c7c4470edd680b10653f4fb10527fe6794baaf61036f38dd3",
+  "pronunciation_entries_sha256": "819031a874af5e67f05de8ef3768daa98de3a003e2a96307be88227d04f20c1d",
   "script_words": 4186,
-  "audio_seconds": 1614.771,
-  "measured_wpm": 155.54,
-  "generated_at": "2026-08-13T16:04:19.023594+00:00"
+  "audio_seconds": 1614.665,
+  "measured_wpm": 155.55,
+  "generated_at": "2026-08-13T20:58:13.468978+00:00"
 }
