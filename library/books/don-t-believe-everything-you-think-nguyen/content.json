@@ -7,15 +7,16 @@
     "compression_fit": "high",
     "complexity": "low",
     "recommended_level": "5-minutes",
-    "rationale": "One idea, stated and restated: suffering comes from thinking, not thoughts. Reader and professional reviewers agree the content fits in a few pages, so the five-minute brief carries the whole argument plus the professional caveats; longer versions add texture and the reliability report, not substance. The first book in this library whose loss test favours the short brief."
+    "rationale": "The original develops one central distinction through short chapters; the expanded edition adds exercises, journaling and answers to common obstacles. Five minutes carries the argument and a usable practice, while longer versions mainly preserve the spiritual framing, repetition and applications."
   },
   "card": {
     "one_sentence": "Joseph Nguyen's hundred-page BookTok phenomenon argues that all psychological suffering comes not from events or even from thoughts, but from thinking — the elaboration we add — and that peace is what remains when you stop believing the elaboration.",
-    "verdict": "A warm, elegant restatement of one genuinely useful move — notice thoughts without engaging them — that oversells it as the root cause of all suffering, cites nothing, and omits the practice required; take the five-minute version and the caveats, and skip the book unless you want the comfort of the repetition.",
+    "verdict": "A warm, accessible introduction to stepping back from rumination, weakened by universal claims, little evidence and a blurry line between practical mindfulness and spiritual certainty; the expanded edition supplies more practice, but a five-minute account carries most of the intellectual value.",
     "source_ids": [
       "goodreads-dont-believe",
       "vernezze-review",
-      "sebastian-act-review"
+      "blvd-counseling-review",
+      "google-books-expanded"
     ],
     "basis": "synthesis"
   },
@@ -25,14 +26,16 @@
       "source_ids": [
         "josephnguyen-site",
         "goodreads-dont-believe",
-        "sebastian-act-review"
+        "google-books-original",
+        "google-books-expanded"
       ],
       "basis": "synthesis"
     },
     "core_argument": {
-      "text": "Thoughts are spontaneous mental events you cannot control and need not believe; thinking is the optional engagement with them that manufactures suffering; therefore the way out of psychological pain is not better thoughts but less believing of thinking — a claim the book states as universal and self-evident rather than argues.",
+      "text": "Thoughts are spontaneous mental events that need not be believed; thinking is the effortful judging, elaborating and ruminating that can prolong distress. Nguyen therefore recommends less engagement with mental commentary rather than replacing every negative thought with a positive one, then extends that useful move into a universal account of psychological suffering.",
       "source_ids": [
-        "goodreads-dont-believe",
+        "google-books-original",
+        "sands-expanded-edition",
         "vernezze-review"
       ],
       "basis": "synthesis"
@@ -50,22 +53,23 @@
       "source_ids": [
         "goodreads-dont-believe",
         "vernezze-review",
-        "sebastian-act-review"
+        "blvd-counseling-review",
+        "oxford-defusion-review"
       ],
       "basis": "synthesis"
     },
     {
       "id": "inside-out",
       "title": "Feelings come from thought, not circumstances",
-      "claim": "You never feel the world directly; you feel your thinking about it — so no event can hurt you without your thinking's cooperation.",
-      "explanation": "The book's engine claim, delivered as self-evident: the same event produces despair in one person and indifference in another, so the feeling must live in the thought, not the event. It parallels the unattributed 'inside-out' framework of Three Principles psychology and, further back, Stoic and Buddhist claims.",
+      "claim": "Nguyen argues that emotions arise through our interpretation of events rather than directly from circumstances, so changing our relationship to thought can change experience.",
+      "explanation": "The same event can produce different responses in different people, and an old memory can lose its force even though the event does not change. Nguyen uses those observations to locate suffering inside thought and belief. The authorised preview names Sydney Banks, while independent reviewers place the broader approach near Zen, mindfulness and New Age spirituality.",
       "representative_example": "The book's recurring move: recall something that once devastated you and no longer does — the event never changed; the thinking did.",
       "why_it_matters": "Taken as a practice prompt, it redirects attention from fixing the world to noticing the commentary.",
-      "caveat": "Taken as stated — universally, with no boundary conditions — it is both unfalsifiable and, for grief, trauma, or clinical conditions, potentially a way of blaming the sufferer; the professional reviews flag exactly this.",
+      "caveat": "Interpretation clearly affects emotion, but the book's universal wording discounts direct bodily reactions, material conditions and clinical disorders. Its strongest claim is larger than the evidence it provides.",
       "source_ids": [
         "vernezze-review",
-        "wikipedia-three-principles",
-        "goodreads-dont-believe"
+        "google-books-expanded",
+        "blvd-counseling-review"
       ],
       "basis": "synthesis"
     },
@@ -76,11 +80,12 @@
       "explanation": "The book's spiritual centre, with its talk of the Universe and infinite intelligence: flow states, sudden clarity in the shower, and the calm after letting go are presented as glimpses of the mind's resting condition. Creativity and 'divine downloads' arrive in the gaps between thoughts.",
       "representative_example": "The athlete or artist in flow, acting fluidly precisely because self-commentary has stopped.",
       "why_it_matters": "It reframes peace as subtraction rather than accumulation — a genuinely different posture from self-improvement.",
-      "caveat": "The claim is testimony, not evidence; the book offers no account of how to reach or stay in the state, which its sharpest reviewer calls the omission that makes it 'radically incomplete but potentially misleading' — letting go of thoughts is simple the way running a marathon is simple.",
+      "caveat": "The default-peace claim is spiritual testimony, not established psychology. The expanded edition adds practical steps, inner work and journaling, but sustained defusion or meditation still takes more training than the promise of effortless change suggests.",
       "source_ids": [
         "vernezze-review",
-        "goodreads-dont-believe",
-        "josephnguyen-site"
+        "google-books-expanded",
+        "sands-expanded-edition",
+        "getabstract-review"
       ],
       "basis": "synthesis"
     },
@@ -94,22 +99,26 @@
       "caveat": "The dichotomy is clean on the page and muddier in lives, where most real motivation is mixed; the book does not engage the complication.",
       "source_ids": [
         "goodreads-dont-believe",
-        "sebastian-act-review"
+        "google-books-original",
+        "blvd-counseling-review"
       ],
       "basis": "synthesis"
     },
     {
-      "id": "unattributed-lineage",
-      "title": "Old ideas without their names",
-      "claim": "The book's material is a simplified, unattributed blend of Buddhist non-attachment, Stoic impression-handling, Three Principles 'inside-out' psychology, and ACT-style defusion — presented as personal discovery.",
-      "explanation": "Professional reviewers map it precisely: the noticing move is cognitive defusion; the inside-out claim is Sydney Banks's framework with the labels removed; the whole is material 'that has been around for a couple of thousand years'. The book cites no sources and engages no clinical literature.",
-      "representative_example": "A reviewer's summary: ACT's defusion and acceptance, minus the methodological rigour and the evidence base.",
-      "why_it_matters": "Readers moved by the book have somewhere rigorous to go next — which the book itself never points to.",
-      "caveat": "Unoriginality is not worthlessness: the compression and warmth are the product, and for its audience the lack of jargon is the feature.",
+      "id": "practice-and-lineage",
+      "title": "A simple practice with older relatives",
+      "claim": "The book turns a familiar contemplative move — observing a thought without treating it as fact — into plain self-help language and, in the expanded edition, basic reflection and journaling exercises.",
+      "explanation": "Independent reviewers connect the approach to Zen, mindfulness and New Age spirituality. Clinically, the noticing move resembles cognitive defusion in ACT, where it is one process inside a larger model of acceptance, values and committed action. The expanded contents also include practical steps, inner work, outer work, a daily journal and resources.",
+      "representative_example": "Pause after a thought, notice the story being added, allow the emotion, then choose whether action is needed.",
+      "why_it_matters": "The similarity explains both why the move can help and why the book's complete theory should not inherit the evidence for a fuller therapy.",
+      "caveat": "Accessibility is the contribution. The book does not supply the research, careful limits or full training of the clinical approaches it resembles.",
       "source_ids": [
+        "getabstract-review",
+        "google-books-expanded",
+        "oxford-defusion-review",
+        "act-meta-analysis",
         "vernezze-review",
-        "sebastian-act-review",
-        "wikipedia-three-principles"
+        "blvd-counseling-review"
       ],
       "basis": "synthesis"
     }
@@ -125,8 +134,8 @@
         "inside-out"
       ],
       "source_ids": [
-        "josephnguyen-site",
-        "goodreads-dont-believe"
+        "google-books-original",
+        "sands-expanded-edition"
       ],
       "basis": "synthesis"
     },
@@ -140,8 +149,9 @@
         "non-thinking"
       ],
       "source_ids": [
-        "goodreads-dont-believe",
-        "sebastian-act-review"
+        "google-books-original",
+        "google-books-expanded",
+        "blvd-counseling-review"
       ],
       "basis": "synthesis"
     },
@@ -155,93 +165,105 @@
         "non-thinking"
       ],
       "source_ids": [
-        "goodreads-dont-believe"
+        "google-books-original",
+        "google-books-expanded"
       ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "Very short chapters, each restating the thesis through a new metaphor, ending in bullet summaries and reflection questions; readable in an evening.",
+    "structure": "Seventeen short chapters build the main distinction through metaphors and applications; the expanded edition adds practical steps, inner and outer work, journaling and resources.",
     "voice": "Gentle, earnest, second-person; a friend repeating the one thing that saved him, in the vocabulary of the Universe rather than any tradition.",
     "pace": "Fast and deliberately circular — the repetition is the pedagogy and, per many readers, the padding.",
-    "evidence_style": "None: no studies, no citations, no engagement with psychology or the traditions it parallels; authority is autobiographical.",
+    "evidence_style": "Personal testimony, thought experiments and spiritual claims rather than research; influences appear, but the book does not build a clinical evidence case.",
     "example_style": "Everyman vignettes and thought experiments; no named cases.",
     "repetition": "Very high — the book's defining formal feature, praised as reinforcing and criticised as content-stretching.",
     "prerequisites": "None.",
     "source_ids": [
       "goodreads-dont-believe",
-      "vernezze-review"
+      "vernezze-review",
+      "google-books-expanded",
+      "getabstract-review"
     ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 3.5,
+      "score": 3.9,
       "confidence": "medium",
-      "summary": "Weak on content despite its cultural reach: one genuinely useful move — notice thoughts without engaging them — inflated into an unfalsifiable theory of all suffering, delivered with no evidence, no sources, no boundary conditions, and no method, in a book whose own admirers concede it is a few pages of idea in a hundred pages of restatement.",
+      "summary": "Weak overall: a clear and potentially useful introduction to separating thoughts from facts, expanded too far into a universal theory of suffering and supported mainly by testimony. The current edition adds exercises, but its evidence, limits and distinction between rumination and necessary thinking remain thin.",
       "dimensions": [
         {
           "id": "explanatory-power",
           "score": 4.0,
-          "rationale": "The thoughts/thinking distinction genuinely illuminates rumination for newcomers, but the book explains by assertion and metaphor, and its central dichotomy is professionally documented as misdescribing how loaded first reactions actually arrive.",
+          "rationale": "The thoughts-thinking distinction gives newcomers a clear model of rumination, but it explains by assertion and metaphor. A critical therapist reasonably notes that first reactions can arrive emotionally loaded rather than as neutral thoughts awaiting elaboration.",
           "source_ids": [
             "vernezze-review",
-            "sebastian-act-review"
+            "blvd-counseling-review"
           ]
         },
         {
           "id": "evidence-and-reasoning",
-          "score": 2.5,
-          "rationale": "No studies, no citations, no engagement with the clinical literature its claims parallel; universal claims rest on one person's testimony, and the sharpest professional review finds the core argument fundamentally mistaken.",
+          "score": 3.0,
+          "rationale": "The book relies on testimony and examples, not a research argument. Its thought-distancing move resembles a studied ACT process, but evidence for full ACT cannot validate Nguyen's stronger claims about all suffering, effortless change or peace as a universal default.",
           "source_ids": [
             "vernezze-review",
-            "goodreads-dont-believe"
+            "oxford-defusion-review",
+            "act-meta-analysis",
+            "sands-expanded-edition"
           ]
         },
         {
           "id": "insight-value",
           "score": 4.5,
-          "rationale": "For readers meeting defusion for the first time the reframe can be life-sized — the reception attests to that — while anyone acquainted with CBT, Stoicism, or Buddhism will find renamed basics.",
+          "rationale": "For readers meeting thought-distancing for the first time, the reframe can be significant; readers familiar with mindfulness, ACT or older contemplative traditions will recognise the central move.",
           "source_ids": [
             "goodreads-dont-believe",
-            "sebastian-act-review"
+            "blvd-counseling-review"
           ]
         },
         {
           "id": "practical-utility",
-          "score": 4.0,
-          "rationale": "The noticing move and the inspiration-versus-desperation audit are usable today; but the book omits the training its own prescription requires — the marathon sold as a stroll — so its utility stops exactly where difficulty starts.",
+          "score": 5.0,
+          "rationale": "Noticing mental commentary, pausing before engagement and auditing a goal's emotional fuel are usable. The expanded edition adds exercises and journaling, though it still understates the practice needed when thoughts are persistent or distress is severe.",
           "source_ids": [
             "vernezze-review",
-            "sebastian-act-review"
+            "google-books-expanded",
+            "sands-expanded-edition",
+            "blvd-counseling-review"
           ]
         },
         {
           "id": "completeness-and-calibration",
-          "score": 2.0,
-          "rationale": "Universal claims with no boundary conditions, no acknowledgment of clinical distress, no sources, and no self-doubt; the gap between 'all suffering' and the evidence offered is the widest in this library.",
+          "score": 2.5,
+          "rationale": "The universal language supplies few boundary conditions for trauma, clinical disorders, bodily responses or material problems. The expanded edition addresses obstacles and practice but does not adequately calibrate the central claim.",
           "source_ids": [
             "vernezze-review",
-            "goodreads-dont-believe"
+            "sands-expanded-edition",
+            "google-books-expanded",
+            "blvd-counseling-review"
           ]
         },
         {
           "id": "information-efficiency",
-          "score": 3.5,
-          "rationale": "Short in absolute terms yet inefficient by density: readers across the reception agree the content fits in a few pages, and the restatement structure is the page count.",
+          "score": 4.0,
+          "rationale": "The book is short and readable, but one distinction carries much of the intellectual weight. Repetition may help the intended reflective experience while lowering information gained per page.",
           "source_ids": [
-            "goodreads-dont-believe"
+            "goodreads-dont-believe",
+            "getabstract-review",
+            "google-books-expanded"
           ]
         }
       ],
       "basis": "inference"
     },
     "meaning": {
-      "text": "Strip the packaging and the book makes one old, valuable claim: you are not your thoughts, and the commentary is optional. Its cultural success is evidence less of the argument than of the epidemic it answers — a generation of overthinkers meeting, in the simplest possible words, the first tool anyone ever handed them.",
+      "text": "The book's durable message is that a thought is an event, not an order or a fact. Attention can turn a passing thought into prolonged rumination, and learning to pause before engagement can restore choice. That insight is useful even when the book's larger spiritual theory is set aside.",
       "source_ids": [
-        "goodreads-dont-believe",
-        "literary-reporter-nguyen"
+        "google-books-original",
+        "blvd-counseling-review",
+        "oxford-defusion-review"
       ],
       "basis": "synthesis"
     },
@@ -249,21 +271,24 @@
       {
         "text": "Practise the split: when distress arrives, ask what was the thought, and what has my thinking added since?",
         "source_ids": [
-          "goodreads-dont-believe"
+          "google-books-original",
+          "google-books-expanded"
         ],
         "basis": "synthesis"
       },
       {
         "text": "Audit one goal: is it powered by inspiration or by a lack it is supposed to repair?",
         "source_ids": [
-          "goodreads-dont-believe"
+          "google-books-original"
         ],
         "basis": "synthesis"
       },
       {
-        "text": "If the noticing move helps, go to its rigorous sources next — ACT, mindfulness-based CBT, or the Stoics — because the skill has a training literature this book does not mention.",
+        "text": "Use the expanded edition's pause and journaling exercises as practice, while remembering that thought-distancing is only one part of dealing with difficult emotions and decisions.",
         "source_ids": [
-          "sebastian-act-review",
+          "google-books-expanded",
+          "sands-expanded-edition",
+          "oxford-defusion-review",
           "vernezze-review"
         ],
         "basis": "synthesis"
@@ -278,49 +303,55 @@
       "basis": "synthesis"
     },
     "author_and_purpose": {
-      "text": "Nguyen wrote it out of his own overthinking, as the statement of what dissolved it, and the sample-of-one warmth is both the appeal and the epistemology: the book asks to be believed the way a friend's testimony is believed, not the way an argument is.",
+      "text": "Nguyen wrote from his experience of overthinking and drew on philosophy, spirituality and psychology to make contemplative ideas simple and accessible. The personal tone is the appeal, but it also means the book offers testimony and invitation more than a tested psychological argument.",
       "source_ids": [
         "literary-reporter-nguyen",
-        "vernezze-review"
+        "getabstract-review",
+        "sands-expanded-edition"
       ],
       "basis": "synthesis"
     },
     "evidence_quality": {
       "rating": "weak",
       "strengths": [
-        "The core move parallels evidence-based techniques (defusion, acceptance) that do have a literature.",
-        "Its claims are cheaply testable in the reader's own experience."
+        "The thought-distancing move resembles cognitive defusion, which has a research literature within ACT.",
+        "The expanded edition adds practical reflection, journaling and ways to address obstacles.",
+        "The central distinction is easy to test against ordinary episodes of rumination."
       ],
       "weaknesses": [
-        "No citations, studies, or engagement with any tradition or clinical field.",
-        "Universal, unfalsifiable claims from autobiographical authority.",
-        "Professional review finds the core dichotomy misdescriptive and the method absent.",
-        "No boundary conditions for clinical-grade distress."
+        "The book does not build a research case for its universal claims.",
+        "Evidence for cognitive defusion or full ACT does not prove the book's inside-out spiritual theory.",
+        "A loaded emotional reaction cannot always be separated neatly into a neutral thought followed by optional thinking.",
+        "Boundary conditions for trauma, clinical disorders and material problems remain weak."
       ],
       "source_ids": [
         "vernezze-review",
-        "sebastian-act-review",
-        "goodreads-dont-believe"
+        "blvd-counseling-review",
+        "google-books-expanded",
+        "oxford-defusion-review",
+        "act-meta-analysis"
       ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "A reception split down the middle and stable for three years: millions of grateful readers, many crediting it with breaking rumination cycles, against a persistent chorus — strongest among professionals and well-read reviewers — of repetitive, unsupported, unoriginal, and oversold.",
+      "summary": "Readers and reviewers divide over whether simplicity is the book's strength or its main weakness. Supporters value the calm tone, accessible thought-distancing and immediate relevance to rumination. Critics find it repetitive, spiritually overconfident and short on evidence, limits and sustained practice.",
       "praise": [
         "Testimony from overthinkers that the thoughts/thinking split gave immediate relief.",
         "Praised for brevity, simplicity, and jargon-free warmth.",
-        "A publishing phenomenon: NYT bestseller, 2M+ copies, 30+ languages."
+        "Publisher endorsements praise its straightforward concepts, calming delivery and practical first step."
       ],
       "criticism": [
-        "A therapist's verdict: radically incomplete but potentially misleading; the method omits the marathon-grade training it presupposes.",
-        "Content professionally mapped to unattributed ACT, Stoic, and Three Principles material.",
-        "Reader consensus even among fans that the idea fits in a few pages.",
+        "One therapist calls the method incomplete because lasting non-engagement takes more training than the book implies.",
+        "A counselling review values the central skill but finds the book broad, repetitive and short on structured evidence-based technique.",
+        "Many readers say the central content could be much shorter.",
         "Spiritual claims (Universe, infinite intelligence) asserted, never argued."
       ],
       "source_ids": [
         "goodreads-dont-believe",
         "vernezze-review",
-        "sebastian-act-review"
+        "blvd-counseling-review",
+        "getabstract-review",
+        "sands-expanded-edition"
       ],
       "basis": "synthesis"
     },
@@ -332,7 +363,7 @@
       ],
       "not_for": [
         "Readers with clinical anxiety or depression seeking treatment-grade help",
-        "Anyone who knows the defusion literature — there is nothing new here",
+        "Readers already fluent in thought-distancing who want deeper theory or new tools",
         "Readers allergic to unsourced spiritual vocabulary"
       ],
       "topics": [
@@ -343,40 +374,43 @@
       ],
       "source_ids": [
         "goodreads-dont-believe",
-        "sebastian-act-review"
+        "blvd-counseling-review",
+        "getabstract-review"
       ],
       "basis": "synthesis"
     },
     "scope": {
       "is_not": [
-        "Psychology or therapy — it engages no clinical literature",
-        "A meditation manual — the practice its prescription requires is absent",
-        "Original — its ideas have named, rigorous ancestors it does not name"
+        "A psychology textbook, clinical treatment guide or evidence review",
+        "A complete meditation course; even the expanded practice remains introductory",
+        "A guide to solving external problems that require analysis, action or structural change"
       ],
       "omissions": [
-        "Any evidence, citation, or source",
-        "Boundary conditions: grief, trauma, and disorder are not addressed",
-        "The training required for the letting-go it prescribes"
+        "Evidence proportionate to the claim that thinking causes all psychological suffering",
+        "Clear boundary conditions for grief, trauma, disorder and direct bodily reactions",
+        "A careful distinction between destructive rumination and necessary problem-solving"
       ],
       "missing_or_weak": [
-        "The core thought/thinking dichotomy is professionally documented as misdescribing loaded first reactions",
-        "The inside-out claim is unfalsifiable as stated"
+        "The thought-thinking split works best as a practical prompt, not a complete model of emotion",
+        "Peace as an effortless universal default is asserted rather than demonstrated"
       ],
       "dated_or_contested": [
-        "The parallel Three Principles framework it echoes has a documented weak evidence base and junk-science criticisms."
+        "The inside-out model and spiritual claims are contested and should not inherit the evidence for cognitive defusion or full ACT."
       ],
       "source_ids": [
         "vernezze-review",
-        "wikipedia-three-principles",
-        "goodreads-dont-believe"
+        "google-books-expanded",
+        "blvd-counseling-review",
+        "oxford-defusion-review",
+        "act-meta-analysis"
       ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "Read it only if you want the repetition itself — the gentle, hundred-page restatement as a kind of meditation — or need the least intimidating possible introduction to not believing your thoughts.",
-      "summary_is_enough_if": "The five-minute brief is genuinely sufficient: it contains the distinction, the practice prompt, the goal audit, and the professional caveats, which is more calibration than the book itself provides.",
-      "skip_if": "Skip it if you have met these ideas anywhere — CBT, ACT, Stoicism, basic mindfulness — or if your distress is clinical: the book has no evidence, no method, and no idea you do not already have.",
-      "format_advice": "If you must, the audiobook: the material is spoken-word comfort by nature, and the paper edition's whitespace is famous.",
+      "read_if": "Read it if you want a gentle, low-jargon introduction to stepping back from overthinking, or if repetition helps an idea move from understanding into habit.",
+      "summary_is_enough_if": "Five minutes is enough if you want the thought-thinking distinction, a pause practice, the goal audit and the important limits without the repeated spiritual framing.",
+      "skip_if": "Skip it if you already use thought-distancing and want deeper theory, or need an evidence-led guide for trauma, clinical distress or difficult external decisions.",
+      "format_advice": "The audiobook suits the calm, repetitive voice. Choose the expanded print edition if you want its journal prompts and inner- and outer-work sections.",
       "source_ids": [
         "goodreads-dont-believe",
         "vernezze-review"
@@ -386,7 +420,7 @@
   },
   "retention": {
     "recall_prompts": [
-      "What is the book's distinction between thoughts and thinking, and what does the professional critique say it misses?",
+      "What is the book's distinction between thoughts and thinking, and what does the strongest criticism say it misses?",
       "What is the inside-out claim, and why is it unfalsifiable as stated?",
       "Where should a reader go next if the noticing move helps?"
     ],
@@ -397,29 +431,30 @@
     ]
   },
   "workflow": {
-    "status": "complete",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
-    "review_notes": "Built from the publisher record, two independent professional reviews (Vernezze's substantive critique, Sebastian's ACT mapping), the documented interview, and the large reader-reception record; the book's brevity and repetition make secondary coverage unusually complete.",
+    "review_notes": "Checked against records for the original and expanded editions, authorised previews, publisher material, three independent assessments, reader reception and research on the related cognitive-defusion process. No full text was supplied.",
     "quality_review": {
-      "status": "passed",
-      "reviewed_at": "2026-08-13",
+      "status": "pending",
+      "reviewed_at": null,
       "checks": {
-        "identity_and_metadata": true,
-        "content_fidelity": true,
-        "claim_support": true,
-        "counterevidence": true,
-        "citation_entailment": true,
-        "product_fit": true,
-        "plain_language": true,
-        "audio_pronunciation": true
+        "identity_and_metadata": false,
+        "content_fidelity": false,
+        "claim_support": false,
+        "counterevidence": false,
+        "citation_entailment": false,
+        "product_fit": false,
+        "plain_language": false,
+        "audio_pronunciation": false
       },
       "notes": [
-        "Identity verified: self-published 2022-03-28 (~175pp per the catalogue record) and the Authors Equity/Books By Joseph Nguyen expanded edition (ISBN 9798893310153).",
-        "The Three Principles parallel is framed as reviewers' attribution, not the author's acknowledgment — the book cites no sources, and that fact is itself load-bearing content.",
-        "Counterevidence is the review's spine: Vernezze's dichotomy critique and 'radically incomplete' verdict are quoted at the claims they address.",
-        "Rating scored on content only; the sales phenomenon and Sinek endorsement are documented in importance, not scored.",
-        "Recommended level set to 5-minutes — the library's first — because reader and professional consensus is that the content fits in a few pages; the loss test between 5 and 15 minutes favours 5 for substance.",
-        "Pronunciation: Nguyen ('win') checked against the phonemizer before audio; entry added if wrong."
+        "Identity verified: original digital edition published 2022-03-28 by One Satori LLC, original independent paperback published the same day, and Authors Equity expanded edition published 2024-10-29. Page counts and ISBNs are recorded by format.",
+        "The central argument and expanded practice were checked against authorised contents and publisher descriptions; the profile does not claim full-book coverage.",
+        "The ACT comparison is limited to a related thought-distancing process; evidence for full ACT is not used to validate Nguyen's universal inside-out theory.",
+        "Critical coverage combines a therapist's adversarial reading with a more balanced counselling review and reader reception; no single reviewer is treated as consensus.",
+        "Rating is content-only. Sales, bestseller status, endorsements and author identity do not affect the score.",
+        "Recommended level remains 5-minutes because it preserves the core distinction, goal audit, practice and major limits; longer versions add reading texture and applications.",
+        "Pronunciation and regenerated audio remain to be verified."
       ]
     }
   }

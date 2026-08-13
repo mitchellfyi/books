@@ -13,22 +13,31 @@
     "original_language": "English",
     "editions": [
       {
-        "label": "Self-published original",
-        "publisher": "Joseph Nguyen (self-published)",
+        "label": "Original self-published ebook",
+        "publisher": "One Satori LLC",
         "publication_date": "2022-03-28",
         "isbn_10": null,
-        "isbn_13": null,
+        "isbn_13": "9798986406510",
+        "format": "Ebook",
+        "pages": 126
+      },
+      {
+        "label": "Original self-published paperback",
+        "publisher": "Independently published",
+        "publication_date": "2022-03-28",
+        "isbn_10": null,
+        "isbn_13": "9798427063852",
         "format": "Paperback",
-        "pages": 175
+        "pages": 121
       },
       {
         "label": "Expanded edition",
         "publisher": "Authors Equity / Books By Joseph Nguyen",
-        "publication_date": "2024",
+        "publication_date": "2024-10-29",
         "isbn_10": null,
         "isbn_13": "9798893310153",
         "format": "Hardcover",
-        "pages": null
+        "pages": 192
       }
     ],
     "contents": [
@@ -38,7 +47,7 @@
       "Non-thinking, flow, and intuition: the mind that quiets hears its own wisdom",
       "Goals from inspiration versus goals from desperation",
       "Unconditional love and peace as the default state beneath thinking",
-      "Chapter summaries and reflection questions throughout; short chapters, deliberately repetitive"
+      "Expanded-edition practice: journaling prompts, contemplative exercises, inner and outer work, and a daily journal"
     ]
   },
   "discovery": {
@@ -62,14 +71,50 @@
       {
         "id": "sands-expanded-edition",
         "title": "Don't Believe Everything You Think (Expanded Edition)",
-        "author_or_publisher": "Simon & Schuster (distribution page)",
+        "author_or_publisher": "Simon & Schuster",
         "url": "https://www.simonandschuster.com/books/Dont-Believe-Everything-You-Think-(Expanded-Edition)/Joseph-Nguyen/Books-By-Joseph-Nguyen/9798893310153",
         "type": "publisher",
         "accessed_at": "2026-08-13",
-        "supports": "Expanded edition bibliographic facts: ISBN 9798893310153 under the Books By Joseph Nguyen imprint, and the publisher description of the thesis.",
+        "supports": "Authors Equity publication on 29 October 2024, ISBN 9798893310153, 192 pages; the stated thesis, expanded material, formats and selected endorsements.",
         "independence": "interested",
+        "quality": "high",
+        "limitations": "Authoritative for publication data and stated contents; promotional for outcomes and reception."
+      },
+      {
+        "id": "google-books-original",
+        "title": "Don't Believe Everything You Think",
+        "author_or_publisher": "Google Books",
+        "url": "https://books.google.com/books/about/Don_t_Believe_Everything_You_Think.html?id=_ZOvEAAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Original publication by One Satori LLC on 28 March 2022, ISBN 9798986406510, 126-page digital edition, core claims and chapter structure.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Bibliographic record and author-publisher description; useful for what the book says, not whether it works."
+      },
+      {
+        "id": "storygraph-editions",
+        "title": "Editions for Don't Believe Everything You Think",
+        "author_or_publisher": "The StoryGraph",
+        "url": "https://app.thestorygraph.com/books/8334f302-731c-4254-bd65-250b57d06c65/editions",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "The 28 March 2022 original paperback, ISBN 9798427063852 and 121 pages, and the separate 126-page digital edition.",
+        "independence": "community",
         "quality": "medium",
-        "limitations": "Retail/distribution copy."
+        "limitations": "Community catalogue used only to distinguish early formats and pagination."
+      },
+      {
+        "id": "google-books-expanded",
+        "title": "Don't Believe Everything You Think (Expanded Edition)",
+        "author_or_publisher": "Google Books",
+        "url": "https://books.google.com/books/about/Don_t_Believe_Everything_You_Think_Expan.html?id=ByYmEQAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Expanded-edition ISBN and 192-page count, plus contents including practical steps, inner work, outer work, a daily journal and resources.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Limited authorised preview and catalogue; authoritative for structure, not outcomes."
       },
       {
         "id": "goodreads-dont-believe",
@@ -78,34 +123,70 @@
         "url": "https://www.goodreads.com/book/show/60726415-don-t-believe-everything-you-think",
         "type": "reader-aggregate",
         "accessed_at": "2026-08-13",
-        "supports": "Publication date 2022-03-28, ~175 pages, 3.79 average over ~68,000 ratings, and the documented split: praised as a lifeline for overthinkers; criticised as repetitive, evidence-free, oversimplified, and spiritually unattributed.",
+        "supports": "Large-scale reader reception split between immediate help for overthinking and criticism of repetition, unsupported claims and oversimplification.",
         "independence": "community",
         "quality": "medium",
-        "limitations": "Self-selected raters; used for both content structure and reception."
+        "limitations": "Self-selected raters and edition metadata can be mixed."
       },
       {
         "id": "vernezze-review",
-        "title": "Review of Don't Believe Everything You Think (Authors Equity, 2024)",
-        "author_or_publisher": "Peter Vernezze, Therapist with Tinnitus (Substack)",
+        "title": "Review of Don't Believe Everything You Think",
+        "author_or_publisher": "Peter Vernezze, Therapist with Tinnitus",
         "url": "https://therapistwithtinnitus.substack.com/p/review-of-dont-believe-everything",
         "type": "professional-review",
         "accessed_at": "2026-08-13",
-        "supports": "A therapist's substantive critique: the thought/thinking dichotomy misdescribes experience (first reactions arrive loaded — the Stoics' 'impression', REBT's 'activating event'); letting go of thoughts 'is simple in the way that running a marathon is simple' and the training is omitted; verdict 'radically incomplete but potentially misleading' despite elegant presentation; notes the PAUSE method as the useful part and the Authors Equity 2024 edition.",
-        "independence": "independent",
-        "quality": "high",
-        "limitations": "Personal Substack of a practising therapist and philosophy PhD; single reviewer."
-      },
-      {
-        "id": "sebastian-act-review",
-        "title": "Don't Believe Everything You Think by Joseph Nguyen (review essay)",
-        "author_or_publisher": "Dr Michael Sebastian, Medium",
-        "url": "https://medium.com/@babunow99/dont-believe-everything-you-think-by-joseph-nguyen-3b540c722966",
-        "type": "professional-review",
-        "accessed_at": "2026-08-13",
-        "supports": "An analysis mapping the book onto Acceptance and Commitment Therapy: its moves are cognitive defusion and acceptance simplified for lay readers, effective as a gateway, without ACT's methodological rigour or evidence base.",
+        "supports": "An adversarial therapist's critique of the thought-thinking dichotomy and missing training, alongside praise for the expanded edition's PAUSE method and presentation.",
         "independence": "independent",
         "quality": "medium",
-        "limitations": "Personal Medium essay; credentials as stated by the author."
+        "limitations": "Personal Substack by one therapist and philosophy PhD; an attributed adversarial view, not clinical consensus."
+      },
+      {
+        "id": "blvd-counseling-review",
+        "title": "Book Summary and Review: Don't Believe Everything You Think",
+        "author_or_publisher": "Chris Malden, BLVD Counseling",
+        "url": "https://www.blvdcounseling.com/post/book-summary-and-review-don-t-believe-everything-you-think-by-joseph-nguyen",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A balanced clinical reading: the thought-distancing idea aligns with CBT, ACT, mindfulness and MBSR and may normalise distress; the book remains broad, repetitive, spiritual and short on structured evidence-based technique.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Brief counselling-practice blog rather than peer-reviewed research."
+      },
+      {
+        "id": "getabstract-review",
+        "title": "Don't Believe Everything You Think",
+        "author_or_publisher": "Patricia Sanders, getAbstract",
+        "url": "https://www.getabstract.com/en/summary/dont-believe-everything-you-think/49566",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent editorial characterisation of the 17-chapter book as a brief introduction to Zen, mindfulness and New Age spirituality; notes that Nguyen has no formal psychology or philosophy training.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Commercial editorial review, not a clinical evaluation."
+      },
+      {
+        "id": "oxford-defusion-review",
+        "title": "Cognitive Defusion",
+        "author_or_publisher": "Miguel A. Segura-Vargas, Oxford Handbook of Acceptance and Commitment Therapy",
+        "url": "https://academic.oup.com/edited-volume/38851/chapter-abstract/362453994",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Definition, exercises, measurement and empirical evidence for cognitive defusion in ACT, used to test the book's similar thought-distancing move.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Does not review Nguyen's book; similarity to defusion is an editorial inference."
+      },
+      {
+        "id": "act-meta-analysis",
+        "title": "Examining domains of psychological flexibility and inflexibility as treatment mechanisms in acceptance and commitment therapy",
+        "author_or_publisher": "Clinical Psychology Review",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38615492/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A systematic and meta-analytic review of 67 studies reporting that ACT interventions reduced cognitive fusion and other forms of inflexibility while increasing flexibility and defusion.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Evidence concerns full ACT interventions and proposed mechanisms, not this book or its universal claims."
       },
       {
         "id": "literary-reporter-nguyen",
@@ -114,57 +195,46 @@
         "url": "https://theliteraryreporter.com/the-best-books-come-from-the-greatest-pains-joseph-nguyen/",
         "type": "interview",
         "accessed_at": "2026-08-13",
-        "supports": "Origin story (written out of the author's own overthinking and self-doubt), the Zen-inspired framing, the self-published-to-Authors-Equity path, 2M+ copies in 30+ languages, and the forthcoming follow-up.",
+        "supports": "The personal origin, Zen-inspired framing, self-publishing path, reported reach and follow-up work.",
         "independence": "independent",
         "quality": "medium",
-        "limitations": "Friendly interview; promotional register."
+        "limitations": "Friendly interview with a promotional register."
       },
       {
         "id": "josephnguyen-site",
-        "title": "Joseph Nguyen — Don't Believe Everything You Think",
+        "title": "Joseph Nguyen",
         "author_or_publisher": "josephnguyen.org",
         "url": "https://josephnguyen.org/",
         "type": "author",
         "accessed_at": "2026-08-13",
-        "supports": "The author's own framing: NYT and international bestseller status, 31+ languages, and the book's promise of discovering the root cause of suffering.",
+        "supports": "The author's stated purpose, current books and self-description.",
         "independence": "interested",
         "quality": "medium",
-        "limitations": "Marketing copy."
-      },
-      {
-        "id": "wikipedia-three-principles",
-        "title": "Three Principles Psychology",
-        "author_or_publisher": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Three_Principles_Psychology",
-        "type": "secondary-summary",
-        "accessed_at": "2026-08-13",
-        "supports": "Context for the unattributed tradition the book's inside-out claims parallel: the Mind/Consciousness/Thought framework from Sydney Banks, its limited evidence base, and documented criticisms including the charge of belief-system-as-science.",
-        "independence": "community",
-        "quality": "medium",
-        "limitations": "Documents the tradition, not the book; the parallel is noted by critical reviewers, not acknowledged by the author."
+        "limitations": "Author-controlled marketing copy."
       }
     ],
     "citations": {
-      "/title": ["sands-expanded-edition", "goodreads-dont-believe"],
-      "/alternate_titles": ["josephnguyen-site"],
-      "/author_ids": ["sands-expanded-edition"],
-      "/bibliography/first_published": ["goodreads-dont-believe"],
-      "/bibliography/original_language": ["goodreads-dont-believe"],
-      "/bibliography/editions/0": ["goodreads-dont-believe", "literary-reporter-nguyen"],
-      "/bibliography/editions/1": ["sands-expanded-edition", "vernezze-review", "literary-reporter-nguyen"],
-      "/bibliography/contents": ["goodreads-dont-believe", "vernezze-review", "sebastian-act-review", "josephnguyen-site"],
-      "/discovery/tag_ids": ["goodreads-dont-believe"],
-      "/discovery/audiences": ["goodreads-dont-believe", "sebastian-act-review"],
-      "/discovery/formats_available": ["sands-expanded-edition", "josephnguyen-site"]
+      "/title": ["sands-expanded-edition", "google-books-original"],
+      "/alternate_titles": ["sands-expanded-edition", "google-books-original"],
+      "/author_ids": ["sands-expanded-edition", "google-books-original"],
+      "/bibliography/first_published": ["google-books-original", "storygraph-editions"],
+      "/bibliography/original_language": ["google-books-original"],
+      "/bibliography/editions/0": ["google-books-original", "storygraph-editions"],
+      "/bibliography/editions/1": ["storygraph-editions"],
+      "/bibliography/editions/2": ["sands-expanded-edition", "google-books-expanded"],
+      "/bibliography/contents": ["google-books-original", "google-books-expanded", "sands-expanded-edition"],
+      "/discovery/tag_ids": ["sands-expanded-edition", "google-books-expanded"],
+      "/discovery/audiences": ["goodreads-dont-believe", "blvd-counseling-review", "getabstract-review"],
+      "/discovery/formats_available": ["sands-expanded-edition", "google-books-expanded", "google-books-original"]
     }
   },
   "workflow": {
-    "status": "complete",
+    "status": "researched-partial",
     "coverage": "sample-and-secondary",
-    "coverage_notes": "Built from the publisher record, two independent professional reviews (one substantively critical), a documented interview, the reader-reception record, and context on the unattributed tradition; no full-text read.",
+    "coverage_notes": "Built from records for both original formats and the expanded edition, an authorised contents preview, publisher description, three independent professional readings, reader reception, and two research reviews used to test the related cognitive-defusion mechanism; no full-text read.",
     "last_researched": "2026-08-13",
     "next_steps": [
-      "Optional: confirm expanded-edition page count against a physical copy."
+      "Regenerate and verify all four local audio tracks after the independent evidence and edition audit."
     ]
   }
 }
