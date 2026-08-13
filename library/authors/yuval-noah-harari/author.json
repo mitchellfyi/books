@@ -6,20 +6,120 @@
   "name": "Yuval Noah Harari",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "Israeli historian of medieval warfare turned global synthesiser of everything, whose species-scale bestsellers made him the world's most famous — and most expert-contested — public intellectual.",
+      "source_ids": ["wikipedia-harari", "narayanan-current-affairs"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in 1976 in Israel, Harari took his Oxford DPhil in 2002 in medieval and military history under Steven Gunn, then joined the Hebrew University of Jerusalem, where he is a professor of history. Sapiens grew out of his undergraduate world-history lecture course, was published in Hebrew in 2011, and after its 2014 English translation spent years on bestseller lists and made him a fixture of Davos stages and presidential reading lists. Homo Deus (2016), 21 Lessons for the 21st Century (2018), and Nexus (2024) followed. He is married to Itzik Yahav, who is also his manager; he practises vipassana meditation, credits it in his books, and is a vegan on grounds his animal-welfare passages make explicit.",
+      "source_ids": ["wikipedia-harari", "ynharari-about"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His method is the lecture course scaled to the planet: compress the specialist literature of a dozen fields into one confident narrative arc, organised by provocative reversals — farming as fraud, money as fiction, science as admission of ignorance. His actual research specialism is medieval military memoirs; everything beyond it is synthesis from secondary sources.",
+      "source_ids": ["wikipedia-harari", "narayanan-current-affairs"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Genuine academic credentials in medieval and military history, and a rare gift for narrative compression across fields. Outside his specialism the record is documented: specialists in anthropology, biology, and neuroscience have catalogued errors in his species-scale claims, and his own doctoral supervisor observed that he asks questions so large that no one can say a specific bit is wrong.",
+      "source_ids": ["wikipedia-harari", "narayanan-current-affairs", "hallpike-review"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Harari writes as a detached observer of the species — atheist, meditator, deliberately above the tribes he describes — which produces both the books' exhilarating scope and their signature flaw: speculation delivered in the same confident register as settled fact. The limits are documented rather than speculative: a specialist error catalogue, a 'science populist' charge from within the fields he summarises, and a pragmatic streak that allowed censored Russian editions on publish-or-nothing grounds.",
+      "source_ids": ["narayanan-current-affairs", "hallpike-review", "wikipedia-harari"],
+      "basis": "synthesis"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Sapiens: A Brief History of Humankind",
+      "year": 2011,
+      "kind": "Book",
+      "relationship": "The species-history phenomenon; subject of this profile's book entry.",
+      "source_ids": ["wikipedia-harari"]
+    },
+    {
+      "title": "Homo Deus: A Brief History of Tomorrow",
+      "year": 2016,
+      "kind": "Book",
+      "relationship": "The sequel, turning the same lens on humanity's future.",
+      "source_ids": ["wikipedia-harari"]
+    },
+    {
+      "title": "21 Lessons for the 21st Century",
+      "year": 2018,
+      "kind": "Book",
+      "relationship": "The present-tense instalment; site of the documented Russian-censorship episode.",
+      "source_ids": ["wikipedia-harari"]
+    },
+    {
+      "title": "Nexus: A Brief History of Information Networks",
+      "year": 2024,
+      "kind": "Book",
+      "relationship": "The information-networks book, continuing the shared-fictions thesis into AI.",
+      "source_ids": ["wikipedia-harari"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-harari",
+        "title": "Yuval Noah Harari",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Yuval_Noah_Harari",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Birth year, Oxford DPhil 2002 under Steven Gunn, Hebrew University professorship, the lecture-course origin of Sapiens, book chronology, bestseller tenure, personal life, the documented Hallpike and Narayanan criticisms, and the Russian-edition episode.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; claims traced where used."
+      },
+      {
+        "id": "ynharari-about",
+        "title": "About Yuval Noah Harari",
+        "author_or_publisher": "ynharari.com",
+        "url": "https://www.ynharari.com/about/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Self-presentation, the meditation practice, and the household/management arrangement with Itzik Yahav.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "The author's own site."
+      },
+      {
+        "id": "narayanan-current-affairs",
+        "title": "The Dangerous Populist Science of Yuval Noah Harari",
+        "author_or_publisher": "Darshana Narayanan, Current Affairs",
+        "url": "https://www.currentaffairs.org/news/2022/07/the-dangerous-populist-science-of-yuval-noah-harari",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The specialist error catalogue, the 'science populist' framing, and Steven Gunn's quote about questions too large to be called wrong.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Advocacy-magazine venue; claims specific and checkable."
+      },
+      {
+        "id": "hallpike-review",
+        "title": "A Response to Yuval Harari's Sapiens",
+        "author_or_publisher": "C. R. Hallpike, New English Review",
+        "url": "https://www.newenglishreview.org/articles/a-response-to-yuval-hararis-sapiens-a-brief-history-of-humankind/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The anthropologist's verdict on Harari's method: correct where unoriginal, error-prone where original.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Polemical register."
+      }
+    ],
+    "citations": {
+      "/name": ["wikipedia-harari"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs; serves Sapiens and any future Harari titles.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

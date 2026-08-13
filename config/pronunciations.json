@@ -277,6 +277,30 @@
       "source_url": "https://www.1101.com/n/s/school_lecture_34",
       "verified_at": "2026-08-13",
       "notes": "foo-mee-TAH-keh KOH-guh. Hobonichi gives the author's name reading as 古賀史健（こがふみたけ）. The unassisted British phonemizer said FYOO-mi-take."
+    },
+    {
+      "term": "Peugeot",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "pˈɜːʒəʊ",
+        "en-us": "pjˈuːʒoʊ"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Peugeot",
+      "verified_at": "2026-08-13",
+      "notes": "Wiktionary: UK /ˈpɜːʒəʊ/, US /ˈpjuːʒoʊ/ (French /pø.ʒo/). The unassisted phonemizer produced 'PYOO-ji-ott' (pjˈuːdʒɪˌɒt), which is wrong."
+    },
+    {
+      "term": "Gilgamesh",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ɡˈɪlɡəmˌɛʃ",
+        "en-us": "ɡˈɪlɡəmˌɛʃ"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Gilgamesh",
+      "verified_at": "2026-08-13",
+      "notes": "Wiktionary: /ˈɡɪl.ɡə.mɛʃ/. The unassisted phonemizer produced 'GIL-gay-məsh' (ɡˈɪlɡeɪməʃ) with a wrong second vowel."
     }
   ]
 }

@@ -4,108 +4,490 @@
   "book_id": "sapiens-harari",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
+    "compression_fit": "high",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "An idea-architecture book: four revolutions, one master concept (shared fictions), and a handful of famous reversals. The frame compresses superbly; what a summary cannot carry is the seduction of the prose, and what it can carry — which the book itself does not — is the documented reliability report."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Yuval Noah Harari compresses seventy thousand years into one argument: Homo sapiens rules the planet because it alone cooperates in large numbers through shared fictions — money, gods, nations, and corporations — and each revolution that scaled the fictions up made the species mightier without making its members happier.",
+    "verdict": "The most seductive big-history synthesis of its generation and a genuinely useful set of conceptual handles — read it for the frames, not the facts, because specialists have documented that its confidence outruns its accuracy.",
+    "source_ids": [
+      "wikipedia-sapiens",
+      "strawson-guardian-review",
+      "narayanan-current-affairs"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Four revolutions structure the species' story. The Cognitive Revolution (~70,000 years ago) gave sapiens language capable of fiction, and with it cooperation beyond the tribe. The Agricultural Revolution (~10,000 BCE) multiplied the species while degrading its members' lives — 'history's biggest fraud'. The Unification of Humankind knitted cultures together through three universal orders: money, empire, and religion. And the Scientific Revolution (~1500 CE) began when Europeans admitted ignorance, married knowledge to empire and capital, and set the species on course to redesign itself — the book ends with sapiens becoming gods, and asking whether any of it made anyone happier.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "ynharari-sapiens"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Large-scale human cooperation runs on intersubjective fictions — things real only because enough minds believe in them — so the deep history of humankind is the history of its imagined orders: which fictions scaled, how they conquered, what they cost the individuals inside them, and what happens now that their believers are acquiring the powers of creation.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "ynharari-sapiens"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "shared-fictions",
+      "title": "Fictions are the species' superpower",
+      "claim": "Sapiens dominates because it cooperates flexibly in unlimited numbers, and the mechanism is shared belief in things that exist only in minds: gods, nations, money, laws, and corporations.",
+      "explanation": "Chimpanzee cooperation caps at the troop, bounded by acquaintance. Fiction removes the cap: strangers who share a story — a god, a flag, a currency — can trust each other without meeting. Harari's set piece is Peugeot: the company owns factories and signs contracts, yet exists nowhere except in collective legal imagination, and would survive the loss of every car and employee.",
+      "representative_example": "Money as the most universal fiction: the only story everyone believes, which is why a dollar works between people who share no god, ruler, or language.",
+      "why_it_matters": "Once seen, the frame reorganises the reader's world: institutions stop looking natural and start looking maintained.",
+      "caveat": "The idea is a compelling synthesis of existing scholarship — imagined communities, social constructs, legal fictions — delivered as if newly discovered, and specialists note the originality claim is the weakest part.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "hallpike-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "cognitive-revolution",
+      "title": "The Cognitive Revolution made us the last humans standing",
+      "claim": "Around seventy thousand years ago sapiens acquired fictive language, spread from Africa, and every other human species — Neanderthals included — disappeared.",
+      "explanation": "For most of prehistory at least six human species shared the planet; the book keeps the uncomfortable fact front and centre. Whether by replacement, absorption, or both, only the storyteller survived, carrying traces of the others in its DNA. Harari popularises the gossip theory of language — talk evolved to track social alliances — then adds the twist that mattered: the ability to discuss things that do not exist.",
+      "representative_example": "The book's emblem of the threshold: a lion-headed figurine — a creature nobody ever saw — carved forty thousand years ago.",
+      "why_it_matters": "It reframes human uniqueness from intelligence to imagination, and human history as the aftermath of a single cognitive trick.",
+      "caveat": "The tidy 70,000-year switch is contested; the archaeology suggests gradual emergence, and the book's neuroscience-adjacent claims are among its documented errors.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "narayanan-current-affairs"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "agricultural-trap",
+      "title": "Farming was history's biggest fraud",
+      "claim": "The Agricultural Revolution multiplied the species while making the average member's life worse — and once inside, there was no way back.",
+      "explanation": "Foragers ate varied diets, worked fewer hours, and carried fewer diseases; farmers got monotonous calories, epidemics, hierarchy, and backbreaking labour, while population growth foreclosed return. Harari's inversion: we did not domesticate wheat, wheat domesticated us — a handful of grasses converted the species into their labour force. The engine is the luxury trap: improvements that become necessities and then chains.",
+      "representative_example": "The luxury trap generalised: from wheat to email, comforts that harden into obligations no one chose.",
+      "why_it_matters": "It detaches 'progress for the species' from 'better for the individual' — the book's most durable analytical move.",
+      "caveat": "The thesis is borrowed (famously from Jared Diamond's 'worst mistake' essay and the anthropology behind it) and is a real but contested scholarly position, presented as settled.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "hallpike-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "imagined-orders",
+      "title": "Imagined orders run on belief, violence, and no justice",
+      "claim": "Every large society rests on an imagined order — Hammurabi's divine hierarchy, America's created-equal rights — enforced by true believers and standing armies alike, and none of them is just.",
+      "explanation": "Harari reads law codes ancient and modern as parallel fictions: neither Babylonian class hierarchy nor inalienable rights is 'out there' in biology; both organise millions. The orders are self-reinforcing — embedded in desires, architecture, and what feels natural — and history's hierarchies (race, caste, gender) are contingencies that hardened, not reflections of merit. 'There is no justice in history' is the section's refrain.",
+      "representative_example": "The paired readings of the Code of Hammurabi and the Declaration of Independence as functionally identical acts of imagination.",
+      "why_it_matters": "It hands readers a critical instrument: ask of any institution, who believes this story, and who enforces it?",
+      "caveat": "The flattening cuts both ways — treating all normative orders as equivalent fictions erases the differences between them that historians and philosophers spend careers on.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "strawson-guardian-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "unification-engines",
+      "title": "Money, empire, and religion unified the species",
+      "claim": "Three universal orders — monetary, imperial, and religious — converted thousands of separate human worlds into one, and globalisation is their convergence, not a departure.",
+      "explanation": "Money is the most tolerant faith, converting between all value systems; empires, whatever their crimes, standardised languages, laws, and cultures across their conquests; universal religions exported single truths across borders. Harari refuses the comfortable reading: most of every modern culture is imperial inheritance, and 'authentic' pre-imperial cultures are reconstructions.",
+      "representative_example": "The observation that the currencies of rival powers always convert: enemies who share no god still share gold.",
+      "why_it_matters": "It explains the modern world's sameness — airports, contracts, universities — as the late stage of three ancient processes.",
+      "caveat": "The empire chapters' both-sides ledger has drawn criticism for smoothing atrocity into world-historical bookkeeping.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "hallpike-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "scientific-ignorance",
+      "title": "Science began by admitting ignorance, and grew by marrying empire and capital",
+      "claim": "The Scientific Revolution's real discovery was 'we do not know' — and its engine was the feedback loop between knowledge, conquest, and credit.",
+      "explanation": "Premodern knowledge systems claimed completeness; modern science institutionalised ignorance and thereby licensed discovery. But ideas alone built nothing: European empires funded science that improved conquest that funded science, and capitalism's invention of growth — credit as trust in the future — supplied the fuel. Columbus's ships and Darwin's Beagle sailed on the same loop.",
+      "representative_example": "The book's account of credit: lending against a bigger future is a fiction about tomorrow that, believed widely enough, manufactures the tomorrow.",
+      "why_it_matters": "It welds the history of science to the history of money and power, against the innocent textbook version.",
+      "caveat": "Historians of science regard the 'admission of ignorance' hinge as a simplification of a messier, longer story.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "strawson-guardian-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "happiness-question",
+      "title": "None of it demonstrably made us happier",
+      "claim": "History's most neglected question is whether any of the growth in power increased wellbeing — and the honest answer is: probably not much, possibly not at all.",
+      "explanation": "Harari runs the wellbeing literature against the species' triumphs: happiness tracks expectations and biochemistry more than conditions; medieval peasants with low expectations and strong communities may have felt no worse than commuters; and the one population whose lot unambiguously worsened is the animals in industrial farms — which the book calls one of history's greatest crimes. The chapter ends in Buddhist territory: craving, not circumstance, as the engine of dissatisfaction.",
+      "representative_example": "The dishwasher test: centuries of labour-saving devices, and no evidence the saved labour became contentment rather than raised expectations.",
+      "why_it_matters": "It is the book's conscience — the question that turns a victory narrative into an audit.",
+      "caveat": "The wellbeing science is summarised at the same postcard depth as everything else, and the meditation-shaped conclusion is the author's practice showing.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "ynharari-sapiens"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "becoming-gods",
+      "title": "The animal that became a god, and doesn't know what it wants",
+      "claim": "Sapiens is acquiring the powers of intelligent design — genetic engineering, cyborgs, non-organic life — and the book ends on the warning that we are 'self-made gods... who don't know what they want'.",
+      "explanation": "The closing chapters preview the Gilgamesh Project — the war on death itself — and argue natural selection is being replaced by design. History's next chapter belongs to whoever edits desires, not just genes. It is the setup for Homo Deus, and the book's final sentence is its most quoted: irresponsible gods, dissatisfied and unsure what they want.",
+      "representative_example": "The Gilgamesh Project framing: humanity's oldest epic is about refusing death, and its newest science is too.",
+      "why_it_matters": "It converts the history into a question about the immediate future — the reason the book colonised policy and tech reading lists.",
+      "caveat": "The futurism is the book's most speculative register, delivered with the same confidence as its archaeology — the calibration problem in miniature.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "strawson-guardian-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Part One: The Cognitive Revolution",
+      "purpose": "Establish the superpower.",
+      "summary": "An unremarkable ape acquires fictive language; other human species vanish; foragers with rich cognitive lives populate the planet.",
+      "idea_ids": [
+        "cognitive-revolution",
+        "shared-fictions"
+      ],
+      "source_ids": [
+        "wikipedia-sapiens"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Part Two: The Agricultural Revolution",
+      "purpose": "Audit the first great trade.",
+      "summary": "Wheat domesticates sapiens; populations explode while lives degrade; imagined orders and writing arrive to manage the crowds; hierarchy hardens.",
+      "idea_ids": [
+        "agricultural-trap",
+        "imagined-orders"
+      ],
+      "source_ids": [
+        "wikipedia-sapiens"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Part Three: The Unification of Humankind",
+      "purpose": "Explain convergence.",
+      "summary": "Money, empire, and universal religion knit thousands of cultures into one world; the arrow of history points toward unity, justly or not.",
+      "idea_ids": [
+        "unification-engines",
+        "imagined-orders"
+      ],
+      "source_ids": [
+        "wikipedia-sapiens"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Part Four: The Scientific Revolution",
+      "purpose": "Arm the fictions with power.",
+      "summary": "Ignorance admitted, science weds empire and capital; industry rewires daily life; the happiness audit comes up empty; sapiens reaches for godhood.",
+      "idea_ids": [
+        "scientific-ignorance",
+        "happiness-question",
+        "becoming-gods"
+      ],
+      "source_ids": [
+        "wikipedia-sapiens"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Four parts, twenty chapters, strictly chronological in frame but essayistic within chapters — each built on a provocative reversal.",
+    "voice": "Olympian and aphoristic: the species observed from orbit, with dry wit and deliberate provocations delivered as asides.",
+    "pace": "Fast for its scope; the first two parts are the strongest and most quoted, the later chapters more discursive.",
+    "evidence_style": "Synthesis of secondary scholarship, sparsely referenced; speculation and consensus delivered in the same confident register — the book's documented weakness.",
+    "example_style": "Set-piece parables: the Peugeot incorporation, the wheat's-eye view, paired law codes, the lion-man figurine.",
+    "repetition": "Low; concepts recur as running motifs rather than restatements.",
+    "prerequisites": "None.",
+    "source_ids": [
+      "wikipedia-sapiens",
+      "strawson-guardian-review",
+      "mann-wsj-review"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 5.4,
+      "confidence": "medium",
+      "summary": "Limited: a magnificent set of conceptual handles — shared fictions, the luxury trap, power versus happiness — attached to an evidence base that specialists have documented as error-prone, unsourced, and uncalibrated; the book teaches readers to see institutions as stories while telling its own story with exactly the overconfidence it diagnoses.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.0,
+          "rationale": "The shared-fictions frame plus the four-revolution arc genuinely organises seventy thousand years into usable structure, and the reversals force real rethinking; docked because several 'explanations' are redescriptions wearing explanatory clothes.",
+          "source_ids": [
+            "wikipedia-sapiens",
+            "hallpike-review"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 4.5,
+          "rationale": "The documented record is unusually specific: a specialist error catalogue (animal 'languages', impossible chimpanzee-cheetah battles, the miscast Waorani), 'often unsourced assertions' from a science journalist, 'carelessness, exaggeration and sensationalism' from a philosopher, and an anthropologist's verdict that the original parts are the wrong parts.",
+          "source_ids": [
+            "narayanan-current-affairs",
+            "mann-wsj-review",
+            "strawson-guardian-review",
+            "hallpike-review"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.0,
+          "rationale": "For general readers the reframes are furniture-grade: money and nations as maintained fictions, progress for the species versus welfare of its members, the happiness audit. Specialists recognise the sources — Anderson, Diamond, Searle — but the compression is Harari's own achievement.",
+          "source_ids": [
+            "wikipedia-sapiens",
+            "goodreads-sapiens"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 3.0,
+          "rationale": "Nothing applicable by design; the book offers perspective and conversation, not method — the luxury-trap lens is the closest thing to a usable tool.",
+          "source_ids": [
+            "goodreads-sapiens"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 4.0,
+          "rationale": "Breadth is the product, but calibration is the documented failure: speculation, contested scholarship, and consensus arrive in one register, sources are thin, and the book never marks which of its claims specialists dispute — the reader cannot tell the load-bearing walls from the scenery.",
+          "source_ids": [
+            "strawson-guardian-review",
+            "narayanan-current-affairs",
+            "mann-wsj-review"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.5,
+          "rationale": "Seventy thousand years in under five hundred readable pages with low repetition is genuine economy; the later, more speculative chapters earn less per page.",
+          "source_ids": [
+            "wikipedia-sapiens",
+            "goodreads-sapiens"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book's cumulative message is double: everything solid about human civilisation — money, law, nation, corporation — is a story that works only while believed, which is both a liberation (orders can be rewritten) and a warning (they can collapse); and power is not the same as wellbeing, so the species' triumph and its members' happiness are separate ledgers that history has never balanced.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "ynharari-sapiens"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Ask of any institution: whose story is this, who believes it, and who enforces it? — the fictions lens as a critical habit.",
+        "source_ids": [
+          "wikipedia-sapiens"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Watch for luxury traps: improvements that become necessities and then obligations, from wheat to the inbox.",
+        "source_ids": [
+          "wikipedia-sapiens"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Audit power against wellbeing separately: 'better for the species' and 'better for its members' are different claims, usually conflated.",
+        "source_ids": [
+          "wikipedia-sapiens"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Read grand synthesis the way this book teaches you to read institutions: as a story maintained by confidence — check the load-bearing facts before repeating them.",
+        "source_ids": [
+          "narayanan-current-affairs",
+          "strawson-guardian-review"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "One of the defining nonfiction books of the 2010s: sixty-five languages, years on the bestseller lists, presidential and Silicon Valley endorsements, and the template for a decade of species-scale synthesis — plus an equally documented counter-literature of specialist correction that made it the era's test case for popular science's reliability.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "narayanan-current-affairs"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Harari is a Hebrew University historian whose actual specialism is medieval military memoirs; Sapiens grew from his undergraduate world-history course, and the lecture-hall DNA shows in its confidence and compression. His stated purpose is perspective — to make readers see their institutions, appetites, and futures as historical artefacts rather than nature.",
+      "source_ids": [
+        "wikipedia-sapiens",
+        "ynharari-sapiens"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "weak",
+      "strengths": [
+        "Synthesises genuine scholarship across a dozen fields.",
+        "The famous set pieces (Peugeot, the wheat inversion) are argumentative devices, not factual claims, and work as such.",
+        "A decade of mass scrutiny has mapped exactly where it fails, which makes it unusually well-documented reading."
+      ],
+      "weaknesses": [
+        "A specialist error catalogue with named, checkable mistakes.",
+        "Sparse sourcing for load-bearing assertions.",
+        "No calibration: speculation and consensus in one register.",
+        "Signature theses (agricultural trap, gossip theory) are contested positions presented as settled."
+      ],
+      "source_ids": [
+        "narayanan-current-affairs",
+        "hallpike-review",
+        "mann-wsj-review",
+        "strawson-guardian-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "A cultural phenomenon endorsed from the White House to Silicon Valley and beloved by tens of millions of readers — while drawing one of the most specific specialist counter-literatures any trade book has received: a philosopher's charge of sensationalism, a science journalist's dorm-room verdict, an anthropologist's dismissal, and a biologist's error catalogue.",
+      "praise": [
+        "Global bestseller: 65 languages, 182 weeks on the NYT list.",
+        "Endorsements from Obama, Gates, and Zuckerberg made it the decade's status read.",
+        "Kirkus and mainstream reviews praised the great debates of history aired out."
+      ],
+      "criticism": [
+        "Strawson: 'carelessness, exaggeration and sensationalism'.",
+        "Mann: 'a whiff of dorm-room bull sessions'; assertions often unsourced.",
+        "Hallpike: not a serious contribution to knowledge; wrong where original.",
+        "Narayanan: documented factual errors in biology and neuroscience; 'science populism'."
+      ],
+      "source_ids": [
+        "wikipedia-sapiens",
+        "strawson-guardian-review",
+        "mann-wsj-review",
+        "hallpike-review",
+        "narayanan-current-affairs"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "General readers wanting one sweeping species narrative",
+        "Book clubs and students entering big-picture history",
+        "Readers who want the decade's shared reference points",
+        "Fans of Diamond and Bryson ready for the argumentative version"
+      ],
+      "not_for": [
+        "Readers who need claims they can cite",
+        "Specialists in any field it summarises",
+        "Readers allergic to confident speculation"
+      ],
+      "topics": [
+        "Human evolution and prehistory",
+        "Money, empire, and religion",
+        "History of science and capitalism",
+        "Happiness and wellbeing",
+        "Futurism and human enhancement"
+      ],
+      "source_ids": [
+        "wikipedia-sapiens",
+        "goodreads-sapiens"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A sourced work of scholarship — references are sparse by design",
+        "Current consensus — its boldest theses are contested positions",
+        "A history of events: no battles, dates, or personalities to speak of"
+      ],
+      "omissions": [
+        "Calibration: no marking of which claims are speculative",
+        "The scholarship it compresses is rarely credited in-line (Anderson, Diamond, Searle)",
+        "Most of the world's regional histories, subsumed into the unification arc"
+      ],
+      "missing_or_weak": [
+        "The documented error catalogue in biology and neuroscience",
+        "The happiness chapters summarise wellbeing science at postcard depth"
+      ],
+      "dated_or_contested": [
+        "The tidy 70,000-year Cognitive Revolution and the gossip theory of language are both contested; ancient-DNA findings since 2011 have complicated the replacement story the book popularised."
+      ],
+      "source_ids": [
+        "narayanan-current-affairs",
+        "hallpike-review",
+        "wikipedia-sapiens"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you want the frames delivered with their full seductive force and you can hold them as provocations — it is the fastest-reading grand narrative in modern nonfiction, and its set pieces reward the original prose.",
+      "summary_is_enough_if": "Stop at a summary if you want the four revolutions, the shared-fictions lens, and the honest reliability report — the ideas transfer completely, and the summary can add the calibration the book omits.",
+      "skip_if": "Skip it if you need dependable facts about human evolution or economics — the specialist corrections are documented — or if you already know Anderson, Diamond, and Searle, whose ideas you will meet here uncredited.",
+      "format_advice": "Any format works; the audiobook suits the lecture-course DNA, but the print edition's maps and figures add little — this is an argument, not a reference.",
+      "source_ids": [
+        "goodreads-sapiens",
+        "narayanan-current-affairs"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What are the four revolutions, and what did each one trade away?",
+      "What makes a fiction 'intersubjective', and why does that explain money?",
+      "Which of the book's claims have specialists documented as wrong — and which frames survive the corrections?"
+    ],
+    "application_prompts": [
+      "Pick one institution you deal with this week and describe it as a maintained fiction: whose belief sustains it, and what enforces it?",
+      "Find one luxury trap in your own life — an improvement that became an obligation — and decide if it is worth its chain.",
+      "Next time you read a confident synthesis, mark three load-bearing claims and check one: the book's own lesson, applied to the book."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Built from the documented record and an unusually rich critical literature: two specialist critiques with named errors, two documented professional reviews, the author's framing, and a decade of reception.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity verified: Hebrew original 2011, English 2014; UK ISBN 9780099590088 (498pp) and US Harper 9780062316097 from the catalogue record.",
+        "The four-part structure and core theses verified against the documented record; famous set pieces (Peugeot, wheat inversion, Gilgamesh Project) are attested across sources.",
+        "Counterevidence is central and specific: Narayanan's error catalogue, Hallpike's verdict, Strawson's and Mann's documented phrases are cited at the claims they address, and evidence_quality is rated weak accordingly.",
+        "Rating scored on content only: sales, endorsements, and cultural status excluded (documented in importance/reception instead).",
+        "Narration reviewed against the product contract: content-first, entertaining register, calibration carried into the scripts because the book omits it.",
+        "Pronunciation: Peugeot (PUR-zhoh) and Gilgamesh (GIL-gə-mesh) were mispronounced by the phonemizer and added to the dictionary with Wiktionary references; Harari, Neanderthals verified acceptable; Hammurabi and Waorani avoided in narration in favour of plain descriptions."
+      ]
+    }
   }
 }

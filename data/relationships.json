@@ -649,6 +649,44 @@
         "library/books/supercommunicators-duhigg/book.json#prh-supercommunicators"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "sapiens-written-by-yuval-noah-harari",
+      "source_id": "sapiens-harari",
+      "target_id": "yuval-noah-harari",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/sapiens-harari/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "sapiens-related-to-short-history",
+      "source_id": "sapiens-harari",
+      "target_id": "a-short-history-of-nearly-everything-bryson",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "The two grand tours a decade apart: Bryson synthesises all of science with charm and a documented error rate; Harari synthesises all of human history with argument and a documented error catalogue. Same compression method, same specialist pushback, opposite registers.",
+      "source_refs": [
+        "library/books/sapiens-harari/book.json#narayanan-current-affairs",
+        "library/books/a-short-history-of-nearly-everything-bryson/book.json#jupiter-scientific-review"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "sapiens-contrasts-with-determined",
+      "source_id": "sapiens-harari",
+      "target_id": "determined-sapolsky",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Both reduce human affairs to impersonal mechanisms — Harari to shared fictions scaling cooperation, Sapolsky to causal chains erasing free will — but Sapolsky argues from primary science with dense citation while Harari synthesises secondary scholarship with sparse sourcing; reading them together shows the same ambition at two standards of evidence.",
+      "source_refs": [
+        "library/books/sapiens-harari/book.json#mann-wsj-review",
+        "library/books/determined-sapolsky/book.json"
+      ],
+      "confidence": "medium"
     }
   ]
 }
