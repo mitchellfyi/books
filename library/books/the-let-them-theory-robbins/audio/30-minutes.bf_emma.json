@@ -8,15 +8,15 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.85,
+  "speed": 0.95,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/the-let-them-theory-robbins/scripts/30-minutes.md",
   "source_script_sha256": "3ebccbe988c39d4b759d82156858d774d74f43627edf57dad5d53550b0213f6e",
-  "pronunciation_dictionary_sha256": "bc025b004f4263de4451d73880e0209201b545502e4b9b5d91363c90ed4a1c46",
+  "pronunciation_dictionary_sha256": "942f4f6bc6c494dd0ead7a463d20b68a075c68d85972c521c86704bbd14d7607",
   "pronunciation_terms": [],
   "script_words": 4338,
-  "audio_seconds": 1811.712,
-  "measured_wpm": 143.67,
-  "generated_at": "2026-08-13T07:39:17.562293+00:00"
+  "audio_seconds": 1671.893,
+  "measured_wpm": 155.68,
+  "generated_at": "2026-08-13T07:48:30.532322+00:00"
 }
