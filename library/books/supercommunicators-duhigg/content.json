@@ -446,12 +446,12 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
     "review_notes": "Built from the publisher record, two independent professional reviews including a substantively critical one, a detailed content walkthrough, and reader reception; case-study details kept at the level the documentation supports.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
         "identity_and_metadata": true,
         "content_fidelity": true,
@@ -460,7 +460,7 @@
         "citation_entailment": true,
         "product_fit": true,
         "plain_language": true,
-        "audio_pronunciation": false
+        "audio_pronunciation": true
       },
       "notes": [
         "Identity verified: Random House hardcover 2024-02-20 (9780593243916, 320pp) and 2025 trade paperback (9780593243923).",
@@ -469,7 +469,7 @@
         "The neural-synchrony caveat is applied wherever the matching principle is stated.",
         "Adversarial review corrected the draft's reversed account of Duhigg's family example and its descriptions of Yasmin, the Leroy Reed jury, Behfar Ehdaie's consultations, The Big Bang Theory, and NASA's astronaut screening against the official companion guide.",
         "Rating scored on content only; bestseller status, prizes, and endorsements excluded per rubric.",
-        "Pending corrected narration audio. Duhigg uses the existing shared pronunciation entry verified against the Library of Congress Say How guide."
+        "All four narration levels were regenerated after the factual corrections and pass current-script checksum validation. Duhigg uses the shared pronunciation entry verified against the Library of Congress Say How guide."
       ]
     }
   }

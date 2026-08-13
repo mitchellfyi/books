@@ -8,18 +8,18 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.95,
+  "speed": 0.94,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/supercommunicators-duhigg/scripts/30-seconds.md",
-  "source_script_sha256": "4914c49cc860b64a68388a1d0d626fe7442a2f5697c0278d33e3efd8de7a40b1",
-  "pronunciation_dictionary_sha256": "f9e3068c817289647c6c9f9d767fd88b709b0dda20c611d27153533f61d83ee8",
+  "source_script_sha256": "a2ce4cc37e52d543f871d87da0abd1d034aef22c7b815fb3ba6f554cffc097b8",
+  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
   "pronunciation_terms": [
     "Duhigg"
   ],
   "pronunciation_entries_sha256": "12715679b39340e17e2f1a9793e74990c523b381de996614ba27d93910e6da60",
   "script_words": 71,
-  "audio_seconds": 27.649,
-  "measured_wpm": 154.07,
-  "generated_at": "2026-08-13T13:02:42.662434+00:00"
+  "audio_seconds": 27.713,
+  "measured_wpm": 153.72,
+  "generated_at": "2026-08-13T13:28:47.073967+00:00"
 }

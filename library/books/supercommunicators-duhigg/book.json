@@ -229,10 +229,10 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Secondary coverage via two independent professional reviews, the publisher's official companion materials, and detailed chapter summaries including the documented prologue; no full-text read.",
     "last_researched": "2026-08-13",
-    "next_steps": ["Regenerate all four local audio levels after the fidelity and narration review."]
+    "next_steps": []
   }
 }

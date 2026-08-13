@@ -8,18 +8,18 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.86,
+  "speed": 0.85,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/supercommunicators-duhigg/scripts/5-minutes.md",
-  "source_script_sha256": "289d2ed949fae891385aefb410d7cd74ec1d82b9aabb857320dcc54c17d4b264",
-  "pronunciation_dictionary_sha256": "fc64b420045fa68d0c76a5faf6dc90976d619cd93434198bd8383cea3a4c5453",
+  "source_script_sha256": "519c5ed987fea24ba28681c2aad1328d43e0bbbb48fc37d793b79bf2f8deb299",
+  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
   "pronunciation_terms": [
     "Duhigg"
   ],
   "pronunciation_entries_sha256": "12715679b39340e17e2f1a9793e74990c523b381de996614ba27d93910e6da60",
-  "script_words": 802,
-  "audio_seconds": 300.616,
-  "measured_wpm": 160.07,
-  "generated_at": "2026-08-13T13:05:15.648894+00:00"
+  "script_words": 752,
+  "audio_seconds": 290.567,
+  "measured_wpm": 155.28,
+  "generated_at": "2026-08-13T13:29:51.259863+00:00"
 }
