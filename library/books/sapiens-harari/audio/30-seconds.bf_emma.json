@@ -12,12 +12,12 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/sapiens-harari/scripts/30-seconds.md",
-  "source_script_sha256": "6330c5d0835d25eb111cd5a2b747379dd256924f49e000353e48ab6a6ee1ec22",
-  "pronunciation_dictionary_sha256": "fc64b420045fa68d0c76a5faf6dc90976d619cd93434198bd8383cea3a4c5453",
+  "source_script_sha256": "a1467227a1328b0bdb518b7195ea301c756e3e2d4e27c7f605a05f15db74f709",
+  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
   "pronunciation_terms": [],
   "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "script_words": 70,
-  "audio_seconds": 27.415,
-  "measured_wpm": 153.2,
-  "generated_at": "2026-08-13T13:19:32.282608+00:00"
+  "script_words": 76,
+  "audio_seconds": 30.124,
+  "measured_wpm": 151.37,
+  "generated_at": "2026-08-13T13:57:51.396063+00:00"
 }

@@ -503,21 +503,21 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
     "review_notes": "Checked against the author's stated account, edition records, direct trade reviews, named expert criticism, and peer-reviewed sources testing the abrupt Cognitive Revolution and agricultural-health claims. No full text was supplied.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
       "notes": [
         "Identity verified: Hebrew original in 2011; Harvill Secker English hardback in 2014; Vintage paperback in 2015; US Harper hardcover in 2015. ISBNs and page counts were checked against publisher, library and trade records.",

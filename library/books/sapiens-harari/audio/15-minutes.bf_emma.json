@@ -8,19 +8,19 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.9,
+  "speed": 1.0,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/sapiens-harari/scripts/15-minutes.md",
-  "source_script_sha256": "f6c6b029fa67fe4bf5502c8e5892ee36bbb5dee1ab6e5dffc2f26479bdb26822",
-  "pronunciation_dictionary_sha256": "fc64b420045fa68d0c76a5faf6dc90976d619cd93434198bd8383cea3a4c5453",
+  "source_script_sha256": "43c693d64ba45b719b019742645569efa57ecb440fd53ae87f559c6244e269a9",
+  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
   "pronunciation_terms": [
     "Gilgamesh",
     "Peugeot"
   ],
   "pronunciation_entries_sha256": "c95c4224e22eb17393058fa8669354164e2b716606243d81b3ffcb336a9aeca0",
-  "script_words": 2118,
-  "audio_seconds": 817.413,
-  "measured_wpm": 155.47,
-  "generated_at": "2026-08-13T13:19:44.854162+00:00"
+  "script_words": 2129,
+  "audio_seconds": 825.181,
+  "measured_wpm": 154.8,
+  "generated_at": "2026-08-13T13:57:43.450589+00:00"
 }

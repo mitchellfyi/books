@@ -261,12 +261,10 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Checked against publisher and national-library records, the author's stated thesis, four direct professional reviews or profiles, two expert critical essays, and peer-reviewed archaeology and bioarchaeology used to test major claims. No full text was supplied, so coverage remains sample-and-secondary.",
     "last_researched": "2026-08-13",
-    "next_steps": [
-      "Regenerate and verify all four local audio tracks after the independent factual audit."
-    ]
+    "next_steps": []
   }
 }
