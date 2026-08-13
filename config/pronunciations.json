@@ -193,6 +193,54 @@
       "source_url": "https://www.dictionary.com/browse/kufa",
       "verified_at": "2026-08-13",
       "notes": "KOO-fuh for the Iraqi city, per Random House's pronunciation at Dictionary.com. The unassisted British phonemizer produced KYOO-fuh (kjˈuːfə)."
+    },
+    {
+      "term": "Alain de Botton",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ɐlˈɑː də bˈɒtən",
+        "en-us": "ɐlˈɑː də bˈɑːtən"
+      },
+      "source_url": "https://www.tapesearch.com/episode/unedited-alain-de-botton-with-krista-tippett-2012/22JC8xunPQeWTQgQhmNLdc",
+      "verified_at": "2026-08-13",
+      "notes": "uh-LAHN duh BOT-un, based on de Botton saying his own name after the interviewer asks at 00:30. The unassisted phonemizer produced uh-LAYN."
+    },
+    {
+      "term": "akrasia",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "əkɹˈeɪzɪə",
+        "en-us": "əkɹˈeɪziə"
+      },
+      "source_url": "https://www.collinsdictionary.com/dictionary/english/akrasia",
+      "verified_at": "2026-08-13",
+      "notes": "uh-KRAY-zee-uh per Collins. The unassisted phonemizer began with a full a vowel."
+    },
+    {
+      "term": "Rorschach",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ɹˈɔːʃɑːk",
+        "en-us": "ɹˈɔːɹʃɑːk"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/rorschach",
+      "verified_at": "2026-08-13",
+      "notes": "RAW-shark per Cambridge Dictionary. The unassisted phonemizer produced RAW-shatch."
+    },
+    {
+      "term": "Proust",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "pɹˈuːst",
+        "en-us": "pɹˈuːst"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/proust",
+      "verified_at": "2026-08-13",
+      "notes": "PROOST per Cambridge Dictionary. The unassisted phonemizer produced PROWST."
     }
   ]
 }
