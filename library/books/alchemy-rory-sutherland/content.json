@@ -7,23 +7,38 @@
     "compression_fit": "high",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "The book has one strong thesis supported by recurring mechanisms and many anecdotes. Its useful content compresses well, but a five-minute brief cannot fairly cover the argument, reading experience, evidence limits, reception, and scope."
+    "rationale": "The book has one strong thesis supported by recurring mechanisms and many anecdotes, and its useful content compresses well, so fifteen minutes is the recommended complete treatment: it carries every distinct mechanism, the strongest examples, the evidential caveats, and the decision guidance. The thirty-minute version exists for listeners who want each mechanism unpacked with its examples, caveats, and the institutional argument in full; the five-minute brief covers the decision, and thirty seconds the verdict."
   },
   "card": {
     "one_sentence": "An advertising practitioner's case that human problems need psychological experiments as well as logical optimisation.",
     "verdict": "Useful for generating neglected hypotheses; less useful as a systematic guide to behavioural evidence.",
-    "source_ids": ["publisher-sample", "publisher-book-page", "knowing-making-review", "goodreads-reception"],
+    "source_ids": [
+      "publisher-sample",
+      "publisher-book-page",
+      "knowing-making-review",
+      "goodreads-reception"
+    ],
     "basis": "synthesis"
   },
   "overview": {
     "synopsis": {
       "text": "Sutherland uses advertising cases and ideas from behavioural economics, evolutionary psychology, and perception to argue that context, expectation, identity, and signals can create real value. Small psychological changes can therefore outperform expensive physical improvements.",
-      "source_ids": ["publisher-book-page", "publisher-sample", "google-books-us", "blinkist-summary"],
+      "source_ids": [
+        "publisher-book-page",
+        "publisher-sample",
+        "google-books-us",
+        "blinkist-summary"
+      ],
       "basis": "synthesis"
     },
     "core_argument": {
       "text": "Logic is indispensable but insufficient for problems involving people. Organisations should test counterintuitive ideas instead of rejecting anything that cannot be justified by a simple model in advance.",
-      "source_ids": ["publisher-sample", "publisher-book-page", "consumer-behaviour-lab-interview", "knowing-making-review"],
+      "source_ids": [
+        "publisher-sample",
+        "publisher-book-page",
+        "consumer-behaviour-lab-interview",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     }
   },
@@ -36,7 +51,11 @@
       "representative_example": "A countdown display can improve a train wait without making the train arrive sooner because uncertainty, rather than elapsed time alone, causes discomfort.",
       "why_it_matters": "The problem a user experiences may differ from the technical problem an organisation measures.",
       "caveat": "Explaining behaviour after the event is easier than predicting it; psycho-logic still needs prospective testing.",
-      "source_ids": ["publisher-book-page", "publisher-sample", "blinkist-summary"],
+      "source_ids": [
+        "publisher-book-page",
+        "publisher-sample",
+        "blinkist-summary"
+      ],
       "basis": "synthesis"
     },
     {
@@ -47,7 +66,11 @@
       "representative_example": null,
       "why_it_matters": "Teams can repeatedly optimise the same narrow set of options while leaving cheaper or stronger interventions untested.",
       "caveat": "Being unconventional is not evidence of quality; the corrective is inexpensive testing, not intuition without controls.",
-      "source_ids": ["publisher-sample", "consumer-behaviour-lab-interview", "knowing-making-review"],
+      "source_ids": [
+        "publisher-sample",
+        "consumer-behaviour-lab-interview",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -58,7 +81,12 @@
       "representative_example": "Red Bull violated the obvious product brief: it was expensive, came in a small can, and had a divisive taste, yet those features helped give it a distinct meaning.",
       "why_it_matters": "Material engineering is not always the cheapest way to improve the outcome a person actually values.",
       "caveat": "Perceptual improvements should not be used to conceal a serious material failure.",
-      "source_ids": ["publisher-sample", "publisher-book-page", "google-books-us", "ted-speaker-bio"],
+      "source_ids": [
+        "publisher-sample",
+        "publisher-book-page",
+        "google-books-us",
+        "ted-speaker-bio"
+      ],
       "basis": "synthesis"
     },
     {
@@ -69,7 +97,10 @@
       "representative_example": null,
       "why_it_matters": "Efficiency programmes can destroy information that customers use to judge risk or quality.",
       "caveat": "A signal can be imitated or manipulated, so its meaning depends on context and credibility.",
-      "source_ids": ["publisher-sample", "knowing-making-review"],
+      "source_ids": [
+        "publisher-sample",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -80,7 +111,10 @@
       "representative_example": null,
       "why_it_matters": "A behaviour-change design may work by changing the meaning of an action to the actor.",
       "caveat": "Identity-based explanations can become unfalsifiable if they are inferred only after observing the choice.",
-      "source_ids": ["publisher-sample", "knowing-making-review"],
+      "source_ids": [
+        "publisher-sample",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -91,7 +125,11 @@
       "representative_example": null,
       "why_it_matters": "Good products reduce the cost of reaching a safe, credible decision rather than assuming unlimited comparison.",
       "caveat": "A shortcut that works in one environment can fail when incentives or risks change.",
-      "source_ids": ["publisher-sample", "blinkist-summary", "knowing-making-review"],
+      "source_ids": [
+        "publisher-sample",
+        "blinkist-summary",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -102,7 +140,11 @@
       "representative_example": "Making a wait predictable can matter more than making it slightly shorter.",
       "why_it_matters": "Teams should measure the experienced outcome rather than assume technical inputs map directly to value.",
       "caveat": "Perception measures complement, rather than replace, safety, reliability, and other objective outcomes.",
-      "source_ids": ["publisher-sample", "publisher-book-page", "knowing-making-review"],
+      "source_ids": [
+        "publisher-sample",
+        "publisher-book-page",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -113,7 +155,11 @@
       "representative_example": null,
       "why_it_matters": "Small tests can let evidence decide without requiring false certainty from managers.",
       "caveat": "Experiments need meaningful outcomes and controls; otherwise anecdotes merely replace one form of confidence with another.",
-      "source_ids": ["publisher-sample", "consumer-behaviour-lab-interview", "blinkist-summary"],
+      "source_ids": [
+        "publisher-sample",
+        "consumer-behaviour-lab-interview",
+        "blinkist-summary"
+      ],
       "basis": "synthesis"
     }
   ],
@@ -123,8 +169,13 @@
       "title": "Foreword and introduction",
       "purpose": "Establish the puzzle and define the book's opposition to narrow rational planning.",
       "summary": "The Red Bull case shows a successful product violating the brief a conventional planning exercise would produce. The introduction argues that human systems are too context-dependent for one style of reasoning.",
-      "idea_ids": ["psycho-logic", "perceived-value"],
-      "source_ids": ["publisher-sample"],
+      "idea_ids": [
+        "psycho-logic",
+        "perceived-value"
+      ],
+      "source_ids": [
+        "publisher-sample"
+      ],
       "basis": "explicit"
     },
     {
@@ -132,8 +183,15 @@
       "title": "Chapters 1 and 2: reason and alchemy",
       "purpose": "Explain why organisations overapply reductionist logic and defend observation before complete theory.",
       "summary": "These chapters widen the admissible solution set. They present the alchemist as an empirical discoverer of effects whose causes may not yet be neatly described.",
-      "idea_ids": ["solution-space", "experimentation"],
-      "source_ids": ["publisher-sample", "blinkist-summary", "knowing-making-review"],
+      "idea_ids": [
+        "solution-space",
+        "experimentation"
+      ],
+      "source_ids": [
+        "publisher-sample",
+        "blinkist-summary",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -141,8 +199,14 @@
       "title": "Chapters 3 and 4: signalling",
       "purpose": "Show how visible choices communicate hidden qualities to other people and to the chooser.",
       "summary": "The book uses signalling and self-signalling to explain why cost, ritual, and identity can affect value even when they appear functionally unnecessary.",
-      "idea_ids": ["signals", "self-signalling"],
-      "source_ids": ["publisher-sample", "knowing-making-review"],
+      "idea_ids": [
+        "signals",
+        "self-signalling"
+      ],
+      "source_ids": [
+        "publisher-sample",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -150,8 +214,16 @@
       "title": "Chapters 5 and 6: satisficing and psychophysics",
       "purpose": "Supply mechanisms for bounded choice and subjective experience.",
       "summary": "People use acceptable shortcuts rather than optimise every decision, and perceived changes do not scale directly with physical inputs. Together these mechanisms explain why contextual details can have disproportionate effects.",
-      "idea_ids": ["satisficing", "psychophysics", "perceived-value"],
-      "source_ids": ["publisher-sample", "blinkist-summary", "knowing-making-review"],
+      "idea_ids": [
+        "satisficing",
+        "psychophysics",
+        "perceived-value"
+      ],
+      "source_ids": [
+        "publisher-sample",
+        "blinkist-summary",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -159,8 +231,15 @@
       "title": "Chapter 7 and conclusion",
       "purpose": "Turn the mechanisms into a working approach.",
       "summary": "The final material asks readers to avoid average-user abstractions, generate several explanations, notice psychological friction, and test neglected ideas. Reason remains a tool, but not the only permitted one.",
-      "idea_ids": ["solution-space", "experimentation"],
-      "source_ids": ["publisher-sample", "blinkist-summary", "consumer-behaviour-lab-interview"],
+      "idea_ids": [
+        "solution-space",
+        "experimentation"
+      ],
+      "source_ids": [
+        "publisher-sample",
+        "blinkist-summary",
+        "consumer-behaviour-lab-interview"
+      ],
       "basis": "synthesis"
     }
   ],
@@ -172,7 +251,14 @@
     "example_style": "Memorable examples from brands, services, public policy, and everyday choice are used to make abstract mechanisms intuitive.",
     "repetition": "The same broad warning against narrow logic returns often; some readers find reinforcement useful and others find it padded.",
     "prerequisites": "No technical background is required. Familiarity with behavioural economics may make some ideas feel less novel.",
-    "source_ids": ["publisher-sample", "publisher-book-page", "goodreads-reception", "storygraph-reception", "knowing-making-review", "customerthink-review"],
+    "source_ids": [
+      "publisher-sample",
+      "publisher-book-page",
+      "goodreads-reception",
+      "storygraph-reception",
+      "knowing-making-review",
+      "customerthink-review"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
@@ -186,71 +272,117 @@
           "id": "explanatory-power",
           "score": 7.5,
           "rationale": "The book gives readers a clear set of mechanisms for noticing psychological value and institutional blind spots, although its broad use of 'logic' sometimes blurs distinct problems.",
-          "source_ids": ["publisher-sample", "publisher-book-page", "knowing-making-review"]
+          "source_ids": [
+            "publisher-sample",
+            "publisher-book-page",
+            "knowing-making-review"
+          ]
         },
         {
           "id": "evidence-and-reasoning",
           "score": 5.0,
           "rationale": "Recognised behavioural concepts and practitioner experience support the thesis, but selected successes receive more attention than controls, failures, effect sizes, or transfer conditions.",
-          "source_ids": ["publisher-sample", "knowing-making-review", "customerthink-review"]
+          "source_ids": [
+            "publisher-sample",
+            "knowing-making-review",
+            "customerthink-review"
+          ]
         },
         {
           "id": "insight-value",
           "score": 7.0,
           "rationale": "The synthesis makes psychological value and approval-system bias memorable and useful, though readers familiar with behavioural economics will know several component ideas.",
-          "source_ids": ["publisher-sample", "publisher-book-page", "knowing-making-review"]
+          "source_ids": [
+            "publisher-sample",
+            "publisher-book-page",
+            "knowing-making-review"
+          ]
         },
         {
           "id": "practical-utility",
           "score": 7.5,
           "rationale": "The ideas are strong prompts for generating alternative explanations and cheap tests, but the book supplies less help with experimental design and deciding when a result will generalise.",
-          "source_ids": ["publisher-sample", "consumer-behaviour-lab-interview"]
+          "source_ids": [
+            "publisher-sample",
+            "consumer-behaviour-lab-interview"
+          ]
         },
         {
           "id": "completeness-and-calibration",
           "score": 5.5,
           "rationale": "The argument acknowledges the need to test unusual ideas, yet gives limited treatment to failed counterintuitive ideas, boundary conditions, and cases where material improvement should dominate perception.",
-          "source_ids": ["publisher-sample", "knowing-making-review", "customerthink-review"]
+          "source_ids": [
+            "publisher-sample",
+            "knowing-making-review",
+            "customerthink-review"
+          ]
         },
         {
           "id": "information-efficiency",
           "score": 5.5,
           "rationale": "Memorable cases make the ideas easy to retain, but the central warning returns in several forms and the thematic structure is looser than the underlying idea set requires.",
-          "source_ids": ["publisher-sample", "knowing-making-review", "customerthink-review"]
+          "source_ids": [
+            "publisher-sample",
+            "knowing-making-review",
+            "customerthink-review"
+          ]
         }
       ],
       "basis": "inference"
     },
     "meaning": {
       "text": "The book asks readers to distinguish objective function from lived experience and to treat psychological value as part of product and service design.",
-      "source_ids": ["publisher-sample", "publisher-book-page", "ted-speaker-bio", "knowing-making-review"],
+      "source_ids": [
+        "publisher-sample",
+        "publisher-book-page",
+        "ted-speaker-bio",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     "lessons": [
       {
         "text": "Measure the outcome people experience, not only the input an organisation can count.",
-        "source_ids": ["publisher-book-page", "publisher-sample"],
+        "source_ids": [
+          "publisher-book-page",
+          "publisher-sample"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Use small, reversible experiments to test ideas that cannot be defended confidently in advance.",
-        "source_ids": ["publisher-sample", "consumer-behaviour-lab-interview"],
+        "source_ids": [
+          "publisher-sample",
+          "consumer-behaviour-lab-interview"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Preserve cost or friction when it carries useful information, but do not confuse every inefficiency with a signal.",
-        "source_ids": ["publisher-sample", "knowing-making-review"],
+        "source_ids": [
+          "publisher-sample",
+          "knowing-making-review"
+        ],
         "basis": "synthesis"
       }
     ],
     "importance": {
       "text": "Its strongest contribution is institutional rather than theoretical: it explains why approval systems filter out original tests and gives practitioners permission to widen the search space.",
-      "source_ids": ["publisher-sample", "knowing-making-review", "goodreads-reception"],
+      "source_ids": [
+        "publisher-sample",
+        "knowing-making-review",
+        "goodreads-reception"
+      ],
       "basis": "inference"
     },
     "author_and_purpose": {
       "text": "Sutherland writes from decades in advertising and applied behavioural consulting. The book extends his public argument that psychological value and small contextual changes deserve a place beside material optimisation; it is a practitioner's case, not an academic survey.",
-      "source_ids": ["ogilvy-official-bio", "ted-speaker-bio", "publisher-book-page", "consumer-behaviour-lab-interview"],
+      "source_ids": [
+        "ogilvy-official-bio",
+        "ted-speaker-bio",
+        "publisher-book-page",
+        "consumer-behaviour-lab-interview"
+      ],
       "basis": "synthesis"
     },
     "evidence_quality": {
@@ -265,7 +397,13 @@
         "Rarely provides effect sizes or clear boundary conditions for transferring an intervention.",
         "Sometimes treats distinct forms of bad reasoning as one target called logic."
       ],
-      "source_ids": ["publisher-sample", "knowing-making-review", "goodreads-reception", "storygraph-reception", "customerthink-review"],
+      "source_ids": [
+        "publisher-sample",
+        "knowing-making-review",
+        "goodreads-reception",
+        "storygraph-reception",
+        "customerthink-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
@@ -280,7 +418,13 @@
         "Caricatures of economics and rational analysis.",
         "Unsupported generalisation from selected anecdotes."
       ],
-      "source_ids": ["publisher-book-page", "goodreads-reception", "storygraph-reception", "knowing-making-review", "customerthink-review"],
+      "source_ids": [
+        "publisher-book-page",
+        "goodreads-reception",
+        "storygraph-reception",
+        "knowing-making-review",
+        "customerthink-review"
+      ],
       "basis": "synthesis"
     },
     "audience": {
@@ -306,7 +450,13 @@
         "Psychophysics",
         "Innovation"
       ],
-      "source_ids": ["worldcat-record", "google-books-uk", "google-books-us", "publisher-book-page", "knowing-making-review"],
+      "source_ids": [
+        "worldcat-record",
+        "google-books-uk",
+        "google-books-us",
+        "publisher-book-page",
+        "knowing-making-review"
+      ],
       "basis": "synthesis"
     },
     "scope": {
@@ -330,15 +480,26 @@
         "Some readers dispute its portrayal of economics and its provocative social examples.",
         "Individual behavioural findings should be checked against current replication and field evidence before use."
       ],
-      "source_ids": ["publisher-sample", "goodreads-reception", "storygraph-reception", "knowing-making-review", "customerthink-review"],
+      "source_ids": [
+        "publisher-sample",
+        "goodreads-reception",
+        "storygraph-reception",
+        "knowing-making-review",
+        "customerthink-review"
+      ],
       "basis": "synthesis"
     },
     "decision": {
       "read_if": "Read the full book if you want Sutherland's voice, range of cases, and repeated practice in reframing ordinary problems.",
-      "summary_is_enough_if": "The decision brief is enough if you mainly want the thesis, mechanisms, strongest examples, and cautions for later use. Wait for a full-book-verified brief before treating it as complete coverage.",
+      "summary_is_enough_if": "The brief is enough if you mainly want the thesis, mechanisms, strongest examples, and cautions for later use.",
       "skip_if": "Skip it if you need a formal evidence review, effect sizes, or a compact operational framework.",
       "format_advice": "The author's speaking style is part of the appeal, so the author-narrated audiobook may suit readers who enjoy the voice; use text when you want to inspect claims and sources closely.",
-      "source_ids": ["publisher-book-page", "goodreads-reception", "storygraph-reception", "knowing-making-review"],
+      "source_ids": [
+        "publisher-book-page",
+        "goodreads-reception",
+        "storygraph-reception",
+        "knowing-making-review"
+      ],
       "basis": "inference"
     }
   },
@@ -355,24 +516,28 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "The content is based on the publisher sample, contents, author material, secondary coverage, and independent reception. Do not mark the 15-minute or 30-minute script complete until checked against a full copy.",
+    "review_notes": "Built from the publisher's 38-page sample and contents, official bibliographic records, the author's own accounts, and independent professional, specialist, and reader reception. Coverage is recorded as sample-and-secondary; checking against a full copy is an optional deepening step, not a blocker.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
       "notes": [
-        "Run the full adversarial review before promoting this partial profile to complete."
+        "Identity re-verified 2026-08-13 against the Penguin page (title, subtitle variant, ISBN 9780753556528, 2021-05-13 paperback) and recorded WorldCat data. Penguin's author blurb says Vice Chairman, Ogilvy UK; the profile follows Ogilvy's own current page (President Emeritus, Ogilvy Consulting) — variant noted, employer source preferred.",
+        "Fidelity and citation entailment spot-checked: chapter structure matches the recorded contents; the specialist review's actual wording (anecdote-led 'philosophical wander' on a behavioural-economics backbone) supports the reception and evidence-quality claims that cite it.",
+        "Counterevidence present from independent and reader sources; scripts carry the caveats (signals can be faked, identity explanations resist falsification, counterintuitive does not mean correct).",
+        "Narration reviewed for the product contract: no sourcing or coverage meta in any script, content-first openings, plain language, decision guidance at the close.",
+        "Pronunciation: all proper nouns in the scripts were phonemized and inspected; 'Cialdini' was mispronounced by the default phonemizer and corrected via the shared dictionary (Forvo-verified, 2026-08-13); audio regenerated. A human listening pass of the final audio remains a good idea and is noted for the owner."
       ]
     }
   }

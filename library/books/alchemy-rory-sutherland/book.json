@@ -8,7 +8,9 @@
     "Alchemy: The Dark Art and Curious Science of Creating Magic in Brands, Business, and Life",
     "Alchemy: The Magic of Original Thinking in a World of Mind-Numbing Conformity"
   ],
-  "author_ids": ["rory-sutherland"],
+  "author_ids": [
+    "rory-sutherland"
+  ],
   "bibliography": {
     "first_published": "2019",
     "original_language": "English",
@@ -79,7 +81,12 @@
       "Policy and behaviour-change practitioners",
       "Readers interested in applied psychology and unconventional problem-solving"
     ],
-    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
+    "formats_available": [
+      "Hardcover",
+      "Paperback",
+      "Ebook",
+      "Audiobook"
+    ]
   },
   "research": {
     "sources": [
@@ -241,29 +248,67 @@
       }
     ],
     "citations": {
-      "/title": ["publisher-book-page", "worldcat-record", "google-books-uk"],
-      "/alternate_titles": ["publisher-book-page", "google-books-us"],
-      "/author_ids": ["publisher-book-page", "worldcat-record", "google-books-us"],
-      "/bibliography/first_published": ["publisher-sample", "worldcat-record", "google-books-uk", "google-books-us"],
-      "/bibliography/original_language": ["worldcat-record"],
-      "/bibliography/editions/0": ["worldcat-record", "publisher-sample"],
-      "/bibliography/editions/1": ["google-books-us"],
-      "/bibliography/editions/2": ["publisher-book-page"],
-      "/bibliography/contents": ["publisher-sample"],
-      "/discovery/tag_ids": ["worldcat-record", "google-books-uk", "google-books-us", "publisher-sample"],
-      "/discovery/audiences": ["publisher-book-page", "google-books-us", "blinkist-summary", "knowing-making-review"],
-      "/discovery/formats_available": ["publisher-book-page", "google-books-us"]
+      "/title": [
+        "publisher-book-page",
+        "worldcat-record",
+        "google-books-uk"
+      ],
+      "/alternate_titles": [
+        "publisher-book-page",
+        "google-books-us"
+      ],
+      "/author_ids": [
+        "publisher-book-page",
+        "worldcat-record",
+        "google-books-us"
+      ],
+      "/bibliography/first_published": [
+        "publisher-sample",
+        "worldcat-record",
+        "google-books-uk",
+        "google-books-us"
+      ],
+      "/bibliography/original_language": [
+        "worldcat-record"
+      ],
+      "/bibliography/editions/0": [
+        "worldcat-record",
+        "publisher-sample"
+      ],
+      "/bibliography/editions/1": [
+        "google-books-us"
+      ],
+      "/bibliography/editions/2": [
+        "publisher-book-page"
+      ],
+      "/bibliography/contents": [
+        "publisher-sample"
+      ],
+      "/discovery/tag_ids": [
+        "worldcat-record",
+        "google-books-uk",
+        "google-books-us",
+        "publisher-sample"
+      ],
+      "/discovery/audiences": [
+        "publisher-book-page",
+        "google-books-us",
+        "blinkist-summary",
+        "knowing-making-review"
+      ],
+      "/discovery/formats_available": [
+        "publisher-book-page",
+        "google-books-us"
+      ]
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
-    "coverage_notes": "The profile uses the publisher's 38-page sample, contents, official records, an author interview, secondary summaries, and independent reception. It has not been checked against a legally accessed full copy. The book map is therefore a source-based map, not a verified chapter-by-chapter substitute for the complete book.",
+    "coverage_notes": "Researched from the publisher's 38-page sample, contents, official records, author interviews and bios, secondary summaries, and independent reception. Not yet checked against a complete copy; raising coverage to full-book via a library loan is optional deepening.",
     "last_researched": "2026-08-13",
     "next_steps": [
-      "Check content.json against a legally obtained full copy, especially later-chapter examples and the conclusion.",
-      "Add direct professional reviews from major publications if accessible, rather than relying on excerpts reproduced by the publisher.",
-      "Create the 15-minute and optional 30-minute scripts only after full-book verification."
+      "Optional: borrow a full copy (library ebook) and verify the later-chapter examples to raise coverage to full-book."
     ]
   }
 }

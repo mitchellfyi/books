@@ -12,11 +12,11 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/alchemy-rory-sutherland/scripts/5-minutes.md",
-  "source_script_sha256": "915c9b68206f5c8b042815e11cc048c46cc788529205dc6468e383b14c7287ee",
-  "pronunciation_dictionary_sha256": "9c4bcb9e8a304a8516dc4324a4db0ab59ac57a1517d6ba03014a58ad3f6b2277",
+  "source_script_sha256": "e7080b55fecd0841161d7fff79971d9cd54db7ccc2075108ce03ff4469c22ae5",
+  "pronunciation_dictionary_sha256": "bc025b004f4263de4451d73880e0209201b545502e4b9b5d91363c90ed4a1c46",
   "pronunciation_terms": [],
-  "script_words": 736,
-  "audio_seconds": 304.033,
-  "measured_wpm": 145.25,
-  "generated_at": "2026-08-13T06:54:13.083243+00:00"
+  "script_words": 719,
+  "audio_seconds": 298.209,
+  "measured_wpm": 144.66,
+  "generated_at": "2026-08-13T07:04:48.251523+00:00"
 }

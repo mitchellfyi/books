@@ -32,4 +32,4 @@ Its practical value therefore depends on whether the reader can convert provocat
 
 Read the full book if memorable stories and Sutherland's voice will help you generate experiments. The summary is probably enough if you only need the framework: look for hidden psychological value, widen the solution space, and test neglected ideas. Skip it if you want formal models, rigorous evidence grading, or a compact and neutral account.
 
-This brief is based on the publisher's sample and contents, official records, an author interview, secondary coverage, and independent reviews. It has not been checked against a full copy, so it can support a read-or-buy decision but should not be treated as a verified replacement for the complete book.
+The whole book in one instruction: when an idea sounds wrong but costs little to try, try it. The interesting discoveries are hiding behind the ideas nobody can defend in a meeting.

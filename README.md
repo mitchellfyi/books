@@ -86,6 +86,22 @@ Inspect the phonemes and any shared-dictionary match for a difficult term:
 ./bookflow pronunciation "author name or specialist term"
 ```
 
+## Deploy to a static host
+
+`./bookflow build` writes `dist/`: a complete, root-layout static site
+(`index.html` at the top, data and audio inside), so the app serves from `/`
+with no subpath. Deploy that directory to any static host:
+
+```bash
+./bookflow build
+npx vercel deploy dist --prod    # or Netlify, GitHub Pages, any static host
+```
+
+On a static host the app is read-only: playback, search, transcripts, and
+playlists all work, with playlists kept in the browser's own storage rather
+than `data/playlists.json`. Regenerate and redeploy `dist/` after adding
+books or audio.
+
 ## Structure
 
 - `book.json`: identity, editions, discovery, research sources, and coverage.
