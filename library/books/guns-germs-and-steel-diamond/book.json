@@ -253,7 +253,7 @@
     }
   },
   "workflow": {
-    "status": "complete",
+    "status": "researched-partial",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Structure and claims checked against authorised contents and edition records; purpose checked in Diamond's direct reply; assessment triangulated across contemporary history and ecology reviews plus later empirical work supporting and challenging the biogeographic framework.",
     "last_researched": "2026-08-13",

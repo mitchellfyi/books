@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "guns-germs-and-steel-diamond",
+  "duration": "30-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.88,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/guns-germs-and-steel-diamond/scripts/30-minutes.md",
+  "source_script_sha256": "0fef2c608910cc45360b5aae5e745b30637affcf4d8e5204156e72633131231a",
+  "pronunciation_dictionary_sha256": "96108f5c4b3ea618349a2e118ee88b8a155cb71d2bcedd6a72631d1119d25851",
+  "pronunciation_terms": [
+    "Atahuallpa",
+    "Cajamarca"
+  ],
+  "pronunciation_entries_sha256": "079afc6f23907481b57893a4c7a27b457382160138029a2b0e6c36e72f59d34b",
+  "script_words": 4191,
+  "audio_seconds": 1658.973,
+  "measured_wpm": 151.58,
+  "generated_at": "2026-08-13T15:26:39.710142+00:00"
+}

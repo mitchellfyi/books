@@ -10,7 +10,7 @@
     "rationale": "The thesis is compact, but judging it requires more than naming domesticable species, continental axes and livestock germs. Thirty minutes preserves the causal chain, regional comparisons, the distinction between continental prehistory and modern inequality, and direct challenges to the axis and deterministic claims. Fifteen minutes gives the complete map but not enough evidence to assess its reach."
   },
   "card": {
-    "one_sentence": "Jared Diamond's Pulitzer-winning answer to why Eurasians conquered the world rather than the reverse: not race but geography — the continents dealt unequal hands of domesticable plants, animals, and transmissible advantages, and everything else followed.",
+    "one_sentence": "Jared Diamond argues that Eurasian societies gained the tools of conquest earlier because their continent offered more domesticable species and easier routes for spreading food production — not because their people were inherently superior.",
     "verdict": "A powerful and worthwhile environmental account of continental divergence that makes racial explanations unnecessary, but weakens when its starting conditions become a near-complete explanation and culture, institutions, agency and later history are compressed.",
     "source_ids": [
       "google-books-ggs-1997",
@@ -21,7 +21,7 @@
   },
   "overview": {
     "synopsis": {
-      "text": "Prompted by his New Guinean friend Yali's question — why did your people end up with all the cargo? — Diamond traces global inequality to environmental starting conditions thirteen thousand years ago. Eurasia had most of the world's domesticable grasses and large mammals; its east-west axis let crops, animals, technologies, and ideas spread along shared latitudes; dense farming populations bred both epidemic diseases and the states, writing, and steel that carried them. When Pizarro's 168 men captured the Inca emperor Atahuallpa at Cajamarca, every advantage in the room — horses, steel, writing, and above all smallpox running ahead of the Spaniards — traced back, Diamond argues, to that environmental head start.",
+      "text": "Prompted by the New Guinean politician Yali's question about unequal material wealth, Diamond traces broad continental divergence to environmental starting conditions thirteen thousand years ago. Eurasia had many useful wild grasses and large mammals; its east-west shape helped some crops and animals spread through similar climates; dense farming populations supported states, writing and technology while also breeding epidemic diseases. At Cajamarca, Diamond argues, the Spaniards' horses, steel, writing and disease advantage were later results of that earlier head start.",
       "source_ids": [
         "google-books-ggs-1997",
         "kirkus-ggs"
@@ -40,10 +40,10 @@
     {
       "id": "yalis-question",
       "title": "Yali's question, taken seriously",
-      "claim": "The book exists to answer one question honestly: why did material power accumulate so unevenly across continents — and to defeat the racist answer by out-explaining it.",
-      "explanation": "Diamond reframes the rudest question in history — why them, not us? — as a scientific problem with a thirteen-thousand-year timescale. His explicit target is the folk theory that European dominance reflects European ability; his method is to push causes back until people drop out of them entirely.",
+      "claim": "The book asks why material power accumulated unevenly across continents and seeks an environmental answer that does not depend on racial hierarchy.",
+      "explanation": "Diamond treats the question as a thirteen-thousand-year problem. His explicit target is the idea that European dominance reflects superior ability; his method is to look behind the people involved for differences in ecological opportunities and barriers.",
       "representative_example": "Yali, a New Guinean politician walking a beach with Diamond in 1972, asks why whites brought so much cargo while New Guineans made so little of their own.",
-      "why_it_matters": "It made the deep causes of inequality a respectable mainstream subject and handed a generation its standard anti-racist argument.",
+      "why_it_matters": "It gives general readers a clear alternative to biological or racial explanations of material power.",
       "caveat": "Critics note the reframing has a cost: explaining domination entirely by accident can read as excusing it — conquest with no one responsible.",
       "source_ids": [
         "google-books-ggs-1997",
@@ -58,7 +58,7 @@
       "explanation": "The Fertile Crescent held a wildly disproportionate share of the large-seeded grasses worth farming; of the world's large land mammals, only fourteen were ever domesticated, and thirteen lived in Eurasia. Diamond's Anna Karenina principle explains why: a species must pass every test — diet, growth rate, temperament, breeding in captivity, social structure — and failing any one disqualifies it, which is why Africa's zebras and the Americas' bighorn sheep stayed wild however long humans lived beside them.",
       "representative_example": "The zebra: hippomorph, abundant, and never domesticated — it bites, panics, and refuses the halter, failing the temperament test that horses pass.",
       "why_it_matters": "It converts 'why did farming start there?' from a question about peoples into a question about species inventories.",
-      "caveat": "Specialists accept the inventory point while disputing how much downstream history it fixes; the endowment explains starts better than outcomes.",
+      "caveat": "The inventory helps explain where food production could start, but does not by itself determine later political or economic outcomes.",
       "source_ids": [
         "google-books-ggs-1997",
         "kirkus-ggs"
@@ -68,8 +68,8 @@
     {
       "id": "axis-orientation",
       "title": "The east-west axis: geography's compound interest",
-      "claim": "Eurasia's long east-west axis let crops, livestock, and inventions spread along shared day-lengths and climates; the Americas' and Africa's north-south axes blocked diffusion with deserts, jungles, and climate breaks.",
-      "explanation": "Wheat domesticated in the Fertile Crescent could travel from Ireland to Japan without leaving its latitude band; Mexican maize took millennia to cross the tropics to the Andes, and the llama never met the Aztecs. Diffusion compounds: every society on the axis inherits every other's inventions, so the connected landmass pulls ahead as a unit.",
+      "claim": "Diamond argues that Eurasia's long east-west shape often helped crops and livestock spread through similar day-lengths and climates, while major north-south climate breaks slowed diffusion in the Americas and Africa.",
+      "explanation": "Wheat domesticated in the Fertile Crescent could spread across large areas of Eurasia; Mexican maize took millennia to cross tropical and highland barriers towards the Andes, and the llama never reached the Aztecs. Easier diffusion can compound because societies gain access to useful species and ideas developed elsewhere.",
       "representative_example": "The llama and the wheel existed on the same landmass for thousands of years and were never combined — the gap between Mexico and the Andes uncrossed.",
       "why_it_matters": "It is the book's most original mechanism: a purely geometric fact doing historical work — and the part of the argument researchers found worth formally testing.",
       "caveat": "The axis argument has now been tested directly: a quantitative study found scarce prior evidence and challenged its strong form, so treat it as a fertile hypothesis about agriculture's spread rather than an established law — and its extension to technology is where historians object.",
@@ -82,25 +82,26 @@
     {
       "id": "lethal-gift-of-livestock",
       "title": "Germs: the lethal gift of livestock",
-      "claim": "Eurasia's crowd diseases — smallpox, measles, influenza — evolved from livestock in dense farming populations, and immunity to them became the deadliest weapon of conquest.",
-      "explanation": "Millennia of living with domesticated animals turned Eurasian populations into disease-hardened survivor stock. When contact came, the exchange was catastrophically one-sided: Old World pathogens depopulated the Americas — the great majority of indigenous deaths were microbial, arriving ahead of the conquerors themselves — while almost nothing travelled the other way, because the Americas' thin roster of domestic animals had bred few crowd diseases.",
+      "claim": "Diamond links Eurasia's crowd diseases to dense farming populations living with livestock and argues that unequal exposure made Old World infections a major weapon of conquest.",
+      "explanation": "Repeated epidemics left surviving Eurasian populations with some acquired and inherited protection. When sustained contact began, Old World pathogens caused enormous losses among American populations without prior exposure, often travelling ahead of European armies. The Americas had fewer domestic mammals and, in Diamond's account, fewer crowd diseases to send in return.",
       "representative_example": "Smallpox reached the Inca empire before Pizarro did, killing the emperor and igniting the civil war that handed 168 Spaniards their opening at Cajamarca.",
-      "why_it_matters": "It relocates the conquest of the Americas from military genius to epidemiology — the single most revisionary fact in the book.",
-      "caveat": "The core epidemiological asymmetry is well supported; some specific disease-origin attributions have been revised by later genomic work.",
+      "why_it_matters": "It moves disease from the background of conquest to a central causal role.",
+      "caveat": "Disease changed the balance of power but did not act alone; alliances, political fractures, violence and colonial decisions shaped particular conquests.",
       "source_ids": [
         "google-books-ggs-1997",
-        "pulitzer-ggs"
+        "pulitzer-ggs",
+        "antrosio-critique"
       ],
       "basis": "synthesis"
     },
     {
       "id": "proximate-cascade",
       "title": "From food to guns, germs, and steel",
-      "claim": "Food surpluses cascade into everything else: dense populations, specialists, states, writing, organised religion, and industrial technology are downstream of farming, not of talent.",
+      "claim": "Diamond argues that food surpluses make dense populations, specialists, states, writing and accumulated technology more likely, turning ecological advantages into tools of power.",
       "explanation": "Farmers feed non-farmers: scribes, smiths, soldiers, kings. Writing emerges where bureaucracies need records; technology accumulates where populations are large and connected; centralised states organise conquest. Diamond's point is that these proximate causes of dominance — the guns, germs, and steel of the title — are themselves effects of the ultimate environmental causes, which is why asking 'why was Europe more inventive?' is already asking the wrong question.",
       "representative_example": "The Spanish at Cajamarca carried writing — Pizarro had read accounts of Cortés's playbook — while the Inca, rulers of the hemisphere's largest empire, had no script to warn them.",
       "why_it_matters": "The ultimate-versus-proximate distinction is the book's analytical engine and its most teachable move.",
-      "caveat": "The cascade underweights institutions, culture, and choice — the economists' documented counter-finding is that with institutions controlled, geography's effect on modern incomes largely disappears.",
+      "caveat": "The cascade underweights institutions, culture and choice. Evidence from former colonies shows that later institutions can reverse earlier patterns and are essential to explaining modern income.",
       "source_ids": [
         "google-books-ggs-1997",
         "acemoglu-reversal",
@@ -112,7 +113,7 @@
       "id": "natural-experiments",
       "title": "History as natural experiment",
       "claim": "Where similar peoples colonised different environments, the environments' fingerprints show — Diamond's method for making history behave like a science.",
-      "explanation": "Polynesia is his laboratory: one ancestral culture radiating across islands from coral atolls to New Zealand produced everything from hunter-gatherer bands to proto-empires, with environment as the only variable that differs. The epilogue generalises the ambition: historical sciences like evolutionary biology and geology already work this way, and history could too.",
+      "explanation": "Polynesia is his main comparison: related seafaring populations settled islands ranging from coral atolls to New Zealand and developed societies from small foraging groups to proto-empires. Environment is the leading variable in Diamond's comparison, though the cases are not identical in every other respect. The epilogue argues that history can use comparison as geology and evolutionary biology do.",
       "representative_example": "The Chatham Islands versus New Zealand: the same ancestral Polynesian population became peaceful hunter-gatherers on the cold islands and populous farming societies on the warm ones — and when the two met again in 1835, the farmers annihilated the foragers.",
       "why_it_matters": "It offers a genuine method, not just a thesis — the book's lasting contribution to how big questions get argued.",
       "caveat": "Natural experiments constrain but do not isolate causes; critics note the cases are chosen and read by the theorist they support.",
@@ -125,11 +126,11 @@
     {
       "id": "determinism-debate",
       "title": "The determinism debate the book started",
-      "claim": "The framework's power is also its documented weakness: pushed to explain everything, environmental causation erases agency, institutions, and the last five hundred years.",
-      "explanation": "The quarter-century verdict from the disciplines: the world historian William H. McNeill praises the domestication analysis as a brilliant tour de force while objecting that Diamond reduces cultural history to a byproduct of nature — 'scant room for human ideas and ideals' — and calls the compressed treatment of recorded history a clever caricature rather than a serious effort; a geographer charges revived environmental determinism that misattributes Asian and Middle Eastern achievements to Europe; anthropologists object that making domination 'a product of a distant and accidental history' removes anyone responsible; economists find that institutional reversals among former colonies — the richest regions of 1500 becoming today's poorest — cut against geographic destiny; and a direct quantitative test of the continental-axis hypothesis found scarce prior evidence for its strong form. Diamond's frame explains why Eurasia; why Europe rather than China — his own epilogue question — is where McNeill judged the environmental hand ran out of cards.",
+      "claim": "The framework becomes weaker when environmental starting conditions are treated as a near-complete explanation and agency, institutions and later change lose independent force.",
+      "explanation": "McNeill praised the new biogeographic angle but argued that Diamond reduces recorded cultural history to natural processes. Blaut challenged its deterministic and Eurocentric tendencies. Anthropologists emphasise the political decisions and Indigenous alliances missing from an automatic account of conquest. Evidence on former colonies shows that institutions can reverse earlier fortunes, and a direct quantitative test challenged the strong axis hypothesis. These criticisms limit the model most clearly when it moves within Eurasia or towards the modern era.",
       "representative_example": "The economists' reversal of fortune: among former colonies, the regions richest in 1500 are among the poorest today — institutions reversed outcomes that geography alone cannot explain.",
       "why_it_matters": "Reading the book with its debate attached is what turns it from a creed into an education.",
-      "caveat": "The critics correct the frame's reach, not its core: none of them restores the racial explanation the book demolished, and the demolition stands.",
+      "caveat": "These criticisms narrow the environmental claim without lending support to racial explanations of continental difference.",
       "source_ids": [
         "mcneill-nyrb",
         "blaut-direct-critique",
@@ -323,12 +324,14 @@
       "text": "The book made long-run biogeographic explanation central to popular debate about global inequality and supplied an accessible alternative to racial accounts. Its importance also lies in the response it provoked: historians, geographers and economists clarified where environmental starting conditions explain divergence and where culture, institutions and later contingencies need independent weight.",
       "source_ids": [
         "pulitzer-ggs",
-        "pbs-ggs-book"
+        "pbs-ggs-book",
+        "mcneill-nyrb",
+        "axis-quantitative-test"
       ],
       "basis": "synthesis"
     },
     "author_and_purpose": {
-      "text": "Diamond — a Cambridge-trained physiologist who built a second career in New Guinea ornithology and a third in geography — wrote the book to answer his friend Yali's question and to bury the racial answer: his stated purpose is to show that history's broadest pattern needs no theory of superior peoples, only a map of what grew and grazed where.",
+      "text": "Diamond — a Cambridge-trained physiologist who built a second career in New Guinea ornithology and a third in geography — wrote the book to answer Yali's question and oppose racial explanations. His stated purpose is to explain the broad continental pattern through differences in domesticable species, area, isolation, axes and internal barriers.",
       "source_ids": [
         "google-books-ggs-1997",
         "diamond-mcneill-exchange"
@@ -346,7 +349,7 @@
         "The modern-era extension is contested at the data level by the institutions literature.",
         "Specialist critics identify disputed regional details, selective diffusion examples and important omissions.",
         "The environmental frame structurally underweights agency, culture and institutions.",
-        "Synthesis without systematic citation; the reader cannot trace most claims."
+        "Evidence is synthesised through chapter-level further reading rather than inline citations, making individual claims slower to trace."
       ],
       "source_ids": [
         "acemoglu-reversal",
@@ -363,7 +366,7 @@
       "praise": [
         "Pulitzer Prize for General Nonfiction (1998); Rhône-Poulenc science-book prize (1998); Phi Beta Kappa Award (1997).",
         "Kirkus: an impressive achievement and a fair answer to Yali's question.",
-        "Decades of adoption as the standard deep-causes text."
+        "The specialist ecology review recommends selected chapters for teaching while questioning whether the central lesson required more than 400 pages."
       ],
       "criticism": [
         "W. H. McNeill: reduces cultural history to a byproduct of nature — 'scant room for human ideas and ideals'; the compressed recorded history is 'a clever caricature rather than a serious effort'.",
@@ -416,15 +419,15 @@
       ],
       "omissions": [
         "Institutions, culture, and political choice as independent causes",
-        "Systematic citations; the synthesis must be taken on trust",
-        "The colonial era's own decisions — the frame stops at the shore"
+        "Inline citations that connect individual assertions to the underlying scholarship",
+        "Colonial governance, Indigenous alliances and political decisions after first contact"
       ],
       "missing_or_weak": [
-        "Chapter twenty's 'why Europe, not China' is the documented overreach",
-        "Some disease-origin and regional details revised by later scholarship"
+        "The attempt to explain why Europe rather than China later expanded is less secure than the continental prehistory argument",
+        "Independent treatment of institutions, culture and human agency"
       ],
       "dated_or_contested": [
-        "The geography-versus-institutions question now has a large post-1997 empirical literature on both sides (biogeographic persistence evidence, institutional-reversal evidence, and a direct axis test); ancient-DNA work has also refined several population stories."
+        "Post-1997 research supplies evidence for some long-run biogeographic links, a strong role for institutions in modern outcomes and direct challenges to the axis hypothesis."
       ],
       "source_ids": [
         "mcneill-nyrb",
@@ -438,7 +441,7 @@
       "read_if": "Read the full book if you want to inspect how Diamond builds the environmental case through species inventories, comparisons, maps and regional applications, and are willing to read the main criticisms beside it.",
       "summary_is_enough_if": "Thirty minutes is enough if you want the causal chain, main cases, evidential strengths and precise limits without repeated regional application.",
       "skip_if": "Skip it if your main question concerns modern differences among states, political institutions or detailed regional history, or if you already know the framework and need newer specialist evidence.",
-      "format_advice": "Print for the maps and tables; the audiobook works but the species lists drag; any edition serves — the 2005 tie-in adds a Japan chapter and little else.",
+      "format_advice": "Print is best for the maps and tables. The audiobook carries the argument, but long species lists and repeated regional applications are harder to scan.",
       "source_ids": [
         "evolution-education-review",
         "acemoglu-reversal"
@@ -459,7 +462,7 @@
     ]
   },
   "workflow": {
-    "status": "complete",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
     "review_notes": "Built from the documented record, a contemporary professional review, and the four named specialist critiques that define the book's debate; the argument's structure is unusually well documented after twenty-five years of academic engagement.",
     "quality_review": {
