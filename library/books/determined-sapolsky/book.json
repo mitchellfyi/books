@@ -3,29 +3,215 @@
   "schema_version": 1,
   "id": "determined-sapolsky",
   "type": "book",
-  "title": "Determined",
-  "alternate_titles": [],
+  "title": "Determined: A Science of Life Without Free Will",
+  "alternate_titles": ["Determined", "Determined: The Science of Life Without Free Will"],
   "author_ids": ["robert-m-sapolsky"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2023",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US hardcover",
+        "publisher": "Penguin Press",
+        "publication_date": "2023-10-17",
+        "isbn_10": "0525560971",
+        "isbn_13": "9780525560975",
+        "format": "Hardcover",
+        "pages": 528
+      },
+      {
+        "label": "UK Vintage paperback",
+        "publisher": "Vintage",
+        "publication_date": "2024-09-05",
+        "isbn_10": "152992006X",
+        "isbn_13": "9781529920062",
+        "format": "Paperback",
+        "pages": 512
+      }
+    ],
+    "contents": [
+      "1: Turtles All the Way Down",
+      "2: The Final Three Minutes of a Movie",
+      "3: Where Does Intent Come From?",
+      "4: Willing Willpower: The Myth of Grit",
+      "5: A Primer on Chaos",
+      "6: Is Your Free Will Chaotic?",
+      "7: A Primer on Emergent Complexity",
+      "8: Does Your Free Will Just Emerge?",
+      "9: A Primer on Quantum Indeterminacy",
+      "10: Is Your Free Will Random?",
+      "10.5: Interlude",
+      "11: Will We Run Amok?",
+      "12: The Ancient Gears within Us: How Does Change Happen?",
+      "13: We Really Have Done This Before",
+      "14: The Joy of Punishment",
+      "15: If You Die Poor",
+      "Appendix: Neuroscience 101"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": ["behavioural-science", "biology", "criminal-justice", "decision-making", "determinism", "free-will", "human-nature", "inequality", "moral-responsibility", "neuroscience", "non-fiction", "psychology"],
+    "audiences": [
+      "Readers interested in neuroscience, behavioural causation, free will, moral luck, punishment, and inequality",
+      "People willing to separate the strong causal science from the disputed philosophical conclusion",
+      "Policy and justice readers considering how explanation should alter blame without abandoning safety or behaviour change"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "publisher-preview",
+        "title": "Determined: The Science of Life Without Free Will — sample",
+        "author_or_publisher": "Robert M. Sapolsky; Vintage",
+        "url": "https://cdn.penguin.co.uk/dam-assets/books/9781529920062/9781529920062-sample.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "UK edition facts, full contents, author statement of purpose, positions opposed, causal framework, style, and previous works.",
+        "limitations": "Fifty-three-page sample containing front matter and the opening chapter, not the complete book."
+      },
+      {
+        "id": "kirkus-review",
+        "title": "Determined",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/robert-m-sapolsky/determined-Sapolsky/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "US publication facts, argument, author position, biological and social examples, justice implications, clarity, and breadth.",
+        "limitations": "Concise favourable trade review without a detailed philosophical audit."
+      },
+      {
+        "id": "ndpr-review",
+        "title": "Determined: A Science of Life Without Free Will",
+        "author_or_publisher": "John Martin Fischer; Notre Dame Philosophical Reviews",
+        "url": "https://ndpr.nd.edu/reviews/determined-a-science-of-life-without-free-will/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Whole-book structure, US metadata, scientific breadth, definition problem, compatibilist counterargument, responsibility critique, and cited passages.",
+        "limitations": "A strongly critical assessment by a leading compatibilist; its philosophical objections are relevant but contested."
+      },
+      {
+        "id": "new-yorker-review",
+        "title": "How Can Determinists Believe in Free Will?",
+        "author_or_publisher": "Nikhil Krishnan; The New Yorker",
+        "url": "https://www.newyorker.com/magazine/2023/11/13/determined-a-science-without-free-will-robert-sapolsky-book-review",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Implications for blame and praise, distinction between Sapolsky's test and ordinary concepts, moral-practice objections, and delivery.",
+        "limitations": "Philosophical review essay rather than a line-by-line check of the biology."
+      },
+      {
+        "id": "guardian-review",
+        "title": "Determined: Life Without Free Will — the hard science of decisions",
+        "author_or_publisher": "Oliver Burkeman; The Guardian",
+        "url": "https://www.theguardian.com/books/2023/oct/24/determined-life-without-free-will-by-robert-sapolsky-review-the-hard-science-of-decisions",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Causal-chain strategy, implications, scientific density, humour, voice, and reservations about the book's philosophical move.",
+        "limitations": "General-audience review rather than specialist verification of every scientific field."
+      },
+      {
+        "id": "neurophilosophy-review",
+        "title": "A Critical Review of Determined: Life Without Free Will",
+        "author_or_publisher": "Max Whittaker; Journal of NeuroPhilosophy",
+        "url": "https://jneurophilosophy.com/index.php/jnp/article/view/128",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Clinical and neuroethical criticism of the move from no free will to no culpability, incarceration as quarantine, and predicted humanitarian effects.",
+        "limitations": "Single-author journal review; challenges Sapolsky's ethics more than the causal neuroscience."
+      },
+      {
+        "id": "nybooks-review",
+        "title": "Turtles All the Way Up",
+        "author_or_publisher": "Jessica Riskin; The New York Review of Books",
+        "url": "https://www.nybooks.com/articles/2025/02/13/turtles-all-the-way-up-determined-robert-sapolsky/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Historian-of-science criticism that the no-free-will conclusion exceeds what science can establish and depends on a mechanistic philosophical commitment.",
+        "limitations": "Strongly critical and partly paywalled; interpretation is disputed directly by Sapolsky."
+      },
+      {
+        "id": "sapolsky-reply",
+        "title": "Half-Cups Runneth Over",
+        "author_or_publisher": "Robert Sapolsky, reply by Jessica Riskin; The New York Review of Books",
+        "url": "https://www.nybooks.com/articles/2025/04/24/half-cups-runneth-over/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Sapolsky's direct defence that no single discipline settles the issue but their interlocking causal knowledge collectively leaves no free will.",
+        "limitations": "Author's reply defending the book, followed by the reviewer's disagreement."
+      },
+      {
+        "id": "contemporary-debate-review",
+        "title": "The Free Will–Determinism Debate in Contemporary Science and Society",
+        "author_or_publisher": "Frontiers in Human Neuroscience via PubMed Central",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12162392/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current comparison of Sapolsky's deterministic position with Kevin Mitchell's agency account and discussion of chaos, emergence, quantum physics, and social consequences.",
+        "limitations": "Broad debate review rather than an experimental adjudication of free will."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "Determined",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/en/book/show/83817782-determined",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large reader aggregate and recurring praise for breadth, humour, and compassion alongside criticism of length, repetition, determinist overreach, and uneven philosophy.",
+        "limitations": "Self-selected ratings and reviews, edition merging, and no control for expertise or completion."
+      },
+      {
+        "id": "naturalism-review",
+        "title": "What's Wrong With Determinism? Review of Determined",
+        "author_or_publisher": "Thomas W. Clark; Naturalism.org",
+        "url": "https://www.naturalism.org/resources/book-reviews/whats-wrong-with-determinism-review-of-determined-by-robert-sapolsky",
+        "type": "specialist-review",
+        "independence": "interested",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "A naturalist sympathetic to Sapolsky's rejection of contra-causal freedom who clarifies change, control, practical responsibility, and the distinction between determinism and fatalism.",
+        "limitations": "Advocacy organisation committed to philosophical naturalism and broadly aligned with the book's anti-libertarian position."
+      }
+    ],
+    "citations": {
+      "/title": ["publisher-preview", "kirkus-review", "ndpr-review"],
+      "/alternate_titles": ["publisher-preview", "guardian-review"],
+      "/author_ids": ["publisher-preview", "kirkus-review", "ndpr-review"],
+      "/bibliography/first_published": ["publisher-preview", "kirkus-review", "ndpr-review"],
+      "/bibliography/original_language": ["publisher-preview", "kirkus-review"],
+      "/bibliography/editions/0": ["kirkus-review", "ndpr-review"],
+      "/bibliography/editions/1": ["publisher-preview"],
+      "/bibliography/contents": ["publisher-preview", "ndpr-review"],
+      "/discovery/tag_ids": ["publisher-preview", "ndpr-review", "contemporary-debate-review"],
+      "/discovery/audiences": ["kirkus-review", "ndpr-review", "new-yorker-review"],
+      "/discovery/formats_available": ["publisher-preview", "goodreads-reception"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "researched-partial",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "The publisher's complete contents and opening chapter were checked directly, then every later chapter and major argument was triangulated through philosophy, neuroethics, science, legal, professional, author-response, and reader sources. No uninterrupted lawful full text was available.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": ["Optional: verify every endnote and extended case against an owner-supplied or library copy to promote coverage to full-book."]
   }
 }

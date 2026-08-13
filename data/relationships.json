@@ -199,6 +199,41 @@
       "description": "Read Sapiens next for a much broader account of how shared imagined orders enable large-scale cooperation; it complements Hoffer's narrower focus on fanatical movements.",
       "source_refs": [],
       "confidence": "medium"
+    },
+    {
+      "id": "determined-written-by-robert-sapolsky",
+      "source_id": "determined-sapolsky",
+      "target_id": "robert-m-sapolsky",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Robert M. Sapolsky wrote Determined.",
+      "source_refs": [
+        "library/books/determined-sapolsky/book.json#publisher-preview",
+        "library/books/determined-sapolsky/book.json#kirkus-review"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "determined-recommended-next-behave",
+      "source_id": "determined-sapolsky",
+      "target_id": "behave-sapolsky",
+      "type": "recommended-next",
+      "basis": "explicit",
+      "description": "Behave supplies the fuller timescale-by-timescale biology of action on which Determined builds its no-free-will conclusion.",
+      "source_refs": [
+        "library/books/determined-sapolsky/book.json#publisher-preview"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "determined-related-to-true-believer",
+      "source_id": "determined-sapolsky",
+      "target_id": "the-true-believer-hoffer",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both challenge blame-centred explanations of behaviour; Determined supplies multilevel causal science, while The True Believer offers a compact but less empirical psychology of collective commitment.",
+      "source_refs": [],
+      "confidence": "medium"
     }
   ]
 }

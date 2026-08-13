@@ -217,7 +217,22 @@
       "author_ids": [
         "robert-m-sapolsky"
       ],
-      "aliases": []
+      "aliases": [
+        "Determined: A Science of Life Without Free Will",
+        "Determined: The Science of Life Without Free Will"
+      ]
+    },
+    {
+      "id": "behave-sapolsky",
+      "kind": "book",
+      "name": "Behave: The Biology of Humans at Our Best and Worst",
+      "state": "recommendation-stub",
+      "author_names": [
+        "Robert M. Sapolsky"
+      ],
+      "aliases": [
+        "Behave"
+      ]
     },
     {
       "id": "don-t-believe-everything-you-think-nguyen",

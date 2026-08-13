@@ -5,107 +5,571 @@
   "content_type": "non-fiction",
   "editorial": {
     "compression_fit": "medium",
-    "complexity": "medium",
+    "complexity": "high",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "Five minutes can state the causal-chain argument and humane consequence, but not fairly separate determinism, unpredictability, randomness, emergence, agency, responsibility, retribution, and prevention. Fifteen minutes retains those distinctions and the central compatibilist objection. Thirty minutes adds scientific examples and policy texture; the original's primers, notes, humour, and repeated defence are mainly for readers who want the full intellectual encounter."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "A neuroscientist's cumulative case that every choice arises from prior biology and environment, followed by a plea to replace deserved praise and punishment with compassion, prevention, and change.",
+    "verdict": "The causal science and attack on moral luck are powerful; the claim that they settle free will and erase responsibility is philosophically under-argued, making this a valuable provocation rather than a final verdict.",
+    "source_ids": [
+      "publisher-preview",
+      "kirkus-review",
+      "ndpr-review",
+      "new-yorker-review",
+      "contemporary-debate-review"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Sapolsky first traces behaviour backwards from the final seconds of neural activity through hormones, learning, childhood, fetal life, genes, culture, ecology, and evolution. He then considers whether chaos, emergence, or quantum indeterminacy creates freedom, and argues that unpredictability or randomness cannot produce a self independent of causes. The second half asks whether people would run amok without blame, how change remains possible, how moral attitudes have changed before, why punishment feels rewarding, and what determinism means for justice, merit, poverty, hatred, praise, and entitlement.",
+      "source_ids": [
+        "publisher-preview",
+        "ndpr-review",
+        "kirkus-review",
+        "guardian-review",
+        "neurophilosophy-review"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "No decision is made by a separate, self-created agent. What a person intends and how much control they can exercise are outcomes of an unbroken, interacting causal history they did not choose. Randomness would make action less controlled, not freer. Sapolsky therefore rejects basic desert: safety, deterrence, rehabilitation, and behaviour change remain legitimate, but hatred, retribution, and the claim that anyone earned their starting capacities do not.",
+      "source_ids": [
+        "publisher-preview",
+        "kirkus-review",
+        "ndpr-review",
+        "new-yorker-review",
+        "sapolsky-reply"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "causal-chain",
+      "title": "Behaviour is turtles all the way down",
+      "claim": "Every action emerges from interacting causes extending from the immediate brain state through a lifetime and deep history.",
+      "explanation": "Neural activity in the last second depends on recent sensory cues, hormones, sleep, stress, and learning; these depend on development, nutrition, relationships, genes, culture, ecology, and evolution. The fields are not rival explanations but descriptions of one connected process at different scales.",
+      "representative_example": "The final minutes of a film make sense only because of everything earlier; Sapolsky uses the same structure to argue that the final neural command cannot be separated from the life that produced it.",
+      "why_it_matters": "It replaces single-cause moral stories with a richer question: which prior conditions made this response likely and which conditions can be changed?",
+      "caveat": "Showing that action has causes does not by itself decide whether caused capacities for reasoning and self-control count as agency or free will.",
+      "source_ids": [
+        "publisher-preview",
+        "guardian-review",
+        "ndpr-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "intent-is-caused",
+      "title": "Intention is part of the mechanism",
+      "claim": "Conscious intent can affect behaviour without being an uncaused commander outside the causal chain.",
+      "explanation": "A decision may be deliberate, responsive to reasons, and different after reflection. Sapolsky accepts those effects but asks where the intention, reasons, attention, and capacity to inhibit came from. Each was shaped by prior causes the person did not choose.",
+      "representative_example": "Resisting a temptation can recruit frontal systems and learned strategies, but the strength of those systems and the availability of those strategies have developmental and situational histories.",
+      "why_it_matters": "It prevents consciousness or effort from being inserted as a mysterious first cause while preserving them as real links through which change occurs.",
+      "caveat": "Compatibilists do not require an uncaused commander; they define relevant freedom through forms of rational, voluntary control, so Sapolsky has not defeated their view merely by tracing causes.",
+      "source_ids": [
+        "publisher-preview",
+        "ndpr-review",
+        "new-yorker-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "luck-and-grit",
+      "title": "Even willpower has a biography",
+      "claim": "Persistence, self-control, and grit depend on biological and social advantages as well as effort, so they cannot ground pure personal desert.",
+      "explanation": "Executive function varies with genes, fetal conditions, childhood stress, nutrition, education, social modelling, sleep, present threat, and accumulated practice. Working hard can strengthen capacity, but being able to start, persist, and benefit from practice is itself unequally caused.",
+      "representative_example": "Two students facing the same test do not bring the same prenatal health, childhood security, sleep, expectations, frontal development, or learned study habits into the room.",
+      "why_it_matters": "It challenges merit stories that convert fortunate capacities into entitlement and disadvantage into moral failure.",
+      "caveat": "Causal explanation does not make practice ineffective or standards useless; incentives and habits are among the causes that alter future performance.",
+      "source_ids": [
+        "publisher-preview",
+        "kirkus-review",
+        "guardian-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "no-loophole",
+      "title": "Unpredictable and random are not free",
+      "claim": "Chaos, emergence, and quantum indeterminacy do not create the kind of authorship Sapolsky rejects.",
+      "explanation": "Chaotic systems can be deterministic yet practically unpredictable because tiny differences amplify. Emergent properties are real higher-level patterns without being independent of their components and history. Quantum events may be indeterminate, but a random neural event would not give a person more control over the result.",
+      "representative_example": "Weather is difficult to predict without being free; adding a random coin toss to a decision would not make the decision more one's own.",
+      "why_it_matters": "It blocks three common moves from limits of prediction to a causeless chooser.",
+      "caveat": "The chapters show that these phenomena do not automatically rescue contra-causal freedom; they do not prove a globally deterministic universe or answer every libertarian and compatibilist account.",
+      "source_ids": [
+        "publisher-preview",
+        "ndpr-review",
+        "contemporary-debate-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "change-without-desert",
+      "title": "Determinism is not fatalism",
+      "claim": "People and societies change when causes change; denying self-creation does not mean effort, education, treatment, or persuasion is pointless.",
+      "explanation": "Brains remain plastic, environments supply feedback, and reasons can alter action. Advice may be the new input that changes a later decision. Fatalism says outcomes occur regardless of intervention; Sapolsky's determinism says interventions are part of what produces outcomes.",
+      "representative_example": "A person learning a self-control strategy can behave differently next time, not because they left causation but because learning changed the causal system.",
+      "why_it_matters": "It preserves practical work while redirecting attention from moral condemnation to the conditions that make improvement possible.",
+      "caveat": "Language of choice, commitment, and accountability may remain useful causal tools even if ultimate self-authorship is rejected.",
+      "source_ids": [
+        "publisher-preview",
+        "kirkus-review",
+        "naturalism-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "responsibility-reframed",
+      "title": "Protect people without retribution",
+      "claim": "Dangerous behaviour can justify restraint and prevention without the further belief that suffering is deserved.",
+      "explanation": "Sapolsky proposes a medical quarantine analogy: identify risk, protect others, seek treatment and rehabilitation, use the least harmful effective restriction, and release when danger passes. Deterrent consequences remain causes; vengeance is not a separate social good.",
+      "representative_example": "A faulty car is kept off the road because it is dangerous, not punished for choosing defective brakes; human restraint must add dignity, rights, evidence, and rehabilitation.",
+      "why_it_matters": "It separates public safety from anger and makes the conditions that produce harm a central policy target.",
+      "caveat": "Risk prediction is fallible and power can abuse preventive detention. A humane model still needs due process, proportionality, review, equal protection, and a richer account of interpersonal responsibility.",
+      "source_ids": [
+        "kirkus-review",
+        "neurophilosophy-review",
+        "ndpr-review",
+        "new-yorker-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "moral-change",
+      "title": "Causal understanding has reduced blame before",
+      "claim": "Societies have repeatedly stopped treating conditions as sin or chosen wickedness after learning more about their causes.",
+      "explanation": "Sapolsky points to epilepsy, mental illness, developmental difference, and other conditions once met with supernatural or moral condemnation. He asks readers to extend that explanatory compassion beyond exceptional impairments to ordinary behaviour.",
+      "representative_example": "A seizure is treated medically rather than as demonic possession; the book imagines a similar retreat from retributive blame for harmful action.",
+      "why_it_matters": "It shows that intuitions about culpability can change and that explanation can support more effective, humane responses.",
+      "caveat": "Specific impairments can reduce ordinary capacities; it does not follow that every caused action lacks those capacities or that all distinctions among deliberate, coerced, accidental, and impaired conduct disappear.",
+      "source_ids": [
+        "kirkus-review",
+        "ndpr-review",
+        "new-yorker-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "desert-and-inequality",
+      "title": "No one authored their starting equipment",
+      "claim": "Talent, health, temperament, opportunity, and the capacity to exploit opportunity are forms of luck, weakening claims to superior entitlement.",
+      "explanation": "Success includes effort, but effort is produced by capacities and environments. Failure has causes too. Sapolsky applies this symmetry to wealth, poverty, education, health, praise, shame, gratitude, and hatred.",
+      "representative_example": "The successful graduate did not select the womb, neighbourhood, stress exposure, teachers, or neural plasticity that helped make sustained work possible.",
+      "why_it_matters": "The argument supports social investment and humility: improve conditions rather than interpreting unequal outcomes as proof of unequal moral worth.",
+      "caveat": "Rejecting ultimate desert does not by itself specify a fair distribution, decide which incentives work, or eliminate legitimate recognition, trust, and relationship repair.",
+      "source_ids": [
+        "publisher-preview",
+        "kirkus-review",
+        "ndpr-review",
+        "neurophilosophy-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Chapters 1–4: The causal human",
+      "purpose": "Builds the biological argument from immediate action backwards and absorbs intent, effort, and grit into the same history.",
+      "summary": "Sapolsky presents the linked-timescale framework, examines neural preparation and conscious intention, and argues that the ability to exercise willpower reflects prior biology and environment rather than a self-created reserve of virtue.",
+      "idea_ids": [
+        "causal-chain",
+        "intent-is-caused",
+        "luck-and-grit"
+      ],
+      "source_ids": [
+        "publisher-preview",
+        "guardian-review",
+        "kirkus-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Chapters 5–10.5: Proposed escape routes",
+      "purpose": "Explains chaos, emergence, and quantum indeterminacy before asking whether any supplies free authorship.",
+      "summary": "Alternating primers and application chapters distinguish practical unpredictability, higher-level organisation, and physical randomness from control. Sapolsky concludes that none inserts an agent independent of causal history.",
+      "idea_ids": [
+        "no-loophole",
+        "intent-is-caused"
+      ],
+      "source_ids": [
+        "publisher-preview",
+        "ndpr-review",
+        "contemporary-debate-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Chapters 11–13: Life and change without free will",
+      "purpose": "Answers fatalism and social-collapse fears, then uses past moral changes to make a deterministic outlook imaginable.",
+      "summary": "The book argues that behaviour remains responsive to causes, that belief in determinism need not unleash antisocial conduct, and that societies have already replaced supernatural or moral blame with causal understanding for once-stigmatised conditions.",
+      "idea_ids": [
+        "change-without-desert",
+        "moral-change"
+      ],
+      "source_ids": [
+        "publisher-preview",
+        "kirkus-review",
+        "neurophilosophy-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Chapters 14–15: Punishment, merit, and poverty",
+      "purpose": "Turns the metaphysical position into an ethical and political programme.",
+      "summary": "Sapolsky examines the emotional reward of punishing, replaces retribution with protection and rehabilitation, and extends moral luck to wealth and disadvantage. The closing aspiration is a society with less hatred, entitlement, shame, and deserved suffering.",
+      "idea_ids": [
+        "responsibility-reframed",
+        "desert-and-inequality",
+        "change-without-desert"
+      ],
+      "source_ids": [
+        "kirkus-review",
+        "ndpr-review",
+        "new-yorker-review",
+        "neurophilosophy-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Appendix: Neuroscience 101",
+      "purpose": "Supplies technical foundations for readers who need the neural vocabulary behind earlier chapters.",
+      "summary": "The appendix explains core brain structures, signalling, and control systems separately so the main narrative can range across disciplines without teaching every biological term in place.",
+      "idea_ids": [
+        "causal-chain",
+        "intent-is-caused"
+      ],
+      "source_ids": [
+        "publisher-preview",
+        "ndpr-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Two broad halves: a scientific case against independent authorship, including three primer-and-application pairs, then the personal and social consequences. A technical neuroscience appendix follows.",
+    "voice": "Erudite, compassionate, argumentative, profane, self-deprecating, and deliberately comic. Sapolsky alternates moral urgency with jokes and admissions that he cannot live his own conclusion consistently.",
+    "pace": "Energetic within sections but long overall. Dense explanations, footnotes, examples, and repeated efforts to close every escape route slow the central line.",
+    "evidence_style": "Large interdisciplinary synthesis across neuroscience, development, genetics, endocrinology, psychology, sociology, chaos, complexity, and physics, followed by philosophical and normative inference.",
+    "example_style": "Clinical cases, laboratory studies, personal stories, cultural references, legal examples, historical changes, and thought experiments make abstract causal layers concrete.",
+    "repetition": "Moderate to high. The cumulative method needs recurrence, but the no-gap conclusion and apologies for technical detail are restated more often than decision value requires.",
+    "prerequisites": "No formal science training is required; readers must tolerate technical primers and should bring or seek a separate introduction to compatibilist and libertarian philosophy.",
+    "source_ids": [
+      "publisher-preview",
+      "guardian-review",
+      "kirkus-review",
+      "ndpr-review",
+      "goodreads-reception"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 6.7,
+      "confidence": "medium",
+      "summary": "A humane, insight-rich synthesis of behavioural causation whose strongest scientific material supports humility about control more securely than its categorical rejection of free will, responsibility, and desert.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.5,
+          "rationale": "The linked-timescale model explains why immediate choices cannot be separated from bodies, development, context, and history, although it does not settle which caused capacities count as agency.",
+          "source_ids": [
+            "publisher-preview",
+            "guardian-review",
+            "kirkus-review",
+            "ndpr-review"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 6.5,
+          "rationale": "The empirical synthesis is broad and often strong, but the move from pervasive causation to no compatibilist freedom, no responsibility, and specific social conclusions requires philosophical and normative arguments the book does not fully supply.",
+          "source_ids": [
+            "publisher-preview",
+            "ndpr-review",
+            "new-yorker-review",
+            "nybooks-review",
+            "sapolsky-reply"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.5,
+          "rationale": "Tracing the biography of intent and willpower, distinguishing determinism from fatalism, and separating protection from retribution create valuable shifts in how behaviour and luck are understood.",
+          "source_ids": [
+            "publisher-preview",
+            "kirkus-review",
+            "guardian-review",
+            "neurophilosophy-review"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 6.5,
+          "rationale": "The causal stance can improve compassion, prevention, treatment, education, and institutional design, but the book gives less reliable guidance on due process, interpersonal accountability, incentives, and distribution.",
+          "source_ids": [
+            "kirkus-review",
+            "neurophilosophy-review",
+            "new-yorker-review"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.5,
+          "rationale": "Sapolsky addresses chaos, emergence, randomness, change, and social fears, yet defines out compatibilism, underdevelops other libertarian views, and slides too quickly from science into ethics and law.",
+          "source_ids": [
+            "ndpr-review",
+            "new-yorker-review",
+            "contemporary-debate-review",
+            "nybooks-review"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 5.5,
+          "rationale": "The primers and examples earn substantial space, but 500-plus pages, repeated conclusions, jokes, and defensive asides make the argument longer than its decision-relevant distinctions require.",
+          "source_ids": [
+            "publisher-preview",
+            "guardian-review",
+            "goodreads-reception",
+            "ndpr-review"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book asks readers to stop imagining a little independent author inside the brain and to see action as the current edge of a vast causal history. Its most defensible moral lesson is proportional humility: differences in control are real, luck penetrates effort, and effective response should change causes. Its disputed further claim is that no caused form of rational control can support responsibility at all.",
+      "source_ids": [
+        "publisher-preview",
+        "ndpr-review",
+        "new-yorker-review",
+        "sapolsky-reply"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "When judging behaviour, trace the immediate trigger, current capacity, developmental history, social conditions, and available alternatives before telling a character story.",
+        "source_ids": [
+          "publisher-preview",
+          "guardian-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Treat reasons, education, incentives, treatment, and practice as causes of change rather than contradictions of determinism.",
+        "source_ids": [
+          "publisher-preview",
+          "kirkus-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Separate the need to protect, deter, repair, and rehabilitate from the desire to make an offender suffer.",
+        "source_ids": [
+          "kirkus-review",
+          "neurophilosophy-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Acknowledge effort while remembering that the capacity and opportunity to exert it were not distributed or self-created equally.",
+        "source_ids": [
+          "kirkus-review",
+          "publisher-preview"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Do not confuse evidence that behaviour is caused with proof that intention, voluntary control, and responsibility are meaningless; that step needs its own argument.",
+        "source_ids": [
+          "ndpr-review",
+          "new-yorker-review",
+          "contemporary-debate-review"
+        ],
+        "basis": "inference"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "Determined connects laboratory and developmental science to questions normally left abstract: punishment, inequality, gratitude, hatred, and merit. It forces defenders of responsibility to specify what control means in a caused organism, while forcing biological explanation to confront due process and moral practice. The disagreement it exposes is as important as the conclusion it advocates.",
+      "source_ids": [
+        "ndpr-review",
+        "new-yorker-review",
+        "neurophilosophy-review",
+        "contemporary-debate-review"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Robert Sapolsky is a Stanford neuroendocrinologist and primatologist known for stress research and broad behavioural synthesis. Determined makes explicit the conclusion already present in Behave: no isolated moment of choice escapes the biology and environment that built it. He also wants that conclusion to reduce hatred, retribution, shame, and entitlement. His relevant science is deep; his philosophy, physics, law, and distributive ethics range beyond his primary research authority.",
+      "source_ids": [
+        "publisher-preview",
+        "kirkus-review",
+        "ndpr-review"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Integrates causes across seconds, lifetimes, social context, and evolutionary history instead of reducing behaviour to genes or one brain region.",
+        "Separates chaos, emergence, randomness, and change with enough scientific detail to block simplistic loopholes.",
+        "Uses extensive notes, clinical and social evidence, and explicit counterarguments.",
+        "Acknowledges that causal intervention remains effective and that the author struggles to live the view consistently."
+      ],
+      "weaknesses": [
+        "Pervasive causation does not alone refute compatibilist accounts based on rational and voluntary control.",
+        "The book offers no stable, neutral definitions of free will, determinism, agency, or moral responsibility before claiming science has settled them.",
+        "It gives limited engagement to sophisticated libertarian accounts and sometimes treats indeterminism as mere randomness.",
+        "Claims about deserved treatment and social organisation add moral premises not supplied by neuroscience.",
+        "Historical reductions in blame for specific impairments do not prove that all ordinary caused action is equally exculpated."
+      ],
+      "source_ids": [
+        "publisher-preview",
+        "ndpr-review",
+        "new-yorker-review",
+        "nybooks-review",
+        "sapolsky-reply",
+        "contemporary-debate-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Reviewers broadly agree that the book is learned, accessible, funny, humane, and ambitious. The central division is not mainly over whether behaviour has biological and environmental causes, but whether that fact abolishes meaningful agency, responsibility, and desert. General readers often embrace the compassion and scientific tour; philosophers and historians of science challenge its definitions, inference, and treatment of ordinary moral distinctions.",
+      "praise": [
+        "Professional reviews praise the clarity and scope of the neuroscience, development, chaos, complexity, quantum, justice, and inequality synthesis.",
+        "Readers find Sapolsky's humour, examples, and moral candour unusually engaging for a technical and emotionally difficult topic.",
+        "Even critical philosophy reviews recognise the value of filling an old deterministic position with detailed modern empirical material."
+      ],
+      "criticism": [
+        "Compatibilist critics say the book defines freedom as an impossible causeless cause and never addresses serious caused-control accounts.",
+        "Other critics argue that science cannot by itself establish moral conclusions about blame, praise, punishment, or distribution.",
+        "The medical-quarantine analogy may understate prediction error, state abuse, procedural rights, and distinctions among intention, coercion, impairment, and accident.",
+        "Some readers find the work repetitive, overlong, philosophically dismissive, and tonally uneven despite enjoying the science."
+      ],
+      "source_ids": [
+        "kirkus-review",
+        "ndpr-review",
+        "new-yorker-review",
+        "guardian-review",
+        "neurophilosophy-review",
+        "nybooks-review",
+        "sapolsky-reply",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers who want a biologically rich challenge to intuitive self-authorship and merit",
+        "People interested in moral luck, neuroscience, development, punishment, rehabilitation, and inequality",
+        "Readers prepared to compare hard incompatibilism with compatibilist and agency-based accounts"
+      ],
+      "not_for": [
+        "Readers seeking a neutral introduction to the philosophy of free will",
+        "People wanting a short, tightly edited argument with minimal technical science or humour",
+        "Policy readers who need a fully specified justice system, distribution model, or empirical programme for reform",
+        "Anyone likely to translate determinism into passivity, excuse-making, or the erasure of present capacities and victim needs"
+      ],
+      "topics": [
+        "Free will",
+        "Determinism",
+        "Neuroscience",
+        "Development",
+        "Genes and environment",
+        "Intent",
+        "Willpower",
+        "Chaos",
+        "Emergence",
+        "Quantum indeterminacy",
+        "Moral responsibility",
+        "Punishment",
+        "Merit",
+        "Poverty",
+        "Behaviour change"
+      ],
+      "source_ids": [
+        "publisher-preview",
+        "kirkus-review",
+        "ndpr-review",
+        "contemporary-debate-review"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A neutral survey of all major free-will positions",
+        "A proof that every future human action is practically predictable",
+        "A claim that intervention, deliberation, effort, or learning has no effect",
+        "A complete legal code or distributive theory for a society without desert"
+      ],
+      "omissions": [
+        "Sustained treatment of compatibilist accounts of reasons-responsiveness, ownership, sourcehood, and voluntary control",
+        "Full engagement with event-causal, agent-causal, and other sophisticated libertarian positions",
+        "Detailed safeguards for risk assessment, preventive restraint, due process, victims, and institutional abuse",
+        "A worked distinction among causal responsibility, answerability, trust, repair, role responsibility, and basic moral desert"
+      ],
+      "missing_or_weak": [
+        "A clear argument connecting each empirical layer to the particular concept of freedom ordinary moral practice needs",
+        "Evidence that widespread rejection of free will would reliably create the more compassionate society envisioned",
+        "A complete account of how recognition, gratitude, apology, commitment, and interpersonal boundaries should work without desert",
+        "A policy model for incentives and allocation that avoids both moralised inequality and counterproductive fatalism"
+      ],
+      "dated_or_contested": [
+        "The causal science will evolve, especially claims about specific decision experiments, willpower, development, and behavioural effects of free-will belief.",
+        "Whether emergence can support real agency and whether physical determinism is true remain disputed across neuroscience, philosophy, and physics.",
+        "The conclusion that causal explanation removes moral responsibility is a contested philosophical inference, not a scientific consensus."
+      ],
+      "source_ids": [
+        "ndpr-review",
+        "new-yorker-review",
+        "neurophilosophy-review",
+        "nybooks-review",
+        "contemporary-debate-review"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you want Sapolsky's interdisciplinary causal tour, humour, scientific examples, moral struggle, and extended attempt to answer every intuitive escape route.",
+      "summary_is_enough_if": "The fifteen-minute treatment is enough if you need the whole argument, its practical implications, and the decisive philosophical objections before choosing a side or a follow-on philosophy text.",
+      "skip_if": "Skip it if you want balanced philosophy first, already reject basic desert and do not need the biology, or need concise evidence about one practical reform rather than a total worldview.",
+      "format_advice": "Print or ebook is best for diagrams, notes, primers, and revisiting distinctions. Sapolsky's conversational voice suits audio, but the long technical passages and argumentative turns reward slower playback and pausing.",
+      "source_ids": [
+        "publisher-preview",
+        "guardian-review",
+        "ndpr-review",
+        "goodreads-reception"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "How does the final neural event depend on causes operating at longer timescales?",
+      "Why do chaos, emergence, and quantum randomness fail to give Sapolsky the control he calls free will?",
+      "How can change remain real in a deterministic account?",
+      "Which functions of responsibility survive after retribution and basic desert are removed?",
+      "What is the strongest compatibilist objection to the book?"
+    ],
+    "application_prompts": [
+      "Take one behaviour you praised or condemned. List immediate, developmental, social, and institutional causes before revising the response.",
+      "For one rule or punishment, separate protection, deterrence, repair, rehabilitation, expression, and deserved suffering.",
+      "Identify a success attributed to grit. Which conditions made the capacity and opportunity for effort possible?",
+      "Design one accountability response that preserves safety, truth, victim needs, and change without humiliation or vengeance."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "The first adversarial pass separated the cumulative causal science from Sapolsky's definitions and moral conclusions, gave compatibilism its strongest form, distinguished unpredictability and randomness from agency, preserved behaviour change and practical accountability, and added due-process, prediction, victim, and institutional-power limits to the quarantine analogy."
   }
 }

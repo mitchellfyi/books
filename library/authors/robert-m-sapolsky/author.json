@@ -4,22 +4,165 @@
   "id": "robert-m-sapolsky",
   "type": "author",
   "name": "Robert M. Sapolsky",
-  "alternate_names": [],
+  "alternate_names": ["Robert Sapolsky"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American neuroendocrinologist, primatologist, and Stanford professor who explains human behaviour through interacting biological, developmental, social, and evolutionary causes.",
+      "source_ids": ["stanford-profile", "macarthur-profile", "stanford-report"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Sapolsky trained in biological anthropology and neuroendocrinology, then combined laboratory research on stress and neuron damage with long-term field observation of wild baboons in Kenya. He became the John A. and Cynthia Fry Gunn Professor at Stanford, with appointments in biology, neurology and neurological sciences, and neurosurgery. A 1987 MacArthur Fellowship recognised his early work. Alongside research and teaching, he has written essays and large popular-science syntheses about stress, primates, human behaviour, and free will.",
+      "source_ids": ["stanford-profile", "macarthur-profile", "stanford-report"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His work moves between molecular mechanisms, brains, whole organisms, social hierarchy, and evolutionary history. Stanford records his current scholarly interests as neuron death, stress, and gene therapy; his public work broadens that causal style to psychiatric disorders, aggression, cooperation, morality, and responsibility.",
+      "source_ids": ["stanford-profile", "stanford-report", "publisher-preview"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Sapolsky has deep authority in neuroendocrinology, stress biology, neuroscience, and animal behaviour, plus unusual experience synthesising biology across timescales. He is not a professional philosopher, physicist, or legal scholar. Determined is strongest when tracing biological and environmental causes and most contestable when it treats those findings as settling definitions of freedom, agency, desert, and justice.",
+      "source_ids": ["stanford-profile", "macarthur-profile", "ndpr-review"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Sapolsky's governing perspective is anti-reductionist in scale but deterministic in conclusion: genes, brains, bodies, relationships, culture, and history form one continuous causal system. This supports compassion for luck and constraint, while risking a slide from 'behaviour has causes' to one disputed philosophical account of agency. His irreverent humour makes difficult science accessible but can weaken precision or feel flippant beside suffering and punishment.",
+      "source_ids": ["publisher-preview", "ndpr-review", "guardian-review", "new-yorker-review"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Why Zebras Don't Get Ulcers",
+      "year": 1994,
+      "kind": "Book",
+      "relationship": "Popular explanation of stress physiology, chronic stress, disease, and coping.",
+      "source_ids": ["macarthur-profile", "publisher-preview"]
+    },
+    {
+      "title": "The Trouble with Testosterone",
+      "year": 1997,
+      "kind": "Book",
+      "relationship": "Essays on biology, behaviour, and the danger of simple hormonal explanations.",
+      "source_ids": ["macarthur-profile", "publisher-preview"]
+    },
+    {
+      "title": "A Primate's Memoir",
+      "year": 2001,
+      "kind": "Book",
+      "relationship": "Field memoir about baboons, stress, hierarchy, research, and life in East Africa.",
+      "source_ids": ["publisher-preview", "stanford-report"]
+    },
+    {
+      "title": "Behave",
+      "year": 2017,
+      "kind": "Book",
+      "relationship": "Large causal account of human behaviour across seconds, lifetimes, cultures, and evolution; the scientific foundation that Determined turns into a case against free will.",
+      "source_ids": ["publisher-preview", "stanford-report"]
+    },
+    {
+      "title": "Determined",
+      "year": 2023,
+      "kind": "Book",
+      "relationship": "Argues that the causal biology of behaviour leaves no room for desert-based free will and develops the social consequences.",
+      "source_ids": ["publisher-preview", "ndpr-review"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "stanford-profile",
+        "title": "Robert Sapolsky",
+        "author_or_publisher": "Stanford Medicine",
+        "url": "https://med.stanford.edu/profiles/robert-sapolsky?tab=bio",
+        "type": "employer",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current Stanford title, departmental appointments, memberships, research interests, and courses.",
+        "limitations": "Authoritative employer record but not an independent assessment of work outside Sapolsky's research specialties."
+      },
+      {
+        "id": "macarthur-profile",
+        "title": "Robert Morris Sapolsky — MacArthur Fellow, Class of 1987",
+        "author_or_publisher": "MacArthur Foundation",
+        "url": "https://www.macfound.org/fellows/class-of-1987/robert-morris-sapolsky",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Neuroendocrinology field, stress and brain research, fellowship, Stanford role, and selected publications.",
+        "limitations": "Concise fellowship profile, updated with selected later works rather than a full career history."
+      },
+      {
+        "id": "stanford-report",
+        "title": "Stanford biologist Robert Sapolsky takes on human behavior, free will",
+        "author_or_publisher": "Stanford Report",
+        "url": "https://news.stanford.edu/stories/2017/05/biologist-robert-sapolsky-takes-human-behavior-free-will",
+        "type": "employer",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Baboons in Kenya, neuroendocrinology, stress research, MacArthur Fellowship, Behave, and Sapolsky's earlier free-will and punishment argument.",
+        "limitations": "University profile written to promote a faculty book and career."
+      },
+      {
+        "id": "publisher-preview",
+        "title": "Determined: The Science of Life Without Free Will — sample",
+        "author_or_publisher": "Robert M. Sapolsky; Vintage",
+        "url": "https://cdn.penguin.co.uk/dam-assets/books/9781529920062/9781529920062-sample.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Author biography, previous works, book purpose, contents, opening causal framework, and stated position.",
+        "limitations": "Fifty-three-page publisher sample rather than the complete 500-page work."
+      },
+      {
+        "id": "ndpr-review",
+        "title": "Determined: A Science of Life Without Free Will",
+        "author_or_publisher": "John Martin Fischer; Notre Dame Philosophical Reviews",
+        "url": "https://ndpr.nd.edu/reviews/determined-a-science-of-life-without-free-will/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Philosophical assessment of Sapolsky's definition, determinism, compatibilism, moral responsibility, and the gap between causal explanation and exculpation.",
+        "limitations": "A strongly critical review by a prominent compatibilist philosopher; useful for the missing argument but not neutral between positions."
+      },
+      {
+        "id": "guardian-review",
+        "title": "Determined: Life Without Free Will — review",
+        "author_or_publisher": "Oliver Burkeman; The Guardian",
+        "url": "https://www.theguardian.com/books/2023/oct/24/determined-life-without-free-will-by-robert-sapolsky-review-the-hard-science-of-decisions",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent account of argument, causal-timescale strategy, implications, knowledge density, and irreverent delivery.",
+        "limitations": "Newspaper review rather than a technical audit."
+      },
+      {
+        "id": "new-yorker-review",
+        "title": "How Can Determinists Believe in Free Will?",
+        "author_or_publisher": "Nikhil Krishnan; The New Yorker",
+        "url": "https://www.newyorker.com/magazine/2023/11/13/determined-a-science-without-free-will-robert-sapolsky-book-review",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Critical examination of whether Sapolsky's stipulated free-will concept matches ordinary agency, intention, praise, blame, and moral practice.",
+        "limitations": "Philosophical magazine essay, not a review of each scientific citation."
+      }
+    ],
+    "citations": {
+      "/name": ["stanford-profile", "macarthur-profile", "publisher-preview"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Current role and research specialty are grounded in Stanford and MacArthur records; the account separates Sapolsky's scientific authority from the philosophical, legal, and normative claims reviewers dispute.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

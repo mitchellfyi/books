@@ -275,6 +275,55 @@
       "label": "Political psychology",
       "description": "How cognition, emotion, identity, personality, and groups shape political belief and behaviour.",
       "aliases": []
+    },
+    {
+      "id": "biology",
+      "kind": "topic",
+      "label": "Biology",
+      "description": "The scientific study of living organisms, their mechanisms, development, evolution, and environments.",
+      "aliases": []
+    },
+    {
+      "id": "criminal-justice",
+      "kind": "topic",
+      "label": "Criminal justice",
+      "description": "Institutions and principles governing crime prevention, policing, adjudication, punishment, rehabilitation, and public safety.",
+      "aliases": []
+    },
+    {
+      "id": "determinism",
+      "kind": "topic",
+      "label": "Determinism",
+      "description": "The view that events and actions arise from prior conditions and causal processes rather than uncaused choice.",
+      "aliases": []
+    },
+    {
+      "id": "free-will",
+      "kind": "topic",
+      "label": "Free will",
+      "description": "Questions about whether and in what sense people control, author, or could do otherwise in their actions.",
+      "aliases": []
+    },
+    {
+      "id": "inequality",
+      "kind": "topic",
+      "label": "Inequality",
+      "description": "Unequal distribution of resources, opportunities, capabilities, status, power, risks, or outcomes.",
+      "aliases": []
+    },
+    {
+      "id": "moral-responsibility",
+      "kind": "topic",
+      "label": "Moral responsibility",
+      "description": "The conditions under which a person may be answerable, blameworthy, praiseworthy, or accountable for action.",
+      "aliases": []
+    },
+    {
+      "id": "neuroscience",
+      "kind": "topic",
+      "label": "Neuroscience",
+      "description": "The scientific study of nervous systems, brains, cognition, emotion, and behaviour.",
+      "aliases": []
     }
   ]
 }
