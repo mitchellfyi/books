@@ -4,22 +4,96 @@
   "id": "richard-thaler",
   "type": "author",
   "name": "Richard Thaler",
-  "alternate_names": [],
+  "alternate_names": ["Richard H. Thaler"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "Chicago economist and 2017 Nobel laureate who spent a career documenting how real humans differ from textbook rational agents — and then built the policy toolkit that exploits the difference kindly.",
+      "source_ids": ["wikipedia-thaler"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in 1945, Thaler built behavioural economics from inside a hostile discipline: his 'Anomalies' columns catalogued the ways markets and people defied rational-choice theory, his collaborations with Kahneman and Tversky wired psychology into economics, and his mental-accounting and self-control work supplied the field's foundations. Long at the University of Chicago's Booth School — the temple of the rationality he heckled — he won the 2017 Nobel Memorial Prize for his contributions to behavioural economics. Nudge (2008, with Cass Sunstein) took the programme into policy; Misbehaving (2015) told the field's history as memoir.",
+      "source_ids": ["wikipedia-thaler"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His method is the anomaly: find behaviour that standard theory forbids — the cab driver quitting early on rainy days, the pension never joined — document it, and build the better model around it. Nudge is that method inverted into design: if biases are predictable, architecture can compensate.",
+      "source_ids": ["wikipedia-thaler"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Behavioural economics' co-founder, with the field's top honours and decades of peer-reviewed foundations; also a practitioner — the Save More Tomorrow pension design is his, deployed at scale.",
+      "source_ids": ["wikipedia-thaler"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Thaler writes as the genial insurgent: jokes first, models second, always on the side of Humans against Econs. The documented limits attach to the programme more than the man — the nudge label's drift, the paternalism objections, and a 2020s effectiveness literature that contests how much the average nudge actually moves.",
+      "source_ids": ["wikipedia-thaler"],
+      "basis": "synthesis"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Nudge",
+      "year": 2008,
+      "kind": "Book",
+      "relationship": "The policy application, with Sunstein; subject of this profile's book entry.",
+      "source_ids": ["wikipedia-thaler"]
+    },
+    {
+      "title": "Misbehaving: The Making of Behavioral Economics",
+      "year": 2015,
+      "kind": "Book",
+      "relationship": "The field's history told as his memoir.",
+      "source_ids": ["wikipedia-thaler"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-thaler",
+        "title": "Richard Thaler",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Richard_Thaler",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Birth year, career, the Kahneman-Tversky collaboration, Chicago Booth chair, the 2017 Nobel, and major works.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary."
+      },
+      {
+        "id": "nobel-2017-thaler",
+        "title": "The Sveriges Riksbank Prize in Economic Sciences 2017",
+        "author_or_publisher": "The Nobel Prize",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2017/summary/",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "The prize for his contributions to behavioural economics.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Prize record."
+      },
+      {
+        "id": "booth-thaler",
+        "title": "Richard H. Thaler (faculty page)",
+        "author_or_publisher": "University of Chicago Booth School of Business",
+        "url": "https://www.chicagobooth.edu/faculty/directory/t/richard-h-thaler",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "The professorship and research-field roster.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Institutional profile."
+      }
+    ],
+    "citations": {
+      "/name": ["wikipedia-thaler"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

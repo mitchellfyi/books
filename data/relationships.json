@@ -921,6 +921,30 @@
         "library/books/meditations-aurelius/book.json"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "nudge-written-by-richard-thaler",
+      "source_id": "nudge-richard-thaler-cass-sunstein",
+      "target_id": "richard-thaler",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/nudge-richard-thaler-cass-sunstein/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nudge-written-by-cass-sunstein",
+      "source_id": "nudge-richard-thaler-cass-sunstein",
+      "target_id": "cass-sunstein",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Co-authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/nudge-richard-thaler-cass-sunstein/book.json"
+      ],
+      "confidence": "high"
     }
   ]
 }

@@ -4,138 +4,449 @@
   "book_id": "nudge-richard-thaler-cass-sunstein",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "high",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "Two concepts — choice architecture and libertarian paternalism — plus a catalogue of applications: the frame compresses cleanly, and the post-2008 story (nudge units, the Nobel, the effectiveness fight) is essential context a summary can add. The full book's application chapters read as policy case lists."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Nobel economist Richard Thaler and legal scholar Cass Sunstein argue that since every choice comes wrapped in some design — a menu order, a form, a default — the designers should nudge humans toward their own goals while leaving every option open: libertarian paternalism, the book that put a name on the checkout flow.",
+    "verdict": "The most policy-influential behavioural book ever written and still the best introduction to defaults and choice design — read it with the 2020s ledger attached, because the average-nudge-effect debate and the manipulation critiques are now half the story.",
+    "source_ids": [
+      "wikipedia-nudge",
+      "mertens-meta-2022",
+      "maier-reply-2022"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Real people are Humans, not Econs: they procrastinate, anchor, follow the herd, and keep defaults. Since choices always arrive through some architecture — a cafeteria line, an enrolment form, a ballot layout — neutrality is impossible, and the only question is whether the inevitable steering helps or harms the chooser. The authors' answer is libertarian paternalism: design the default toward welfare (automatic pension enrolment, Save More Tomorrow's pre-committed raises, sensible organ-donation regimes) while keeping opt-out cheap and every option open. The Final Edition adds the dark twin, sludge: friction engineered against the chooser — subscription mazes, rebate paperwork — and the case for cleaning it out.",
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "There is no neutral choice design — someone always sets the default, the order, and the framing — so refusing to steer is not an option that exists; given that, architects should steer toward choosers' own reflective goals while preserving freedom to opt out, because helping Humans where they predictably err is not coercion but the responsible use of an influence you cannot decline to have.",
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "humans-not-econs",
+      "title": "Humans, not Econs",
+      "claim": "Policy and products are built for Econs — perfectly rational, self-controlled calculators — while their users are Humans, whose errors are systematic and therefore designable-for.",
+      "explanation": "The book's foundation imports the Kahneman-Tversky catalogue: anchoring, availability, loss aversion, status-quo bias, unrealistic optimism, herd effects. The point is not that people are stupid but that their departures from the textbook are predictable — and anything predictable can be planned for, exploited, or compensated.",
+      "representative_example": "Pension mathematics that reward joining from day one, defeated for decades by a form nobody returned.",
+      "why_it_matters": "It reframes 'people should just choose better' as design negligence: if the error is predictable, the architecture that ignores it is the failure.",
+      "caveat": "The bias catalogue is the part of behavioural science the replication era later thinned; the marquee biases (defaults, loss aversion) held up far better than the exotic ones.",
+      "source_ids": [
+        "wikipedia-nudge",
+        "maier-reply-2022"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "choice-architecture",
+      "title": "There is no neutral design",
+      "claim": "Every presentation of options steers — order, defaults, framing, friction — so the choice architect's influence is inevitable; only its direction is optional.",
+      "explanation": "The founding parable is a school cafeteria: dessert first or salad first changes what children eat, and some order must be chosen. From there the book generalises to forms, menus, ballots, and stores: the designer cannot abstain. 'Neutral' layouts are just architectures nobody thought about, steering at random or toward whoever built them.",
+      "representative_example": "The cafeteria director who realises she cannot not influence the children — she can only choose the direction.",
+      "why_it_matters": "It transfers moral responsibility to designers everywhere: once you see that defaults decide outcomes, every form you ship is a policy.",
+      "caveat": "Critics note the move from 'influence is inevitable' to 'therefore steer toward welfare' smuggles in the hard question — whose account of the chooser's welfare governs.",
+      "source_ids": [
+        "wikipedia-nudge",
+        "kolbert-newyorker"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "libertarian-paternalism",
+      "title": "Libertarian paternalism: steer, but keep the exits open",
+      "claim": "The book's political invention: influence choices toward the chooser's own good (paternalism) while preserving cheap, easy opt-outs (libertarian) — a third way between mandates and neglect.",
+      "explanation": "A nudge must be cheap to avoid and must not block options: automatic enrolment with one-click opt-out qualifies; bans, taxes, and buried opt-outs do not. The design goal is what choosers would pick for themselves on reflection — helping the planner in you beat the doer, without conscripting anyone.",
+      "representative_example": "Automatic pension enrolment: participation jumps dramatically when joining is the default and leaving stays one form away.",
+      "why_it_matters": "It gave governments a vocabulary and a licence: dozens of nudge units now exist because this oxymoron made steering respectable.",
+      "caveat": "The documented objection from both flanks: if choosers can't recognise their interests, why stop at a nudge — and if they can, who authorised the steering? The manipulation worry sharpens when nudges work best unnoticed.",
+      "source_ids": [
+        "wikipedia-nudge",
+        "kolbert-newyorker"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "defaults-rule",
+      "title": "Defaults are the strongest force in choice design",
+      "claim": "Whatever requires no action wins: defaults harvest inertia, and setting them well is the highest-leverage move in the book — its best-replicated finding.",
+      "explanation": "Automatic enrolment transformed retirement saving; Save More Tomorrow — Thaler's design committing workers to save from future raises — turned loss aversion and procrastination into allies; organ-donation regimes differ enormously with the default even when everyone remains free to choose. Where the wider nudge literature wobbled later, default effects remained the robust core.",
+      "representative_example": "Save More Tomorrow: workers who would never cut today's paycheck happily pledge tomorrow's raise, and savings rates multiply.",
+      "why_it_matters": "One decision — what happens if the chooser does nothing — quietly allocates pensions, organs, subscriptions, and privacy across whole populations.",
+      "caveat": "Defaults' power is exactly why the manipulation critique bites: the same lever serves the subscription trap, and the chooser rarely notices either way.",
+      "source_ids": [
+        "wikipedia-nudge",
+        "mertens-meta-2022"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "sludge",
+      "title": "Sludge: the dark twin",
+      "claim": "The Final Edition names the inversion: friction engineered against the chooser — paperwork, mazes, retention flows — and argues that clearing sludge is as important as adding nudges.",
+      "explanation": "Everything the book teaches about easing good choices, commerce and bureaucracy had already mastered in reverse: rebates designed not to be redeemed, cancellations routed through call centres, benefits gated behind forms that defeat the eligible. Sludge audits — hunting hostile friction — became the programme's most defensible export.",
+      "representative_example": "The subscription that takes one click to start and one phone call, on business hours, to escape.",
+      "why_it_matters": "It hands readers the everyday diagnostic: whenever effort is asymmetric between joining and leaving, someone designed the asymmetry.",
+      "caveat": "Naming sludge concedes the critics' premise — the same architecture serves predators — which sharpens rather than settles who audits the architects.",
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "effectiveness-ledger",
+      "title": "The effectiveness fight: what the 2020s did to the evidence",
+      "claim": "The book's empirical foundation is now a live dispute: a field-wide meta-analysis found small-to-medium average effects; the published rebuttal found no average effect after correcting publication bias — with defaults surviving best.",
+      "explanation": "Fourteen years after publication, the reckoning arrived in the field's flagship journal: over 200 studies averaged to a respectable effect, then the reply showed the corpus riddled with publication bias, correcting the average toward zero. A UK parliamentary review had already found 'precious little' evidence for headline impact; the heuristics school's champion documented the label's drift — almost everything renamed a nudge — and pressed the alternative of teaching decision skills rather than steering. The honest synthesis: specific nudges in specific domains, above all defaults, are real and large; the average nudge, as advertised, may be close to nothing.",
+      "representative_example": "The same journal, the same year: 'the effectiveness of nudging' followed by 'no evidence for nudging after adjusting for publication bias'.",
+      "why_it_matters": "It converts the book from settled science into a live case study in how applied behavioural claims get audited — and readers deploying nudges need the domain-level truth, not the average.",
+      "caveat": "Bias-correction methods are themselves debated, and nobody in the fight disputes the flagship results the book actually leans on.",
+      "source_ids": [
+        "mertens-meta-2022",
+        "maier-reply-2022",
+        "wikipedia-nudge",
+        "gigerenzer-critique"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Humans and Econs",
+      "purpose": "Establish the chooser.",
+      "summary": "The bias catalogue, temptation and mindlessness, herd effects — why real choosers need architecture that expects them.",
+      "idea_ids": [
+        "humans-not-econs"
+      ],
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Choice Architecture and Libertarian Paternalism",
+      "purpose": "Build the toolkit and its licence.",
+      "summary": "No neutral design; defaults, feedback, error-expectation, and incentive mapping; the third-way politics of steering with exits open.",
+      "idea_ids": [
+        "choice-architecture",
+        "libertarian-paternalism"
+      ],
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Money, Health, Freedom",
+      "purpose": "Apply it.",
+      "summary": "Save More Tomorrow, mortgage and credit design, Medicare choice, organ donation, environmental defaults — the policy case files.",
+      "idea_ids": [
+        "defaults-rule"
+      ],
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Objections and the Final Edition",
+      "purpose": "Answer critics, add sludge.",
+      "summary": "The slippery-slope and manipulation objections answered; sludge and smart disclosure added; the programme's post-2008 institutional life.",
+      "idea_ids": [
+        "sludge",
+        "effectiveness-ledger"
+      ],
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Framework first, then domain-by-domain applications; the Final Edition rewrites examples and adds sludge.",
+    "voice": "Thaler's jokes over Sunstein's law-review order: genial, punny, occasionally wonkish.",
+    "pace": "Quick through the framework, list-like through the policy middle — the standing reader complaint.",
+    "evidence_style": "Named studies and field results narrated without effect sizes; the marquee cases (auto-enrolment) are the best-evidenced things in it.",
+    "example_style": "Cafeterias, pension forms, urinal flies, Medicare menus — the domestic and the bureaucratic.",
+    "repetition": "Moderate; the framework is restated per domain.",
+    "prerequisites": "None; it popularises the Kahneman-Tversky base as it goes.",
+    "source_ids": [
+      "wikipedia-nudge",
+      "goodreads-nudge"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 0.0,
-      "confidence": "low",
-      "summary": "TODO: give the content-only verdict behind the score.",
+      "score": 6.2,
+      "confidence": "medium",
+      "summary": "Worthwhile: the most consequential applied-behavioural book ever published, whose core exports — defaults decide, no design is neutral, sludge is a crime scene — remain permanently useful, docked because its bias catalogue and average-effect claims sit in a documented modern dispute, its politics never answers the manipulation objection cleanly, and its policy middle reads as case lists.",
       "dimensions": [
-        { "id": "explanatory-power", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "evidence-and-reasoning", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "insight-value", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "practical-utility", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "completeness-and-calibration", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] }
+        {
+          "id": "explanatory-power",
+          "score": 7.0,
+          "rationale": "Choice architecture genuinely explains why participation, compliance, and consumption swing on design details — and the no-neutral-design argument is airtight and permanently clarifying.",
+          "source_ids": [
+            "wikipedia-nudge"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.5,
+          "rationale": "The flagship results (auto-enrolment, Save More Tomorrow, default effects) are field-tested at scale; but the wider bias catalogue predates the replication reckoning, and the average effectiveness of nudging is now formally contested in the field's top journal.",
+          "source_ids": [
+            "mertens-meta-2022",
+            "maier-reply-2022"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.0,
+          "rationale": "Once you see that defaults decide and neutrality is impossible, every form, menu, and cancellation flow reads differently forever; sludge names something everyone had felt and nobody had a word for.",
+          "source_ids": [
+            "wikipedia-nudge",
+            "goodreads-nudge"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 6.5,
+          "rationale": "Directly usable by anyone who designs choices — defaults, framing, friction audits — and defensively by anyone who navigates them; the toolkit is concrete even where the average-effect debate rages.",
+          "source_ids": [
+            "wikipedia-nudge"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.0,
+          "rationale": "The manipulation and whose-welfare objections are acknowledged but never squarely won; effect sizes go unreported; and the book's confidence outran an evidence base the 2020s audited downward.",
+          "source_ids": [
+            "kolbert-newyorker",
+            "gigerenzer-critique",
+            "maier-reply-2022"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 5.5,
+          "rationale": "The framework arrives fast; the domain chapters re-run it as policy lists — the standing reader complaint across editions.",
+          "source_ids": [
+            "goodreads-nudge"
+          ]
+        }
       ],
       "basis": "inference"
     },
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "meaning": {
+      "text": "The book's durable claim is about responsibility, not psychology: since influence over choosers is unavoidable, 'leaving people alone' is a myth — every architect is already steering, and the only real choices are direction and honesty; its afterlife added the corollary the authors then named themselves — the same machinery, pointed the other way, is sludge, and most of it is.",
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Audit the default: in any system you run or use, ask what happens if the chooser does nothing — that is the real policy.",
+        "source_ids": [
+          "wikipedia-nudge"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Hunt sludge asymmetries: wherever leaving is engineered to be harder than joining, someone chose that.",
+        "source_ids": [
+          "wikipedia-nudge"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Deploy nudges by domain evidence, not by the brand: defaults are proven; the average nudge may be nothing.",
+        "source_ids": [
+          "maier-reply-2022",
+          "mertens-meta-2022"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "When you steer others, pass the book's own publicity test: would the nudge survive being explained to the people nudged?",
+        "source_ids": [
+          "wikipedia-nudge"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "Few books have converted into institutions faster: nudge units on several continents, default-enrolment pensions covering millions, a Nobel for Thaler in 2017, and a decade of product and policy vocabulary — followed by the instructive spectacle of the field auditing its own flagship claim in public.",
+      "source_ids": [
+        "wikipedia-nudge",
+        "mertens-meta-2022"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Thaler — behavioural economics' co-founder and eventual Nobel laureate — and Sunstein — the most-cited legal scholar of his era, who went on to run the US regulatory office and implement the programme — wrote the book to give the bias literature a constructive job: if humans err predictably, architecture should absorb the error, and freedom-preserving design was their offer to both political flanks.",
+      "source_ids": [
+        "wikipedia-nudge"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Flagship interventions field-tested at population scale (auto-enrolment, Save More Tomorrow).",
+        "Grounded in the authors' own peer-reviewed research programmes.",
+        "The Final Edition updates examples and concedes complications."
+      ],
+      "weaknesses": [
+        "The average-nudge-effect dispute is live in the field's top journal, with publication bias documented.",
+        "The 2008 bias catalogue predates the replication reckoning.",
+        "Effect sizes unreported; the strongest and weakest interventions read alike.",
+        "A parliamentary review found headline impact under-evidenced."
+      ],
+      "source_ids": [
+        "mertens-meta-2022",
+        "maier-reply-2022",
+        "wikipedia-nudge"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Instantly influential and permanently argued-with: adopted by governments on several continents and blessed by a Nobel, while attracting a three-front critique — political (who authorised the steering), conceptual (the label stretched to meaninglessness), and empirical (the average effect may vanish under bias correction) — none of which dislodged the defaults core.",
+      "praise": [
+        "The founding text of applied behavioural policy and its nudge units.",
+        "Thaler's 2017 Nobel ratified the underlying research programme.",
+        "Defaults and sludge entered the permanent vocabulary of design and government."
+      ],
+      "criticism": [
+        "Kolbert's documented question: why stop at a nudge — why not a push, or a shove?",
+        "Gigerenzer: almost everything that affects behaviour has been renamed a nudge; teach skills instead.",
+        "Neuberger review: 'precious little' evidence for headline impact.",
+        "Maier et al.: no average effect after publication-bias correction."
+      ],
+      "source_ids": [
+        "wikipedia-nudge",
+        "kolbert-newyorker",
+        "gigerenzer-critique",
+        "maier-reply-2022"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Anyone who designs forms, flows, menus, or policies",
+        "Thinking, Fast and Slow readers wanting the applied sequel",
+        "Public servants and product managers",
+        "Consumers who want to see the architecture around them"
+      ],
+      "not_for": [
+        "Readers wanting current, effect-size-quantified behavioural science",
+        "Those seeking the case against steering — pair it with its critics",
+        "Readers impatient with policy case lists"
+      ],
+      "topics": [
+        "Choice architecture and defaults",
+        "Behavioural economics",
+        "Public policy design",
+        "Consumer protection and sludge",
+        "Paternalism and freedom"
+      ],
+      "source_ids": [
+        "wikipedia-nudge",
+        "goodreads-nudge"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A neutral survey — it is the programme's manifesto",
+        "Current on the 2020s effectiveness literature (even the Final Edition predates the meta-analytic fight)",
+        "A manipulation manual — though its tools are the same ones sludge merchants use"
+      ],
+      "omissions": [
+        "Effect sizes and failure cases",
+        "A satisfying answer to whose-welfare-decides",
+        "The boosting alternative: teaching decision skills rather than steering"
+      ],
+      "missing_or_weak": [
+        "The average-effect dispute postdates and now shadows the book's general claims",
+        "The bias catalogue's weaker members thinned in replication"
+      ],
+      "dated_or_contested": [
+        "Nudging's average effectiveness is formally contested; defaults remain the robust core; the politics of steering remains unresolved by design."
+      ],
+      "source_ids": [
+        "maier-reply-2022",
+        "gigerenzer-critique",
+        "kolbert-newyorker"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book — ideally the Final Edition — if you design choices for others and want the toolkit with its case files, or if you want the founding document of a policy movement in the authors' own genial voice.",
+      "summary_is_enough_if": "Stop at a summary if you want the two concepts, the defaults evidence, sludge, and the effectiveness ledger: the frame transfers completely, and the summary can carry the 2020s audit the book predates.",
+      "skip_if": "Skip it if you already live in the choice-architecture world it created — the ideas are now ambient in product and policy — or if you need the quantified, post-replication version of the science.",
+      "format_advice": "The Final Edition supersedes the original (sludge alone justifies it); audio works, though the policy chapters list-read.",
+      "source_ids": [
+        "wikipedia-nudge",
+        "goodreads-nudge"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "Why is there no neutral choice design, and what follows from that?",
+      "What makes a nudge 'libertarian', and which famous interventions qualify?",
+      "What did the 2022 meta-analysis and its rebuttal each find, and what survives both?"
+    ],
+    "application_prompts": [
+      "Audit one default you set for others — a form, a meeting invite, a setting — and ask who it serves.",
+      "Find one sludge asymmetry in your subscriptions this week and time the exit against the entry.",
+      "Before your next nudge, run the publicity test: would it survive being explained to the nudged?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "",
+    "review_notes": "Built from the documented record with both sides of the peer-reviewed effectiveness dispute cited at the claims they affect, plus the named political and conceptual critiques.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
-      "notes": []
+      "notes": [
+        "Identity verified: Yale UP 2008 first edition and the 2021 Penguin Final Edition (9780143137009, 384pp); both authors recorded with new profiles and Sunstein catalogued.",
+        "The effectiveness dispute is carried with both PNAS papers cited — the meta-analysis and the publication-bias rebuttal — and the defaults-survive nuance stated.",
+        "The Kolbert, Gigerenzer, and Neuberger critiques are quoted only as documented.",
+        "Rating scored on content; the Nobel and institutional adoption live in importance/reception.",
+        "Narration reviewed against the product contract.",
+        "Pronunciation: Gigerenzer added to the dictionary (GHEE-guh-rent-ser); Thaler and Sunstein verified acceptable."
+      ]
     }
   }
 }

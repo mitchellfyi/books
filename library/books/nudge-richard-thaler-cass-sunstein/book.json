@@ -3,28 +3,162 @@
   "schema_version": 1,
   "id": "nudge-richard-thaler-cass-sunstein",
   "type": "book",
-  "title": "Nudge",
-  "alternate_titles": [],
-  "author_ids": ["richard-thaler"],
+  "title": "Nudge: Improving Decisions About Health, Wealth, and Happiness",
+  "alternate_titles": ["Nudge: The Final Edition"],
+  "author_ids": ["richard-thaler", "cass-sunstein"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2008",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US first edition",
+        "publisher": "Yale University Press",
+        "publication_date": "2008",
+        "isbn_10": "0300122233",
+        "isbn_13": "9780300122237",
+        "format": "Hardcover",
+        "pages": 293
+      },
+      {
+        "label": "The Final Edition",
+        "publisher": "Penguin Books",
+        "publication_date": "2021-08-03",
+        "isbn_10": "014313700X",
+        "isbn_13": "9780143137009",
+        "format": "Paperback",
+        "pages": 384
+      }
+    ],
+    "contents": [
+      "Humans versus Econs: the predictable biases real people bring to choices",
+      "Choice architecture: there is no neutral design — every menu, form, and default steers",
+      "Libertarian paternalism: steer toward welfare while preserving freedom to opt out",
+      "Defaults at work: automatic pension enrolment, Save More Tomorrow, organ-donation regimes",
+      "Money, health, and freedom: applications from mortgages and Medicare to the environment",
+      "The Final Edition's additions: sludge — friction engineered against the chooser — and smart disclosure"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "behavioural-economics",
+      "behavioural-science",
+      "decision-making",
+      "non-fiction",
+      "psychology"
+    ],
+    "audiences": [
+      "Policy designers and public servants",
+      "Product and UX people who set defaults for a living",
+      "Readers of Thinking, Fast and Slow wanting the applied sequel",
+      "Anyone auditing how their own choices get framed"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-nudge",
+        "title": "Nudge (book)",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nudge_(book)",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication history (Yale UP 2008; Final Edition 2021), the choice-architecture and libertarian-paternalism framework, the policy influence including nudge units, Thaler's 2017 Nobel, and the documented criticisms from Neuberger, Gigerenzer, and Kolbert.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; claims traced where used."
+      },
+      {
+        "id": "openlibrary-nudge-final",
+        "title": "Nudge: The Final Edition",
+        "author_or_publisher": "Open Library",
+        "url": "https://openlibrary.org/isbn/9780143137009",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Final Edition bibliographic record: Penguin Books, 2021-08-03, 384pp, ISBN 9780143137009.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Catalogue metadata."
+      },
+      {
+        "id": "mertens-meta-2022",
+        "title": "The effectiveness of nudging: A meta-analysis of choice architecture interventions across behavioral domains",
+        "author_or_publisher": "Mertens et al., PNAS",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2107346118",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The field-wide meta-analysis of over 200 choice-architecture studies reporting a small-to-medium average effect — the strongest quantitative case that nudging works on average.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Averages across heterogeneous interventions; contested by the publication-bias reply."
+      },
+      {
+        "id": "maier-reply-2022",
+        "title": "No evidence for nudging after adjusting for publication bias",
+        "author_or_publisher": "Maier et al., PNAS",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2200300119",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The documented rebuttal: after correcting the same corpus for publication bias, the average nudge effect is statistically indistinguishable from zero — the sharpest modern challenge to the book's empirical foundation, while domain-specific effects (notably defaults) remain more robust.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "A bias-correction result, itself methodologically debated; does not test any single intervention."
+      },
+      {
+        "id": "gigerenzer-critique",
+        "title": "On the supposed evidence for libertarian paternalism (as documented in the reception record)",
+        "author_or_publisher": "Gerd Gigerenzer",
+        "url": "https://en.wikipedia.org/wiki/Nudge_(book)",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The heuristics researcher's documented critique: the nudge label has stretched until 'almost everything that affects behavior has been renamed a nudge', and the programme underrates teaching people to decide (boosting) versus steering them.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Accessed via documented quotation; Gigerenzer is the rival school's champion."
+      },
+      {
+        "id": "kolbert-newyorker",
+        "title": "Review of Nudge (as documented in the reception record)",
+        "author_or_publisher": "Elizabeth Kolbert, The New Yorker",
+        "url": "https://en.wikipedia.org/wiki/Nudge_(book)",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The paternalism objection in its documented form: if choosers cannot recognise their own interests, 'why stop at a nudge? Why not offer a push, or perhaps even a shove?'",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation."
+      },
+      {
+        "id": "goodreads-nudge",
+        "title": "Nudge",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/3450744-nudge",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Large, durable reception: praised as the applied behavioural-economics primer; recurring complaints that the second half reads as policy-wonk case lists.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/title": ["wikipedia-nudge"],
+      "/alternate_titles": ["openlibrary-nudge-final"],
+      "/author_ids": ["wikipedia-nudge"],
+      "/bibliography/first_published": ["wikipedia-nudge"],
+      "/bibliography/original_language": ["wikipedia-nudge"],
+      "/bibliography/editions/0": ["wikipedia-nudge"],
+      "/bibliography/editions/1": ["openlibrary-nudge-final"],
+      "/bibliography/contents": ["wikipedia-nudge"],
+      "/discovery/tag_ids": ["wikipedia-nudge"],
+      "/discovery/audiences": ["wikipedia-nudge", "goodreads-nudge"],
+      "/discovery/formats_available": ["openlibrary-nudge-final", "goodreads-nudge"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the documented record, both sides of the peer-reviewed effectiveness debate, the named critiques, and reader reception.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

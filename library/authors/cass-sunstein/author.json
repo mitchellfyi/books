@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../schemas/author.schema.json",
+  "schema_version": 1,
+  "id": "cass-sunstein",
+  "type": "author",
+  "name": "Cass Sunstein",
+  "alternate_names": ["Cass R. Sunstein"],
+  "profile": {
+    "one_line": {
+      "text": "Harvard legal scholar, among the most-cited in his field, who ran the US regulatory office and turned Nudge's ideas into federal practice.",
+      "source_ids": ["wikipedia-sunstein"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in 1954, Sunstein built a career at Chicago and Harvard Law as one of the most-cited legal scholars alive, writing across constitutional law, regulation, and behavioural policy at a famously industrial pace. From 2009 to 2012 he ran the White House Office of Information and Regulatory Affairs, where cost-benefit review met the choice-architecture ideas he and Thaler had published the year before — making him the rare co-author who personally operationalised the book. His dozens of books extend the programme from conformity and group polarisation to noise (with Kahneman) and the ethics of influence.",
+      "source_ids": ["wikipedia-sunstein"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "He supplies the book's legal-policy half: where Thaler brings the anomalies, Sunstein brings the regulatory machinery — disclosure design, default-setting authority, and the administrative law of steering people lawfully.",
+      "source_ids": ["wikipedia-sunstein"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Constitutional and administrative law, regulation, and behavioural public policy, with government practice at the highest level to match the scholarship.",
+      "source_ids": ["wikipedia-sunstein"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Sunstein is the libertarian-paternalism idea's tireless defender, which makes him an interested judge of its critics; the paternalism and manipulation objections documented against the programme are, in large part, objections to positions he has spent two decades advancing.",
+      "source_ids": ["wikipedia-sunstein"],
+      "basis": "inference"
+    }
+  },
+  "selected_works": [
+    {
+      "title": "Nudge",
+      "year": 2008,
+      "kind": "Book",
+      "relationship": "With Thaler; subject of this profile's book entry.",
+      "source_ids": ["wikipedia-sunstein"]
+    },
+    {
+      "title": "Noise: A Flaw in Human Judgment",
+      "year": 2021,
+      "kind": "Book",
+      "relationship": "With Kahneman and Sibony: variability, not bias, as judgment's other failure.",
+      "source_ids": ["wikipedia-sunstein"]
+    }
+  ],
+  "research": {
+    "sources": [
+      {
+        "id": "wikipedia-sunstein",
+        "title": "Cass Sunstein",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cass_Sunstein",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Birth year, Chicago and Harvard career, most-cited standing, the OIRA administratorship 2009–2012, and the major works.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary."
+      },
+      {
+        "id": "harvard-sunstein",
+        "title": "Cass R. Sunstein (faculty page)",
+        "author_or_publisher": "Harvard Law School",
+        "url": "https://hls.harvard.edu/faculty/cass-r-sunstein/",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "The university professorship and programme leadership.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Institutional profile."
+      }
+    ],
+    "citations": {
+      "/name": ["wikipedia-sunstein"]
+    }
+  },
+  "workflow": {
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs.",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}

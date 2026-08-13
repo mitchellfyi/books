@@ -391,6 +391,18 @@
       "source_url": "https://en.wiktionary.org/wiki/Commodus",
       "verified_at": "2026-08-13",
       "notes": "Standard English /ˈkɒmədəs/ 'KOM-ə-dəs'. The unassisted phonemizer produced 'kə-MOD-əs' (kəmˈɒdəs) with wrong stress."
+    },
+    {
+      "term": "Gigerenzer",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ɡˈiːɡəɹˌɛntsə",
+        "en-us": "ɡˈiːɡəɹˌɛntsɚ"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Gerd_Gigerenzer",
+      "verified_at": "2026-08-13",
+      "notes": "German surname: hard g's and ts — 'GHEE-guh-rent-ser'. The unassisted phonemizer produced 'JY-jren-zə' (dʒˈaɪdʒɹɛnzə) with English j sounds, which is wrong."
     }
   ]
 }

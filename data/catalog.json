@@ -613,6 +613,16 @@
       "aliases": [
         "James Alan Robinson"
       ]
+    },
+    {
+      "id": "cass-sunstein",
+      "kind": "author",
+      "name": "Cass Sunstein",
+      "state": "catalogued",
+      "path": "library/authors/cass-sunstein/author.json",
+      "aliases": [
+        "Cass R. Sunstein"
+      ]
     }
   ]
 }
