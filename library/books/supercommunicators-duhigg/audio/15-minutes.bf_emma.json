@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "supercommunicators-duhigg",
+  "duration": "15-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.89,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/supercommunicators-duhigg/scripts/15-minutes.md",
+  "source_script_sha256": "d2d67868345c142e3402744606c6990e3aac6997ded18714e5c9281d283ddd8c",
+  "pronunciation_dictionary_sha256": "f9e3068c817289647c6c9f9d767fd88b709b0dda20c611d27153533f61d83ee8",
+  "pronunciation_terms": [
+    "Duhigg"
+  ],
+  "pronunciation_entries_sha256": "12715679b39340e17e2f1a9793e74990c523b381de996614ba27d93910e6da60",
+  "script_words": 2099,
+  "audio_seconds": 778.271,
+  "measured_wpm": 161.82,
+  "generated_at": "2026-08-13T13:02:35.277730+00:00"
+}

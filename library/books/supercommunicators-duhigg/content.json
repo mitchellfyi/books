@@ -64,8 +64,8 @@
       "source_ids": [
         "prh-supercommunicators",
         "author-site-supercommunicators",
-        "goodreads-supercommunicators",
-        "prh-teachers-guide"
+        "prh-teachers-guide",
+        "hyperscanning-review"
       ],
       "basis": "synthesis"
     },
@@ -209,7 +209,8 @@
     "source_ids": [
       "kirkus-supercommunicators",
       "goodreads-supercommunicators",
-      "prh-supercommunicators"
+      "prh-supercommunicators",
+      "hyperscanning-review"
     ],
     "basis": "synthesis"
   },
@@ -235,7 +236,7 @@
           "rationale": "Competent journalistic synthesis of real research and reported cases, but studies arrive without effect sizes or boundary conditions, and the neural-synchrony framing is more confident than its literature.",
           "source_ids": [
             "ssir-supercommunicators",
-            "goodreads-supercommunicators"
+            "hyperscanning-review"
           ]
         },
         {
@@ -345,7 +346,7 @@
       "source_ids": [
         "ssir-supercommunicators",
         "kirkus-supercommunicators",
-        "goodreads-supercommunicators"
+        "hyperscanning-review"
       ],
       "basis": "synthesis"
     },
@@ -354,7 +355,7 @@
       "praise": [
         "Kirkus: unpacks the essential tools for effective, positive conversations.",
         "NPR best-books selection and SABEW award finalist.",
-        "Widely adopted as a practical manual for managers and clinicians."
+        "Publisher records list an NPR best-books selection and a SABEW Best in Business Book Award finalist place."
       ],
       "criticism": [
         "SSIR: advice 'rather obvious'; ethics of persuasion unaddressed.",
@@ -364,7 +365,8 @@
       "source_ids": [
         "kirkus-supercommunicators",
         "ssir-supercommunicators",
-        "goodreads-supercommunicators"
+        "goodreads-supercommunicators",
+        "prh-supercommunicators"
       ],
       "basis": "synthesis"
     },
@@ -414,7 +416,8 @@
       ],
       "source_ids": [
         "ssir-supercommunicators",
-        "goodreads-supercommunicators"
+        "goodreads-supercommunicators",
+        "hyperscanning-review"
       ],
       "basis": "synthesis"
     },
@@ -443,12 +446,12 @@
     ]
   },
   "workflow": {
-    "status": "complete",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
     "review_notes": "Built from the publisher record, two independent professional reviews including a substantively critical one, a detailed content walkthrough, and reader reception; case-study details kept at the level the documentation supports.",
     "quality_review": {
-      "status": "passed",
-      "reviewed_at": "2026-08-13",
+      "status": "pending",
+      "reviewed_at": null,
       "checks": {
         "identity_and_metadata": true,
         "content_fidelity": true,
@@ -457,7 +460,7 @@
         "citation_entailment": true,
         "product_fit": true,
         "plain_language": true,
-        "audio_pronunciation": true
+        "audio_pronunciation": false
       },
       "notes": [
         "Identity verified: Random House hardcover 2024-02-20 (9780593243916, 320pp) and 2025 trade paperback (9780593243923).",
@@ -465,7 +468,7 @@
         "The SSIR critique (obviousness, ethics blind spot, scale limits) is carried into ideas, scope, and the rating's calibration dimension rather than quoted as decoration.",
         "The neural-synchrony caveat is applied wherever the matching principle is stated.",
         "Rating scored on content only; bestseller status, prizes, and endorsements excluded per rubric.",
-        "Pronunciation: Duhigg (DOO-hig) verified against the phonemizer; no dictionary entry needed."
+        "Pending corrected narration audio. Duhigg uses the existing shared pronunciation entry verified against the Library of Congress Say How guide."
       ]
     }
   }
