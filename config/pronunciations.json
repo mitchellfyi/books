@@ -353,6 +353,20 @@
       "source_url": "https://dictionary.cambridge.org/pronunciation/english/amygdala",
       "verified_at": "2026-08-13",
       "notes": "Cambridge: /əˈmɪɡ.dəl.ə/ (ə-MIG-də-lə). The unassisted phonemizer produced 'am-ig-DAH-lə' (ˌamɪɡdˈɑːlə) with wrong stress and vowel."
+    },
+    {
+      "term": "Acemoglu",
+      "aliases": [
+        "Acemoğlu"
+      ],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ˌɑːdʒəmˈəʊluː",
+        "en-us": "ˌɑːdʒəmˈoʊluː"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Daron_Acemoglu",
+      "verified_at": "2026-08-13",
+      "notes": "Turkish [aˈdʒemoːɫu] (Wikipedia lead IPA): the c is a j sound and the ğ is silent — 'ah-jem-OH-loo'. The unassisted phonemizer produced 'a-SEM-oh-gloo' (ɐsˈɛməɡlˌuː), which is wrong."
     }
   ]
 }

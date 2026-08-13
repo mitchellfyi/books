@@ -603,6 +603,16 @@
         "daron-acemoglu"
       ],
       "aliases": []
+    },
+    {
+      "id": "james-a-robinson",
+      "kind": "author",
+      "name": "James A. Robinson",
+      "state": "catalogued",
+      "path": "library/authors/james-a-robinson/author.json",
+      "aliases": [
+        "James Alan Robinson"
+      ]
     }
   ]
 }

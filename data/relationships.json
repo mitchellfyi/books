@@ -885,6 +885,30 @@
         "library/books/don-t-believe-everything-you-think-nguyen/book.json#vernezze-review"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "wnf-written-by-daron-acemoglu",
+      "source_id": "why-nations-fail-acemoglu",
+      "target_id": "daron-acemoglu",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/why-nations-fail-acemoglu/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "wnf-written-by-james-a-robinson",
+      "source_id": "why-nations-fail-acemoglu",
+      "target_id": "james-a-robinson",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Co-authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/why-nations-fail-acemoglu/book.json"
+      ],
+      "confidence": "high"
     }
   ]
 }

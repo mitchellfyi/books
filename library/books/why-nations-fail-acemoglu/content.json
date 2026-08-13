@@ -4,138 +4,458 @@
   "book_id": "why-nations-fail-acemoglu",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
+    "compression_fit": "high",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "One dichotomy, one mechanism, and a world tour of cases that repeat the argument: the frame compresses cleanly, and the famous objections are short. Fifteen minutes carries the theory, the best cases, the debate, and the Nobel coda; the full book adds case texture more than new argument."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Nobel laureates Daron Acemoglu and James Robinson answer development economics' biggest question — why some nations are rich and others poor — with one variable: institutions, inclusive ones that spread power and opportunity versus extractive ones built to siphon wealth to elites.",
+    "verdict": "The standard-bearer for the institutions answer to global inequality and the natural rebuttal to geographic determinism — a genuinely powerful lens whose documented critics (Gates, Sachs, Diamond) all press the same fair point: one dichotomy, however good, is not the whole story.",
+    "source_ids": [
+      "wikipedia-wnf",
+      "gates-review-wnf",
+      "nobel-2024-wnf"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Nogales is one city cut by a fence: the Arizona half is rich, safe, and schooled; the Sonora half is not — same geography, same climate, same ancestry, different institutions. From that controlled experiment the book builds its theory: nations prosper under inclusive institutions (secure property rights, broad political participation, level playing fields) and stagnate under extractive ones (power and wealth concentrated in elites). History's forks — the Black Death, the Glorious Revolution, colonisation — set countries on institutional paths that then self-reinforce: virtuous circles defend inclusion, vicious circles entrench extraction, and growth under extraction, from the Soviet Union to (the book predicts) China, eventually stalls because elites cannot permit the creative destruction that real innovation requires.",
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Prosperity is a political choice, not a geographic or cultural inheritance: inclusive political institutions sustain inclusive economic institutions, which reward innovation and effort; extractive institutions — however competently run — must ultimately block the creative destruction that threatens their elites, so poverty is not a puzzle about knowledge or resources but about who holds power and what they fear losing.",
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "nogales-experiment",
+      "title": "Nogales: the question as a controlled experiment",
+      "claim": "One city split by a border — identical geography, climate, culture, and ancestry, radically different prosperity — eliminates every explanation except the institutions each half lives under.",
+      "explanation": "The book opens with its cleanest natural experiment: Nogales, Arizona and Nogales, Sonora share everything the rival theories invoke, and diverge on income, health, schooling, and safety. Whatever explains the difference must be something that changes exactly at the fence — the rules.",
+      "representative_example": "The same families, split by the line, living different economic lives within sight of each other.",
+      "why_it_matters": "It sets the book's method: find the paired cases that hold everything constant except institutions.",
+      "caveat": "Critics note the borderline cases are the theory's best light; the harder cases — resource states, authoritarian growth — get more strained treatment.",
+      "source_ids": [
+        "wikipedia-wnf",
+        "sachs-critique-wnf"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "inclusive-extractive",
+      "title": "Inclusive versus extractive: the master dichotomy",
+      "claim": "Economic institutions that reward broad effort and political institutions that distribute power come as a locked pair — and so do their opposites, built to extract from the many for the few.",
+      "explanation": "Inclusive economics (secure property, open entry, enforceable contracts) survives only under inclusive politics, because concentrated power always rewrites rules in its own favour; extractive politics builds extractive economics — monopolies, forced labour, licences for cronies — because that is what power without constraint is for. The dichotomy absorbs history's villains and heroes into one axis.",
+      "representative_example": "Colonial powers building extractive machinery — mines, monocultures, forced labour — whose institutional skeletons still govern successor states.",
+      "why_it_matters": "It converts 'why are they poor?' from a question about deficits (capital, knowledge, culture) into a question about design: poor countries are usually poor on purpose — someone's purpose.",
+      "caveat": "The documented objections converge here: Gates finds the dichotomy applied too vaguely to carry so much; methodologists note the circularity risk when institutions are graded by the outcomes they are meant to explain.",
+      "source_ids": [
+        "wikipedia-wnf",
+        "gates-review-wnf",
+        "subramanian-circularity"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "critical-junctures",
+      "title": "Critical junctures: small differences, compounded",
+      "claim": "History's shocks — plagues, discoveries, revolutions — hit societies with slightly different institutions and drive them down divergent paths that then self-reinforce.",
+      "explanation": "The Black Death, killing half of Europe, empowered scarce peasants in England while nailing serfdom harder into the East; the Atlantic economy enriched merchant classes in England, where the crown was already constrained, and the crown itself in absolutist Spain. The Glorious Revolution of 1688 is the book's hinge: pluralism won in England just before industrialisation needed defending, which is why the Industrial Revolution happened there.",
+      "representative_example": "The same Atlantic trade that built Parliament's England built the extraction economy of colonial Latin America.",
+      "why_it_matters": "It explains divergence without essentialism: nations differ by compounded accidents of institutional drift, not by peoples.",
+      "caveat": "Diamond's documented rebuttal bites here: reading history as institutional junctures underplays the geographic preconditions the junctures ran on — the mirror image of the authors' own critique of him.",
+      "source_ids": [
+        "wikipedia-wnf",
+        "diamond-nyrb-wnf"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "creative-destruction-blocked",
+      "title": "Elites block creative destruction — that is the mechanism of failure",
+      "claim": "Innovation destroys incumbents, so elites whose power rests on the existing economy will suppress the technologies and openness that would enrich their nations.",
+      "explanation": "The book's engine, borrowed from Schumpeter and armed politically: railways refused by emperors fearing mobility, printing presses banned by sultans fearing literacy, industrialisation resisted by serf-owners fearing towns. Extraction is not stupidity; it is the rational defence of a position that growth would undermine.",
+      "representative_example": "Habsburg and Russian elites blocking railways and factories precisely because they understood what economic change does to political maps.",
+      "why_it_matters": "It answers the naive question 'why don't their leaders just adopt good policies?' — because good-for-the-nation and good-for-the-rulers diverge under extraction.",
+      "caveat": "The mechanism explains blocked growth better than it explains the extractive states that did industrialise fast, which the book must file as temporary.",
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "china-prediction",
+      "title": "Growth under extraction cannot last — the China wager",
+      "claim": "Extractive regimes can grow fast by command — moving peasants to factories, importing known technology — but hit a ceiling where further growth requires the creative destruction their politics cannot allow.",
+      "explanation": "The Soviet Union is the book's completed case: decades of catch-up growth by reallocation, then stagnation exactly where innovation had to replace mobilisation. China is the live wager: the book reads its boom as inclusive economics grafted onto extractive politics and predicts the graft fails — either politics opens or growth stalls.",
+      "representative_example": "Soviet growth that terrified the West into the 1960s, then flatlined into collapse.",
+      "why_it_matters": "It converts the theory into a falsifiable forecast about the century's biggest economic question.",
+      "caveat": "The documented counterargument: decades on, China's continued rise remains the standing anomaly the authors answer by extending the deadline — a defence critics call unfalsifiable in practice.",
+      "source_ids": [
+        "wikipedia-wnf",
+        "sachs-critique-wnf",
+        "subramanian-circularity"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "the-institutions-debate",
+      "title": "The debate it started — and the Nobel that followed",
+      "claim": "The book drew heavyweight documented criticism from every rival school — and twelve years later its research programme won the Nobel Prize.",
+      "explanation": "Bill Gates called it a major disappointment, the dichotomy too vague to guide anything. Jeffrey Sachs charged it with ignoring technology, geography, and geopolitics, with authoritarian Asian growth as living rebuttal. Jared Diamond, reviewing his own critics, granted institutions their force while documenting the geographic preconditions the book waves away. Methodologists pressed circularity: institutions graded good wherever outcomes are good. And in 2024 the underlying research — settler-mortality instruments, reversal of fortune, the empirical institutions programme — earned Acemoglu, Johnson, and Robinson the economics Nobel: the discipline's verdict that the programme is sound even where the popular book overreaches.",
+      "representative_example": "The same year's headlines: laureates of the institutions school, still arguing with the geography school they never quite defeated.",
+      "why_it_matters": "Read with its debate, the book teaches the actual state of knowledge: institutions matter enormously; whether they matter alone is the live question.",
+      "caveat": "The Nobel honours the peer-reviewed research, not every claim in the trade book built on it.",
+      "source_ids": [
+        "gates-review-wnf",
+        "sachs-critique-wnf",
+        "diamond-nyrb-wnf",
+        "subramanian-circularity",
+        "nobel-2024-wnf"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "The Question and the Wrong Answers",
+      "purpose": "Clear the field.",
+      "summary": "Nogales poses the puzzle; geography, culture, and leader-ignorance hypotheses are each dismissed with counter-cases.",
+      "idea_ids": [
+        "nogales-experiment"
+      ],
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "The Theory",
+      "purpose": "Build the dichotomy.",
+      "summary": "Inclusive and extractive institutions, economic and political, and why each pair locks together; growth under extraction and its ceiling.",
+      "idea_ids": [
+        "inclusive-extractive",
+        "creative-destruction-blocked"
+      ],
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "History's Forks",
+      "purpose": "Run the theory through time.",
+      "summary": "The Black Death, the Atlantic economy, the Glorious Revolution, and the Industrial Revolution as institutional history; colonisation as extraction exported.",
+      "idea_ids": [
+        "critical-junctures"
+      ],
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Circles Vicious and Virtuous, and the Modern Wager",
+      "purpose": "Explain persistence and predict.",
+      "summary": "Why extraction reproduces itself and inclusion defends itself; the Soviet arc; the China prediction; what makes nations fail today.",
+      "idea_ids": [
+        "china-prediction",
+        "the-institutions-debate"
+      ],
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Theory stated early, then a world tour of paired cases — England/Spain, the two Nogaleses, the two Koreas, Botswana against its neighbours — each chapter re-running the dichotomy on new history.",
+    "voice": "Confident lecture-hall prose: clear, unhedged, occasionally combative toward rival theories.",
+    "pace": "Brisk case by case, repetitive across the whole: the argument is complete by the middle and the remainder is demonstration.",
+    "evidence_style": "Narrative history compressed from the authors' peer-reviewed research programme, argued through cases rather than data in-text; rivals are engaged by name.",
+    "example_style": "Paired natural experiments and colonial histories — the book's real texture is its case files.",
+    "repetition": "High and documented: readers' most common complaint is the same argument re-proved per continent.",
+    "prerequisites": "None.",
+    "source_ids": [
+      "wikipedia-wnf",
+      "goodreads-wnf",
+      "washpost-wnf"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 0.0,
-      "confidence": "low",
-      "summary": "TODO: give the content-only verdict behind the score.",
+      "score": 6.1,
+      "confidence": "medium",
+      "summary": "Worthwhile: the institutions lens is one of the most useful tools in modern social science and this is its definitive popular statement, grounded in Nobel-honoured research — docked because the trade-book version applies its one dichotomy with documented vagueness, dismisses rivals it should weigh, answers its standing counterexample by extending deadlines, and re-proves itself case after case at 546 pages.",
       "dimensions": [
-        { "id": "explanatory-power", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "evidence-and-reasoning", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "insight-value", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "practical-utility", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "completeness-and-calibration", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] }
+        {
+          "id": "explanatory-power",
+          "score": 7.5,
+          "rationale": "The inclusive/extractive frame plus blocked creative destruction genuinely explains modern divergence where geographic theories run out — the two Koreas, the two Nogaleses — and the critical-junctures machinery gives history a workable causal grammar.",
+          "source_ids": [
+            "wikipedia-wnf",
+            "washpost-wnf"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 6.5,
+          "rationale": "Unusually for the genre, the book compresses the authors' own peer-reviewed programme — later Nobel-honoured — and engages rivals by name; but it argues by curated case narrative, and the documented objections (circularity, the China anomaly, omitted variables) are substantive.",
+          "source_ids": [
+            "nobel-2024-wnf",
+            "subramanian-circularity",
+            "sachs-critique-wnf"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.0,
+          "rationale": "'Poor countries are poor on purpose — someone's purpose' permanently reorganises how readers process development news, aid debates, and every autocrat's growth story.",
+          "source_ids": [
+            "wikipedia-wnf",
+            "goodreads-wnf"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 3.5,
+          "rationale": "A perspective book: the lens sharpens judgement about policy and investment climates, but offers individuals little beyond better arguments.",
+          "source_ids": [
+            "goodreads-wnf"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.0,
+          "rationale": "The documented flaw is monocausal confidence: geography and culture are dismissed rather than weighed, the China counterexample is answered by prediction, and the dichotomy's application is — per its most famous critic — too vague at the margins that matter.",
+          "source_ids": [
+            "gates-review-wnf",
+            "diamond-nyrb-wnf",
+            "sachs-critique-wnf"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 5.0,
+          "rationale": "The theory is fully delivered by mid-book; the remaining continents re-prove it, and the repetition is the readership's standing complaint.",
+          "source_ids": [
+            "goodreads-wnf"
+          ]
+        }
       ],
       "basis": "inference"
     },
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "meaning": {
+      "text": "The book's deepest claim is anti-fatalist: nothing about latitude, faith, or ancestry condemns a nation — poverty is manufactured by institutions that someone built and someone defends, which means it can in principle be unbuilt; the grim corollary is that those someones rarely consent, so the road from extraction to inclusion usually runs through political struggle, not policy advice.",
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Ask of any poor place not 'what does it lack?' but 'who benefits from the rules as written?' — the extraction question.",
+        "source_ids": [
+          "wikipedia-wnf"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Judge growth stories by their politics: reallocation-driven booms under concentrated power have a documented ceiling.",
+        "source_ids": [
+          "wikipedia-wnf"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Watch for blocked creative destruction close to home: incumbents lobbying against the technology that would replace them are the book's mechanism at neighbourhood scale.",
+        "source_ids": [
+          "wikipedia-wnf"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Hold single-lens theories of prosperity the way the debate holds this one: institutions matter enormously; 'alone' is the contested word.",
+        "source_ids": [
+          "diamond-nyrb-wnf",
+          "sachs-critique-wnf"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The defining development-economics book of its decade: a global bestseller that set the terms of the geography-versus-institutions debate, reshaped aid and governance conversations, and stands as the popular face of the research programme that won its authors the 2024 Nobel Memorial Prize in Economic Sciences.",
+      "source_ids": [
+        "wikipedia-wnf",
+        "nobel-2024-wnf"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Acemoglu — MIT Institute Professor and the most-cited economist of his generation — and Robinson — Chicago political scientist with field roots across Africa and Latin America — wrote the book to take their academic programme public: fifteen years of instruments, regressions, and colonial histories arguing that institutions, not endowments, decide prosperity, delivered as narrative history with the models removed.",
+      "source_ids": [
+        "wikipedia-wnf"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Compresses the authors' own peer-reviewed, later Nobel-honoured research.",
+        "Paired natural experiments (Nogales, the Koreas) genuinely isolate institutions.",
+        "Rival theories engaged by name rather than ignored."
+      ],
+      "weaknesses": [
+        "Case narratives curated to the thesis; no in-text data.",
+        "Documented circularity risk: institutions graded by outcomes.",
+        "The China anomaly answered by extendable prediction.",
+        "Geography and culture dismissed with counter-cases rather than weighed."
+      ],
+      "source_ids": [
+        "nobel-2024-wnf",
+        "subramanian-circularity",
+        "sachs-critique-wnf",
+        "diamond-nyrb-wnf"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "A rare book attacked from every direction and vindicated at the highest level anyway: raves for ambition, famous pans for vagueness, rival schools pressing geography and technology — and, twelve years on, the Nobel committee endorsing the research programme underneath while the trade book's overreaches stay documented.",
+      "praise": [
+        "Washington Post: bracing, wildly ambitious — 'may be a bit of a masterpiece'.",
+        "Adopted as the standard institutions primer across universities and policy shops.",
+        "The 2024 Nobel to its authors ratified the underlying programme."
+      ],
+      "criticism": [
+        "Gates: analysis vague, the dichotomy overstretched — 'a major disappointment'.",
+        "Sachs: domestic-institutions tunnel vision; technology and geopolitics missing; authoritarian growth unexplained.",
+        "Diamond: geography dismissed rather than answered.",
+        "Methodologists: circular institution-grading; the unfalsifiable China deadline."
+      ],
+      "source_ids": [
+        "washpost-wnf",
+        "gates-review-wnf",
+        "sachs-critique-wnf",
+        "diamond-nyrb-wnf",
+        "subramanian-circularity",
+        "nobel-2024-wnf"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Guns, Germs, and Steel readers wanting the modern-era rebuttal",
+        "Anyone parsing development, aid, and autocrat-growth headlines",
+        "Students entering political economy",
+        "Readers who like theories big enough to argue with"
+      ],
+      "not_for": [
+        "Readers wanting settled, hedged consensus — this is one side of a live debate",
+        "Those seeking policy how-to or personal application",
+        "Readers impatient with case-study repetition"
+      ],
+      "topics": [
+        "Institutions and development",
+        "Colonial history",
+        "Political economy",
+        "Global inequality",
+        "China and authoritarian growth"
+      ],
+      "source_ids": [
+        "wikipedia-wnf",
+        "goodreads-wnf"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A balanced survey — it is the institutions school's brief",
+        "A policy manual: diagnosis, not prescription",
+        "Current on post-2012 China, whose trajectory is the theory's live test"
+      ],
+      "omissions": [
+        "Technology and geopolitics as independent forces (the Sachs objection)",
+        "Geographic preconditions weighed rather than dismissed (the Diamond objection)",
+        "In-text data for the case narratives"
+      ],
+      "missing_or_weak": [
+        "The dichotomy blurs at the margins — semi-inclusive states, resource exceptions",
+        "The circularity objection is never squarely answered in the book"
+      ],
+      "dated_or_contested": [
+        "The China prediction remains open a decade on and is the theory's most-watched test; the geography-institutions weighting stays contested in the literature."
+      ],
+      "source_ids": [
+        "sachs-critique-wnf",
+        "diamond-nyrb-wnf",
+        "subramanian-circularity"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you want the institutions case argued at full length with its remarkable case files — colonial reversals, divided cities, parliamentary hinges — and if you enjoy holding a strong thesis while auditing it.",
+      "summary_is_enough_if": "Stop at a summary if you want the dichotomy, the mechanism, the China wager, and the debate: the theory compresses cleanly, and the objections are short.",
+      "skip_if": "Skip it if you want both sides weighed in one volume — pair it with Guns, Germs, and Steel instead and let the two argue — or if repetitive case tours defeat you.",
+      "format_advice": "Any format; the audiobook handles the narrative cases well, and nothing in the print edition is load-bearing beyond the text.",
+      "source_ids": [
+        "goodreads-wnf",
+        "diamond-nyrb-wnf"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What makes an institution extractive, and why do extractive politics and economics lock together?",
+      "What is the creative-destruction mechanism of national failure?",
+      "What are the four documented objections, and what did the 2024 Nobel actually endorse?"
+    ],
+    "application_prompts": [
+      "Take one poor place in the news and run the extraction question: who benefits from its rules as written?",
+      "Find one incumbent industry lobbying against its replacement this year — the book's mechanism at home.",
+      "Revisit the China wager: which way has the evidence moved since 2012, and what would falsify the theory?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "",
+    "review_notes": "Built from the documented record with the four named critiques carried at the claims they address, and the Nobel documentation distinguishing the honoured research programme from the trade book's claims.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
-      "notes": []
+      "notes": [
+        "Identity verified: Crown Business, 2012-03-20, 546pp, ISBN 9780307719218; both authors recorded and James A. Robinson's author profile created.",
+        "The Gates, Sachs, Diamond, and circularity critiques are carried as counterevidence at the specific claims they address; the Nobel is documented as endorsing the research programme, not the trade book wholesale.",
+        "The China prediction is presented as the theory's live, open test rather than resolved either way.",
+        "Rating scored on content only; the Nobel and sales appear in importance/reception.",
+        "Narration reviewed against the product contract: content-first, the debate integrated.",
+        "Pronunciation: Acemoglu was mispronounced by the phonemizer (a-SEM-oh-gloo) and added to the dictionary from the documented Turkish IPA (ah-jem-OH-loo); Nogales and Robinson verified acceptable."
+      ]
     }
   }
 }

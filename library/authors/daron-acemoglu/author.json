@@ -6,20 +6,101 @@
   "name": "Daron Acemoglu",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "MIT economist, 2024 Nobel laureate, and the most-cited economist of his generation — the institutions school's chief architect and its most prolific evangelist.",
+      "source_ids": ["wikipedia-acemoglu"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Istanbul in 1967 to Armenian parents, Acemoglu took his PhD at the London School of Economics in 1992 and joined MIT in 1993, where he is an Institute Professor — the university's highest faculty rank. He won the John Bates Clark Medal in 2005, was measured as the most-cited economist of the following decade, and in 2024 shared the Nobel Memorial Prize in Economic Sciences with James Robinson and Simon Johnson for their comparative studies of prosperity. Why Nations Fail (2012) popularised the research programme; The Narrow Corridor (2019) and Power and Progress (2023) extended it.",
+      "source_ids": ["wikipedia-acemoglu"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His method pairs formal economic modelling with natural experiments in colonial and institutional history — settler mortality as an instrument for institutions, border discontinuities like divided Nogales — turning grand questions about prosperity into testable regressions, then retelling the results as narrative history for general readers.",
+      "source_ids": ["wikipedia-acemoglu"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Political economy, institutional economics, labour economics, and the economics of technology — with the discipline's top honours at every level. The popular books compress peer-reviewed work he actually did, which distinguishes them from most of their shelf.",
+      "source_ids": ["wikipedia-acemoglu"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Acemoglu writes as the institutions school's champion: politics first, geography and culture demoted. Documented critics reverse the charge he levels at others — Sachs finds the frame too narrow, Diamond finds geography dismissed rather than answered, and methodologists note the risk of circularity when institutions are read off the outcomes they are meant to explain.",
+      "source_ids": ["wikipedia-acemoglu"],
+      "basis": "synthesis"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Why Nations Fail",
+      "year": 2012,
+      "kind": "Book",
+      "relationship": "The popular statement of the institutions programme; subject of this profile's book entry.",
+      "source_ids": ["wikipedia-acemoglu"]
+    },
+    {
+      "title": "The Narrow Corridor",
+      "year": 2019,
+      "kind": "Book",
+      "relationship": "The sequel: liberty as a contested corridor between state and society.",
+      "source_ids": ["wikipedia-acemoglu"]
+    },
+    {
+      "title": "Power and Progress",
+      "year": 2023,
+      "kind": "Book",
+      "relationship": "With Simon Johnson: a thousand years of technology serving elites unless institutions push back.",
+      "source_ids": ["wikipedia-acemoglu"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-acemoglu",
+        "title": "Daron Acemoglu",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Daron_Acemoglu",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Birth, LSE PhD, MIT Institute Professorship, Clark Medal 2005, most-cited status, the 2024 Nobel with Robinson and Johnson, major works, and the documented critiques of Why Nations Fail.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; claims traced where used."
+      },
+      {
+        "id": "nobel-2024-wnf",
+        "title": "The Sveriges Riksbank Prize in Economic Sciences 2024",
+        "author_or_publisher": "The Nobel Prize",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2024/summary/",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "The prize citation for studies of how institutions are formed and affect prosperity.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Prize record."
+      },
+      {
+        "id": "mit-acemoglu",
+        "title": "Daron Acemoglu (faculty page)",
+        "author_or_publisher": "MIT Department of Economics",
+        "url": "https://economics.mit.edu/people/faculty/daron-acemoglu",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "The Institute Professor title and research-field roster.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Institutional profile."
+      }
+    ],
+    "citations": {
+      "/name": ["wikipedia-acemoglu"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs; serves Why Nations Fail and future Acemoglu titles.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

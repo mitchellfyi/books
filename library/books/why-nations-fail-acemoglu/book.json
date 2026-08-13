@@ -3,28 +3,166 @@
   "schema_version": 1,
   "id": "why-nations-fail-acemoglu",
   "type": "book",
-  "title": "Why Nations Fail",
-  "alternate_titles": [],
-  "author_ids": ["daron-acemoglu"],
+  "title": "Why Nations Fail: The Origins of Power, Prosperity, and Poverty",
+  "alternate_titles": ["Why Nations Fail"],
+  "author_ids": ["daron-acemoglu", "james-a-robinson"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2012-03-20",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US first edition",
+        "publisher": "Crown Business",
+        "publication_date": "2012-03-20",
+        "isbn_10": "0307719219",
+        "isbn_13": "9780307719218",
+        "format": "Hardcover",
+        "pages": 546
+      }
+    ],
+    "contents": [
+      "Nogales, halved: one city, two nations, and the whole question in a fence",
+      "Theories that don't work: geography, culture, and the ignorance of leaders each rejected",
+      "Extractive versus inclusive institutions, economic and political, and how each pair locks together",
+      "Critical junctures and small differences: the Black Death, the Glorious Revolution, and why England industrialised first",
+      "The iron law of oligarchy and the vicious circle of extraction",
+      "Creative destruction and why extractive elites block the technologies that would enrich their nations",
+      "Growth under extraction — the Soviet Union and China — and why the book predicts it cannot last",
+      "Virtuous circles: how inclusive institutions defend and deepen themselves"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "behavioural-economics",
+      "history",
+      "inequality",
+      "non-fiction",
+      "power"
+    ],
+    "audiences": [
+      "Readers of Guns, Germs, and Steel wanting the institutions rebuttal",
+      "Anyone asking why some nations are rich and others poor now",
+      "Students of political economy and development",
+      "Policy readers weighing aid, growth, and democratisation"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-wnf",
+        "title": "Why Nations Fail",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Why_Nations_Fail",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication facts (Crown Business, 2012-03-20, 546pp, ISBN 0307719219), the inclusive/extractive thesis, the Nogales opening, the rejected rival hypotheses, and the documented reception on both sides including the named critiques.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; claims traced where used."
+      },
+      {
+        "id": "diamond-nyrb-wnf",
+        "title": "What Makes Countries Rich or Poor? (as documented in the book's reception record)",
+        "author_or_publisher": "Jared Diamond, The New York Review of Books",
+        "url": "https://www.nybooks.com/articles/2012/06/07/what-makes-countries-rich-or-poor/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The geography camp's documented rebuttal-in-kind: institutions matter but the book dismisses geographic factors too completely, and its critical-juncture history undersells broader patterns — the mirror image of the authors' critique of Diamond.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Accessed via documented summary; Diamond is the opposing theorist reviewing his rivals."
+      },
+      {
+        "id": "gates-review-wnf",
+        "title": "Good Ideas, But Missing Analysis (as documented in the reception record)",
+        "author_or_publisher": "Bill Gates, GatesNotes",
+        "url": "https://www.gatesnotes.com/Why-Nations-Fail",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The most famous negative verdict: the inclusive/extractive dichotomy applied too vaguely and the book overall 'a major disappointment'.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation; a philanthropist-technologist's review, not an economist's."
+      },
+      {
+        "id": "sachs-critique-wnf",
+        "title": "Government, Geography, and Growth (as documented in the reception record)",
+        "author_or_publisher": "Jeffrey Sachs, Foreign Affairs",
+        "url": "https://en.wikipedia.org/wiki/Why_Nations_Fail",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A development economist's documented critique: the theory focuses too narrowly on domestic institutions, ignoring technology and geopolitics, and authoritarian Asian growth does not fit.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Accessed via documented summary; Sachs is a rival theorist."
+      },
+      {
+        "id": "subramanian-circularity",
+        "title": "The circularity objection (as documented in the reception record)",
+        "author_or_publisher": "Arvind Subramanian",
+        "url": "https://en.wikipedia.org/wiki/Why_Nations_Fail",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The methodological objection: institutions are inferred good where outcomes are good, and modernisation may cause institutions rather than the reverse — with China as the standing counterexample the authors answer by prediction.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented summary."
+      },
+      {
+        "id": "nobel-2024-wnf",
+        "title": "The Sveriges Riksbank Prize in Economic Sciences 2024",
+        "author_or_publisher": "The Nobel Prize",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2024/summary/",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "The 2024 prize to Acemoglu, Johnson, and Robinson 'for studies of how institutions are formed and affect prosperity' — the research programme behind the book, honoured at the discipline's highest level.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Honours the underlying research, not the popular book as such."
+      },
+      {
+        "id": "washpost-wnf",
+        "title": "Review of Why Nations Fail (as documented in the reception record)",
+        "author_or_publisher": "Warren Bass, The Washington Post",
+        "url": "https://en.wikipedia.org/wiki/Why_Nations_Fail",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The praise side's documented register: 'bracing, garrulous, wildly ambitious... may be a bit of a masterpiece'.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation."
+      },
+      {
+        "id": "goodreads-wnf",
+        "title": "Why Nations Fail",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/12158480-why-nations-fail",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "A decade of warm-but-argumentative reader reception: praised as the institutions primer, with recurring complaints about repetition and the same-example-again structure.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/title": ["wikipedia-wnf"],
+      "/alternate_titles": ["wikipedia-wnf"],
+      "/author_ids": ["wikipedia-wnf"],
+      "/bibliography/first_published": ["wikipedia-wnf"],
+      "/bibliography/original_language": ["wikipedia-wnf"],
+      "/bibliography/editions/0": ["wikipedia-wnf"],
+      "/bibliography/contents": ["wikipedia-wnf"],
+      "/discovery/tag_ids": ["wikipedia-wnf"],
+      "/discovery/audiences": ["wikipedia-wnf", "goodreads-wnf"],
+      "/discovery/formats_available": ["goodreads-wnf"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the documented record, the named specialist critiques on both sides of the geography-institutions debate, the Nobel documentation of the underlying research, and reader reception.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

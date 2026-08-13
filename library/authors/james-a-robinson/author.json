@@ -1,0 +1,107 @@
+{
+  "$schema": "../../../schemas/author.schema.json",
+  "schema_version": 1,
+  "id": "james-a-robinson",
+  "type": "author",
+  "name": "James A. Robinson",
+  "alternate_names": ["James Alan Robinson"],
+  "profile": {
+    "one_line": {
+      "text": "British-American political scientist and 2024 Nobel economics laureate whose fieldwork across Africa and Latin America grounds the institutions school's history.",
+      "source_ids": ["wikipedia-robinson"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Chelmsford, England in 1960, Robinson took degrees at LSE and Warwick and a Yale political-science PhD in 1993. He is a university professor at the University of Chicago's Harris School, where he has led the Pearson Institute for the study of global conflicts. His research runs through sustained fieldwork — Botswana, the Congo, Sierra Leone, Haiti, the Philippines, and Colombia, where he teaches annually. In 2024 he shared the Nobel Memorial Prize in Economic Sciences with Daron Acemoglu and Simon Johnson.",
+      "source_ids": ["wikipedia-robinson"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "Robinson supplies the comparative-politics half of the Acemoglu-Robinson partnership: the case knowledge, the colonial histories, and the country fieldwork that the models formalise. The collaboration's books — Economic Origins of Dictatorship and Democracy, Why Nations Fail, The Narrow Corridor — braid his cases with Acemoglu's economics.",
+      "source_ids": ["wikipedia-robinson"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Political economy, comparative development, and African and Latin American political history, with the 2024 Nobel as the field's endorsement of the joint programme.",
+      "source_ids": ["wikipedia-robinson"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Robinson shares the school's politics-first commitments and its documented critiques: rival development economists find the institutional lens too total, and the popular books smooth over the cases where his own field sites — resource states, conflict zones — fit the dichotomy awkwardly.",
+      "source_ids": ["wikipedia-robinson"],
+      "basis": "inference"
+    }
+  },
+  "selected_works": [
+    {
+      "title": "Economic Origins of Dictatorship and Democracy",
+      "year": 2006,
+      "kind": "Book",
+      "relationship": "The academic foundation of the partnership.",
+      "source_ids": ["wikipedia-robinson"]
+    },
+    {
+      "title": "Why Nations Fail",
+      "year": 2012,
+      "kind": "Book",
+      "relationship": "The popular statement; subject of this profile's book entry.",
+      "source_ids": ["wikipedia-robinson"]
+    },
+    {
+      "title": "The Narrow Corridor",
+      "year": 2019,
+      "kind": "Book",
+      "relationship": "The sequel on liberty's contested corridor.",
+      "source_ids": ["wikipedia-robinson"]
+    }
+  ],
+  "research": {
+    "sources": [
+      {
+        "id": "wikipedia-robinson",
+        "title": "James A. Robinson (economist)",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/James_A._Robinson_(economist)",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Birth, education (LSE, Warwick, Yale PhD 1993), the Chicago Harris professorship and Pearson Institute role, the fieldwork countries, the 2024 Nobel, and the co-authored works.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary."
+      },
+      {
+        "id": "nobel-2024-wnf",
+        "title": "The Sveriges Riksbank Prize in Economic Sciences 2024",
+        "author_or_publisher": "The Nobel Prize",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2024/summary/",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "The shared prize citation.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Prize record."
+      },
+      {
+        "id": "uchicago-robinson",
+        "title": "James A. Robinson (faculty page)",
+        "author_or_publisher": "University of Chicago Harris School",
+        "url": "https://harris.uchicago.edu/directory/james-robinson",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "The university professorship and institute leadership.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Institutional profile."
+      }
+    ],
+    "citations": {
+      "/name": ["wikipedia-robinson"]
+    }
+  },
+  "workflow": {
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs; serves Why Nations Fail.",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}
