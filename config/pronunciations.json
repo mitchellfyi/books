@@ -253,6 +253,30 @@
       "source_url": "https://en.wikipedia.org/wiki/The_Sorrows_of_Young_Werther",
       "verified_at": "2026-08-13",
       "notes": "German [ˈveːɐ̯tɐ], anglicised 'VAIR-ter' (as in the Werther effect, named for Goethe's novel). The unassisted phonemizer produced an English w and a voiced th (wˈɜːðə), both wrong."
+    },
+    {
+      "term": "Ichiro Kishimi",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ˈiːtʃiɹəʊ kɪˈʃiːmi",
+        "en-us": "ˈiːtʃiɹoʊ kɪˈʃiːmi"
+      },
+      "source_url": "https://www.gentosha.jp/author/711",
+      "verified_at": "2026-08-13",
+      "notes": "ee-chee-roh kee-SHEE-mee. Gentosha gives the author's own name reading as 岸見一郎（きしみいちろう）. The unassisted British phonemizer produced ik-ee-AIR-oh KISH-i-mee."
+    },
+    {
+      "term": "Fumitake Koga",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "fˌuːmiˈtɑːkɛ kˈəʊɡə",
+        "en-us": "fˌuːmiˈtɑːkɛ kˈoʊɡə"
+      },
+      "source_url": "https://www.1101.com/n/s/school_lecture_34",
+      "verified_at": "2026-08-13",
+      "notes": "foo-mee-TAH-keh KOH-guh. Hobonichi gives the author's name reading as 古賀史健（こがふみたけ）. The unassisted British phonemizer said FYOO-mi-take."
     }
   ]
 }
