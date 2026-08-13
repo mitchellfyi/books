@@ -79,7 +79,7 @@
     {
       "book_id": "the-socratic-method-farnsworth",
       "priority": 11,
-      "status": "in-progress",
+      "status": "done",
       "source": "user",
       "added_at": "2026-08-13"
     },
@@ -94,7 +94,7 @@
     {
       "book_id": "the-school-of-life-botton",
       "priority": 13,
-      "status": "ready",
+      "status": "in-progress",
       "source": "user",
       "added_at": "2026-08-13",
       "notes": "Full title: The School of Life: An Emotional Education."

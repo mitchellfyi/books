@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-socratic-method-farnsworth",
+  "duration": "30-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.86,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-socratic-method-farnsworth/scripts/30-minutes.md",
+  "source_script_sha256": "cba854626d6395e5760cbb26aef42281ba8d989113a39c745c454acde2ceeaea",
+  "pronunciation_dictionary_sha256": "11be7ca625d1c20c5532e071180f9abb7f665560e6200f263aa83b72f2989dbb",
+  "pronunciation_terms": [
+    "elenchus",
+    "Plato"
+  ],
+  "pronunciation_entries_sha256": "fcadc25b70bf641c7c4470edd680b10653f4fb10527fe6794baaf61036f38dd3",
+  "script_words": 4186,
+  "audio_seconds": 1595.913,
+  "measured_wpm": 157.38,
+  "generated_at": "2026-08-13T11:30:48.949048+00:00"
+}

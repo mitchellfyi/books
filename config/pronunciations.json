@@ -133,6 +133,18 @@
       "source_url": "https://dictionary.cambridge.org/pronunciation/english/plato",
       "verified_at": "2026-08-13",
       "notes": "PLAY-toe per Cambridge Dictionary. The unassisted British phonemizer produced PLAH-toe (plˈɑːtəʊ). Case-sensitive to avoid touching unrelated lowercase text."
+    },
+    {
+      "term": "Brandeis",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "bɹˈandaɪs",
+        "en-us": "bɹˈændaɪs"
+      },
+      "source_url": "https://www.brandeis.edu/about/",
+      "verified_at": "2026-08-13",
+      "notes": "BRAN-dice, as the university and Justice Louis Brandeis's name are pronounced. The unassisted phonemizer produced BRAN-days (bɹˈandeɪz)."
     }
   ]
 }

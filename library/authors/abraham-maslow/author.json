@@ -4,22 +4,127 @@
   "id": "abraham-maslow",
   "type": "author",
   "name": "Abraham Maslow",
-  "alternate_names": [],
+  "alternate_names": ["Abraham H. Maslow"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American psychologist (1908–1970) who founded humanistic psychology's 'third force', proposed the hierarchy of needs, and spent his last years mapping self-actualization and transcendence.",
+      "source_ids": ["semantic-scholar-farther", "bu-review-farther", "goodreads-farther"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Brooklyn to Jewish immigrant parents, Maslow trained in experimental psychology, taught at Brooklyn College and then Brandeis University, and served as president of the American Psychological Association in 1968. Against the era's dominant behaviourism and psychoanalysis he built a 'third force' studying healthy, growing people rather than pathology: the hierarchy of needs (1943), Motivation and Personality (1954), and Toward a Psychology of Being (1962). He died of a heart attack in June 1970; The Farther Reaches of Human Nature was assembled from his late essays and lectures by his wife Bertha Maslow with Henry Geiger.",
+      "source_ids": ["bu-review-farther", "amazon-farther-edition", "semantic-scholar-farther"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His method was deliberately unorthodox: instead of averaging across subjects, he studied the exceptional — people he judged self-actualized, from historical figures to acquaintances — to ask what humans are like at their best. That choice made his psychology generative and quotable, and left it resting on samples no modern review board would recognise.",
+      "source_ids": ["bu-review-farther", "sloww-farther"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "A credentialed academic psychologist and APA president whose authority in his own field was institutional as well as intellectual; his late-life claims about transcendence and values, however, deliberately stepped past what his evidence could carry, and he said as much, framing them as a programme for future science.",
+      "source_ids": ["bu-review-farther", "semantic-scholar-farther"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Maslow writes as psychology's great optimist: a scientist convinced that human nature's upper range is real data. The perspective produced a vocabulary — self-actualization, peak experiences — that entered the language, and limits that critics have pressed ever since: loose sampling, definitions that drift, cultural narrowness in what counts as the highest human life, and an empirical record for the hierarchy that later research left largely unsupported.",
+      "source_ids": ["bu-review-farther", "goodreads-farther", "sloww-farther"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Motivation and Personality",
+      "year": 1954,
+      "kind": "Book",
+      "relationship": "The systematic statement of the hierarchy of needs and self-actualization.",
+      "source_ids": ["bu-review-farther"]
+    },
+    {
+      "title": "Toward a Psychology of Being",
+      "year": 1962,
+      "kind": "Book",
+      "relationship": "The bridge work: being-psychology, growth versus deficiency, peak experiences.",
+      "source_ids": ["bu-review-farther"]
+    },
+    {
+      "title": "The Farther Reaches of Human Nature",
+      "year": 1971,
+      "kind": "Book",
+      "relationship": "The posthumous capstone: late essays and lectures on the upper range of human nature.",
+      "source_ids": ["semantic-scholar-farther", "amazon-farther-edition"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "bu-review-farther",
+        "title": "Review of The Farther Reaches of Human Nature",
+        "author_or_publisher": "Wesley Wildman's Religious Experience Resources, Boston University",
+        "url": "https://people.bu.edu/wwildman/relexp/reviews/review_maslow02.htm",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Scholarly account of the book's posthumous assembly by Bertha Maslow, its concept vocabulary (peak experiences, B-values, Jonah complex), the third-force framing, and cautions about peak experiences.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "A sympathetic academic review from a religious-experience research project."
+      },
+      {
+        "id": "semantic-scholar-farther",
+        "title": "The Farther Reaches of Human Nature",
+        "author_or_publisher": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/The-Farther-Reaches-of-Human-Nature-Maslow/aa092e57289050a1b78c5c81707630d49c5ea7f6",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent bibliographic record and the work's continuing citation in the scholarly literature.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Index record."
+      },
+      {
+        "id": "amazon-farther-edition",
+        "title": "The Farther Reaches of Human Nature (Penguin edition listing)",
+        "author_or_publisher": "Amazon / Penguin",
+        "url": "https://www.amazon.com/Farther-Reaches-Human-Nature/dp/0140194703",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "The in-print Penguin edition, its ISBN, and the editorial credits to Bertha G. Maslow and Henry Geiger.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Retailer listing of publisher data."
+      },
+      {
+        "id": "sloww-farther",
+        "title": "The Farther Reaches of Human Nature (deep summary)",
+        "author_or_publisher": "Sloww",
+        "url": "https://www.sloww.co/maslow-farther-reaches-human-nature/",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Detailed secondary account of the book's concepts and quotations: B-values list, metaneeds and metapathologies, unitive consciousness, full humanness.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Enthusiast summary; used for corroboration of content, not judgements."
+      },
+      {
+        "id": "goodreads-farther",
+        "title": "The Farther Reaches of Human Nature",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/60230.The_Farther_Reaches_of_Human_Nature",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Long-run reader reception: admiration for the vision alongside recurring notes on repetition and datedness.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/name": ["bu-review-farther", "semantic-scholar-farther"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile from a scholarly review, bibliographic records, and secondary accounts; Maslow's broader biography is documented far beyond the needs of this profile.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
