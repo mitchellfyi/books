@@ -42,15 +42,11 @@ Stress explains part of the modern difficulty. Threat systems raise alertness an
 
 Lieberman uses non-industrial sleep research to question both romantic extremes. People without electric light do not necessarily sleep from sunset to sunrise, nor are they free from disturbance. Human sleep appears flexible. The important distinction is between flexibility that leaves a person functioning and persistent difficulty that damages life. The book offers natural history, not diagnosis of insomnia or another sleep disorder.
 
-After rest, the book turns to speed, strength, fighting, and sport. The order matters. It first strips away the idea that health requires constant action, then asks what kinds of action the human body can perform. Its answer is a series of trade-offs rather than a story of perfect design.
-
 Humans are not exceptional sprinters. Many mammals accelerate faster and reach far higher speeds. Even the fastest human can look slow beside animals specialised for pursuit or escape. Sprinting rewards rapid force, powerful muscle fibres, stiffness, and anatomy suited to brief explosive work. Those features have energetic costs and do not automatically produce economical endurance.
 
 Humans are also less strong for their size than other great apes. This is not evidence of degeneration from a once-muscular ideal. Muscle is metabolically expensive to build and maintain. A body benefits from enough strength for its usual tasks rather than maximum possible bulk. Evolution can favour reduced investment in one capacity when other capacities provide greater returns.
 
 The human package includes efficient upright walking, long legs, elastic tissues, balance, cooling through abundant sweating, shoulders able to store and release energy in throwing, hands capable of fine control, and brains able to learn and plan. None makes an isolated human supreme. Together with language, tools, food sharing, and cooperation, they create a flexible mover.
-
-This makes simple comparisons misleading. A chimpanzee can overpower a similar-sized human. A horse can outrun one. A dog may track better. But a coordinated human group can walk economically, carry supplies, share information, make projectiles, plan routes, redistribute food, care for injured members, and keep solving a changing problem. The distinctive ability lies partly between bodies.
 
 Lieberman is especially associated with the endurance-running hypothesis, but the book does not reduce humanity to natural marathoners. Humans possess features useful for sustained running, including cooling, stabilisation of the head and trunk, and elastic recoil. Those features may have supported persistence hunting or reaching carcasses. Yet many ancestors may rarely have run long distances, and walking would have supplied far more daily movement.
 
@@ -59,8 +55,6 @@ The honest evolutionary conclusion is not that everybody ought to run. It is tha
 Strength is similarly flexible. Muscles adapt to load because carrying expensive tissue without using it would waste energy. Repeated resistance signals a need; protein synthesis and neural adaptation increase capacity. Remove the demand and capacity declines. Modern life can therefore create weakness without any dramatic disease. The environment simply stops asking the body to remain strong.
 
 Age makes that plasticity consequential. Loss of muscle can reduce balance, the ability to rise from a chair or floor, confidence outdoors, glucose regulation, and resilience after illness. Reduced activity then produces further loss, creating a downward loop. Strength work interrupts it by preserving usable capacity. Its value is not confined to athletes, mirrors, or lifting records.
-
-The book could give more practical detail about resistance training. It does not teach technique, progression, exercise selection, or rehabilitation. Its contribution is the reason for training: the body maintains costly capacity when life demonstrates a need for it. That model applies whether resistance comes from weights, machines, bands, carrying, climbing, or carefully scaled bodyweight work.
 
 Fighting explores another set of capacities. Humans can strike, grapple, throw, threaten, and form coalitions. But culture transforms every one of these behaviours. Weapons alter the value of strength. Rules and institutions alter the cost of aggression. Reputation, kinship, language, and alliances shape conflict. It would be too simple to label violence a direct adaptation with a single purpose.
 
@@ -88,8 +82,6 @@ That finding needs restraint. People with painful or damaged joints may avoid ru
 
 Dance may be the more revealing example of motivation. It combines movement with music, timing, learning, memory, display, flirtation, ceremony, cooperation, and group identity. The effort can be substantial while attention remains on the pattern and the people. Dance does not disguise an unpleasant health duty; it is a valued activity whose physical benefit arrives with it.
 
-That distinction applies beyond dance. Gardening, active transport, play, volunteering, manual craft, walking meetings, and caring can all make movement instrumental or meaningful. Formal workouts are useful because modern life often lacks enough demand, but they are not the only legitimate route. The body responds to load and energy use, not membership in a gym.
-
 Chapter ten connects endurance with ageing. Humans live unusually long lives compared with other primates, including many years after reproduction. The active-grandparent hypothesis argues that older adults could improve the survival and success of descendants by gathering food, hunting, preparing resources, sharing knowledge, and caring for children. Remaining capable therefore created benefits beyond producing more offspring personally.
 
 The hypothesis also corrects a modern expectation that old age should mean ever-increasing rest. If older people in past environments remained economically and socially active, bodies may depend on continuing demand to maintain function. Retirement from a job need not become retirement from loading muscle, raising heart rate, learning movement, or contributing to others.
@@ -101,8 +93,6 @@ In this account, exercise does not simply burn away a harmful substance. It send
 The grandparent and repair arguments are attractive because they connect social evolution, lifespan, and cell biology. They remain hypotheses. Long life has multiple causes, including food sharing, intelligence, culture, reduced mortality, childcare, and medicine. An association between activity and health can reflect healthier people being more able to move. Experiments and mechanisms strengthen causal inference, but no study can replay human evolution with an inactive comparison species.
 
 The practical conclusion is nevertheless supported more broadly than the evolutionary story. Regular physical activity is associated with lower risk across cardiovascular disease, type two diabetes, some cancers, depression, functional decline, and premature death. Resistance activity helps preserve muscle and bone. Aerobic activity improves cardiorespiratory capacity. Balance work becomes particularly important for older people at risk of falling.
-
-The word associated matters. Large observational studies can measure many people over years but cannot control every difference between active and inactive groups. Exercise trials can test causation more directly, yet they are often shorter, smaller, and affected by adherence. Disease outcomes differ. A book surveying them all must compress a complicated evidence base.
 
 Lieberman's broad claim is safer than any universal promise: activity affects many systems and generally lowers risk, while inactivity removes stimuli those systems use. Exercise is one contributor among genetics, infection, diet, sleep, pollution, stress, care, income, housing, and chance. A physically active person can become ill; an inactive person is not morally responsible for every diagnosis.
 
@@ -117,8 +107,6 @@ Framing movement only as repayment for food can damage motivation. It treats eat
 The question of dose follows naturally. If ancestors moved in varied ways across different ecologies and seasons, evolutionary history cannot reveal one exact weekly target. Lieberman's earlier scientific argument says there is no evolutionarily determined optimal dose or type. Bodies trade benefits against energy, time, injury, and other needs. More is not automatically better without limit.
 
 Public-health guidelines offer evidence-based ranges rather than ancestral rules. For most adults, a common target is 150 to 300 minutes of moderate-intensity aerobic activity each week, or 75 to 150 minutes vigorous, or a combination. Muscle-strengthening activity should involve major muscle groups on at least two days. Older adults may add balance and functional work. Reducing sedentary time is useful, and replacing it with activity of any intensity can help.
-
-Moderate intensity generally raises breathing and heart rate while still permitting conversation. Vigorous work makes speech more difficult. Those descriptions are more flexible than a universal pace because capacity differs. The same hill can be easy for one person and vigorous for another.
 
 The lower boundary carries the most compassionate principle: some activity is better than none. A target can guide without becoming the minimum amount worthy of respect. Moving from almost no activity to a repeatable small amount may bring a large share of the available benefit and establish the capacity for more. An all-or-nothing plan often turns one missed session into abandonment.
 
@@ -144,8 +132,6 @@ This stance should extend to structural constraints. A safe pavement, free time,
 
 Disability and chronic illness also reveal a limit in generic language. “Move more” can mean different things: changing position, assisted movement, rehabilitation, preserving upper-body strength, pacing carefully, or avoiding an activity that worsens symptoms. Population guidance must be translated with relevant expertise. Evolutionary normality cannot decide an individual's safe dose.
 
-The title's final word, rewarding, therefore has two meanings. Movement can be rewarding later through health and preserved function. It also becomes sustainable when it is rewarding now through purpose, company, play, competence, identity, or relief. The second kind helps deliver the first.
-
 The book's strongest evidence lies in convergence. Anatomy shows a body responsive to movement. Physiology shows adaptation and repair. Epidemiology links activity to many outcomes. trials support causal benefits for important capacities and risk factors. Field studies challenge assumptions produced by industrial routines. Behavioural reasoning explains adherence. No single line carries the whole claim.
 
 Its weakest moments occur when a memorable evolutionary narrative seems more certain than the evidence permits. Current hunter-gatherers cannot stand for all ancestors. A useful trait need not have evolved for the current benefit being discussed. A plausible adaptive story does not reveal an exact dose. Observed healthy ageing may reflect selection as well as activity. The book usually shows awareness of trade-offs, but the reader should keep these distinctions active.
@@ -160,7 +146,7 @@ Its practical model can be applied in a simple sequence. First, examine a normal
 
 Second, select the smallest useful change that can recur. It might be a walk attached to lunch, stairs for part of a journey, two brief strength sessions, a dance class, or a game. Begin below the level that creates lasting soreness, dread, or injury. Capacity grows through repeated signals, not a single act of punishment.
 
-Fourth, preserve variation and progression. Walking is valuable but may not supply enough muscular load. Strength work does not replace aerobic capacity. Repetition should gradually increase challenge where appropriate while protecting recovery. Age changes the form and importance of training, not the underlying need for bodies to be used.
+Third, preserve variation and progression. Walking is valuable but may not supply enough muscular load. Strength work does not replace aerobic capacity. Repetition should gradually increase challenge where appropriate while protecting recovery. Age changes the form and importance of training, not the underlying need for bodies to be used.
 
 Finally, judge the design rather than the person. If a plan repeatedly fails, inspect timing, transport, pain, cost, difficulty, social support, and reward. Willpower is one changing capacity inside that system, not an independent moral substance. Redesigning the cause is more useful than escalating contempt.
 
