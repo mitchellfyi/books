@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "behave-sapolsky",
+  "duration": "30-seconds",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/behave-sapolsky/scripts/30-seconds.md",
+  "source_script_sha256": "30bbfec79174192a3a5562d470b0329489d3f9aff5fc94a3be02f2bc97ec2ea3",
+  "pronunciation_dictionary_sha256": "6130478b0dfa77f66e6303a40897bb39c2d71819a66825fe4c9c7a5d5dfd2e5b",
+  "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 70,
+  "audio_seconds": 29.143,
+  "measured_wpm": 144.12,
+  "generated_at": "2026-08-13T19:37:21.479692+00:00"
+}

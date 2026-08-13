@@ -193,7 +193,7 @@
     {
       "book_id": "behave-sapolsky",
       "priority": 26,
-      "status": "in-progress",
+      "status": "done",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Promoted from recommendation stub. Discovered from Determined: the same author's earlier synthesis of the biology of behaviour."
@@ -217,7 +217,7 @@
     {
       "book_id": "why-nations-fail-acemoglu",
       "priority": 29,
-      "status": "ready",
+      "status": "in-progress",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Co-authored with James A. Robinson. Discovered from Guns, Germs, and Steel: the institutions counter-argument documented in that book's own critique ledger."

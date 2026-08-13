@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "behave-sapolsky",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/behave-sapolsky/scripts/5-minutes.md",
+  "source_script_sha256": "3a7210a715d8093945bab3d97fa6ab808c27ed97c7a6025dec74bfa96cbd0ddd",
+  "pronunciation_dictionary_sha256": "6130478b0dfa77f66e6303a40897bb39c2d71819a66825fe4c9c7a5d5dfd2e5b",
+  "pronunciation_terms": [
+    "amygdala"
+  ],
+  "pronunciation_entries_sha256": "c3357a3d86ce060895aca6b39708e399ee2a9cb6df418657e39cd8bf8e69040e",
+  "script_words": 782,
+  "audio_seconds": 300.453,
+  "measured_wpm": 156.16,
+  "generated_at": "2026-08-13T19:38:24.236847+00:00"
+}
