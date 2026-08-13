@@ -8,7 +8,7 @@ status: complete
 
 How Not to Age asks how much of age-related disease and lost function can be delayed. Michael Greger's answer is that genes explain only part of lifespan variation and that diet and lifestyle influence many processes involved in ageing. His preferred intervention is a whole-food plant-based diet, supported by activity, sleep, weight control, stress management, and social ties.
 
-The book is four books in one. First, it maps eleven pathways: AMPK and mTOR nutrient sensing, autophagy or cellular recycling, senescent cells, epigenetics, glycation, IGF-1, inflammation, oxidation, sirtuins, and telomeres. These are real areas of ageing science. They interact, and no one marker represents the whole process.
+The book is four books in one. First, it maps eleven pathways: A. M. P. K. and em-tor nutrient sensing, autophagy or cellular recycling, senescent cells, epigenetics, glycation, IGF-1, inflammation, oxidation, sirtuins, and telomeres. These are real areas of ageing science. They interact, and no one marker represents the whole process.
 
 The critical distinction is between mechanism and outcome. A food may change a molecule in cells, extend life in worms, or improve a biomarker in a short trial without making humans live longer or function better. Mechanisms generate hypotheses. Human clinical outcomes determine confidence. The book's thousands of citations make claims traceable, but do not make every study design equal.
 

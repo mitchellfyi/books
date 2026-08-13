@@ -651,8 +651,32 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "The adversarial pass separated recognised ageing mechanisms from food-mediated human outcomes, treated centenarian patterns as observational clues, compared strict plant-based claims with broader healthy-diet and fish evidence, placed exercise and resistance work beside diet, and tested protein and calorie restriction against muscle, bone, frailty, and geriatric guidance."
+    "review_notes": "The adversarial pass separated recognised ageing mechanisms from food-mediated human outcomes, treated centenarian patterns as observational clues, compared strict plant-based claims with broader healthy-diet and fish evidence, placed exercise and resistance work beside diet, and tested protein and calorie restriction against muscle, bone, frailty, and geriatric guidance.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Verified the full title, author, 2023 publication, hardcover and ebook records, and all four parts and chapter headings against publisher, Google Books, and library records.",
+        "Cross-checked the pathway framework, plant-rich pattern, Blue Zones, physical activity, function, spermidine, calorie restriction, protein restriction, fish, and strict plant-diet adequacy against independent official and specialist evidence.",
+        "Kept mechanism, animal longevity, biomarker movement, observational association, randomised outcome, and human lifespan evidence distinct throughout the profile and scripts.",
+        "Tested the book's plant-based prior against Mediterranean and fish evidence, and tested restriction advice against fat-free mass, bone, malnutrition, sarcopenia, healing, and geriatric protein guidance.",
+        "Restored exercise, resistance work, balance, vaccination, dental and sensory care, rehabilitation, medical treatment, social conditions, and end-of-life dignity to their functional importance.",
+        "Confirmed citation entailment and the configured 6.0 content-only calculation; the author's identity, advocacy, popularity, sales, and reader scores do not affect it.",
+        "Reviewed all four scripts for distinct value, direct British English, evidence calibration, and endings containing only substantive guidance rather than sources, method, production, or disclaimer copy.",
+        "Inspected Kokoro phonemes for Michael Greger, autophagy, senescent, glycation, sirtuins, telomeres, spermidine, quercetin, xenohormesis, microRNA, NAD+, A. M. P. K., and em-tor. Acronyms were made speech-safe in the scripts; all four local tracks are fresh and duration-calibrated."
+      ]
+    }
   }
 }

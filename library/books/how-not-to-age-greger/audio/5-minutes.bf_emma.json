@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "how-not-to-age-greger",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/how-not-to-age-greger/scripts/5-minutes.md",
+  "source_script_sha256": "c3a26261efd255e3163215213f37575a35e9b0d777e8d296998ff798fc51c3c6",
+  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_terms": [],
+  "script_words": 731,
+  "audio_seconds": 305.113,
+  "measured_wpm": 143.75,
+  "generated_at": "2026-08-13T10:10:22.756305+00:00"
+}

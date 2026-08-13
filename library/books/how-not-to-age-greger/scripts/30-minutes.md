@@ -14,9 +14,9 @@ Greger is a physician and nutrition communicator who founded NutritionFacts.org.
 
 The result is four books in one. Part one covers eleven cellular pathways. Part two constructs an optimal diet and lifestyle. Part three examines preservation of fifteen functions, from bones to dignity in death. Part four offers an Anti-Aging Eight. It is a six-hundred-page reference system disguised as a continuous health book.
 
-Part one is the technical foundation. Greger selects AMPK, autophagy, cellular senescence, epigenetics, glycation, IGF-1, inflammation, mTOR, oxidation, sirtuins, and telomeres. Current biogerontology uses overlapping frameworks and has proposed twelve hallmarks of ageing. No list is a final set of independent switches. The processes interact.
+Part one is the technical foundation. Greger selects A. M. P. K., autophagy, cellular senescence, epigenetics, glycation, IGF-1, inflammation, em-tor, oxidation, sirtuins, and telomeres. Current biogerontology uses overlapping frameworks and has proposed twelve hallmarks of ageing. No list is a final set of independent switches. The processes interact.
 
-AMPK is part of cellular energy sensing. It responds when energy is scarce and encourages processes that generate energy rather than store it. mTOR helps cells respond to nutrients, amino acids, and growth signals. Growth is necessary, but permanently elevated growth signalling may trade repair and longevity against development and reproduction. These pathways make fasting, calorie restriction, and protein restriction attractive to longevity researchers.
+A. M. P. K. is part of cellular energy sensing. It responds when energy is scarce and encourages processes that generate energy rather than store it. Em-tor helps cells respond to nutrients, amino acids, and growth signals. Growth is necessary, but permanently elevated growth signalling may trade repair and longevity against development and reproduction. These pathways make fasting, calorie restriction, and protein restriction attractive to longevity researchers.
 
 Attraction is not proof. A pathway can be essential without having one universally desirable setting. An older adult recovering from infection may need energy and protein to rebuild tissue. Suppressing growth signals might sound anti-ageing while undermining muscle and healing. The right response depends on state, timing, tissue, and outcome.
 
@@ -30,7 +30,7 @@ Epigenetics concerns regulation layered onto the DNA sequence. Chemical marks an
 
 Glycation occurs when sugars bind non-enzymatically to proteins, lipids, or DNA, creating products that can stiffen or damage tissue. Persistent high blood glucose increases this burden. Good glucose control, dietary quality, activity, and appropriate treatment therefore matter. The concept does not mean every carbohydrate ages the body equally; beans, intact grains, fruit, and sugary drinks have different structures and effects.
 
-IGF-1 and mTOR illustrate the growth trade-off. Higher growth signalling can support development, muscle, and recovery while potentially influencing cancer or ageing pathways. Animal longevity from reducing particular amino acids cannot be copied directly into older humans. The goal is not the lowest achievable protein or growth factor. It is enough anabolic support without chronic metabolic excess.
+IGF-1 and em-tor illustrate the growth trade-off. Higher growth signalling can support development, muscle, and recovery while potentially influencing cancer or ageing pathways. Animal longevity from reducing particular amino acids cannot be copied directly into older humans. The goal is not the lowest achievable protein or growth factor. It is enough anabolic support without chronic metabolic excess.
 
 Inflammation also has two faces. Acute inflammation fights infection and supports repair. Exercise causes temporary inflammatory signalling that participates in adaptation. Chronic, poorly resolved inflammation is associated with cardiovascular disease, metabolic illness, neurodegeneration, and frailty. A food may lower a blood marker without proving that it prevents those outcomes.
 
@@ -102,7 +102,7 @@ Muscle is where the book's longevity mechanisms collide with geriatric reality. 
 
 Resistance training is the direct intervention. It can improve strength and function even in later life. Protein supports the response. Expert geriatric groups commonly recommend at least one to 1.2 grams of protein per kilogram daily for healthy older adults, with higher needs during activity or illness. Distribution, food quality, kidney function, total energy, and individual goals affect the plan.
 
-Greger is interested in protein restriction because lower amino-acid signalling extends life in some animals and may reduce IGF-1 or mTOR. The translation is uncertain. A frail person losing muscle has an immediate, human outcome that outweighs a theoretical pathway benefit. Plant protein can meet needs, but low-protein ideology should not obscure adequacy.
+Greger is interested in protein restriction because lower amino-acid signalling extends life in some animals and may reduce IGF-1 or em-tor. The translation is uncertain. A frail person losing muscle has an immediate, human outcome that outweighs a theoretical pathway benefit. Plant protein can meet needs, but low-protein ideology should not obscure adequacy.
 
 Sexual function depends on circulation, hormones, medication, relationships, mental health, pain, pelvic health, and chronic disease. Healthy diet and activity can improve contributing factors. Supplements marketed for desire or performance often rely on weak studies. Persistent change warrants a clinical and relational view rather than embarrassment or one food solution.
 

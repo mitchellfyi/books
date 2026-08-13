@@ -348,7 +348,7 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "The full contents, publisher introduction, searchable preview, chapter-indexed companion material, and detailed full-book reviews cover all four parts. Central recommendations were checked against current ageing, diet, activity, protein, calorie-restriction, plant-nutrient, fish, Blue Zone, and spermidine evidence. No uninterrupted lawful full text was used.",
     "last_researched": "2026-08-13",
