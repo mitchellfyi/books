@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-courage-to-be-disliked-kishimi",
+  "duration": "30-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-courage-to-be-disliked-kishimi/scripts/30-minutes.md",
+  "source_script_sha256": "243c8fa2d2d2ea9509e47f679c92bc6eae31fb5195113d85f038dcec96ac31ba",
+  "pronunciation_dictionary_sha256": "f9e3068c817289647c6c9f9d767fd88b709b0dda20c611d27153533f61d83ee8",
+  "pronunciation_terms": [
+    "Fumitake Koga",
+    "Ichiro Kishimi"
+  ],
+  "pronunciation_entries_sha256": "80d6ed78bfccf5f088d0d1101a4aef604749ddab75340a51f8d24ec7f38154f9",
+  "script_words": 4430,
+  "audio_seconds": 1708.926,
+  "measured_wpm": 155.54,
+  "generated_at": "2026-08-13T13:00:26.251505+00:00"
+}

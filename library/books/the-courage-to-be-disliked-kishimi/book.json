@@ -245,10 +245,10 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Official publisher records, the original detailed contents, an English publisher reading guide, a whole-book scholarly review, specialist evidence, independent criticism, and large reader sources cover all five nights and test the strongest claims. No lawfully accessible complete text was used.",
     "last_researched": "2026-08-13",
-    "next_steps": ["Write and review all four content-only narration levels, verify pronunciation, and render local audio."]
+    "next_steps": []
   }
 }

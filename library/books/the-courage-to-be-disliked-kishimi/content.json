@@ -575,12 +575,12 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
     "review_notes": "Official contents, the publisher's page-keyed reading guide, and a detailed whole-book scholarly review cover all five nights. The review preserved the strongest agency, task, community, and present-focus insights while testing trauma, praise, treatment evidence, social connection, power, and shared-task claims against independent sources. Rating uses content factors only; confidence remains medium because no lawfully accessed complete text was available.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
         "identity_and_metadata": true,
         "content_fidelity": true,
@@ -589,10 +589,13 @@
         "citation_entailment": true,
         "product_fit": true,
         "plain_language": true,
-        "audio_pronunciation": false
+        "audio_pronunciation": true
       },
       "notes": [
-        "Pending four narration scripts, pronunciation verification, and local audio rendering."
+        "Identity and five-night structure were checked against official publisher records and an independent whole-book review; no unauthorised full-text source remains.",
+        "Clinical counterevidence is carried into the ideas, limits, decision advice, and content-only rating rather than added as a token caveat.",
+        "All four narrations were checked for plain language, distinct purpose, target length, content-only openings and endings, and current local audio.",
+        "Ichiro Kishimi and Fumitake Koga use verified dictionary entries based on the explicit Japanese name readings supplied by Gentosha and Hobonichi; both entries matched the shortest render."
       ]
     }
   }
