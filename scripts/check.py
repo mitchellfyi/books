@@ -33,9 +33,12 @@ warnings: list[str] = []
 
 NARRATION_META_PATTERNS = {
     r"\bthis (?:brief|summary|transcript)\b": "announces the summary",
+    r"\b(?:as |within )?this library\b": "mentions the product instead of the book",
+    r"\belsewhere on (?:these|the) shelves\b": "mentions the product instead of the book",
+    r"\b(?:the )?rubric(?: excludes| includes| scores| weights)?\b": "describes internal scoring mechanics",
     r"\bover the next\b": "announces the running time",
     r"\byou will hear\b": "announces what the narration will do",
-    r"\bcoverage note\b": "mentions internal coverage metadata",
+    r"\b(?:coverage note|quality review|workflow status|research process|production process)\b": "mentions internal process metadata",
     r"\b(?:sources?|citations?) (?:used|consulted|for this)\b": "describes research provenance",
     r"\b(?:based|researched|sourced|compiled) (?:on|from) (?:the )?(?:publisher|sources?|reviews?|interviews?)\b": "describes research provenance",
     r"\bnot (?:been )?checked against (?:a )?full (?:copy|book|text)\b": "describes research coverage",
