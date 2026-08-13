@@ -8,12 +8,12 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.83,
+  "speed": 0.84,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/the-48-laws-of-power-greene/scripts/30-minutes.md",
   "source_script_sha256": "b051c5c6b4d0aef74757a22c33a700693e9196c41a466c08ecbd797ea1d73a58",
-  "pronunciation_dictionary_sha256": "942f4f6bc6c494dd0ead7a463d20b68a075c68d85972c521c86704bbd14d7607",
+  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
   "pronunciation_terms": [
     "Cialdini",
     "Jay-Z",
@@ -21,7 +21,7 @@
     "Kanye"
   ],
   "script_words": 4185,
-  "audio_seconds": 1669.579,
-  "measured_wpm": 150.4,
-  "generated_at": "2026-08-13T07:42:02.987898+00:00"
+  "audio_seconds": 1651.36,
+  "measured_wpm": 152.06,
+  "generated_at": "2026-08-13T08:48:05.590837+00:00"
 }
