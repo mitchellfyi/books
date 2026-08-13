@@ -12,12 +12,12 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/a-short-history-of-nearly-everything-bryson/scripts/15-minutes.md",
-  "source_script_sha256": "539754cca50ffb107da784429774791bc8e2c0f8e427d2b1959dd9a36eef3989",
-  "pronunciation_dictionary_sha256": "bdc28e82b2ca5bbc57f1f6d80ad69ac5928a882d7fd33dd3be4ece5fa4bc8504",
+  "source_script_sha256": "8caecb2b413285990fe8656e2fcf0ec1abb5c9ac9b55f644316e652af7234d03",
+  "pronunciation_dictionary_sha256": "09636851dc40f9d861f2b7a993ff82c8fd9df24f4152972007facc639a86a240",
   "pronunciation_terms": [],
   "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "script_words": 2121,
-  "audio_seconds": 896.332,
-  "measured_wpm": 141.98,
-  "generated_at": "2026-08-13T12:16:57.794065+00:00"
+  "script_words": 2096,
+  "audio_seconds": 885.047,
+  "measured_wpm": 142.09,
+  "generated_at": "2026-08-13T16:00:44.528514+00:00"
 }
