@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-choice-factory-richard-shotton",
+  "duration": "15-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.87,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-choice-factory-richard-shotton/scripts/15-minutes.md",
+  "source_script_sha256": "98a66387901cb63bcb968bda0189bf15d371478f5e29a51a4cfd0e2f2a3ff7fc",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
+  "pronunciation_terms": [
+    "Cialdini"
+  ],
+  "pronunciation_entries_sha256": "b67801e4bdad3dcc9a6111f225a2c439d445ce6a5d30786f7e07cc77fe2a0cb1",
+  "script_words": 2099,
+  "audio_seconds": 803.283,
+  "measured_wpm": 156.78,
+  "generated_at": "2026-08-13T20:47:34.164262+00:00"
+}

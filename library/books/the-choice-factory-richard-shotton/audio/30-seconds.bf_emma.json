@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-choice-factory-richard-shotton",
+  "duration": "30-seconds",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-choice-factory-richard-shotton/scripts/30-seconds.md",
+  "source_script_sha256": "f335cfe8ae9444a52862e7765da3ad2e092d4f22bf8dbd94d9a947542afe2cdd",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
+  "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 74,
+  "audio_seconds": 28.567,
+  "measured_wpm": 155.43,
+  "generated_at": "2026-08-13T20:47:41.621100+00:00"
+}
