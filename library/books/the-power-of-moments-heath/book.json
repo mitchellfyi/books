@@ -62,5 +62,5 @@
       "/discovery/formats_available":["publisher-book","publishers-weekly"]
     }
   },
-  "workflow": {"status":"researched-partial","coverage":"sample-and-secondary","coverage_notes":"Full contents, first chapter, author companion guide, searchable preview, author interview, three relevant research sources, three independent professional or specialist reviews, and a large reader aggregate cover the argument and all parts. No unauthorised full text was used.","last_researched":"2026-08-13","next_steps":["Optional: verify every case and endnote against an owner-supplied copy before promoting coverage to full-book."]}
+  "workflow": {"status":"complete","coverage":"sample-and-secondary","coverage_notes":"Full contents, first chapter, author companion guide, searchable preview, author interview, three relevant research sources, three independent professional or specialist reviews, and a large reader aggregate cover the argument and all parts. No unauthorised full text was used.","last_researched":"2026-08-13","next_steps":["Optional: verify every case and endnote against an owner-supplied copy before promoting coverage to full-book."]}
 }

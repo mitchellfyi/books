@@ -63,7 +63,7 @@
     {
       "book_id": "the-power-of-moments-heath",
       "priority": 9,
-      "status": "in-progress",
+      "status": "done",
       "source": "user",
       "added_at": "2026-08-13",
       "notes": "Co-authored with Dan Heath; add both author profiles."
