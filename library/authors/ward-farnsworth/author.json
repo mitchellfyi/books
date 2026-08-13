@@ -6,20 +6,137 @@
   "name": "Ward Farnsworth",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American legal scholar, former dean of the University of Texas School of Law, who writes elegant practitioner's handbooks on rhetoric, Stoicism, and the Socratic method.",
+      "source_ids": ["texas-law-faculty", "farnsworth-site", "godine-socratic"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Farnsworth studied history at Wesleyan University and law at the University of Chicago, clerked for Judge Richard Posner and Justice Anthony Kennedy, taught for fifteen years at Boston University School of Law, and served as dean of the University of Texas School of Law from 2012 to 2022. Alongside legal scholarship on torts and legal reasoning, he has built a distinctive shelf of books for general readers with the publisher Godine: the Farnsworth's Classical English series on rhetoric, metaphor, style, and argument, The Practicing Stoic, and The Socratic Method.",
+      "source_ids": ["texas-law-faculty", "farnsworth-site", "lawdragon-limelight"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His books share one method: assemble the best primary passages ever written on a subject, organise them by structure rather than chronology, and interleave plain-spoken commentary. He describes himself as a polymath who chose law because it let him avoid choosing.",
+      "source_ids": ["lawdragon-limelight", "farnsworth-site", "larb-farnsworth"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Professional authority in legal reasoning and rhetoric, and long classroom practice with the law-school version of Socratic teaching. He is a scholarly generalist on the classical sources rather than a professional classicist or Plato specialist, and his books present themselves accordingly: practitioner's handbooks, not contributions to the scholarship.",
+      "source_ids": ["texas-law-faculty", "godine-socratic", "larb-farnsworth"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Farnsworth writes as an admirer and populariser of classical thought, with a lawyer's taste for structure and a stylist's ear. The strengths are clarity, organisation, and generous quotation; the limits are those of the genre: interpretive controversies are smoothed over, and readers wanting critical distance from the tradition, or engagement with contemporary academic debates, must look elsewhere.",
+      "source_ids": ["larb-farnsworth", "godine-socratic", "goodreads-socratic"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Farnsworth's Classical English Rhetoric",
+      "year": 2011,
+      "kind": "Book",
+      "relationship": "First of the classical-English handbooks: rhetorical figures illustrated from masters of English prose.",
+      "source_ids": ["farnsworth-site", "larb-farnsworth"]
+    },
+    {
+      "title": "The Practicing Stoic",
+      "year": 2018,
+      "kind": "Book",
+      "relationship": "A user's manual for Stoicism assembled from the primary sources, in the same handbook format.",
+      "source_ids": ["farnsworth-site", "larb-farnsworth"]
+    },
+    {
+      "title": "The Socratic Method: A Practitioner's Handbook",
+      "year": 2021,
+      "kind": "Book",
+      "relationship": "The subject of this profile: what the method is, how to do it, and why it matters now.",
+      "source_ids": ["godine-socratic"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "texas-law-faculty",
+        "title": "Ward Farnsworth — Faculty",
+        "author_or_publisher": "University of Texas School of Law",
+        "url": "https://law.utexas.edu/faculty/ward-farnsworth/",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Deanship dates, Boston University years, clerkships for Posner and Kennedy, education, and teaching fields.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Institutional profile; celebratory but factual."
+      },
+      {
+        "id": "farnsworth-site",
+        "title": "Books by Ward Farnsworth",
+        "author_or_publisher": "wardfarnsworth.com",
+        "url": "http://www.wardfarnsworth.com/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "The author's own list and framing of his books.",
+        "independence": "primary",
+        "quality": "medium",
+        "limitations": "Self-presentation."
+      },
+      {
+        "id": "lawdragon-limelight",
+        "title": "Dean Limelight: Ward Farnsworth",
+        "author_or_publisher": "Lawdragon",
+        "url": "https://www.lawdragon.com/lawyer-limelights/2019-02-25-lawyer-limelight-dean-ward-farnsworth-university-of-texas-law-school",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "Career narrative and the polymath-by-way-of-law self-description.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Friendly profile interview."
+      },
+      {
+        "id": "larb-farnsworth",
+        "title": "You Must Change Your Writing Style: Ward Farnsworth's Guidebooks",
+        "author_or_publisher": "Los Angeles Review of Books",
+        "url": "https://lareviewofbooks.org/article/you-must-change-your-writing-style-ward-farnsworths-guidebooks-to-english-virtuosity-and-ancient-philosophy/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent literary assessment of Farnsworth's handbook method, its strengths, and its genre limits.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Covers the series broadly rather than the Socratic book alone."
+      },
+      {
+        "id": "godine-socratic",
+        "title": "The Socratic Method",
+        "author_or_publisher": "David R. Godine, Publisher",
+        "url": "https://godine.com/products/socratic-method",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication facts and the publisher's description of the book's content and aims.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher copy."
+      },
+      {
+        "id": "goodreads-socratic",
+        "title": "The Socratic Method: A Practitioner's Handbook",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/en/book/show/57185177-the-socratic-method",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Reader reception patterns for the book.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/name": ["texas-law-faculty", "farnsworth-site"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile from the employer record, the author's site, an independent literary review of his method, and an interview; private-life detail excluded.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

@@ -71,7 +71,7 @@
     {
       "book_id": "unreasonable-hospitality-guidara",
       "priority": 10,
-      "status": "in-progress",
+      "status": "done",
       "source": "user",
       "added_at": "2026-08-13",
       "notes": "Request spelt the surname 'Guidera'; correct spelling is Guidara."
@@ -79,14 +79,14 @@
     {
       "book_id": "the-socratic-method-farnsworth",
       "priority": 11,
-      "status": "ready",
+      "status": "in-progress",
       "source": "user",
       "added_at": "2026-08-13"
     },
     {
       "book_id": "the-farther-reaches-of-human-nature-maslow",
       "priority": 12,
-      "status": "ready",
+      "status": "in-progress",
       "source": "user",
       "added_at": "2026-08-13",
       "notes": "Request said 'Father Reaches'; canonical title is The Farther Reaches of Human Nature."

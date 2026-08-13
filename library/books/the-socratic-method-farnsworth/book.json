@@ -4,28 +4,155 @@
   "id": "the-socratic-method-farnsworth",
   "type": "book",
   "title": "The Socratic Method",
-  "alternate_titles": [],
+  "alternate_titles": ["The Socratic Method: A Practitioner's Handbook"],
   "author_ids": ["ward-farnsworth"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2021",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US hardcover",
+        "publisher": "David R. Godine",
+        "publication_date": "2021-10-05",
+        "isbn_10": "1567926851",
+        "isbn_13": "9781567926859",
+        "format": "Hardcover",
+        "pages": 264
+      },
+      {
+        "label": "US softcover",
+        "publisher": "David R. Godine",
+        "publication_date": "2025-09-01",
+        "isbn_10": null,
+        "isbn_13": "9781567928464",
+        "format": "Paperback",
+        "pages": 264
+      }
+    ],
+    "contents": [
+      "What the Socratic method is and where it came from",
+      "The elements of the method, step by step, with examples from Plato's dialogues",
+      "The elenchus: testing principles for consistency",
+      "Ignorance, aporia, and the double meaning of knowing you don't know",
+      "Socratic ethics: the method as patience, inquiry, humility, and doubt",
+      "Socrates and the Stoics",
+      "The method against the habits of modern discourse"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "communication",
+      "decision-making",
+      "non-fiction",
+      "philosophy",
+      "problem-solving",
+      "psychology",
+      "self-awareness"
+    ],
+    "audiences": [
+      "Readers who want to think and argue more carefully",
+      "Teachers, lawyers, and coaches who work by questioning",
+      "Readers of Stoicism looking for its Socratic roots",
+      "Anyone exhausted by the quality of modern argument"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "godine-socratic",
+        "title": "The Socratic Method",
+        "author_or_publisher": "David R. Godine, Publisher",
+        "url": "https://godine.com/products/socratic-method",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Title, author, publication dates, ISBNs, 264 pages, formats, the publisher's description (method as technique and ethic; hundreds of classical quotations; chapters on Socratic Ethics, Ignorance, Testing Principles, Socrates and the Stoics), and attributed review quotes.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher copy; authoritative for facts, promotional for quality."
+      },
+      {
+        "id": "george-will-wapo",
+        "title": "George F. Will on The Socratic Method",
+        "author_or_publisher": "The Washington Post (quoted by the publisher)",
+        "url": "https://godine.com/products/socratic-method",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent columnist's assessment: the method decelerates reasoning and is an antidote to social pandemics of our day.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via publisher-quoted excerpts rather than the original column."
+      },
+      {
+        "id": "philpapers-socratic",
+        "title": "Ward Farnsworth, The Socratic Method: A Practitioner's Handbook",
+        "author_or_publisher": "PhilPapers",
+        "url": "https://philpapers.org/rec/FARTSM-6",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent bibliographic confirmation and the book's registration in the philosophy literature index.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Catalogue record."
+      },
+      {
+        "id": "platos-academy-interview",
+        "title": "Ward Farnsworth on the Socratic Method",
+        "author_or_publisher": "Plato's Academy Centre",
+        "url": "https://platosacademy.org/ward-farnsworth-on-the-socratic-method/",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "The author's own account of the book's aims and the method's relevance to modern discourse.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Sympathetic venue."
+      },
+      {
+        "id": "larb-farnsworth",
+        "title": "You Must Change Your Writing Style: Ward Farnsworth's Guidebooks",
+        "author_or_publisher": "Los Angeles Review of Books",
+        "url": "https://lareviewofbooks.org/article/you-must-change-your-writing-style-ward-farnsworths-guidebooks-to-english-virtuosity-and-ancient-philosophy/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent literary assessment of Farnsworth's handbook method: quotation-anthology structure, clarity, and the genre's limits.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Assesses the author's series; the Socratic volume shares the method."
+      },
+      {
+        "id": "goodreads-socratic",
+        "title": "The Socratic Method: A Practitioner's Handbook",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/en/book/show/57185177-the-socratic-method",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Warm reader reception with recurring notes: exceptional clarity, and some readers wanting more practice drills than the handbook label implies.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/title": ["godine-socratic", "philpapers-socratic"],
+      "/alternate_titles": ["godine-socratic"],
+      "/author_ids": ["godine-socratic", "philpapers-socratic"],
+      "/bibliography/first_published": ["godine-socratic", "philpapers-socratic"],
+      "/bibliography/original_language": ["philpapers-socratic"],
+      "/bibliography/editions/0": ["godine-socratic"],
+      "/bibliography/editions/1": ["godine-socratic"],
+      "/bibliography/contents": ["godine-socratic", "platos-academy-interview"],
+      "/discovery/tag_ids": ["godine-socratic", "platos-academy-interview"],
+      "/discovery/audiences": ["godine-socratic", "george-will-wapo", "goodreads-socratic"],
+      "/discovery/formats_available": ["godine-socratic"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the publisher record, independent professional commentary, the author's interviews, and reader reception; chapter-level claims follow the publisher's own chapter list and the author's account.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: verify the dialogue-by-dialogue examples against a full copy to raise coverage."
+    ]
   }
 }

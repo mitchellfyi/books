@@ -341,6 +341,13 @@
       "aliases": []
     },
     {
+      "id": "philosophy",
+      "kind": "topic",
+      "label": "Philosophy",
+      "description": "Works engaging directly with philosophical traditions, methods, or questions.",
+      "aliases": []
+    },
+    {
       "id": "political-psychology",
       "kind": "topic",
       "label": "Political psychology",

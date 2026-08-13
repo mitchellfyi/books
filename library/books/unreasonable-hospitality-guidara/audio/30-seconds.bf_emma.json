@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "unreasonable-hospitality-guidara",
+  "duration": "30-seconds",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/unreasonable-hospitality-guidara/scripts/30-seconds.md",
+  "source_script_sha256": "c3cda0db7fda07840d93a94ba9f27e6ce257971fa1398cbf7c9a220f6962f3ac",
+  "pronunciation_dictionary_sha256": "749e2ab64539bcd1df7475cdbc1dc9db469a216689c70ea8f9964a12f11a650a",
+  "pronunciation_terms": [
+    "Guidara"
+  ],
+  "pronunciation_entries_sha256": "96d80e1139fafb15804424e18c159e08e590296ca2a37d0d2a827c1055b909ad",
+  "script_words": 74,
+  "audio_seconds": 28.823,
+  "measured_wpm": 154.05,
+  "generated_at": "2026-08-13T11:13:18.856366+00:00"
+}

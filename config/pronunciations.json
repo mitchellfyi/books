@@ -109,6 +109,30 @@
       "source_url": "https://dictionary.cambridge.org/pronunciation/english/michelin",
       "verified_at": "2026-08-13",
       "notes": "MISH-uh-lin per Cambridge Dictionary. The unassisted phonemizer produced MITCH-i-lin (mˈɪtʃɪlˌɪn)."
+    },
+    {
+      "term": "elenchus",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "ɪlˈɛŋkəs",
+        "en-us": "ɪlˈɛŋkəs"
+      },
+      "source_url": "https://www.merriam-webster.com/dictionary/elenchus",
+      "verified_at": "2026-08-13",
+      "notes": "ih-LENG-kus, with the Greek chi as a hard k, per Merriam-Webster. The unassisted phonemizer produced ih-LEN-chus with a church-ch (ɪlˈɛntʃəs)."
+    },
+    {
+      "term": "Plato",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "plˈeɪtəʊ",
+        "en-us": "plˈeɪtoʊ"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/plato",
+      "verified_at": "2026-08-13",
+      "notes": "PLAY-toe per Cambridge Dictionary. The unassisted British phonemizer produced PLAH-toe (plˈɑːtəʊ). Case-sensitive to avoid touching unrelated lowercase text."
     }
   ]
 }
