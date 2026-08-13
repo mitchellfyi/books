@@ -631,12 +631,12 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": true,
-    "review_notes": "Checked against the complete text, appendix, and notes. Individual, organisational, commercial, social, and responsibility claims were separated and challenged with later habit reviews, formation evidence, implementation-intention trials, ego-depletion replication, and an adversarial reconstruction of the Target story. Narration and audio review remain.",
+    "review_notes": "Checked against the complete text, appendix, and notes. Individual, organisational, commercial, social, and responsibility claims were separated and challenged with later habit reviews, formation evidence, implementation-intention trials, ego-depletion replication, and an adversarial reconstruction of the Target story. All four content-only narrations and local audio files passed final review.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
         "identity_and_metadata": true,
         "content_fidelity": true,
@@ -645,10 +645,12 @@
         "citation_entailment": true,
         "product_fit": true,
         "plain_language": true,
-        "audio_pronunciation": false
+        "audio_pronunciation": true
       },
       "notes": [
-        "Research and adversarial content review passed; narration timing, pronunciation, and local audio remain."
+        "Identity, full-book fidelity, citations, later evidence, counterarguments, and the content-only rating passed adversarial review.",
+        "All scripts are inside their word-count tolerances and end on substantive book content without source, method, or production notices.",
+        "All four local MP3s and metadata sidecars were generated. Duhigg, Febreze, and Kufa use verified deterministic pronunciations where they occur."
       ]
     }
   }

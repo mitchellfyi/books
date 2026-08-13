@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-power-of-habit-duhigg",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-power-of-habit-duhigg/scripts/5-minutes.md",
+  "source_script_sha256": "5fa95e22f028408c6a78e587e91b7132735798a35367eddfb093d40c65d72c13",
+  "pronunciation_dictionary_sha256": "bdc28e82b2ca5bbc57f1f6d80ad69ac5928a882d7fd33dd3be4ece5fa4bc8504",
+  "pronunciation_terms": [
+    "Duhigg",
+    "Febreze"
+  ],
+  "pronunciation_entries_sha256": "7882d06e61a89bdb3f69057d17bf55e2d0cf6edac2b9a92e3f5d5bbb20f6582f",
+  "script_words": 709,
+  "audio_seconds": 270.071,
+  "measured_wpm": 157.51,
+  "generated_at": "2026-08-13T12:08:50.100091+00:00"
+}

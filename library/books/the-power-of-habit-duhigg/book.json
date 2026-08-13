@@ -314,10 +314,10 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "full-book",
     "coverage_notes": "Complete text and notes checked against publisher and library metadata, author tools, six independent habit and self-control research sources, an adversarial Target analysis, three professional reviews, and two reader aggregates. Later research was used to separate durable context-and-repetition claims from dated ego-depletion and broad case-based claims.",
     "last_researched": "2026-08-13",
-    "next_steps": ["Create and time all four content-only narrations, test pronunciation, render local audio, and complete the final quality review."]
+    "next_steps": []
   }
 }
