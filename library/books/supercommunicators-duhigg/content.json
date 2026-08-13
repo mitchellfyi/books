@@ -21,7 +21,7 @@
   },
   "overview": {
     "synopsis": {
-      "text": "Every discussion is really one of three conversations: practical (What's this really about?), emotional (How do we feel?), or social (Who are we?). Miscommunication is usually mismatch — one person solving while the other needs feeling heard. Supercommunicators notice which conversation is happening, match it, and use learnable techniques — looping for understanding, deep questions, visible listening — to turn arguments into learning conversations. Case studies run from CIA officer Jim Lawler's recruitment of the asset he called Yasmin, and a deadlocked jury to The Big Bang Theory writers' room, vaccine-hesitant patients, and Netflix's hardest identity discussions.",
+      "text": "Conversations move among three modes: practical (What's this really about?), emotional (How do we feel?), and social (Who are we?). Miscommunication often comes from mismatch — one person solving while the other needs feeling heard. Supercommunicators notice the active mode, match it, and use learnable techniques — open questions, looping for understanding, and visible listening — to turn arguments into learning conversations. Case studies run from CIA officer Jim Lawler's recruitment of the asset he called Yasmin, and the Leroy Reed jury to The Big Bang Theory, vaccine-hesitant patients, and Netflix's hardest identity discussions.",
       "source_ids": [
         "prh-supercommunicators",
         "shelf-reflection-supercommunicators",
@@ -41,10 +41,10 @@
   "ideas": [
     {
       "id": "three-conversations",
-      "title": "Every discussion is one of three conversations",
-      "claim": "Talk sorts into practical (What's this really about?), emotional (How do we feel?), and social (Who are we?) conversations, each with its own logic and needs.",
+      "title": "Conversation moves among three modes",
+      "claim": "Talk moves among practical (What's this really about?), emotional (How do we feel?), and social (Who are we?) modes, each with its own logic and needs.",
       "explanation": "The practical layer wants plans and decisions; the emotional layer wants feelings acknowledged, not solved; the social layer negotiates identities — who we are to each other and which groups are in the room. The same sentence can belong to any layer, which is why content alone never explains a conversation's success.",
-      "representative_example": "A spouse recounting a terrible workday wants the emotional conversation; the partner who answers with logistics — the practical one — is being helpful and making it worse.",
+      "representative_example": "Duhigg describes complaining on family holidays when he wanted support; his wife's sensible advice answered a practical conversation when he was asking for an emotional one.",
       "why_it_matters": "The taxonomy gives ordinary people a diagnostic for why a conversation is failing while it is still failing.",
       "caveat": "The three-way split is a useful simplification, not a discovery; counselling and negotiation literatures have carved similar joints for decades.",
       "source_ids": [
@@ -88,7 +88,7 @@
       "title": "Deep questions convert facts into values",
       "claim": "Questions about beliefs, values, and experiences — rather than facts and logistics — create connection fastest, and almost nobody minds being asked.",
       "explanation": "Reframe 'Where do you live?' as 'What do you like about where you live?' and the answer must come from values. Duhigg leans on the fast-friends research tradition: escalating self-disclosure, reciprocated, manufactures closeness reliably, and vulnerability is the currency. Deep questions are how strangers skip small talk without trespassing.",
-      "representative_example": "The surgeon in the book's medical case stops presenting treatment options and asks what the patient actually wants his remaining life to look like — and the decision changes.",
+      "representative_example": "Surgeon Behfar Ehdaie begins asking prostate-cancer patients what the diagnosis means to them, revealing that some want data while others need reassurance or want to talk about family.",
       "why_it_matters": "It is the cheapest technique in the book: one reworded question per conversation.",
       "caveat": "In low-trust or high-power-gap settings, invited vulnerability can be extraction; the book under-discusses when deep questions are not yours to ask.",
       "source_ids": [
@@ -102,8 +102,8 @@
       "id": "identity-conversations",
       "title": "Who-are-we conversations are the hardest and the most avoided",
       "claim": "Discussions touching race, belief, belonging, or group membership are social-identity conversations, and they fail when treated as practical or purely personal.",
-      "explanation": "Identity threat makes people defend groups rather than examine claims. The book's Netflix case study follows the company's attempt to talk about race and belonging after a public firing: progress came from acknowledging multiple identities in the room, distinguishing intent from impact, and making the conversation's rules explicit before its content.",
-      "representative_example": "Netflix's facilitated dialogues, in the book's telling, worked when participants could speak as themselves rather than as representatives.",
+      "explanation": "Identity threat makes people defend groups rather than examine claims. The book's Netflix case study follows the company's attempt to talk about race and belonging after a public firing: it added guidelines that favoured preparation, curiosity, personal experience, respect, and listening over spontaneous debate and blame.",
+      "representative_example": "Netflix's workshops, in the book's telling, became more useful when employees understood that the aim was listening and awareness rather than assigning blame.",
       "why_it_matters": "It names the conversation type most workplaces are currently failing at.",
       "caveat": "The critical reception is right that the framework thins at scale: what works in a facilitated room does not obviously survive politics, harassment, or bad faith.",
       "source_ids": [
@@ -146,7 +146,7 @@
       "order": 2,
       "title": "Practical Conversations",
       "purpose": "The what-is-this-about layer.",
-      "summary": "Decision-making talk, The Big Bang Theory writers' room, and how groups negotiate what a discussion is for.",
+      "summary": "Decision-making talk, the Leroy Reed jury, surgeon Behfar Ehdaie's patient consultations, and how people negotiate what a discussion is for and which logic to use.",
       "idea_ids": [
         "three-conversations"
       ],
@@ -160,7 +160,7 @@
       "order": 3,
       "title": "Emotional Conversations",
       "purpose": "The how-do-we-feel layer.",
-      "summary": "Looping, deep questions, vulnerability reciprocity, and the jury and medical cases where feeling heard changed outcomes.",
+      "summary": "Deep questions, vulnerability, the emotional matching illustrated by The Big Bang Theory and NASA's astronaut screening, and looping during conflict.",
       "idea_ids": [
         "looping",
         "deep-questions"
@@ -175,7 +175,7 @@
       "order": 4,
       "title": "Social and Identity Conversations",
       "purpose": "The who-are-we layer.",
-      "summary": "Identity threat, the Netflix dialogues, vaccine-hesitancy and gun-control conversations across deep disagreement.",
+      "summary": "Social identity in vaccine conversations, shared identities across group divides, and Netflix's attempt to make difficult workplace conversations safer.",
       "idea_ids": [
         "identity-conversations"
       ],
@@ -186,9 +186,9 @@
     },
     {
       "order": 5,
-      "title": "Communicating in a Digital World",
-      "purpose": "Apply the frame to text.",
-      "summary": "The four online rules and why screens demand deliberate warmth.",
+      "title": "Guides and Afterword",
+      "purpose": "Turn each part into practice and explain why conversation matters.",
+      "summary": "Learning-conversation rules, including the four online practices, followed by a final case for deliberate connection.",
       "idea_ids": [
         "online-rules"
       ],
@@ -316,17 +316,17 @@
       }
     ],
     "importance": {
-      "text": "The 2024 entry in Duhigg's run of behavioural bestsellers: an NPR best-book-of-the-year selection and business-book-award finalist that put 'what kind of conversation is this?' into managerial vocabulary within a year of publication.",
+      "text": "The book packages several strands of conversation research into a simple diagnostic and a small set of practices. Its practical importance is that readers can identify a mismatch while a conversation is happening, rather than only understanding the failure afterwards.",
       "source_ids": [
-        "goodreads-supercommunicators",
+        "prh-supercommunicators",
         "kirkus-supercommunicators"
       ],
       "basis": "synthesis"
     },
     "author_and_purpose": {
-      "text": "Duhigg — Pulitzer-winning journalist and author of The Power of Habit — frames the book with his own confessed failure: a communicator by trade who kept misfiring at home, answering his wife's emotional conversations with practical solutions. The book is his reported attempt to learn what the people who never misfire are doing.",
+      "text": "Duhigg — Pulitzer-winning journalist and author of The Power of Habit — frames the book with failures as a first-time manager and at home. On family holidays, he would complain because he wanted support, while his wife offered sensible advice; he felt unheard. The book is his reported attempt to learn why a communicator by trade still struggled to connect.",
       "source_ids": [
-        "prh-supercommunicators",
+        "prh-teachers-guide",
         "author-site-supercommunicators"
       ],
       "basis": "synthesis"
@@ -355,7 +355,7 @@
       "praise": [
         "Kirkus: unpacks the essential tools for effective, positive conversations.",
         "NPR best-books selection and SABEW award finalist.",
-        "Publisher records list an NPR best-books selection and a SABEW Best in Business Book Award finalist place."
+        "SSIR calls the book actionable even while questioning its novelty and limits."
       ],
       "criticism": [
         "SSIR: advice 'rather obvious'; ethics of persuasion unaddressed.",
@@ -467,6 +467,7 @@
         "Case-study names verified against the publisher's companion guide and documented summaries: Felix Sigala (FBI, prologue) and Jim Lawler's recruitment of 'Yasmin' (CIA); others kept at the documented level.",
         "The SSIR critique (obviousness, ethics blind spot, scale limits) is carried into ideas, scope, and the rating's calibration dimension rather than quoted as decoration.",
         "The neural-synchrony caveat is applied wherever the matching principle is stated.",
+        "Adversarial review corrected the draft's reversed account of Duhigg's family example and its descriptions of Yasmin, the Leroy Reed jury, Behfar Ehdaie's consultations, The Big Bang Theory, and NASA's astronaut screening against the official companion guide.",
         "Rating scored on content only; bestseller status, prizes, and endorsements excluded per rubric.",
         "Pending corrected narration audio. Duhigg uses the existing shared pronunciation entry verified against the Library of Congress Say How guide."
       ]

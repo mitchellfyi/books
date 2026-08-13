@@ -18,7 +18,7 @@
     },
     "background": {
       "text": "His training combines history and business education with long-form reporting. The Power of Habit grew from his interest in military routines while reporting in Iraq and uses the methods of explanatory journalism: interviews, scenes, documents, expert interpretation, and extensive notes. His later books use the same story-and-research structure for productivity and conversation.",
-      "source_ids": ["official-bio", "full-book", "new-yorker-profile"],
+      "source_ids": ["official-bio", "publisher-book", "new-yorker-profile"],
       "basis": "synthesis"
     },
     "expertise": {
@@ -28,7 +28,7 @@
     },
     "perspective_and_limits": {
       "text": "Duhigg favours a clear model carried by vivid personal and corporate stories. That makes concepts accessible and exposes institutional systems, but selected success stories can imply a single cause, compress contested research, or make an illustrative case feel representative. His business background and journalistic method help him enter organisations; they do not establish intervention efficacy or a complete theory of behaviour.",
-      "source_ids": ["official-bio", "full-book", "kirkus-review", "scientific-american-review"],
+      "source_ids": ["official-bio", "publisher-book", "kirkus-review", "scientific-american-review"],
       "basis": "inference"
     }
   },
@@ -106,18 +106,6 @@
         "limitations": "Confirms one reporting project, not expertise in habit science."
       },
       {
-        "id": "full-book",
-        "title": "The Power of Habit: Why We Do What We Do in Life and Business",
-        "author_or_publisher": "Charles Duhigg and Random House; Saraswati Assam host",
-        "url": "https://saraswatiassam.org/BOOKS/The-Power-Of-Habit.pdf",
-        "type": "book",
-        "independence": "primary",
-        "quality": "medium",
-        "accessed_at": "2026-08-13",
-        "supports": "Author's account of the book's origin, stated method, interviews, source process, notes, and reporting style.",
-        "limitations": "Third-party copy with uncertain provenance; used for content and author method, not metadata."
-      },
-      {
         "id": "publisher-book",
         "title": "The Power of Habit",
         "author_or_publisher": "Penguin Random House",
@@ -160,7 +148,7 @@
   },
   "workflow": {
     "status": "complete",
-    "coverage_notes": "Profile checked against the author's full biography, current employer and publisher profiles, the official Pulitzer record, his book's method note, and two independent reviews. Scientific expertise is kept distinct from explanatory-journalism expertise.",
+    "coverage_notes": "Profile checked against the author's biography, current employer and publisher profiles, the official Pulitzer record, publisher material about his reporting method, and two independent reviews. Scientific expertise is kept distinct from explanatory-journalism expertise.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
