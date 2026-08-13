@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "at-home-bryson",
+  "duration": "15-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.86,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/at-home-bryson/scripts/15-minutes.md",
+  "source_script_sha256": "9091d8d093a89bcd7b268723f29e9f4c51cdee977e49c4634be53f02c848a697",
+  "pronunciation_dictionary_sha256": "0cdd6a76593b6767bc765006b700f833aee567ca5dc31fc60eaaae967c8c1eb6",
+  "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 2099,
+  "audio_seconds": 814.504,
+  "measured_wpm": 154.62,
+  "generated_at": "2026-08-13T11:58:26.667361+00:00"
+}
