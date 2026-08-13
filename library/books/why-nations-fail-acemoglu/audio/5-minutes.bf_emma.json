@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "why-nations-fail-acemoglu",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/why-nations-fail-acemoglu/scripts/5-minutes.md",
+  "source_script_sha256": "f480e4785adaa41e49c01ae186194356b4475e94470f76d7c5389a295b81b6cd",
+  "pronunciation_dictionary_sha256": "3be5a030c9f59810a3b40fabb2e933b4d00b8981379040e4ca3b740eca643190",
+  "pronunciation_terms": [
+    "Acemoglu"
+  ],
+  "pronunciation_entries_sha256": "2b6615b2246c824d8220bfc19f15a59284e400c236438e5fce99ee313307ecf5",
+  "script_words": 802,
+  "audio_seconds": 306.321,
+  "measured_wpm": 157.09,
+  "generated_at": "2026-08-13T19:58:29.591187+00:00"
+}
