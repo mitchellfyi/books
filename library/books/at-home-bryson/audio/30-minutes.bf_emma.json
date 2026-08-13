@@ -8,16 +8,16 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.9,
+  "speed": 0.86,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/at-home-bryson/scripts/30-minutes.md",
-  "source_script_sha256": "0e96c8e932841013c4de4df1087296752c8da078aea8d900742b201598d73f40",
-  "pronunciation_dictionary_sha256": "0cdd6a76593b6767bc765006b700f833aee567ca5dc31fc60eaaae967c8c1eb6",
+  "source_script_sha256": "ec2870879395503fd78e187e11eb6ff816b5a79a5ee03db25d0b0ca93b5e12a5",
+  "pronunciation_dictionary_sha256": "09636851dc40f9d861f2b7a993ff82c8fd9df24f4152972007facc639a86a240",
   "pronunciation_terms": [],
   "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "script_words": 4192,
-  "audio_seconds": 1570.367,
-  "measured_wpm": 160.17,
-  "generated_at": "2026-08-13T12:03:20.193983+00:00"
+  "script_words": 4185,
+  "audio_seconds": 1624.019,
+  "measured_wpm": 154.62,
+  "generated_at": "2026-08-13T16:35:57.397510+00:00"
 }
