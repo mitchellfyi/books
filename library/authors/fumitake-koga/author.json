@@ -1,0 +1,194 @@
+{
+  "$schema": "../../../schemas/author.schema.json",
+  "schema_version": 1,
+  "id": "fumitake-koga",
+  "type": "author",
+  "name": "Fumitake Koga",
+  "alternate_names": ["古賀史健", "Koga Fumitake"],
+  "profile": {
+    "one_line": {
+      "text": "Japanese writer, interviewer, editor, and writing teacher who turned Ichiro Kishimi's Adlerian teaching into an accessible philosophical dialogue.",
+      "source_ids": ["hobonichi-profile", "simon-schuster-profile", "diamond-book"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Fukuoka in 1973, Koga studied art at Kyushu Sangyo University, worked in an optician's shop and publishing, and became an independent writer in 1998. He later founded the writing company Batons. His work spans interviews, book development, business and general non-fiction, and instruction in research, writing, and revision.",
+      "source_ids": ["hobonichi-profile", "diamond-author-profile"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "Koga encountered Adlerian psychology in his twenties, repeatedly interviewed Kishimi in Kyoto, and chose the classical dialogue form to make the ideas argue with a skeptical reader. His stated view of writing places research and interviewing before polished sentences, which helps explain the book's question-and-objection architecture.",
+      "source_ids": ["simon-schuster-profile", "hobonichi-profile"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Koga's expertise is editorial and explanatory: interviewing, structuring arguments, anticipating resistance, and making specialist ideas readable. He is not presented as a psychologist, clinician, trauma researcher, or historian of psychology. His authority in this book concerns the form and communication of Kishimi's interpretation, not independent validation of its clinical claims.",
+      "source_ids": ["hobonichi-profile", "simon-schuster-profile", "diamond-author-profile"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Koga writes for clarity, movement, and reader engagement. The fictional youth voices objections, but the philosopher controls the terms and always wins; this makes difficult ideas memorable while producing straw opponents and false certainty. The dialogue should be read as persuasive craft, not a balanced record of philosophical or scientific debate.",
+      "source_ids": ["full-book", "sefad-review", "storygraph-reception"],
+      "basis": "inference"
+    }
+  },
+  "selected_works": [
+    {
+      "title": "The Courage to Be Disliked",
+      "year": 2013,
+      "kind": "Book, co-authored with Ichiro Kishimi",
+      "relationship": "Koga's dialogue structure makes Kishimi's Adlerian interpretation accessible through a skeptical youth and confident philosopher.",
+      "source_ids": ["diamond-book", "simon-schuster-profile"]
+    },
+    {
+      "title": "The Courage to Be Happy",
+      "year": 2016,
+      "kind": "Book, co-authored with Ichiro Kishimi",
+      "relationship": "Sequel applying and testing the first book's philosophy through education and love.",
+      "source_ids": ["diamond-history"]
+    },
+    {
+      "title": "A Writing Lecture I Wish I Had Taken at Twenty",
+      "year": null,
+      "kind": "Book",
+      "relationship": "Koga's guide to writing and communicating ideas clearly.",
+      "source_ids": ["hobonichi-profile"]
+    },
+    {
+      "title": "Interview, Write, Revise",
+      "year": null,
+      "kind": "Book",
+      "relationship": "A fuller statement of his research-first method for professional writers.",
+      "source_ids": ["hobonichi-profile"]
+    },
+    {
+      "title": "Take Up Your Pen on a Lonely Night",
+      "year": 2023,
+      "kind": "Book",
+      "relationship": "A young-reader fable about using a diary for self-understanding.",
+      "source_ids": ["poplar-catalogue"]
+    }
+  ],
+  "research": {
+    "sources": [
+      {
+        "id": "hobonichi-profile",
+        "title": "だれでもが、なにかを書く時代に、なにをどう書くか",
+        "author_or_publisher": "Hobonichi",
+        "url": "https://www.1101.com/n/s/school_lecture_34",
+        "type": "interview",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Birth, education, employment, independent writing career, Batons role, award, selected works, and Koga's research-first definition of a writer.",
+        "limitations": "Promotional lecture profile and edited talk; career facts are reliable but self-described philosophy is interested."
+      },
+      {
+        "id": "simon-schuster-profile",
+        "title": "The Courage to Be Disliked — About the Authors",
+        "author_or_publisher": "Simon & Schuster / Atria Books",
+        "url": "https://www.simonandschuster.com/books/The-Courage-to-Be-Disliked/Ichiro-Kishimi/9781501197277",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Non-fiction writing background, encounter with Adlerian psychology, repeated visits to Kishimi, note-taking, and choice of Greek dialogue format.",
+        "limitations": "Publisher biography intended to establish authority; it does not independently assess the book's claims."
+      },
+      {
+        "id": "diamond-author-profile",
+        "title": "古賀史健 — author page",
+        "author_or_publisher": "Diamond Online",
+        "url": "https://diamond.jp/ud/authors/60595d8c776561371c000000",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Koga's writing company Batons, writing education work, current authorship, and long publishing relationship with Diamond.",
+        "limitations": "Publisher contributor page; selective and promotional."
+      },
+      {
+        "id": "diamond-book",
+        "title": "嫌われる勇気",
+        "author_or_publisher": "Diamond, Inc.",
+        "url": "https://www.diamond.co.jp/book/9784478025819.html",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Original co-authorship, publication year, Koga's role as writer alongside Kishimi, dialogue form, and contents.",
+        "limitations": "Publisher sales copy."
+      },
+      {
+        "id": "diamond-history",
+        "title": "Diamond company history",
+        "author_or_publisher": "Diamond, Inc.",
+        "url": "https://www.diamond.co.jp/company/history/",
+        "type": "official-documentation",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication of The Courage to Be Disliked in 2013 and The Courage to Be Happy in 2016.",
+        "limitations": "Publisher corporate history; useful for dates, not quality."
+      },
+      {
+        "id": "poplar-catalogue",
+        "title": "Poplar Publishing general-book release guide, July–August 2023",
+        "author_or_publisher": "Poplar Publishing",
+        "url": "https://www.poplar.co.jp/bookStore/newsLetter/pdf/release_guide_202308.pdf",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "2023 publication, title, authorship, form, and intended young audience of Take Up Your Pen on a Lonely Night.",
+        "limitations": "Publisher catalogue entry in Japanese."
+      },
+      {
+        "id": "full-book",
+        "title": "The Courage to Be Disliked — English text edition",
+        "author_or_publisher": "Ichiro Kishimi and Fumitake Koga; third-party hosted copy",
+        "url": "https://s3.amazonaws.com/kajabi-storefronts-production/file-uploads/sites/2147511916/themes/2149511084/downloads/4d16be-320a-1acc-2cf-38a816041704_The_Courage_to_be_Disliked_How_to_Change_Your_Life_and_Achieve_Real_Happiness_PDFDrive_.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Koga's dialogue craft, objection structure, pacing, repetition, and co-authored perspective.",
+        "limitations": "Third-party host; checked against official records. The exact division of drafting decisions between co-authors is not documented line by line."
+      },
+      {
+        "id": "sefad-review",
+        "title": "The Courage to be Disliked",
+        "author_or_publisher": "Louie Giray; Selçuk University Journal of Faculty of Letters",
+        "url": "https://dergipark.org.tr/en/download/article-file/2478102",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Praise for accessibility and dialogue, plus criticism of simplistic characterization and excessive subdivisions.",
+        "limitations": "Short and favourable review rather than a craft study."
+      },
+      {
+        "id": "storygraph-reception",
+        "title": "Reviews — The Courage To Be Disliked",
+        "author_or_publisher": "The StoryGraph",
+        "url": "https://beta.thestorygraph.com/book_reviews/a9155c83-15d3-4ae8-ae59-d5d59f47826b",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Recurring reader response to the dialogue as engaging or forced, repetitive, staged, and didactic.",
+        "limitations": "Self-selected reader sample with no expertise control."
+      }
+    ],
+    "citations": {
+      "/name": ["hobonichi-profile", "simon-schuster-profile", "diamond-book"],
+      "/alternate_names": ["hobonichi-profile", "diamond-book"]
+    }
+  },
+  "workflow": {
+    "status": "complete",
+    "coverage_notes": "Official publisher, independent profile and lecture, author page, book text, professional review, and reader reception sources establish Koga's writing background and distinguish editorial skill from clinical authority.",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}

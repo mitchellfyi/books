@@ -91,6 +91,14 @@
       "aliases": []
     },
     {
+      "id": "fumitake-koga",
+      "kind": "author",
+      "name": "Fumitake Koga",
+      "state": "catalogued",
+      "path": "library/authors/fumitake-koga/author.json",
+      "aliases": ["Koga Fumitake"]
+    },
+    {
       "id": "joseph-nguyen",
       "kind": "author",
       "name": "Joseph Nguyen",

@@ -4,28 +4,263 @@
   "id": "the-courage-to-be-disliked-kishimi",
   "type": "book",
   "title": "The Courage to Be Disliked",
-  "alternate_titles": [],
-  "author_ids": ["ichiro-kishimi"],
+  "alternate_titles": [
+    "The Courage to Be Disliked: How to Free Yourself, Change Your Life and Achieve Real Happiness",
+    "The Courage to Be Disliked: The Japanese Phenomenon That Shows You How to Change Your Life and Achieve Real Happiness",
+    "嫌われる勇気: 自己啓発の源流「アドラー」の教え"
+  ],
+  "author_ids": ["ichiro-kishimi", "fumitake-koga"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2013",
+    "original_language": "Japanese",
+    "editions": [
+      {
+        "label": "Japanese first edition",
+        "publisher": "Diamond, Inc.",
+        "publication_date": "2013-12-12",
+        "isbn_10": "4478025819",
+        "isbn_13": "9784478025819",
+        "format": "Paperback",
+        "pages": 296
+      },
+      {
+        "label": "UK English ebook",
+        "publisher": "Allen & Unwin",
+        "publication_date": "2018-01-04",
+        "isbn_10": "1760638269",
+        "isbn_13": "9781760638269",
+        "format": "Ebook",
+        "pages": null
+      },
+      {
+        "label": "US English hardcover",
+        "publisher": "Atria Books",
+        "publication_date": "2018-05-08",
+        "isbn_10": "1501197274",
+        "isbn_13": "9781501197277",
+        "format": "Hardcover",
+        "pages": 288
+      },
+      {
+        "label": "UK English paperback",
+        "publisher": "Allen & Unwin",
+        "publication_date": "2019-01-03",
+        "isbn_10": "176063073X",
+        "isbn_13": "9781760630737",
+        "format": "Paperback",
+        "pages": null
+      }
+    ],
+    "contents": [
+      "First Night: Deny Trauma",
+      "Second Night: All Problems Are Interpersonal Relationship Problems",
+      "Third Night: Discard Other People's Tasks",
+      "Fourth Night: Where the Center of the World Is",
+      "Fifth Night: To Live in Earnest in the Here and Now"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "acceptance",
+      "boundaries",
+      "emotional-regulation",
+      "motivation",
+      "non-fiction",
+      "personal-development",
+      "philosophy",
+      "psychology",
+      "relationships",
+      "self-awareness",
+      "self-help"
+    ],
+    "audiences": [
+      "People exhausted by approval-seeking or attempts to manage other people's reactions",
+      "Readers who want an accessible introduction to Kishimi and Koga's interpretation of Adlerian psychology",
+      "People willing to test a strong agency-first philosophy while rejecting its unsafe claims about trauma",
+      "Readers interested in boundaries, contribution, inferiority, relationships, freedom, and present-focused action"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "diamond-original",
+        "title": "嫌われる勇気",
+        "author_or_publisher": "Diamond, Inc.",
+        "url": "https://www.diamond.co.jp/book/9784478025819.html",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Original Japanese title and subtitle, authorship, December 2013 publication, ISBN, 296-page length, dialogue premise, and detailed contents.",
+        "limitations": "Original publisher sales page in Japanese; authoritative for the edition and structure but promotional about importance."
+      },
+      {
+        "id": "simon-schuster-us",
+        "title": "The Courage to Be Disliked",
+        "author_or_publisher": "Simon & Schuster / Atria Books",
+        "url": "https://www.simonandschuster.com/books/The-Courage-to-Be-Disliked/Ichiro-Kishimi/9781501197277",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "US title, dual authorship, edition facts, formats, audiobook cast, book purpose, author biographies, reading-guide structure, and selected professional praise.",
+        "limitations": "Current publisher copy designed to sell the book; sales and praise are not independent quality evidence."
+      },
+      {
+        "id": "atlantic-uk",
+        "title": "The Courage To Be Disliked",
+        "author_or_publisher": "Atlantic Books / Allen & Unwin",
+        "url": "https://atlantic-books.co.uk/book/the-courage-to-be-disliked/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "UK English publication dates, ISBNs, formats, authorship, and the publisher's account of approval, boundaries, agency, and happiness.",
+        "limitations": "Publisher sales copy; the site groups several editions and does not state their page counts."
+      },
+      {
+        "id": "worldcat-english",
+        "title": "The courage to be disliked: how to free yourself, change your life and achieve real happiness",
+        "author_or_publisher": "WorldCat",
+        "url": "https://search.worldcat.org/title/The-courage-to-be-disliked-%3A-how-to-free-yourself-change-your-life-and-achieve-real-happiness/oclc/994367718",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent English-language work identity, co-authors, publication language, 2018 Allen & Unwin edition, and summary.",
+        "limitations": "Bibliographic record rather than a content or quality assessment."
+      },
+      {
+        "id": "full-book-english",
+        "title": "The Courage to Be Disliked — English text edition",
+        "author_or_publisher": "Ichiro Kishimi and Fumitake Koga; third-party hosted copy",
+        "url": "https://s3.amazonaws.com/kajabi-storefronts-production/file-uploads/sites/2147511916/themes/2149511084/downloads/4d16be-320a-1acc-2cf-38a816041704_The_Courage_to_be_Disliked_How_to_Change_Your_Life_and_Achieve_Real_Happiness_PDFDrive_.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Complete English text, five-night argument, examples, concepts, ending, voice, repetition, scope, and front-matter publication data.",
+        "limitations": "Readable complete text on a third-party host; identity, front matter, and contents were cross-checked against official publisher and library records."
+      },
+      {
+        "id": "sefad-review",
+        "title": "The Courage to be Disliked",
+        "author_or_publisher": "Louie Giray; Selçuk University Journal of Faculty of Letters",
+        "url": "https://dergipark.org.tr/en/download/article-file/2478102",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Whole-book summary, five-night concepts, praise for accessibility and practical relevance, and criticism of the youth's simplistic characterization and excessive subparts.",
+        "limitations": "Short, strongly favourable academic book review rather than a psychological evidence audit."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "The Courage to Be Disliked",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/en/book/show/43306206",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large reader aggregate and recurring reactions to the ideas, dialogue, accessibility, provocation, repetition, and trauma claim.",
+        "limitations": "Self-selected ratings and reviews, merged editions, no expertise check, and popularity is excluded from the content rating."
+      },
+      {
+        "id": "storygraph-reception",
+        "title": "Reviews — The Courage To Be Disliked",
+        "author_or_publisher": "The StoryGraph",
+        "url": "https://beta.thestorygraph.com/book_reviews/a9155c83-15d3-4ae8-ae59-d5d59f47826b",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Reader division over the dialogue, practical reframes, present-focus ending, victim-blaming risk, gender assumptions, and the philosopher's staged victory.",
+        "limitations": "Self-selected community responses; examples show recurring themes but do not establish population prevalence."
+      },
+      {
+        "id": "bound2books-critique",
+        "title": "What the self-help book The Courage to Be Disliked gets right and wrong",
+        "author_or_publisher": "Hope Lee; bound2books",
+        "url": "https://bound2books.co/2019/08/02/what-the-self-help-book-the-courage-to-be-disliked-gets-right-and-wrong/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Philosophy-informed criticism of trauma denial, weak treatment of power structures, vague delivery, and praise for task separation and limits of control.",
+        "limitations": "Personal critical essay rather than peer-reviewed clinical analysis."
+      },
+      {
+        "id": "va-ptsd",
+        "title": "PTSD History and Overview",
+        "author_or_publisher": "US Department of Veterans Affairs, National Center for PTSD",
+        "url": "https://www.ptsd.va.gov/professional/treat/essentials/history_ptsd.asp",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Clinical counterevidence: traumatic exposure is required for PTSD, responses vary through risk, resilience, appraisal, and context, and severe events affect nearly everyone even though not everyone develops PTSD.",
+        "limitations": "Clinical overview of PTSD, not a review of every way adverse experience affects later behaviour."
+      },
+      {
+        "id": "adlerian-evidence-review",
+        "title": "Evidence-Based Individual Psychology Practice: Adlerian Pattern Focused Therapy",
+        "author_or_publisher": "Current Approaches in Psychiatry",
+        "url": "https://dergipark.org.tr/en/download/article-file/3160219",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Current Adlerian field's effort to standardize treatment and its acknowledgement that clinical evidence remains limited across populations, cultures, and long-term outcomes.",
+        "limitations": "Narrative review from within the Adlerian practice literature, not a systematic meta-analysis of this book's claims."
+      },
+      {
+        "id": "reward-meta-analysis",
+        "title": "A Meta-Analytic Review of Experiments Examining the Effects of Extrinsic Rewards on Intrinsic Motivation",
+        "author_or_publisher": "Edward Deci, Richard Koestner, and Richard Ryan; Psychological Bulletin",
+        "url": "https://selfdeterminationtheory.org/wp-content/uploads/2014/04/1999_DeciKoestnerRyan_Meta.pdf",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Nuanced countercheck of the book's blanket rejection of praise and rewards: effects differ by reward type and context, while positive feedback can enhance interest.",
+        "limitations": "Meta-analysis concerns intrinsic motivation, not the book's wider moral case against vertical relationships."
+      },
+      {
+        "id": "social-relationships-meta",
+        "title": "Social Relationships and Mortality Risk: A Meta-analytic Review",
+        "author_or_publisher": "Julianne Holt-Lunstad, Timothy Smith, and J. Bradley Layton; PLOS Medicine",
+        "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Broad empirical support for the importance of social integration and relationships while not supporting the universal claim that every problem is interpersonal.",
+        "limitations": "Observational mortality meta-analysis; it does not validate Adlerian community feeling or prove that social connection causes every measured outcome."
+      }
+    ],
+    "citations": {
+      "/title": ["diamond-original", "simon-schuster-us", "worldcat-english"],
+      "/alternate_titles": ["diamond-original", "simon-schuster-us", "atlantic-uk"],
+      "/author_ids": ["diamond-original", "simon-schuster-us", "worldcat-english"],
+      "/bibliography/first_published": ["diamond-original", "full-book-english"],
+      "/bibliography/original_language": ["diamond-original", "worldcat-english", "sefad-review"],
+      "/bibliography/editions/0": ["diamond-original"],
+      "/bibliography/editions/1": ["atlantic-uk"],
+      "/bibliography/editions/2": ["simon-schuster-us"],
+      "/bibliography/editions/3": ["atlantic-uk", "sefad-review"],
+      "/bibliography/contents": ["diamond-original", "full-book-english", "sefad-review"],
+      "/discovery/tag_ids": ["full-book-english", "sefad-review"],
+      "/discovery/audiences": ["full-book-english", "sefad-review", "storygraph-reception", "va-ptsd"],
+      "/discovery/formats_available": ["simon-schuster-us", "atlantic-uk"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "researched-partial",
+    "coverage": "full-book",
+    "coverage_notes": "The complete English text was checked from beginning to end and cross-checked against both original and English publisher records. Clinical, research, professional-review, specialist-critical, and large reader sources were used to test the book's strongest claims and reception.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": ["Write and review all four content-only narration levels, verify pronunciation, and render local audio."]
   }
 }

@@ -4,108 +4,602 @@
   "book_id": "the-courage-to-be-disliked-kishimi",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
+    "compression_fit": "high",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "The philosophy is built from a small connected set of ideas and repeats them through objections, so it compresses well. Five minutes can deliver the decision layer, but fifteen minutes is the best balance: enough to connect task separation to community feeling, preserve the five-night movement, and state why the trauma claim is unsafe. Thirty minutes best reproduces the book's argumentative experience; the full book mainly adds immersion, repetition, and the staged debate."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "A provocative dialogue arguing that freedom begins when you stop letting the past, comparison, approval, and other people's tasks decide how you live now.",
+    "verdict": "Memorable and genuinely useful on boundaries, approval, contribution, and present action; unreliable when its agency-first philosophy becomes a literal denial of trauma, involuntary symptoms, or social constraint.",
+    "source_ids": [
+      "full-book-english",
+      "sefad-review",
+      "va-ptsd",
+      "storygraph-reception"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Across five nights, a dissatisfied youth challenges a philosopher who teaches Kishimi and Koga's version of Adlerian psychology. The discussion moves from rejecting causal stories about the past, through inferiority and interpersonal conflict, to separation of tasks, freedom from approval, horizontal relationships, community feeling, contribution, and wholehearted attention to the present.",
+      "source_ids": [
+        "full-book-english",
+        "diamond-original",
+        "sefad-review"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Your history and circumstances influence you but need not dictate your next action. Much avoidable misery comes from using fixed stories, comparison, approval-seeking, and attempts to control others as protection from difficult life tasks. Freedom requires choosing your own task, accepting that this may attract disapproval, and finding worth through equal relationships and contribution in the here and now.",
+      "source_ids": [
+        "full-book-english",
+        "diamond-original",
+        "sefad-review"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "purpose-over-cause",
+      "title": "Ask what the pattern is doing now",
+      "claim": "Present behaviour can be understood by its current purpose, not only by a past cause.",
+      "explanation": "The philosopher contrasts aetiology, which explains the present from what happened before, with teleology, which asks what goal a behaviour serves now. A withdrawal pattern may protect someone from rejection; anger may pressure another person. This shifts attention from an unchangeable past to a function that can be challenged today.",
+      "representative_example": "A young man who will not leave his room may not be mechanically imprisoned by his past; staying inside also protects him from the risk of meeting people and being judged.",
+      "why_it_matters": "The question 'what is this helping me avoid or obtain?' can reveal a choice point that a purely historical story misses.",
+      "caveat": "Function and history can both matter. The book turns a useful additional question into a false either-or and overstates how deliberately symptoms and emotions are chosen.",
+      "source_ids": [
+        "full-book-english",
+        "sefad-review",
+        "va-ptsd"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "past-influences-not-destiny",
+      "title": "Influence is not destiny",
+      "claim": "What happened to you affects you, but it does not contain a fixed instruction for how your life must continue.",
+      "explanation": "The book calls a person's settled worldview a lifestyle: a chosen way of interpreting self, others, and the world. Because that interpretation is not identical to the event, it can change. Courage is needed because the familiar life is predictable, even when painful, while change exposes the person to uncertainty and responsibility.",
+      "representative_example": "Two people can pass through similar adversity and make different meanings and later choices from it.",
+      "why_it_matters": "It protects the possibility of change without requiring the past to disappear.",
+      "caveat": "The book's slogan that trauma does not exist is clinically false and can become victim-blaming. Severe experiences can cause durable involuntary symptoms; variable outcomes do not make trauma imaginary.",
+      "source_ids": [
+        "full-book-english",
+        "va-ptsd",
+        "bound2books-critique",
+        "storygraph-reception"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "comparison-and-inferiority",
+      "title": "Stop making life a ranking",
+      "claim": "Inferiority can motivate growth, but comparison becomes corrosive when life is treated as a competition against other people.",
+      "explanation": "Feeling incomplete is normal. It becomes an inferiority complex when a perceived defect is used as a reason not to act, or a superiority complex when status and display hide insecurity. The healthier comparison is between your present action and the person you want to become, with other people treated as comrades rather than threats.",
+      "representative_example": "Short stature is a fact; the meaning 'therefore I am lesser' is an interpretation that changes when the same stature is understood as making a person approachable.",
+      "why_it_matters": "It separates useful aspiration from endless status anxiety.",
+      "caveat": "Not every disadvantage is subjective. Resources, discrimination, illness, and power can create objective constraints the book rarely addresses.",
+      "source_ids": [
+        "full-book-english",
+        "diamond-original",
+        "sefad-review",
+        "bound2books-critique"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "life-tasks-and-life-lies",
+      "title": "Face the task behind the excuse",
+      "claim": "Work, friendship, and love are unavoidable relationship tasks, and a life-lie is a story used to avoid one of them.",
+      "explanation": "The book treats participation in work, friendship, and intimate or family love as increasingly demanding social tasks. Conflict is not proof that the task is wrong. Blaming a person, trait, or circumstance can become a convenient reason to withdraw and preserve the current lifestyle.",
+      "representative_example": "A workaholic can call devotion to work a virtue while using it to avoid the vulnerability of family and friendship.",
+      "why_it_matters": "It asks whether an explanation is also functioning as permission not to confront a difficult relationship.",
+      "caveat": "Sometimes withdrawal is safety, not evasion. The life-lie label needs evidence and humility, especially around abuse, illness, and exploitation.",
+      "source_ids": [
+        "full-book-english",
+        "sefad-review",
+        "bound2books-critique"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "separation-of-tasks",
+      "title": "Separate the tasks",
+      "claim": "Take responsibility for your choice and let other people own the consequences and judgments that belong to them.",
+      "explanation": "To identify a task, ask who finally receives the consequence of the choice. A child owns whether to study; a parent owns whether to offer help and how to set household conditions. You can invite, support, negotiate, and protect a boundary without taking command of another person's mind or outcome.",
+      "representative_example": "You can do honest work and hear criticism; you cannot make a colleague approve of you. Their judgment is their task, while the quality and integrity of your work are yours.",
+      "why_it_matters": "This is the book's clearest tool for reducing control, resentment, rescuing, and approval-seeking.",
+      "caveat": "Tasks are often shared or shaped by unequal power. The rule is a starting question, not a complete answer to parenting, care, employment, or collective responsibility.",
+      "source_ids": [
+        "full-book-english",
+        "simon-schuster-us",
+        "sefad-review",
+        "bound2books-critique"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "freedom-includes-disapproval",
+      "title": "Freedom includes being disliked",
+      "claim": "If approval is required before you act, other people control your life.",
+      "explanation": "The title does not recommend rudeness or trying to be hated. It means accepting that any honest choice can disappoint someone. Refusing to live for reward and recognition returns your attention to whether the action is yours and whether it serves the life you mean to lead.",
+      "representative_example": "Saying no to an expectation may cause disapproval; the alternative is to let fear of that reaction make the decision for you.",
+      "why_it_matters": "It gives people-pleasers a direct test: am I choosing this, or purchasing approval with my life?",
+      "caveat": "Disapproval is not proof of integrity. Other people's reactions may contain information, and freedom still includes repair, accountability, and concern for consequences.",
+      "source_ids": [
+        "full-book-english",
+        "simon-schuster-us",
+        "atlantic-uk",
+        "storygraph-reception"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "horizontal-community",
+      "title": "Equality needs community",
+      "claim": "Task separation prevents control, while horizontal relationships and community feeling prevent separation from becoming isolation.",
+      "explanation": "The book rejects relationships organised around praise, rebuke, superiority, and inferiority. It prefers equal human worth, encouragement, and social interest: seeing yourself as part of communities larger than the immediate conflict. You are not the centre of the world, but an active participant with something to offer.",
+      "representative_example": "Instead of praising a helper from above, express thanks from beside them; the point is appreciation and contribution, not ranking.",
+      "why_it_matters": "It corrects the common misuse of boundaries as detachment: freedom is meant to make better participation possible.",
+      "caveat": "The blanket rejection of praise is too rigid. Research finds that feedback and rewards have different effects depending on whether they inform, encourage, control, or crowd out existing motivation.",
+      "source_ids": [
+        "full-book-english",
+        "sefad-review",
+        "reward-meta-analysis",
+        "social-relationships-meta"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "accept-trust-contribute",
+      "title": "Accept, trust, contribute",
+      "claim": "Belonging and happiness grow through realistic self-acceptance, confidence in others, and a felt contribution to something beyond yourself.",
+      "explanation": "Self-acceptance means beginning from actual limits rather than declaring yourself perfect. Confidence in others means risking cooperation without making control the entry price. Contribution means experiencing your existence as useful without requiring applause; together the three reinforce one another.",
+      "representative_example": "Work is framed not only as earning money but as participating in and contributing to a shared world.",
+      "why_it_matters": "It gives the book a positive destination beyond saying no and ignoring judgment.",
+      "caveat": "Unconditional confidence is unsafe with untrustworthy people, and subjective contribution can hide exploitation or self-deception. Trust needs judgment and boundaries.",
+      "source_ids": [
+        "full-book-english",
+        "sefad-review",
+        "social-relationships-meta"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "here-and-now",
+      "title": "Live the moment as the life",
+      "claim": "Life is a sequence of complete moments, not a rehearsal whose value begins only after a grand objective is reached.",
+      "explanation": "The final night compares life to dancing: the movement is not merely transport to an endpoint. The courage to be normal releases the demand to prove exceptional worth. Plans remain useful, but the meaning of life is assigned through the quality and direction of present action, guided by contribution.",
+      "representative_example": "A person who postpones living until graduation, promotion, marriage, or success treats every real day as preparatory material.",
+      "why_it_matters": "It prevents self-improvement from turning the whole present into an instrument for a future that never arrives.",
+      "caveat": "The moment-based metaphor needs long-range planning beside it; duties, prevention, and projects depend on sustained commitments across time.",
+      "source_ids": [
+        "full-book-english",
+        "sefad-review",
+        "storygraph-reception"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "First Night: Deny Trauma",
+      "purpose": "Replace causal fatalism with present agency.",
+      "summary": "The youth arrives convinced that people cannot change. The philosopher introduces teleology, claims emotions and symptoms serve present goals, defines lifestyle as a chosen worldview, and argues that change is available now but requires courage. The agency insight is valuable; the literal trauma denial is the book's largest factual and ethical failure.",
+      "idea_ids": [
+        "purpose-over-cause",
+        "past-influences-not-destiny"
+      ],
+      "source_ids": [
+        "full-book-english",
+        "diamond-original",
+        "sefad-review",
+        "va-ptsd"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Second Night: All Problems Are Interpersonal Relationship Problems",
+      "purpose": "Explain misery through comparison, competition, and avoided relationship tasks.",
+      "summary": "Inferiority is treated as an interpretation that can support growth or become an excuse. Competition turns others into enemies; power struggles sacrifice the issue to victory. Work, friendship, and love become the tasks of social life, while life-lies excuse retreat from them.",
+      "idea_ids": [
+        "comparison-and-inferiority",
+        "life-tasks-and-life-lies"
+      ],
+      "source_ids": [
+        "full-book-english",
+        "diamond-original",
+        "sefad-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Third Night: Discard Other People's Tasks",
+      "purpose": "Make freedom operational through boundaries and disapproval tolerance.",
+      "summary": "The book rejects approval as a life-goal, separates responsibility by who receives the consequence, and argues that accepting dislike is the price of choosing freely. This is the practical centre and the reason most readers remember the book.",
+      "idea_ids": [
+        "separation-of-tasks",
+        "freedom-includes-disapproval"
+      ],
+      "source_ids": [
+        "full-book-english",
+        "diamond-original",
+        "simon-schuster-us",
+        "storygraph-reception"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Fourth Night: Where the Center of the World Is",
+      "purpose": "Reconnect bounded individuals through equality and social interest.",
+      "summary": "Task separation is not the conclusion. The philosopher adds community feeling, a larger field of belonging, horizontal relationships, encouragement instead of manipulation, and the sense of worth produced by contribution. The individual is neither ruler nor exile, but participant.",
+      "idea_ids": [
+        "horizontal-community",
+        "accept-trust-contribute"
+      ],
+      "source_ids": [
+        "full-book-english",
+        "diamond-original",
+        "sefad-review",
+        "social-relationships-meta"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Fifth Night: To Live in Earnest in the Here and Now",
+      "purpose": "Define happiness and turn the philosophy into a way of living.",
+      "summary": "Self-acceptance, confidence in others, and contribution form a cycle. The pursuit of specialness is replaced by courage to be normal. Life becomes a dance of present moments rather than a line whose worth waits at the destination, and contribution becomes the guiding direction when life has no assigned universal meaning.",
+      "idea_ids": [
+        "accept-trust-contribute",
+        "here-and-now"
+      ],
+      "source_ids": [
+        "full-book-english",
+        "diamond-original",
+        "sefad-review",
+        "storygraph-reception"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "A fictional youth visits a philosopher on five nights; each night builds on the last and is divided into many short exchanges.",
+    "voice": "Provocative, plain, confident, and didactic. The youth supplies outrage and familiar objections; the calm philosopher supplies the book's answer.",
+    "pace": "Fast at sentence level but repetitive across debates, with the most satisfying synthesis saved for the last two nights.",
+    "evidence_style": "Conceptual argument, invented examples, Adler anecdotes, and assertion. It cites no modern clinical or experimental evidence for its strongest psychological claims.",
+    "example_style": "Small hypothetical cases about recluses, anger, height, parenting, work, friendship, family, and approval, designed to make an abstract principle immediately concrete.",
+    "repetition": "The youth restates resistance and the philosopher restates agency; this aids persuasion and memory but creates avoidable length and predetermined victories.",
+    "prerequisites": "None. Prior knowledge of Adler is unnecessary; readers with trauma histories should not treat the first night's clinical claims as guidance.",
+    "source_ids": [
+      "full-book-english",
+      "sefad-review",
+      "storygraph-reception",
+      "va-ptsd"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 5.7,
+      "confidence": "high",
+      "summary": "A strong set of agency and boundary reframes delivered with memorable force, held below a dependable recommendation by weak evidence, false binaries, trauma denial, missing structural context, and a debate engineered so the book cannot lose.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.0,
+          "rationale": "Task separation, approval as dependence, comparison as competition, and contribution as belonging explain common patterns with unusual clarity; the universal claims about all problems, emotion, and trauma explain too much too simply.",
+          "source_ids": [
+            "full-book-english",
+            "sefad-review",
+            "va-ptsd"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 3.5,
+          "rationale": "The book offers coherent definitions and objections but almost no evidence. Its trauma claim conflicts with clinical knowledge, its account of praise lacks context, and Adlerian treatment evidence remains limited.",
+          "source_ids": [
+            "full-book-english",
+            "va-ptsd",
+            "reward-meta-analysis",
+            "adlerian-evidence-review"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.0,
+          "rationale": "The separation of tasks, dislike as a cost of freedom, courage to be normal, and life as moments are sticky reframes that can reorganise how readers see approval and responsibility.",
+          "source_ids": [
+            "full-book-english",
+            "sefad-review",
+            "storygraph-reception"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 6.5,
+          "rationale": "Readers can immediately ask whose task a decision is, what approval is costing, and what a pattern avoids. The tools need safeguards for shared duties, abuse, illness, and unequal power that the book does not provide.",
+          "source_ids": [
+            "full-book-english",
+            "bound2books-critique",
+            "storygraph-reception"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 4.0,
+          "rationale": "The later move from independence to community adds needed balance, but the book does not seriously handle trauma, disability, severe mental illness, structural power, shared tasks, unsafe trust, or cases where disapproval is corrective.",
+          "source_ids": [
+            "full-book-english",
+            "va-ptsd",
+            "bound2books-critique",
+            "storygraph-reception"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.0,
+          "rationale": "Short sections and concrete objections make hard ideas easy to retain, but the philosopher-youth cycle repeats and the five-night argument can be compressed substantially without losing its usable content.",
+          "source_ids": [
+            "full-book-english",
+            "sefad-review",
+            "storygraph-reception"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book is finally about authorship of a life. It argues that freedom is not control over events or people, but the ability to choose your next task without making your past or another person's approval the deciding authority. It completes that individual freedom with a social answer: use it to participate and contribute, not to withdraw.",
+      "source_ids": [
+        "full-book-english",
+        "sefad-review"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Ask both questions: what helped create this pattern, and what function does it serve now? Do not let the useful second question erase the first.",
+        "source_ids": [
+          "full-book-english",
+          "va-ptsd"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Before intervening, ask who owns the decision and receives its consequence; offer help without taking over another person's task.",
+        "source_ids": [
+          "full-book-english",
+          "sefad-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Treat disapproval as a possible cost of honest action, not as proof that the action is wrong or right.",
+        "source_ids": [
+          "full-book-english",
+          "simon-schuster-us"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Compare present practice with your chosen direction rather than turning every other person into a rank above or below you.",
+        "source_ids": [
+          "full-book-english",
+          "sefad-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Pair boundaries with contribution: separation without community becomes isolation, while contribution without boundaries becomes self-erasure.",
+        "source_ids": [
+          "full-book-english",
+          "social-relationships-meta"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Do not postpone the whole value of life until a future achievement; the manner of today's action is already part of the result.",
+        "source_ids": [
+          "full-book-english",
+          "storygraph-reception"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The book made an old Adlerian vocabulary portable for a global self-help audience: separation of tasks, freedom from approval, community feeling, and courage to be normal are now common reader shorthand. Its importance also makes precision matter, because the same clarity that spreads a useful boundary tool can spread a harmful denial of trauma.",
+      "source_ids": [
+        "diamond-original",
+        "simon-schuster-us",
+        "sefad-review",
+        "goodreads-reception",
+        "va-ptsd"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Ichiro Kishimi brought training in Western philosophy, long study and translation of Adler, teaching, and counseling experience. Fumitake Koga brought interviewing, editorial structure, and accessible prose. Koga repeatedly visited Kishimi, then shaped the material as a classical dialogue so a skeptical reader's resistance could appear inside the book. Their purpose was popular philosophical liberation, not a clinical textbook or research review.",
+      "source_ids": [
+        "simon-schuster-us",
+        "diamond-original",
+        "full-book-english"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "weak",
+      "strengths": [
+        "Builds a connected framework rather than a loose list of tips: agency leads to task separation, then to freedom, equality, contribution, and present action.",
+        "Uses concrete objections and examples that expose implications and make the ideas testable in ordinary relationships.",
+        "Several broad themes fit later evidence at a high level: appraisal affects response, social connection matters, and controlling rewards can damage motivation in some contexts."
+      ],
+      "weaknesses": [
+        "Offers no modern empirical evidence for its strongest claims and presents a crafted dialogue as though it had resolved live scientific and philosophical disputes.",
+        "The literal denial of trauma conflicts with established clinical evidence; variation in outcome does not mean traumatic exposure or involuntary symptoms are unreal.",
+        "Treats behaviour too consistently as goal-serving choice and underweights automatic emotion, biology, development, severe illness, and material constraint.",
+        "Turns nuanced topics such as praise, trust, shared responsibility, and causal explanation into blanket rules; even Adlerian practice literature calls its evidence base incomplete."
+      ],
+      "source_ids": [
+        "full-book-english",
+        "va-ptsd",
+        "adlerian-evidence-review",
+        "reward-meta-analysis",
+        "social-relationships-meta"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Reception is warm in aggregate but sharply divided in substance. Admirers find a liberating, accessible philosophy and remember the task and approval reframes. Critics find the dialogue forced, repetitive, and rigged; many object that the trauma passages invalidate suffering or blame people for symptoms, while others say the final community and present-focus sections improve the balance.",
+      "praise": [
+        "Professional and reader reviews repeatedly praise the plain explanation of Adlerian ideas and the immediate usefulness of task separation.",
+        "The dialogue gives abstract philosophy pace and lets readers see common objections addressed.",
+        "Readers often report relief from people-pleasing, comparison, and attempts to control other people's judgments.",
+        "The final synthesis of self-acceptance, contribution, courage to be normal, and present action is widely described as the most moving part."
+      ],
+      "criticism": [
+        "The philosopher always wins against an exaggeratedly stubborn youth, so debate becomes persuasion rather than inquiry.",
+        "The trauma language is widely experienced as invalidating and, read literally, conflicts with clinical evidence.",
+        "The framework neglects unequal power, gendered labour, disability, illness, abuse, and structural limits on agency.",
+        "Many short subparts and repeated objection-answer cycles make a compact philosophy feel longer and more absolute than it needs to be."
+      ],
+      "source_ids": [
+        "sefad-review",
+        "goodreads-reception",
+        "storygraph-reception",
+        "bound2books-critique",
+        "va-ptsd"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "People whose decisions are dominated by approval, comparison, rescuing, or attempts to control other people's reactions",
+        "Readers who want memorable philosophical reframes rather than an evidence-led psychology textbook",
+        "People willing to apply the task-separation tool with judgment about shared duties and power",
+        "Readers curious about a popular Japanese presentation of Adlerian ideas"
+      ],
+      "not_for": [
+        "Anyone seeking trauma treatment, mental-health diagnosis, or clinical guidance",
+        "Readers who need a research-led account of emotion, motivation, relationships, or behaviour change",
+        "People likely to turn a clean boundary rule into avoidance of care, accountability, or shared responsibility",
+        "Readers who dislike staged dialogue, repetition, categorical claims, or mentors who always win"
+      ],
+      "topics": [
+        "Adlerian psychology",
+        "Agency and change",
+        "Trauma and meaning",
+        "Inferiority and comparison",
+        "Work, friendship, and love",
+        "Boundaries and separation of tasks",
+        "Approval and freedom",
+        "Horizontal relationships and community feeling",
+        "Self-acceptance, trust, and contribution",
+        "Happiness and present-focused living"
+      ],
+      "source_ids": [
+        "full-book-english",
+        "sefad-review",
+        "storygraph-reception",
+        "va-ptsd"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A book about becoming rude, indifferent, or deliberately hated; dislike is presented as a possible price of freedom.",
+        "A trauma-informed therapy manual, clinical psychology textbook, or evidence review.",
+        "A complete account of Alfred Adler or of current Adlerian practice; it is Kishimi and Koga's popular interpretation.",
+        "A detailed boundary-setting workbook with scripts for complicated relationships."
+      ],
+      "omissions": [
+        "Systemic power, poverty, discrimination, gender, disability, coercion, and institutions that constrain individual choice",
+        "Modern evidence on trauma, automatic emotion, psychiatric illness, development, learning, and treatment",
+        "Shared and collective tasks in parenting, care, teams, public life, and interdependence",
+        "How to judge unsafe people, repair harm, accept valid criticism, or leave abusive situations"
+      ],
+      "missing_or_weak": [
+        "Boundary conditions for the teleological question: when a symptom serves a function, when it is involuntary, and when both are true",
+        "Operational practices beyond reframing; readers receive principles but few careful exercises or case distinctions",
+        "A genuine opponent capable of exposing weaknesses rather than a youth written to be converted",
+        "Evidence that the whole Adlerian package produces the promised happiness or lasting change"
+      ],
+      "dated_or_contested": [
+        "The claim that trauma does not exist is contradicted by clinical knowledge and should not be used as medical guidance.",
+        "The claim that people manufacture anger and other emotions for a purpose overstates conscious control and ignores automatic processes.",
+        "The claim that all problems are interpersonal is a memorable lens, not a credible universal statement.",
+        "The blanket rejection of praise and reward ignores evidence that effects vary with type, context, information, and perceived control.",
+        "Unconditional confidence in others is unsafe without the book's own task boundaries and real-world judgment."
+      ],
+      "source_ids": [
+        "full-book-english",
+        "va-ptsd",
+        "adlerian-evidence-review",
+        "reward-meta-analysis",
+        "bound2books-critique",
+        "storygraph-reception"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you want to feel the ideas confront resistance in sequence and think task separation, approval, or contribution could change how you handle relationships. The staged debate is part of its persuasive effect, not just packaging.",
+      "summary_is_enough_if": "A fifteen-minute summary is enough if you mainly want the useful framework, its examples, and the clinical and structural caveats. Most instruction survives compression because the full dialogue repeats a small set of connected claims.",
+      "skip_if": "Skip it if you need evidence-led psychology, trauma-safe guidance, detailed practices, or a balanced debate. Do not use it to explain another person's suffering to them.",
+      "format_advice": "Print or ebook suits readers who want to pause over claims and separate what helps from what overreaches. The commercial audiobook uses multiple voices and suits the theatrical dialogue, but a concise audio summary is more efficient for deciding whether the full performance will work for you.",
+      "source_ids": [
+        "full-book-english",
+        "simon-schuster-us",
+        "sefad-review",
+        "storygraph-reception",
+        "va-ptsd"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What is the difference between asking what caused a pattern and what purpose it serves now?",
+      "How does the book decide whose task something is?",
+      "Why does freedom include the possibility of being disliked?",
+      "Why must separation of tasks be followed by community feeling?",
+      "What are self-acceptance, confidence in others, and contribution meant to produce together?",
+      "Which major claims fail when they are taken as literal clinical facts?"
+    ],
+    "application_prompts": [
+      "Name one situation where you are trying to control another person's judgment. What is your task, and what is theirs?",
+      "Choose a recurring pattern and ask both: what shaped it, and what does it protect you from now?",
+      "Where has comparison turned a possible comrade into a rival? What would comparison with your own chosen direction change?",
+      "Which boundary would protect contribution rather than excuse withdrawal?",
+      "What future milestone are you using to postpone the value of today's action?"
+    ]
   },
   "workflow": {
-    "status": "stub",
-    "reviewed_against_full_book": false,
-    "review_notes": ""
+    "status": "researched-partial",
+    "reviewed_against_full_book": true,
+    "review_notes": "The complete English text was checked across all five nights. The review preserved the book's strongest agency, task, community, and present-focus insights while testing trauma, praise, treatment-evidence, social-connection, power, and shared-task claims against independent sources. Rating uses content factors only.",
+    "quality_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": false
+      },
+      "notes": [
+        "Pending four narration scripts, pronunciation verification, and local audio rendering."
+      ]
+    }
   }
 }

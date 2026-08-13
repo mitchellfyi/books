@@ -4,22 +4,166 @@
   "id": "ichiro-kishimi",
   "type": "author",
   "name": "Ichiro Kishimi",
-  "alternate_names": [],
+  "alternate_names": ["岸見一郎", "Kishimi Ichirō"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "Japanese philosopher, Adlerian counselor, lecturer, and translator who presents ancient Greek and Adlerian ideas as practical guidance for ordinary life.",
+      "source_ids": ["kishimi-official", "simon-schuster-profile", "diamond-book"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Kyoto in 1956, Kishimi studied the history of Western philosophy in Kyoto University's doctoral programme and later taught philosophy and psychology. He has written extensively about Adler, happiness, work, ageing, parenting, and Greek philosophy, and has translated works by Alfred Adler and Plato into Japanese. His publisher also records counseling work with young people in psychiatric clinics and a consultancy role with the Japanese Society of Adlerian Psychology.",
+      "source_ids": ["kishimi-official", "simon-schuster-profile"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "Kishimi's academic training is in Western philosophy, especially ancient Greek thought. His Adlerian authority comes from decades of study, translation, teaching, counseling, and public explanation rather than experimental clinical research. In The Courage to Be Disliked, he supplied the philosophical and Adlerian substance that Fumitake Koga shaped into a five-night dialogue.",
+      "source_ids": ["kishimi-official", "simon-schuster-profile", "diamond-book"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "His strongest expertise is interpretive: Adler's texts, ancient Greek philosophy, and the practical teaching of those traditions. He is presented as a certified counselor, but the available profiles do not establish specialist research credentials in trauma, psychiatry, neuroscience, or clinical-trial design. Those limits matter when the book moves from philosophy about agency to claims about trauma and emotion.",
+      "source_ids": ["kishimi-official", "simon-schuster-profile", "adlerian-evidence-review", "va-ptsd"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Kishimi treats people as purposeful, socially embedded agents who can choose the meaning and use of their circumstances now. That perspective can restore agency and reduce approval-seeking. Its danger is overcorrection: it can minimize involuntary symptoms, material power, disability, and the durable effects of adverse experience. Read him as a forceful philosophical interpreter, not as the final clinical authority on trauma or mental illness.",
+      "source_ids": ["diamond-book", "full-book", "va-ptsd", "adlerian-evidence-review"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Introduction to Adlerian Psychology",
+      "year": null,
+      "kind": "Book",
+      "relationship": "Kishimi's direct introduction to the Adlerian framework later popularised through dialogue in The Courage to Be Disliked.",
+      "source_ids": ["simon-schuster-profile"]
+    },
+    {
+      "title": "The Courage to Be Disliked",
+      "year": 2013,
+      "kind": "Book, co-authored with Fumitake Koga",
+      "relationship": "Popular dialogue presenting Kishimi's interpretation of Adlerian psychology through agency, task separation, community feeling, and present action.",
+      "source_ids": ["diamond-book", "simon-schuster-profile"]
+    },
+    {
+      "title": "The Courage to Be Happy",
+      "year": 2016,
+      "kind": "Book, co-authored with Fumitake Koga",
+      "relationship": "Sequel that returns the youth to test Adlerian ideas in education, love, and ordinary practice.",
+      "source_ids": ["kishimi-official", "diamond-history"]
+    },
+    {
+      "title": "The Science of Living",
+      "year": null,
+      "kind": "Japanese translation of Alfred Adler",
+      "relationship": "One of the Adler texts behind Kishimi's interpretive expertise.",
+      "source_ids": ["simon-schuster-profile"]
+    },
+    {
+      "title": "Timaeus / Critias",
+      "year": null,
+      "kind": "Japanese translation of Plato",
+      "relationship": "Reflects the ancient Greek philosophical background behind his use of dialogue and Socratic framing.",
+      "source_ids": ["kishimi-official"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "kishimi-official",
+        "title": "プロフィール・著作案内",
+        "author_or_publisher": "Ichiro Kishimi official website",
+        "url": "https://kishimi.com/profile-books/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Birth year and place, Kyoto University doctoral study in Western philosophy, teaching role, selected authored books, and translations of Adler and Plato.",
+        "limitations": "Self-published career profile; selective and not an independent assessment of expertise or impact."
+      },
+      {
+        "id": "simon-schuster-profile",
+        "title": "The Courage to Be Disliked — About the Authors",
+        "author_or_publisher": "Simon & Schuster / Atria Books",
+        "url": "https://www.simonandschuster.com/books/The-Courage-to-Be-Disliked/Ichiro-Kishimi/9781501197277",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Kyoto residence, writing and lecturing on Adlerian psychology, youth counseling, stated counseling and society roles, Adler translations, and Introduction to Adlerian Psychology.",
+        "limitations": "Publisher biography intended to establish authority; credentials were not independently audited."
+      },
+      {
+        "id": "diamond-book",
+        "title": "嫌われる勇気",
+        "author_or_publisher": "Diamond, Inc.",
+        "url": "https://www.diamond.co.jp/book/9784478025819.html",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Original co-authorship, publication year, Kishimi's role as the book's Adlerian interpreter, dialogue format, and contents.",
+        "limitations": "Publisher sales copy and therefore interested in presenting Kishimi as authoritative."
+      },
+      {
+        "id": "diamond-history",
+        "title": "Diamond company history",
+        "author_or_publisher": "Diamond, Inc.",
+        "url": "https://www.diamond.co.jp/company/history/",
+        "type": "official-documentation",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication of The Courage to Be Disliked in 2013 and its sequel The Courage to Be Happy in 2016.",
+        "limitations": "Publisher corporate history; useful for dates, not quality."
+      },
+      {
+        "id": "full-book",
+        "title": "The Courage to Be Disliked — English text edition",
+        "author_or_publisher": "Ichiro Kishimi and Fumitake Koga; third-party hosted copy",
+        "url": "https://s3.amazonaws.com/kajabi-storefronts-production/file-uploads/sites/2147511916/themes/2149511084/downloads/4d16be-320a-1acc-2cf-38a816041704_The_Courage_to_be_Disliked_How_to_Change_Your_Life_and_Achieve_Real_Happiness_PDFDrive_.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Kishimi's expressed philosophical perspective, claims, boundaries of treatment, and author biography as presented in the English book.",
+        "limitations": "Third-party host; checked against official records. The dialogue is a crafted co-authored work, not a verbatim statement by Kishimi alone."
+      },
+      {
+        "id": "va-ptsd",
+        "title": "PTSD History and Overview",
+        "author_or_publisher": "US Department of Veterans Affairs, National Center for PTSD",
+        "url": "https://www.ptsd.va.gov/professional/treat/essentials/history_ptsd.asp",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Clinical evidence used to define the limit of Kishimi's authority and contest a literal denial of trauma.",
+        "limitations": "PTSD overview rather than a biography or assessment of Kishimi."
+      },
+      {
+        "id": "adlerian-evidence-review",
+        "title": "Evidence-Based Individual Psychology Practice: Adlerian Pattern Focused Therapy",
+        "author_or_publisher": "Current Approaches in Psychiatry",
+        "url": "https://dergipark.org.tr/en/download/article-file/3160219",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "The limited and still-developing clinical evidence base for standardized Adlerian treatment.",
+        "limitations": "Field review, not a credential check or direct review of Kishimi."
+      }
+    ],
+    "citations": {
+      "/name": ["kishimi-official", "simon-schuster-profile", "diamond-book"],
+      "/alternate_names": ["kishimi-official", "diamond-book"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Official author, publisher, original-edition, clinical counterevidence, and Adlerian evidence sources distinguish Kishimi's real philosophical and interpretive experience from clinical research specialties the available record does not establish.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
