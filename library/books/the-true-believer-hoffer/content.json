@@ -519,8 +519,30 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "The adversarial pass separated Hoffer's claims from established fact, tested the frustrated-convert model against ideology, institutions, networks, coercion, legitimate grievance, and prosocial solidarity, and treated the movement life cycle as a heuristic rather than a law. It also preserved Hoffer's constructive final qualification and the uncertainty in his own biography."
+    "review_notes": "The adversarial pass separated Hoffer's claims from established fact, tested the frustrated-convert model against ideology, institutions, networks, coercion, legitimate grievance, and prosocial solidarity, and treated the movement life cycle as a heuristic rather than a law. It also preserved Hoffer's constructive final qualification and the uncertainty in his own biography.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Verified the full title, author, 1951 publication, current edition, four-part contents, and the uncertainty around Hoffer's early biography against book, library, archive, and official records.",
+        "Cross-checked the appeal, convert categories, interchangeability thesis, unifying agents, and critic–fanatic–administrator life cycle across primary preview material and independent specialist treatments.",
+        "Tested the psychological model against ideology, justified grievance, networks, material interest, institutions, coercion, prosocial solidarity, causal reversal, and movements that preserve individual judgment.",
+        "Confirmed citation entailment and the configured 6.4 content-only calculation; popularity, prestige, politics, and reader scores do not affect it.",
+        "Reviewed adjacent scripts for distinct value, plain British English, faithful qualifications, useful reading advice, and endings containing only book content.",
+        "Inspected Kokoro phonemes for Eric Hoffer, Stalin, Nazism, and aphoristic; the output required no dictionary override. All four local files are current and duration-calibrated."
+      ]
+    }
   }
 }

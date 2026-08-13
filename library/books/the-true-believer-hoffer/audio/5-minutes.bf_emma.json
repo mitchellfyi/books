@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-true-believer-hoffer",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-true-believer-hoffer/scripts/5-minutes.md",
+  "source_script_sha256": "e9628865db36526d2aab34d4a672fa5d39209776c6ff97c89449ec114fdee21f",
+  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_terms": [],
+  "script_words": 701,
+  "audio_seconds": 284.381,
+  "measured_wpm": 147.9,
+  "generated_at": "2026-08-13T08:32:28.011678+00:00"
+}

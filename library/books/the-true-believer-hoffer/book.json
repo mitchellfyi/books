@@ -172,7 +172,7 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "The searchable Google Books text and library preview were checked across all four parts and the 125-section progression, then triangulated with contemporary scholarship, later specialist analysis, and detailed independent and reader reviews. No uninterrupted lawful full text was available, so coverage remains sample-and-secondary.",
     "last_researched": "2026-08-13",
