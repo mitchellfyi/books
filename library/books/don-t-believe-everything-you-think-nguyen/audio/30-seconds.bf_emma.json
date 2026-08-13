@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "don-t-believe-everything-you-think-nguyen",
+  "duration": "30-seconds",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.9,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/don-t-believe-everything-you-think-nguyen/scripts/30-seconds.md",
+  "source_script_sha256": "a1c8794480c25fb407876dd88078f8188a1bd19e15ba2baa888d4dc751fe06c1",
+  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
+  "pronunciation_terms": [
+    "Nguyen"
+  ],
+  "pronunciation_entries_sha256": "f0029780c1f01280d17d47104072656e0a9a33a62e2c2d28ab654e02872c7ffd",
+  "script_words": 71,
+  "audio_seconds": 27.607,
+  "measured_wpm": 154.31,
+  "generated_at": "2026-08-13T13:39:00.835111+00:00"
+}
