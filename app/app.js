@@ -10,6 +10,21 @@ const esc = value => String(value ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','
 const label = value => value.replace('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
 const list = values => `<ul class="compact-list">${values.map(v => `<li>${esc(v.text ?? v)}</li>`).join('')}</ul>`;
 const findBook = id => state.library.books.find(book => book.id === id);
+// Authors are embedded per book; index them once with their library books attached.
+const authorsById = () => {
+  if (!state.authorIndex) {
+    state.authorIndex = new Map();
+    state.library.books.forEach(book => book.authors.forEach(author => {
+      if (!state.authorIndex.has(author.id)) state.authorIndex.set(author.id, {...author, books: []});
+      state.authorIndex.get(author.id).books.push(book);
+    }));
+  }
+  return state.authorIndex;
+};
+const findAuthor = id => authorsById().get(id) || null;
+const norm = value => String(value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const bookByTitle = title => state.library.books.find(book => norm(book.title) === norm(title))
+  || state.library.books.find(book => norm(book.title).startsWith(norm(title) + ' '));
 const recommendedLevel = book => book.content.editorial.recommended_level;
 const bookRating = book => book.content.workflow.status === 'stub'
   ? null
@@ -65,12 +80,35 @@ async function start() {
     el('voice').innerHTML = Object.entries(voiceNames).map(([id, name]) =>
       `<option value="${id}" ${id === state.voice ? 'selected' : ''}>${esc(name.split(' — ')[0])}</option>`).join('');
     bind();
-    renderList();
-    renderBook();
+    window.addEventListener('hashchange', route);
+    route();
     renderPlaylist();
   } catch (error) {
     el('book-detail').innerHTML = `<section class="empty"><h1>Library data is not ready</h1><p>${esc(error.message)}</p></section>`;
   }
+}
+
+// Hash routes: #book/<id> and #author/<id>. The detail pane renders whichever
+// entity the hash names; anything unrecognised falls back to the selected book.
+function route() {
+  const [type, id] = decodeURIComponent(location.hash.slice(1)).split('/');
+  if (type === 'author' && findAuthor(id)) {
+    state.view = {type: 'author', id};
+  } else if (type === 'book' && findBook(id)) {
+    if (state.selectedBook?.id !== id) state.level = null;
+    state.selectedBook = findBook(id);
+    state.view = {type: 'book', id};
+  } else {
+    state.view = state.selectedBook ? {type: 'book', id: state.selectedBook.id} : null;
+  }
+  renderList();
+  renderDetail();
+}
+
+function renderDetail() {
+  if (state.view?.type === 'author') renderAuthor(state.view.id);
+  else renderBook();
+  if (location.hash) el('book-detail').scrollIntoView({block: 'start'});
 }
 
 function bind() {
@@ -114,7 +152,7 @@ function renderList() {
       ? `<span class="quickplay" data-quickplay title="Play the ${featured.level === recommendedLevel(book) ? 'recommended' : 'longest available'} brief">▶ ${timeLabel(levelSeconds(book, featured.level))}${featured.level === recommendedLevel(book) ? ' ★' : ''}</span>`
       : '';
     return `
-    <button class="book-card" type="button" data-book="${book.id}" aria-current="${book.id === state.selectedBook?.id}">
+    <button class="book-card" type="button" data-book="${book.id}" aria-current="${state.view?.type !== 'author' && book.id === state.selectedBook?.id}">
       <strong>${esc(book.title)}</strong>
       <span>${esc(book.authors.map(a => a.name).join(', '))}</span>
       ${rating ? `<span class="rating-chip">${rating.score.toFixed(1)}/10</span>` : ''}
@@ -127,16 +165,14 @@ function renderList() {
       playItem(featuredItem(book));
       return;
     }
-    state.selectedBook = book;
-    state.level = null;
-    renderList();
-    renderBook();
+    if (location.hash === `#book/${book.id}`) { route(); }
+    else location.hash = `book/${book.id}`;
     el('book-detail').focus();
   }));
   if (!books.length) {
     el('book-detail').replaceChildren(el('empty-state').content.cloneNode(true));
   } else if (!el('book-detail').querySelector('article')) {
-    renderBook();
+    renderDetail();
   }
 }
 
@@ -144,7 +180,8 @@ function renderBook() {
   const book = state.selectedBook;
   if (!book) return;
   const c = book.content;
-  const authorNames = book.authors.map(a => a.name).join(', ');
+  const authorLinks = book.authors.map(author =>
+    `<a class="author-link" href="#author/${esc(author.id)}">${esc(author.name)}</a>`).join(', ');
   const levels = Object.entries(state.library.config.levels);
   const selected = state.level && book.scripts[state.level] ? state.level : null;
   const decision = c.assessment.decision;
@@ -152,18 +189,31 @@ function renderBook() {
   const rubric = Object.fromEntries(
     (state.library.rating_config?.dimensions || []).map(item => [item.id, item]));
   const sources = book.research.sources;
-  const related = book.relationships.map(relationship => {
-    const otherId = relationship.source_id === book.id ? relationship.target_id : relationship.source_id;
-    const entity = state.library.catalog.entities.find(item => item.id === otherId);
-    return {...relationship, entity};
-  });
+  // Authorship edges are shown in the byline and Author section; the related
+  // list keeps cross-book and cross-author connections only.
+  const related = book.relationships
+    .filter(relationship => relationship.type !== 'written-by')
+    .map(relationship => {
+      const otherId = relationship.source_id === book.id ? relationship.target_id : relationship.source_id;
+      const entity = state.library.catalog.entities.find(item => item.id === otherId);
+      return {...relationship, otherId, entity};
+    });
+  const relatedItem = item => {
+    const name = item.entity?.name || item.otherId;
+    const linkedBook = item.entity?.kind !== 'author' && findBook(item.otherId);
+    const linkedAuthor = item.entity?.kind === 'author' && findAuthor(item.otherId);
+    const title = linkedBook ? `<a href="#book/${esc(item.otherId)}"><strong>${esc(name)}</strong></a>`
+      : linkedAuthor ? `<a href="#author/${esc(item.otherId)}"><strong>${esc(name)}</strong></a>`
+      : `<strong>${esc(name)}</strong>`;
+    return `<li>${title}<span>${esc(label(item.type))} · ${esc(item.description)}</span>${!linkedBook && !linkedAuthor ? '<small>Not yet available in the library</small>' : ''}</li>`;
+  };
 
   el('book-detail').innerHTML = `
     <article>
       <header class="hero">
         <div class="eyebrow">${esc(c.editorial.recommended_level)} recommended · ${esc(c.editorial.compression_fit)} compression fit</div>
         <h1>${esc(book.title)}</h1>
-        <div class="byline">${esc(authorNames)} · ${esc(book.bibliography.first_published || 'Date unknown')}</div>
+        <div class="byline">${authorLinks} · ${esc(book.bibliography.first_published || 'Date unknown')}</div>
         ${rating ? `<div class="rating-summary"><strong>${rating.score.toFixed(1)}/10</strong><span>${esc(rating.confidence)} confidence · content and ideas</span></div>` : ''}
         <p class="verdict">${esc(c.card.verdict)}</p>
         ${book.workflow.coverage !== 'full-book' ? `<span class="coverage">${esc(book.workflow.coverage)} · not verified against the full book</span>` : ''}
@@ -252,13 +302,13 @@ function renderBook() {
 
       <details class="section">
         <summary>Related books and authors</summary>
-        ${related.length ? `<ul class="related">${related.map(item => `<li><strong>${esc(item.entity?.name || item.target_id)}</strong><span>${esc(label(item.type))} · ${esc(item.description)}</span>${item.entity?.state !== 'catalogued' ? '<small>Recommendation not yet profiled</small>' : ''}</li>`).join('')}</ul>` : '<p>No relationships recorded yet.</p>'}
+        ${related.length ? `<ul class="related">${related.map(relatedItem).join('')}</ul>` : '<p>No relationships recorded yet.</p>'}
       </details>
 
       <details class="section">
         <summary>Author</summary>
         <p>${esc(c.assessment.author_and_purpose.text)}</p>
-        ${book.authors.map(author => `<h3>${esc(author.name)}</h3><p>${esc(author.profile.biography.text)}</p><p>${esc(author.profile.perspective_and_limits.text)}</p>`).join('')}
+        ${book.authors.map(author => `<h3><a href="#author/${esc(author.id)}">${esc(author.name)}</a></h3><p>${esc(author.profile.biography.text)}</p><p>${esc(author.profile.perspective_and_limits.text)}</p><p><a href="#author/${esc(author.id)}">All of ${esc(author.name.split(' ').pop())}'s books in this library →</a></p>`).join('')}
       </details>
 
       <details class="section">
@@ -280,6 +330,72 @@ function renderBook() {
     document.querySelector('.script-panel')?.scrollIntoView({behavior: 'smooth', block: 'nearest'});
   }));
   bindScriptActions();
+}
+
+function renderAuthor(id) {
+  const author = findAuthor(id);
+  if (!author) return;
+  const profile = author.profile;
+  const works = author.selected_works || [];
+  const sources = author.research?.sources || [];
+  const librarySection = author.books.map(book => {
+    const rating = bookRating(book);
+    const featured = featuredItem(book);
+    return `<li>
+      <a href="#book/${esc(book.id)}">
+        <strong>${esc(book.title)}</strong>
+        <span class="muted">${esc(book.bibliography.first_published || '')}${rating ? ` · ${rating.score.toFixed(1)}/10` : ''} · ${esc(recommendedLevel(book))} recommended</span>
+      </a>
+      ${featured ? `<button type="button" class="quickplay" data-play-book="${esc(book.id)}" title="Play the recommended brief">▶ ${timeLabel(levelSeconds(book, featured.level))}</button>` : ''}
+    </li>`;
+  }).join('');
+  const workItem = work => {
+    const match = bookByTitle(work.title);
+    const title = match ? `<a href="#book/${esc(match.id)}">${esc(work.title)}</a>` : esc(work.title);
+    return `<li>${title}${work.year ? ` (${esc(work.year)})` : ''}${work.relationship ? ` — ${esc(work.relationship)}` : ''}</li>`;
+  };
+
+  el('book-detail').innerHTML = `
+    <article>
+      <header class="hero">
+        <div class="eyebrow">Author</div>
+        <h1>${esc(author.name)}</h1>
+        <p class="verdict">${esc(profile.one_line.text)}</p>
+      </header>
+
+      <section class="section">
+        <h2>In this library</h2>
+        <ul class="author-books">${librarySection}</ul>
+      </section>
+
+      <section class="section">
+        <h2>Biography</h2>
+        <p>${esc(profile.biography.text)}</p>
+        <p>${esc(profile.background.text)}</p>
+      </section>
+
+      <section class="section">
+        <h2>Expertise and perspective</h2>
+        <p>${esc(profile.expertise.text)}</p>
+        <p class="caveat"><strong>Limits:</strong> ${esc(profile.perspective_and_limits.text)}</p>
+      </section>
+
+      ${works.length ? `<section class="section">
+        <h2>Selected works</h2>
+        <ul class="compact-list">${works.map(workItem).join('')}</ul>
+      </section>` : ''}
+
+      ${sources.length ? `<section class="section">
+        <details><summary>${sources.length} research sources</summary>
+          <ol class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noreferrer">${esc(source.title)}</a><span class="source-meta">${esc(source.author_or_publisher)} · ${esc(source.independence)} · ${esc(source.quality)} quality</span></li>`).join('')}</ol>
+        </details>
+      </section>` : ''}
+    </article>`;
+
+  el('book-detail').querySelectorAll('[data-play-book]').forEach(button => button.addEventListener('click', event => {
+    event.preventDefault();
+    playItem(featuredItem(findBook(button.dataset.playBook)));
+  }));
 }
 
 function scriptPanel(book, level) {

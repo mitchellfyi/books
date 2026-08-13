@@ -99,6 +99,20 @@ main { min-width: 0; }
 .related strong, .related span, .related small { display: block; }
 .related span { margin-top: .25rem; }
 .related small { margin-top: .25rem; color: var(--muted); }
+.related a { text-decoration: none; }
+.related a:hover strong { text-decoration: underline; }
+
+.byline .author-link { color: inherit; text-underline-offset: .18em; }
+.byline .author-link:hover { color: var(--accent); }
+
+.author-books { padding: 0; list-style: none; }
+.author-books li { display: flex; gap: 1rem; align-items: center; justify-content: space-between; padding: .85rem 0; border-top: 1px solid var(--line); }
+.author-books a { flex: 1; min-width: 0; text-decoration: none; color: inherit; }
+.author-books a:hover strong { color: var(--accent); text-decoration: underline; }
+.author-books strong, .author-books .muted { display: block; }
+.author-books .muted { margin-top: .25rem; }
+.author-books .quickplay { margin-top: 0; white-space: nowrap; }
+.section > .caveat { color: var(--muted); }
 .reading-grid { display: grid; grid-template-columns: 9rem 1fr; gap: .65rem 1rem; }
 .reading-grid dt { color: var(--muted); }
 .reading-grid dd { margin: 0; }
