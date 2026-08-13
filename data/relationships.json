@@ -3,6 +3,45 @@
   "schema_version": 1,
   "relationships": [
     {
+      "id": "laws-human-nature-written-by-robert-greene",
+      "source_id": "the-laws-of-human-nature-greene",
+      "target_id": "robert-greene",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Robert Greene wrote The Laws of Human Nature.",
+      "source_refs": [
+        "library/books/the-laws-of-human-nature-greene/book.json#prh-book-page",
+        "library/books/the-laws-of-human-nature-greene/book.json#google-books-preview"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "laws-human-nature-related-to-48-laws",
+      "source_id": "the-laws-of-human-nature-greene",
+      "target_id": "the-48-laws-of-power-greene",
+      "type": "related-to",
+      "basis": "explicit",
+      "description": "Greene's earlier book catalogues external power tactics; this later work supplies the emotional and social worldview behind them.",
+      "source_refs": [
+        "library/books/the-laws-of-human-nature-greene/book.json#prh-book-page",
+        "library/books/the-laws-of-human-nature-greene/book.json#supersummary-guide"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "laws-human-nature-contrasts-with-thinking-fast-and-slow",
+      "source_id": "the-laws-of-human-nature-greene",
+      "target_id": "thinking-fast-and-slow-daniel-kahneman",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Both examine irrational judgment, but Kahneman organises decades of experimental research while Greene builds a broader strategic account from historical cases.",
+      "source_refs": [
+        "library/books/the-laws-of-human-nature-greene/book.json#publisher-sample",
+        "library/books/the-laws-of-human-nature-greene/book.json#kirkus-review"
+      ],
+      "confidence": "medium"
+    },
+    {
       "id": "let-them-written-by-mel-robbins",
       "source_id": "the-let-them-theory-robbins",
       "target_id": "mel-robbins",

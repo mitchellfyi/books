@@ -84,6 +84,13 @@
       "aliases": []
     },
     {
+      "id": "empathy",
+      "kind": "topic",
+      "label": "Empathy",
+      "description": "Understanding another person's perspective, emotion, and experience without assuming agreement.",
+      "aliases": []
+    },
+    {
       "id": "history",
       "kind": "topic",
       "label": "History",
@@ -91,10 +98,24 @@
       "aliases": []
     },
     {
+      "id": "human-nature",
+      "kind": "topic",
+      "label": "Human nature",
+      "description": "Claims about recurring motives, capacities, and behavioural tendencies shared across people.",
+      "aliases": []
+    },
+    {
       "id": "innovation",
       "kind": "topic",
       "label": "Innovation",
       "description": "Developing and applying useful new approaches, products, or services.",
+      "aliases": []
+    },
+    {
+      "id": "leadership",
+      "kind": "topic",
+      "label": "Leadership",
+      "description": "Guiding people or organisations through judgment, influence, coordination, and responsibility.",
       "aliases": []
     },
     {
@@ -184,6 +205,13 @@
       "aliases": []
     },
     {
+      "id": "self-awareness",
+      "kind": "topic",
+      "label": "Self-awareness",
+      "description": "Accurate attention to one's own emotions, motives, patterns, limits, and effects on others.",
+      "aliases": []
+    },
+    {
       "id": "signalling",
       "kind": "topic",
       "label": "Signalling",
@@ -191,6 +219,13 @@
       "aliases": [
         "signaling"
       ]
+    },
+    {
+      "id": "social-psychology",
+      "kind": "topic",
+      "label": "Social psychology",
+      "description": "How social context, groups, relationships, and perceived others shape thought and behaviour.",
+      "aliases": []
     },
     {
       "id": "strategy",

@@ -7,105 +7,499 @@
     "compression_fit": "medium",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "The eighteen-law inventory is too broad for five minutes without becoming a list, but its useful distinctions, representative cases, and evidential limits fit a disciplined fifteen-minute treatment. Thirty minutes preserves more of the historical and practical texture; the 624-page original mainly adds extended narrative reinforcement."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "A historically illustrated field guide to the emotional, ego-driven, social, and purposive forces Greene believes recur beneath human behaviour.",
+    "verdict": "Rich in memorable lenses and self-observation prompts, but too anecdotal, pessimistic, and categorical to serve as reliable psychological science.",
+    "source_ids": ["publisher-sample", "google-books-preview", "publishers-weekly-review", "kirkus-review", "goodreads-reception"],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Greene presents eighteen 'laws' covering irrational emotion, narcissism, social masks, character, desire, shortsightedness, defensiveness, attitude, repression, envy, grandiosity, gender, purpose, conformity, leadership, aggression, generations, and death. Each chapter combines an extended historical biography, psychological interpretation, warning signs, and advice for observing oneself and dealing strategically with others.",
+      "source_ids": ["publisher-sample", "google-books-preview", "readingraphics-summary", "supersummary-guide", "publishers-weekly-review"],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "People overestimate their rationality and conceal important motives from themselves as well as others. By stepping back from immediate emotion, studying repeated behaviour, developing empathy, and recognising recurrent social drives, a reader can gain self-control, judge character more accurately, resist group pressure, and act with purpose.",
+      "source_ids": ["publisher-sample", "google-books-preview", "talks-at-google", "publishers-weekly-review", "supersummary-guide"],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "irrationality",
+      "title": "Master emotion before it masters judgment",
+      "claim": "People rationalise emotional reactions while believing they are making objective decisions.",
+      "explanation": "Greene recommends identifying recurring biases, noticing what inflames mood, delaying action, and combining felt information with deliberate analysis. Rationality is a practice of widening perspective, not an emotionless state.",
+      "representative_example": "Pericles maintains strategic restraint in Athens, while the city becomes reactive after his death and makes increasingly disastrous choices in the Peloponnesian War.",
+      "why_it_matters": "The observer who can name an emotional current is less likely to mistake urgency, anger, or excitement for evidence.",
+      "caveat": "The historical story illustrates a possibility; it does not isolate one psychological cause of Athens's defeat.",
+      "source_ids": ["publisher-sample", "google-books-preview", "supersummary-guide", "publishers-weekly-review"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "narcissism",
+      "title": "Turn self-absorption into empathy",
+      "claim": "Everyone needs attention and self-regard, but deep narcissism makes other people into extensions or instruments of the self.",
+      "explanation": "Greene treats narcissism as a spectrum and asks readers to redirect attention outward: infer perspective, attend to emotion, and test assumptions about what another person experiences.",
+      "representative_example": "Ernest Shackleton is used as a model of leadership that reads a group's morale and channels personal confidence into collective survival.",
+      "why_it_matters": "Empathy improves prediction and relationship quality while countering the tendency to interpret everything personally.",
+      "caveat": "The chapter's spectrum is a practical metaphor, not a substitute for clinical assessment of personality disorders.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "role-playing",
+      "title": "Read masks as performances, not x-rays",
+      "claim": "Social life requires roles, so words and polished presentation rarely reveal the whole person.",
+      "explanation": "Look for clusters of nonverbal signals, changes across situations, and mismatches between speech and action. Greene urges observation of tone, posture, eyes, and microexpressions without confronting every sign.",
+      "representative_example": "Psychiatrist Milton Erickson's close attention to physical detail becomes the model for seeing what ordinary listeners miss.",
+      "why_it_matters": "Behaviour across contexts is usually more informative than one claim about identity or intent.",
+      "caveat": "Body-language meanings are probabilistic and culturally variable; confidence in lie-reading easily becomes projection.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "character",
+      "title": "Judge character by repeated choices",
+      "claim": "Stress and time reveal durable patterns that charm and stated intentions can hide.",
+      "explanation": "Greene advises studying a person's past decisions, response to pressure, reliability, flexibility, and treatment of people with less power. One act matters less than a recurring pattern.",
+      "representative_example": "Howard Hughes's repeated business and personal failures are presented as compulsive patterns surviving changes of circumstance.",
+      "why_it_matters": "Choosing partners and leaders on demonstrated character reduces dependence on first impressions.",
+      "caveat": "Past behaviour informs prediction without making change impossible; situation and opportunity also shape conduct.",
+      "source_ids": ["google-books-preview", "publishers-weekly-review", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "covetousness",
+      "title": "Absence and imagination increase desire",
+      "claim": "People often want what appears scarce, distant, forbidden, or possessed by others more than what is constantly available.",
+      "explanation": "Greene argues that mystery and strategic absence leave space for imagination, while overexposure makes flaws and familiarity dominate. He applies this both to desire and to understanding chronic dissatisfaction.",
+      "representative_example": "Coco Chanel turns difference, ambiguity, and a challenge to convention into desirability and cultural attention.",
+      "why_it_matters": "Recognising the projection behind desire can improve marketing judgment and reduce restless pursuit.",
+      "caveat": "Manufactured scarcity can manipulate people, and secure relationships generally require availability rather than calculated withdrawal.",
+      "source_ids": ["readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "shortsightedness",
+      "title": "Raise the time horizon",
+      "claim": "Immediate drama, vivid trends, and short-term reward crowd out second-order consequences.",
+      "explanation": "Step back, examine patterns and incentives, model how others will react, and connect the present choice to longer aims. Distance weakens the emotional spell of the moment.",
+      "representative_example": "The South Sea Bubble illustrates how contagious excitement and short horizons can overwhelm sober appraisal.",
+      "why_it_matters": "Longer perspective improves strategy and makes recurring cycles easier to recognise.",
+      "caveat": "Long-range prediction remains uncertain; a longer horizon should not become false confidence in a preferred story.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "defensiveness",
+      "title": "Influence by preserving autonomy",
+      "claim": "Direct attacks on intelligence, goodness, or freedom make people defend identity rather than evaluate the message.",
+      "explanation": "Begin from the other person's self-conception, listen, reduce status threat, and allow them to participate in the conclusion. Greene frames validation as a strategic route around resistance.",
+      "representative_example": "Lyndon Johnson's close reading of colleagues and tailored attention is used to show persuasion that works through another person's needs.",
+      "why_it_matters": "Good advice has no effect if its delivery makes acceptance feel humiliating.",
+      "caveat": "Respectful framing can become flattery or covert manipulation; honest disagreement should remain visible.",
+      "source_ids": ["readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "attitude",
+      "title": "Attitude shapes the field of action",
+      "claim": "A person's habitual interpretation changes what they notice, attempt, invite from others, and thereby reinforce.",
+      "explanation": "Hostile, anxious, avoidant, or constricted attitudes can produce the circumstances that appear to confirm them. Greene recommends identifying the pattern and deliberately widening response.",
+      "representative_example": "Anton Chekhov's movement beyond an oppressive childhood is offered as a model of changing relation to circumstance without denying it.",
+      "why_it_matters": "Self-sabotage often operates through repeated perception and behaviour rather than one conscious wish to fail.",
+      "caveat": "Attitude affects response but does not create every circumstance; structural constraint and chance are not mindsets.",
+      "source_ids": ["publishers-weekly-review", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "repression",
+      "title": "Integrate the shadow",
+      "claim": "Traits denied in public identity do not vanish; they return indirectly, especially under pressure or power.",
+      "explanation": "Greene asks readers to notice intense moralism, projection, slips, and behaviour that contradicts the performed self. Owning aggression, ambition, envy, or vulnerability makes expression more deliberate.",
+      "representative_example": "Richard Nixon's guarded public self and conduct around Watergate illustrate a disowned side becoming destructive.",
+      "why_it_matters": "Self-knowledge reduces projection and the shock of behaviour that seemed out of character.",
+      "caveat": "The Jungian shadow is interpretive and easily used to make unfalsifiable claims about hidden motives.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "envy",
+      "title": "Envy hides behind moral language",
+      "claim": "Painful comparison is often concealed as criticism, gossip, indifference, or pleasure in another person's setback.",
+      "explanation": "Notice disproportionate reactions to peers, admit what their advantage awakens, and convert comparison into learning or gratitude. Observe patterns of praise that subtly diminish.",
+      "representative_example": "Jane Williams's friendship with Mary Shelley is used as a case of admiration mixed with corrosive rivalry.",
+      "why_it_matters": "Naming envy prevents it from silently governing relationships and helps detect concealed hostility.",
+      "caveat": "Not every criticism of a successful person is envy; the label can immunise status and power from valid challenge.",
+      "source_ids": ["google-books-preview", "publishers-weekly-review", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "grandiosity",
+      "title": "Match ambition to reality",
+      "claim": "Success, attention, and fantasy can inflate self-estimate beyond demonstrated ability and changing conditions.",
+      "explanation": "Ground confidence in work, feedback, limitations, and concrete progress. Expansive goals are useful when paired with an accurate account of skill, dependence, and risk.",
+      "representative_example": "Michael Eisner's rise and fall at Disney illustrates success feeding isolation, overreach, and loss of corrective feedback.",
+      "why_it_matters": "Accurate self-assessment protects durable ambition from the decisions grandiosity invites.",
+      "caveat": "A dramatic career arc does not prove a single inner cause, and bold decisions sometimes succeed despite social disapproval.",
+      "source_ids": ["google-books-preview", "kirkus-review", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "gender-rigidity",
+      "title": "Expand beyond a rigid gender role",
+      "claim": "People suppress qualities coded as belonging to another gender and then project those qualities onto others.",
+      "explanation": "Greene uses a Jungian masculine-feminine model to recommend developing both assertive and receptive, analytic and intuitive capacities rather than living inside a narrow role.",
+      "representative_example": "Caterina Sforza is portrayed as combining traits her culture divided into masculine and feminine categories.",
+      "why_it_matters": "A wider behavioural range can improve flexibility and reduce idealised projection in relationships.",
+      "caveat": "The binary labels are culturally dated and can reproduce stereotypes even while arguing against rigidity.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "purpose",
+      "title": "Organise life around purpose",
+      "claim": "Without a durable direction, people scatter effort among moods, status signals, and goals borrowed from others.",
+      "explanation": "Greene recommends tracing persistent interests, identifying distinctive inclinations, developing skill, and translating a broad purpose into nearer tasks. Purpose supplies a filter rather than a rigid destiny.",
+      "representative_example": "Martin Luther King Jr.'s developing vocation is used to connect personal direction with disciplined collective leadership.",
+      "why_it_matters": "A long horizon helps resist distraction, conformity, and discouragement.",
+      "caveat": "Purpose can evolve and need not be singular; material necessity limits how fully work can express it.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "conformity",
+      "title": "See the group mind",
+      "claim": "Groups amplify emotion, reward belonging, simplify enemies, and suppress private doubt.",
+      "explanation": "Retain an independent practice of reflection, examine incentives and shared language, and create team norms that permit dissent. Greene urges readers to notice how their personality changes inside a group.",
+      "representative_example": "A young Gao Yuan during China's Cultural Revolution illustrates identity and cruelty being reshaped by collective pressure.",
+      "why_it_matters": "Belonging can quietly replace judgment in organisations, movements, and online crowds.",
+      "caveat": "Groups also enable knowledge, solidarity, and cooperation that isolated individuals cannot achieve.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "leadership",
+      "title": "Leadership depends on legitimacy",
+      "claim": "Followers are fickle when authority rests only on position, fear, or enthusiasm.",
+      "explanation": "Greene advises leaders to read the group, embody purpose, balance firmness with empathy, accept projection, and build trust through consistent performance. Authority must feel connected to collective interest.",
+      "representative_example": "Elizabeth I is presented as balancing symbolic distance, political timing, and attention to public mood.",
+      "why_it_matters": "Leadership fails when the leader confuses temporary applause or compliance with durable support.",
+      "caveat": "The leader-centred account underplays institutions, distributed expertise, accountability, and democratic constraint.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "aggression",
+      "title": "Recognise aggression beneath presentation",
+      "claim": "Competitive and aggressive drives often appear indirectly as control, obstruction, passive hostility, or moralised attack.",
+      "explanation": "Look past charm to recurring boundary violations and effects. Greene recommends firm response to chronic aggressors while channelling one's own aggressive energy into work and assertion.",
+      "representative_example": "John D. Rockefeller's consolidation of Standard Oil becomes the model of quiet, systematic aggression behind a restrained manner.",
+      "why_it_matters": "Naming indirect aggression helps people respond to conduct rather than being disarmed by style.",
+      "caveat": "Suspicion can create the hostility it expects; competitive conduct has institutional and economic causes as well as hidden drives.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "generations",
+      "title": "Locate yourself in historical time",
+      "claim": "Generations acquire shared tastes, traumas, ideals, and blind spots while mistaking them for timeless reality.",
+      "explanation": "Study cycles and the formative conditions of different cohorts, then distinguish a durable change from a reaction against the previous generation. Historical awareness can reveal an opening without guaranteeing prediction.",
+      "representative_example": "Danton is portrayed as sensing forces unleashed in the French Revolution that the old regime could not read.",
+      "why_it_matters": "Strategy improves when current fashion is placed inside a longer movement of reaction and renewal.",
+      "caveat": "Generational categories hide differences of class, culture, geography, and individual experience.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "mortality",
+      "title": "Use mortality to sharpen life",
+      "claim": "Avoiding death narrows awareness, while accepting finite time can deepen urgency, proportion, and connection.",
+      "explanation": "Greene recommends making death concrete enough to clarify priorities and common humanity. Mortality reduces the fantasy of endless deferral and places ego conflicts in scale.",
+      "representative_example": "Flannery O'Connor's life and work under serious illness are used to show mortality intensifying attention and purpose.",
+      "why_it_matters": "Finite time can turn abstract purpose into choices and soften defensive separation from others.",
+      "caveat": "Mortality reflection affects people differently and can increase distress; it is not a universal motivational technique.",
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Introduction and laws 1-3: perception",
+      "purpose": "Establish that emotion, self-absorption, and performance distort social judgment.",
+      "summary": "The opening moves from regulating one's own irrationality to directing attention outward through empathy, then to reading the roles and nonverbal signs through which people manage impressions.",
+      "idea_ids": ["irrationality", "narcissism", "role-playing"],
+      "source_ids": ["publisher-sample", "google-books-preview", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Laws 4-6: patterns, desire, and time",
+      "purpose": "Improve prediction by looking beyond charm, possession, and immediate excitement.",
+      "summary": "Character appears in repeated conduct, desire grows through projection and scarcity, and strategic judgment requires distance from the present moment. These chapters ask the reader to favour patterns over impressions.",
+      "idea_ids": ["character", "covetousness", "shortsightedness"],
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Laws 7-9: resistance and the hidden self",
+      "purpose": "Show how identity defence, attitude, and repression shape conduct outside conscious intention.",
+      "summary": "Influence works better when autonomy is respected; habitual interpretation can reinforce circumstance; and disowned traits return through projection or loss of control.",
+      "idea_ids": ["defensiveness", "attitude", "repression"],
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Laws 10-12: ego and identity",
+      "purpose": "Examine concealed comparison, inflated self-estimate, and restricted identity.",
+      "summary": "Envy hides behind criticism, success can detach ambition from reality, and rigid gender roles narrow available traits. The practical answer is greater ownership of what the ego would rather conceal.",
+      "idea_ids": ["envy", "grandiosity", "gender-rigidity"],
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide", "kirkus-review"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Laws 13-15: purpose, groups, and leadership",
+      "purpose": "Move from individual direction to collective pressure and legitimate authority.",
+      "summary": "Purpose organises effort, group belonging threatens independent judgment, and leaders must turn unstable projection into trust through purpose, empathy, consistency, and restraint.",
+      "idea_ids": ["purpose", "conformity", "leadership"],
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 6,
+      "title": "Laws 16-18: conflict, history, and death",
+      "purpose": "Place social action inside competitive drives, generational change, and finite time.",
+      "summary": "The closing chapters ask readers to recognise indirect aggression, see their moment as historically conditioned, and use mortality to clarify purpose and common humanity.",
+      "idea_ids": ["aggression", "generations", "mortality"],
+      "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Eighteen self-contained laws, each opening with a long historical or biographical story, followed by interpretation, types or warning signs, and advice for reversing the pattern.",
+    "voice": "Authoritative, strategic, psychologically suspicious, and often dramatic; the reader is addressed as a student learning to see what others miss.",
+    "pace": "Slow and immersive. Stories create momentum within chapters, but 624 pages and a repeated chapter formula make the complete work demanding.",
+    "evidence_style": "Curated history, biography, literature, philosophy, psychoanalytic concepts, and selected psychology are synthesised into universal-sounding laws; causal alternatives and effect sizes receive little systematic testing.",
+    "example_style": "Large portraits of political leaders, artists, executives, and historical crises carry the argument and make abstract patterns memorable.",
+    "repetition": "Moderate to high: the recurring instruction to step back, observe patterns, and master reaction appears under many labels, while long cases often make a point that can be stated briefly.",
+    "prerequisites": "No formal background is required. Readers should bring scepticism about retrospective motive-reading and avoid treating historical analogy as diagnosis.",
+    "source_ids": ["publisher-sample", "google-books-preview", "publishers-weekly-review", "kirkus-review", "goodreads-reception", "readingraphics-summary"],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 5.7,
+      "confidence": "medium",
+      "summary": "A broad and memorable observational toolkit with real practical prompts, limited by anecdotal causal claims, categorical language, selective pessimism, dated concepts, and excessive length.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.0,
+          "rationale": "The eighteen lenses make many recurring social and emotional patterns legible, but the law format can turn flexible tendencies into total explanations.",
+          "source_ids": ["publisher-sample", "publishers-weekly-review", "kirkus-review", "supersummary-guide"]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 4.5,
+          "rationale": "Greene reads widely and draws on recognised ideas, but selected historical narratives cannot establish the universal causal laws he derives, and competing interpretations are rarely tested.",
+          "source_ids": ["publisher-sample", "google-books-preview", "kirkus-review", "goodreads-reception"]
+        },
+        {
+          "id": "insight-value",
+          "score": 6.5,
+          "rationale": "The synthesis produces useful connections among emotion, ego, status, groups, and time, although many component insights come from older philosophy, psychoanalysis, and common strategic advice.",
+          "source_ids": ["google-books-preview", "publishers-weekly-review", "library-journal-review", "kirkus-review"]
+        },
+        {
+          "id": "practical-utility",
+          "score": 6.5,
+          "rationale": "Observing patterns, delaying reaction, testing character over time, preserving autonomy, and clarifying purpose are usable practices; speculative motive-reading can also make a reader overconfident and suspicious.",
+          "source_ids": ["talks-at-google", "publishers-weekly-review", "goodreads-reception", "supersummary-guide"]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 4.5,
+          "rationale": "The subject range is vast, but uncertainty, situational effects, prosocial group behaviour, institutions, cultural variation, alternative causes, and the limits of body-language inference are underdeveloped.",
+          "source_ids": ["publisher-sample", "kirkus-review", "goodreads-reception", "readingraphics-summary"]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 4.0,
+          "rationale": "Historical stories improve retention, yet a 624-page repeated formula spends far more time than the decision-relevant distinctions require.",
+          "source_ids": ["prh-book-page", "publishers-weekly-review", "kirkus-review", "goodreads-reception"]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "Human understanding begins with humility about conscious reason. Observe your own reactions before decoding others, judge patterns rather than performances, and create enough distance from ego, group pressure, and immediate drama to choose deliberately.",
+      "source_ids": ["publisher-sample", "talks-at-google", "publishers-weekly-review", "google-books-preview"],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "When emotion is strong, delay interpretation and ask what evidence would change your view.",
+        "source_ids": ["publisher-sample", "talks-at-google", "publishers-weekly-review"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Predict reliability from repeated conduct under pressure, not charm, stated intent, or one decoded gesture.",
+        "source_ids": ["google-books-preview", "supersummary-guide"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Preserve another person's sense of autonomy when persuading, while keeping the substance of disagreement honest.",
+        "source_ids": ["readingraphics-summary", "supersummary-guide"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use purpose and a longer time horizon to resist distraction, grandiosity, and the emotional pull of the group.",
+        "source_ids": ["google-books-preview", "readingraphics-summary", "supersummary-guide"],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The book's value is integrative and literary rather than scientific: it gives a reader a memorable index of questions about motive, character, influence, and collective behaviour. Its reach also makes clear why appealing stories must not be confused with validated laws.",
+      "source_ids": ["publishers-weekly-review", "kirkus-review", "library-journal-review", "goodreads-reception"],
+      "basis": "inference"
+    },
+    "author_and_purpose": {
+      "text": "Robert Greene is a classical-studies graduate and self-taught historical synthesiser, not an academic psychologist or historian. He wrote the book after earlier works on power, seduction, war, and mastery to explain the drives beneath strategic behaviour and help readers become calmer observers of themselves and others.",
+      "source_ids": ["prh-book-page", "talks-at-google", "readingraphics-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Draws connections across a large body of history, biography, literature, philosophy, and psychological ideas.",
+        "Historical narratives expose the reader to varied cases and make abstract patterns memorable.",
+        "Many practical recommendations — delay reaction, observe patterns, cultivate empathy, preserve autonomy — accord with plausible or established psychological principles.",
+        "The book includes references and names its intellectual influences rather than presenting every component as invented from nothing."
+      ],
+      "weaknesses": [
+        "Retrospective stories are selected and interpreted to fit laws, with little comparison against cases that do not fit.",
+        "Universal and causal language exceeds what biography and analogy can establish.",
+        "Body language, hidden motives, psychoanalytic shadows, and generational character invite confident inference from ambiguous evidence.",
+        "The framework gives limited weight to situation, institutions, cooperation, culture, measurement, and uncertainty."
+      ],
+      "source_ids": ["publisher-sample", "google-books-preview", "publishers-weekly-review", "kirkus-review", "goodreads-reception"],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Readers and reviewers split between admiration for an ambitious, organised, historically vivid guide and rejection of an overlong collection of truisms presented as psychological law.",
+      "praise": [
+        "Publishers Weekly found the structure persuasive and the step-back message capable of changing perspective.",
+        "Library Journal highlighted the breadth of philosophers, psychologists, and writers assembled into one guide.",
+        "Many Goodreads readers value the historical portraits, extensive scope, and practical vocabulary for self-observation.",
+        "The book is often regarded as more introspective and less directly tactical than The 48 Laws of Power."
+      ],
+      "criticism": [
+        "Kirkus judged the book pessimistic, formulaic, inflated, and far longer than its familiar advice warrants.",
+        "Critical readers object to confirmation bias in selecting history and to treating interpretations as universal laws.",
+        "The dark strategic lens can make ordinary ambiguity look like hidden envy, aggression, narcissism, or manipulation.",
+        "Some concepts, especially binary masculine-feminine psychology and confident body-language reading, are dated or weakly calibrated."
+      ],
+      "source_ids": ["publishers-weekly-review", "kirkus-review", "library-journal-review", "goodreads-reception"],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers who enjoy long historical biographies as a way to remember behavioural ideas",
+        "People who want a broad checklist for reflecting on emotion, ego, character, and group dynamics",
+        "Leaders and negotiators willing to test observations rather than diagnose people",
+        "Robert Greene readers looking for the psychological worldview beneath his power advice"
+      ],
+      "not_for": [
+        "Readers seeking a concise, evidence-graded introduction to psychology",
+        "Anyone likely to treat body language or a historical analogy as proof of another person's hidden motive",
+        "People who dislike pessimistic, strategic accounts of relationships",
+        "Readers wanting clinical guidance, diagnostic tools, or a balanced theory of prosocial human behaviour",
+        "Anyone already familiar with the major ideas who does not need hundreds of pages of narrative reinforcement"
+      ],
+      "topics": [
+        "Emotion and cognitive bias", "Empathy and narcissism", "Nonverbal behaviour and social roles", "Character and compulsion", "Desire and scarcity", "Long-term thinking", "Persuasion and defensiveness", "Attitude and self-sabotage", "Repression and projection", "Envy and grandiosity", "Gender roles", "Purpose", "Conformity", "Leadership", "Aggression", "Generations", "Mortality"
+      ],
+      "source_ids": ["prh-book-page", "google-books-preview", "publishers-weekly-review", "kirkus-review", "goodreads-reception"],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A set of scientific laws comparable to laws in physics or biology",
+        "A psychology textbook, systematic review, clinical manual, or diagnostic instrument",
+        "A neutral portrait of human capacities; conflict, self-deception, and strategy dominate",
+        "Proof that a gesture, facial expression, or historical resemblance reveals one hidden motive"
+      ],
+      "omissions": [
+        "Systematic treatment of situation, incentives, institutions, cooperation, attachment, development, and cultural difference",
+        "Methods for testing competing explanations of behaviour in ordinary life",
+        "Strong boundaries around amateur diagnosis and the error rates of reading nonverbal cues",
+        "A fuller account of healthy groups, shared power, accountability, and collective intelligence"
+      ],
+      "missing_or_weak": [
+        "Direct empirical validation of the eighteen-law taxonomy",
+        "Counterexamples and evidence that would falsify each law",
+        "Calibration of certainty, prevalence, effect size, and transfer across contexts",
+        "Efficient separation of genuinely distinct ideas from repeated versions of distance, observation, and self-control"
+      ],
+      "dated_or_contested": [
+        "The masculine-feminine framework uses a binary Jungian vocabulary that can reinforce the stereotypes it seeks to loosen.",
+        "Microexpression and body-language interpretation are less deterministic than the practical advice can imply.",
+        "Generational personalities and hidden shadows are broad interpretive constructs rather than precise measured causes.",
+        "Calling these tendencies laws overstates their universality and predictive precision."
+      ],
+      "source_ids": ["publisher-sample", "google-books-preview", "kirkus-review", "goodreads-reception", "supersummary-guide"],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if extended historical portraits are how you learn and you want all eighteen lenses developed in Greene's dramatic voice.",
+      "summary_is_enough_if": "A fifteen-minute treatment is enough if you need the complete conceptual map and its cautions rather than hundreds of pages of narrative reinforcement.",
+      "skip_if": "Skip it if you want experimentally grounded psychology, restrained causal claims, brevity, or a trusting account of relationships and institutions.",
+      "format_advice": "The official audiobook exceeds twenty-eight hours, so sample Greene's style before committing. Print or ebook is easier to consult one law at a time; the fifteen-minute audio is the best first decision point.",
+      "source_ids": ["prh-book-page", "publishers-weekly-review", "kirkus-review", "goodreads-reception"],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What is the book's recurring method beneath the eighteen different labels?",
+      "Why is repeated behaviour under pressure stronger evidence of character than charm?",
+      "Which laws mainly concern the ego, and which concern groups or historical time?",
+      "What makes a memorable historical case weak evidence for a universal law?"
+    ],
+    "application_prompts": [
+      "For one emotionally charged decision, write the evidence that would change your current interpretation.",
+      "Identify a person you are judging from one signal. What repeated conduct and situational evidence do you actually have?",
+      "Where is criticism threatening somebody's autonomy, and how could you preserve honesty while reducing that threat?",
+      "Which current group changes how you speak or decide, and what independent check could you restore?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "The review separated observation prompts from universal or causal claims, tested the framework against situational and institutional explanations, added risks of projection and amateur diagnosis, and treated historical cases as illustration rather than validation. Every law was cross-checked across primary preview material and two detailed chapter accounts.",
+    "quality_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "checks": {
+        "identity_and_metadata": false,
+        "content_fidelity": false,
+        "claim_support": false,
+        "counterevidence": false,
+        "citation_entailment": false,
+        "product_fit": false,
+        "plain_language": false,
+        "audio_pronunciation": false
+      },
+      "notes": ["Complete after scripts, pronunciation inspection, and local audio generation."]
+    }
   }
 }

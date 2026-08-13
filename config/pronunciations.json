@@ -49,6 +49,18 @@
       "source_url": "https://forvo.com/word/jay-z/",
       "verified_at": "2026-08-13",
       "notes": "The artist's name is universally jay-ZEE, including in British usage. The unassisted en-gb phonemizer produced jay-ZED (dʒˈeɪzˈɛd)."
+    },
+    {
+      "term": "Sforza",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "sfˈɔːtsə",
+        "en-us": "sfˈɔːɹtsə"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Sforza",
+      "verified_at": "2026-08-13",
+      "notes": "Italian surname, approximately SFORT-sa. The unassisted British phonemizer treated the initial letters as the word 'S' plus 'forza' and produced ess-FOR-za, so a dictionary override is required."
     }
   ]
 }

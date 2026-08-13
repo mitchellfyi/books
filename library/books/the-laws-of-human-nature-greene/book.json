@@ -7,25 +7,217 @@
   "alternate_titles": [],
   "author_ids": ["robert-greene"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2018",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US hardcover",
+        "publisher": "Viking",
+        "publication_date": "2018-10-23",
+        "isbn_10": "0525428143",
+        "isbn_13": "9780525428145",
+        "format": "Hardcover",
+        "pages": 624
+      },
+      {
+        "label": "US paperback",
+        "publisher": "Penguin Books",
+        "publication_date": "2019-10-01",
+        "isbn_10": "014311137X",
+        "isbn_13": "9780143111375",
+        "format": "Paperback",
+        "pages": 624
+      }
+    ],
+    "contents": [
+      "Introduction",
+      "1: Master Your Emotional Self — The Law of Irrationality",
+      "2: Transform Self-Love into Empathy — The Law of Narcissism",
+      "3: See Through People's Masks — The Law of Role-playing",
+      "4: Determine the Strength of People's Character — The Law of Compulsive Behavior",
+      "5: Become an Elusive Object of Desire — The Law of Covetousness",
+      "6: Elevate Your Perspective — The Law of Shortsightedness",
+      "7: Soften People's Resistance by Confirming Their Self-opinion — The Law of Defensiveness",
+      "8: Change Your Circumstances by Changing Your Attitude — The Law of Self-sabotage",
+      "9: Confront Your Dark Side — The Law of Repression",
+      "10: Beware the Fragile Ego — The Law of Envy",
+      "11: Know Your Limits — The Law of Grandiosity",
+      "12: Reconnect to the Masculine or Feminine Within You — The Law of Gender Rigidity",
+      "13: Advance with a Sense of Purpose — The Law of Aimlessness",
+      "14: Resist the Downward Pull of the Group — The Law of Conformity",
+      "15: Make Them Want to Follow You — The Law of Fickleness",
+      "16: See the Hostility Behind the Friendly Façade — The Law of Aggression",
+      "17: Seize the Historical Moment — The Law of Generational Myopia",
+      "18: Meditate on Our Common Mortality — The Law of Death Denial"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "decision-making",
+      "emotional-regulation",
+      "empathy",
+      "history",
+      "human-nature",
+      "leadership",
+      "non-fiction",
+      "personal-development",
+      "power",
+      "psychology",
+      "relationships",
+      "self-awareness",
+      "self-help",
+      "social-psychology",
+      "strategy"
+    ],
+    "audiences": [
+      "Readers who want a broad vocabulary for recurring social and emotional patterns",
+      "Managers, founders, and negotiators who learn from historical case studies",
+      "People interested in self-observation, character, group behaviour, power, and purpose",
+      "Robert Greene readers who want the psychological assumptions behind his strategy books"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "prh-book-page",
+        "title": "The Laws of Human Nature",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/317474/the-laws-of-human-nature-by-robert-greene/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "US edition metadata, formats, audiobook duration, synopsis, author credit, and selected professional review excerpts.",
+        "limitations": "Authoritative for publication facts but promotional in its description of quality and expertise."
+      },
+      {
+        "id": "publisher-sample",
+        "title": "The Laws of Human Nature: publisher preview",
+        "author_or_publisher": "Robert Greene; Profile Books",
+        "url": "https://profilebooks.com/wp-content/uploads/wpallimport/files/PDFs/9781781259191_preview.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Copyright, contents, introduction, opening argument, structure, voice, and the start of the Law of Irrationality.",
+        "limitations": "A 23-page preview, not the complete 624-page book."
+      },
+      {
+        "id": "google-books-preview",
+        "title": "The Laws of Human Nature",
+        "author_or_publisher": "Google Books; Penguin",
+        "url": "https://books.google.com/books/about/The_Laws_of_Human_Nature.html?id=uD9wDwAAQBAJ",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Hardcover identity, publication date, ISBN, length, selected contents, searchable passages, index terms, and references.",
+        "limitations": "Limited preview with uneven access across chapters."
+      },
+      {
+        "id": "talks-at-google",
+        "title": "Robert Greene: The Laws of Human Nature",
+        "author_or_publisher": "Talks at Google",
+        "url": "https://www.youtube.com/watch?v=KcaVhMt71qE",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Greene's explanation of detachment from emotion, intrinsic motives, self-control, empathy, and the purpose of the book.",
+        "limitations": "An author talk and interview, not independent validation of the laws."
+      },
+      {
+        "id": "publishers-weekly-review",
+        "title": "The Laws of Human Nature",
+        "author_or_publisher": "Publishers Weekly",
+        "url": "https://www.publishersweekly.com/9780525428145",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Positive professional assessment of organisation, historical cases, major examples, the step-back message, and the book's reflective value.",
+        "limitations": "A concise review that does not audit the scientific basis of all eighteen laws."
+      },
+      {
+        "id": "kirkus-review",
+        "title": "The Laws of Human Nature",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/robert-greene/the-laws-of-human-nature/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Critical professional assessment of the book's pessimistic frame, formula, truisms, long illustrative stories, inflated claims, and information efficiency.",
+        "limitations": "One strongly negative review with an intentionally sharp editorial voice."
+      },
+      {
+        "id": "library-journal-review",
+        "title": "The Laws of Human Nature",
+        "author_or_publisher": "Library Journal",
+        "url": "https://www.libraryjournal.com/review/the-laws-of-human-nature",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent overview of the book's use of philosophers, psychologists, writers, and representative laws, plus bibliographic details.",
+        "limitations": "Brief collection-development review with little detailed criticism; page was accessible through search indexing only."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "The Laws of Human Nature",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/42425428-the-laws-of-human-nature",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large reader aggregate and recurring praise for breadth and historical illustration alongside criticism of anecdotal selection, repetition, and overclaiming.",
+        "limitations": "Self-selected ratings, possible edition merging, and no control for completion or reader expertise."
+      },
+      {
+        "id": "readingraphics-summary",
+        "title": "The Laws of Human Nature: book summary",
+        "author_or_publisher": "Readingraphics",
+        "url": "https://readingraphics.com/book-summary-the-laws-of-human-nature/",
+        "type": "secondary-summary",
+        "independence": "interested",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Cross-check of all eighteen law titles, the five-part organisation, historical examples, and practical recommendations.",
+        "limitations": "Commercial condensation that paraphrases and reorganises the book; only two laws are treated deeply in the free version."
+      },
+      {
+        "id": "supersummary-guide",
+        "title": "The Laws of Human Nature summary and study guide",
+        "author_or_publisher": "SuperSummary",
+        "url": "https://www.supersummary.com/the-laws-of-human-nature/summary/",
+        "type": "secondary-summary",
+        "independence": "interested",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Chapter-by-chapter account based on a 2018 Penguin edition, major historical figures, themes, and the full progression of eighteen laws.",
+        "limitations": "A commercial study guide and secondary interpretation, used with primary and independent corroboration."
+      }
+    ],
+    "citations": {
+      "/title": ["prh-book-page", "publisher-sample", "google-books-preview"],
+      "/author_ids": ["prh-book-page", "publisher-sample", "google-books-preview"],
+      "/bibliography/first_published": ["prh-book-page", "publisher-sample", "google-books-preview", "kirkus-review"],
+      "/bibliography/original_language": ["publisher-sample", "google-books-preview"],
+      "/bibliography/editions/0": ["prh-book-page", "google-books-preview", "kirkus-review"],
+      "/bibliography/editions/1": ["prh-book-page", "publishers-weekly-review"],
+      "/bibliography/contents": ["publisher-sample", "google-books-preview", "readingraphics-summary", "supersummary-guide"],
+      "/discovery/tag_ids": ["prh-book-page", "google-books-preview", "library-journal-review"],
+      "/discovery/audiences": ["prh-book-page", "publishers-weekly-review", "kirkus-review", "goodreads-reception"],
+      "/discovery/formats_available": ["prh-book-page"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Checked the publisher preview and searchable Google Books edition, then triangulated every law and major historical example through two detailed chapter treatments, the author's long-form talk, and independent professional and reader reception. The complete book was not available as one uninterrupted lawful text, so the profile does not claim full-book verification.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": ["Optional: compare every historical case and endnote with an owner-supplied or library copy to raise coverage to full-book."]
   }
 }
