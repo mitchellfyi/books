@@ -147,14 +147,14 @@
     {
       "book_id": "sapiens-harari",
       "priority": 20,
-      "status": "in-progress",
+      "status": "done",
       "source": "user",
       "added_at": "2026-08-13"
     },
     {
       "book_id": "don-t-believe-everything-you-think-nguyen",
       "priority": 21,
-      "status": "ready",
+      "status": "in-progress",
       "source": "user",
       "added_at": "2026-08-13"
     },

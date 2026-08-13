@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "sapiens-harari",
+  "duration": "30-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.93,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/sapiens-harari/scripts/30-minutes.md",
+  "source_script_sha256": "a5fa7224753e7bdc0cc63a801f44ca11f142d592dbd37163cf34405fb1592f94",
+  "pronunciation_dictionary_sha256": "fc64b420045fa68d0c76a5faf6dc90976d619cd93434198bd8383cea3a4c5453",
+  "pronunciation_terms": [
+    "Gilgamesh",
+    "Peugeot"
+  ],
+  "pronunciation_entries_sha256": "c95c4224e22eb17393058fa8669354164e2b716606243d81b3ffcb336a9aeca0",
+  "script_words": 4188,
+  "audio_seconds": 1588.931,
+  "measured_wpm": 158.14,
+  "generated_at": "2026-08-13T13:26:17.195104+00:00"
+}
