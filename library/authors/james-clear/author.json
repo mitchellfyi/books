@@ -6,20 +6,128 @@
   "name": "James Clear",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American writer and speaker who translates research on habits, decision-making and continuous improvement into practical systems.",
+      "source_ids": ["clear-about", "prh-clear"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Clear began writing at JamesClear.com in 2012 and built a large audience through articles and his 3-2-1 newsletter. Atomic Habits, published in 2018, was his first book. He previously played college baseball at Denison University and describes rebuilding routines after a serious high-school injury as part of the book's origin story.",
+      "source_ids": ["clear-about", "google-books-atomic-author", "army-clear-profile"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His background is independent writing, synthesis, speaking and personal experimentation rather than academic psychology. He explicitly describes his work as finding existing ideas across fields and explaining them in an actionable form.",
+      "source_ids": ["clear-about", "army-clear-profile"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Clear has strong practical expertise in communicating behaviour-change ideas, designing simple frameworks and turning them into tools. He is not a habit researcher or clinician, so scientific and treatment claims need support from the underlying research rather than his authority.",
+      "source_ids": ["clear-about", "prh-clear", "army-clear-profile"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "He favours small repeatable actions, environmental design and personal agency. That lens makes change feel workable and reduces reliance on motivation, but it can understate illness, disability, poverty, care duties, workplace power and other conditions that cannot be redesigned by one person.",
+      "source_ids": ["clear-about", "ijsi-clear-limit"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+      "year": 2018,
+      "kind": "Book",
+      "relationship": "His first book and full synthesis of the habit framework developed in his articles.",
+      "source_ids": ["clear-books", "prh-clear"]
+    },
+    {
+      "title": "The Atomic Habits Workbook",
+      "year": 2025,
+      "kind": "Workbook",
+      "relationship": "The guided companion that turns the original strategies into prompts and exercises.",
+      "source_ids": ["clear-books"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "clear-about",
+        "title": "About James Clear",
+        "author_or_publisher": "James Clear",
+        "url": "https://jamesclear.com/about",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Writing career from 2012, stated method and topics, newsletter, speaking, baseball background and self-described role as a synthesiser.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Self-authored profile; audience and sales figures are not independently audited here."
+      },
+      {
+        "id": "clear-books",
+        "title": "Books",
+        "author_or_publisher": "James Clear",
+        "url": "https://jamesclear.com/books",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Atomic Habits as his first book and The Atomic Habits Workbook as its official companion.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Author's own publication list."
+      },
+      {
+        "id": "prh-clear",
+        "title": "Atomic Habits — Author",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/543993/atomic-habits-by-james-clear/9780735211292/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Current publisher biography, book identity, speaking and subject focus.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Promotional publisher biography."
+      },
+      {
+        "id": "google-books-atomic-author",
+        "title": "Atomic Habits",
+        "author_or_publisher": "Google Books / Penguin",
+        "url": "https://books.google.com/books/about/Atomic_Habits.html?id=lFhbDwAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Authorship and publication identity.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Catalogue and publisher biography."
+      },
+      {
+        "id": "army-clear-profile",
+        "title": "Book Review No. 4: Atomic Habits",
+        "author_or_publisher": "Lt Richard Pooley, British Army Centre for Army Leadership",
+        "url": "https://www.army.mod.uk/media/8269/book-review-no4-atomic-habits-james-clear-v11-pdf.pdf",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent description of Clear's online writing, college-baseball background, purpose and non-academic position.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Brief practitioner review."
+      },
+      {
+        "id": "ijsi-clear-limit",
+        "title": "A Psychological Perspective on Behaviour Change: A Critical Analysis of Atomic Habits",
+        "author_or_publisher": "Alisha Fatima and Deepanjana Chakraborty, International Journal of Social Impact",
+        "url": "https://ijsi.in/articles/atomic-habits/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The criticism that the book's individual-change lens gives insufficient attention to structural and cultural influences.",
+        "independence": "independent",
+        "quality": "limited",
+        "limitations": "Recent low-citation review; supports a bounded critique, not a general verdict."
+      }
+    ],
+    "citations": {"/name": ["clear-about", "prh-clear", "google-books-atomic-author"]}
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Career and works checked against the author's current pages, publisher and catalogue; method and limits checked against his own description and independent critical reviews.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

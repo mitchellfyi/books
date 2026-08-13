@@ -4,138 +4,573 @@
   "book_id": "atomic-habits-clear",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "high",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "The four laws and their inversions compress easily, but five minutes loses the useful distinctions among starting, repeating, rewarding, tracking and reviewing a habit. Fifteen minutes retains the complete operating method, examples and boundary conditions; thirty mainly restores the book's motivating stories and repetition."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "James Clear turns habit change into environmental engineering: define a small repeated behaviour, attach it to a visible cue, reduce its friction, reward it quickly and let each repetition strengthen both automaticity and identity.",
+    "verdict": "A strong, practical operating manual assembled from established behaviour-change ideas; clearer and more usable than it is original, with evidence and scope that do not justify every universal-sounding promise.",
+    "source_ids": [
+      "clear-atomic-summary",
+      "wood-runger-habit-review",
+      "army-atomic-review",
+      "ijsi-atomic-review"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "The book begins with small changes, systems and identity, then models a habit as cue, craving, response and reward. Its Four Laws of Behaviour Change map onto that loop: make a good habit obvious, attractive, easy and satisfying; reverse the laws to weaken a bad one. Later chapters cover environmental design, implementation intentions, habit stacking, temptation bundling, friction, the two-minute rule, commitment devices, tracking, accountability, ability, motivation and periodic review.",
+      "source_ids": [
+        "google-books-atomic",
+        "clear-atomic-summary",
+        "army-atomic-review"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Lasting improvement depends less on ambitious goals or repeated willpower than on systems that make a useful behaviour easy to notice and repeat in a stable context. Small actions can accumulate, but the immediate purpose of an atomic habit is to establish a reliable process and cast evidence for the identity a person wants to inhabit. Design the cue, friction and reward, then refine the system as circumstances change.",
+      "source_ids": [
+        "clear-atomic-page",
+        "clear-atomic-summary",
+        "wood-runger-habit-review",
+        "singh-habit-meta"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "small-gains-systems",
+      "title": "Small actions matter through systems, not magic percentages",
+      "claim": "Clear argues that repeated improvements accumulate and that a reliable system matters more than a distant goal for daily action.",
+      "explanation": "Goals choose a direction; systems determine what happens repeatedly. A result can remain invisible while behaviour is being established, which Clear calls the plateau of latent potential. The one-percent calculation is an illustration of compounding, not a measured law of human performance: behaviours cannot be multiplied like one bank balance across every day.",
+      "representative_example": "An ice cube appears unchanged as temperature rises until a threshold is crossed; the last degree did not create all the change, but made accumulated conditions visible.",
+      "why_it_matters": "The frame moves attention from occasional outcomes to the process a person can perform today.",
+      "caveat": "Tiny actions produce meaningful results only when they are relevant, repeated and connected to a larger outcome; smallness alone does not guarantee growth.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "clear-atomic-page",
+        "army-atomic-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "identity-votes",
+      "title": "Each repetition is a vote for an identity",
+      "claim": "The book recommends choosing the kind of person one wants to be and using small actions as evidence for that identity.",
+      "explanation": "Outcome-based change starts with what to achieve. Identity-based change asks who would reliably perform the behaviour. Writing one paragraph becomes a vote for being a writer; keeping one promise becomes evidence of reliability. The feedback can run both ways: identity guides action, and action updates self-perception.",
+      "representative_example": "Instead of merely trying to read a book, make the repeated choice that supports the statement, “I am a reader.”",
+      "why_it_matters": "Identity can give a modest act meaning after novelty and immediate motivation fade.",
+      "caveat": "Identity interventions show promise but mixed results, and identity can become rigid or shame-producing. Behaviour also depends on opportunity and resources, not self-concept alone.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "army-atomic-review",
+        "identity-intervention-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "habit-loop-laws",
+      "title": "Four laws turn the habit loop into a design checklist",
+      "claim": "Clear maps cue, craving, response and reward to four instructions: make a good habit obvious, attractive, easy and satisfying.",
+      "explanation": "The cue makes an opportunity noticeable. Craving supplies anticipated value. The response is the behaviour, constrained by ability and friction. The reward closes the loop and helps make the cue valuable next time. For an unwanted habit, invert the laws: make it invisible, unattractive, difficult and unsatisfying.",
+      "representative_example": "Place fruit where it is seen, make it appealing and ready to eat, then let the immediate taste complete the loop; hide less useful alternatives and add effort to reach them.",
+      "why_it_matters": "One framework organises many scattered techniques and makes failure diagnosable by stage.",
+      "caveat": "The four laws are Clear's synthesis, not four experimentally validated natural laws, and real behaviours can involve overlapping motives and contexts.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "army-atomic-review",
+        "ijsi-atomic-review",
+        "wood-runger-habit-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "obvious-cues",
+      "title": "Make the cue obvious and specific",
+      "claim": "A behaviour is easier to start when its trigger is visible and the intended time and place are defined in advance.",
+      "explanation": "A habit scorecard first makes current patterns visible. An implementation intention takes the form: I will do this behaviour at this time in this place. Habit stacking uses an existing routine as the cue: after this established action, I will do the new one. Environmental design moves the reminder into the path of action rather than relying on memory.",
+      "representative_example": "After pouring morning coffee, meditate for one minute in the chair beside the kettle, with the cushion already visible.",
+      "why_it_matters": "A concrete cue closes the gap between wanting a behaviour and recognising the moment to begin it.",
+      "caveat": "If-then plans help goal attainment, but they depend on a real underlying intention and a cue that reliably occurs.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "gollwitzer-implementation-meta",
+        "wood-runger-habit-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "attractive-social",
+      "title": "Make anticipation and social context work for the habit",
+      "claim": "Pair a needed behaviour with something wanted, reframe its expected value and join settings where the desired action is normal.",
+      "explanation": "Temptation bundling links an action that should happen with one that is already attractive. A motivation ritual uses a pleasant cue immediately before a difficult task. Social groups matter because people imitate the close, the many and the prestigious; belonging can make an action appealing before its distant result appears.",
+      "representative_example": "Listen to a favourite programme only while exercising, or train with a group where attendance is ordinary rather than heroic.",
+      "why_it_matters": "The method changes anticipated experience instead of demanding stronger willpower against an unattractive routine.",
+      "caveat": "Rewards and social norms can conflict with intrinsic motives or personal values; attraction is not proof that a behaviour is good.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "google-books-atomic",
+        "ijsi-atomic-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "easy-repetition",
+      "title": "Reduce friction and practise the starting action",
+      "claim": "A habit becomes more repeatable when the first action is easy and the environment lowers the effort required for the desired response.",
+      "explanation": "The law of least effort says people tend toward the convenient option. Prepare the space, remove steps and scale the entry behaviour down. The two-minute rule turns “read every night” into “read one page.” This is a gateway, not the final standard: the task is to master showing up, then expand while protecting the cue.",
+      "representative_example": "Put exercise clothes beside the bed and define the first success as changing into them and beginning two minutes of movement.",
+      "why_it_matters": "Repetition, not one intense performance, is what links a response to its context and develops automaticity.",
+      "caveat": "Easy starts can remain tiny if progression is never planned. Complex skills and difficult life changes cannot be reduced to friction alone.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "wood-runger-habit-review",
+        "singh-habit-meta",
+        "lally-general-practice"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "satisfying-feedback",
+      "title": "Use immediate feedback without confusing tracking with the goal",
+      "claim": "Because many good habits pay off late, an immediate satisfying signal can support repetition until the delayed result matters.",
+      "explanation": "Tracking creates a visible record and can supply completion satisfaction. Clear's recovery rule is never miss twice: one lapse is an event, while the next repetition protects the pattern. Accountability and habit contracts add a social or practical cost to unwanted behaviour. The immediate reward should support, not contradict, the long-term identity.",
+      "representative_example": "Mark a calendar after completing the routine, but judge success by the behaviour rather than by preserving a decorative streak at any cost.",
+      "why_it_matters": "Feedback keeps the process legible when the meaningful outcome is weeks or months away.",
+      "caveat": "Tracking can become the target, punishment can create shame or concealment, and one missed opportunity is not evidence that habit formation has reset.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "google-books-atomic",
+        "lally-general-practice"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "mastery-review",
+      "title": "Habits need fit, challenge and review",
+      "claim": "The book closes by matching habits to ability, keeping difficulty near the edge of competence and reviewing routines before automaticity becomes mindless rigidity.",
+      "explanation": "Clear's Goldilocks rule places motivation where a task is neither trivial nor overwhelming. Repetition builds automatic execution, freeing attention, but the same automation can preserve a technique after it stops improving. Periodic reflection checks whether the habit still serves the goal and whether an identity has become too narrow.",
+      "representative_example": "A musician automates scales but still reviews recordings and deliberately practises weaknesses rather than merely repeating comfortable material.",
+      "why_it_matters": "A system designed only for consistency can plateau; mastery requires alternating automatic execution with deliberate correction.",
+      "caveat": "The advice is broad and anecdotal compared with the detailed evidence needed to match tasks, traits and training loads.",
+      "source_ids": [
+        "google-books-atomic",
+        "clear-atomic-summary",
+        "army-atomic-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "The Fundamentals",
+      "purpose": "Replace dramatic goals with small systems and identity evidence.",
+      "summary": "Clear introduces compounding, the delay before results become visible and the feedback between repeated behaviour and self-concept.",
+      "idea_ids": [
+        "small-gains-systems",
+        "identity-votes",
+        "habit-loop-laws"
+      ],
+      "source_ids": [
+        "google-books-atomic",
+        "clear-atomic-summary"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "The 1st Law: Make It Obvious",
+      "purpose": "Specify and expose the cue.",
+      "summary": "The scorecard, implementation intention, habit stack and redesigned environment make the intended moment of action hard to overlook.",
+      "idea_ids": [
+        "obvious-cues"
+      ],
+      "source_ids": [
+        "google-books-atomic",
+        "clear-atomic-summary",
+        "gollwitzer-implementation-meta"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "The 2nd Law: Make It Attractive",
+      "purpose": "Increase anticipated value.",
+      "summary": "Pairing, reframing and group norms make a useful response more desirable and reveal how social environments maintain unwanted ones.",
+      "idea_ids": [
+        "attractive-social"
+      ],
+      "source_ids": [
+        "google-books-atomic",
+        "clear-atomic-summary"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "The 3rd Law: Make It Easy",
+      "purpose": "Reduce the effort between cue and response.",
+      "summary": "Preparation, removal of steps, gateway behaviours and commitment devices favour repetition over heroic intensity.",
+      "idea_ids": [
+        "easy-repetition"
+      ],
+      "source_ids": [
+        "google-books-atomic",
+        "clear-atomic-summary",
+        "wood-runger-habit-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "The 4th Law: Make It Satisfying",
+      "purpose": "Close the loop with timely feedback.",
+      "summary": "Immediate reinforcement, visible tracking, recovery and accountability help a delayed-benefit behaviour compete with immediately rewarding alternatives.",
+      "idea_ids": [
+        "satisfying-feedback"
+      ],
+      "source_ids": [
+        "google-books-atomic",
+        "clear-atomic-summary"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 6,
+      "title": "Advanced Tactics",
+      "purpose": "Prevent consistency from becoming a plateau.",
+      "summary": "Ability, task difficulty, boredom, reflection and identity flexibility determine whether an established routine continues to serve improvement.",
+      "idea_ids": [
+        "mastery-review"
+      ],
+      "source_ids": [
+        "google-books-atomic",
+        "army-atomic-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "A short foundation followed by one section for each law, then advanced tactics. Every chapter ends with a compact summary and most techniques fit a repeatable template.",
+    "voice": "Direct, encouraging and highly polished, with slogans built to survive outside the chapter.",
+    "pace": "Fast and easy to enter; the consistent chapter pattern makes the middle predictable.",
+    "evidence_style": "Research concepts are mixed with personal experience, athletes, artists and business stories. Notes identify sources, but examples often illustrate a principle more than they test the complete claim.",
+    "example_style": "Concrete domestic cues, exercise, writing, work routines, elite performers and environmental redesign.",
+    "repetition": "High. The repetition aids recall and implementation, but the inverse laws and repeated anecdotes add less information than the length suggests.",
+    "prerequisites": "None. Readers benefit from choosing one real habit and applying each chapter as they go.",
+    "source_ids": [
+      "google-books-atomic",
+      "army-atomic-review",
+      "prh-atomic"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 0.0,
-      "confidence": "low",
-      "summary": "TODO: give the content-only verdict behind the score.",
+      "score": 7.3,
+      "confidence": "medium",
+      "summary": "Strong content: exceptionally usable environmental and implementation design, assembled from ideas with a real research base. Its scientific packaging sometimes exceeds direct evidence for the full framework, while repetition and an individual-agency bias limit efficiency and completeness.",
       "dimensions": [
-        { "id": "explanatory-power", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "evidence-and-reasoning", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "insight-value", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "practical-utility", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "completeness-and-calibration", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] }
+        {
+          "id": "explanatory-power",
+          "score": 8.0,
+          "rationale": "The cue-craving-response-reward loop and four laws give readers a clear diagnosis for ordinary habit failures. The elegance compresses motives and environments that do not follow one loop cleanly.",
+          "source_ids": [
+            "clear-atomic-summary",
+            "wood-runger-habit-review",
+            "army-atomic-review"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 6.5,
+          "rationale": "Context-linked repetition and implementation intentions have strong support, and identity work is plausible. The full four-law package, one-percent metaphor, named anecdotes and broad transformation promises are not established as one tested intervention.",
+          "source_ids": [
+            "wood-runger-habit-review",
+            "singh-habit-meta",
+            "gollwitzer-implementation-meta",
+            "identity-intervention-review",
+            "army-atomic-review"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.5,
+          "rationale": "Much is synthesised rather than invented, but systems over goals, identity votes, friction and the two-minute gateway combine into a useful way to see repeated behaviour.",
+          "source_ids": [
+            "clear-atomic-summary",
+            "army-atomic-review",
+            "ijsi-atomic-review"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 9.0,
+          "rationale": "The book supplies specific prompts, environmental changes, start rules, tracking and recovery tactics that can be tested immediately on a chosen behaviour.",
+          "source_ids": [
+            "clear-atomic-page",
+            "clear-atomic-summary",
+            "gollwitzer-implementation-meta",
+            "lally-general-practice"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 6.0,
+          "rationale": "Clear includes review, boredom and identity rigidity, but gives too little weight to structural barriers, clinical conditions, competing goals, behaviour-specific risk and mixed identity evidence.",
+          "source_ids": [
+            "identity-intervention-review",
+            "ijsi-atomic-review",
+            "singh-habit-meta"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.5,
+          "rationale": "The framework is extremely compressible. Examples and restatement improve memory and motivation, yet a substantial part of the 320 pages repeats laws whose inversions are already apparent.",
+          "source_ids": [
+            "army-atomic-review",
+            "google-books-atomic"
+          ]
+        }
       ],
       "basis": "inference"
     },
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "meaning": {
+      "text": "Behaviour is partly an output of design. Instead of making every repetition a referendum on discipline, change what is noticed, easy and immediately reinforced. A small action matters first because it is repeatable and teaches a cue-response link; its eventual outcome depends on direction, duration and the wider system.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "wood-runger-habit-review",
+        "singh-habit-meta"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Define one habit as a visible action small enough to start, then name the exact time, place and existing cue.",
+        "source_ids": [
+          "clear-atomic-summary",
+          "gollwitzer-implementation-meta"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Redesign the environment before asking for more motivation: expose good cues, hide bad ones, remove useful steps and add friction to unwanted responses.",
+        "source_ids": [
+          "clear-atomic-summary",
+          "wood-runger-habit-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use the two-minute version as an entrance, then plan how the behaviour will grow after showing up is stable.",
+        "source_ids": [
+          "clear-atomic-summary",
+          "singh-habit-meta"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "After a lapse, perform the next available repetition; one missed opportunity does not erase automaticity.",
+        "source_ids": [
+          "clear-atomic-summary",
+          "lally-general-practice"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Review mature habits so automatic execution does not preserve a routine that no longer serves the desired result.",
+        "source_ids": [
+          "google-books-atomic"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The book's importance is translation rather than scientific discovery. It packaged context cues, implementation plans, reinforcement, friction and identity into one memorable vocabulary that ordinary readers can apply without studying several research traditions.",
+      "source_ids": [
+        "clear-atomic-summary",
+        "wood-runger-habit-review",
+        "gollwitzer-implementation-meta",
+        "army-atomic-review"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Clear is an independent writer and speaker, not an academic habit scientist. He spent years publishing about habits and describes his role as finding existing ideas and making them usable. The book was written as an operating manual for lasting self-improvement, developed from that synthesis and his experience rebuilding routines after injury.",
+      "source_ids": [
+        "clear-atomic-page",
+        "prh-atomic",
+        "army-atomic-review"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Stable-context repetition and gradual automaticity have a substantial habit-research base.",
+        "Implementation intentions are independently supported across many goal domains.",
+        "Environmental cues and friction translate established behavioural principles into practical decisions.",
+        "The book acknowledges that one lapse is different from a repeated pattern and that habits require later review."
+      ],
+      "weaknesses": [
+        "The four laws are a communication framework, not a package validated as four scientific laws.",
+        "Elite-performer and business anecdotes illustrate possibility but do not establish causal effectiveness.",
+        "The one-percent compounding equation is rhetoric, not an empirical model of skill or life outcomes.",
+        "Identity-related evidence is promising but mixed, while the book gives identity a confident causal role.",
+        "Most advice fits simple repeated actions better than addiction, clinical symptoms or constrained environments."
+      ],
+      "source_ids": [
+        "wood-runger-habit-review",
+        "singh-habit-meta",
+        "gollwitzer-implementation-meta",
+        "identity-intervention-review",
+        "army-atomic-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "The book is widely praised for clarity, memorability and immediate use. Even favourable readings describe its main achievement as organisation and communication rather than novelty. Recurrent criticism targets repetition, anecdote-heavy support, broad transformation language and insufficient attention to structural or clinical barriers.",
+      "praise": [
+        "The four laws give readers one portable checklist for starting and stopping habits.",
+        "Environmental design and reduced friction replace vague demands for willpower with concrete action.",
+        "Short chapters, summaries and examples make the book unusually easy to apply.",
+        "The identity frame helps some readers connect daily repetitions to a larger reason for change."
+      ],
+      "criticism": [
+        "The inverse laws often restate what the original laws already imply.",
+        "Anecdotes are sometimes asked to substantiate claims better suited to comparative research.",
+        "The personal-system lens underplays structural, cultural and material constraints.",
+        "The core framework can be learned much faster than the full book takes to deliver it."
+      ],
+      "source_ids": [
+        "prh-atomic",
+        "army-atomic-review",
+        "ijsi-atomic-review"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "People starting one ordinary repeated behaviour such as reading, exercise, writing or preparation",
+        "Readers who repeatedly set goals but have not designed cues, environment or recovery",
+        "Coaches and managers able to change workflow and physical context",
+        "Readers who want an applied successor to The Power of Habit"
+      ],
+      "not_for": [
+        "Habit researchers seeking an original theory or comprehensive evidence review",
+        "People seeking treatment for addiction, eating disorders, severe depression or compulsive behaviour",
+        "Readers already fluent in implementation intentions, environmental design and habit shaping",
+        "Anyone whose main barriers are unsafe conditions, scarce resources or demands they cannot personally redesign"
+      ],
+      "topics": [
+        "Habit formation",
+        "Behaviour change",
+        "Environmental design",
+        "Implementation intentions",
+        "Identity and motivation",
+        "Tracking and feedback",
+        "Productivity systems"
+      ],
+      "source_ids": [
+        "prh-atomic",
+        "clear-atomic-page",
+        "wood-runger-habit-review",
+        "ijsi-atomic-review"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A clinical guide to addiction, compulsion or mental illness",
+        "A new scientific theory of habit",
+        "Evidence that every life outcome can be transformed through tiny personal routines",
+        "A substitute for goals, strategy or deliberate practice; systems need direction and review"
+      ],
+      "omissions": [
+        "Detailed treatment of poverty, disability, care work, discrimination and coercive environments",
+        "Behaviour-specific risks and cases where professional treatment is needed",
+        "How multiple goals and habits compete for time, cues and recovery",
+        "Comparative evidence showing which tactic works best for which person and behaviour"
+      ],
+      "missing_or_weak": [
+        "Direct validation of the four-law package as a complete intervention",
+        "Calibration around the identity-first claims",
+        "A progression method after the two-minute entry habit is stable",
+        "Enough scientific evidence to support every elite-performance story and broad promise"
+      ],
+      "dated_or_contested": [
+        "The one-percent-per-day calculation is mathematical illustration, not a realistic forecast.",
+        "Habit formation has no universal short timetable; current synthesis finds averages measured in months and variation from days to nearly a year.",
+        "Identity and habit are related, but intervention results are mixed and causality may run in both directions."
+      ],
+      "source_ids": [
+        "singh-habit-meta",
+        "identity-intervention-review",
+        "ijsi-atomic-review",
+        "army-atomic-review"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read it if you want to redesign one real routine and will apply the prompts while reading; the value is in implementation, not merely recognising the ideas.",
+      "summary_is_enough_if": "Fifteen minutes is enough for the whole method, its evidence and limits. Five minutes is enough if you already understand habits and need only the four-law checklist.",
+      "skip_if": "Skip the full book if you already use visible cues, if-then plans, reduced friction, immediate feedback and regular review, or if your problem requires clinical or structural intervention.",
+      "format_advice": "Print or ebook works best as a workbook beside one chosen habit. Audio is easy to follow, but pause to write the cue, two-minute version, friction changes and recovery rule.",
+      "source_ids": [
+        "clear-atomic-page",
+        "army-atomic-review",
+        "singh-habit-meta"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What are the four stages of Clear's loop and the law attached to each?",
+      "Why is the two-minute rule an entrance rather than the final habit?",
+      "What does stable context add beyond repetition alone?",
+      "Where does the evidence support the book strongly, and where does the rhetoric outrun it?"
+    ],
+    "application_prompts": [
+      "Write one habit as: after this existing cue, I will do this two-minute action in this place.",
+      "Remove one physical step from a useful behaviour and add one to an unwanted alternative.",
+      "Choose an immediate signal that rewards completion without undermining the long-term result.",
+      "Set a review date to decide whether the routine should grow, change or stop."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
-    "review_notes": "",
+    "review_notes": "Checked against authorised book contents and summary, publisher metadata, independent reception and research reviews of habits, implementation intentions and identity interventions. No user-supplied full text was available.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
-      "notes": []
+      "notes": [
+        "First US hardcover and ebook metadata were separated and checked against Penguin Random House and Google Books.",
+        "The structure and techniques were checked against the authorised preview, author's full summary and an independent chapter-level review; full-text coverage is not claimed.",
+        "Adversarial review distinguishes supported context-repetition and implementation-intention research from the untested four-law package and rhetorical one-percent equation.",
+        "Identity is presented as a plausible reciprocal process with mixed intervention evidence, not a proven master cause.",
+        "Clinical, structural and cultural limits are explicit; the book is not presented as treatment or a universal solution.",
+        "The 7.3 rating is content-only and excludes sales, endorsements and author popularity.",
+        "Kokoro pronunciation for James Clear and the title was inspected; no dictionary correction was required."
+      ]
     }
   }
 }

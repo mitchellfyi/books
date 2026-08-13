@@ -4,27 +4,199 @@
   "id": "atomic-habits-clear",
   "type": "book",
   "title": "Atomic Habits",
-  "alternate_titles": [],
+  "alternate_titles": ["Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones"],
   "author_ids": ["james-clear"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2018",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "First US hardcover",
+        "publisher": "Avery",
+        "publication_date": "2018-10-16",
+        "isbn_10": "0735211299",
+        "isbn_13": "9780735211292",
+        "format": "Hardcover",
+        "pages": 320
+      },
+      {
+        "label": "US ebook",
+        "publisher": "Penguin",
+        "publication_date": "2018-10-16",
+        "isbn_10": "0735211302",
+        "isbn_13": "9780735211308",
+        "format": "Ebook",
+        "pages": 320
+      }
+    ],
+    "contents": [
+      "The Fundamentals: small changes, systems and identity-based habits",
+      "The 1st Law, Make It Obvious: cues, habit scoring, implementation intentions, stacking and environment",
+      "The 2nd Law, Make It Attractive: anticipation, temptation bundling, social norms and reframing",
+      "The 3rd Law, Make It Easy: repetition, friction, the two-minute rule and commitment devices",
+      "The 4th Law, Make It Satisfying: immediate rewards, tracking, recovery and accountability",
+      "Advanced Tactics: ability, motivation, mastery, review and the downside of automatic habits"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": ["behavioural-science", "motivation", "non-fiction", "personal-development", "productivity", "psychology", "self-help"],
+    "audiences": [
+      "Readers who understand a desired change but struggle to repeat it",
+      "People who want a practical system for starting or stopping simple recurring behaviours",
+      "Managers, coaches and designers who can change cues, friction and feedback",
+      "Readers of The Power of Habit who want a more operational guide"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "prh-atomic",
+        "title": "Atomic Habits",
+        "author_or_publisher": "Avery / Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/543993/atomic-habits-by-james-clear/9780735211292/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Title, author, first US hardcover date, publisher, ISBN, 320-page extent, formats and stated aims.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Authoritative for its edition; sales language and endorsements are promotional."
+      },
+      {
+        "id": "google-books-atomic",
+        "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+        "author_or_publisher": "Google Books / Penguin",
+        "url": "https://books.google.com/books/about/Atomic_Habits.html?id=lFhbDwAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Full title, 2018 publication, ebook ISBN, pagination, selected contents and recurring concepts.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Catalogue plus a limited authorised preview, not independent evaluation."
+      },
+      {
+        "id": "clear-atomic-page",
+        "title": "Atomic Habits: Tiny Changes, Remarkable Results",
+        "author_or_publisher": "James Clear",
+        "url": "https://jamesclear.com/atomic-habits",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "The author's statement of the book's purpose, systems emphasis, one-percent framing, applications and intended audience.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Sales page written by the author."
+      },
+      {
+        "id": "clear-atomic-summary",
+        "title": "Atomic Habits Summary",
+        "author_or_publisher": "James Clear",
+        "url": "https://jamesclear.com/atomic-habits-summary",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Authorised account of small improvements, identity, the habit loop, four laws and the main tactics.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "The author's compressed presentation, not a critical source."
+      },
+      {
+        "id": "wood-runger-habit-review",
+        "title": "Psychology of Habit",
+        "author_or_publisher": "Wendy Wood and Dennis Rünger, Annual Review of Psychology",
+        "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122414-033417",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The research basis for habits as context-linked responses formed through repetition and their relationship with deliberate goals.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "General scientific review published before the book, not a test of Clear's complete package."
+      },
+      {
+        "id": "singh-habit-meta",
+        "title": "Time to Form a Habit: A Systematic Review and Meta-Analysis of Health Behaviour Habit Formation and Its Determinants",
+        "author_or_publisher": "Singh et al., Healthcare",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11641623/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Current evidence that stable contexts and repetition support automaticity, which usually takes months and varies substantially by person and behaviour.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Focused on health behaviours; included studies and measures were heterogeneous."
+      },
+      {
+        "id": "lally-general-practice",
+        "title": "Making health habitual: the psychology of habit-formation and general practice",
+        "author_or_publisher": "Benjamin Gardner, Phillippa Lally and Jane Wardle, British Journal of General Practice",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3505409/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Practical evidence for simple actions repeated in consistent contexts, gradual automaticity and the finding that one missed opportunity does not materially derail formation.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Short health-practice article, not a comprehensive review of every habit domain."
+      },
+      {
+        "id": "gollwitzer-implementation-meta",
+        "title": "Implementation intentions and goal achievement: A meta-analysis of effects and processes",
+        "author_or_publisher": "Peter Gollwitzer and Paschal Sheeran, Advances in Experimental Social Psychology",
+        "url": "https://www.socmot.uni-konstanz.de/publications/implementation-intentions-and-goal-achievement-meta-analysis-effects-and-processes",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The research basis for if-then plans specifying when, where and how a goal-directed action will occur.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Meta-analysis of implementation intentions, not the entire four-law framework."
+      },
+      {
+        "id": "identity-intervention-review",
+        "title": "A systematic review on the effect of identity-related interventions on physical activity and smoking",
+        "author_or_publisher": "van Vliet et al., European Journal of Public Health",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11516042/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Identity-related interventions are plausible and promising, but results across physical activity and smoking studies are mixed.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Conference-supplement systematic review of two health behaviours; it does not test Clear's specific identity-vote formulation."
+      },
+      {
+        "id": "army-atomic-review",
+        "title": "Book Review No. 4: Atomic Habits",
+        "author_or_publisher": "Lt Richard Pooley, British Army Centre for Army Leadership",
+        "url": "https://www.army.mod.uk/media/8269/book-review-no4-atomic-habits-james-clear-v11-pdf.pdf",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent account of the identity and four-law structure, praise for accessibility and environmental design, and criticism of repetition and anecdotal support.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "One practitioner's military-context review, not scientific peer review."
+      },
+      {
+        "id": "ijsi-atomic-review",
+        "title": "A Psychological Perspective on Behaviour Change: A Critical Analysis of Atomic Habits",
+        "author_or_publisher": "Alisha Fatima and Deepanjana Chakraborty, International Journal of Social Impact",
+        "url": "https://ijsi.in/articles/atomic-habits/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A later psychological review finding that the four laws align with established ideas while omitting structural and cultural influences on behaviour.",
+        "independence": "independent",
+        "quality": "limited",
+        "limitations": "Recent low-citation review in a broad journal; useful as a named critique, not decisive evidence."
+      }
+    ],
+    "citations": {
+      "/title": ["prh-atomic", "google-books-atomic"],
+      "/alternate_titles": ["prh-atomic", "google-books-atomic"],
+      "/author_ids": ["prh-atomic", "google-books-atomic"],
+      "/bibliography/first_published": ["prh-atomic", "google-books-atomic"],
+      "/bibliography/editions/0": ["prh-atomic"],
+      "/bibliography/editions/1": ["google-books-atomic"],
+      "/bibliography/contents": ["google-books-atomic", "clear-atomic-summary"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "researched-partial",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Structure and core techniques checked against the authorised preview and author's summary; empirical claims checked against habit, implementation-intention and identity-intervention reviews; reception checked independently. No user-supplied full text was available.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

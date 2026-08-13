@@ -177,7 +177,7 @@
     {
       "book_id": "atomic-habits-clear",
       "priority": 24,
-      "status": "ready",
+      "status": "in-progress",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Discovered from The Power of Habit: its direct successor in reader adjacency; the standard read-next for that audience."
@@ -185,7 +185,7 @@
     {
       "book_id": "guns-germs-and-steel-diamond",
       "priority": 25,
-      "status": "ready",
+      "status": "in-progress",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Discovered from Sapiens: Diamond is Harari's documented predecessor (the agricultural-trap thesis borrows his 'worst mistake' essay); reviewers pair the two constantly."

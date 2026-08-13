@@ -758,11 +758,25 @@
       "target_id": "the-power-of-habit-duhigg",
       "type": "related-to",
       "basis": "inference",
-      "description": "Discovery justification: Clear's book is the acknowledged successor to Duhigg's in the habit literature — it operationalises the habit loop into practice and is the standard reader's next step.",
+      "description": "Duhigg explains the cue-routine-reward loop through reporting; Clear turns a related loop into a detailed implementation checklist. Read The Power of Habit for narrative and institutions, then Atomic Habits for personal environmental design.",
       "source_refs": [
+        "library/books/atomic-habits-clear/book.json#army-atomic-review",
         "library/books/the-power-of-habit-duhigg/book.json"
       ],
-      "confidence": "medium"
+      "confidence": "high"
+    },
+    {
+      "id": "atomic-habits-written-by-james-clear",
+      "source_id": "atomic-habits-clear",
+      "target_id": "james-clear",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented by the publisher and catalogue.",
+      "source_refs": [
+        "library/books/atomic-habits-clear/book.json#prh-atomic",
+        "library/books/atomic-habits-clear/book.json#google-books-atomic"
+      ],
+      "confidence": "high"
     },
     {
       "id": "guns-germs-related-to-sapiens",
@@ -775,6 +789,18 @@
         "library/books/sapiens-harari/book.json#hallpike-review"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "guns-germs-written-by-jared-diamond",
+      "source_id": "guns-germs-and-steel-diamond",
+      "target_id": "jared-diamond",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/guns-germs-and-steel-diamond/book.json"
+      ],
+      "confidence": "high"
     }
   ]
 }
