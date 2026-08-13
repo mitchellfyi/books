@@ -12,14 +12,14 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/the-farther-reaches-of-human-nature-maslow/scripts/30-minutes.md",
-  "source_script_sha256": "323c698e33d7ec97737f48390e8b7459185d86ad21dd47799a65eca270630b41",
-  "pronunciation_dictionary_sha256": "0cdd6a76593b6767bc765006b700f833aee567ca5dc31fc60eaaae967c8c1eb6",
+  "source_script_sha256": "cd64b34cf3d26d200014c6c886ae316e2c6ace539eadacfcdd56b341756596f7",
+  "pronunciation_dictionary_sha256": "09636851dc40f9d861f2b7a993ff82c8fd9df24f4152972007facc639a86a240",
   "pronunciation_terms": [
     "Brandeis"
   ],
   "pronunciation_entries_sha256": "714d83ca17b7d0895ae4df019199c51811839aa99b94f31d3debfd00c1788785",
-  "script_words": 4193,
-  "audio_seconds": 1586.222,
-  "measured_wpm": 158.6,
-  "generated_at": "2026-08-13T11:43:59.242360+00:00"
+  "script_words": 4186,
+  "audio_seconds": 1584.729,
+  "measured_wpm": 158.49,
+  "generated_at": "2026-08-13T16:28:42.554483+00:00"
 }
