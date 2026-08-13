@@ -1,0 +1,24 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-48-laws-of-power-greene",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.86,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-48-laws-of-power-greene/scripts/5-minutes.md",
+  "source_script_sha256": "3196f98698198e89e272f10a77997b84985903fc39d2524082608e0263c3ef37",
+  "pronunciation_dictionary_sha256": "942f4f6bc6c494dd0ead7a463d20b68a075c68d85972c521c86704bbd14d7607",
+  "pronunciation_terms": [
+    "Joost"
+  ],
+  "script_words": 704,
+  "audio_seconds": 278.14,
+  "measured_wpm": 151.87,
+  "generated_at": "2026-08-13T07:37:28.193657+00:00"
+}
