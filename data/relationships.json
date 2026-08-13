@@ -511,7 +511,7 @@
       "basis": "inference",
       "description": "Both separate personal action from other people's reactions; The Courage to Be Disliked develops the theme through task ownership, approval, community, and a more radical philosophy of agency.",
       "source_refs": [
-        "library/books/the-courage-to-be-disliked-kishimi/book.json#full-book-english",
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#simon-schuster-us",
         "library/books/the-courage-to-be-disliked-kishimi/book.json#sefad-review"
       ],
       "confidence": "medium"
@@ -524,7 +524,7 @@
       "basis": "inference",
       "description": "Kishimi and Koga foreground present purpose and chosen meaning; Sapolsky foregrounds the biological, developmental, and social causes that make behaviour possible. Read together, each exposes the other's tendency to overstate one side of agency and constraint.",
       "source_refs": [
-        "library/books/the-courage-to-be-disliked-kishimi/book.json#full-book-english",
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#simon-schuster-us",
         "library/books/the-courage-to-be-disliked-kishimi/book.json#va-ptsd"
       ],
       "confidence": "medium"
@@ -537,7 +537,7 @@
       "basis": "inference",
       "description": "The Courage to Be Disliked borrows the appearance of Socratic dialogue to deliver a settled doctrine; Farnsworth presents questioning as genuinely joint inquiry whose conclusion remains open to revision.",
       "source_refs": [
-        "library/books/the-courage-to-be-disliked-kishimi/book.json#full-book-english",
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#simon-schuster-us",
         "library/books/the-courage-to-be-disliked-kishimi/book.json#sefad-review"
       ],
       "confidence": "medium"

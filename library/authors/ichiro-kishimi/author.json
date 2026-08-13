@@ -28,7 +28,7 @@
     },
     "perspective_and_limits": {
       "text": "Kishimi treats people as purposeful, socially embedded agents who can choose the meaning and use of their circumstances now. That perspective can restore agency and reduce approval-seeking. Its danger is overcorrection: it can minimize involuntary symptoms, material power, disability, and the durable effects of adverse experience. Read him as a forceful philosophical interpreter, not as the final clinical authority on trauma or mental illness.",
-      "source_ids": ["diamond-book", "full-book", "va-ptsd", "adlerian-evidence-review"],
+      "source_ids": ["diamond-book", "simon-schuster-profile", "va-ptsd", "adlerian-evidence-review"],
       "basis": "inference"
     }
   },
@@ -118,18 +118,6 @@
         "accessed_at": "2026-08-13",
         "supports": "Publication of The Courage to Be Disliked in 2013 and its sequel The Courage to Be Happy in 2016.",
         "limitations": "Publisher corporate history; useful for dates, not quality."
-      },
-      {
-        "id": "full-book",
-        "title": "The Courage to Be Disliked — English text edition",
-        "author_or_publisher": "Ichiro Kishimi and Fumitake Koga; third-party hosted copy",
-        "url": "https://s3.amazonaws.com/kajabi-storefronts-production/file-uploads/sites/2147511916/themes/2149511084/downloads/4d16be-320a-1acc-2cf-38a816041704_The_Courage_to_be_Disliked_How_to_Change_Your_Life_and_Achieve_Real_Happiness_PDFDrive_.pdf",
-        "type": "book",
-        "independence": "primary",
-        "quality": "medium",
-        "accessed_at": "2026-08-13",
-        "supports": "Kishimi's expressed philosophical perspective, claims, boundaries of treatment, and author biography as presented in the English book.",
-        "limitations": "Third-party host; checked against official records. The dialogue is a crafted co-authored work, not a verbatim statement by Kishimi alone."
       },
       {
         "id": "va-ptsd",

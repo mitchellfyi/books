@@ -13,7 +13,7 @@
     "one_sentence": "A provocative dialogue arguing that freedom begins when you stop letting the past, comparison, approval, and other people's tasks decide how you live now.",
     "verdict": "Memorable and genuinely useful on boundaries, approval, contribution, and present action; unreliable when its agency-first philosophy becomes a literal denial of trauma, involuntary symptoms, or social constraint.",
     "source_ids": [
-      "full-book-english",
+      "simon-schuster-us",
       "sefad-review",
       "va-ptsd",
       "storygraph-reception"
@@ -24,7 +24,7 @@
     "synopsis": {
       "text": "Across five nights, a dissatisfied youth challenges a philosopher who teaches Kishimi and Koga's version of Adlerian psychology. The discussion moves from rejecting causal stories about the past, through inferiority and interpersonal conflict, to separation of tasks, freedom from approval, horizontal relationships, community feeling, contribution, and wholehearted attention to the present.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "diamond-original",
         "sefad-review"
       ],
@@ -33,7 +33,7 @@
     "core_argument": {
       "text": "Your history and circumstances influence you but need not dictate your next action. Much avoidable misery comes from using fixed stories, comparison, approval-seeking, and attempts to control others as protection from difficult life tasks. Freedom requires choosing your own task, accepting that this may attract disapproval, and finding worth through equal relationships and contribution in the here and now.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "diamond-original",
         "sefad-review"
       ],
@@ -50,7 +50,7 @@
       "why_it_matters": "The question 'what is this helping me avoid or obtain?' can reveal a choice point that a purely historical story misses.",
       "caveat": "Function and history can both matter. The book turns a useful additional question into a false either-or and overstates how deliberately symptoms and emotions are chosen.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "sefad-review",
         "va-ptsd"
       ],
@@ -65,7 +65,7 @@
       "why_it_matters": "It protects the possibility of change without requiring the past to disappear.",
       "caveat": "The book's slogan that trauma does not exist is clinically false and can become victim-blaming. Severe experiences can cause durable involuntary symptoms; variable outcomes do not make trauma imaginary.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "va-ptsd",
         "bound2books-critique",
         "storygraph-reception"
@@ -81,7 +81,7 @@
       "why_it_matters": "It separates useful aspiration from endless status anxiety.",
       "caveat": "Not every disadvantage is subjective. Resources, discrimination, illness, and power can create objective constraints the book rarely addresses.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "diamond-original",
         "sefad-review",
         "bound2books-critique"
@@ -97,7 +97,7 @@
       "why_it_matters": "It asks whether an explanation is also functioning as permission not to confront a difficult relationship.",
       "caveat": "Sometimes withdrawal is safety, not evasion. The life-lie label needs evidence and humility, especially around abuse, illness, and exploitation.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "sefad-review",
         "bound2books-critique"
       ],
@@ -112,7 +112,6 @@
       "why_it_matters": "This is the book's clearest tool for reducing control, resentment, rescuing, and approval-seeking.",
       "caveat": "Tasks are often shared or shaped by unequal power. The rule is a starting question, not a complete answer to parenting, care, employment, or collective responsibility.",
       "source_ids": [
-        "full-book-english",
         "simon-schuster-us",
         "sefad-review",
         "bound2books-critique"
@@ -128,7 +127,6 @@
       "why_it_matters": "It gives people-pleasers a direct test: am I choosing this, or purchasing approval with my life?",
       "caveat": "Disapproval is not proof of integrity. Other people's reactions may contain information, and freedom still includes repair, accountability, and concern for consequences.",
       "source_ids": [
-        "full-book-english",
         "simon-schuster-us",
         "atlantic-uk",
         "storygraph-reception"
@@ -144,7 +142,7 @@
       "why_it_matters": "It corrects the common misuse of boundaries as detachment: freedom is meant to make better participation possible.",
       "caveat": "The blanket rejection of praise is too rigid. Research finds that feedback and rewards have different effects depending on whether they inform, encourage, control, or crowd out existing motivation.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "sefad-review",
         "reward-meta-analysis",
         "social-relationships-meta"
@@ -160,7 +158,7 @@
       "why_it_matters": "It gives the book a positive destination beyond saying no and ignoring judgment.",
       "caveat": "Unconditional confidence is unsafe with untrustworthy people, and subjective contribution can hide exploitation or self-deception. Trust needs judgment and boundaries.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "sefad-review",
         "social-relationships-meta"
       ],
@@ -175,7 +173,7 @@
       "why_it_matters": "It prevents self-improvement from turning the whole present into an instrument for a future that never arrives.",
       "caveat": "The moment-based metaphor needs long-range planning beside it; duties, prevention, and projects depend on sustained commitments across time.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "sefad-review",
         "storygraph-reception"
       ],
@@ -193,7 +191,7 @@
         "past-influences-not-destiny"
       ],
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "diamond-original",
         "sefad-review",
         "va-ptsd"
@@ -210,7 +208,7 @@
         "life-tasks-and-life-lies"
       ],
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "diamond-original",
         "sefad-review"
       ],
@@ -226,9 +224,8 @@
         "freedom-includes-disapproval"
       ],
       "source_ids": [
-        "full-book-english",
-        "diamond-original",
         "simon-schuster-us",
+        "diamond-original",
         "storygraph-reception"
       ],
       "basis": "synthesis"
@@ -243,7 +240,7 @@
         "accept-trust-contribute"
       ],
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "diamond-original",
         "sefad-review",
         "social-relationships-meta"
@@ -260,7 +257,7 @@
         "here-and-now"
       ],
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "diamond-original",
         "sefad-review",
         "storygraph-reception"
@@ -277,7 +274,7 @@
     "repetition": "The youth restates resistance and the philosopher restates agency; this aids persuasion and memory but creates avoidable length and predetermined victories.",
     "prerequisites": "None. Prior knowledge of Adler is unnecessary; readers with trauma histories should not treat the first night's clinical claims as guidance.",
     "source_ids": [
-      "full-book-english",
+      "simon-schuster-us",
       "sefad-review",
       "storygraph-reception",
       "va-ptsd"
@@ -288,7 +285,7 @@
     "rating": {
       "rubric_version": 1,
       "score": 5.7,
-      "confidence": "high",
+      "confidence": "medium",
       "summary": "A strong set of agency and boundary reframes delivered with memorable force, held below a dependable recommendation by weak evidence, false binaries, trauma denial, missing structural context, and a debate engineered so the book cannot lose.",
       "dimensions": [
         {
@@ -296,7 +293,7 @@
           "score": 7.0,
           "rationale": "Task separation, approval as dependence, comparison as competition, and contribution as belonging explain common patterns with unusual clarity; the universal claims about all problems, emotion, and trauma explain too much too simply.",
           "source_ids": [
-            "full-book-english",
+            "simon-schuster-us",
             "sefad-review",
             "va-ptsd"
           ]
@@ -306,7 +303,7 @@
           "score": 3.5,
           "rationale": "The book offers coherent definitions and objections but almost no evidence. Its trauma claim conflicts with clinical knowledge, its account of praise lacks context, and Adlerian treatment evidence remains limited.",
           "source_ids": [
-            "full-book-english",
+            "simon-schuster-us",
             "va-ptsd",
             "reward-meta-analysis",
             "adlerian-evidence-review"
@@ -317,7 +314,7 @@
           "score": 7.0,
           "rationale": "The separation of tasks, dislike as a cost of freedom, courage to be normal, and life as moments are sticky reframes that can reorganise how readers see approval and responsibility.",
           "source_ids": [
-            "full-book-english",
+            "simon-schuster-us",
             "sefad-review",
             "storygraph-reception"
           ]
@@ -327,7 +324,7 @@
           "score": 6.5,
           "rationale": "Readers can immediately ask whose task a decision is, what approval is costing, and what a pattern avoids. The tools need safeguards for shared duties, abuse, illness, and unequal power that the book does not provide.",
           "source_ids": [
-            "full-book-english",
+            "simon-schuster-us",
             "bound2books-critique",
             "storygraph-reception"
           ]
@@ -337,7 +334,7 @@
           "score": 4.0,
           "rationale": "The later move from independence to community adds needed balance, but the book does not seriously handle trauma, disability, severe mental illness, structural power, shared tasks, unsafe trust, or cases where disapproval is corrective.",
           "source_ids": [
-            "full-book-english",
+            "simon-schuster-us",
             "va-ptsd",
             "bound2books-critique",
             "storygraph-reception"
@@ -348,7 +345,7 @@
           "score": 6.0,
           "rationale": "Short sections and concrete objections make hard ideas easy to retain, but the philosopher-youth cycle repeats and the five-night argument can be compressed substantially without losing its usable content.",
           "source_ids": [
-            "full-book-english",
+            "simon-schuster-us",
             "sefad-review",
             "storygraph-reception"
           ]
@@ -359,7 +356,7 @@
     "meaning": {
       "text": "The book is finally about authorship of a life. It argues that freedom is not control over events or people, but the ability to choose your next task without making your past or another person's approval the deciding authority. It completes that individual freedom with a social answer: use it to participate and contribute, not to withdraw.",
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "sefad-review"
       ],
       "basis": "synthesis"
@@ -368,7 +365,7 @@
       {
         "text": "Ask both questions: what helped create this pattern, and what function does it serve now? Do not let the useful second question erase the first.",
         "source_ids": [
-          "full-book-english",
+          "simon-schuster-us",
           "va-ptsd"
         ],
         "basis": "synthesis"
@@ -376,7 +373,7 @@
       {
         "text": "Before intervening, ask who owns the decision and receives its consequence; offer help without taking over another person's task.",
         "source_ids": [
-          "full-book-english",
+          "simon-schuster-us",
           "sefad-review"
         ],
         "basis": "synthesis"
@@ -384,7 +381,6 @@
       {
         "text": "Treat disapproval as a possible cost of honest action, not as proof that the action is wrong or right.",
         "source_ids": [
-          "full-book-english",
           "simon-schuster-us"
         ],
         "basis": "synthesis"
@@ -392,7 +388,7 @@
       {
         "text": "Compare present practice with your chosen direction rather than turning every other person into a rank above or below you.",
         "source_ids": [
-          "full-book-english",
+          "simon-schuster-us",
           "sefad-review"
         ],
         "basis": "synthesis"
@@ -400,7 +396,7 @@
       {
         "text": "Pair boundaries with contribution: separation without community becomes isolation, while contribution without boundaries becomes self-erasure.",
         "source_ids": [
-          "full-book-english",
+          "simon-schuster-us",
           "social-relationships-meta"
         ],
         "basis": "synthesis"
@@ -408,7 +404,7 @@
       {
         "text": "Do not postpone the whole value of life until a future achievement; the manner of today's action is already part of the result.",
         "source_ids": [
-          "full-book-english",
+          "simon-schuster-us",
           "storygraph-reception"
         ],
         "basis": "synthesis"
@@ -429,8 +425,7 @@
       "text": "Ichiro Kishimi brought training in Western philosophy, long study and translation of Adler, teaching, and counseling experience. Fumitake Koga brought interviewing, editorial structure, and accessible prose. Koga repeatedly visited Kishimi, then shaped the material as a classical dialogue so a skeptical reader's resistance could appear inside the book. Their purpose was popular philosophical liberation, not a clinical textbook or research review.",
       "source_ids": [
         "simon-schuster-us",
-        "diamond-original",
-        "full-book-english"
+        "diamond-original"
       ],
       "basis": "synthesis"
     },
@@ -448,7 +443,7 @@
         "Turns nuanced topics such as praise, trust, shared responsibility, and causal explanation into blanket rules; even Adlerian practice literature calls its evidence base incomplete."
       ],
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "va-ptsd",
         "adlerian-evidence-review",
         "reward-meta-analysis",
@@ -505,7 +500,7 @@
         "Happiness and present-focused living"
       ],
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "sefad-review",
         "storygraph-reception",
         "va-ptsd"
@@ -539,7 +534,7 @@
         "Unconditional confidence in others is unsafe without the book's own task boundaries and real-world judgment."
       ],
       "source_ids": [
-        "full-book-english",
+        "simon-schuster-us",
         "va-ptsd",
         "adlerian-evidence-review",
         "reward-meta-analysis",
@@ -554,7 +549,6 @@
       "skip_if": "Skip it if you need evidence-led psychology, trauma-safe guidance, detailed practices, or a balanced debate. Do not use it to explain another person's suffering to them.",
       "format_advice": "Print or ebook suits readers who want to pause over claims and separate what helps from what overreaches. The commercial audiobook uses multiple voices and suits the theatrical dialogue, but a concise audio summary is more efficient for deciding whether the full performance will work for you.",
       "source_ids": [
-        "full-book-english",
         "simon-schuster-us",
         "sefad-review",
         "storygraph-reception",
@@ -582,8 +576,8 @@
   },
   "workflow": {
     "status": "researched-partial",
-    "reviewed_against_full_book": true,
-    "review_notes": "The complete English text was checked across all five nights. The review preserved the book's strongest agency, task, community, and present-focus insights while testing trauma, praise, treatment-evidence, social-connection, power, and shared-task claims against independent sources. Rating uses content factors only.",
+    "reviewed_against_full_book": false,
+    "review_notes": "Official contents, the publisher's page-keyed reading guide, and a detailed whole-book scholarly review cover all five nights. The review preserved the strongest agency, task, community, and present-focus insights while testing trauma, praise, treatment evidence, social connection, power, and shared-task claims against independent sources. Rating uses content factors only; confidence remains medium because no lawfully accessed complete text was available.",
     "quality_review": {
       "status": "pending",
       "reviewed_at": null,

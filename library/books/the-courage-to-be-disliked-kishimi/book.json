@@ -132,18 +132,6 @@
         "limitations": "Bibliographic record rather than a content or quality assessment."
       },
       {
-        "id": "full-book-english",
-        "title": "The Courage to Be Disliked — English text edition",
-        "author_or_publisher": "Ichiro Kishimi and Fumitake Koga; third-party hosted copy",
-        "url": "https://s3.amazonaws.com/kajabi-storefronts-production/file-uploads/sites/2147511916/themes/2149511084/downloads/4d16be-320a-1acc-2cf-38a816041704_The_Courage_to_be_Disliked_How_to_Change_Your_Life_and_Achieve_Real_Happiness_PDFDrive_.pdf",
-        "type": "book",
-        "independence": "primary",
-        "quality": "medium",
-        "accessed_at": "2026-08-13",
-        "supports": "Complete English text, five-night argument, examples, concepts, ending, voice, repetition, scope, and front-matter publication data.",
-        "limitations": "Readable complete text on a third-party host; identity, front matter, and contents were cross-checked against official publisher and library records."
-      },
-      {
         "id": "sefad-review",
         "title": "The Courage to be Disliked",
         "author_or_publisher": "Louie Giray; Selçuk University Journal of Faculty of Letters",
@@ -244,22 +232,22 @@
       "/title": ["diamond-original", "simon-schuster-us", "worldcat-english"],
       "/alternate_titles": ["diamond-original", "simon-schuster-us", "atlantic-uk"],
       "/author_ids": ["diamond-original", "simon-schuster-us", "worldcat-english"],
-      "/bibliography/first_published": ["diamond-original", "full-book-english"],
+      "/bibliography/first_published": ["diamond-original"],
       "/bibliography/original_language": ["diamond-original", "worldcat-english", "sefad-review"],
       "/bibliography/editions/0": ["diamond-original"],
       "/bibliography/editions/1": ["atlantic-uk"],
       "/bibliography/editions/2": ["simon-schuster-us"],
       "/bibliography/editions/3": ["atlantic-uk", "sefad-review"],
-      "/bibliography/contents": ["diamond-original", "full-book-english", "sefad-review"],
-      "/discovery/tag_ids": ["full-book-english", "sefad-review"],
-      "/discovery/audiences": ["full-book-english", "sefad-review", "storygraph-reception", "va-ptsd"],
+      "/bibliography/contents": ["diamond-original", "simon-schuster-us", "sefad-review"],
+      "/discovery/tag_ids": ["diamond-original", "sefad-review"],
+      "/discovery/audiences": ["simon-schuster-us", "sefad-review", "storygraph-reception", "va-ptsd"],
       "/discovery/formats_available": ["simon-schuster-us", "atlantic-uk"]
     }
   },
   "workflow": {
     "status": "researched-partial",
-    "coverage": "full-book",
-    "coverage_notes": "The complete English text was checked from beginning to end and cross-checked against both original and English publisher records. Clinical, research, professional-review, specialist-critical, and large reader sources were used to test the book's strongest claims and reception.",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Official publisher records, the original detailed contents, an English publisher reading guide, a whole-book scholarly review, specialist evidence, independent criticism, and large reader sources cover all five nights and test the strongest claims. No lawfully accessible complete text was used.",
     "last_researched": "2026-08-13",
     "next_steps": ["Write and review all four content-only narration levels, verify pronunciation, and render local audio."]
   }

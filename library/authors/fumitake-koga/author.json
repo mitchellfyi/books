@@ -28,7 +28,7 @@
     },
     "perspective_and_limits": {
       "text": "Koga writes for clarity, movement, and reader engagement. The fictional youth voices objections, but the philosopher controls the terms and always wins; this makes difficult ideas memorable while producing straw opponents and false certainty. The dialogue should be read as persuasive craft, not a balanced record of philosophical or scientific debate.",
-      "source_ids": ["full-book", "sefad-review", "storygraph-reception"],
+      "source_ids": ["simon-schuster-profile", "sefad-review", "storygraph-reception"],
       "basis": "inference"
     }
   },
@@ -144,18 +144,6 @@
         "limitations": "Publisher catalogue entry in Japanese."
       },
       {
-        "id": "full-book",
-        "title": "The Courage to Be Disliked — English text edition",
-        "author_or_publisher": "Ichiro Kishimi and Fumitake Koga; third-party hosted copy",
-        "url": "https://s3.amazonaws.com/kajabi-storefronts-production/file-uploads/sites/2147511916/themes/2149511084/downloads/4d16be-320a-1acc-2cf-38a816041704_The_Courage_to_be_Disliked_How_to_Change_Your_Life_and_Achieve_Real_Happiness_PDFDrive_.pdf",
-        "type": "book",
-        "independence": "primary",
-        "quality": "medium",
-        "accessed_at": "2026-08-13",
-        "supports": "Koga's dialogue craft, objection structure, pacing, repetition, and co-authored perspective.",
-        "limitations": "Third-party host; checked against official records. The exact division of drafting decisions between co-authors is not documented line by line."
-      },
-      {
         "id": "sefad-review",
         "title": "The Courage to be Disliked",
         "author_or_publisher": "Louie Giray; Selçuk University Journal of Faculty of Letters",
@@ -187,7 +175,7 @@
   },
   "workflow": {
     "status": "complete",
-    "coverage_notes": "Official publisher, independent profile and lecture, author page, book text, professional review, and reader reception sources establish Koga's writing background and distinguish editorial skill from clinical authority.",
+    "coverage_notes": "Official publisher, independent profile and lecture, author page, professional review, and reader reception sources establish Koga's writing background and distinguish editorial skill from clinical authority.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
