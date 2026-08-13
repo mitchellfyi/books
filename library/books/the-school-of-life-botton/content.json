@@ -346,11 +346,11 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": true,
-    "review_notes": "Checked against the complete text, publisher and library records, dual-authorship evidence, independent and reader reviews, and adjacent empirical literature. Audio review remains.",
+    "review_notes": "Checked against the complete text, publisher and library records, dual-authorship evidence, independent and reader reviews, and adjacent empirical literature. All four local audio levels were rendered from the final content-only scripts with verified pronunciation entries and current dictionary provenance.",
     "quality_review": {
-      "status": "pending",
+      "status": "passed",
       "reviewed_at": "2026-08-13",
       "checks": {
         "identity_and_metadata": true,
@@ -360,7 +360,7 @@
         "citation_entailment": true,
         "product_fit": true,
         "plain_language": true,
-        "audio_pronunciation": false
+        "audio_pronunciation": true
       },
       "notes": [
         "Identity and dual authorship verified from Penguin's sample, the organisation's edition, WorldCat, and the complete text; Alain de Botton's exact role differs by edition, so both him and the collective are represented.",
@@ -368,7 +368,8 @@
         "Counterevidence recorded: the bitesize-commodity critique, the not-his-best verdict, and reader complaints of repetition — priced into the rating.",
         "Rating scored on content only; bestseller status and brand reach excluded per the rubric.",
         "The broad educational premise was checked against adjacent research: teachability has support, but emotional intelligence is not one settled construct and the book does not test its own curriculum.",
-        "Narration and pronunciation review remain before completion."
+        "All four narration levels stay within their configured word windows, contain no source or production outro, and preserve the reader decision.",
+        "Local audio rendered at 147.44 to 155.86 measured words per minute; Alain de Botton, akrasia, Rorschach, and Proust matched verified shared-dictionary entries where present."
       ]
     }
   }

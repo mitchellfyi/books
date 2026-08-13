@@ -94,7 +94,7 @@
     {
       "book_id": "the-school-of-life-botton",
       "priority": 13,
-      "status": "in-progress",
+      "status": "done",
       "source": "user",
       "added_at": "2026-08-13",
       "notes": "Full title: The School of Life: An Emotional Education."
@@ -139,7 +139,7 @@
     {
       "book_id": "supercommunicators-duhigg",
       "priority": 19,
-      "status": "ready",
+      "status": "in-progress",
       "source": "user",
       "added_at": "2026-08-13",
       "notes": "Request wrote 'Super Communicators'; canonical title is Supercommunicators."

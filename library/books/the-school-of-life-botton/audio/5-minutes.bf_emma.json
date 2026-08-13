@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-school-of-life-botton",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-school-of-life-botton/scripts/5-minutes.md",
+  "source_script_sha256": "969c394c653e28843104623b11f43f6a5cc67ce86762d88bf216a447160638eb",
+  "pronunciation_dictionary_sha256": "a2e6c9988d8bc8e6168c775061936cd555f1bbfff628c9f3e8fbcaabcae13908",
+  "pronunciation_terms": [
+    "akrasia",
+    "Alain de Botton"
+  ],
+  "pronunciation_entries_sha256": "99302fc4f53c46e2919f29bf9a56f60ff333eb743c896b15ffd455838eba5836",
+  "script_words": 705,
+  "audio_seconds": 277.305,
+  "measured_wpm": 152.54,
+  "generated_at": "2026-08-13T12:35:31.356039+00:00"
+}

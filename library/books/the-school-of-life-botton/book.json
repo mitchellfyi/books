@@ -254,12 +254,10 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "full-book",
     "coverage_notes": "Checked across the complete text, Penguin's sample, publisher and library records, author and organisation pages, independent reviews, reader reception, and adjacent empirical literature.",
     "last_researched": "2026-08-13",
-    "next_steps": [
-      "Complete four content-only narrations, verify pronunciation, render local audio, and run final adversarial review."
-    ]
+    "next_steps": []
   }
 }
