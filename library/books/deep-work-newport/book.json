@@ -3,29 +3,200 @@
   "schema_version": 1,
   "id": "deep-work-newport",
   "type": "book",
-  "title": "Deep Work",
-  "alternate_titles": [],
+  "title": "Deep Work: Rules for Focused Success in a Distracted World",
+  "alternate_titles": ["Deep Work"],
   "author_ids": ["cal-newport"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2016",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US hardcover",
+        "publisher": "Grand Central Publishing",
+        "publication_date": "2016-01-05",
+        "isbn_10": "1455586692",
+        "isbn_13": "9781455586691",
+        "format": "Hardcover",
+        "pages": 304
+      }
+    ],
+    "contents": [
+      "Introduction",
+      "Part 1 — The Idea",
+      "1: Deep Work Is Valuable",
+      "2: Deep Work Is Rare",
+      "3: Deep Work Is Meaningful",
+      "Part 2 — The Rules",
+      "Rule 1: Work Deeply",
+      "Rule 2: Embrace Boredom",
+      "Rule 3: Quit Social Media",
+      "Rule 4: Drain the Shallows",
+      "Conclusion"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": ["attention", "business", "focus", "non-fiction", "personal-development", "productivity", "self-help", "technology", "work"],
+    "audiences": [
+      "Knowledge workers who need uninterrupted time to learn, analyse, design, code, research, or write",
+      "Students and independent creators whose attention is repeatedly broken by messaging, browsing, and social media",
+      "Managers able to redesign team communication and protect concentration as well as collaboration",
+      "Readers seeking concrete routines rather than another list of notification settings"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "hachette-book",
+        "title": "Deep Work",
+        "author_or_publisher": "Grand Central Publishing / Hachette Book Group",
+        "url": "https://www.hachettebookgroup.com/titles/cal-newport/9781455586691/9781455586691/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Canonical title, author, publication date, publisher, ISBN, page count, formats, four rules, description, and selected professional reception.",
+        "limitations": "Sales page and promotional copy; praise is selected by the publisher."
+      },
+      {
+        "id": "author-contents",
+        "title": "The Book Facebook Doesn't Want You to Read",
+        "author_or_publisher": "Cal Newport",
+        "url": "https://calnewport.com/the-book-facebook-doesnt-want-you-to-read/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Author's argument, purpose, annotated contents, definitions, four-rule structure, and account of his own practice.",
+        "limitations": "Promotional author summary rather than independent verification."
+      },
+      {
+        "id": "author-retrospective",
+        "title": "In Defense of Thinking",
+        "author_or_publisher": "Cal Newport",
+        "url": "https://calnewport.com/in-defense-of-thinking-2/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Ten-year retrospective on why Newport wrote the book, its intended organisational challenge, and its later reach.",
+        "limitations": "Author's retrospective interpretation and reported sales."
+      },
+      {
+        "id": "eighty-thousand-interview",
+        "title": "Is deep work the most underappreciated skill for career success?",
+        "author_or_publisher": "Benjamin Todd; 80,000 Hours",
+        "url": "https://80000hours.org/2016/08/is-deep-work-the-most-underappreciated-skill-for-career-success-an-interview-with-cal-newport/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Definitions, practices, relationship to deliberate practice, limits by occupation, career claims, and explicit counterquestions.",
+        "limitations": "Friendly interview; Newport answers challenges about his own framework."
+      },
+      {
+        "id": "attention-residue-paper",
+        "title": "Why is it so hard to do my work? The challenge of attention residue when switching between work tasks",
+        "author_or_publisher": "Sophie Leroy; Organizational Behavior and Human Decision Processes",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Two experiments showing persistent attention to a prior task and impaired performance after switching, especially around unfinished work.",
+        "limitations": "Specific experiments on task transitions, not proof of every productivity or career claim in the book."
+      },
+      {
+        "id": "practice-meta-analysis",
+        "title": "Deliberate Practice and Performance in Music, Games, Sports, Education, and Professions: A Meta-Analysis",
+        "author_or_publisher": "Brooke N. Macnamara, David Z. Hambrick, and Frederick L. Oswald; Psychological Science",
+        "url": "https://www.psychologicalscience.org/journals/psychological-science/0956797614535810/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Counterevidence that deliberate practice matters but explains limited performance variance, especially in education and professions.",
+        "limitations": "Deep work is broader than deliberate practice; definitions and meta-analytic methods remain debated."
+      },
+      {
+        "id": "open-office-paper",
+        "title": "The impact of the open workspace on human collaboration",
+        "author_or_publisher": "Ethan S. Bernstein and Stephen Turban; Philosophical Transactions of the Royal Society B",
+        "url": "https://doi.org/10.1098/rstb.2017.0239",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Two workplace field studies finding that transitions to more open offices reduced face-to-face interaction and increased electronic communication.",
+        "limitations": "Two organisations and interaction measures; does not establish one universally optimal office design."
+      },
+      {
+        "id": "wharton-review",
+        "title": "Can Deep Work Really Work for You?",
+        "author_or_publisher": "Knowledge at Wharton",
+        "url": "https://knowledge.wharton.upenn.edu/article/can-deep-work-really-work/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Management-oriented evaluation of whether workers and organisations can create uninterrupted thinking time.",
+        "limitations": "Expert discussion and review, not an intervention trial of the complete system."
+      },
+      {
+        "id": "guardian-review",
+        "title": "Too busy to focus? Try this",
+        "author_or_publisher": "Oliver Burkeman; The Guardian",
+        "url": "https://www.theguardian.com/lifeandstyle/2016/jan/29/deep-work-change-your-life-oliver-burkeman",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Contemporary assessment that focus is desirable and the substantive difficulty is implementation amid email and social media.",
+        "limitations": "Short general-audience column rather than a detailed evidence audit."
+      },
+      {
+        "id": "forte-review",
+        "title": "A Review of Cal Newport's Deep Work",
+        "author_or_publisher": "Tiago Forte; Forte Labs",
+        "url": "https://fortelabs.com/this-is-my-review-of-cal-newport-s-new-book-deep-work-in-which-he-makes-the-case-that-cultivating-b0d0aa7c3d8e/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Productivity specialist's praise for writing and practices and criticism that deep-versus-shallow framing is too simple for interdependent work.",
+        "limitations": "One practitioner's conceptual review, not controlled evidence."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "Deep Work",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/25744928-deep-work",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large reader aggregate and recurring praise for practical impact alongside criticism of repetition, padding, limited originality, and schedule privilege.",
+        "limitations": "Self-selected readers, merged editions, mutable counts, and no control for completion or expertise."
+      }
+    ],
+    "citations": {
+      "/title": ["hachette-book", "author-contents"],
+      "/alternate_titles": ["hachette-book", "author-contents"],
+      "/author_ids": ["hachette-book", "author-contents"],
+      "/bibliography/first_published": ["hachette-book", "author-contents"],
+      "/bibliography/original_language": ["hachette-book"],
+      "/bibliography/editions/0": ["hachette-book"],
+      "/bibliography/contents": ["author-contents", "hachette-book"],
+      "/discovery/tag_ids": ["author-contents", "hachette-book", "attention-residue-paper"],
+      "/discovery/audiences": ["eighty-thousand-interview", "wharton-review", "forte-review"],
+      "/discovery/formats_available": ["hachette-book"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "researched-partial",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "The author's full annotated structure and extended explanations were checked against publisher metadata, a contemporary author interview, independent cognitive and workplace studies, professional reviews, and a large reader aggregate. No unauthorised full text was used.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": ["Optional: compare all detailed examples and notes with an owner-supplied copy before promoting coverage to full-book."]
   }
 }

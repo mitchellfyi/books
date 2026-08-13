@@ -4,22 +4,221 @@
   "id": "cal-newport",
   "type": "author",
   "name": "Cal Newport",
-  "alternate_names": [],
+  "alternate_names": ["Calvin C. Newport", "Calvin Newport"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "Computer scientist and non-fiction author who studies distributed systems academically and writes for general readers about attention, technology, work, and productivity.",
+      "source_ids": ["author-site", "author-cv"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Newport is a full professor of computer science at Georgetown University. He earned his doctorate at MIT and researches the theory of distributed systems, especially what can and cannot be solved under difficult communication conditions. Alongside that technical career, he has written books and essays about study, skill, digital tools, communication overload, and meaningful work.",
+      "source_ids": ["author-site", "author-cv", "dartmouth-profile"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His productivity framework grew from academic research and writing, where long self-directed blocks can produce papers, proofs, and books. He began writing study advice for students, then moved into career capital, focused work, deliberate technology use, email overload, and sustainable output. Deep Work was written partly to explain and systematise how he protected concentration in his own career.",
+      "source_ids": ["author-contents", "author-retrospective", "eighty-thousand-interview", "author-cv"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Newport has direct expertise in computer science, academic research, writing, and the personal practice of focused knowledge work. He is an experienced synthesiser of work habits and digital culture rather than an experimental psychologist, neuroscientist, occupational-health researcher, or representative sample of all occupations.",
+      "source_ids": ["author-site", "author-cv", "attention-residue-paper", "eighty-thousand-interview"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "His strongest lens is the autonomous maker: someone judged mainly by difficult artefacts and able to control at least part of a schedule. He does acknowledge executives, sales, lobbying, and other communication-heavy exceptions, but the examples and techniques remain easiest for academics, writers, programmers, students, and independent creators. Applying them to care, service, management, operations, disability, or precarious work requires organisational changes and adaptation, not more individual discipline alone.",
+      "source_ids": ["eighty-thousand-interview", "forte-review", "wharton-review", "goodreads-reception"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "How to Become a Straight-A Student",
+      "year": 2006,
+      "kind": "Book",
+      "relationship": "Earlier student guide that develops efficient study and concentration practices.",
+      "source_ids": ["author-cv"]
+    },
+    {
+      "title": "So Good They Can't Ignore You",
+      "year": 2012,
+      "kind": "Book",
+      "relationship": "Argues that rare and valuable skills create career capital; Deep Work explains a way to build them.",
+      "source_ids": ["author-cv", "eighty-thousand-interview"]
+    },
+    {
+      "title": "Deep Work",
+      "year": 2016,
+      "kind": "Book",
+      "relationship": "Defines concentrated, demanding work as a trainable capability and offers four rules for protecting it.",
+      "source_ids": ["hachette-book", "author-contents"]
+    },
+    {
+      "title": "Digital Minimalism",
+      "year": 2019,
+      "kind": "Book",
+      "relationship": "Extends selective tool use from professional focus to personal digital life.",
+      "source_ids": ["author-cv"]
+    },
+    {
+      "title": "A World Without Email",
+      "year": 2021,
+      "kind": "Book",
+      "relationship": "Moves from personal focus tactics to redesigning organisational communication and workflow.",
+      "source_ids": ["author-cv"]
+    },
+    {
+      "title": "Slow Productivity",
+      "year": 2024,
+      "kind": "Book",
+      "relationship": "Develops a more sustainable philosophy of doing fewer things, working at a natural pace, and prioritising quality.",
+      "source_ids": ["author-site"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "author-site",
+        "title": "Cal Newport",
+        "author_or_publisher": "Cal Newport",
+        "url": "https://calnewport.com/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current academic post, research area, public writing, podcast, books, and general subject matter.",
+        "limitations": "Self-authored professional profile."
+      },
+      {
+        "id": "author-cv",
+        "title": "Calvin Newport curriculum vitae",
+        "author_or_publisher": "Cal Newport / Georgetown University",
+        "url": "https://calnewport.com/wp-content/uploads/2022/11/calnewport-cv.pdf",
+        "type": "official-documentation",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Academic education and appointments, scholarship, general-audience bibliography, publication dates, and reported reach.",
+        "limitations": "Author-maintained professional record."
+      },
+      {
+        "id": "dartmouth-profile",
+        "title": "Cal Newport '04",
+        "author_or_publisher": "Dartmouth Alumni Magazine",
+        "url": "https://archive.dartmouthalumnimagazine.com/article/2021/7/1/cal-newport-04",
+        "type": "employer",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent institutional summary of education, Georgetown career, authorship, and attention-management work.",
+        "limitations": "Short alumni profile with promotional interest."
+      },
+      {
+        "id": "hachette-book",
+        "title": "Deep Work",
+        "author_or_publisher": "Grand Central Publishing / Hachette Book Group",
+        "url": "https://www.hachettebookgroup.com/titles/cal-newport/9781455586691/9781455586691/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Book identity, author biography, formats, publication, and publisher summary.",
+        "limitations": "Promotional publisher page."
+      },
+      {
+        "id": "author-contents",
+        "title": "The Book Facebook Doesn't Want You to Read",
+        "author_or_publisher": "Cal Newport",
+        "url": "https://calnewport.com/the-book-facebook-doesnt-want-you-to-read/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Author's purpose, work history, argument, structure, and claimed results from his practice.",
+        "limitations": "Promotional launch essay and self-case study."
+      },
+      {
+        "id": "author-retrospective",
+        "title": "In Defense of Thinking",
+        "author_or_publisher": "Cal Newport",
+        "url": "https://calnewport.com/in-defense-of-thinking-2/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Author's ten-year account of motivation, intended audience, organisational target, and the framework's development.",
+        "limitations": "Retrospective self-interpretation."
+      },
+      {
+        "id": "eighty-thousand-interview",
+        "title": "Is deep work the most underappreciated skill for career success?",
+        "author_or_publisher": "Benjamin Todd; 80,000 Hours",
+        "url": "https://80000hours.org/2016/08/is-deep-work-the-most-underappreciated-skill-for-career-success-an-interview-with-cal-newport/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Newport's account of occupational limits, deliberate practice, career development, and implementation.",
+        "limitations": "Friendly but questioning author interview."
+      },
+      {
+        "id": "attention-residue-paper",
+        "title": "Why is it so hard to do my work? The challenge of attention residue when switching between work tasks",
+        "author_or_publisher": "Sophie Leroy; Organizational Behavior and Human Decision Processes",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent research behind one of the book's key psychological mechanisms.",
+        "limitations": "Does not evaluate Newport personally or the whole programme."
+      },
+      {
+        "id": "forte-review",
+        "title": "A Review of Cal Newport's Deep Work",
+        "author_or_publisher": "Tiago Forte; Forte Labs",
+        "url": "https://fortelabs.com/this-is-my-review-of-cal-newport-s-new-book-deep-work-in-which-he-makes-the-case-that-cultivating-b0d0aa7c3d8e/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent practitioner assessment of the framework's strengths and autonomous-maker bias.",
+        "limitations": "Conceptual review rather than empirical biography."
+      },
+      {
+        "id": "wharton-review",
+        "title": "Can Deep Work Really Work for You?",
+        "author_or_publisher": "Knowledge at Wharton",
+        "url": "https://knowledge.wharton.upenn.edu/article/can-deep-work-really-work/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent management perspective on the conditions required to apply Newport's advice.",
+        "limitations": "Discussion rather than systematic biography."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "Deep Work",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/25744928-deep-work",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Reader experience of Newport's voice, examples, practical influence, repetition, and perspective.",
+        "limitations": "Self-selected and unverified community reviews."
+      }
+    ],
+    "citations": {
+      "/name": ["author-site", "author-cv", "hachette-book"],
+      "/alternate_names": ["author-cv", "dartmouth-profile"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile distinguishes Newport's verified computer-science and writing expertise from the occupational psychology and organisational claims he synthesises, and tests his autonomous-maker perspective against interviews and independent reviews.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

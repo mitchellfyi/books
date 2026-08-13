@@ -387,6 +387,41 @@
       "label": "Nutrition",
       "description": "Dietary patterns, foods, nutrients, adequacy, and their relationships with health and disease.",
       "aliases": ["diet"]
+    },
+    {
+      "id": "attention",
+      "kind": "topic",
+      "label": "Attention",
+      "description": "Selecting, sustaining, and shifting mental focus among tasks, information, and distractions.",
+      "aliases": []
+    },
+    {
+      "id": "focus",
+      "kind": "topic",
+      "label": "Focus",
+      "description": "Sustained concentration on a chosen activity, problem, or objective.",
+      "aliases": ["concentration"]
+    },
+    {
+      "id": "productivity",
+      "kind": "topic",
+      "label": "Productivity",
+      "description": "Producing useful, valuable, or completed work with finite time, energy, and attention.",
+      "aliases": []
+    },
+    {
+      "id": "technology",
+      "kind": "topic",
+      "label": "Technology",
+      "description": "Tools and systems that extend human capabilities and reshape behaviour, work, communication, or culture.",
+      "aliases": ["digital-technology"]
+    },
+    {
+      "id": "work",
+      "kind": "topic",
+      "label": "Work",
+      "description": "Paid or purposeful activity, including its design, demands, outputs, conditions, and meaning.",
+      "aliases": ["knowledge-work"]
     }
   ]
 }

@@ -272,6 +272,31 @@
         "library/books/how-not-to-age-greger/book.json#library-record"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "deep-work-written-by-cal-newport",
+      "source_id": "deep-work-newport",
+      "target_id": "cal-newport",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Cal Newport wrote Deep Work.",
+      "source_refs": [
+        "library/books/deep-work-newport/book.json#hachette-book",
+        "library/books/deep-work-newport/book.json#author-contents"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "deep-work-related-to-power-of-habit",
+      "source_id": "deep-work-newport",
+      "target_id": "the-power-of-habit-duhigg",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "The Power of Habit gives a broader account of routines and cues; Deep Work applies ritual and repetition specifically to sustained cognitive work.",
+      "source_refs": [
+        "library/books/deep-work-newport/book.json#author-contents"
+      ],
+      "confidence": "medium"
     }
   ]
 }
