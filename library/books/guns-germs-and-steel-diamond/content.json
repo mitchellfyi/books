@@ -348,6 +348,7 @@
       "weaknesses": [
         "The modern-era extension is contested at the data level by the institutions literature.",
         "Specialist critics identify disputed regional details, selective diffusion examples and important omissions.",
+        "Later historical work corrects the simple QWERTY lock-in story and the claim that Tokugawa Japan gave up firearms.",
         "The environmental frame structurally underweights agency, culture and institutions.",
         "Evidence is synthesised through chapter-level further reading rather than inline citations, making individual claims slower to trace."
       ],
@@ -357,7 +358,9 @@
         "mcneill-nyrb",
         "google-books-ggs-1997",
         "axis-quantitative-test",
-        "olsson-hibbs-biogeography"
+        "olsson-hibbs-biogeography",
+        "qwerty-history-reassessment",
+        "japan-firearms-reassessment"
       ],
       "basis": "synthesis"
     },
@@ -427,13 +430,16 @@
         "Independent treatment of institutions, culture and human agency"
       ],
       "dated_or_contested": [
-        "Post-1997 research supplies evidence for some long-run biogeographic links, a strong role for institutions in modern outcomes and direct challenges to the axis hypothesis."
+        "Post-1997 research supplies evidence for some long-run biogeographic links, a strong role for institutions in modern outcomes and direct challenges to the axis hypothesis.",
+        "The QWERTY and Japanese-firearms examples need correction: adoption involved more than typing speed, and Tokugawa Japan regulated firearms rather than relinquishing them."
       ],
       "source_ids": [
         "mcneill-nyrb",
         "acemoglu-reversal",
         "olsson-hibbs-biogeography",
-        "axis-quantitative-test"
+        "axis-quantitative-test",
+        "qwerty-history-reassessment",
+        "japan-firearms-reassessment"
       ],
       "basis": "synthesis"
     },
@@ -462,9 +468,9 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "Built from the documented record, a contemporary professional review, and the four named specialist critiques that define the book's debate; the argument's structure is unusually well documented after twenty-five years of academic engagement.",
+    "review_notes": "Checked against authorised contents and edition records, Diamond's direct statement of purpose, contemporary professional and specialist reviews, and later empirical work that both supports and limits the biogeographic framework.",
     "quality_review": {
       "status": "passed",
       "reviewed_at": "2026-08-13",
@@ -479,12 +485,12 @@
         "audio_pronunciation": true
       },
       "notes": [
-        "Identity verified: W. W. Norton, March 1997, 480pp, ISBN 9780393038910; UK Vintage 1998 with the alternate subtitle; Pulitzer 1998, Rhône-Poulenc 1998, Phi Beta Kappa 1997.",
-        "Direct counterevidence includes McNeill's review and exchange with Diamond, a quantitative test of the axis hypothesis, evidence supporting long-run biogeographic effects, and institutional evidence limiting time-invariant geography explanations.",
+        "Identity verified: W. W. Norton, March 1997, 480 pages, ISBN 9780393038910; the 2017 anniversary edition is recorded separately.",
+        "Direct counterevidence includes McNeill's review and exchange with Diamond, a quantitative test of the axis hypothesis, evidence supporting long-run biogeographic effects, institutional evidence limiting time-invariant geography explanations, and historical corrections to the QWERTY and Japanese-firearms examples.",
         "The 1835 Chatham Islands case is narrated without the endonym Moriori because no dictionary-grade pronunciation could be verified; the people are identified by place.",
         "The 6.5 rating uses content only; awards, sales and author reputation do not affect its dimensions.",
         "Thirty minutes is recommended because the argument's scope cannot be judged responsibly without both regional tests and competing explanations.",
-        "Pronunciation: Cajamarca (kah-ha-MAR-ka) and Atahuallpa (ah-tə-WAHL-pə) were both mispronounced by the phonemizer and added to the dictionary with references; Yali and Pizarro verified acceptable."
+        "Pronunciation: Cajamarca and Atahuallpa were both mispronounced by the phonemizer and added to the dictionary from Wiktionary and Collins; Yali and Pizarro were inspected without requiring overrides."
       ]
     }
   }

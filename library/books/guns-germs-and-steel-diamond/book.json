@@ -221,6 +221,30 @@
         "independence": "independent",
         "quality": "medium",
         "limitations": "A forceful teaching essay rather than peer-reviewed research; use as a named agency critique alongside McNeill, Blaut and empirical studies."
+      },
+      {
+        "id": "qwerty-history-reassessment",
+        "title": "Big causes and small events: QWERTY and the mechanization of office work",
+        "author_or_publisher": "Andreas Reinstaller and Werner Hölzl, Industrial and Corporate Change",
+        "url": "https://doi.org/10.1093/icc/dtp030",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A historical reassessment showing that performance criteria beyond typing speed shaped typewriter and QWERTY adoption, limiting the book's simple inefficient-lock-in example.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Examines one technology example rather than Diamond's wider theory."
+      },
+      {
+        "id": "japan-firearms-reassessment",
+        "title": "Giving Up the Gun? Overcoming Myths about Japanese Sword-Hunting and Firearms Control",
+        "author_or_publisher": "Tamara Enomoto, History of Global Arms Transfer",
+        "url": "https://www.jstage.jst.go.jp/article/rihgat/2018/2/2018_05/_article/-char/en",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Japanese historical evidence that firearms were regulated but not relinquished during the Tokugawa period, directly correcting the book's abandonment example.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Corrects one regional technology example rather than evaluating the full biogeographic framework."
       }
     ],
     "citations": {
@@ -253,7 +277,7 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Structure and claims checked against authorised contents and edition records; purpose checked in Diamond's direct reply; assessment triangulated across contemporary history and ecology reviews plus later empirical work supporting and challenging the biogeographic framework.",
     "last_researched": "2026-08-13",
