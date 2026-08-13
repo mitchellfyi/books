@@ -1,26 +1,24 @@
 {
-  "$schema": "../../../schemas/author.schema.json",
-  "schema_version": 1,
-  "id": "chip-heath",
-  "type": "author",
-  "name": "Chip Heath",
-  "alternate_names": [],
-  "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+  "$schema":"../../../schemas/author.schema.json","schema_version":1,"id":"chip-heath","type":"author","name":"Chip Heath","alternate_names":["Charles Heath"],
+  "profile":{
+    "one_line":{"text":"Stanford organisational-behaviour professor emeritus and psychologist who studies why ideas spread, how decisions fail, and how messages can be designed to stick.","source_ids":["stanford-profile"],"basis":"synthesis"},
+    "biography":{"text":"Heath is the Thrive Foundation for Youth Professor of Organizational Behavior, Emeritus, at Stanford Graduate School of Business. He earned a bachelor's degree in industrial engineering from Texas A&M and a doctorate in psychology from Stanford, and previously taught at Chicago and Duke. His academic work appears in psychology, economics, consumer-behaviour, strategy, and organisational journals.","source_ids":["stanford-profile"],"basis":"synthesis"},
+    "background":{"text":"His research asks why some ideas survive in a social marketplace, how messages can be made memorable, and how people and organisations make important decisions. He has taught organisational behaviour, negotiation, strategy, and social entrepreneurship and has worked with his brother Dan to turn behavioural research into applied frameworks.","source_ids":["stanford-profile","publisher-profile"],"basis":"synthesis"},
+    "expertise":{"text":"Chip Heath has direct academic expertise in psychology, organisational behaviour, decision-making, and idea transmission. The Power of Moments ranges beyond this evidence into service design, education, relationships, health care, and family life, where the examples demonstrate possibilities more often than controlled outcomes.","source_ids":["stanford-profile","peak-end-paper","publishers-weekly"],"basis":"synthesis"},
+    "perspective_and_limits":{"text":"His approach favours memorable categories, case studies, and practical design prompts. That makes research usable but can make a framework look more unified and causal than the underlying studies warrant. As a business-school scholar writing with a case writer, he gives organisations and leaders more space than power differences, culture, trauma, or recipients who do not want an experience engineered for them.","source_ids":["stanford-profile","publishers-weekly","goodreads-reception"],"basis":"inference"}
   },
-  "selected_works": [],
-  "research": {
-    "sources": [],
-    "citations": {}
-  },
-  "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
-    "last_researched": "2026-08-13",
-    "next_steps": []
-  }
+  "selected_works":[
+    {"title":"Made to Stick","year":2007,"kind":"Book","relationship":"Explains why some ideas are memorable and actionable.","source_ids":["stanford-profile"]},
+    {"title":"Switch","year":2010,"kind":"Book","relationship":"Applies behavioural insight to change when motivation, direction, and environment conflict.","source_ids":["publisher-profile"]},
+    {"title":"Decisive","year":2013,"kind":"Book","relationship":"Offers a process for countering common decision biases.","source_ids":["publisher-profile"]},
+    {"title":"The Power of Moments","year":2017,"kind":"Book","relationship":"Applies memory, emotion, pride, insight, and connection to designed experiences.","source_ids":["publisher-profile"]}
+  ],
+  "research":{"sources":[
+    {"id":"stanford-profile","title":"Chip Heath","author_or_publisher":"Stanford Graduate School of Business","url":"https://www.gsb.stanford.edu/faculty-research/faculty/chip-heath","type":"employer","independence":"interested","quality":"high","accessed_at":"2026-08-13","supports":"Current emeritus title, education, appointments, research, teaching, and publications.","limitations":"Employer profile, not independent evaluation."},
+    {"id":"publisher-profile","title":"The Power of Moments","author_or_publisher":"Simon & Schuster","url":"https://www.simonandschuster.com/books/The-Power-of-Moments/Chip-Heath/9781501147760","type":"publisher","independence":"interested","quality":"high","accessed_at":"2026-08-13","supports":"Co-authorship, books, professional biography, and the scope of The Power of Moments.","limitations":"Promotional publisher biography."},
+    {"id":"peak-end-paper","title":"When More Pain Is Preferred to Less: Adding a Better End","author_or_publisher":"Kahneman et al.; Psychological Science","url":"https://journals.sagepub.com/doi/10.1111/j.1467-9280.1993.tb00589.x","type":"specialist-review","independence":"independent","quality":"high","accessed_at":"2026-08-13","supports":"Independent scope of a central memory result used in the book.","limitations":"Narrow laboratory evidence rather than author biography."},
+    {"id":"publishers-weekly","title":"The Power of Moments","author_or_publisher":"Publishers Weekly","url":"https://www.publishersweekly.com/9781501147760","type":"professional-review","independence":"independent","quality":"high","accessed_at":"2026-08-13","supports":"Independent assessment of the authors' framework, corporate emphasis, and authenticity gap.","limitations":"Short trade review."},
+    {"id":"goodreads-reception","title":"The Power of Moments","author_or_publisher":"Goodreads","url":"https://www.goodreads.com/en/book/show/34466952-the-power-of-moments","type":"reader-aggregate","independence":"community","quality":"medium","accessed_at":"2026-08-13","supports":"Broad reader response to style, usefulness, and perspective.","limitations":"Self-selected community data."}
+  ],"citations":{"/name":["stanford-profile","publisher-profile"],"/alternate_names":["stanford-profile"]}},
+  "workflow":{"status":"complete","coverage_notes":"Current Stanford record establishes academic expertise; publisher and independent reception distinguish that expertise from the book's broader applied claims.","last_researched":"2026-08-13","next_steps":[]}
 }

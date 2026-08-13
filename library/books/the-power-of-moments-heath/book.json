@@ -3,29 +3,64 @@
   "schema_version": 1,
   "id": "the-power-of-moments-heath",
   "type": "book",
-  "title": "The Power of Moments",
-  "alternate_titles": [],
-  "author_ids": ["chip-heath"],
+  "title": "The Power of Moments: Why Certain Experiences Have Extraordinary Impact",
+  "alternate_titles": ["The Power of Moments"],
+  "author_ids": ["chip-heath", "dan-heath"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2017",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US hardcover",
+        "publisher": "Simon & Schuster",
+        "publication_date": "2017-10-03",
+        "isbn_10": "1501147765",
+        "isbn_13": "9781501147760",
+        "format": "Hardcover",
+        "pages": 320
+      }
+    ],
+    "contents": [
+      "1: Defining Moments", "2: Thinking in Moments", "Part I — Elevation", "3: Build Peaks", "4: Break the Script", "Part II — Insight", "5: Trip Over the Truth", "6: Stretch for Insight", "Part III — Pride", "7: Recognize Others", "8: Multiply Milestones", "9: Practice Courage", "Part IV — Connection", "10: Create Shared Meaning", "11: Deepen Ties", "12: Making Moments Matter"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": ["business", "communication", "experience-design", "leadership", "memory", "motivation", "non-fiction", "organisational-behaviour", "personal-development", "psychology", "relationships", "self-help"],
+    "audiences": [
+      "Leaders, teachers, clinicians, service designers, facilitators, and managers who shape other people's experiences",
+      "People planning transitions, milestones, celebrations, feedback, onboarding, recovery from a setback, or a meaningful gathering",
+      "Families and teams seeking a practical language for recognition, novelty, courage, purpose, and connection",
+      "Readers who prefer memorable cases and design prompts to a technical psychology text"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {"id":"publisher-book","title":"The Power of Moments","author_or_publisher":"Simon & Schuster","url":"https://www.simonandschuster.com/books/The-Power-of-Moments/Chip-Heath/9781501147760","type":"publisher","independence":"interested","quality":"high","accessed_at":"2026-08-13","supports":"Canonical identity, publication, ISBN, format, authors, argument, sample, framework, examples, and selected reception.","limitations":"Promotional page and publisher-selected praise."},
+      {"id":"google-books","title":"The Power of Moments","author_or_publisher":"Chip Heath and Dan Heath; Simon & Schuster via Google Books","url":"https://books.google.com/books/about/The_Power_of_Moments.html?id=cFU3DwAAQBAJ","type":"book","independence":"primary","quality":"high","accessed_at":"2026-08-13","supports":"Book identity, authors, ISBN, length, full contents, subjects, and searchable preview.","limitations":"Limited preview rather than uninterrupted full text."},
+      {"id":"chapter-one","title":"The Power of Moments, Chapter 1: Defining Moments","author_or_publisher":"Chip Heath and Dan Heath","url":"https://heathbrothers.com/wp-content/uploads/resources/The-Power-of-Moments-Chapter-1.pdf","type":"book","independence":"primary","quality":"high","accessed_at":"2026-08-13","supports":"Primary definitions, peak-end framing, four elements, scope, and Senior Signing Day example.","limitations":"Only the first chapter."},
+      {"id":"family-guide","title":"The Power of Moments for Friends and Family","author_or_publisher":"Chip Heath and Dan Heath","url":"https://www.heathbrothers.com/wp-content/uploads/2017/10/The-Power-of-Moments-for-Friends-and-Family.pdf","type":"author","independence":"primary","quality":"high","accessed_at":"2026-08-13","supports":"Author-supplied applications of transitions, novelty, peaks, milestones, pride, insight, and connection outside business.","limitations":"Companion application guide, not independent evidence."},
+      {"id":"peak-end-paper","title":"When More Pain Is Preferred to Less: Adding a Better End","author_or_publisher":"Daniel Kahneman, Barbara Fredrickson, Charles Schreiber, and Donald Redelmeier; Psychological Science","url":"https://journals.sagepub.com/doi/10.1111/j.1467-9280.1993.tb00589.x","type":"specialist-review","independence":"independent","quality":"high","accessed_at":"2026-08-13","supports":"Experimental evidence that retrospective evaluation of an aversive episode can overweight peak and ending and underweight duration.","limitations":"Short aversive laboratory experiences; generalisation to long, positive, complex life experiences is limited."},
+      {"id":"reminiscence-review","title":"Understanding the reminiscence bump: A systematic review","author_or_publisher":"Khadeeja Munawar, Sara K. Kuhn, and Shamsul Haque; PLOS One","url":"https://journals.plos.org/plosone/doi?id=10.1371/journal.pone.0208595","type":"specialist-review","independence":"independent","quality":"high","accessed_at":"2026-08-13","supports":"Systematic evidence that autobiographical recall often disproportionately represents youth and early adulthood, with timing dependent on cues and memory type.","limitations":"Explains recall distributions, not how to manufacture meaningful experiences."},
+      {"id":"closeness-paper","title":"The Experimental Generation of Interpersonal Closeness","author_or_publisher":"Arthur Aron et al.; Personality and Social Psychology Bulletin","url":"https://doi.org/10.1177/0146167297234003","type":"specialist-review","independence":"independent","quality":"high","accessed_at":"2026-08-13","supports":"Preliminary experiments showing that escalating reciprocal self-disclosure can generate felt interpersonal closeness in a controlled setting.","limitations":"Small, structured experimental interactions; does not create friendship or love on command and does not establish durable relationship quality."},
+      {"id":"wired-interview","title":"How to make even a boring work meeting more memorable","author_or_publisher":"Eleanor Peake; WIRED","url":"https://www.wired.com/story/how-to-make-mondays-memorable/","type":"interview","independence":"primary","quality":"high","accessed_at":"2026-08-13","supports":"Dan Heath's explanation of transitions, milestones, pits, onboarding, elevation, work applications, and intended purpose.","limitations":"Promotional author interview with unverified organisational outcome claims."},
+      {"id":"kirkus-review","title":"The Power of Moments","author_or_publisher":"Kirkus Reviews","url":"https://www.kirkusreviews.com/book-reviews/chip-heath/the-power-of-moments/","type":"professional-review","independence":"independent","quality":"high","accessed_at":"2026-08-13","supports":"Independent assessment of structure, tone, cases, clinics, practicality, and heuristic character.","limitations":"Concise trade review rather than an evidence audit."},
+      {"id":"publishers-weekly","title":"The Power of Moments","author_or_publisher":"Publishers Weekly","url":"https://www.publishersweekly.com/9781501147760","type":"professional-review","independence":"independent","quality":"high","accessed_at":"2026-08-13","supports":"Independent summary and criticism of corporate emphasis and the unresolved authenticity of engineered moments.","limitations":"Short review; does not test interventions."},
+      {"id":"critical-care-review","title":"The Power of Moments","author_or_publisher":"Michelle Sanchez; Critical Care Nurse","url":"https://aacnjournals.org/ccnonline/article/39/5/80/22018/The-Power-of-Moments","type":"specialist-review","independence":"independent","quality":"medium","accessed_at":"2026-08-13","supports":"Clinical practitioner's assessment of relevance to patients, staff, leaders, colleagues, and family.","limitations":"Brief book review, not clinical outcome evidence."},
+      {"id":"goodreads-reception","title":"The Power of Moments","author_or_publisher":"Goodreads","url":"https://www.goodreads.com/en/book/show/34466952-the-power-of-moments","type":"reader-aggregate","independence":"community","quality":"medium","accessed_at":"2026-08-13","supports":"Large reader aggregate and recurring praise for accessible applications alongside concerns about corporate framing, repetition, and feasibility.","limitations":"Self-selected, mutable, merged editions, and no control for expertise or completion."}
+    ],
+    "citations": {
+      "/title":["publisher-book","google-books","chapter-one"],
+      "/alternate_titles":["publisher-book","google-books"],
+      "/author_ids":["publisher-book","google-books"],
+      "/bibliography/first_published":["publisher-book","google-books"],
+      "/bibliography/original_language":["google-books"],
+      "/bibliography/editions/0":["publisher-book","google-books","kirkus-review"],
+      "/bibliography/contents":["google-books"],
+      "/discovery/tag_ids":["google-books","chapter-one"],
+      "/discovery/audiences":["publisher-book","wired-interview","critical-care-review"],
+      "/discovery/formats_available":["publisher-book","publishers-weekly"]
+    }
   },
-  "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
-    "last_researched": "2026-08-13",
-    "next_steps": []
-  }
+  "workflow": {"status":"researched-partial","coverage":"sample-and-secondary","coverage_notes":"Full contents, first chapter, author companion guide, searchable preview, author interview, three relevant research sources, three independent professional or specialist reviews, and a large reader aggregate cover the argument and all parts. No unauthorised full text was used.","last_researched":"2026-08-13","next_steps":["Optional: verify every case and endnote against an owner-supplied copy before promoting coverage to full-book."]}
 }

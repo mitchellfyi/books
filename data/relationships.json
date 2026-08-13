@@ -297,6 +297,36 @@
         "library/books/deep-work-newport/book.json#author-contents"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "power-of-moments-written-by-chip-heath",
+      "source_id": "the-power-of-moments-heath",
+      "target_id": "chip-heath",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Chip Heath co-wrote The Power of Moments.",
+      "source_refs": ["library/books/the-power-of-moments-heath/book.json#publisher-book"],
+      "confidence": "high"
+    },
+    {
+      "id": "power-of-moments-written-by-dan-heath",
+      "source_id": "the-power-of-moments-heath",
+      "target_id": "dan-heath",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Dan Heath co-wrote The Power of Moments.",
+      "source_refs": ["library/books/the-power-of-moments-heath/book.json#publisher-book"],
+      "confidence": "high"
+    },
+    {
+      "id": "power-of-moments-related-to-unreasonable-hospitality",
+      "source_id": "the-power-of-moments-heath",
+      "target_id": "unreasonable-hospitality-guidara",
+      "type": "recommended-next",
+      "basis": "inference",
+      "description": "Unreasonable Hospitality is a natural next read for a detailed restaurant case about empowering teams to create exceptional service moments.",
+      "source_refs": ["library/books/the-power-of-moments-heath/book.json#publisher-book"],
+      "confidence": "medium"
     }
   ]
 }

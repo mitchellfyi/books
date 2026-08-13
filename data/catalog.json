@@ -51,6 +51,14 @@
       "aliases": []
     },
     {
+      "id": "dan-heath",
+      "kind": "author",
+      "name": "Dan Heath",
+      "state": "catalogued",
+      "path": "library/authors/dan-heath/author.json",
+      "aliases": []
+    },
+    {
       "id": "daniel-lieberman",
       "kind": "author",
       "name": "Daniel Lieberman",
@@ -400,13 +408,14 @@
     {
       "id": "the-power-of-moments-heath",
       "kind": "book",
-      "name": "The Power of Moments",
+      "name": "The Power of Moments: Why Certain Experiences Have Extraordinary Impact",
       "state": "catalogued",
       "path": "library/books/the-power-of-moments-heath/book.json",
       "author_ids": [
-        "chip-heath"
+        "chip-heath",
+        "dan-heath"
       ],
-      "aliases": []
+      "aliases": ["The Power of Moments"]
     },
     {
       "id": "the-school-of-life-botton",

@@ -1,111 +1,54 @@
 {
-  "$schema": "../../../schemas/content.schema.json",
-  "schema_version": 1,
-  "book_id": "the-power-of-moments-heath",
-  "content_type": "non-fiction",
-  "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
-    "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+  "$schema":"../../../schemas/content.schema.json","schema_version":1,"book_id":"the-power-of-moments-heath","content_type":"non-fiction",
+  "editorial":{"compression_fit":"high","complexity":"medium","recommended_level":"15-minutes","rationale":"Five minutes preserves the four elements and their main techniques. Fifteen minutes is optimal because it can also cover transitions, milestones, pits, reciprocal disclosure, examples, evidence limits, authenticity, and ethical use. Thirty minutes adds the cases and practical distinctions that create the reading experience. The full book mainly adds motivational narrative and clinics around a framework that compresses well."},
+  "card":{"one_sentence":"A design guide for making selected experiences memorable and meaningful through elevation, insight, pride, and connection.","verdict":"A highly usable checklist for transitions, milestones, feedback, gatherings, and service, but a looser scientific synthesis than its tidy four-part framework suggests; design for recipients, not for theatrical manipulation.","source_ids":["chapter-one","publisher-book","peak-end-paper","publishers-weekly"],"basis":"synthesis"},
+  "overview":{
+    "synopsis":{"text":"The book first explains why remembered experience is uneven and asks readers to notice transitions, milestones, and pits that deserve deliberate treatment. Four parts then show how moments can rise above routine through elevation, reveal truth through insight, mark achievement and courage through pride, and strengthen relationships through connection. Each part combines behavioural research, organisational and personal cases, short recaps, and application clinics.","source_ids":["google-books","chapter-one","kirkus-review"],"basis":"synthesis"},
+    "core_argument":{"text":"People do not remember or value every minute of an experience equally. Selected peaks, transitions, turning points, and endings can shape memory, identity, motivation, and relationships. Rather than leaving them entirely to chance, a person or organisation can improve some of them by adding elevation, insight, pride, connection, or a deliberate combination—after basic needs and genuine consent are respected.","source_ids":["chapter-one","publisher-book","peak-end-paper","family-guide"],"basis":"synthesis"}
   },
-  "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
-    "basis": "synthesis"
-  },
-  "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
-  },
-  "ideas": [
-    {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
-      "basis": "synthesis"
-    }
+  "ideas":[
+    {"id":"think-in-moments","title":"Think in moments, not averages","claim":"An experience is remembered through selected episodes rather than a faithful average of every minute.","explanation":"Peak-and-end research shows that retrospective evaluation can overweight the most intense point and the ending while underweighting duration. The Heaths turn this into a design question: where are the transitions, milestones, and difficult pits that will carry disproportionate meaning?","representative_example":"A school turns college acceptance from a private administrative event into Senior Signing Day, giving graduates recognition and younger pupils a visible future.","why_it_matters":"Resources can be concentrated where attention, memory, and identity are most likely to change rather than spread evenly across forgettable routine.","caveat":"The classic result is strongest for short laboratory and medical experiences, particularly aversive ones. Long experiences, repeated exposure, average quality, and later consequences still matter.","source_ids":["chapter-one","peak-end-paper","publisher-book"],"basis":"synthesis"},
+    {"id":"moments-that-call","title":"Mark transitions, milestones, and pits","claim":"Beginnings, endings, thresholds, achievements, and foreseeable hardship are natural opportunities for meaning.","explanation":"Transitions make identity and expectations unusually open; milestones show progress; pits demand support or a humane ending. Thinking in moments means noticing these points before designing a spectacular surprise. A first day, promotion, diagnosis, retirement, failed project, or recovery can receive more care than an ordinary date.","representative_example":"A thoughtful first day can replace forms and confusion with a named welcome, useful orientation, personal introductions, and a connection to purpose.","why_it_matters":"Many high-impact moments are predictable, so neglect is a design choice rather than bad luck.","caveat":"A ceremony cannot repair unsafe conditions, poor service, inadequate staffing, or material harm. Fill serious pits before decorating peaks.","source_ids":["wired-interview","chapter-one","family-guide"],"basis":"synthesis"},
+    {"id":"elevation","title":"Elevation: raise the experience above routine","claim":"Positive peaks often combine sensory appeal, higher stakes, and a break from the expected script.","explanation":"Boosting sensory qualities makes an event feel distinct. Raising stakes introduces consequence, visibility, or challenge. Breaking the script provides strategic surprise. Not every ingredient is necessary, and elevation need not be expensive; a new setting, unexpected generosity, or public performance can be enough.","representative_example":"The Magic Castle Hotel became memorable less through luxury than through a red phone by the pool that summoned free ice lollies delivered on a silver tray.","why_it_matters":"A modest, well-placed peak can distinguish a service, lesson, family day, or team ritual more than uniform marginal improvement.","caveat":"Novelty fades when repeated, forced fun can repel people, and surprise is unsafe where predictability, disability access, trauma awareness, or informed consent matters.","source_ids":["publisher-book","chapter-one","family-guide","publishers-weekly"],"basis":"synthesis"},
+    {"id":"insight","title":"Insight: let people encounter the truth","claim":"A compressed, vivid discovery can change understanding more effectively than another abstract explanation.","explanation":"To help someone trip over the truth, clarify the insight, compress it into an experience, and let the audience discover it. To stretch for self-insight, enter an unfamiliar task with a real risk of failure. A useful mentor combines high standards, assurance that the person can meet them, and direction or support.","representative_example":"In community-led sanitation work, mapping contamination and confronting its route into food makes an invisible health problem personally undeniable.","why_it_matters":"Discovery can supply emotion and ownership that information alone lacks.","caveat":"Engineered disgust, shame, exposure, or failure can humiliate and coerce. Insight should preserve dignity, allow refusal, and be followed by feasible support.","source_ids":["publisher-book","google-books","wired-interview","publishers-weekly"],"basis":"synthesis"},
+    {"id":"pride","title":"Pride: recognise, multiply milestones, and rehearse courage","claim":"People gain motivation and identity when progress is visible, recognition is personal, and brave action has been practised before it is needed.","explanation":"Recognition should be specific, timely, and grounded in a real contribution. Long goals become more motivating when divided into meaningful levels that create frequent finish lines. Courage is strengthened through advance commitment, rehearsal, and the example of others who act first.","representative_example":"Couch to Five K turns the vague instruction to run more into a sequence of reachable stages, each supplying evidence of growing capability.","why_it_matters":"Pride converts an invisible process into a story of competence and gives people reasons to continue.","caveat":"Awards can become controlling, competitive, or hollow. Milestones should reflect genuine progress and must not replace pay, safety, opportunity, or honest feedback.","source_ids":["publisher-book","google-books","family-guide","goodreads-reception"],"basis":"synthesis"},
+    {"id":"connection","title":"Connection: share meaning and deepen reciprocal ties","claim":"Moments become more powerful when people face meaningful activity together and respond attentively to increasing mutual disclosure.","explanation":"Groups connect through shared purpose, coordinated attention, and sometimes shared effort or voluntary struggle. Pairs deepen ties through responsiveness: understanding what is disclosed, validating it, and showing care. Research on structured escalating questions demonstrates that reciprocal disclosure can generate felt closeness under controlled conditions.","representative_example":"Two strangers answering increasingly personal questions for forty-five minutes can report greater closeness than pairs having ordinary small talk.","why_it_matters":"Belonging and witnessed experience often make a moment matter beyond its novelty.","caveat":"The questions do not manufacture love or durable friendship. Forced vulnerability, artificial hardship, or employer-controlled intimacy can violate boundaries and power relationships.","source_ids":["closeness-paper","publisher-book","family-guide","publishers-weekly"],"basis":"synthesis"},
+    {"id":"design-ethically","title":"Design for meaning, not manipulation","claim":"A created moment succeeds when it serves the participant's needs and values, not merely the designer's metric.","explanation":"The framework can humanise onboarding, education, care, recognition, and family rituals. It can also be used to manufacture loyalty, hide mediocre baseline service, or extract emotional labour. Authenticity does not require spontaneity—a planned wedding can be sincere—but it does require truthful purpose, proportionality, agency, and follow-through.","representative_example":"A personal retirement tribute can be carefully planned and fully genuine; an employer's staged celebration is hollow if it substitutes for fair treatment.","why_it_matters":"The same techniques that create delight can also influence people at unusually receptive moments.","caveat":"The book raises this ethical problem only indirectly and gives no full consent, power, or evaluation framework.","source_ids":["publishers-weekly","goodreads-reception","wired-interview","critical-care-review"],"basis":"inference"}
   ],
-  "book_map": [
-    {
-      "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
-      "basis": "synthesis"
-    }
+  "book_map":[
+    {"order":1,"title":"Chapters 1–2: Defining and finding moments","purpose":"Introduces uneven remembered experience, the four elements, and the moments that deserve design.","summary":"Senior Signing Day, the peak-end rule, the reminiscence bump, transitions, milestones, and pits establish why a small part of an experience can carry exceptional weight.","idea_ids":["think-in-moments","moments-that-call"],"source_ids":["chapter-one","google-books","reminiscence-review"],"basis":"synthesis"},
+    {"order":2,"title":"Chapters 3–4: Elevation","purpose":"Shows how to make a selected positive moment rise above routine.","summary":"Sensory appeal, higher stakes, and strategic surprise create peaks. The section contrasts baseline pothole repair with selective investment in experiences people will retell.","idea_ids":["elevation","design-ethically"],"source_ids":["google-books","publisher-book","family-guide"],"basis":"synthesis"},
+    {"order":3,"title":"Chapters 5–6: Insight","purpose":"Turns explanation and risk into discoveries about the world or oneself.","summary":"A designer can compress an uncomfortable truth into something audiences discover, while mentors can create stretching assignments supported by demanding confidence and direction.","idea_ids":["insight","design-ethically"],"source_ids":["google-books","publisher-book"],"basis":"synthesis"},
+    {"order":4,"title":"Chapters 7–9: Pride","purpose":"Makes achievement visible and courageous action more likely.","summary":"Specific recognition, multiplied milestones, rehearsal, commitment, and social example provide a practical architecture for competence and courage.","idea_ids":["pride","moments-that-call"],"source_ids":["google-books","publisher-book","family-guide"],"basis":"synthesis"},
+    {"order":5,"title":"Chapters 10–12: Connection and making moments matter","purpose":"Explains shared meaning, reciprocal vulnerability, and the opportunity to act now.","summary":"Groups bond around synchronised purposeful activity; relationships deepen through responsive mutual disclosure. The final chapter asks readers to improve one foreseeable moment rather than admire the framework abstractly.","idea_ids":["connection","design-ethically"],"source_ids":["google-books","closeness-paper","publisher-book"],"basis":"synthesis"}
   ],
-  "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
-    "basis": "synthesis"
-  },
-  "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+  "reading_experience":{"structure":"A short foundation followed by four named parts, each split into two or three techniques and ending with a recap and an application clinic.","voice":"Warm, optimistic, brisk, and story-led, with the polish of a business-school case and a strong preference for memorable labels.","pace":"Fast and engaging, although the steady alternation of inspiring case, research fragment, and lesson becomes predictable.","evidence_style":"Research findings are combined with reported cases and interviews. The studies support components; the successful cases illustrate possibilities; neither validates EPIC as one complete causal model.","example_style":"Schools, hotels, health services, technology teams, families, mentors, ceremonies, social movements, and relationships make applications unusually broad but skew towards notable successes.","repetition":"Moderate. The four elements are easy to remember and each section reinforces them; a fifteen-minute version retains most decision value.","prerequisites":"None. The reader benefits from having a specific transition, milestone, pit, service journey, gathering, or relationship in mind.","source_ids":["kirkus-review","publishers-weekly","chapter-one","goodreads-reception"],"basis":"synthesis"},
+  "assessment":{
+    "rating":{"rubric_version":1,"score":7.2,"confidence":"medium","summary":"The four-element framework is clear, distinctive enough, and highly usable, but supporting studies are narrower than the applied claims, selected success stories obscure base rates and costs, and ethics, baseline quality, culture, and power are not developed enough.","dimensions":[
+      {"id":"explanatory-power","score":8.0,"rationale":"Elevation, insight, pride, and connection organise a wide range of memorable experiences into an immediately intelligible design vocabulary.","source_ids":["chapter-one","publisher-book","kirkus-review"]},
+      {"id":"evidence-and-reasoning","score":6.5,"rationale":"Peak-end, autobiographical-memory, and disclosure research are real, but the book combines narrow studies with selected cases and extends them to outcomes the framework has not been tested to cause.","source_ids":["peak-end-paper","reminiscence-review","closeness-paper","publishers-weekly"]},
+      {"id":"insight-value","score":7.0,"rationale":"None of celebration, surprise, recognition, insight, or connection is new, but treating transitions and peaks as designable and combining the four elements produces a useful perspective.","source_ids":["chapter-one","family-guide","kirkus-review"]},
+      {"id":"practical-utility","score":8.0,"rationale":"Readers can identify a moment, choose relevant elements, and apply specific tools such as breaking the script, multiplying milestones, recognition, stretching, and reciprocal questions.","source_ids":["family-guide","wired-interview","critical-care-review"]},
+      {"id":"completeness-and-calibration","score":6.0,"rationale":"The book acknowledges pits and trauma but underdevelops consent, authenticity, cultural response, power, adverse effects, labour, baseline quality, and measurement after the emotional peak.","source_ids":["chapter-one","publishers-weekly","goodreads-reception"]},
+      {"id":"information-efficiency","score":7.5,"rationale":"The framework and sub-techniques are memorable and well organised, though 320 pages of cases and clinics can be compressed substantially without losing the decision logic.","source_ids":["google-books","kirkus-review","goodreads-reception"]}
+    ],"basis":"inference"},
+    "meaning":{"text":"Lives and institutions are not experienced only as averages. A small number of beginnings, endings, discoveries, achievements, hardships, and shared rituals become part of identity. Paying attention to them is a form of care, provided the ordinary conditions surrounding them remain sound and the designed meaning belongs to the participant rather than being imposed by the organiser.","source_ids":["chapter-one","reminiscence-review","family-guide","publishers-weekly"],"basis":"synthesis"},
+    "lessons":[
+      {"text":"Before inventing a surprise, map the transitions, milestones, and pits that already deserve attention.","source_ids":["wired-interview","chapter-one"],"basis":"synthesis"},
+      {"text":"Create a peak with one or two well-chosen ingredients—sensory distinction, higher stakes, or a break in the expected script—rather than spending evenly everywhere.","source_ids":["publisher-book","family-guide"],"basis":"synthesis"},
+      {"text":"Make progress visible through specific recognition and meaningful intermediate finish lines.","source_ids":["publisher-book","google-books"],"basis":"synthesis"},
+      {"text":"Let people discover an important truth when safe, but do not confuse humiliation or unsupported failure with insight.","source_ids":["publisher-book","publishers-weekly"],"basis":"synthesis"},
+      {"text":"Build connection through shared purpose, responsiveness, and voluntary reciprocal disclosure rather than forced vulnerability.","source_ids":["closeness-paper","publisher-book"],"basis":"synthesis"},
+      {"text":"Judge a designed moment by what it helps the participant understand, do, or remember later—not by applause during the event.","source_ids":["publishers-weekly","critical-care-review"],"basis":"inference"}
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
-      "basis": "synthesis"
-    },
-    "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
-      "basis": "synthesis"
-    },
-    "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
-      "basis": "synthesis"
-    },
-    "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
-      "basis": "synthesis"
-    },
-    "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
-      "basis": "inference"
-    }
+    "importance":{"text":"The book shifts experience design from smoothing every minute towards identifying the moments that carry meaning. That is useful in education, care, service, work, and family life. It also creates a necessary ethical question: when attention and memory can be shaped, designers must protect agency and substance instead of using peaks to disguise an inadequate whole.","source_ids":["wired-interview","critical-care-review","publishers-weekly"],"basis":"synthesis"},
+    "author_and_purpose":{"text":"Chip Heath is a Stanford organisational-behaviour professor emeritus with a psychology doctorate and research on idea transmission and decisions. Dan Heath is a former Harvard case writer, educational publisher, and Duke social-entrepreneurship fellow. They wrote the book to make research and reported examples useful to people shaping experiences. Their complementary strength is memorable applied synthesis; their case-led method is weaker at estimating base rates, failures, and causal effects.","source_ids":["publisher-book","kirkus-review","publishers-weekly"],"basis":"synthesis"},
+    "evidence_quality":{"rating":"mixed","strengths":["The opening memory claims are anchored in recognised peak-end and duration-neglect experiments.","The reminiscence bump is a robust autobiographical-memory pattern, although its timing depends on retrieval cues.","Structured reciprocal disclosure has experimental support for increasing felt closeness in a controlled interaction.","The four-part organisation turns scattered findings into specific, testable design prompts.","Cases span education, health, service, organisations, families, and relationships rather than one narrow setting."],"weaknesses":["The four elements were inferred from selected moments rather than validated as an exhaustive or predictive taxonomy.","Successful cases are selected after the outcome and rarely reveal base rates, comparable failures, costs, or durability.","Peak-end findings from short aversive experiences are extended to long positive experiences and organisational outcomes.","The book often moves from a memorable story to claims about engagement, loyalty, motivation, or change without controlled evidence.","Connection research establishes temporary felt closeness, not friendship, love, trustworthiness, or durable safety.","Consent, cultural variation, accessibility, trauma, hierarchy, manipulation, and emotional labour receive inadequate treatment."],"source_ids":["peak-end-paper","reminiscence-review","closeness-paper","publishers-weekly","goodreads-reception"],"basis":"synthesis"},
+    "reception":{"summary":"Reception is strongly positive about accessibility, optimism, cases, and immediate applicability. Professional criticism centres on the authenticity of engineered emotion and a corporate bias, while some readers question feasibility, repetition, and whether peaks are being created through unrecognised employee effort.","praise":["The four elements and their sub-techniques are easy to recall and use.","Examples make abstract psychology concrete across several domains.","Clinics help readers move from admiration to design.","The book notices overlooked first days, milestones, retirements, and recoveries.","Practitioners in care and education find the framework relevant to humane interactions."],"criticism":["Staged experiences may feel manipulative or inauthentic when their commercial purpose is hidden.","Corporate cases receive more weight than ordinary personal constraints.","Exceptional service sometimes depends on extra staff labour or cannot scale.","The framework can encourage spectacular peaks while ordinary quality remains weak.","The science does not validate all four elements as one universal formula."],"source_ids":["kirkus-review","publishers-weekly","critical-care-review","goodreads-reception"],"basis":"synthesis"},
+    "audience":{"best_for":["People responsible for onboarding, teaching, patient or customer journeys, ceremonies, retreats, workshops, and recognition","Managers willing to improve material conditions as well as symbolic moments","Families and friends designing transitions, celebrations, traditions, or shared challenges","Readers who want practical prompts and will test them rather than treat EPIC as a law"],"not_for":["Anyone seeking a technical account of episodic memory, emotion, motivation, or relationship science","Leaders looking for theatre that substitutes for pay, staffing, safety, access, or competent service","People designing for trauma, disability, clinical care, or unequal relationships without specialist and participant input","Readers already fluent in experience design who only need the four-element checklist","People uncomfortable with a predominantly upbeat collection of successful cases"],"topics":["Experience design","Memory","Peak-end rule","Transitions","Milestones","Elevation","Insight","Recognition","Courage","Connection","Reciprocal disclosure","Shared purpose","Service","Education","Leadership","Ritual"],"source_ids":["publisher-book","critical-care-review","wired-interview","publishers-weekly"],"basis":"synthesis"},
+    "scope":{"is_not":["A proven universal formula for memorable or transformative experiences","A substitute for reliable baseline service, fair work, safety, access, or clinical care","A trauma-treatment manual","Evidence that a planned moment produces lasting behaviour, loyalty, love, or wellbeing","A neutral guide to persuasion without power or ethical consequences"],"omissions":["A consent and safeguarding process for surprise, disclosure, shame, challenge, and public recognition","Methods for measuring delayed benefit, harm, cost, and durability","Cultural and individual differences in desired attention, ceremony, novelty, and disclosure","Failure cases and base rates for the featured interventions","Labour analysis showing who creates the magic and whether they are supported or paid"],"missing_or_weak":["Validation that elevation, insight, pride, and connection are exhaustive or reliably predictive","Causal evidence for most organisational loyalty, engagement, retention, and performance claims","Clear rules for when to fix a pothole before building a peak","Protection against recognition becoming surveillance, competition, or control","Distinction between a remembered experience and an objectively good total experience"],"dated_or_contested":["Peak-end effects vary with experience type and time scale; endings may matter less across longer periods.","The reminiscence bump is robust but its age range and mechanism vary with cue and memory type.","The popular description of thirty-six questions as creating love overstates research on temporary interpersonal closeness.","Commercial and workplace experience design has advanced since 2017, especially in accessibility, trauma-informed practice, and employee experience."],"source_ids":["peak-end-paper","reminiscence-review","closeness-paper","publishers-weekly","goodreads-reception"],"basis":"synthesis"},
+    "decision":{"read_if":"Read it if you shape other people's journeys and want a lively set of cases that will help you notice neglected transitions, peaks, milestones, recognition, disclosure, and shared purpose.","summary_is_enough_if":"The fifteen-minute version is enough if you need the full framework, sub-techniques, evidence boundaries, and an ethical design sequence without dozens of motivational cases.","skip_if":"Skip it if you need rigorous causal evidence, trauma-informed or accessible design guidance, or already know to create peaks, mark progress, recognise people, and build shared meaning.","format_advice":"Audio suits the stories and warm prose. Print or ebook is better for the clinics and for mapping a specific experience against transitions, pits, and the four elements.","source_ids":["kirkus-review","publishers-weekly","goodreads-reception"],"basis":"inference"}
   },
-  "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
-  },
-  "workflow": {
-    "status": "stub",
-    "reviewed_against_full_book": false,
-    "review_notes": ""
-  }
+  "retention":{"recall_prompts":["What are the four elements of a defining moment?","Why does the peak-end rule not justify neglecting average quality?","Which transitions, milestones, and pits naturally call for design?","How do tripping over the truth and stretching for insight differ?","When does a planned moment become manipulative rather than caring?"],"application_prompts":["Choose one foreseeable transition and ask which single element would best serve the participant.","Identify one pothole that must be fixed before spending on a peak.","Turn one long goal into meaningful intermediate milestones with specific recognition.","Redesign one disclosure or challenge so participation is voluntary, safe, and supported.","Define what useful change should remain one week after a designed moment."]},
+  "workflow":{"status":"researched-partial","reviewed_against_full_book":false,"review_notes":"The adversarial pass separated component research from the unvalidated four-element taxonomy, distinguished remembered peaks from total welfare, tested success stories for selection and scaling, and added consent, dignity, accessibility, cultural variation, labour, material conditions, and delayed outcomes.","quality_review":{"status":"pending","reviewed_at":null,"checks":{"identity_and_metadata":true,"content_fidelity":true,"claim_support":true,"counterevidence":true,"citation_entailment":true,"product_fit":true,"plain_language":true,"audio_pronunciation":false},"notes":["Verified both authors, full title, 2017 publication, hardcover ISBN, length, and all twelve chapters.","Checked peak-end, duration neglect, reminiscence bump, and reciprocal disclosure against primary or systematic evidence.","Kept the four-element framework as author synthesis rather than a validated scientific taxonomy.","Distinguished temporary closeness from friendship or love and remembered evaluation from objective total experience.","Tested surprise, insight, recognition, courage, and shared struggle against consent, hierarchy, humiliation, accessibility, trauma, culture, and labour.","Applied the configured content-only rubric; author identity, sales, acclaim, and reader rating did not affect 7.2."]}}
 }

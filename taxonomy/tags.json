@@ -422,6 +422,27 @@
       "label": "Work",
       "description": "Paid or purposeful activity, including its design, demands, outputs, conditions, and meaning.",
       "aliases": ["knowledge-work"]
+    },
+    {
+      "id": "experience-design",
+      "kind": "topic",
+      "label": "Experience design",
+      "description": "Deliberately shaping journeys, interactions, environments, services, or events around people's needs and responses.",
+      "aliases": []
+    },
+    {
+      "id": "memory",
+      "kind": "topic",
+      "label": "Memory",
+      "description": "How information and experience are encoded, retained, reconstructed, recalled, and used in identity or judgment.",
+      "aliases": []
+    },
+    {
+      "id": "organisational-behaviour",
+      "kind": "topic",
+      "label": "Organisational behaviour",
+      "description": "How individuals, groups, structures, incentives, and culture shape behaviour inside organisations.",
+      "aliases": ["organizational-behavior", "organizational-behaviour"]
     }
   ]
 }

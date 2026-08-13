@@ -63,7 +63,7 @@
     {
       "book_id": "the-power-of-moments-heath",
       "priority": 9,
-      "status": "ready",
+      "status": "in-progress",
       "source": "user",
       "added_at": "2026-08-13",
       "notes": "Co-authored with Dan Heath; add both author profiles."
@@ -71,7 +71,7 @@
     {
       "book_id": "unreasonable-hospitality-guidara",
       "priority": 10,
-      "status": "ready",
+      "status": "in-progress",
       "source": "user",
       "added_at": "2026-08-13",
       "notes": "Request spelt the surname 'Guidera'; correct spelling is Guidara."
