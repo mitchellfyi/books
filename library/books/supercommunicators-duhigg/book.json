@@ -3,29 +3,226 @@
   "schema_version": 1,
   "id": "supercommunicators-duhigg",
   "type": "book",
-  "title": "Supercommunicators",
-  "alternate_titles": [],
-  "author_ids": ["charles-duhigg"],
+  "title": "Supercommunicators: How to Unlock the Secret Language of Connection",
+  "alternate_titles": [
+    "Supercommunicators"
+  ],
+  "author_ids": [
+    "charles-duhigg"
+  ],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2024",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US first edition",
+        "publisher": "Random House",
+        "publication_date": "2024-02-20",
+        "isbn_10": "0593243919",
+        "isbn_13": "9780593243916",
+        "format": "Hardcover",
+        "pages": 320
+      },
+      {
+        "label": "US trade paperback",
+        "publisher": "Random House Trade Paperbacks",
+        "publication_date": "2025-09-30",
+        "isbn_10": "0593243927",
+        "isbn_13": "9780593243923",
+        "format": "Paperback",
+        "pages": 320
+      }
+    ],
+    "contents": [
+      "The three conversations: practical (What's this really about?), emotional (How do we feel?), social (Who are we?)",
+      "The matching principle: connection requires recognising and joining the conversation actually happening",
+      "Learning conversations and the techniques: looping for understanding, deep questions, proving you are listening",
+      "Emotional conversations: vulnerability, reciprocity, and the laughter studies",
+      "Identity conversations: who-are-we discussions, hard talks about race and belonging at Netflix",
+      "Applied cases: Jim Lawler's CIA recruitment of 'Yasmin', a deadlocked jury, The Big Bang Theory writers' room, vaccine-hesitancy doctors, gun-control dialogues",
+      "Online communication: politeness, hedges, gratitude, and not criticising in public"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "communication",
+      "empathy",
+      "non-fiction",
+      "psychology",
+      "relationships",
+      "self-help"
+    ],
+    "audiences": [
+      "Managers and team leads who run hard conversations",
+      "Couples and families with recurring conversational stalemates",
+      "Negotiators, doctors, and anyone who must connect across disagreement",
+      "Readers of Duhigg's earlier behavioural books"
+    ],
+    "formats_available": [
+      "Hardcover",
+      "Paperback",
+      "Ebook",
+      "Audiobook"
+    ]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "prh-supercommunicators",
+        "title": "Supercommunicators by Charles Duhigg",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/677212/supercommunicators-by-charles-duhigg/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Edition facts (Random House, 2024-02-20 hardcover; 2025-09-30 paperback, ISBN 9780593243923, 320pp), the three-conversations framework, the matching principle, and the headline case studies: CIA recruitment, jury deliberation, surgeon and patients, The Big Bang Theory writers' room.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher copy."
+      },
+      {
+        "id": "openlibrary-supercommunicators",
+        "title": "Supercommunicators (edition record)",
+        "author_or_publisher": "Open Library",
+        "url": "https://openlibrary.org/books/OL50717277M/Supercommunicators",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Hardcover bibliographic record: Random House, 2024, ISBN 9780593243916.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Catalogue metadata only."
+      },
+      {
+        "id": "kirkus-supercommunicators",
+        "title": "Supercommunicators (review)",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/charles-duhigg/supercommunicators/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A professional trade review: praises the three-conversations framework, the empathetic-listening starting point, and the practical focus; verdict that Duhigg 'unpacks the essential tools for effective, positive conversations'; no star.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Brief trade review."
+      },
+      {
+        "id": "ssir-supercommunicators",
+        "title": "Supercommunicators by Charles Duhigg (review)",
+        "author_or_publisher": "Ayesha Anna Ninan, Stanford Social Innovation Review",
+        "url": "https://ssir.org/books/reviews/entry/supercommunicators-charles-duhigg-review",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "An independent critical review: the advice is 'rather obvious', the framework lacks groundbreaking insight, ethics of persuasive skill go unexamined, online-discourse advice is simplistic about harassment, and the tools thin out at societal scale.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Single reviewer; social-innovation lens."
+      },
+      {
+        "id": "shelf-reflection-supercommunicators",
+        "title": "Supercommunicators — Book Review",
+        "author_or_publisher": "Shelf Reflection",
+        "url": "https://www.shelfreflection.com/blog/supercommunicators",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Detailed content walkthrough: looping for understanding, deep questions that convert facts to values, the four online rules (politeness, less sarcasm, more gratitude and hedges, no public criticism), and the case-study roster including Netflix, NASA, gun-control dialogues, and vaccine conversations.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Blog review; used for content structure, with a faith-based editorial slant on some judgements."
+      },
+      {
+        "id": "author-site-supercommunicators",
+        "title": "Supercommunicators: The Power of Connection",
+        "author_or_publisher": "charlesduhigg.com",
+        "url": "https://charlesduhigg.com/supercommunicators/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "The author's own framing: three conversations, the matching principle, and 'with the right tools, we can connect with anyone'.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Marketing copy."
+      },
+      {
+        "id": "goodreads-supercommunicators",
+        "title": "Supercommunicators: How to Unlock the Secret Language of Connection",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/157981748-supercommunicators",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Large, broadly positive reader reception; recurring notes that the material overlaps active-listening classics and that stories pad the framework.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      },
+      {
+        "id": "supersummary-supercommunicators",
+        "title": "Supercommunicators Prologue Summary & Analysis",
+        "author_or_publisher": "SuperSummary",
+        "url": "https://www.supersummary.com/supercommunicators/prologue-summary/",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Prologue detail: FBI negotiator Felix Sigala as the opening case (including the barricaded man with a room full of snakes), and the framing of supercommunicators as ordinary people running learnable procedures.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Study-guide summary, not the text itself."
+      },
+      {
+        "id": "prh-teachers-guide",
+        "title": "A Guide for Teachers and Students: Supercommunicators",
+        "author_or_publisher": "Penguin Random House (official companion PDF)",
+        "url": "https://assetbucketpublic.7169.prh.com/9780/593/243/916/sales-assets/9780593243916_Supercommunicators%20-%20A%20Guide%20for%20Teachers%20and%20Students.pdf",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Official companion confirming the book's structure, the named cases (Jim Lawler's CIA recruitment of 'Yasmin', the jury, The Big Bang Theory writers' room, Netflix), and the learning-conversation techniques.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Educational marketing asset."
+      }
+    ],
+    "citations": {
+      "/title": [
+        "prh-supercommunicators",
+        "openlibrary-supercommunicators"
+      ],
+      "/author_ids": [
+        "prh-supercommunicators"
+      ],
+      "/bibliography/first_published": [
+        "prh-supercommunicators",
+        "openlibrary-supercommunicators"
+      ],
+      "/bibliography/original_language": [
+        "openlibrary-supercommunicators"
+      ],
+      "/bibliography/editions/0": [
+        "openlibrary-supercommunicators",
+        "prh-supercommunicators"
+      ],
+      "/bibliography/editions/1": [
+        "prh-supercommunicators"
+      ],
+      "/bibliography/contents": [
+        "prh-supercommunicators",
+        "shelf-reflection-supercommunicators",
+        "author-site-supercommunicators",
+        "prh-teachers-guide"
+      ],
+      "/discovery/tag_ids": [
+        "prh-supercommunicators"
+      ],
+      "/discovery/audiences": [
+        "prh-supercommunicators",
+        "goodreads-supercommunicators"
+      ],
+      "/discovery/formats_available": [
+        "prh-supercommunicators"
+      ]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Secondary coverage via two independent professional reviews, the publisher's official companion materials, and detailed chapter summaries including the documented prologue; no full-text read.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: verify the CIA and jury case-study names against a full copy."
+    ]
   }
 }

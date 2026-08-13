@@ -4,108 +4,469 @@
   "book_id": "supercommunicators-duhigg",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "high",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "One framework, three conversation types, a handful of named techniques: the book compresses cleanly because the case studies illustrate rather than argue. Fifteen minutes carries the taxonomy, the techniques, and the critical reception; thirty adds case texture; five can only name the parts."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Pulitzer-winning journalist Charles Duhigg argues that conversations fail when people are unknowingly having different kinds of conversation — practical, emotional, or social — and that connection is a learnable skill of recognising and matching.",
+    "verdict": "A clear, immediately usable field manual for hard conversations built on one genuinely clarifying distinction — worth the short version for almost everyone, though the science is familiar and the hardest cases outrun the toolkit.",
+    "source_ids": [
+      "prh-supercommunicators",
+      "ssir-supercommunicators",
+      "kirkus-supercommunicators"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Every discussion is really one of three conversations: practical (What's this really about?), emotional (How do we feel?), or social (Who are we?). Miscommunication is usually mismatch — one person solving while the other needs feeling heard. Supercommunicators notice which conversation is happening, match it, and use learnable techniques — looping for understanding, deep questions, visible listening — to turn arguments into learning conversations. Case studies run from CIA officer Jim Lawler's recruitment of the asset he called Yasmin, and a deadlocked jury to The Big Bang Theory writers' room, vaccine-hesitant patients, and Netflix's hardest identity discussions.",
+      "source_ids": [
+        "prh-supercommunicators",
+        "shelf-reflection-supercommunicators",
+        "prh-teachers-guide"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Connection is not charisma but categorisation-plus-proof: identify which of three conversations your counterpart is actually having, join that conversation rather than the one you planned, and demonstrate — by looping their words back and asking about values rather than facts — that you are listening to understand rather than to win.",
+      "source_ids": [
+        "prh-supercommunicators",
+        "author-site-supercommunicators"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "three-conversations",
+      "title": "Every discussion is one of three conversations",
+      "claim": "Talk sorts into practical (What's this really about?), emotional (How do we feel?), and social (Who are we?) conversations, each with its own logic and needs.",
+      "explanation": "The practical layer wants plans and decisions; the emotional layer wants feelings acknowledged, not solved; the social layer negotiates identities — who we are to each other and which groups are in the room. The same sentence can belong to any layer, which is why content alone never explains a conversation's success.",
+      "representative_example": "A spouse recounting a terrible workday wants the emotional conversation; the partner who answers with logistics — the practical one — is being helpful and making it worse.",
+      "why_it_matters": "The taxonomy gives ordinary people a diagnostic for why a conversation is failing while it is still failing.",
+      "caveat": "The three-way split is a useful simplification, not a discovery; counselling and negotiation literatures have carved similar joints for decades.",
+      "source_ids": [
+        "prh-supercommunicators",
+        "shelf-reflection-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "matching-principle",
+      "title": "The matching principle",
+      "claim": "Communication succeeds when participants are having the same kind of conversation at the same time, and supercommunicators actively detect and match.",
+      "explanation": "Duhigg reads the connection literature — including studies of conversational alignment and neural synchrony — as showing that understanding is a state two people enter together. Matching does not mean mimicry or agreement; it means joining the layer the other person is in, and negotiating openly about which conversation to have.",
+      "representative_example": "The book's CIA case turns when officer Jim Lawler stops pitching his asset 'Yasmin' with logic and incentives — a practical conversation — and joins her actual conversation, which is emotional: fear, loyalty, and what betrayal would make of her; the recruitment moves only when he offers vulnerability of his own.",
+      "why_it_matters": "It converts 'we're talking past each other' from a complaint into an instruction.",
+      "caveat": "The neuroscience garnish — brains 'syncing' — is presented more confidently than the underlying studies warrant; the practical advice survives without it.",
+      "source_ids": [
+        "prh-supercommunicators",
+        "author-site-supercommunicators",
+        "goodreads-supercommunicators",
+        "prh-teachers-guide"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "looping",
+      "title": "Looping for understanding",
+      "claim": "Listening only works if it is proved: ask, repeat back in your own words, and check whether you got it right.",
+      "explanation": "The three-step loop — ask a question, summarise what you heard, ask if the summary landed — does double duty: it forces genuine attention, and it demonstrates that attention to the speaker, which is what unlocks reciprocity. It is the book's single most transferable technique, drawn from mediation practice.",
+      "representative_example": "In the gun-control dialogues the book follows, trained participants looped opponents' positions until each side could state the other's case to its owner's satisfaction — which did not produce agreement, but produced conversation.",
+      "why_it_matters": "It replaces the vague instruction 'listen better' with a procedure that can be practised today.",
+      "caveat": "Looping done mechanically reads as technique and backfires; the book concedes it works only when the curiosity is real.",
+      "source_ids": [
+        "shelf-reflection-supercommunicators",
+        "prh-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "deep-questions",
+      "title": "Deep questions convert facts into values",
+      "claim": "Questions about beliefs, values, and experiences — rather than facts and logistics — create connection fastest, and almost nobody minds being asked.",
+      "explanation": "Reframe 'Where do you live?' as 'What do you like about where you live?' and the answer must come from values. Duhigg leans on the fast-friends research tradition: escalating self-disclosure, reciprocated, manufactures closeness reliably, and vulnerability is the currency. Deep questions are how strangers skip small talk without trespassing.",
+      "representative_example": "The surgeon in the book's medical case stops presenting treatment options and asks what the patient actually wants his remaining life to look like — and the decision changes.",
+      "why_it_matters": "It is the cheapest technique in the book: one reworded question per conversation.",
+      "caveat": "In low-trust or high-power-gap settings, invited vulnerability can be extraction; the book under-discusses when deep questions are not yours to ask.",
+      "source_ids": [
+        "shelf-reflection-supercommunicators",
+        "prh-supercommunicators",
+        "ssir-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "identity-conversations",
+      "title": "Who-are-we conversations are the hardest and the most avoided",
+      "claim": "Discussions touching race, belief, belonging, or group membership are social-identity conversations, and they fail when treated as practical or purely personal.",
+      "explanation": "Identity threat makes people defend groups rather than examine claims. The book's Netflix case study follows the company's attempt to talk about race and belonging after a public firing: progress came from acknowledging multiple identities in the room, distinguishing intent from impact, and making the conversation's rules explicit before its content.",
+      "representative_example": "Netflix's facilitated dialogues, in the book's telling, worked when participants could speak as themselves rather than as representatives.",
+      "why_it_matters": "It names the conversation type most workplaces are currently failing at.",
+      "caveat": "The critical reception is right that the framework thins at scale: what works in a facilitated room does not obviously survive politics, harassment, or bad faith.",
+      "source_ids": [
+        "shelf-reflection-supercommunicators",
+        "ssir-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "online-rules",
+      "title": "Online talk needs deliberate compensations",
+      "claim": "Text strips the cues that matching depends on, so digital conversation needs explicit politeness, less sarcasm, more gratitude and hedging, and no public criticism.",
+      "explanation": "Without voice and face, receivers systematically read messages as colder and more hostile than intended. The book's four online rules are compensations for the missing channel — hedges and thanks restore the warmth the medium deletes, and criticism moves to private channels because audiences convert disagreement into performance.",
+      "representative_example": "The same sentence that lands as banter in person starts a thread war in a reply-all.",
+      "why_it_matters": "Most hard conversations now happen partly in text; the rules are small and immediately applicable.",
+      "caveat": "Reviewers found this the book's thinnest section — etiquette advice that ignores harassment and coordinated bad faith.",
+      "source_ids": [
+        "shelf-reflection-supercommunicators",
+        "ssir-supercommunicators"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "The Matching Principle",
+      "purpose": "Establish the frame.",
+      "summary": "What supercommunicators do differently, introduced through the CIA recruitment case: detect the conversation, then join it.",
+      "idea_ids": [
+        "matching-principle",
+        "three-conversations"
+      ],
+      "source_ids": [
+        "prh-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Practical Conversations",
+      "purpose": "The what-is-this-about layer.",
+      "summary": "Decision-making talk, The Big Bang Theory writers' room, and how groups negotiate what a discussion is for.",
+      "idea_ids": [
+        "three-conversations"
+      ],
+      "source_ids": [
+        "prh-supercommunicators",
+        "shelf-reflection-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Emotional Conversations",
+      "purpose": "The how-do-we-feel layer.",
+      "summary": "Looping, deep questions, vulnerability reciprocity, and the jury and medical cases where feeling heard changed outcomes.",
+      "idea_ids": [
+        "looping",
+        "deep-questions"
+      ],
+      "source_ids": [
+        "prh-supercommunicators",
+        "shelf-reflection-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Social and Identity Conversations",
+      "purpose": "The who-are-we layer.",
+      "summary": "Identity threat, the Netflix dialogues, vaccine-hesitancy and gun-control conversations across deep disagreement.",
+      "idea_ids": [
+        "identity-conversations"
+      ],
+      "source_ids": [
+        "shelf-reflection-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Communicating in a Digital World",
+      "purpose": "Apply the frame to text.",
+      "summary": "The four online rules and why screens demand deliberate warmth.",
+      "idea_ids": [
+        "online-rules"
+      ],
+      "source_ids": [
+        "shelf-reflection-supercommunicators"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Duhigg's established formula: each chapter braids one extended case story with supporting studies and ends in explicit how-to guidance, plus an appendix-style set of rules.",
+    "voice": "Confident magazine narration — warm, anecdote-first, signposted.",
+    "pace": "Quick; the case stories carry it, and the framework is fully visible by a third of the way through.",
+    "evidence_style": "Journalistic synthesis of published psychology and neuroscience with named-source reporting; studies narrated without effect sizes, and the brain-sync framing runs ahead of its literature.",
+    "example_style": "Long-form case studies — CIA, jury room, sitcom writers' room, Netflix — interleaved with quick lab results.",
+    "repetition": "Moderate: the three-conversations frame is restated chapter by chapter.",
+    "prerequisites": "None.",
+    "source_ids": [
+      "kirkus-supercommunicators",
+      "goodreads-supercommunicators",
+      "prh-supercommunicators"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 6.0,
+      "confidence": "medium",
+      "summary": "Worthwhile: one clarifying taxonomy plus genuinely practisable techniques, delivered efficiently — held back by familiar science presented without quantification, an oversold neural garnish, and a toolkit that visibly thins at the scale of the hardest conversations it invokes.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 6.5,
+          "rationale": "The three-conversations taxonomy plus the matching principle genuinely explains a common failure — helpful people talking past hurting ones — though the joints it carves are refinements of known counselling and negotiation frames.",
+          "source_ids": [
+            "prh-supercommunicators",
+            "ssir-supercommunicators"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.5,
+          "rationale": "Competent journalistic synthesis of real research and reported cases, but studies arrive without effect sizes or boundary conditions, and the neural-synchrony framing is more confident than its literature.",
+          "source_ids": [
+            "ssir-supercommunicators",
+            "goodreads-supercommunicators"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 6.0,
+          "rationale": "For readers new to the listening literature, mismatch-diagnosis and deep questions are durable reframes; for readers of the active-listening classics, the book largely renames known moves.",
+          "source_ids": [
+            "ssir-supercommunicators",
+            "goodreads-supercommunicators"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 7.0,
+          "rationale": "Unusually actionable: looping, question rewording, conversation-type negotiation, and the online rules can all be used the day they are read, and the guidance is concrete enough to practise.",
+          "source_ids": [
+            "kirkus-supercommunicators",
+            "shelf-reflection-supercommunicators"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.0,
+          "rationale": "The framework's limits go mostly unexamined: the ethics of persuasive skill, bad-faith counterparts, power gaps, harassment, and scale are documented blind spots in the critical reception.",
+          "source_ids": [
+            "ssir-supercommunicators"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.0,
+          "rationale": "A tight 320 pages by the genre's standards; the case stories earn their space, though the frame is fully delivered early and the later chapters mostly illustrate it.",
+          "source_ids": [
+            "kirkus-supercommunicators",
+            "goodreads-supercommunicators"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book's underlying claim is egalitarian: connection is not a personality trait but a skill stack, so the colleague everyone confides in is running learnable procedures — noticing conversation types, proving attention, trading vulnerability — and anyone willing to practise can become that person.",
+      "source_ids": [
+        "prh-supercommunicators",
+        "author-site-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Before responding, diagnose: is this a practical, emotional, or social conversation — and which one is the other person having?",
+        "source_ids": [
+          "prh-supercommunicators"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Prove you are listening: ask, summarise their point in your words, and check — do not trust your attention to be visible.",
+        "source_ids": [
+          "shelf-reflection-supercommunicators"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Reword one fact question per conversation into a values question and answer vulnerability with vulnerability.",
+        "source_ids": [
+          "shelf-reflection-supercommunicators"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "In text, compensate for the missing channel: hedge, thank, soften, and never criticise in front of an audience.",
+        "source_ids": [
+          "shelf-reflection-supercommunicators"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The 2024 entry in Duhigg's run of behavioural bestsellers: an NPR best-book-of-the-year selection and business-book-award finalist that put 'what kind of conversation is this?' into managerial vocabulary within a year of publication.",
+      "source_ids": [
+        "goodreads-supercommunicators",
+        "kirkus-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Duhigg — Pulitzer-winning journalist and author of The Power of Habit — frames the book with his own confessed failure: a communicator by trade who kept misfiring at home, answering his wife's emotional conversations with practical solutions. The book is his reported attempt to learn what the people who never misfire are doing.",
+      "source_ids": [
+        "prh-supercommunicators",
+        "author-site-supercommunicators"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Named-source, checkable case reporting in the journalistic register.",
+        "Draws on real and mostly recent psychology of conversation.",
+        "Techniques are falsifiable in the reader's own use."
+      ],
+      "weaknesses": [
+        "No effect sizes or boundary conditions; studies as stories.",
+        "Neural-synchrony framing oversold relative to its literature.",
+        "The critical reception documents unexamined limits: ethics, bad faith, scale."
+      ],
+      "source_ids": [
+        "ssir-supercommunicators",
+        "kirkus-supercommunicators",
+        "goodreads-supercommunicators"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Warm mainstream reception — best-of-year listings, a business-book-award shortlist, praise for actionability — alongside a consistent critical minority verdict: clear and useful, but familiar material without groundbreaking insight, quiet on manipulation, and thin at societal scale.",
+      "praise": [
+        "Kirkus: unpacks the essential tools for effective, positive conversations.",
+        "NPR best-books selection and SABEW award finalist.",
+        "Widely adopted as a practical manual for managers and clinicians."
+      ],
+      "criticism": [
+        "SSIR: advice 'rather obvious'; ethics of persuasion unaddressed.",
+        "Online-communication chapter simplistic about harassment and bad faith.",
+        "Readers of the listening classics find renamed familiar moves."
+      ],
+      "source_ids": [
+        "kirkus-supercommunicators",
+        "ssir-supercommunicators",
+        "goodreads-supercommunicators"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Managers, clinicians, and negotiators who run hard conversations",
+        "Partners stuck in solve-versus-feel loops",
+        "Readers new to the listening literature",
+        "Teams wanting a shared conversational vocabulary"
+      ],
+      "not_for": [
+        "Readers of Nonviolent Communication and the active-listening canon seeking new science",
+        "Anyone needing tools for bad-faith or coercive counterparts",
+        "Readers allergic to case-story scaffolding"
+      ],
+      "topics": [
+        "Conversation and listening",
+        "Emotional intelligence",
+        "Negotiation and mediation",
+        "Workplace communication",
+        "Digital communication"
+      ],
+      "source_ids": [
+        "prh-supercommunicators",
+        "ssir-supercommunicators",
+        "goodreads-supercommunicators"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A negotiation or persuasion playbook — it optimises for connection, not victory",
+        "New research — it synthesises existing psychology",
+        "A guide to hostile or coercive conversations"
+      ],
+      "omissions": [
+        "The ethics of conversational skill used manipulatively",
+        "Power asymmetries: when deep questions extract rather than connect",
+        "Coordinated bad faith online — the rules assume goodwill"
+      ],
+      "missing_or_weak": [
+        "Quantification throughout: effects narrated, never sized",
+        "The digital chapter is etiquette where the problem is adversarial"
+      ],
+      "dated_or_contested": [
+        "The neural-entrainment framing of connection is contested as a pop simplification of a young literature."
+      ],
+      "source_ids": [
+        "ssir-supercommunicators",
+        "goodreads-supercommunicators"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if the case studies are your learning style or you want the techniques rehearsed in narrative depth — it is a fast, well-organised read and the jury, CIA, and Netflix stories are genuinely instructive.",
+      "summary_is_enough_if": "Stop at a summary if you want the framework and the techniques: three conversation types, matching, looping, deep questions, and the online rules transfer completely without the stories.",
+      "skip_if": "Skip it if you know the active-listening literature — Rogers, Nonviolent Communication, Difficult Conversations — or need tools for adversarial rather than goodwill conversations.",
+      "format_advice": "Print or ebook for the technique boxes; the audiobook works but the rules reward flipping back.",
+      "source_ids": [
+        "ssir-supercommunicators",
+        "kirkus-supercommunicators"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What are the three conversations, and what does each need?",
+      "What are the three steps of looping for understanding?",
+      "What turns a fact question into a deep question?"
+    ],
+    "application_prompts": [
+      "In your next disagreement, silently name the conversation type each of you is having before you reply.",
+      "Loop once today: summarise someone's point in your words and ask if you got it right.",
+      "Rewrite one question in tomorrow's meeting from logistics to values."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Built from the publisher record, two independent professional reviews including a substantively critical one, a detailed content walkthrough, and reader reception; case-study details kept at the level the documentation supports.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity verified: Random House hardcover 2024-02-20 (9780593243916, 320pp) and 2025 trade paperback (9780593243923).",
+        "Case-study names verified against the publisher's companion guide and documented summaries: Felix Sigala (FBI, prologue) and Jim Lawler's recruitment of 'Yasmin' (CIA); others kept at the documented level.",
+        "The SSIR critique (obviousness, ethics blind spot, scale limits) is carried into ideas, scope, and the rating's calibration dimension rather than quoted as decoration.",
+        "The neural-synchrony caveat is applied wherever the matching principle is stated.",
+        "Rating scored on content only; bestseller status, prizes, and endorsements excluded per rubric.",
+        "Pronunciation: Duhigg (DOO-hig) verified against the phonemizer; no dictionary entry needed."
+      ]
+    }
   }
 }
