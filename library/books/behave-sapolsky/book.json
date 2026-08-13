@@ -7,24 +7,148 @@
   "alternate_titles": [],
   "author_ids": ["robert-m-sapolsky"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2017-05-02",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US first edition",
+        "publisher": "Penguin Press",
+        "publication_date": "2017-05-02",
+        "isbn_10": "1594205078",
+        "isbn_13": "9781594205071",
+        "format": "Hardcover",
+        "pages": 800
+      },
+      {
+        "label": "US paperback",
+        "publisher": "Penguin Books",
+        "publication_date": "2018-05-01",
+        "isbn_10": "0143110918",
+        "isbn_13": "9780143110910",
+        "format": "Paperback",
+        "pages": 800
+      }
+    ],
+    "contents": [
+      "The backwards clock: a behaviour occurs — then the explanation rewinds through one second before (neurons), seconds to minutes (sensory cues), hours to days (hormones), days to months (neuroplasticity), adolescence, childhood, the womb, genes, culture, and millennia of evolution",
+      "Us versus Them: the fastest, most consequential categorisation the brain makes",
+      "Hierarchy, obedience, and resistance",
+      "Morality: doing the right thing, once you've figured out what that is",
+      "Empathy, sympathy, and their limits",
+      "Metaphor and symbol: the brain's confusion of the sacred and the visceral",
+      "Free will: the biology that leaves ever less room for it",
+      "War and peace: the conditions of our best and worst"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "biology",
+      "human-nature",
+      "neuroscience",
+      "non-fiction",
+      "psychology",
+      "science"
+    ],
+    "audiences": [
+      "Readers who want the full scientific machinery behind behaviour",
+      "Determined readers wanting the broader foundation it grew from",
+      "Students of neuroscience, psychology, and evolution",
+      "Anyone arguing about nature versus nurture who wants the real answer"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-behave",
+        "title": "Behave (book)",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Behave_(book)",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication facts (Penguin Press, 2017-05-02, 800pp, ISBN 9781594205071), the multi-timescale framing, and the documented praise roster (Guardian, Kirkus, Science, Star Tribune).",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; thin on criticism."
+      },
+      {
+        "id": "prh-behave",
+        "title": "Behave by Robert M. Sapolsky",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/311787/behave-by-robert-m-sapolsky/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Paperback edition (9780143110910, 2018-05-01, 800pp), the backwards-in-time structure, and the topic roster: tribalism, hierarchy, morality, free will, war and peace.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher copy."
+      },
+      {
+        "id": "bookmarks-behave",
+        "title": "Reviews of Behave (aggregated)",
+        "author_or_publisher": "Book Marks / Literary Hub",
+        "url": "https://bookmarks.reviews/reviews/all/behave-the-biology-of-humans-at-our-best-and-worst/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The professional reception roster with documented verdicts: Wrangham in the NYT ('a quirky, opinionated and magisterial synthesis'), Barash in the WSJ ('one of the best nonfiction books I've ever read'), Poole in the Guardian ('a miraculous synthesis of scholarly domains'), plus Washington Post, Star Tribune, Kirkus, and PW raves.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Aggregator; quotes are excerpts."
+      },
+      {
+        "id": "spector-skeptical-inquirer",
+        "title": "A Monumental, but Flawed, Effort to Understand Behavior",
+        "author_or_publisher": "Reynold Spector, Skeptical Inquirer",
+        "url": "https://skepticalinquirer.org/2018/07/a-monumental-but-flawed-effort-to-understand-behavior/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A physician-scientist's documented critique: fMRI/PET measure blood flow and are confounded by non-neural processes; the book does not grapple with the replication crisis or effect sizes; animal models over-generalised; specific factual disputes (substance P and depression, adult neurogenesis and the Rakic dispute); moral philosophy and law underweighted; verdict 'deficient — with an implicit point of view... many errors of fact and interpretation'.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "One reviewer, with his own strong views; the neurogenesis dispute remains genuinely unsettled."
+      },
+      {
+        "id": "nature-behave",
+        "title": "Review of Behave (as documented in the book's reception record)",
+        "author_or_publisher": "Nature",
+        "url": "https://en.wikipedia.org/wiki/Behave_(book)",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The science-journal register of the praise: a fast-paced course from a master teacher, exceptional in scale, scope, detail, and writing.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation."
+      },
+      {
+        "id": "goodreads-behave",
+        "title": "Behave: The Biology of Humans at Our Best and Worst",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/31170723-behave",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Large, unusually warm reader reception for an 800-page science book, with recurring notes on density, the demanding appendices, and the free-will chapter's divisiveness.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/title": ["wikipedia-behave", "prh-behave"],
+      "/author_ids": ["wikipedia-behave"],
+      "/bibliography/first_published": ["wikipedia-behave"],
+      "/bibliography/original_language": ["wikipedia-behave"],
+      "/bibliography/editions/0": ["wikipedia-behave"],
+      "/bibliography/editions/1": ["prh-behave"],
+      "/bibliography/contents": ["prh-behave", "wikipedia-behave"],
+      "/discovery/tag_ids": ["prh-behave"],
+      "/discovery/audiences": ["prh-behave", "goodreads-behave"],
+      "/discovery/formats_available": ["prh-behave"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the documented record, the aggregated professional reception, a credentialed specialist critique, and reader reception; structure verified against the publisher's account.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

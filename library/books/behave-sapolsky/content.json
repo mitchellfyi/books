@@ -5,137 +5,468 @@
   "content_type": "non-fiction",
   "editorial": {
     "compression_fit": "medium",
-    "complexity": "medium",
+    "complexity": "high",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "The multi-timescale frame and the marquee findings compress well; the book's actual value — eight hundred pages of mechanism, qualification, and counter-study — does not. Fifteen minutes carries the architecture, the best results, and the reliability report; the depth is the purchase decision."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Stanford neuroscientist Robert Sapolsky explains any human act — the trigger pulled, the hand offered — by rewinding the clock through every cause at once: the neurons one second before, the hormones hours before, the adolescence years before, the culture centuries before, and the evolution behind all of it.",
+    "verdict": "The best-evidenced big book on human behaviour ever written for general readers — a genuinely magisterial synthesis whose honest answer is 'it's complicated' — worth the full climb if you want the machinery, and the fifteen-minute version if you want the architecture and its famous results.",
+    "source_ids": [
+      "bookmarks-behave",
+      "prh-behave",
+      "spector-skeptical-inquirer"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "A behaviour happens — wonderful or awful. Why? Sapolsky's structure is the answer's shape: no single cause exists. The book rewinds through the second before (which neurons fired), the minutes before (what sights and smells primed them), the hours to days before (hormones setting sensitivities), the years before (adolescent frontal cortexes, childhood, the womb), and the centuries to millennia before (culture, genes, evolution) — then applies the whole apparatus to the things that matter: Us-versus-Them thinking, hierarchy and obedience, morality, empathy, metaphor's strange power, free will, and war and peace.",
+      "source_ids": [
+        "prh-behave",
+        "wikipedia-behave"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Every explanation of behaviour at one timescale is silently invoking all the others — the neuron that fired is the hormone milieu is the adolescence is the culture is the evolution — so single-cause accounts (a gene for X, a brain region for Y, a hormone that causes Z) are not simplifications but errors; and the same machinery produces our best and worst, which means context, not character, is usually the lever.",
+      "source_ids": [
+        "prh-behave",
+        "bookmarks-behave"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "backwards-clock",
+      "title": "The backwards clock: all the causes at once",
+      "claim": "Any behaviour is explained at every timescale simultaneously — one second (neural), minutes (sensory), hours (hormonal), years (developmental), centuries (cultural), millennia (evolutionary) — and privileging one level is the field's founding mistake.",
+      "explanation": "The book's architecture is its thesis: each chapter hands its explanation backwards to the next timescale, because the amygdala that fired was sensitised by cortisol, which childhood calibrated, which culture shaped, which evolution built. Disciplinary 'explanations' are one frame of a film.",
+      "representative_example": "The gun fired in one second traces to a threatening face glimpsed subliminally, a stressed morning's hormones, an adolescent frontal cortex, a childhood neighbourhood, and a honour-culture century — all true at once.",
+      "why_it_matters": "It replaces nature-versus-nurture with an actual working model, and it is portable to every argument about why anyone did anything.",
+      "caveat": "The frame's honesty is also its burden: eight hundred pages of 'it depends' demands more from readers than any single-cause story ever does.",
+      "source_ids": [
+        "prh-behave",
+        "bookmarks-behave"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "us-them",
+      "title": "Us/Them is the brain's fastest bad habit",
+      "claim": "The brain sorts faces into in-group and out-group in fractions of a second, before awareness — and the categories are arbitrary, manipulable, and the root of our worst.",
+      "explanation": "Amygdala responses to out-group faces fire in milliseconds; minimal, invented groups instantly produce loyalty and derogation. The redemptive half: the categories are cheap to redraw — cross-cutting identities, individuation, and contact all dissolve Thems into Us-es, which is why the book treats bigotry as biology's default and its override as learnable.",
+      "representative_example": "Recategorisation experiments where a rival team cap changes whose pain your brain registers as mattering.",
+      "why_it_matters": "It grounds prejudice and its remedies in mechanism rather than exhortation.",
+      "caveat": "Some of the underlying social-psychology literature is exactly the corpus the replication crisis hit; the book, per its documented critics, does not engage that reckoning.",
+      "source_ids": [
+        "prh-behave",
+        "spector-skeptical-inquirer"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "context-not-cause",
+      "title": "Hormones and genes modulate; they do not cause",
+      "claim": "Testosterone does not cause aggression, oxytocin is not the love hormone, and there is no gene 'for' anything interesting — each amplifies whatever the context already rewards.",
+      "explanation": "Testosterone turns up whatever behaviour maintains status — generosity, if generosity confers status. Oxytocin deepens bonding with Us and sharpens hostility to Them. Genes are if-then clauses whose meaning depends on environment; heritability numbers collapse across contexts. The book's refrain: 'it depends' is the finding, not the failure.",
+      "representative_example": "The economic game where testosterone made players more generous — because generosity was the status move on offer.",
+      "why_it_matters": "It retires most headline biology ('the X hormone', 'the Y gene') in one stroke.",
+      "caveat": "Modulation stories are harder to falsify than causation stories; the nuance that makes them accurate also makes them slippery.",
+      "source_ids": [
+        "prh-behave",
+        "bookmarks-behave"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "adolescent-cortex",
+      "title": "The frontal cortex is the last thing to grow up",
+      "claim": "The brain's restraint hardware is not fully wired until the mid-twenties, which explains adolescence — the risk, the tribalism, the idealism — and indicts how societies treat the young.",
+      "explanation": "Dopamine systems mature early and roar; the prefrontal cortex, seat of impulse control and long-term weighing, matures last. Adolescents feel more, risk more, and belong harder not from defect but from timetable — and the same late plasticity makes adolescence the moment culture writes deepest.",
+      "representative_example": "Risk-taking that appears only when peers are watching: the audience is the accelerant.",
+      "why_it_matters": "Criminal justice, education, and parenting all turn on this single developmental fact.",
+      "caveat": "The tidy 'brain finishes at twenty-five' meme the chapter spawned overstates a gradual, individual process — a simplification the book itself is more careful about than its readers.",
+      "source_ids": [
+        "prh-behave",
+        "goodreads-behave"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "best-worst-symmetry",
+      "title": "Our best and worst run on the same machinery",
+      "claim": "The title's thesis: the biology of empathy, loyalty, and heroism is the biology of cruelty, tribalism, and atrocity — identical circuits, different contexts.",
+      "explanation": "Oxytocin bonds mothers and troops; the amygdala that fears also protects; the conformity that carries genocide also carries barn-raisings. The book refuses a biology of villains: the worst acts are mostly ordinary machinery in the wrong configuration, which is bleak about monsters and hopeful about levers.",
+      "representative_example": "The same soldier's brain, decorated for heroism and capable of massacre, depending on the week's context.",
+      "why_it_matters": "It moves moral effort from finding bad people to building good contexts.",
+      "caveat": "Critics note the symmetry underweights philosophy's millennia of work on responsibility — mechanism explains, but someone still chose the context.",
+      "source_ids": [
+        "prh-behave",
+        "spector-skeptical-inquirer"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "free-will-shrinks",
+      "title": "Free will, if it exists, lives in ever-shrinking seams",
+      "claim": "Every cause the book documents subtracts from the space where uncaused choice could hide; Sapolsky's provocation is that nothing is left.",
+      "explanation": "The chapter argues that as biology explains more — neurons, hormones, development, genes, culture — the homunculus who 'could have done otherwise' has nowhere to stand. The book stops short of the full argument (Determined, six years later, completes it) but plants the flag: blame and praise are biologically incoherent, though dangerousness still justifies constraint.",
+      "representative_example": "The courtroom thought experiment: every mitigating biological fact is one less thing the defendant chose.",
+      "why_it_matters": "It is the book's most contested and most consequential claim — the one that rewires how readers see punishment.",
+      "caveat": "Philosophers, including sympathetic ones, find the argument philosophically undercooked: compatibilism is dismissed rather than engaged, a documented gap in both this book and its sequel.",
+      "source_ids": [
+        "prh-behave",
+        "goodreads-behave"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "reliability-ledger",
+      "title": "The reliability ledger: superbly cited, imperfectly current",
+      "claim": "Behave is the best-evidenced book in its genre — and a credentialed critique documents real weaknesses: replication-era fragility, imaging caveats, and specific factual disputes.",
+      "explanation": "Unlike its grand-synthesis shelfmates, Behave argues from the primary literature with named studies and counter-studies. The documented critique (a physician-scientist in Skeptical Inquirer): fMRI and PET measure blood flow and admit non-neural confounds; the 2017 social-psychology corpus includes studies that later failed replication, unaddressed; effect sizes are underplayed; animal models over-generalised; and specific claims — substance P blockers for depression, adult neurogenesis — are disputed or wrong.",
+      "representative_example": "The adult-neurogenesis passage: the book takes a side in a live dispute that subsequent evidence has complicated.",
+      "why_it_matters": "Knowing where the book is strong (mechanism, synthesis) and fragile (2017 social psych, imaging inference) is what makes it usable.",
+      "caveat": "The critic has his own strong commitments, and several 'errors' are live scientific disputes rather than settled mistakes.",
+      "source_ids": [
+        "spector-skeptical-inquirer",
+        "bookmarks-behave"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "The Clock Runs Backwards",
+      "purpose": "Build the explanatory machine.",
+      "summary": "From the second before a behaviour (amygdala, frontal cortex, dopamine) back through sensory triggers, hormones, neuroplasticity, adolescence, childhood, the womb, genes, and culture to evolution — each chapter handing its explanation to the next timescale.",
+      "idea_ids": [
+        "backwards-clock",
+        "context-not-cause",
+        "adolescent-cortex"
+      ],
+      "source_ids": [
+        "prh-behave"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Us and Them",
+      "purpose": "Apply the machine to groups.",
+      "summary": "The millisecond sorting of in-group and out-group, its arbitrariness, its manipulability, and the documented routes by which Thems become Us-es.",
+      "idea_ids": [
+        "us-them"
+      ],
+      "source_ids": [
+        "prh-behave"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Hierarchy, Morality, Empathy",
+      "purpose": "Apply it to social life.",
+      "summary": "Status and obedience; moral reasoning as mostly post-hoc; empathy's biology and its limits as a guide to action.",
+      "idea_ids": [
+        "best-worst-symmetry",
+        "context-not-cause"
+      ],
+      "source_ids": [
+        "prh-behave",
+        "wikipedia-behave"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Metaphor, Free Will, War and Peace",
+      "purpose": "Draw the consequences.",
+      "summary": "The brain's confusion of symbol and substance (sacred values, disgust, cleansing); the case against free will; and the conditions under which our best wins — ending with documented reasons for hope.",
+      "idea_ids": [
+        "free-will-shrinks",
+        "best-worst-symmetry"
+      ],
+      "source_ids": [
+        "prh-behave"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "The famous rewinding clock — one second before to a million years before — then thematic applications; two appendices teach the neuroscience and endocrinology needed.",
+    "voice": "Professorial stand-up: dense science delivered with running jokes, footnote asides, and open moral passion.",
+    "pace": "Demanding and long; the first third is a course, the rest its payoff — universally described as worth it and work.",
+    "evidence_style": "Named studies from the primary literature with counter-studies engaged — the genre's high-water mark — though effect sizes and the replication reckoning get less than modern readers need.",
+    "example_style": "Laboratory results braided with primate field stories, history's atrocities and rescues, and courtroom cases.",
+    "repetition": "Deliberate: the timescale frame is re-invoked constantly, which teaches the method and lengthens the book.",
+    "prerequisites": "None formally — the appendices backfill — but appetite for mechanism is essential.",
+    "source_ids": [
+      "bookmarks-behave",
+      "goodreads-behave",
+      "prh-behave"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 0.0,
-      "confidence": "low",
-      "summary": "TODO: give the content-only verdict behind the score.",
+      "score": 6.3,
+      "confidence": "medium",
+      "summary": "Worthwhile and the evidentiary summit of its genre: a genuinely magisterial synthesis whose 'it's complicated' is earned mechanism by mechanism — docked for its 2017 vintage in replication-sensitive fields, documented factual disputes, a philosophically thin free-will chapter, and a density that makes the full climb a real cost.",
       "dimensions": [
-        { "id": "explanatory-power", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "evidence-and-reasoning", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "insight-value", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "practical-utility", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "completeness-and-calibration", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] }
+        {
+          "id": "explanatory-power",
+          "score": 8.0,
+          "rationale": "The multi-timescale architecture is the best explanatory frame in popular behavioural science — it does real work on every applied question the book touches, and it retires single-cause thinking permanently for its readers.",
+          "source_ids": [
+            "prh-behave",
+            "bookmarks-behave"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 6.0,
+          "rationale": "Argued from the primary literature with counter-studies — far above its shelfmates — but a credentialed critique documents the gaps: no reckoning with the replication crisis, imaging caveats unstated, effect sizes underplayed, and specific claims (substance P, neurogenesis) disputed.",
+          "source_ids": [
+            "spector-skeptical-inquirer",
+            "bookmarks-behave"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.5,
+          "rationale": "Context-not-cause, the Us/Them machinery, the adolescent cortex, and the best-worst symmetry are permanent furniture; the book upgrades how readers process every behavioural claim they meet afterwards.",
+          "source_ids": [
+            "bookmarks-behave",
+            "goodreads-behave"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 4.0,
+          "rationale": "Mostly perspective: the contact/recategorisation levers and the closing strategies are usable, but the book optimises understanding, not application.",
+          "source_ids": [
+            "prh-behave",
+            "spector-skeptical-inquirer"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 6.5,
+          "rationale": "Unusually calibrated — hedges, disputes aired, 'it depends' as method — yet documented omissions remain: the replication reckoning, moral philosophy's actual literature, and a free-will chapter that dismisses rather than engages compatibilism.",
+          "source_ids": [
+            "spector-skeptical-inquirer",
+            "goodreads-behave"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 4.5,
+          "rationale": "Eight hundred dense pages plus appendices; the density is honest but real — every reviewer flags the demand, and the frame is fully delivered long before the book ends.",
+          "source_ids": [
+            "goodreads-behave",
+            "bookmarks-behave"
+          ]
+        }
       ],
       "basis": "inference"
     },
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "meaning": {
+      "text": "The book's deepest claim is a moral one delivered as biology: since the same machinery produces saints and monsters, and since every cause traces backward beyond the self, our species' best hope is not better people but better contexts — and its final chapters insist, with evidence, that contexts have been built before and can be again.",
+      "source_ids": [
+        "prh-behave",
+        "bookmarks-behave"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Ban single-cause explanations of behaviour — yours included: ask what the hormones, the development, and the culture were doing before accepting 'that's just who they are'.",
+        "source_ids": [
+          "prh-behave"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Treat Us/Them categories as cheap and redrawable: individuate, find the cross-cutting identity, and watch the biology follow.",
+        "source_ids": [
+          "prh-behave"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Distrust headline biology — 'the aggression hormone', 'the warrior gene' — because modulation, not causation, is almost always the true story.",
+        "source_ids": [
+          "prh-behave"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Read its 2017 social psychology as leads to check, not facts to cite — the replication reckoning arrived after the book.",
+        "source_ids": [
+          "spector-skeptical-inquirer"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The consensus masterwork of popular behavioural science — rave-reviewed across the NYT, WSJ, Guardian, Nature, and Science, a fixture of best-of lists and course syllabuses, and the foundation on which Sapolsky's Determined later built its free-will argument.",
+      "source_ids": [
+        "bookmarks-behave",
+        "wikipedia-behave",
+        "nature-behave"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Sapolsky — Stanford neuroscientist, MacArthur Fellow, and thirty-year veteran of both laboratory neuroscience and Kenyan baboon fieldwork — wrote the book to answer the question his two careers kept posing: where does a behaviour actually come from? The stated purpose is to make single-cause thinking impossible and to locate the levers our best behaviour depends on.",
+      "source_ids": [
+        "prh-behave",
+        "wikipedia-behave"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Argued from named primary studies with counter-studies engaged — the genre's best sourcing.",
+        "Two appendices teach the underlying science rather than waving at it.",
+        "Constant explicit hedging: disputes are usually aired, not hidden."
+      ],
+      "weaknesses": [
+        "A 2017 snapshot of fields the replication crisis then reorganised, unaddressed.",
+        "Documented specific disputes: substance P and depression, adult neurogenesis.",
+        "Imaging inferences stated stronger than fMRI/PET warrant.",
+        "Animal-model generalisation and thin effect-size reporting, per the documented critique."
+      ],
+      "source_ids": [
+        "spector-skeptical-inquirer",
+        "bookmarks-behave"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Near-unanimous rave reception — 'magisterial' recurs across the NYT, WSJ, Washington Post, Guardian, Nature, and Science — with the substantive dissent concentrated in one documented specialist critique and in the free-will chapter's philosophical reception; readers add only that the climb is steep.",
+      "praise": [
+        "Wrangham (NYT): a quirky, opinionated and magisterial synthesis.",
+        "Barash (WSJ): one of the best nonfiction books I've ever read.",
+        "Poole (Guardian): a miraculous synthesis of scholarly domains; Nature and Science equally warm."
+      ],
+      "criticism": [
+        "Spector (Skeptical Inquirer): deficient in method-awareness — imaging caveats, replication, effect sizes — with named factual disputes.",
+        "The free-will chapter dismisses compatibilism rather than engaging it.",
+        "Universal note: the length and density are a real toll."
+      ],
+      "source_ids": [
+        "bookmarks-behave",
+        "spector-skeptical-inquirer",
+        "goodreads-behave"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers who want the actual machinery, not the postcard",
+        "Determined readers wanting the foundation text",
+        "Students entering neuroscience, psychology, or behavioural biology",
+        "Anyone whose nature-versus-nurture arguments deserve better ammunition"
+      ],
+      "not_for": [
+        "Readers wanting a quick framework book — this is a course",
+        "Those needing post-replication-crisis social psychology",
+        "Readers allergic to 'it depends' as a conclusion"
+      ],
+      "topics": [
+        "Neuroscience and hormones",
+        "Us/Them psychology",
+        "Adolescence and development",
+        "Morality and empathy",
+        "Free will",
+        "Violence and cooperation"
+      ],
+      "source_ids": [
+        "prh-behave",
+        "goodreads-behave"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A self-help or applications book — levers appear only at the end",
+        "Current on post-2017 social psychology",
+        "A work of moral philosophy, despite moral stakes on every page"
+      ],
+      "omissions": [
+        "The replication crisis and systematic effect-size reporting",
+        "Philosophy's actual free-will literature beyond a brisk dismissal",
+        "Law, nutrition, and non-Western moral frameworks, per the documented critique"
+      ],
+      "missing_or_weak": [
+        "Named disputes: substance P blockers for depression; adult neurogenesis",
+        "Imaging inference stated with more confidence than the methods carry"
+      ],
+      "dated_or_contested": [
+        "Priming and related 2017-era social psychology results cited in the applied chapters have weakened since; the free-will position remains philosophically contested."
+      ],
+      "source_ids": [
+        "spector-skeptical-inquirer",
+        "goodreads-behave"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you want the mechanism itself — this is the rare synthesis whose depth is the product, the appendices are genuinely teachable, and finishing it upgrades every later encounter with behavioural science; it rewards being read as the course it is.",
+      "summary_is_enough_if": "Stop at a summary if you want the architecture — the backwards clock, context-not-cause, Us/Them, the adolescent cortex — and the reliability report; the frame transfers, and the famous results come with their caveats attached here.",
+      "skip_if": "Skip it if you need applications this month, current social psychology, or brevity at any price — and read Determined instead if the free-will argument is all you came for.",
+      "format_advice": "Print for the appendices, figures, and footnotes; the audiobook works for the voice but fights the density; the paperback's 800 pages travel badly and reward a desk.",
+      "source_ids": [
+        "goodreads-behave",
+        "bookmarks-behave"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "Walk the clock backwards from any behaviour: what explains it at one second, one hour, one decade, one millennium?",
+      "What do testosterone and oxytocin actually do, and why is 'the X hormone' always wrong?",
+      "Which parts of the book aged well (mechanism, frame) and which need checking (2017 social psych, imaging inference)?"
+    ],
+    "application_prompts": [
+      "Take one behaviour you condemned this week and write its multi-timescale explanation before re-judging it.",
+      "Find one Us/Them boundary in your life and try a cross-cutting identity on it.",
+      "Next headline claiming a gene or hormone 'causes' a behaviour: rewrite it as modulation and see what survives."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "",
+    "review_notes": "Built from the publisher's structural account, the aggregated professional reception with named verdicts, a credentialed specialist critique carried as counterevidence, and reader reception.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
-      "notes": []
+      "notes": [
+        "Identity verified: Penguin Press 2017-05-02 hardcover (9781594205071, 800pp) and 2018 Penguin paperback (9780143110910).",
+        "The Spector critique is carried at the claims it addresses (imaging, replication, substance P, neurogenesis) with the honest note that several disputes remain live science rather than settled error.",
+        "The free-will chapter's philosophical thinness is documented via reception rather than asserted.",
+        "Rating scored on content only; the rave roster and best-of lists live in importance/reception.",
+        "Narration reviewed against the product contract: content-first, the reliability ledger integrated.",
+        "Pronunciation: amygdala was mispronounced by the phonemizer (am-ig-DAH-lə) and added to the dictionary from Cambridge; Sapolsky verified acceptable."
+      ]
     }
   }
 }

@@ -193,7 +193,7 @@
     {
       "book_id": "behave-sapolsky",
       "priority": 26,
-      "status": "ready",
+      "status": "in-progress",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Promoted from recommendation stub. Discovered from Determined: the same author's earlier synthesis of the biology of behaviour."

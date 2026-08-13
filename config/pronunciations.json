@@ -339,6 +339,20 @@
       "source_url": "https://www.collinsdictionary.com/us/dictionary/english/atahualpa",
       "verified_at": "2026-08-13",
       "notes": "Collins gives British /ˌætəˈwɑːlpə/ and American /ˌɑtəˈwɑlpə/. The unassisted phonemizer produced 'AT-ə-hyoo-al-pə', which is wrong."
+    },
+    {
+      "term": "amygdala",
+      "aliases": [
+        "amygdalae"
+      ],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "əmˈɪɡdələ",
+        "en-us": "əmˈɪɡdələ"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/amygdala",
+      "verified_at": "2026-08-13",
+      "notes": "Cambridge: /əˈmɪɡ.dəl.ə/ (ə-MIG-də-lə). The unassisted phonemizer produced 'am-ig-DAH-lə' (ˌamɪɡdˈɑːlə) with wrong stress and vowel."
     }
   ]
 }
