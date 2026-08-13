@@ -131,6 +131,14 @@
       "aliases": []
     },
     {
+      "id": "sawyer-robbins",
+      "kind": "author",
+      "name": "Sawyer Robbins",
+      "state": "catalogued",
+      "path": "library/authors/sawyer-robbins/author.json",
+      "aliases": []
+    },
+    {
       "id": "ward-farnsworth",
       "kind": "author",
       "name": "Ward Farnsworth",
@@ -349,9 +357,12 @@
       "state": "catalogued",
       "path": "library/books/the-let-them-theory-robbins/book.json",
       "author_ids": [
-        "mel-robbins"
+        "mel-robbins",
+        "sawyer-robbins"
       ],
-      "aliases": []
+      "aliases": [
+        "The Let Them Theory: A Life-Changing Tool That Millions of People Can't Stop Talking About"
+      ]
     },
     {
       "id": "the-power-of-habit-duhigg",

@@ -2,20 +2,209 @@
   "$schema": "../schemas/tags.schema.json",
   "schema_version": 1,
   "tags": [
-    { "id": "advertising", "kind": "topic", "label": "Advertising", "description": "Paid or designed communication intended to influence attention, perception, or action.", "aliases": [] },
-    { "id": "behavioural-economics", "kind": "topic", "label": "Behavioural economics", "description": "The study of how psychological and contextual factors affect economic decisions.", "aliases": ["behavioral-economics"] },
-    { "id": "behavioural-science", "kind": "topic", "label": "Behavioural science", "description": "Empirical and theoretical study of human behaviour across psychology, economics, and related fields.", "aliases": ["behavioral-science"] },
-    { "id": "business", "kind": "genre", "label": "Business", "description": "Non-fiction about organisations, markets, management, or commercial practice.", "aliases": [] },
-    { "id": "consumer-psychology", "kind": "topic", "label": "Consumer psychology", "description": "How perception, motivation, context, and identity shape consumer choices.", "aliases": [] },
-    { "id": "creativity", "kind": "topic", "label": "Creativity", "description": "Generating and testing original or non-obvious ideas.", "aliases": [] },
-    { "id": "decision-making", "kind": "topic", "label": "Decision-making", "description": "How people or organisations choose among alternatives under constraints and uncertainty.", "aliases": [] },
-    { "id": "innovation", "kind": "topic", "label": "Innovation", "description": "Developing and applying useful new approaches, products, or services.", "aliases": [] },
-    { "id": "marketing", "kind": "topic", "label": "Marketing", "description": "Creating, positioning, communicating, and delivering value to audiences and markets.", "aliases": [] },
-    { "id": "non-fiction", "kind": "genre", "label": "Non-fiction", "description": "Writing presented primarily as factual, explanatory, or argumentative.", "aliases": ["nonfiction"] },
-    { "id": "persuasion", "kind": "topic", "label": "Persuasion", "description": "How communication, context, and signals influence belief or behaviour.", "aliases": [] },
-    { "id": "problem-solving", "kind": "topic", "label": "Problem-solving", "description": "Framing, exploring, testing, and resolving practical or conceptual problems.", "aliases": [] },
-    { "id": "psychophysics", "kind": "topic", "label": "Psychophysics", "description": "Relations between physical stimuli and subjective perception.", "aliases": [] },
-    { "id": "satisficing", "kind": "topic", "label": "Satisficing", "description": "Choosing an adequate option under limited information, time, or cognitive capacity rather than optimising exhaustively.", "aliases": [] },
-    { "id": "signalling", "kind": "topic", "label": "Signalling", "description": "Actions or attributes that communicate otherwise difficult-to-observe qualities or intentions.", "aliases": ["signaling"] }
+    {
+      "id": "acceptance",
+      "kind": "topic",
+      "label": "Acceptance",
+      "description": "Recognising present reality without spending effort denying what has already happened or trying to control what is not controllable.",
+      "aliases": []
+    },
+    {
+      "id": "advertising",
+      "kind": "topic",
+      "label": "Advertising",
+      "description": "Paid or designed communication intended to influence attention, perception, or action.",
+      "aliases": []
+    },
+    {
+      "id": "behavioural-economics",
+      "kind": "topic",
+      "label": "Behavioural economics",
+      "description": "The study of how psychological and contextual factors affect economic decisions.",
+      "aliases": [
+        "behavioral-economics"
+      ]
+    },
+    {
+      "id": "behavioural-science",
+      "kind": "topic",
+      "label": "Behavioural science",
+      "description": "Empirical and theoretical study of human behaviour across psychology, economics, and related fields.",
+      "aliases": [
+        "behavioral-science"
+      ]
+    },
+    {
+      "id": "boundaries",
+      "kind": "topic",
+      "label": "Boundaries",
+      "description": "Limits people set around their participation, treatment, responsibilities, and relationships.",
+      "aliases": []
+    },
+    {
+      "id": "business",
+      "kind": "genre",
+      "label": "Business",
+      "description": "Non-fiction about organisations, markets, management, or commercial practice.",
+      "aliases": []
+    },
+    {
+      "id": "communication",
+      "kind": "topic",
+      "label": "Communication",
+      "description": "How people exchange meaning, needs, information, and emotion.",
+      "aliases": []
+    },
+    {
+      "id": "consumer-psychology",
+      "kind": "topic",
+      "label": "Consumer psychology",
+      "description": "How perception, motivation, context, and identity shape consumer choices.",
+      "aliases": []
+    },
+    {
+      "id": "creativity",
+      "kind": "topic",
+      "label": "Creativity",
+      "description": "Generating and testing original or non-obvious ideas.",
+      "aliases": []
+    },
+    {
+      "id": "decision-making",
+      "kind": "topic",
+      "label": "Decision-making",
+      "description": "How people or organisations choose among alternatives under constraints and uncertainty.",
+      "aliases": []
+    },
+    {
+      "id": "emotional-regulation",
+      "kind": "topic",
+      "label": "Emotional regulation",
+      "description": "Recognising and managing emotional responses without suppressing useful information or acting impulsively.",
+      "aliases": []
+    },
+    {
+      "id": "history",
+      "kind": "topic",
+      "label": "History",
+      "description": "Works that draw their material or argument primarily from historical events and figures.",
+      "aliases": []
+    },
+    {
+      "id": "innovation",
+      "kind": "topic",
+      "label": "Innovation",
+      "description": "Developing and applying useful new approaches, products, or services.",
+      "aliases": []
+    },
+    {
+      "id": "marketing",
+      "kind": "topic",
+      "label": "Marketing",
+      "description": "Creating, positioning, communicating, and delivering value to audiences and markets.",
+      "aliases": []
+    },
+    {
+      "id": "motivation",
+      "kind": "topic",
+      "label": "Motivation",
+      "description": "Processes that initiate, direct, and sustain intentional action or change.",
+      "aliases": []
+    },
+    {
+      "id": "non-fiction",
+      "kind": "genre",
+      "label": "Non-fiction",
+      "description": "Writing presented primarily as factual, explanatory, or argumentative.",
+      "aliases": [
+        "nonfiction"
+      ]
+    },
+    {
+      "id": "personal-development",
+      "kind": "topic",
+      "label": "Personal development",
+      "description": "Deliberate efforts to improve self-understanding, habits, capabilities, or quality of life.",
+      "aliases": []
+    },
+    {
+      "id": "persuasion",
+      "kind": "topic",
+      "label": "Persuasion",
+      "description": "How communication, context, and signals influence belief or behaviour.",
+      "aliases": []
+    },
+    {
+      "id": "power",
+      "kind": "topic",
+      "label": "Power",
+      "description": "Acquiring, keeping, defending, or understanding influence over people and institutions.",
+      "aliases": []
+    },
+    {
+      "id": "problem-solving",
+      "kind": "topic",
+      "label": "Problem-solving",
+      "description": "Framing, exploring, testing, and resolving practical or conceptual problems.",
+      "aliases": []
+    },
+    {
+      "id": "psychology",
+      "kind": "topic",
+      "label": "Psychology",
+      "description": "The study and practical interpretation of mind, emotion, and behaviour.",
+      "aliases": []
+    },
+    {
+      "id": "psychophysics",
+      "kind": "topic",
+      "label": "Psychophysics",
+      "description": "Relations between physical stimuli and subjective perception.",
+      "aliases": []
+    },
+    {
+      "id": "relationships",
+      "kind": "topic",
+      "label": "Relationships",
+      "description": "How people form, maintain, change, and end interpersonal connections.",
+      "aliases": []
+    },
+    {
+      "id": "satisficing",
+      "kind": "topic",
+      "label": "Satisficing",
+      "description": "Choosing an adequate option under limited information, time, or cognitive capacity rather than optimising exhaustively.",
+      "aliases": []
+    },
+    {
+      "id": "self-help",
+      "kind": "genre",
+      "label": "Self-help",
+      "description": "Practical non-fiction intended to help readers change their thinking, behaviour, or circumstances.",
+      "aliases": []
+    },
+    {
+      "id": "signalling",
+      "kind": "topic",
+      "label": "Signalling",
+      "description": "Actions or attributes that communicate otherwise difficult-to-observe qualities or intentions.",
+      "aliases": [
+        "signaling"
+      ]
+    },
+    {
+      "id": "strategy",
+      "kind": "topic",
+      "label": "Strategy",
+      "description": "Planning and manoeuvring toward goals under competition or conflict.",
+      "aliases": []
+    },
+    {
+      "id": "stress",
+      "kind": "topic",
+      "label": "Stress",
+      "description": "Psychological and physiological responses to pressure, uncertainty, demand, or threat.",
+      "aliases": []
+    }
   ]
 }

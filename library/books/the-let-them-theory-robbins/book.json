@@ -4,28 +4,305 @@
   "id": "the-let-them-theory-robbins",
   "type": "book",
   "title": "The Let Them Theory",
-  "alternate_titles": [],
-  "author_ids": ["mel-robbins"],
+  "alternate_titles": [
+    "The Let Them Theory: A Life-Changing Tool That Millions of People Can't Stop Talking About"
+  ],
+  "author_ids": [
+    "mel-robbins",
+    "sawyer-robbins"
+  ],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2024",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US hardcover",
+        "publisher": "Hay House LLC",
+        "publication_date": "2024-12-24",
+        "isbn_10": "1401971369",
+        "isbn_13": "9781401971366",
+        "format": "Hardcover",
+        "pages": 336
+      },
+      {
+        "label": "US ebook",
+        "publisher": "Hay House LLC",
+        "publication_date": "2024-12-24",
+        "isbn_10": null,
+        "isbn_13": "9781401971373",
+        "format": "Ebook",
+        "pages": 257
+      }
+    ],
+    "contents": [
+      "Introduction: My Story",
+      "The Let Them Theory",
+      "1: Stop Wasting Your Life on Things You Can't Control",
+      "2: Getting Started: Let Them + Let Me",
+      "You and the Let Them Theory",
+      "Managing Stress",
+      "3: Shocker: Life Is Stressful",
+      "4: Let Them Stress You Out",
+      "Fearing Other People's Opinions",
+      "5: Let Them Think Bad Thoughts About You",
+      "6: How to Love Difficult People",
+      "Dealing with Other People's Emotional Reactions",
+      "7: When Grown-Ups Throw Tantrums",
+      "8: The Right Decision Often Feels Wrong",
+      "Overcoming Chronic Comparison",
+      "9: Yes, Life Isn't Fair",
+      "10: Let Comparison Be Your Teacher",
+      "Your Relationships and the Let Them Theory",
+      "Mastering Adult Friendship",
+      "11: The Truth No One Told You About Adult Friendship",
+      "12: Why Some Friendships Naturally Fade",
+      "13: How to Create the Best Friendships of Your Life",
+      "Motivating Other People to Change",
+      "14: People Only Change When They Feel Like It",
+      "15: Unlock the Power of Your Influence",
+      "Helping Someone Who Is Struggling",
+      "16: The More You Rescue Them, the More They Sink",
+      "17: How to Provide the Right Kind of Support",
+      "Choosing the Love You Deserve",
+      "18: Let Them Show You Who They Are",
+      "19: How to Take Your Relationship to the Next Level",
+      "20: How Every Ending Is a Beautiful Beginning",
+      "Conclusion: The Let Me Era Is Here",
+      "Appendix: Parenting and Teams"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "acceptance",
+      "boundaries",
+      "communication",
+      "emotional-regulation",
+      "motivation",
+      "non-fiction",
+      "personal-development",
+      "psychology",
+      "relationships",
+      "self-help",
+      "stress"
+    ],
+    "audiences": [
+      "People who spend too much energy managing other adults",
+      "Readers anxious about judgment, rejection, comparison, or conflict",
+      "People navigating changing friendships, difficult relationships, or breakups",
+      "Family members trying to support someone without rescuing or enabling them",
+      "Readers who prefer a memorable self-help rule to a technical psychology text"
+    ],
+    "formats_available": [
+      "Hardcover",
+      "Paperback",
+      "Ebook",
+      "Audiobook"
+    ]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "prh-book-page",
+        "title": "The Let Them Theory",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/743134/the-let-them-theory-by-mel-robbins/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current title and co-author credit, US edition metadata, formats, publisher synopsis, intended applications, and author positioning.",
+        "limitations": "Authoritative for its editions and current credit, but promotional and not independent evidence of quality."
+      },
+      {
+        "id": "google-books-preview",
+        "title": "The Let Them Theory",
+        "author_or_publisher": "Google Books; Hay House LLC",
+        "url": "https://books.google.com/books/about/The_Let_Them_Theory.html?id=HXcTEQAAQBAJ",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Authorship, publication identity, selected contents, searchable preview passages, named concepts, examples, and references used in the book.",
+        "limitations": "A limited preview rather than uninterrupted access to every page."
+      },
+      {
+        "id": "official-book-page",
+        "title": "The Let Them Theory Book",
+        "author_or_publisher": "Mel Robbins",
+        "url": "https://www.melrobbins.com/book/the-let-them-theory/",
+        "type": "author",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "The book's eight advertised application areas, formats, companion material, and authorial framing.",
+        "limitations": "Promotional source that describes intended benefits rather than independently testing them."
+      },
+      {
+        "id": "original-podcast",
+        "title": "The 'Let Them' Theory: A Life Changing Mindset Hack That 15 Million People Can't Stop Talking About",
+        "author_or_publisher": "The Mel Robbins Podcast",
+        "url": "https://www.melrobbins.com/episode/episode-70/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Robbins's early explanation, prom story, applications, and express limits involving danger, discrimination, advocacy, and repeated boundary violations.",
+        "limitations": "Primary evidence of what Robbins intended, not independent evidence that the method works."
+      },
+      {
+        "id": "relationship-podcast",
+        "title": "The One Tool to Transform Your Relationships: The Let Them Theory",
+        "author_or_publisher": "Mel Robbins and Sawyer Robbins; The Mel Robbins Podcast",
+        "url": "https://www.melrobbins.com/episode/episode-246/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Sawyer Robbins's involvement and the authors' account of applying the method to resentment, distance, and changed behaviour within a close relationship.",
+        "limitations": "A produced family conversation and promotional extension, not an independent outcome study."
+      },
+      {
+        "id": "science-of-people-summary",
+        "title": "The Let Them Theory Book Summary, Chapter-by-Chapter",
+        "author_or_publisher": "Science of People",
+        "url": "https://www.scienceofpeople.com/let-them-theory-summary/",
+        "type": "secondary-summary",
+        "independence": "interested",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Detailed chapter sequence, recurring examples, named techniques, and the progression from self-regulation to relationships and support.",
+        "limitations": "A commercial secondary treatment; scientific glosses and exact wording require corroboration."
+      },
+      {
+        "id": "supersummary-guide",
+        "title": "The Let Them Theory Summary and Study Guide",
+        "author_or_publisher": "SuperSummary",
+        "url": "https://www.supersummary.com/the-let-them-theory/summary/",
+        "type": "secondary-summary",
+        "independence": "interested",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Cross-check of the book's organisation, major themes, examples, and distinctions based on the Hay House ebook.",
+        "limitations": "A paid study-guide business and a secondary interpretation rather than the primary text."
+      },
+      {
+        "id": "abc-psychologists",
+        "title": "What psychologists think of the Let Them theory",
+        "author_or_publisher": "Australian Broadcasting Corporation",
+        "url": "https://www.abc.net.au/news/2025-04-19/what-psychologists-think-of-the-let-them-theory/105144954",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Three psychologists' assessments of the method's practical value, links to established therapies, lack of validation as a distinct theory, and risks of overuse.",
+        "limitations": "Expert commentary on the framework, not a controlled evaluation of the book or its readers."
+      },
+      {
+        "id": "kirkus-review",
+        "title": "The Let Them Theory",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/mel-robbins/the-let-them-theory/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent assessment of the book as sensible, accessible advice about relinquishing control and seeing people as they are, plus bibliographic details.",
+        "limitations": "A concise single review with limited evidence analysis."
+      },
+      {
+        "id": "guardian-review",
+        "title": "What is the Let Them theory? The self-help mantra explained",
+        "author_or_publisher": "The Guardian",
+        "url": "https://www.theguardian.com/wellness/2025/jan/29/let-them-mel-robbins-self-help-mantra",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent discussion of the idea's usefulness, historical precedents, simplicity, caveats, author background, and objections to stretching it into a full book.",
+        "limitations": "A reported explainer rather than a chapter-by-chapter review."
+      },
+      {
+        "id": "atlantic-review",
+        "title": "Where Did 'Let Them' Come From?",
+        "author_or_publisher": "The Atlantic",
+        "url": "https://www.theatlantic.com/culture/2026/04/let-them-mel-robbins-cassie-phillips/686840/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Reported origin dispute, sales context, and a critic's mixed full-reading assessment of friendship, motivational interviewing, tone, originality, and repetition.",
+        "limitations": "One critic's assessment; the origin reporting records disputed accounts rather than establishing intent."
+      },
+      {
+        "id": "time-profile",
+        "title": "Mel Robbins Will Make You Do It",
+        "author_or_publisher": "TIME",
+        "url": "https://time.com/7095878/mel-robbins-interview-podcast-siriusxm-let-them/",
+        "type": "interview",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Contemporary author profile, career context, the prom-story account, intended purpose, and Robbins's method of turning simple advice into memorable media.",
+        "limitations": "Published before the book and reliant in part on Robbins's own account."
+      },
+      {
+        "id": "cnn-interview",
+        "title": "CNN News Central interview with Mel Robbins",
+        "author_or_publisher": "CNN",
+        "url": "https://transcripts.cnn.com/show/cnc/date/2025-01-17/segment/02",
+        "type": "interview",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Robbins's concise description of Let Them and Let Me, her claimed research basis, and career background.",
+        "limitations": "A short promotional television interview without adversarial evidence review."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "The Let Them Theory",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/216354325-the-let-them-theory",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large reader aggregate and recurring praise for practical memorability alongside criticism that common-sense advice is repeated and overstated.",
+        "limitations": "Self-selected reviewers, edition merging, social influence, and no control for whether raters finished the book."
+      },
+      {
+        "id": "irish-times-reception",
+        "title": "The Let Them Theory is Ireland's bestselling book of 2025",
+        "author_or_publisher": "The Irish Times",
+        "url": "https://www.irishtimes.com/culture/books/2025/12/31/the-let-them-theory-is-irelands-bestselling-book-of-2025/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent confirmation of the mother-daughter author credit, publication timing, author career outline, and exceptional commercial reach.",
+        "limitations": "Sales reporting establishes reach, not content quality."
+      }
+    ],
+    "citations": {
+      "/title": ["prh-book-page", "google-books-preview", "kirkus-review"],
+      "/alternate_titles": ["prh-book-page", "google-books-preview"],
+      "/author_ids": ["prh-book-page", "google-books-preview", "irish-times-reception"],
+      "/bibliography/first_published": ["prh-book-page", "google-books-preview", "kirkus-review"],
+      "/bibliography/original_language": ["google-books-preview", "prh-book-page"],
+      "/bibliography/editions/0": ["prh-book-page", "kirkus-review"],
+      "/bibliography/editions/1": ["prh-book-page", "google-books-preview"],
+      "/bibliography/contents": ["google-books-preview", "science-of-people-summary", "supersummary-guide"],
+      "/discovery/tag_ids": ["official-book-page", "google-books-preview", "abc-psychologists"],
+      "/discovery/audiences": ["official-book-page", "original-podcast", "abc-psychologists", "guardian-review"],
+      "/discovery/formats_available": ["prh-book-page", "official-book-page"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Checked against the searchable Google Books preview, official book and podcast material, a detailed chapter guide based on the Hay House ebook, an independent chapter summary, specialist commentary, professional reviews, interviews, and reader reception. The full book was not available as one uninterrupted lawful text, so unique later-chapter details were not asserted without corroboration.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: check a library or owner-supplied complete copy to raise coverage to full-book and verify every later illustrative anecdote."
+    ]
   }
 }

@@ -12,7 +12,7 @@
     {
       "book_id": "the-48-laws-of-power-greene",
       "priority": 2,
-      "status": "ready",
+      "status": "in-progress",
       "source": "user",
       "added_at": "2026-08-13"
     },
@@ -161,7 +161,7 @@
     {
       "book_id": "alchemy-rory-sutherland",
       "priority": 22,
-      "status": "in-progress",
+      "status": "done",
       "source": "user",
       "notes": "Existing profile; now needs the 15-minute brief written from best available sources (coverage gate removed), the recommended level confirmed, and its audio.",
       "added_at": "2026-08-13"

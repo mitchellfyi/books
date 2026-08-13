@@ -3,6 +3,45 @@
   "schema_version": 1,
   "relationships": [
     {
+      "id": "let-them-written-by-mel-robbins",
+      "source_id": "the-let-them-theory-robbins",
+      "target_id": "mel-robbins",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Mel Robbins co-authored The Let Them Theory.",
+      "source_refs": [
+        "library/books/the-let-them-theory-robbins/book.json#prh-book-page",
+        "library/books/the-let-them-theory-robbins/book.json#google-books-preview"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "let-them-written-by-sawyer-robbins",
+      "source_id": "the-let-them-theory-robbins",
+      "target_id": "sawyer-robbins",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Sawyer Robbins co-authored The Let Them Theory and is credited on the current publisher edition.",
+      "source_refs": [
+        "library/books/the-let-them-theory-robbins/book.json#prh-book-page",
+        "library/books/the-let-them-theory-robbins/book.json#irish-times-reception"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "let-them-related-to-courage-to-be-disliked",
+      "source_id": "the-let-them-theory-robbins",
+      "target_id": "the-courage-to-be-disliked-kishimi",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both address freedom from approval and responsibility for one's choices; The Courage to Be Disliked gives the theme a more philosophical, dialogic treatment.",
+      "source_refs": [
+        "library/books/the-let-them-theory-robbins/book.json#abc-psychologists",
+        "library/books/the-let-them-theory-robbins/book.json#guardian-review"
+      ],
+      "confidence": "medium"
+    },
+    {
       "id": "alchemy-written-by-rory-sutherland",
       "source_id": "alchemy-rory-sutherland",
       "target_id": "rory-sutherland",

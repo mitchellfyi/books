@@ -6,20 +6,163 @@
   "name": "Robert Greene",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American author who distils history into strategic guidance on power, seduction, war, and mastery, beginning with The 48 Laws of Power in 1998.",
+      "source_ids": ["prh-author-bio", "wikipedia-robert-greene", "goodreads-author"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Greene was born and raised in Los Angeles, studied at the University of California, Berkeley, and finished a degree in classical studies at the University of Wisconsin-Madison. He estimates he worked around eighty jobs before writing books, including construction worker, translator, magazine editor and writer in New York (including Esquire), and Hollywood story developer. In 1995, while helping plan the Fabrica media school in Italy, he met the book packager Joost Elffers and pitched the idea that became The 48 Laws of Power, published by Viking in 1998. He has since written a string of international bestsellers including The Art of Seduction, The 33 Strategies of War, The 50th Law with the rapper 50 Cent, Mastery, The Laws of Human Nature, and The Daily Laws.",
+      "source_ids": ["wikipedia-robert-greene", "goodreads-author", "prh-author-bio"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His classical-studies training and itinerant early career shaped a method he has kept across all his books: mining ancient and modern history for recurring patterns of behaviour and packaging them as numbered laws or strategies. The partnership with Elffers, a producer of highly designed books, also set the distinctive visual, aphoristic format of the early titles.",
+      "source_ids": ["wikipedia-robert-greene", "prh-book-page", "wikipedia-48-laws"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Greene's authority is as a synthesiser and storyteller of historical power dynamics, not as an academic historian or social scientist. His books rest on wide reading and pattern-finding across biography and history, presented with confident generalisation. None of the cited sources records formal training in history, psychology, or political science beyond his classical-studies degree.",
+      "source_ids": ["wikipedia-robert-greene", "goodreads-author", "kirkus-48-laws"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Greene writes deliberately amoral analysis: he describes how power has been taken and kept, not whether it should be. That stance produces unusually frank observation and also his work's main weaknesses, selection of colourful cases over systematic evidence, contradictions between laws, and little interest in cooperation, institutions, or the many settings where manipulation backfires. Readers get sharper eyes for status games; they must supply their own ethics and their own checks on generalisation.",
+      "source_ids": ["kirkus-48-laws", "newsweek-adler", "wikipedia-48-laws"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "The 48 Laws of Power",
+      "year": 1998,
+      "kind": "Book",
+      "relationship": "Debut and signature work: forty-eight historically illustrated laws of acquiring and defending power.",
+      "source_ids": ["prh-book-page", "wikipedia-48-laws"]
+    },
+    {
+      "title": "The Art of Seduction",
+      "year": 2001,
+      "kind": "Book",
+      "relationship": "Second book, applying the same historical-pattern method to seduction and persuasion.",
+      "source_ids": ["wikipedia-robert-greene", "goodreads-author"]
+    },
+    {
+      "title": "The 33 Strategies of War",
+      "year": 2006,
+      "kind": "Book",
+      "relationship": "Military-strategy volume in the same numbered-laws format.",
+      "source_ids": ["wikipedia-robert-greene", "prh-author-bio"]
+    },
+    {
+      "title": "Mastery",
+      "year": 2012,
+      "kind": "Book",
+      "relationship": "A shift toward self-development: how masters across history acquired their craft.",
+      "source_ids": ["wikipedia-robert-greene", "prh-author-bio"]
+    },
+    {
+      "title": "The Laws of Human Nature",
+      "year": 2018,
+      "kind": "Book",
+      "relationship": "Later, more psychological treatment of the drives behind behaviour; catalogued separately in this library.",
+      "source_ids": ["wikipedia-robert-greene", "goodreads-author"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-robert-greene",
+        "title": "Robert Greene (American author)",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Robert_Greene_(American_author)",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Birthplace, education (Berkeley, Wisconsin-Madison classical studies), the roughly eighty jobs, Fabrica and the 1995 Elffers meeting, and the sequence of later books.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Crowd-edited tertiary source; used for widely corroborated biographical outline, not contested claims."
+      },
+      {
+        "id": "goodreads-author",
+        "title": "Robert Greene (Author of The 48 Laws of Power)",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/author/show/865.Robert_Greene",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Author positioning, list of works, and reader following.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Aggregated, partly publisher-supplied author copy."
+      },
+      {
+        "id": "prh-author-bio",
+        "title": "The 48 Laws of Power: about the author",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/330912/the-48-laws-of-power-by-robert-greene/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Bestseller status, the list of later titles, Los Angeles residence.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Promotional publisher copy."
+      },
+      {
+        "id": "prh-book-page",
+        "title": "The 48 Laws of Power",
+        "author_or_publisher": "Penguin Random House / Viking",
+        "url": "https://www.penguinrandomhouse.com/books/330912/the-48-laws-of-power-by-robert-greene/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "The Elffers production credit and the publisher's own description of the book's amoral guidance on power.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Authoritative for publication facts and positioning; promotional for quality claims."
+      },
+      {
+        "id": "wikipedia-48-laws",
+        "title": "The 48 Laws of Power",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_48_Laws_of_Power",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "First-edition details, translations, sales, and the documented range of reception from praise to dismissal.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; reception quotes traced to their original publications where used."
+      },
+      {
+        "id": "kirkus-48-laws",
+        "title": "The 48 Laws of Power (review)",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/robert-greene/the-48-laws-of-power/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent professional criticism: contradictory laws, undefined central concept, asserted rather than demonstrated worldview.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "A single review reflecting its publication's editorial taste."
+      },
+      {
+        "id": "newsweek-adler",
+        "title": "Jerry Adler on The 48 Laws of Power",
+        "author_or_publisher": "Newsweek (via the book's documented reception)",
+        "url": "https://en.wikipedia.org/wiki/The_48_Laws_of_Power",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The observation that the laws' contradictions amount to an argument for humility and obscurity.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed through documented quotation rather than the original 1998 article."
+      }
+    ],
+    "citations": {
+      "/name": ["wikipedia-robert-greene", "prh-author-bio", "goodreads-author"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile built from publisher pages, professional reviews, and corroborated tertiary biography; excludes private-life detail that does not bear on assessing the work.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

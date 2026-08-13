@@ -2,21 +2,23 @@
   "$schema": "../../../../schemas/audio-sidecar.schema.json",
   "schema_version": 2,
   "book_id": "alchemy-rory-sutherland",
-  "duration": "15-minutes",
+  "duration": "30-minutes",
   "engine": "kokoro-onnx",
   "engine_version": "0.5.0",
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.84,
+  "speed": 0.82,
   "sample_rate": 24000,
   "output_format": "mp3",
-  "source_script": "library/books/alchemy-rory-sutherland/scripts/15-minutes.md",
-  "source_script_sha256": "65f6c45669587c31823b358e6876c73d4f3af0fa4a45845e8a2b8700164ef37e",
+  "source_script": "library/books/alchemy-rory-sutherland/scripts/30-minutes.md",
+  "source_script_sha256": "249338383e602c32edb2f23d3532e8aa9d632865b1fb948ed42182dc0d82f439",
   "pronunciation_dictionary_sha256": "bc025b004f4263de4451d73880e0209201b545502e4b9b5d91363c90ed4a1c46",
-  "pronunciation_terms": [],
-  "script_words": 2140,
-  "audio_seconds": 881.52,
-  "measured_wpm": 145.66,
-  "generated_at": "2026-08-13T07:17:21.339748+00:00"
+  "pronunciation_terms": [
+    "Cialdini"
+  ],
+  "script_words": 4186,
+  "audio_seconds": 1706.86,
+  "measured_wpm": 147.15,
+  "generated_at": "2026-08-13T07:21:09.178960+00:00"
 }

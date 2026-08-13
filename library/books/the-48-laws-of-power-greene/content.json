@@ -5,107 +5,385 @@
   "content_type": "non-fiction",
   "editorial": {
     "compression_fit": "medium",
-    "complexity": "medium",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "The book is a catalogue: forty-eight discrete laws sharing one premise and one recurring chapter anatomy. The premise, the anatomy, the main clusters of laws, and the serious caveats compress well into fifteen minutes; five minutes carries the decision; thirty minutes exists for listeners who want the clusters walked through in full. No level can reproduce the four hundred pages of historical storytelling, which is the part a buyer is really deciding about."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "A deliberately amoral catalogue of forty-eight historically illustrated rules for gaining, keeping, and defending power.",
+    "verdict": "Read it as an unnervingly frank field guide to status games and manipulation, best held with sceptical gloves: the history is cherry-picked, the laws contradict one another, and the worldview is asserted rather than proven.",
+    "source_ids": ["prh-book-page", "kirkus-48-laws", "wikipedia-48-laws"],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Greene, with producer Joost Elffers, distils three thousand years of court intrigue, statecraft, and con artistry into forty-eight numbered laws of power, each argued through historical cases of people who observed or violated it, from Machiavelli's principles to the careers of figures such as Julius Caesar and Catherine the Great.",
+      "source_ids": ["prh-book-page", "wikipedia-48-laws", "audible-editorial"],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Power games are a permanent feature of human society; refusing to understand them leaves you their victim, so the rules by which power has actually been won and lost, stripped of moral commentary, are worth learning whether you intend to play, to protect yourself, or merely to see clearly.",
+      "source_ids": ["prh-book-page", "audible-editorial", "wikipedia-48-laws"],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "the-amoral-premise",
+      "title": "Power is the game whether you play or not",
+      "claim": "Social life, especially near hierarchies, is saturated with power dynamics that operate regardless of anyone's ethics.",
+      "explanation": "The book's framing device is the old aristocratic court: a world of flattery, factions, and sudden falls, which Greene treats as a model for modern workplaces and public life. Since the game exists, he argues, ignorance of its rules is not virtue but vulnerability.",
+      "representative_example": "The preface frames the courtier's dilemma: appear civil while competing, since open ambition and open naivety are both punished.",
+      "why_it_matters": "This premise decides how you read everything else: as manual, as anthropology, or as warning.",
+      "caveat": "Kirkus's central objection stands: the Hobbesian picture is asserted, not demonstrated, and much of life runs on genuine cooperation the book has no vocabulary for.",
+      "source_ids": ["prh-book-page", "kirkus-48-laws", "audible-editorial"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "reputation-and-spectacle",
+      "title": "Appearances are the currency of power",
+      "claim": "Reputation, attention, and spectacle create real leverage; their loss is ruin.",
+      "explanation": "A large family of laws tells the reader to guard reputation with their life, court attention at all cost, create compelling spectacles, act like royalty to be treated as such, and never appear too perfect. Power in this account is largely performed, and the performance changes how others behave toward you.",
+      "representative_example": "Law 6, court attention at all cost, and Law 37, create compelling spectacles, treat visibility itself as an asset independent of substance.",
+      "why_it_matters": "It explains why substance alone routinely loses to presence in organisations, and what the substantial can do about it.",
+      "caveat": "The same laws, followed literally, produce the office characters everyone learns to distrust; the book's own Law 46, never appear too perfect, quietly concedes the limits.",
+      "source_ids": ["wikipedia-48-laws", "prh-book-page", "audible-editorial"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "concealment",
+      "title": "Say less, conceal more",
+      "claim": "Advantage flows to those who reveal little: concealed intentions, sparing words, and outward conformity.",
+      "explanation": "Laws on concealing intentions, saying less than necessary, posing as a friend while working as a spy, and thinking as you like while behaving like others form the book's espionage school: information asymmetry as the basic tool of influence.",
+      "representative_example": "Law 4, always say less than necessary, argues that the powerful impress and intimidate by saying less, while overtalking surrenders control.",
+      "why_it_matters": "Even readers who refuse to practise concealment need to recognise it, because someone across the table is practising it on them.",
+      "caveat": "Habitual concealment corrodes the trust that most modern careers and collaborations actually run on, a cost the book barely prices.",
+      "source_ids": ["wikipedia-48-laws", "audible-editorial", "kirkus-48-laws"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "dependence-and-leverage",
+      "title": "Make yourself needed, never needy",
+      "claim": "Power tracks dependence: cultivate others' need of you, control the options they see, and find each person's lever.",
+      "explanation": "Laws on keeping people dependent, controlling the cards others play with, discovering each person's thumbscrew, and making others come to you describe influence as engineered asymmetry rather than persuasion.",
+      "representative_example": "Law 11, learn to keep people dependent on you, inverts the employee's instinct to make themselves replaceable through documentation and generosity.",
+      "why_it_matters": "It is the clearest lens the book offers on negotiation, employment, and why indispensability is treated as job security.",
+      "caveat": "Engineered dependence is the textbook description of a toxic relationship; the same lens that explains leverage also diagnoses abuse.",
+      "source_ids": ["wikipedia-48-laws", "audible-editorial"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "the-court",
+      "title": "Manage the court: masters, friends, and enemies",
+      "claim": "Your greatest risks are social: outshining a superior, trusting a friend, offending the wrong person, or absorbing others' misfortune.",
+      "explanation": "The opening laws are about survival inside hierarchies: never outshine the master, use enemies rather than trusting friends, know exactly whom you are dealing with, and avoid the contagion of the perpetually unlucky. Talent, in this telling, dies of social causes more often than technical ones.",
+      "representative_example": "Law 1, never outshine the master, opens the book with the courtier whose brilliance threatens his patron and costs him everything.",
+      "why_it_matters": "It names dynamics that performance reviews never mention but every organisation contains.",
+      "caveat": "Treating all colleagues as courtiers and all friends as future betrayers is a self-fulfilling prophecy the book never audits.",
+      "source_ids": ["wikipedia-48-laws", "audible-editorial", "kirkus-48-laws"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "decisive-boldness",
+      "title": "Act boldly, plan to the end, stop at the mark",
+      "claim": "Hesitation is dangerous; enter action with boldness, plan the full arc in advance, and know exactly when to stop.",
+      "explanation": "A martial cluster, enter action with boldness, plan all the way to the end, crush your enemy totally, do not go past the mark, treats execution as a discipline of committed starts and controlled endings. It is the book at its most Clausewitzian, and its most chilling.",
+      "representative_example": "Law 15, crush your enemy totally, argues from history that half-defeated rivals return for revenge.",
+      "why_it_matters": "The planning and stopping rules are among the book's most transferable content, even for readers who reject the crushing.",
+      "caveat": "Total-victory logic applied to colleagues rather than Renaissance princes is career poison and, occasionally, litigation.",
+      "source_ids": ["wikipedia-48-laws", "prh-book-page", "audible-editorial"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "formlessness",
+      "title": "Re-create yourself and assume formlessness",
+      "claim": "Fixed identities and fixed plans are targets; power stays with those who reinvent themselves and refuse a stable shape.",
+      "explanation": "The book closes on adaptability: re-create yourself rather than accept assigned roles, preach change gradually, and, in the final law, assume formlessness, presenting no fixed shape an opponent can attack. It is the nearest thing the catalogue has to a synthesis.",
+      "representative_example": "Law 48, assume formlessness, deliberately ends the book by dissolving the previous forty-seven into adaptability.",
+      "why_it_matters": "Reinvention and flexibility are the laws that survive best outside zero-sum settings.",
+      "caveat": "Formlessness sits awkwardly beside the book's own reputation laws, one of several contradictions reviewers flagged from the start.",
+      "source_ids": ["wikipedia-48-laws", "newsweek-adler", "kirkus-48-laws"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "reading-as-defence",
+      "title": "The defensive reading",
+      "claim": "The book's most defensible use is recognition: seeing the tactics when they are used on you.",
+      "explanation": "Greene himself has argued the laws are observations more than instructions, and the book's reception shows both readings: prisons banned it as a manipulation manual, while many readers report using it as a field guide to bosses, rivals, and institutions they cannot avoid.",
+      "representative_example": "Utah's prison system banned the book precisely because officials read it as teaching manipulation, the mirror image of the defensive reader's reason for studying it.",
+      "why_it_matters": "This reading extracts most of the book's value while dodging most of its ethical and practical costs.",
+      "caveat": "A catalogue with no evidence standards teaches pattern-spotting without base rates, and a reader primed to see manipulation everywhere will find it everywhere.",
+      "source_ids": ["wikipedia-48-laws", "goodreads-48-laws", "kirkus-48-laws"],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Preface: the courtier's world",
+      "purpose": "Set the amoral premise and the model of life as a court.",
+      "summary": "Greene announces the book's stance: power games are ancient, universal, and denied mainly by those losing them. The honest response is study, and the book will play historian rather than moralist.",
+      "idea_ids": ["the-amoral-premise"],
+      "source_ids": ["prh-book-page", "audible-editorial"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "The anatomy of every law",
+      "purpose": "Establish the repeating chapter machine that carries all forty-eight laws.",
+      "summary": "Each chapter states its law as a short judgement, then argues it through history: a transgression of the law and its price, an observance and its reward, distilled keys to power, and usually a reversal admitting when the law fails. The historical cast runs from ancient generals and Renaissance courts to statesmen and con artists.",
+      "idea_ids": ["the-amoral-premise"],
+      "source_ids": ["audible-editorial", "wikipedia-48-laws"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "The social laws: courts, masters, friends, and masks",
+      "purpose": "Teach survival and manoeuvre inside hierarchies.",
+      "summary": "The catalogue's centre of gravity is social: managing superiors without outshining them, calibrating trust in friends and enemies, guarding reputation, courting attention, concealing intentions, saying less, and conforming outwardly while thinking freely.",
+      "idea_ids": ["the-court", "reputation-and-spectacle", "concealment"],
+      "source_ids": ["wikipedia-48-laws", "audible-editorial"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "The strategic laws: leverage, boldness, and endings",
+      "purpose": "Move from position to action.",
+      "summary": "A second arc covers engineered advantage and execution: creating dependence, controlling options, finding each person's lever, entering action boldly, planning to the end, crushing defeated rivals, and knowing when victory is complete enough to stop.",
+      "idea_ids": ["dependence-and-leverage", "decisive-boldness"],
+      "source_ids": ["wikipedia-48-laws", "audible-editorial"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "The closing laws: reinvention and formlessness",
+      "purpose": "End the catalogue on adaptability as the master-law.",
+      "summary": "The final movement argues that identities, methods, and even the laws themselves must stay fluid: re-create yourself, reform gradually, never appear too perfect, and finally assume formlessness, leaving nothing fixed for opponents to grip. The designed object, with its aphorisms and margin stories, invites dipping rather than straight reading.",
+      "idea_ids": ["formlessness", "reputation-and-spectacle"],
+      "source_ids": ["wikipedia-48-laws", "prh-book-page"],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Forty-eight self-contained chapters sharing one repeating anatomy, inside a heavily designed Elffers production with aphorisms and historical asides running alongside the main text; built for dipping as much as reading through.",
+    "voice": "Cool, aphoristic, and ominous; a narrator who observes cruelty with connoisseurship and never flinches or moralises.",
+    "pace": "Fast within any single law, slow across all four hundred and fifty pages read straight; the anatomy repeats forty-eight times.",
+    "evidence_style": "Historical anecdote as proof: vivid, selective cases stand in for demonstration, with no systematic evidence, counterexamples, or base rates.",
+    "example_style": "Court intrigue, statecraft, war, and con artistry: Caesar, Machiavelli's principles, Catherine the Great, and a parade of courtiers, ministers, and swindlers.",
+    "repetition": "The chapter machine is identical throughout, which aids reference use and numbs straight-through reading.",
+    "prerequisites": "None; the history is retold from scratch and the prose is plain.",
+    "source_ids": ["wikipedia-48-laws", "audible-editorial", "prh-book-page", "kirkus-48-laws"],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 5.2,
+      "confidence": "medium",
+      "summary": "Limited as reliable guidance: memorable observation of status games and a genuinely useful defensive lens, undermined by cherry-picked historical evidence, internal contradictions, and an unexamined zero-sum premise.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 6.0,
+          "rationale": "The laws name real, otherwise-unnamed dynamics of hierarchy and status with memorable clarity, but the central concept of power is never defined, so the explanations blur at exactly the load-bearing points.",
+          "source_ids": ["kirkus-48-laws", "wikipedia-48-laws"]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 4.5,
+          "rationale": "Evidence is curated anecdote: histories chosen to illustrate each law, with no counterexamples, no base rates, and laws that openly contradict one another, court attention yet behave like others, without rules for choosing between them.",
+          "source_ids": ["kirkus-48-laws", "newsweek-adler"]
+        },
+        {
+          "id": "insight-value",
+          "score": 6.5,
+          "rationale": "For readers raised on cooperative workplace ideals, the frank catalogue of manipulation is genuinely eye-opening, and several laws, never outshine the master, guard reputation, plan to the end, compress real social wisdom.",
+          "source_ids": ["wikipedia-48-laws", "goodreads-48-laws"]
+        },
+        {
+          "id": "practical-utility",
+          "score": 5.5,
+          "rationale": "As a recognition tool the book is immediately usable; as an action manual it is hazardous, since applying the harsher laws in modern institutions invites the distrust and retaliation the book itself warns about.",
+          "source_ids": ["wikipedia-48-laws", "kirkus-48-laws", "goodreads-48-laws"]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 4.0,
+          "rationale": "The book has no account of cooperation, institutions, or repeated games, no boundary conditions for when laws apply, and no treatment of the contradictions between laws; uncertainty is never acknowledged.",
+          "source_ids": ["kirkus-48-laws", "newsweek-adler"]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 5.0,
+          "rationale": "The numbered format and margin design make the content unusually retrievable, but the identical anatomy repeated forty-eight times over four hundred and fifty pages carries far more storytelling than distinct instruction.",
+          "source_ids": ["wikipedia-48-laws", "prh-book-page"]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book's lasting significance is as a mirror held up to institutional life: it insists that status games are real, ancient, and survivable only by those who can see them, and it forces every reader to decide where observation ends and complicity begins.",
+      "source_ids": ["wikipedia-48-laws", "prh-book-page"],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "See the game: hierarchies run on reputation, attention, and dependence, whatever the org chart says.",
+        "source_ids": ["wikipedia-48-laws", "audible-editorial"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Manage upward visibility deliberately: brilliance that threatens a superior is a liability, not an asset.",
+        "source_ids": ["wikipedia-48-laws", "audible-editorial"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Plan whole arcs: commit boldly, know the end state, and stop when you reach it.",
+        "source_ids": ["wikipedia-48-laws", "audible-editorial"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use the catalogue defensively: recognising a tactic aimed at you is value without the ethical bill.",
+        "source_ids": ["wikipedia-48-laws", "goodreads-48-laws"],
+        "basis": "inference"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "A quarter-century in print, more than a million US copies, twenty-four languages, adoption from boardrooms to hip-hop to prison libraries, and bans in prisons that judged it too effective: few modern books have been treated so seriously as an operating manual by so many different worlds.",
+      "source_ids": ["wikipedia-48-laws", "prh-book-page"],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Greene wrote it after some eighty jobs and a classical education, pitching the idea to designer Joost Elffers in 1995; he presents himself as a historian of power rather than its advocate, and has said most laws are observations rather than manipulation. The book's cool amorality is a deliberate stance, and also its best marketing.",
+      "source_ids": ["wikipedia-robert-greene", "wikipedia-48-laws", "prh-book-page"],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "weak",
+      "strengths": [
+        "Draws on a genuinely wide historical range, from ancient statecraft to modern con artists.",
+        "Anchors each law in concrete narrative cases rather than abstraction.",
+        "The reversal sections concede, at least briefly, that every law has failure modes."
+      ],
+      "weaknesses": [
+        "History is selected to fit each law; disconfirming cases are absent by construction.",
+        "Laws contradict one another with no guidance on precedence, as contemporary reviewers noted.",
+        "The central concept, power, is never defined, and the zero-sum worldview is assumed rather than argued.",
+        "No engagement with evidence on cooperation, trust, or repeated interaction that cuts against the premise."
+      ],
+      "source_ids": ["kirkus-48-laws", "newsweek-adler", "wikipedia-48-laws"],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "A publishing phenomenon and a critical punching bag: dismissed by reviewers at publication, embraced by an enormous and unusually varied readership, and treated as dangerous by institutions from prisons to HR departments.",
+      "praise": [
+        "Compulsively readable distillation of history into usable aphorisms.",
+        "Frankness about dynamics most business books euphemise.",
+        "A designed object whose margins and structure reward browsing."
+      ],
+      "criticism": [
+        "Kirkus called it silly and distasteful if serious, brilliant satire if not.",
+        "Newsweek's Jerry Adler read the contradictory laws as an accidental argument for humility.",
+        "Widely criticised as a manual for manipulation; banned by Utah's prison system on exactly that reading.",
+        "The amoral stance strikes many readers as adolescent cynicism dressed as ancient wisdom."
+      ],
+      "source_ids": ["kirkus-48-laws", "newsweek-adler", "wikipedia-48-laws", "goodreads-48-laws"],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "People in overtly political environments: entertainment, sales, executive suites, courtrooms",
+        "Readers who want manipulation tactics named so they can defend against them",
+        "Students of Machiavelli, Sun Tzu, and the strategy canon",
+        "History readers who enjoy court intrigue told briskly"
+      ],
+      "not_for": [
+        "Readers wanting evidence-based social science or leadership research",
+        "Anyone seeking guidance compatible with high-trust collaborative teams",
+        "Readers repelled by amoral framing or zero-sum premises"
+      ],
+      "topics": [
+        "Power",
+        "Strategy",
+        "Persuasion",
+        "Reputation",
+        "Office politics",
+        "History of statecraft",
+        "Manipulation and its defence"
+      ],
+      "source_ids": ["wikipedia-48-laws", "goodreads-48-laws", "prh-book-page"],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "An evidence-based psychology or leadership book",
+        "A moral philosophy of power",
+        "A management or negotiation method",
+        "History written to historians' standards"
+      ],
+      "omissions": [
+        "Cooperation, trust-building, and positive-sum institutional life",
+        "Any rule for resolving contradictions between laws",
+        "The base rates: how often these tactics fail or backfire"
+      ],
+      "missing_or_weak": [
+        "A definition of power",
+        "Boundary conditions distinguishing Renaissance courts from modern workplaces",
+        "Engagement with counterevidence of any kind"
+      ],
+      "dated_or_contested": [
+        "Its social world of courts and masters maps unevenly onto flat, legally constrained modern organisations.",
+        "Several readings of its historical episodes are contested by historians, and the episodes are simplified for effect."
+      ],
+      "source_ids": ["kirkus-48-laws", "newsweek-adler", "wikipedia-48-laws"],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if the historical storytelling is the appeal: four hundred pages of court intrigue, betrayals, and reversals organised as a browsable reference you will dip into for years.",
+      "summary_is_enough_if": "The brief is enough if you want the premise, the main clusters of laws, the strongest specimens, and the case for reading defensively.",
+      "skip_if": "Skip it if you need evidence you can rely on, work in a high-trust environment you value, or know the amoral pose will read to you as cynicism rather than candour.",
+      "format_advice": "The designed hardback is the intended object, built for browsing with its margin stories; the audiobook flattens the design and makes the repetitive anatomy more noticeable.",
+      "source_ids": ["prh-book-page", "wikipedia-48-laws", "goodreads-48-laws"],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What is the recurring anatomy of every chapter, and why does it matter that reversals exist?",
+      "Which contradiction between laws did reviewers seize on, and what does it imply about using the book as a manual?",
+      "What distinguishes the defensive reading of the book from the instrumental one?"
+    ],
+    "application_prompts": [
+      "Which law best names a dynamic currently operating in your workplace, and what would seeing it earlier have changed?",
+      "Where are you making yourself replaceable when the book would say to build leverage, and what is your considered answer to it?",
+      "Which of the book's tactics have you seen backfire, and what boundary condition explains why?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Built from publisher records, contemporary professional reviews, documented reception, and detailed secondary accounts of the law list and chapter anatomy. The law titles and chapter structure are among the most widely reproduced book content in print; line-level verification against a full copy remains optional deepening.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity verified 2026-08-13 against the Penguin Random House page (Viking, Elffers production credit, ISBN 9780670881468) and Open Library's 1998 record; 452-page first edition and 24 translations from the documented record.",
+        "Content claims (law titles, chapter anatomy, historical cast) checked against the publisher description, Audible's editorial account, and the documented record; these are among the most-reproduced book structures in publishing.",
+        "Counterevidence is central to the profile: Kirkus's contradictions-and-undefined-power critique and Adler's humility reading are quoted in reception and priced into the rating.",
+        "Rating discipline: scored on content alone; the book's enormous sales and celebrity following were excluded per the rubric's excluded factors.",
+        "Narration reviewed against the product contract: no sourcing or coverage meta, content-first opening, plain language throughout.",
+        "Pronunciation: proper nouns in the scripts (Machiavelli, Elffers, Talleyrand avoided; Caesar, Catherine the Great retained) phonemized and inspected; no dictionary additions required beyond the existing entries."
+      ]
+    }
   }
 }

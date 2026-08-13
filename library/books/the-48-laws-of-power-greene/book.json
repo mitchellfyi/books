@@ -4,28 +4,219 @@
   "id": "the-48-laws-of-power-greene",
   "type": "book",
   "title": "The 48 Laws of Power",
-  "alternate_titles": [],
+  "alternate_titles": ["48 Laws of Power"],
   "author_ids": ["robert-greene"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "1998",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US first edition",
+        "publisher": "Viking",
+        "publication_date": "1998",
+        "isbn_10": "0670881465",
+        "isbn_13": "9780670881468",
+        "format": "Hardcover",
+        "pages": 452
+      },
+      {
+        "label": "US paperback",
+        "publisher": "Penguin Books",
+        "publication_date": "2000-09-01",
+        "isbn_10": null,
+        "isbn_13": "9780140280197",
+        "format": "Paperback",
+        "pages": 452
+      },
+      {
+        "label": "US 25th-anniversary hardcover",
+        "publisher": "Viking",
+        "publication_date": "2023-10-31",
+        "isbn_10": null,
+        "isbn_13": "9780670881468",
+        "format": "Hardcover",
+        "pages": 480
+      }
+    ],
+    "contents": [
+      "Preface",
+      "Law 1: Never outshine the master",
+      "Law 2: Never put too much trust in friends, learn how to use enemies",
+      "Law 3: Conceal your intentions",
+      "Law 4: Always say less than necessary",
+      "Law 5: So much depends on reputation — guard it with your life",
+      "Law 6: Court attention at all cost",
+      "Law 7: Get others to do the work for you, but always take the credit",
+      "Law 8: Make other people come to you — use bait if necessary",
+      "Law 9: Win through your actions, never through argument",
+      "Law 10: Infection: avoid the unhappy and unlucky",
+      "Law 11: Learn to keep people dependent on you",
+      "Law 12: Use selective honesty and generosity to disarm your victim",
+      "Law 13: When asking for help, appeal to people's self-interest",
+      "Law 14: Pose as a friend, work as a spy",
+      "Law 15: Crush your enemy totally",
+      "Law 16: Use absence to increase respect and honour",
+      "Law 17: Keep others in suspended terror: cultivate an air of unpredictability",
+      "Law 18: Do not build fortresses to protect yourself — isolation is dangerous",
+      "Law 19: Know who you're dealing with — do not offend the wrong person",
+      "Law 20: Do not commit to anyone",
+      "Law 21: Play a sucker to catch a sucker — seem dumber than your mark",
+      "Law 22: Use the surrender tactic: transform weakness into power",
+      "Law 23: Concentrate your forces",
+      "Law 24: Play the perfect courtier",
+      "Law 25: Re-create yourself",
+      "Law 26: Keep your hands clean",
+      "Law 27: Play on people's need to believe to create a cultlike following",
+      "Law 28: Enter action with boldness",
+      "Law 29: Plan all the way to the end",
+      "Law 30: Make your accomplishments seem effortless",
+      "Law 31: Control the options: get others to play with the cards you deal",
+      "Law 32: Play to people's fantasies",
+      "Law 33: Discover each man's thumbscrew",
+      "Law 34: Be royal in your own fashion: act like a king to be treated like one",
+      "Law 35: Master the art of timing",
+      "Law 36: Disdain things you cannot have: ignoring them is the best revenge",
+      "Law 37: Create compelling spectacles",
+      "Law 38: Think as you like but behave like others",
+      "Law 39: Stir up waters to catch fish",
+      "Law 40: Despise the free lunch",
+      "Law 41: Avoid stepping into a great man's shoes",
+      "Law 42: Strike the shepherd and the sheep will scatter",
+      "Law 43: Work on the hearts and minds of others",
+      "Law 44: Disarm and infuriate with the mirror effect",
+      "Law 45: Preach the need for change, but never reform too much at once",
+      "Law 46: Never appear too perfect",
+      "Law 47: Do not go past the mark you aimed for; in victory, learn when to stop",
+      "Law 48: Assume formlessness"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "business",
+      "history",
+      "non-fiction",
+      "persuasion",
+      "power",
+      "self-help",
+      "strategy"
+    ],
+    "audiences": [
+      "People navigating intensely political workplaces or industries",
+      "Readers of strategy classics such as Machiavelli and Sun Tzu",
+      "Students of history interested in how influence has actually operated",
+      "Readers who want to recognise manipulation aimed at them"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "prh-book-page",
+        "title": "The 48 Laws of Power",
+        "author_or_publisher": "Penguin Random House / Viking",
+        "url": "https://www.penguinrandomhouse.com/books/330912/the-48-laws-of-power-by-robert-greene/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Title, author, the Joost Elffers production credit, current editions and ISBN, formats, and the publisher's own description of amoral guidance drawn from history.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Authoritative for publication facts; promotional in tone."
+      },
+      {
+        "id": "wikipedia-48-laws",
+        "title": "The 48 Laws of Power",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_48_Laws_of_Power",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "First-edition publisher, date, page count and ISBN; sales above 1.2 million US copies; translation into 24 languages; documented reception including Kirkus, Allure, Newsweek, prison demand and bans, and hip-hop adoption.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; individual reception claims attributed to their original outlets."
+      },
+      {
+        "id": "open-library-record",
+        "title": "The 48 Laws of Power",
+        "author_or_publisher": "Open Library",
+        "url": "https://openlibrary.org/books/OL16120130M/The_48_laws_of_power",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent bibliographic confirmation of the 1998 Viking edition.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Catalogue metadata only."
+      },
+      {
+        "id": "kirkus-48-laws",
+        "title": "The 48 Laws of Power (review)",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/robert-greene/the-48-laws-of-power/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Contemporary professional criticism: laws that contradict one another, an undefined concept of power, and a Hobbesian worldview asserted rather than demonstrated.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "One outlet's judgement, written at publication."
+      },
+      {
+        "id": "newsweek-adler",
+        "title": "Jerry Adler on The 48 Laws of Power",
+        "author_or_publisher": "Newsweek (as documented in the book's reception record)",
+        "url": "https://en.wikipedia.org/wiki/The_48_Laws_of_Power",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The argument that the laws' contradictions inadvertently make a case for humility and obscurity.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation rather than the 1998 original."
+      },
+      {
+        "id": "goodreads-48-laws",
+        "title": "The 48 Laws of Power",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/1303.The_48_Laws_of_Power",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Sustained mass readership with an aggregate rating slightly above four of five across hundreds of thousands of ratings, and the characteristic split between fascinated and repelled readers.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters; counts move over time."
+      },
+      {
+        "id": "audible-editorial",
+        "title": "48 Laws of Power by Robert Greene (editorial summary)",
+        "author_or_publisher": "Audible",
+        "url": "https://www.audible.com/blog/summary-48-laws-of-power-by-robert-greene",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Corroboration of the book's amoral framing, its historian-of-power stance, and its cast of historical figures.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Retailer editorial content for the audiobook."
+      }
+    ],
+    "citations": {
+      "/title": ["prh-book-page", "wikipedia-48-laws", "open-library-record"],
+      "/alternate_titles": ["prh-book-page"],
+      "/author_ids": ["prh-book-page", "open-library-record"],
+      "/bibliography/first_published": ["wikipedia-48-laws", "open-library-record"],
+      "/bibliography/original_language": ["open-library-record"],
+      "/bibliography/editions/0": ["wikipedia-48-laws", "open-library-record"],
+      "/bibliography/editions/1": ["wikipedia-48-laws"],
+      "/bibliography/editions/2": ["prh-book-page"],
+      "/bibliography/contents": ["wikipedia-48-laws", "audible-editorial", "prh-book-page"],
+      "/discovery/tag_ids": ["prh-book-page", "wikipedia-48-laws"],
+      "/discovery/audiences": ["wikipedia-48-laws", "goodreads-48-laws", "audible-editorial"],
+      "/discovery/formats_available": ["prh-book-page"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from publisher records, professional reviews, documented reception, and detailed secondary accounts of the widely reproduced law list and chapter anatomy; not verified line-by-line against a full copy.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: verify chapter anatomy details against a full copy via library lending to raise coverage."
+    ]
   }
 }

@@ -4,108 +4,475 @@
   "book_id": "the-let-them-theory-robbins",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
-    "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "compression_fit": "high",
+    "complexity": "low",
+    "recommended_level": "5-minutes",
+    "rationale": "The central Let Them/Let Me move is simple and highly compressible. Five minutes is enough for the complete decision: the two steps, principal applications, important exceptions, evidence limits, and reading verdict. Fifteen minutes preserves the book's relationship distinctions and examples; thirty minutes reproduces its coaching experience and full topic progression but adds reinforcement more than new argument."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "A memorable two-step prompt for accepting what other people choose and redirecting attention to your own response.",
+    "verdict": "The tool is useful, especially when paired with Let Me, but the underlying acceptance-and-agency idea is familiar and does not need 336 pages for most readers.",
+    "source_ids": ["google-books-preview", "original-podcast", "abc-psychologists", "guardian-review", "atlantic-review"],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Mel and Sawyer Robbins apply one paired instruction to stress, judgment, emotional reactions, comparison, adult friendship, influence, supporting a struggling person, romantic relationships, and endings. 'Let Them' means stop trying to control another adult or argue with what their behaviour reveals. 'Let Me' means choose your own boundary, communication, interpretation, and next action.",
+      "source_ids": ["prh-book-page", "google-books-preview", "official-book-page", "original-podcast", "science-of-people-summary", "supersummary-guide"],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Much avoidable distress comes from trying to manage other people's opinions, feelings, timing, and choices. Accepting what is outside your control creates a pause; using that pause to take responsibility for what is yours restores agency. The method is therefore not resignation: Let Them without Let Me is incomplete.",
+      "source_ids": ["google-books-preview", "original-podcast", "cnn-interview", "abc-psychologists", "science-of-people-summary"],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "control-divide",
+      "title": "Separate their choice from yours",
+      "claim": "Other people's thoughts, emotions, and actions belong to them; your response belongs to you.",
+      "explanation": "The method begins by sorting a tangled situation into two domains. You cannot force an invitation, approval, apology, friendship, promotion, recovery, or commitment. You can decide whether to ask, wait, leave, set a limit, make another plan, or invest elsewhere.",
+      "representative_example": "Robbins describes worrying about her son's disorganised prom plans until the instruction 'let them' stopped her from taking over an event that belonged to the teenagers.",
+      "why_it_matters": "The distinction cuts rumination and makes the next controllable action easier to see.",
+      "caveat": "Influence and negotiation still exist; lack of total control does not mean having no effect or responsibility.",
+      "source_ids": ["original-podcast", "time-profile", "google-books-preview", "cnn-interview"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "let-them",
+      "title": "Let Them",
+      "claim": "Stop fighting the immediate fact of another person's behaviour long enough to see it accurately.",
+      "explanation": "Let Them is a mental release, not necessarily spoken permission. It interrupts the urge to chase, correct, rescue, rehearse, or make another adult feel differently before you can be okay.",
+      "representative_example": "If friends make plans without you, let them. Their decision may hurt, but scrambling for an explanation or forcing inclusion does not create genuine friendship.",
+      "why_it_matters": "Acceptance saves energy otherwise spent resisting a reality that is already present.",
+      "caveat": "It does not require approving harmful behaviour, remaining available to it, or pretending not to care.",
+      "source_ids": ["original-podcast", "google-books-preview", "guardian-review", "abc-psychologists"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "let-me",
+      "title": "Let Me",
+      "claim": "After accepting their freedom, reclaim your own through a deliberate response.",
+      "explanation": "Let Me asks what you can do now: breathe, name a need, tolerate disapproval, make the call, decline the invitation, leave the relationship, choose a different friend, or focus on your work. It turns detachment into agency.",
+      "representative_example": "After letting someone be disappointed by your decision, 'let me' can mean calmly explaining it once and allowing the discomfort rather than reversing a sound choice.",
+      "why_it_matters": "Without this second step, acceptance can collapse into passivity or avoidance.",
+      "caveat": "Your response has consequences and may require repair; choosing it does not make it automatically wise.",
+      "source_ids": ["google-books-preview", "cnn-interview", "abc-psychologists", "science-of-people-summary"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "stress-pause",
+      "title": "Create a pause under stress",
+      "claim": "The phrase can interrupt emotional escalation before it becomes impulsive action.",
+      "explanation": "When another person's mood or decision activates you, naming it as theirs can create enough distance to breathe and choose. The book describes this in popular neuroscience language, but the practical value lies in the pause rather than a novel brain theory.",
+      "representative_example": "A colleague's sharp reaction can remain their reaction while you slow down, decide what the situation requires, and answer without matching the intensity.",
+      "why_it_matters": "A short cue is usable precisely when complex advice is hardest to recall.",
+      "caveat": "A mantra is not treatment for chronic anxiety, trauma, or unsafe conditions.",
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "abc-psychologists", "guardian-review"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "tolerate-opinions",
+      "title": "Let people misunderstand you",
+      "claim": "Trying to manage every opinion makes other people's approval the governor of your life.",
+      "explanation": "You can explain yourself clearly, but you cannot control the final interpretation. The book asks readers to tolerate being disliked or misread when the alternative is abandoning a considered value, need, or decision.",
+      "representative_example": "A relative may call a boundary selfish. You can hear the objection and still keep the boundary rather than arguing until they endorse it.",
+      "why_it_matters": "The willingness to be judged expands the range of honest choices available to you.",
+      "caveat": "Dismissal is not courage: credible criticism may contain information you should use.",
+      "source_ids": ["google-books-preview", "official-book-page", "science-of-people-summary", "abc-psychologists"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "emotional-ownership",
+      "title": "Do not manage every reaction",
+      "claim": "Another adult's disappointment, anger, or silence does not automatically prove your decision was wrong.",
+      "explanation": "People are allowed an emotional response, and you are allowed to stay grounded while it passes. This separates compassion from the belief that you must remove their discomfort at the cost of your own judgment.",
+      "representative_example": "A family member may sulk when you decline a request. You can remain kind without cancelling your answer simply to end the tension.",
+      "why_it_matters": "It helps people who confuse conflict avoidance with care.",
+      "caveat": "If your conduct caused avoidable harm, ownership means listening and repairing, not labelling every response as someone else's problem.",
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "relationship-podcast", "abc-psychologists"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "comparison-signal",
+      "title": "Use comparison as information",
+      "claim": "Envy can identify a neglected desire instead of serving only as self-punishment.",
+      "explanation": "The book distinguishes comparison that tortures from comparison that teaches. Rather than attacking yourself or the person who has what you want, ask what their life reveals about a goal you have not admitted or pursued.",
+      "representative_example": "Jealousy of a peer's career can become a prompt to name the autonomy, craft, status, or income you actually want and choose one step toward it.",
+      "why_it_matters": "It converts an automatic social emotion into a concrete question about direction.",
+      "caveat": "Comparison is incomplete evidence because visible outcomes conceal resources, trade-offs, and luck.",
+      "source_ids": ["official-book-page", "science-of-people-summary", "supersummary-guide", "google-books-preview"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "friendship-reality",
+      "title": "Read friendship behaviour plainly",
+      "claim": "Adult friendships change, and repeated behaviour is better evidence than the relationship you wish existed.",
+      "explanation": "Different life stages, proximity, priorities, and effort can move friends apart without a villain. Letting a friendship show its current shape can stop chasing; Let Me then asks whether to initiate, grieve, accept a looser bond, or build new connections.",
+      "representative_example": "When one friend repeatedly stops making time, you can make a direct invitation, notice the pattern, and place more energy where it is reciprocated.",
+      "why_it_matters": "It makes room for grief and new connection without forcing intimacy.",
+      "caveat": "Some drift is a repairable coordination problem; one honest conversation may be better than silent withdrawal.",
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "atlantic-review", "relationship-podcast"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "influence-not-control",
+      "title": "Influence without coercion",
+      "claim": "People are more likely to change when they can articulate their own reasons than when they are lectured or cornered.",
+      "explanation": "The later chapters adapt ideas associated with motivational interviewing: ask open questions, listen for the person's motives, affirm autonomy, and stop making the argument for them. The aim is to create conditions for self-directed change.",
+      "representative_example": "Instead of repeatedly telling a partner to exercise, ask what they want their health to make possible and what change, if any, feels manageable to them.",
+      "why_it_matters": "It replaces exhausting persuasion battles with a more respectful and often more useful conversation.",
+      "caveat": "The book is a popular introduction, not training in motivational interviewing or guidance for high-risk clinical work.",
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "atlantic-review", "google-books-preview"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "support-not-rescue",
+      "title": "Support without rescuing",
+      "claim": "Taking over another person's struggle can weaken their responsibility and entangle you in consequences you cannot control.",
+      "explanation": "The book distinguishes presence, listening, practical support, and clear limits from repeatedly absorbing debts, excuses, decisions, or crises. Let Them recognises their ownership; Let Me chooses what help you can offer without enabling.",
+      "representative_example": "You might help someone make a treatment appointment while refusing to lie for them or continually repair damage they will not address.",
+      "why_it_matters": "It gives caring people a vocabulary for help that does not require self-erasure.",
+      "caveat": "Dependence, disability, childhood, coercion, and acute crisis can create real duties that a simple autonomy rule cannot settle.",
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "official-book-page", "abc-psychologists"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "behaviour-is-data",
+      "title": "Let behaviour reveal the relationship",
+      "claim": "Stop arguing a person into being who you need and use consistent conduct as evidence.",
+      "explanation": "In romance and close relationships, promises matter less when behaviour repeatedly contradicts them. Acceptance can expose incompatibility sooner; agency then means stating needs, observing the response, and deciding what you will participate in.",
+      "representative_example": "If someone repeatedly avoids commitment, let that pattern count instead of building a future from their occasional reassurance.",
+      "why_it_matters": "It protects attention from relationships sustained mainly by hope and interpretation.",
+      "caveat": "People are not reducible to one bad day, and healthy intimacy requires conversation, context, and room for change.",
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "relationship-podcast", "official-book-page"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "exceptions",
+      "title": "Know when not to let it pass",
+      "claim": "The instruction stops where safety, rights, duties, and enforceable boundaries begin.",
+      "explanation": "Robbins's early account explicitly excludes danger, discrimination, failure to advocate for needs or beliefs, and repeated boundary violations. In those cases Let Me may require intervention, documentation, departure, protection, or outside help.",
+      "representative_example": "A discriminatory decision at work is not merely an opinion to release; it may require challenge through organisational or legal channels.",
+      "why_it_matters": "Without exceptions, a calming slogan can rationalise avoidance or leave power unchallenged.",
+      "caveat": "The book states limits but cannot provide the situational expertise needed for every family, workplace, medical, or legal case.",
+      "source_ids": ["original-podcast", "abc-psychologists", "guardian-review"],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Introduction and chapters 1-2: Let Them plus Let Me",
+      "purpose": "Introduce the origin story, divide control, and establish the two inseparable steps.",
+      "summary": "A prom-planning story becomes the entry point to a general rule: stop taking over what belongs to others, then direct attention to your own choices. The second half corrects the obvious risk that letting people act sounds passive.",
+      "idea_ids": ["control-divide", "let-them", "let-me", "exceptions"],
+      "source_ids": ["google-books-preview", "original-podcast", "time-profile", "science-of-people-summary"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Chapters 3-4: Managing stress",
+      "purpose": "Turn the slogan into a pause between activation and response.",
+      "summary": "The book argues that stress narrows effective choice and that trying to control external events compounds it. Let Them names the trigger as outside your command; Let Me uses breathing and attention to recover a deliberate next move.",
+      "idea_ids": ["stress-pause", "control-divide", "let-me"],
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "google-books-preview"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Chapters 5-6: Opinions and difficult people",
+      "purpose": "Reduce approval-seeking and futile attempts to correct every judgment.",
+      "summary": "Readers are asked to explain themselves where useful, tolerate the fact that someone may still dislike them, and stop organising life around winning universal approval. Difficult people can be seen clearly without being controlled or endorsed.",
+      "idea_ids": ["tolerate-opinions", "let-them", "exceptions"],
+      "source_ids": ["google-books-preview", "science-of-people-summary", "abc-psychologists"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Chapters 7-8: Emotional reactions",
+      "purpose": "Separate another adult's feelings from the correctness of your choice.",
+      "summary": "Anger, disappointment, or a tantrum can be allowed to exist without immediate appeasement. The book treats the discomfort of a sound boundary as something both parties can survive, while preserving responsibility for genuinely harmful conduct.",
+      "idea_ids": ["emotional-ownership", "stress-pause", "let-me"],
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "relationship-podcast"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Chapters 9-10: Comparison",
+      "purpose": "Convert envy from punishment into information about desire and direction.",
+      "summary": "The book acknowledges unfairness but rejects fixation on another person's advantages as a workable plan. Comparison becomes useful when it identifies what you value and leads to a controllable action.",
+      "idea_ids": ["comparison-signal", "let-me"],
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "atlantic-review"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 6,
+      "title": "Chapters 11-13: Adult friendship",
+      "purpose": "Explain drift, reciprocity, and active creation of new connection.",
+      "summary": "Friendships change with proximity, life stage, and effort. Readers are encouraged to stop forcing old forms, communicate directly, notice reciprocity, grieve endings, and make the first move toward relationships available now.",
+      "idea_ids": ["friendship-reality", "behaviour-is-data", "let-me"],
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "atlantic-review", "relationship-podcast"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 7,
+      "title": "Chapters 14-15: Motivating change",
+      "purpose": "Replace pressure with conditions that support self-directed motivation.",
+      "summary": "The authors argue that force produces resistance. Open questions, listening, modelling, and respect for autonomy can help another person voice their own reasons for changing, though the final decision remains theirs.",
+      "idea_ids": ["influence-not-control", "control-divide"],
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "atlantic-review", "google-books-preview"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 8,
+      "title": "Chapters 16-17: Helping someone who struggles",
+      "purpose": "Distinguish support from rescue and enabling.",
+      "summary": "Care does not confer control. The book asks helpers to remain present and useful while returning choices and consequences to the person who must own them, and to set limits on what the helper will absorb.",
+      "idea_ids": ["support-not-rescue", "exceptions", "let-me"],
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "official-book-page"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 9,
+      "title": "Chapters 18-20 and conclusion: Love, endings, and the Let Me era",
+      "purpose": "Apply behavioural acceptance to intimacy and finish with active self-direction.",
+      "summary": "Relationships are judged by recurring conduct rather than potential alone. Readers are asked to state what they need, allow the response to reveal compatibility, and understand an ending as a painful opening for choices that better fit reality.",
+      "idea_ids": ["behaviour-is-data", "friendship-reality", "let-me", "emotional-ownership"],
+      "source_ids": ["science-of-people-summary", "supersummary-guide", "relationship-podcast", "official-book-page"],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "A two-step principle introduced through a family story, then reapplied in topic blocks that move from inner stress and social judgment to friendships, influence, helping, and romantic relationships.",
+    "voice": "Direct, emphatic, encouraging, intimate, and sometimes scolding; it resembles an energetic coaching podcast more than a measured psychology text.",
+    "pace": "Individual examples move quickly, but the same verbal move is repeated across twenty chapters, so the full book feels much longer than its conceptual core.",
+    "evidence_style": "Personal stories, specialist concepts, popular neuroscience explanations, cited research, and practical scripts are combined without a systematic review of evidence for the branded theory itself.",
+    "example_style": "Domestic, friendship, work, dating, caregiving, and family episodes make the advice easy to picture and give the reader many points of identification.",
+    "repetition": "High by design: the phrase is rehearsed in many situations to build automatic recall. Some readers experience this as useful coaching; others see a short idea stretched to book length.",
+    "prerequisites": "None. Readers familiar with Stoicism, radical acceptance, acceptance and commitment therapy, boundaries, or the Serenity Prayer will recognise much of the substance.",
+    "source_ids": ["google-books-preview", "science-of-people-summary", "supersummary-guide", "abc-psychologists", "guardian-review", "atlantic-review", "goodreads-reception"],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 6.0,
+      "confidence": "medium",
+      "summary": "A worthwhile, memorable acceptance-and-agency tool with broad practical use, weakened by familiar foundations, loose evidence for the branded theory, significant repetition, and limited treatment of relational power and repair.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.5,
+          "rationale": "The two-part control distinction explains a common pattern of wasted attention with unusual clarity, though it compresses different interpersonal problems into one response.",
+          "source_ids": ["google-books-preview", "original-podcast", "abc-psychologists", "guardian-review"]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.0,
+          "rationale": "The content overlaps established therapeutic and philosophical ideas and includes referenced material, but the branded theory itself has not been validated and some broad brain and relationship claims outrun the evidence presented.",
+          "source_ids": ["google-books-preview", "abc-psychologists", "guardian-review", "atlantic-review"]
+        },
+        {
+          "id": "insight-value",
+          "score": 5.5,
+          "rationale": "Pairing acceptance with an immediate agency question is a useful synthesis, but the substance closely resembles older ideas about control, acceptance, boundaries, and autonomous motivation.",
+          "source_ids": ["original-podcast", "abc-psychologists", "guardian-review", "atlantic-review"]
+        },
+        {
+          "id": "practical-utility",
+          "score": 7.5,
+          "rationale": "The phrases are easy to retrieve under stress and apply across ordinary conflicts; the book supplies many examples and important exceptions, although difficult cases need more specific expertise.",
+          "source_ids": ["original-podcast", "official-book-page", "abc-psychologists", "goodreads-reception"]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.5,
+          "rationale": "Let Me and the express safety and boundary exceptions prevent pure passivity, but cultural context, unequal power, mutual repair, duties of care, and the risk of avoidance receive too little depth.",
+          "source_ids": ["original-podcast", "abc-psychologists", "guardian-review", "atlantic-review"]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 4.5,
+          "rationale": "The recurring applications aid habit formation, yet a 336-page treatment repeatedly restates a principle that can be understood with its caveats in a much shorter form.",
+          "source_ids": ["prh-book-page", "kirkus-review", "guardian-review", "atlantic-review", "goodreads-reception"]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "Freedom does not come from making everyone behave correctly. It comes from seeing what they actually choose, allowing the feelings that creates, and taking responsibility for your own participation and direction.",
+      "source_ids": ["google-books-preview", "original-podcast", "cnn-interview", "relationship-podcast"],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "When caught in another person's behaviour, ask two questions in order: what is theirs to choose, and what is mine to do?",
+        "source_ids": ["original-podcast", "google-books-preview", "cnn-interview"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Acceptance is contact with reality, not approval; a boundary is a decision about your action, not a device for controlling theirs.",
+        "source_ids": ["original-podcast", "abc-psychologists", "guardian-review"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use repeated behaviour as information while leaving room for context, direct conversation, repair, and genuine change.",
+        "source_ids": ["science-of-people-summary", "relationship-podcast", "supersummary-guide"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Support another person's change by listening for their reasons and respecting their agency; do not confuse pressure or rescue with care.",
+        "source_ids": ["science-of-people-summary", "supersummary-guide", "atlantic-review"],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The book's contribution is compression rather than discovery. It packages established acceptance, agency, and autonomy principles into a cue simple enough to remember in an emotionally charged moment, which can make familiar wisdom more usable.",
+      "source_ids": ["abc-psychologists", "guardian-review", "time-profile", "atlantic-review"],
+      "basis": "inference"
+    },
+    "author_and_purpose": {
+      "text": "Mel Robbins is a former lawyer turned self-help communicator, podcaster, and media entrepreneur; Sawyer Robbins, her daughter and co-author, has a marketing and media background and contributes their shared relationship experience. The book grew from a viral 2023 treatment of 'let them' and was written to expand the phrase into a general life tool. Reporting in The Atlantic documents that Cassie Phillips's viral 'Let Them' lines predated Robbins's post and that the public discovery accounts are disputed; the underlying maxim also has older philosophical and therapeutic precedents.",
+      "source_ids": ["prh-book-page", "original-podcast", "relationship-podcast", "time-profile", "guardian-review", "atlantic-review", "irish-times-reception"],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "The core acceptance-and-agency distinction overlaps established approaches including radical acceptance, acceptance and commitment therapy, and autonomy-supportive conversation.",
+        "Numerous ordinary examples show how to apply the cue and where a response can go wrong.",
+        "The authors include explicit exceptions for danger, discrimination, advocacy, and repeated boundary violations.",
+        "The later material on motivational interviewing points toward a recognised, evidence-based conversational method."
+      ],
+      "weaknesses": [
+        "No direct evidence establishes Let Them as a distinct psychological theory or shows that the branded two-word tool outperforms alternatives.",
+        "Popular neuroscience and universal-sounding relationship claims are presented with more confidence than their boundary conditions justify.",
+        "Personal stories and selected successes do much of the persuasive work.",
+        "The method can become unfalsifiable: either letting them or taking action can be labelled part of the same theory after the fact."
+      ],
+      "source_ids": ["google-books-preview", "original-podcast", "abc-psychologists", "guardian-review", "atlantic-review"],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Exceptionally popular and broadly praised for practical memorability, but sharply divided on originality, evidential status, tone, and whether the idea earns a full-length book.",
+      "praise": [
+        "Kirkus judged the advice sensible, accessible, and helpful for seeing people as they are.",
+        "Psychologists interviewed by ABC found useful overlap with acceptance-based therapies and valued the phrase as a memorable pause.",
+        "The Atlantic reviewer found the friendship discussion and explanation of motivational interviewing genuinely helpful.",
+        "A large Goodreads audience often praises immediate practical relief and recognisability."
+      ],
+      "criticism": [
+        "Professional and reader reviews repeatedly call the premise common sense stretched through excessive repetition.",
+        "Critics note that 'theory' overstates a slogan assembled from older Stoic, therapeutic, and self-help ideas.",
+        "The forceful coaching voice can feel motivating or patronising, and some examples flatten structural hardship into individual mindset.",
+        "The reported Cassie Phillips chronology complicates the book's public origin story."
+      ],
+      "source_ids": ["kirkus-review", "abc-psychologists", "guardian-review", "atlantic-review", "goodreads-reception", "irish-times-reception"],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "People who recognise that they monitor, chase, appease, or rescue other adults",
+        "Readers who understand an idea intellectually but need a short phrase to use when activated",
+        "People navigating changing friendships, rejection, difficult relatives, or uncertain relationships",
+        "Helpers who need to distinguish support from taking over",
+        "Listeners who enjoy direct coaching, repetition, and personal examples"
+      ],
+      "not_for": [
+        "Readers already fluent in acceptance, boundaries, locus of control, Stoicism, or acceptance-based therapy",
+        "Anyone seeking a research-led academic account of relationships or emotional regulation",
+        "People who dislike emphatic coaching voices or repeated slogans",
+        "Readers whose main problem is danger, coercion, discrimination, abuse, or a complex duty of care",
+        "Anyone wanting detailed conflict-repair, negotiation, organisational, legal, or clinical guidance"
+      ],
+      "topics": [
+        "Control and agency",
+        "Acceptance",
+        "Stress and emotional regulation",
+        "Approval and criticism",
+        "Comparison",
+        "Adult friendship",
+        "Boundaries",
+        "Motivation and influence",
+        "Helping without enabling",
+        "Romantic compatibility and endings"
+      ],
+      "source_ids": ["official-book-page", "original-podcast", "science-of-people-summary", "abc-psychologists", "guardian-review", "goodreads-reception"],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A validated standalone psychological theory",
+        "Permission to ignore danger, discrimination, rights, responsibilities, or repeated boundary violations",
+        "A claim that other people never matter or cannot be influenced",
+        "A clinical treatment manual or substitute for professional support",
+        "A comprehensive theory of relationships, power, or social change"
+      ],
+      "omissions": [
+        "Detailed methods for mutual conflict repair after both people have contributed to harm",
+        "Sustained analysis of unequal power, economic dependence, workplace hierarchy, coercion, and collective action",
+        "Cultural variation in autonomy, family obligation, and relational decision-making",
+        "Operational guidance for distinguishing healthy acceptance from avoidant withdrawal in ambiguous cases"
+      ],
+      "missing_or_weak": [
+        "Direct trials of the branded method",
+        "Clear evidence grading for broad psychological and neurological claims",
+        "Cases where persistence, persuasion, or intervention worked better than release",
+        "A tighter argument that removes repeated explanation without losing application"
+      ],
+      "dated_or_contested": [
+        "The idea is marketed as a theory despite specialist descriptions of it as a pop framework assembled from established principles.",
+        "The public origin story is contested because Cassie Phillips's viral 'Let Them' text preceded Robbins's 2023 post, while Robbins has described encountering the concept through the prom episode.",
+        "Sales and reader ratings demonstrate reach, not efficacy or originality."
+      ],
+      "source_ids": ["original-podcast", "abc-psychologists", "guardian-review", "atlantic-review", "goodreads-reception"],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read or listen if repeated examples help you turn a simple principle into a habit, especially around approval, friendship, caregiving, or relationship patterns.",
+      "summary_is_enough_if": "A short treatment is enough if you can already apply the full pair — let other adults choose, then decide your own boundary or action — and remember the safety, advocacy, repair, and power exceptions.",
+      "skip_if": "Skip it if you want original theory, rigorous evidence appraisal, concise prose, or specialist guidance for abuse, mental illness, discrimination, or entrenched conflict.",
+      "format_advice": "The five-minute version carries the whole decision. Choose fifteen minutes for the major relationship applications. The audiobook suits readers who enjoy Robbins's emphatic podcast delivery; print makes repetition easier to skim.",
+      "source_ids": ["google-books-preview", "abc-psychologists", "guardian-review", "atlantic-review", "goodreads-reception"],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What essential second step prevents Let Them from becoming passive resignation?",
+      "Which situations does the method explicitly not ask you to let pass?",
+      "How does the book distinguish support from rescue?",
+      "What can comparison reveal when it is used as a teacher rather than a weapon?"
+    ],
+    "application_prompts": [
+      "Name one current frustration. What belongs to the other person, and what concrete response belongs to you?",
+      "Where are you trying to eliminate someone's disappointment instead of tolerating it and communicating clearly?",
+      "Which repeated behaviour are you explaining away, and what decision would treating it as data support?",
+      "Where would direct conversation or repair be wiser than quietly withdrawing under the label Let Them?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Adversarial review separated the useful two-step tool from claims of novelty and scientific status; checked later applications across two detailed chapter treatments and searchable book material; added counterexamples involving repair, duties, power, culture, and danger; and excluded sales, fame, and author identity from the content rating. Full-copy comparison remains optional deepening, not a claim made here.",
+    "quality_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "checks": {
+        "identity_and_metadata": false,
+        "content_fidelity": false,
+        "claim_support": false,
+        "counterevidence": false,
+        "citation_entailment": false,
+        "product_fit": false,
+        "plain_language": false,
+        "audio_pronunciation": false
+      },
+      "notes": [
+        "Complete final review after narration and audio generation."
+      ]
+    }
   }
 }

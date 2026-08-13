@@ -1,0 +1,124 @@
+{
+  "$schema": "../../../schemas/author.schema.json",
+  "schema_version": 1,
+  "id": "sawyer-robbins",
+  "type": "author",
+  "name": "Sawyer Robbins",
+  "alternate_names": [],
+  "profile": {
+    "one_line": {
+      "text": "A marketer and media-company operator who co-authored The Let Them Theory with her mother, Mel Robbins.",
+      "source_ids": ["prh-book-page", "linkedin-profile", "irish-times-profile"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Sawyer Robbins is Mel Robbins's oldest daughter. She studied at Boston College, worked in marketing, and joined 143 Studios, the family media company. Her public work around The Let Them Theory includes co-writing the book and discussing its application to family relationships and breakups on The Mel Robbins Podcast.",
+      "source_ids": ["linkedin-profile", "prh-book-page", "family-podcast", "relationship-podcast", "irish-times-profile"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "Her publicly documented background is in marketing, content, events, and media operations rather than clinical psychology or academic research. Her LinkedIn profile records Boston College and marketing work before 143 Studios.",
+      "source_ids": ["linkedin-profile", "family-podcast"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "She brings lived experience of the mother-daughter relationship used in the book and professional experience in marketing and content production. Public sources do not establish a clinical or research qualification.",
+      "source_ids": ["relationship-podcast", "family-podcast", "linkedin-profile"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Her contribution is best understood as co-authorship, editorial and media experience, and a younger family perspective. The available biography is sparse and partly self-reported, so claims beyond those roles would be speculative.",
+      "source_ids": ["prh-book-page", "linkedin-profile", "relationship-podcast"],
+      "basis": "inference"
+    }
+  },
+  "selected_works": [
+    {
+      "title": "The Let Them Theory",
+      "year": 2024,
+      "kind": "Book",
+      "relationship": "Co-authored with Mel Robbins; the current publisher edition credits both writers.",
+      "source_ids": ["prh-book-page", "irish-times-profile"]
+    },
+    {
+      "title": "The One Tool to Transform Your Relationships",
+      "year": 2025,
+      "kind": "Podcast episode",
+      "relationship": "A co-presented discussion of using the book's framework in their own mother-daughter relationship.",
+      "source_ids": ["relationship-podcast"]
+    }
+  ],
+  "research": {
+    "sources": [
+      {
+        "id": "prh-book-page",
+        "title": "The Let Them Theory",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/743134/the-let-them-theory-by-mel-robbins/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current co-author credit and edition identity.",
+        "limitations": "Provides little separate biographical detail about Sawyer Robbins."
+      },
+      {
+        "id": "linkedin-profile",
+        "title": "Sawyer Robbins",
+        "author_or_publisher": "LinkedIn",
+        "url": "https://www.linkedin.com/in/sawyer-robbins",
+        "type": "author",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Self-reported education, current work at 143 Studios, earlier marketing experience, and co-author role.",
+        "limitations": "Self-maintained professional profile with incomplete public detail and no independent credential verification."
+      },
+      {
+        "id": "relationship-podcast",
+        "title": "The One Tool to Transform Your Relationships: The Let Them Theory",
+        "author_or_publisher": "Mel Robbins and Sawyer Robbins; The Mel Robbins Podcast",
+        "url": "https://www.melrobbins.com/episode/episode-246/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Sawyer's role, perspective, and account of applying the framework within her relationship with Mel.",
+        "limitations": "A produced conversation on the family business's platform, not an independent profile."
+      },
+      {
+        "id": "family-podcast",
+        "title": "Simple Tools to Bring Families Closer",
+        "author_or_publisher": "The Mel Robbins Podcast",
+        "url": "https://www.melrobbins.com/episode/episode-25/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Identification as Mel's oldest daughter and co-author, plus her public contribution to family-relationship material.",
+        "limitations": "Official family-produced material, not independent biography."
+      },
+      {
+        "id": "irish-times-profile",
+        "title": "The Let Them Theory is Ireland's bestselling book of 2025",
+        "author_or_publisher": "The Irish Times",
+        "url": "https://www.irishtimes.com/culture/books/2025/12/31/the-let-them-theory-is-irelands-bestselling-book-of-2025/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent confirmation that Sawyer and Mel are daughter and mother and co-authors of the book.",
+        "limitations": "A sales report with minimal biography."
+      }
+    ],
+    "citations": {
+      "/name": ["prh-book-page", "irish-times-profile", "linkedin-profile"]
+    }
+  },
+  "workflow": {
+    "status": "complete",
+    "coverage_notes": "Cross-checked the current publisher credit, independent newspaper confirmation, official podcast appearances, and her self-reported professional profile. Public biographical detail remains limited, and the profile says so rather than filling gaps by inference.",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}

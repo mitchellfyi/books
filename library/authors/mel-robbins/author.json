@@ -4,22 +4,168 @@
   "id": "mel-robbins",
   "type": "author",
   "name": "Mel Robbins",
-  "alternate_names": [],
+  "alternate_names": [
+    "Melanie Robbins"
+  ],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "An American self-help author, podcaster, and speaker known for turning behaviour-change ideas into simple verbal tools.",
+      "source_ids": ["mel-official-bio", "time-profile", "bc-law-profile"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Robbins trained and worked as a lawyer before moving through media commentary, speaking, books, and podcasting. Her 2011 TEDx talk and later book The 5 Second Rule established her practical, high-energy approach; she now hosts The Mel Robbins Podcast and runs the media company 143 Studios.",
+      "source_ids": ["bc-law-profile", "time-profile", "mel-official-bio", "cnn-interview"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "She earned a law degree from Boston College, worked in legal aid and as a public defender, then built a career in television commentary, coaching-style speaking, publishing, and independently produced audio and video.",
+      "source_ids": ["bc-law-profile", "time-profile", "cnn-interview"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Her demonstrated expertise is communicating practical behaviour-change and motivation frameworks to a broad audience, supported by long experience interviewing specialists and producing self-improvement media. She is not presented by the independent profiles as a psychologist, psychiatrist, or academic researcher.",
+      "source_ids": ["mel-official-bio", "time-profile", "bc-law-profile", "guardian-profile"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Robbins writes as a practitioner and mass-market communicator. Her strength is making an action memorable enough to use under stress; readers should distinguish that communication skill from clinical authority and check broad psychological or neurological claims against specialist evidence.",
+      "source_ids": ["time-profile", "guardian-profile", "bc-law-profile"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Stop Saying You're Fine",
+      "year": 2011,
+      "kind": "Book",
+      "relationship": "Earlier self-help book about moving from intention to action.",
+      "source_ids": ["bc-law-profile", "mel-books-page"]
+    },
+    {
+      "title": "The 5 Second Rule",
+      "year": 2017,
+      "kind": "Book",
+      "relationship": "Her best-known earlier action rule for interrupting hesitation.",
+      "source_ids": ["mel-official-bio", "mel-books-page"]
+    },
+    {
+      "title": "The High 5 Habit",
+      "year": 2021,
+      "kind": "Book",
+      "relationship": "A later practical framework focused on self-encouragement.",
+      "source_ids": ["mel-official-bio", "prh-book-page", "mel-books-page"]
+    },
+    {
+      "title": "The Let Them Theory",
+      "year": 2024,
+      "kind": "Book",
+      "relationship": "A co-authored framework for releasing control of others and reclaiming responsibility for one's response.",
+      "source_ids": ["prh-book-page", "time-profile"]
+    },
+    {
+      "title": "The Mel Robbins Podcast",
+      "year": 2022,
+      "kind": "Podcast",
+      "relationship": "Her main long-form channel for interviews and practical self-improvement material.",
+      "source_ids": ["mel-official-bio", "time-profile"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "mel-official-bio",
+        "title": "About Mel",
+        "author_or_publisher": "Mel Robbins",
+        "url": "https://www.melrobbins.com/about-mel/",
+        "type": "author",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current professional roles, company, podcast, audience, listed books, and public positioning.",
+        "limitations": "Official promotional biography; achievements and expertise are framed favourably."
+      },
+      {
+        "id": "bc-law-profile",
+        "title": "It Takes Two",
+        "author_or_publisher": "Boston College Law School Magazine",
+        "url": "https://lawmagazine.bc.edu/2015/06/it-takes-two/",
+        "type": "employer",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Education, legal-aid and public-defender background, early media and speaking work, 2011 book, and TEDx context.",
+        "limitations": "An alumni profile from 2015, so it does not cover her later career."
+      },
+      {
+        "id": "time-profile",
+        "title": "Mel Robbins Will Make You Do It",
+        "author_or_publisher": "TIME",
+        "url": "https://time.com/7095878/mel-robbins-interview-podcast-siriusxm-let-them/",
+        "type": "interview",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Career chronology, company and podcast model, communication style, audience, and development of The Let Them Theory.",
+        "limitations": "A profile and interview, not an audit of every career claim or method."
+      },
+      {
+        "id": "prh-book-page",
+        "title": "The Let Them Theory",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/743134/the-let-them-theory-by-mel-robbins/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current author credit, publisher biography, listed books, and edition details.",
+        "limitations": "Promotional publisher copy."
+      },
+      {
+        "id": "mel-books-page",
+        "title": "Books by Mel Robbins",
+        "author_or_publisher": "Mel Robbins",
+        "url": "https://www.melrobbins.com/books/",
+        "type": "author",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Official bibliography and the relationship among her principal books.",
+        "limitations": "Selective promotional bibliography rather than an independent catalogue."
+      },
+      {
+        "id": "cnn-interview",
+        "title": "CNN News Central interview with Mel Robbins",
+        "author_or_publisher": "CNN",
+        "url": "https://transcripts.cnn.com/show/cnc/date/2025-01-17/segment/02",
+        "type": "interview",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Legal and media background, present work, and her concise account of the new book.",
+        "limitations": "A short promotional interview; biographical claims are largely self-reported."
+      },
+      {
+        "id": "guardian-profile",
+        "title": "What is the Let Them theory? The self-help mantra explained",
+        "author_or_publisher": "The Guardian",
+        "url": "https://www.theguardian.com/wellness/2025/jan/29/let-them-mel-robbins-self-help-mantra",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent description of Robbins's background and explicit distinction between her communication role and mental-health credentials.",
+        "limitations": "A reported explainer centred on one book rather than a full biography."
+      }
+    ],
+    "citations": {
+      "/name": ["mel-official-bio", "bc-law-profile", "prh-book-page"],
+      "/alternate_names": ["bc-law-profile"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Cross-checked current official profiles, an independent long-form profile, her law school's alumni profile, publisher records, and a broadcast transcript. Credential limits are stated without treating popularity as expertise.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
