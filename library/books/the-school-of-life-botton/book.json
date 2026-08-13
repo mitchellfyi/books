@@ -5,19 +5,28 @@
   "type": "book",
   "title": "The School of Life",
   "alternate_titles": ["The School of Life: An Emotional Education"],
-  "author_ids": ["alain-de-botton"],
+  "author_ids": ["the-school-of-life", "alain-de-botton"],
   "bibliography": {
     "first_published": "2019",
     "original_language": "English",
     "editions": [
       {
         "label": "UK first edition",
-        "publisher": "Hamish Hamilton / The School of Life Press",
-        "publication_date": "2019",
-        "isbn_10": null,
-        "isbn_13": "9781912891160",
+        "publisher": "Hamish Hamilton",
+        "publication_date": "2019-09-05",
+        "isbn_10": "0241382319",
+        "isbn_13": "9780241382318",
         "format": "Hardcover",
         "pages": 320
+      },
+      {
+        "label": "School of Life illustrated edition",
+        "publisher": "The School of Life Press",
+        "publication_date": "2019-09-24",
+        "isbn_10": "1912891166",
+        "isbn_13": "9781912891160",
+        "format": "Hardcover",
+        "pages": 336
       },
       {
         "label": "UK paperback",
@@ -131,29 +140,126 @@
         "independence": "community",
         "quality": "medium",
         "limitations": "Self-selected raters."
+      },
+      {
+        "id": "penguin-sample",
+        "title": "The School of Life: An Emotional Education — publisher sample",
+        "author_or_publisher": "Alain de Botton, The School of Life, and Penguin Books",
+        "url": "https://cdn.penguin.co.uk/dam-assets/books/9780241985830/9780241985830-sample.pdf",
+        "type": "book",
+        "accessed_at": "2026-08-13",
+        "supports": "Formal dual author credit, collective copyright, anthology provenance, publication data, contents, introduction, and the book's own definition of emotional intelligence.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Only the front matter and introduction, not the complete book."
+      },
+      {
+        "id": "school-book-page",
+        "title": "An Emotional Education",
+        "author_or_publisher": "The School of Life",
+        "url": "https://shop.theschooloflife.com/products/an-emotional-education",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "The organisation's description of the anthology, de Botton's role, audience, formats, themes, and 320-page paperback.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Sales copy from the organisation that owns the book."
+      },
+      {
+        "id": "worldcat",
+        "title": "The School of Life: An Emotional Education",
+        "author_or_publisher": "WorldCat",
+        "url": "https://search.worldcat.org/title/The-school-of-life-%3A-an-emotional-education/oclc/1124073781",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent library identity, contributor, edition, subject, and publication records.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Bibliographic record rather than content analysis."
+      },
+      {
+        "id": "full-text-copy",
+        "title": "The School of Life: An Emotional Education — text edition",
+        "author_or_publisher": "The School of Life; hosted by FlipHTML5",
+        "url": "https://fliphtml5.com/fzqli/idcl/The_School_of_Life_%3A_An_emotional_education-The_School_of_Life_/",
+        "type": "book",
+        "accessed_at": "2026-08-13",
+        "supports": "Full-book chapter order, arguments, examples, recurring themes, omissions, tone, repetition, and edition-specific authorship language.",
+        "independence": "primary",
+        "quality": "medium",
+        "limitations": "Complete readable text on a third-party host; checked against Penguin's sample where they overlap."
+      },
+      {
+        "id": "official-introduction",
+        "title": "Emotional Education: An Introduction",
+        "author_or_publisher": "The School of Life",
+        "url": "https://www.theschooloflife.com/article/emotional-education-an-introduction/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "The book's opening case for emotional education, Romanticism, culture, self-help, adult development, art, and ritual in an official web version.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Reproduces the introduction only and is institutionally interested."
+      },
+      {
+        "id": "erraticus-review",
+        "title": "The School of Life Preaches Pessimism over Romanticism",
+        "author_or_publisher": "Erraticus",
+        "url": "https://erraticus.co/2019/11/05/pessimism-romanticism-school-of-life-de-botton/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "An independent philosophical reading of the book's pessimism, critique of Romanticism, emotional education, and self-help method.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Interpretive essay from a small philosophy publication."
+      },
+      {
+        "id": "ei-meta-analysis",
+        "title": "Emotional intelligence: an integrative meta-analysis and cascading model",
+        "author_or_publisher": "Joseph and Newman; Journal of Applied Psychology",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20085406/",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "External calibration: emotional intelligence is not one settled construct; ability and mixed measures overlap differently with cognitive ability and personality and relate differently to performance.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Work-performance meta-analysis, not a direct test of the book's humanistic curriculum."
+      },
+      {
+        "id": "sel-meta-analysis",
+        "title": "The Impact of Enhancing Students' Social and Emotional Learning",
+        "author_or_publisher": "Durlak et al.; Child Development; indexed by the US Office of Justice Programs",
+        "url": "https://www.ojp.gov/library/publications/impact-enhancing-students-social-and-emotional-learning-meta-analysis-school",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "External calibration: structured, implemented social and emotional learning programmes can improve skills, attitudes, behaviour, and academic outcomes.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "School-based programmes for children; it supports teachability in a neighbouring domain, not this essay collection's effectiveness."
       }
     ],
     "citations": {
       "/title": ["penguin-school-of-life", "school-of-life-press-edition"],
       "/alternate_titles": ["penguin-school-of-life"],
-      "/author_ids": ["penguin-school-of-life"],
-      "/bibliography/first_published": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "/author_ids": ["penguin-sample", "worldcat"],
+      "/bibliography/first_published": ["penguin-sample", "worldcat"],
       "/bibliography/original_language": ["penguin-school-of-life"],
-      "/bibliography/editions/0": ["school-of-life-press-edition"],
-      "/bibliography/editions/1": ["penguin-school-of-life"],
-      "/bibliography/contents": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "/bibliography/editions/0": ["penguin-sample", "worldcat"],
+      "/bibliography/editions/1": ["school-of-life-press-edition", "worldcat"],
+      "/bibliography/editions/2": ["penguin-sample", "penguin-school-of-life"],
+      "/bibliography/contents": ["penguin-sample", "full-text-copy"],
       "/discovery/tag_ids": ["penguin-school-of-life"],
       "/discovery/audiences": ["penguin-school-of-life", "goodreads-school-of-life"],
       "/discovery/formats_available": ["penguin-school-of-life"]
     }
   },
   "workflow": {
-    "status": "complete",
-    "coverage": "sample-and-secondary",
-    "coverage_notes": "Built from publisher records, independent reviews, and reader reception; the chapter structure and themes follow the documented edition listings.",
+    "status": "researched-partial",
+    "coverage": "full-book",
+    "coverage_notes": "Checked across the complete text, Penguin's sample, publisher and library records, author and organisation pages, independent reviews, reader reception, and adjacent empirical literature.",
     "last_researched": "2026-08-13",
     "next_steps": [
-      "Optional: verify chapter-level detail against a full copy via library lending."
+      "Complete four content-only narrations, verify pronunciation, render local audio, and run final adversarial review."
     ]
   }
 }

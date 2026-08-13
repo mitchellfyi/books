@@ -204,13 +204,7 @@
       }
     ],
     "citations": {
-      "/name": ["official-cv", "penguin-author", "psychology-today-interview"],
-      "/profile/one_line": ["official-cv", "psychology-today-interview", "penguin-author"],
-      "/profile/biography": ["official-cv", "psychology-today-interview", "school-faq", "penguin-author"],
-      "/profile/background": ["official-cv", "psychology-today-interview"],
-      "/profile/expertise": ["official-cv", "penguin-author", "psychology-today-interview"],
-      "/profile/perspective_and_limits": ["official-cv", "psychology-today-interview", "school-faq", "larb-critique", "new-republic-critique"],
-      "/selected_works": ["official-cv", "penguin-author", "penguin-sample", "school-book-page"]
+      "/name": ["official-cv", "penguin-author", "psychology-today-interview"]
     }
   },
   "workflow": {

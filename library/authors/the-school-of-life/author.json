@@ -168,13 +168,7 @@
     ],
     "citations": {
       "/name": ["about", "faq", "penguin-sample"],
-      "/alternate_names": ["press-catalogue", "penguin-sample"],
-      "/profile/one_line": ["about", "faq", "press-catalogue"],
-      "/profile/biography": ["faq", "about", "founder-interview"],
-      "/profile/background": ["about", "faq", "press-catalogue", "penguin-sample", "smh-review"],
-      "/profile/expertise": ["about", "faq", "books-page", "press-catalogue", "founder-interview"],
-      "/profile/perspective_and_limits": ["about", "books-page", "press-catalogue", "founder-interview", "smh-review"],
-      "/selected_works": ["penguin-sample", "book-page", "books-page", "press-catalogue", "collected-essays"]
+      "/alternate_names": ["press-catalogue", "penguin-sample"]
     }
   },
   "workflow": {

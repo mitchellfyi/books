@@ -18,12 +18,12 @@
   "overview": {
     "synopsis": {
       "text": "Distilling the first decade of the London organisation he founded, de Botton's 2019 volume argues that emotional intelligence is the most important untaught skill, and teaches it through five domains: understanding the self, dealing kindly with others, loving without romantic illusions, working with realistic ambition, and using culture as a therapeutic resource.",
-      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "source_ids": ["penguin-sample", "full-text-copy", "school-book-page"],
       "basis": "synthesis"
     },
     "core_argument": {
       "text": "Modern life educates minds and abandons emotions; the result is preventable misery in love, work, and selfhood. Emotional maturity can be taught, and its foundation is the deliberate surrender of perfectionist illusions — about ourselves, our partners, and our prospects — in favour of a kindly, darkly amused realism.",
-      "source_ids": ["penguin-school-of-life", "smh-leigh-review"],
+      "source_ids": ["penguin-sample", "full-text-copy", "smh-leigh-review"],
       "basis": "synthesis"
     }
   },
@@ -47,7 +47,7 @@
       "representative_example": "The book's signature question: not 'am I upset?' but 'what is my upset trying to tell me that I have not yet heard?'",
       "why_it_matters": "It turns moods from weather into data, the book's most practical habit.",
       "caveat": "The psychoanalytic frame is asserted with confidence the evidence base does not share.",
-      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "source_ids": ["full-text-copy", "penguin-sample"],
       "basis": "synthesis"
     },
     {
@@ -69,7 +69,7 @@
       "representative_example": "The book's habit of recasting 'difficult people' as anxious children in adult bodies, including ourselves.",
       "why_it_matters": "A practical daily reframe that lowers the temperature of ordinary conflict.",
       "caveat": "Charity as default can shade into excusing genuinely harmful behaviour; the book draws no boundary.",
-      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "source_ids": ["full-text-copy", "penguin-sample"],
       "basis": "synthesis"
     },
     {
@@ -91,7 +91,7 @@
       "representative_example": "The reframing of career crises as identity questions wearing economic clothes.",
       "why_it_matters": "It addresses the anxieties most working readers actually carry.",
       "caveat": "Comfortably abstract about economic reality; advice reads differently with rent due.",
-      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "source_ids": ["full-text-copy", "penguin-sample"],
       "basis": "synthesis"
     },
     {
@@ -102,7 +102,7 @@
       "representative_example": "The proposal to organise culture by need — what to read when anxious, what to look at when grieving — rather than by period and school.",
       "why_it_matters": "It hands secular readers a usable relationship with art and ritual.",
       "caveat": "Aesthetes find the instrumental view of art reductive; the therapeutic framing is the book's most contested aesthetic claim.",
-      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "source_ids": ["full-text-copy", "penguin-sample"],
       "basis": "synthesis"
     }
   ],
@@ -122,7 +122,7 @@
       "purpose": "Teach organised self-knowledge.",
       "summary": "Childhood's long shadow, the strangeness of one's own mind, and practices for converting moods into information: introspection as a discipline rather than a mood.",
       "idea_ids": ["self-knowledge-first", "wisdom-of-pessimism"],
-      "source_ids": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "source_ids": ["full-text-copy", "penguin-sample"],
       "basis": "synthesis"
     },
     {
@@ -131,7 +131,7 @@
       "purpose": "Reform how we read people and how we love.",
       "summary": "Charitable interpretation, politeness, and vulnerability with others; then the anti-romantic centrepiece — love as a skill, partners as lovable wrong people, compatibility as achievement.",
       "idea_ids": ["charitable-interpretation", "against-romanticism"],
-      "source_ids": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "source_ids": ["full-text-copy", "penguin-sample"],
       "basis": "synthesis"
     },
     {
@@ -140,7 +140,7 @@
       "purpose": "Calm the career.",
       "summary": "Status anxiety, meritocratic shame, and the search for meaning: realistic ambition and service over rank.",
       "idea_ids": ["work-and-meaning", "wisdom-of-pessimism"],
-      "source_ids": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "source_ids": ["full-text-copy", "penguin-sample"],
       "basis": "synthesis"
     },
     {
@@ -149,7 +149,7 @@
       "purpose": "Put art and ritual to work.",
       "summary": "Culture as pharmacy: art, books, music, and borrowed religious forms deployed as instruments of consolation and correction, closing the curriculum where de Botton's project began.",
       "idea_ids": ["culture-as-therapy"],
-      "source_ids": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "source_ids": ["full-text-copy", "penguin-sample"],
       "basis": "synthesis"
     }
   ],
@@ -167,7 +167,7 @@
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 5.7,
+      "score": 5.5,
       "confidence": "medium",
       "summary": "Limited as psychology, real as consolation: humane and quotable reframes for love, work, and selfhood, resting on elegant assertion rather than evidence, in a voice that decides whether the book works on you at all.",
       "dimensions": [
@@ -233,18 +233,18 @@
       },
       {
         "text": "Use culture as a pharmacy: pick the book, image, or ritual for the state you are in, not the canon you were assigned.",
-        "source_ids": ["school-of-life-press-edition"],
+        "source_ids": ["full-text-copy"],
         "basis": "synthesis"
       }
     ],
     "importance": {
-      "text": "The flagship volume of the most visible emotional-education brand of its era: a Sunday Times bestseller, a TLS Book of the Year, and the print distillation of a school, a publishing line, and a YouTube presence that shaped how a generation talks about feelings.",
-      "source_ids": ["penguin-school-of-life", "tls-books-of-year"],
+      "text": "The book matters as a compact statement of The School of Life's first decade: it treats emotional maturity as an educational task, makes applied philosophy approachable, and gives ordinary problems a shared vocabulary. Its value is accessibility and consolation rather than new theory or tested treatment.",
+      "source_ids": ["penguin-sample", "school-book-page", "full-text-copy", "smh-leigh-review"],
       "basis": "synthesis"
     },
     "author_and_purpose": {
-      "text": "De Botton founded The School of Life in 2008 to institutionalise his method of applying ideas to ordinary suffering; a decade on, this book collects the curriculum under his name, both as manifesto for emotional education and as the organisation's calling card.",
-      "source_ids": ["penguin-school-of-life", "smh-leigh-review"],
+      "text": "Alain de Botton founded The School of Life in 2008 to apply philosophy and psychology to ordinary suffering. This book is a collective anthology drawn from the organisation's press and blog, introduced and shaped by de Botton and formally credited to both. It gathers the first decade of the project into a manifesto and practical calling card.",
+      "source_ids": ["penguin-sample", "school-book-page", "smh-leigh-review"],
       "basis": "synthesis"
     },
     "evidence_quality": {
@@ -255,12 +255,12 @@
         "Makes no false claims of scientific backing; the register is openly essayistic."
       ],
       "weaknesses": [
-        "No evidence is offered or engaged for any psychological claim.",
+        "No empirical evidence is offered or engaged for its psychological claims, even though adjacent research supports the broad teachability of some social and emotional skills.",
         "The psychoanalytic frame is treated as settled truth.",
         "Universalises one temperament's consolations; boundary conditions unexamined.",
         "Critics reasonably describe the method as philosophy commodified into bitesize comfort."
       ],
-      "source_ids": ["about-humanity-review", "goodreads-school-of-life", "smh-leigh-review"],
+      "source_ids": ["about-humanity-review", "goodreads-school-of-life", "smh-leigh-review", "ei-meta-analysis", "sel-meta-analysis"],
       "basis": "synthesis"
     },
     "reception": {
@@ -346,11 +346,11 @@
     ]
   },
   "workflow": {
-    "status": "complete",
-    "reviewed_against_full_book": false,
-    "review_notes": "Built from publisher records, an independent newspaper review, documented TLS recognition, the standing critical line on de Botton's method, and reader reception.",
+    "status": "researched-partial",
+    "reviewed_against_full_book": true,
+    "review_notes": "Checked against the complete text, publisher and library records, dual-authorship evidence, independent and reader reviews, and adjacent empirical literature. Audio review remains.",
     "quality_review": {
-      "status": "passed",
+      "status": "pending",
       "reviewed_at": "2026-08-13",
       "checks": {
         "identity_and_metadata": true,
@@ -360,15 +360,15 @@
         "citation_entailment": true,
         "product_fit": true,
         "plain_language": true,
-        "audio_pronunciation": true
+        "audio_pronunciation": false
       },
       "notes": [
-        "Identity verified: Penguin page (paperback 2020-09-03, ISBN 9780241985830, 320 pages) and the 2019 School of Life Press first edition (ISBN 9781912891160).",
-        "Structure and themes follow the documented chapter list (Self, Others, Relationships, Work, Culture) and publisher description; signature claims (love as skill, mood as message, culture as pharmacy) are the organisation's most-documented positions.",
+        "Identity and dual authorship verified from Penguin's sample, the organisation's edition, WorldCat, and the complete text; Alain de Botton's exact role differs by edition, so both him and the collective are represented.",
+        "Structure, argument, examples, omissions, and reading experience were reviewed across the complete text, including Self, Others, Relationships, Work, and Culture.",
         "Counterevidence recorded: the bitesize-commodity critique, the not-his-best verdict, and reader complaints of repetition — priced into the rating.",
         "Rating scored on content only; bestseller status and brand reach excluded per the rubric.",
-        "Narration reviewed against the product contract: no research meta, content-first opening, plain language.",
-        "Pronunciation: 'Alain de Botton' phonemized and inspected before audio; a dictionary entry was added because the phonemizer mangled the surname."
+        "The broad educational premise was checked against adjacent research: teachability has support, but emotional intelligence is not one settled construct and the book does not test its own curriculum.",
+        "Narration and pronunciation review remain before completion."
       ]
     }
   }
