@@ -5,13 +5,13 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import re
 import shutil
 import subprocess
 import unicodedata
 import webbrowser
 from datetime import date
+from functools import partial
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 
@@ -564,12 +564,12 @@ class LibraryHandler(SimpleHTTPRequestHandler):
 
 def serve(args: argparse.Namespace) -> None:
     build_app()
-    os.chdir(DIST)
     url = f"http://127.0.0.1:{args.port}/"
     print(f"Library: {url}")
     if not args.no_open:
         webbrowser.open(url)
-    server = ThreadingHTTPServer(("127.0.0.1", args.port), LibraryHandler)
+    handler = partial(LibraryHandler, directory=str(DIST))
+    server = ThreadingHTTPServer(("127.0.0.1", args.port), handler)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
