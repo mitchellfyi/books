@@ -19,7 +19,16 @@
 
 <div class="shell">
   <aside class="sidebar">
-    <p class="eyebrow" id="filter-summary">Loading…</p>
+    <div class="library-controls">
+      <p class="eyebrow" id="filter-summary">Loading…</p>
+      <label class="sort-control">
+        <span>Sort by</span>
+        <select id="book-sort">
+          <option value="rating">Rating: high to low</option>
+          <option value="title">Title: A–Z</option>
+        </select>
+      </label>
+    </div>
     <nav id="book-list" aria-label="Books"></nav>
   </aside>
   <main id="book-detail" tabindex="-1"></main>

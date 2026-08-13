@@ -43,7 +43,10 @@ a { color: var(--accent); }
 
 .shell { display: grid; grid-template-columns: 18rem minmax(0, 52rem); gap: 2.5rem; max-width: 78rem; margin: 0 auto; padding: 2rem 1.25rem 8rem; }
 .sidebar { position: sticky; top: 6.5rem; align-self: start; max-height: calc(100vh - 8rem); overflow: auto; }
-.eyebrow { margin-bottom: .75rem; color: var(--muted); font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.library-controls { display: grid; gap: .55rem; margin-bottom: .75rem; }
+.eyebrow { margin: 0; color: var(--muted); font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.sort-control { display: flex; align-items: center; justify-content: space-between; gap: .5rem; color: var(--muted); font-size: .72rem; }
+.sort-control select { max-width: 9.5rem; padding: .3rem .4rem; border: 1px solid var(--line); border-radius: .4rem; color: var(--ink); background: var(--panel); }
 .book-card { width: 100%; padding: 1rem 0; border: 0; border-top: 1px solid var(--line); text-align: left; background: transparent; }
 .book-card strong, .book-card span { display: block; }
 .book-card span { margin-top: .3rem; color: var(--muted); font-size: .85rem; }

@@ -4,6 +4,7 @@ const state = {
   saved: { schema_version: 1, playlists: [] },
   serverPlaylists: false,
   voice: localStorage.getItem('voice') || null,
+  bookSort: localStorage.getItem('book-sort') || 'rating',
 };
 const el = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -29,6 +30,19 @@ const recommendedLevel = book => book.content.editorial.recommended_level;
 const bookRating = book => book.content.workflow.status === 'stub'
   ? null
   : book.content.assessment.rating || null;
+const compareTitles = (a, b) => a.title.localeCompare(b.title, 'en-GB', {
+  sensitivity: 'base', numeric: true,
+});
+const compareBooks = (a, b) => {
+  if (state.bookSort === 'title') return compareTitles(a, b);
+  const scoreA = bookRating(a)?.score;
+  const scoreB = bookRating(b)?.score;
+  if (scoreA == null && scoreB != null) return 1;
+  if (scoreA != null && scoreB == null) return -1;
+  if (scoreA !== scoreB) return scoreB - scoreA;
+  return compareTitles(a, b);
+};
+const sortedBooks = books => [...books].sort(compareBooks);
 
 // Audio comes in per-voice variants: scripts[level].audio = {voice: {url, seconds}}.
 // Playback prefers the chosen voice, then the library default, then anything.
@@ -69,7 +83,9 @@ async function start() {
       return response.json();
     });
     await loadPlaylists();
-    state.selectedBook = state.library.books[0] || null;
+    if (!['rating', 'title'].includes(state.bookSort)) state.bookSort = 'rating';
+    el('book-sort').value = state.bookSort;
+    state.selectedBook = sortedBooks(state.library.books)[0] || null;
     const speeds = state.library.config.playback_speeds;
     const defaultSpeed = state.library.config.default_playback_speed || 1;
     el('speed').innerHTML = speeds.map(speed =>
@@ -113,6 +129,11 @@ function renderDetail() {
 
 function bind() {
   el('search').addEventListener('input', renderList);
+  el('book-sort').addEventListener('change', event => {
+    state.bookSort = event.target.value;
+    localStorage.setItem('book-sort', state.bookSort);
+    renderList();
+  });
   el('playlist-toggle').addEventListener('click', () => { el('playlist').hidden = false; });
   el('playlist-close').addEventListener('click', () => { el('playlist').hidden = true; });
   el('playlist-clear').addEventListener('click', () => { state.queue = []; state.queueIndex = -1; renderPlaylist(); });
@@ -143,7 +164,7 @@ function matches(book, query) {
 
 function renderList() {
   const query = el('search').value.trim();
-  const books = state.library.books.filter(book => matches(book, query));
+  const books = sortedBooks(state.library.books.filter(book => matches(book, query)));
   el('filter-summary').textContent = `${books.length} non-fiction ${books.length === 1 ? 'book' : 'books'}`;
   el('book-list').innerHTML = books.map(book => {
     const featured = featuredItem(book);
