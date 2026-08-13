@@ -140,6 +140,26 @@ def has_inline_sources(doc: dict, pointer: str) -> bool:
     return False
 
 
+def dictionary_affects_script(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
+    """A pronunciation-dictionary change only stales audio it could actually alter.
+
+    Stale when the sidecar recorded applied terms (their entries may have
+    changed or gone), or when any current entry's spelling appears in the
+    script for the sidecar's language. Otherwise the regenerated audio would
+    be byte-identical in pronunciation, so the old file stays fresh.
+    """
+    if sidecar.get("pronunciation_terms"):
+        return True
+    lang = sidecar.get("lang", "")
+    for entry in entries:
+        if lang not in entry.get("phonemes", {}):
+            continue
+        for spelling in (entry["term"], *entry.get("aliases", [])):
+            if re.search(rf"(?<!\w){re.escape(spelling)}(?!\w)", script_text, re.IGNORECASE):
+                return True
+    return False
+
+
 def check_research(doc: dict, path: Path) -> None:
     sources = doc.get("research", {}).get("sources", [])
     ids = [s["id"] for s in sources]
@@ -439,8 +459,12 @@ def main() -> int:
                 if sidecar.get("source_script_sha256") != script_sha:
                     warn(f"{rel(audio_file)}: audio is stale (script changed since generation)")
                     entry["audio"] = "stale"
-                elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha:
-                    warn(f"{rel(audio_file)}: audio is stale (pronunciation dictionary changed)")
+                elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha \
+                        and dictionary_affects_script(
+                            sp.read_text(encoding="utf-8") if sp.exists() else "",
+                            sidecar, pronunciations_cfg["entries"]):
+                    warn(f"{rel(audio_file)}: audio is stale (pronunciation dictionary changed "
+                         "for a term this script uses)")
                     entry["audio"] = "stale"
                 else:
                     entry["audio"] = entry["audio"] or "fresh"

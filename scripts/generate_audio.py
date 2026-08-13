@@ -70,6 +70,20 @@ def voice_lang(voice: str) -> str:
     return "en-us" if voice.startswith("a") else "en-gb"
 
 
+def dictionary_affects(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
+    """A dictionary change only stales audio it could actually alter (mirrors check.py)."""
+    if sidecar.get("pronunciation_terms"):
+        return True
+    lang = sidecar.get("lang", "")
+    for entry in entries:
+        if lang not in entry.get("phonemes", {}):
+            continue
+        for spelling in (entry["term"], *entry.get("aliases", [])):
+            if re.search(rf"(?<!\w){re.escape(spelling)}(?!\w)", script_text, re.IGNORECASE):
+                return True
+    return False
+
+
 def parse_script(path: Path) -> tuple[dict, str]:
     text = path.read_text(encoding="utf-8")
     meta: dict[str, str] = {}
@@ -219,9 +233,12 @@ def generate(book_dir: Path, level: str, synth: Synthesiser, config: dict,
     if sidecar_path.exists() and not args.force:
         previous = json.loads(sidecar_path.read_text(encoding="utf-8"))
         existing = audio_dir / f"{level}.{voice}.{previous.get('output_format', 'wav')}"
-        if previous.get("source_script_sha256") == script_sha \
-                and previous.get("pronunciation_dictionary_sha256") \
-                == config["pronunciation_sha256"] and existing.exists():
+        dictionary_ok = (
+            previous.get("pronunciation_dictionary_sha256") == config["pronunciation_sha256"]
+            or not dictionary_affects(body, previous, config["pronunciations"])
+        )
+        if previous.get("source_script_sha256") == script_sha and dictionary_ok \
+                and existing.exists():
             return "up to date"
 
     synth.used_pronunciations.clear()

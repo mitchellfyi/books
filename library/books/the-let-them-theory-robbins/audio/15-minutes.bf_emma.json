@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-let-them-theory-robbins",
+  "duration": "15-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.79,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-let-them-theory-robbins/scripts/15-minutes.md",
+  "source_script_sha256": "afcc7db5d9a6ce3bc8d05a7d6cb5231ec27ccb10fea72b5258203edb8e7ae6fd",
+  "pronunciation_dictionary_sha256": "bc025b004f4263de4451d73880e0209201b545502e4b9b5d91363c90ed4a1c46",
+  "pronunciation_terms": [],
+  "script_words": 2103,
+  "audio_seconds": 1035.562,
+  "measured_wpm": 121.85,
+  "generated_at": "2026-08-13T07:33:57.335325+00:00"
+}

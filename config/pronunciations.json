@@ -13,6 +13,42 @@
       "source_url": "https://forvo.com/word/cialdini/",
       "verified_at": "2026-08-13",
       "notes": "Italian surname: 'ci' before a vowel is the 'ch' sound, so chal-DEE-nee. Documented by pronunciation dictionaries (Forvo, Italian entry) and consistent with the author's own anglicised usage. The unassisted phonemizer produced 'sigh-al-DEE-ni' (sˌaɪəldˈiːnɪ), which is wrong."
+    },
+    {
+      "term": "Joost",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "jˈəʊst",
+        "en-us": "jˈoʊst"
+      },
+      "source_url": "https://forvo.com/word/joost/",
+      "verified_at": "2026-08-13",
+      "notes": "Dutch given name pronounced yohst, documented by Forvo's Dutch entries. The unassisted phonemizer produced 'juiced' (dʒˈuːst). Case-sensitive to avoid touching unrelated words."
+    },
+    {
+      "term": "Kanye",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "kˈɑːnjeɪ",
+        "en-us": "kˈɑːnjeɪ"
+      },
+      "source_url": "https://forvo.com/word/kanye_west/",
+      "verified_at": "2026-08-13",
+      "notes": "KAHN-yay, per the artist's own usage and pronunciation dictionaries. The unassisted phonemizer produced KAN-eye (kˈanaɪ)."
+    },
+    {
+      "term": "Jay-Z",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "dʒˈeɪ zˈiː",
+        "en-us": "dʒˈeɪ zˈiː"
+      },
+      "source_url": "https://forvo.com/word/jay-z/",
+      "verified_at": "2026-08-13",
+      "notes": "The artist's name is universally jay-ZEE, including in British usage. The unassisted en-gb phonemizer produced jay-ZED (dʒˈeɪzˈɛd)."
     }
   ]
 }
