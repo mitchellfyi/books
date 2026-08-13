@@ -102,6 +102,28 @@
         "library/books/alchemy-rory-sutherland/book.json#consumer-behaviour-lab-interview"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "48-laws-related-to-laws-of-human-nature",
+      "source_id": "the-48-laws-of-power-greene",
+      "target_id": "the-laws-of-human-nature-greene",
+      "type": "related-to",
+      "basis": "explicit",
+      "description": "Greene's later book turns from external power tactics to the psychological drives behind behaviour; the natural next read for those who want the why behind the laws.",
+      "source_refs": [
+        "library/authors/robert-greene/author.json#wikipedia-robert-greene"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "48-laws-contrasts-with-influence",
+      "source_id": "the-48-laws-of-power-greene",
+      "target_id": "influence-robert-cialdini",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Both catalogue influence tactics, but Cialdini works from controlled research with an explicit ethics of defence, where Greene works from curated history with deliberate amorality; reading them together shows what each method can and cannot claim.",
+      "source_refs": [],
+      "confidence": "medium"
     }
   ]
 }
