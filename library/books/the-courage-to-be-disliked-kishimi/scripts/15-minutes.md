@@ -74,4 +74,4 @@ What the book is not matters. It is not trauma-informed therapy, an evidence rev
 
 Its strongest practical sequence is simple. Ask what shaped a pattern and what it does now. Identify the task and who bears its consequence. Accept that a responsible choice may attract disapproval. Refuse ranking without refusing growth. Pair boundaries with community and contribution. Treat the present as life rather than preparation for it.
 
-The full dialogue is worth reading if you want those ideas to confront your resistance in sequence. If you mainly want the framework and its limits, fifteen minutes carries nearly all the useful content. The book earns a content rating of 5.7 out of 10: memorable and sometimes liberating, but far too certain where evidence and human complexity demand care.
+The full dialogue is worth reading if you want those ideas to confront your resistance in sequence. Skip it if you mainly want the framework and its limits: the book rehearses a compact case more than it expands one. The book earns a content rating of 5.7 out of 10: memorable and sometimes liberating, but far too certain where evidence and human complexity demand care.

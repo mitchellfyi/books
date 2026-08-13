@@ -28,4 +28,4 @@ The book is accessible, provocative, and repetitive. The youth voices objections
 
 It is not a therapy manual, a complete account of Adler, or a practical workbook for difficult boundaries. It offers a philosophy to test. The reader must supply modern psychology, structural context, and judgment about cases in which responsibility is shared.
 
-Fifteen minutes is the best summary length because it preserves the movement from individual freedom to social contribution and makes the caveats clear. Read the full dialogue if you want its confrontational rhythm to challenge your resistance. Use the shorter version if you mainly want the framework. Content rating: 5.7 out of 10.
+Read the full dialogue if you want its confrontational rhythm to challenge your resistance. Skip the full book if you mainly want the framework: its core case is compact, while the dialogue supplies rehearsal rather than much extra evidence. Content rating: 5.7 out of 10.

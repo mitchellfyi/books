@@ -148,7 +148,7 @@ Its omissions also affect the political meaning. Nearly every problem is brought
 
 As an introduction to Adlerian ideas, the book is memorable but selective. It foregrounds purpose, lifestyle, inferiority, social interest, life tasks, encouragement, and contribution. It does not provide the history, disagreements, clinical variations, or evidential status needed to understand the whole tradition. Kishimi and Koga offer a coherent interpretation designed for transformation. The title should not be mistaken for Alfred Adler's own comprehensive statement.
 
-The book's compression profile is therefore unusual. Almost all of its decision-relevant information fits into fifteen minutes, yet some readers may still benefit from the full length. The extra value is not more evidence or a much larger theory. It is rehearsal. The philosopher repeats the reframes until they become available as inner questions. A reader is buying practice in a voice, not merely propositions. If that voice feels patronising, the repetition destroys value rather than adding it.
+The full book's extra value is not more evidence or a much larger theory. It is rehearsal. The philosopher repeats the reframes until they become available as inner questions. A reader is buying practice in a voice, not merely propositions. If that voice feels patronising, the repetition destroys value rather than adding it.
 
 The book is not a clinical guide, a modern psychology textbook, a complete history of Adler, or a detailed workbook. It gives few exercises beyond adopting its questions. It does not explain how to treat post-traumatic stress, depression, psychosis, addiction, or anxiety. It does not offer a full theory of power or collective action. It is a forceful philosophy of everyday agency.
 
@@ -156,7 +156,7 @@ Its practical value survives when several claims are narrowed. Ask about current
 
 Those corrections do not destroy the philosophy. They make it usable. The reader does not need to choose between being determined by the past and having chosen every wound. A person can be shaped and still act. They can need other people without making approval sovereign. They can hold boundaries and remain responsible to a community.
 
-Read the full dialogue if you want a confident teacher to press these ideas against resistance and if the themes of people-pleasing, comparison, resentment, or control feel personally urgent. A summary is enough if you want the conceptual tools and their limits; the full book repeats a compact framework to make it emotionally persuasive.
+Read the full dialogue if you want a confident teacher to press these ideas against resistance and if the themes of people-pleasing, comparison, resentment, or control feel personally urgent. Skip it if you only want the conceptual tools and their limits; the book repeats a compact framework to make it emotionally persuasive.
 
 The shortest durable sequence is this. Ask what shaped the pattern and what it achieves now. Identify who bears each consequence. Put full effort into the task that is yours and release command of the task that is not. Hear judgment without making it your ruler. Replace rank with direction, and pair freedom with contribution. Do not wait for a future milestone to grant value to the life already happening.
 
