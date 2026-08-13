@@ -301,6 +301,18 @@
       "source_url": "https://en.wiktionary.org/wiki/Gilgamesh",
       "verified_at": "2026-08-13",
       "notes": "Wiktionary: /ˈɡɪl.ɡə.mɛʃ/. The unassisted phonemizer produced 'GIL-gay-məsh' (ɡˈɪlɡeɪməʃ) with a wrong second vowel."
+    },
+    {
+      "term": "Nguyen",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "nwˈɪn",
+        "en-us": "nwˈɪn"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Nguyen",
+      "verified_at": "2026-08-13",
+      "notes": "Wiktionary anglicised: /wɪn/, /nwɪn/; 'noo-YEN' is listed only as a spelling pronunciation, and the unassisted phonemizer produced it (nˈuːjɛn)."
     }
   ]
 }

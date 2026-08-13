@@ -687,6 +687,44 @@
         "library/books/determined-sapolsky/book.json"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "dont-believe-written-by-joseph-nguyen",
+      "source_id": "don-t-believe-everything-you-think-nguyen",
+      "target_id": "joseph-nguyen",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/don-t-believe-everything-you-think-nguyen/book.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "dont-believe-related-to-let-them",
+      "source_id": "don-t-believe-everything-you-think-nguyen",
+      "target_id": "the-let-them-theory-robbins",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "The same publishing species: viral one-move self-help — Robbins releases control of other people, Nguyen releases engagement with your own thinking — both a real gesture oversold as universal, thin on evidence, thick on restatement.",
+      "source_refs": [
+        "library/books/don-t-believe-everything-you-think-nguyen/book.json#goodreads-dont-believe",
+        "library/books/the-let-them-theory-robbins/book.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "dont-believe-contrasts-with-socratic-method",
+      "source_id": "don-t-believe-everything-you-think-nguyen",
+      "target_id": "the-socratic-method-farnsworth",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Opposite prescriptions for the noisy mind: Nguyen counsels disengaging from thinking entirely; Farnsworth's Socrates counsels thinking harder, with method and cross-examination. One treats thought as the disease, the other as the cure.",
+      "source_refs": [
+        "library/books/don-t-believe-everything-you-think-nguyen/book.json#vernezze-review",
+        "library/books/the-socratic-method-farnsworth/book.json"
+      ],
+      "confidence": "medium"
     }
   ]
 }

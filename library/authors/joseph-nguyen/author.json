@@ -6,20 +6,118 @@
   "name": "Joseph Nguyen",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "Self-published writer whose hundred-page book about overthinking became a word-of-mouth and BookTok phenomenon, selling millions without a traditional publisher.",
+      "source_ids": ["literary-reporter-nguyen", "josephnguyen-site"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Nguyen wrote Don't Believe Everything You Think out of his own overthinking and self-doubt rather than for a market, self-published it in March 2022, and watched it spread through online communities and TikTok passages until it reached the New York Times bestseller list, two million copies, and more than thirty languages. Authors Equity later repackaged the book in an expanded hardcover edition for bookshop distribution. A follow-up on decision-making is announced. Little else about him is publicly documented — the author is considerably less visible than the book.",
+      "source_ids": ["literary-reporter-nguyen", "josephnguyen-site"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His method is testimony rather than research: distil what dissolved his own suffering into the shortest possible statement, repeat it in variations, and keep the spiritual vocabulary — Universe, infinite intelligence — unattached to any named tradition. Reviewers place the material in the lineage of Zen, Stoic, and inside-out psychology ideas; the book itself does not cite sources.",
+      "source_ids": ["literary-reporter-nguyen", "vernezze-review"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "No claimed credentials in psychology or contemplative scholarship; his authority is autobiographical and his readership's testimony. That is not disqualifying for the genre, but it means the book's claims rest entirely on resonance rather than evidence.",
+      "source_ids": ["vernezze-review", "goodreads-dont-believe"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Nguyen writes as a fellow sufferer offering the exit he found, which gives the book its warmth and its blind spots: universal claims from a sample of one, no engagement with clinical psychology or the traditions he parallels, and no boundary conditions for readers whose distress is disorder rather than overthinking.",
+      "source_ids": ["vernezze-review", "sebastian-act-review", "goodreads-dont-believe"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Don't Believe Everything You Think",
+      "year": 2022,
+      "kind": "Book",
+      "relationship": "The phenomenon; subject of this profile's book entry.",
+      "source_ids": ["josephnguyen-site"]
+    },
+    {
+      "title": "The Overthinker's Guide to Making Decisions",
+      "year": 2026,
+      "kind": "Book",
+      "relationship": "Announced follow-up on the same restless-mind territory.",
+      "source_ids": ["literary-reporter-nguyen"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "literary-reporter-nguyen",
+        "title": "The Best Books Come from the Greatest Pains: Joseph Nguyen",
+        "author_or_publisher": "The Literary Reporter",
+        "url": "https://theliteraryreporter.com/the-best-books-come-from-the-greatest-pains-joseph-nguyen/",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "Origin in personal suffering, Zen-inspired framing, the self-publishing-to-Authors-Equity path, sales and translation figures, and the announced follow-up.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Friendly interview."
+      },
+      {
+        "id": "josephnguyen-site",
+        "title": "Joseph Nguyen (author site)",
+        "author_or_publisher": "josephnguyen.org",
+        "url": "https://josephnguyen.org/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Bestseller status and translation count as the author states them.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Marketing copy."
+      },
+      {
+        "id": "vernezze-review",
+        "title": "Review of Don't Believe Everything You Think",
+        "author_or_publisher": "Peter Vernezze, Therapist with Tinnitus",
+        "url": "https://therapistwithtinnitus.substack.com/p/review-of-dont-believe-everything",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The professional characterisation of the book's method and its limits, used for the perspective assessment.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Single reviewer."
+      },
+      {
+        "id": "sebastian-act-review",
+        "title": "Don't Believe Everything You Think (review essay)",
+        "author_or_publisher": "Dr Michael Sebastian, Medium",
+        "url": "https://medium.com/@babunow99/dont-believe-everything-you-think-by-joseph-nguyen-3b540c722966",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The ACT-parallel reading of the author's method.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Personal essay."
+      },
+      {
+        "id": "goodreads-dont-believe",
+        "title": "Don't Believe Everything You Think",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/60726415-don-t-believe-everything-you-think",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "The documented reception split informing the limits assessment.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/name": ["josephnguyen-site"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Thin public record; profile kept to what is documented.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

@@ -4,28 +4,167 @@
   "id": "don-t-believe-everything-you-think-nguyen",
   "type": "book",
   "title": "Don't Believe Everything You Think",
-  "alternate_titles": [],
+  "alternate_titles": [
+    "Don't Believe Everything You Think: Why Your Thinking Is The Beginning & End Of Suffering"
+  ],
   "author_ids": ["joseph-nguyen"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2022-03-28",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "Self-published original",
+        "publisher": "Joseph Nguyen (self-published)",
+        "publication_date": "2022-03-28",
+        "isbn_10": null,
+        "isbn_13": null,
+        "format": "Paperback",
+        "pages": 175
+      },
+      {
+        "label": "Expanded edition",
+        "publisher": "Authors Equity / Books By Joseph Nguyen",
+        "publication_date": "2024",
+        "isbn_10": null,
+        "isbn_13": "9798893310153",
+        "format": "Hardcover",
+        "pages": null
+      }
+    ],
+    "contents": [
+      "The root cause of suffering: not events and not thoughts, but thinking",
+      "Thoughts versus thinking: spontaneous mental events versus the elaboration we add",
+      "The inside-out claim: feelings come from thought, not circumstances",
+      "Non-thinking, flow, and intuition: the mind that quiets hears its own wisdom",
+      "Goals from inspiration versus goals from desperation",
+      "Unconditional love and peace as the default state beneath thinking",
+      "Chapter summaries and reflection questions throughout; short chapters, deliberately repetitive"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "acceptance",
+      "emotional-regulation",
+      "non-fiction",
+      "personal-development",
+      "self-help"
+    ],
+    "audiences": [
+      "Overthinkers meeting thought-distancing ideas for the first time",
+      "Readers who want spiritual self-help without jargon or length",
+      "BookTok readers following the phenomenon",
+      "People in low-stakes distress; not a substitute for clinical care"
+    ],
+    "formats_available": ["Paperback", "Hardcover", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "sands-expanded-edition",
+        "title": "Don't Believe Everything You Think (Expanded Edition)",
+        "author_or_publisher": "Simon & Schuster (distribution page)",
+        "url": "https://www.simonandschuster.com/books/Dont-Believe-Everything-You-Think-(Expanded-Edition)/Joseph-Nguyen/Books-By-Joseph-Nguyen/9798893310153",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Expanded edition bibliographic facts: ISBN 9798893310153 under the Books By Joseph Nguyen imprint, and the publisher description of the thesis.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Retail/distribution copy."
+      },
+      {
+        "id": "goodreads-dont-believe",
+        "title": "Don't Believe Everything You Think",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/60726415-don-t-believe-everything-you-think",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication date 2022-03-28, ~175 pages, 3.79 average over ~68,000 ratings, and the documented split: praised as a lifeline for overthinkers; criticised as repetitive, evidence-free, oversimplified, and spiritually unattributed.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters; used for both content structure and reception."
+      },
+      {
+        "id": "vernezze-review",
+        "title": "Review of Don't Believe Everything You Think (Authors Equity, 2024)",
+        "author_or_publisher": "Peter Vernezze, Therapist with Tinnitus (Substack)",
+        "url": "https://therapistwithtinnitus.substack.com/p/review-of-dont-believe-everything",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A therapist's substantive critique: the thought/thinking dichotomy misdescribes experience (first reactions arrive loaded — the Stoics' 'impression', REBT's 'activating event'); letting go of thoughts 'is simple in the way that running a marathon is simple' and the training is omitted; verdict 'radically incomplete but potentially misleading' despite elegant presentation; notes the PAUSE method as the useful part and the Authors Equity 2024 edition.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Personal Substack of a practising therapist and philosophy PhD; single reviewer."
+      },
+      {
+        "id": "sebastian-act-review",
+        "title": "Don't Believe Everything You Think by Joseph Nguyen (review essay)",
+        "author_or_publisher": "Dr Michael Sebastian, Medium",
+        "url": "https://medium.com/@babunow99/dont-believe-everything-you-think-by-joseph-nguyen-3b540c722966",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "An analysis mapping the book onto Acceptance and Commitment Therapy: its moves are cognitive defusion and acceptance simplified for lay readers, effective as a gateway, without ACT's methodological rigour or evidence base.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Personal Medium essay; credentials as stated by the author."
+      },
+      {
+        "id": "literary-reporter-nguyen",
+        "title": "The Best Books Come from the Greatest Pains: Joseph Nguyen",
+        "author_or_publisher": "The Literary Reporter",
+        "url": "https://theliteraryreporter.com/the-best-books-come-from-the-greatest-pains-joseph-nguyen/",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "Origin story (written out of the author's own overthinking and self-doubt), the Zen-inspired framing, the self-published-to-Authors-Equity path, 2M+ copies in 30+ languages, and the forthcoming follow-up.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Friendly interview; promotional register."
+      },
+      {
+        "id": "josephnguyen-site",
+        "title": "Joseph Nguyen — Don't Believe Everything You Think",
+        "author_or_publisher": "josephnguyen.org",
+        "url": "https://josephnguyen.org/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "The author's own framing: NYT and international bestseller status, 31+ languages, and the book's promise of discovering the root cause of suffering.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Marketing copy."
+      },
+      {
+        "id": "wikipedia-three-principles",
+        "title": "Three Principles Psychology",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Three_Principles_Psychology",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Context for the unattributed tradition the book's inside-out claims parallel: the Mind/Consciousness/Thought framework from Sydney Banks, its limited evidence base, and documented criticisms including the charge of belief-system-as-science.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Documents the tradition, not the book; the parallel is noted by critical reviewers, not acknowledged by the author."
+      }
+    ],
+    "citations": {
+      "/title": ["sands-expanded-edition", "goodreads-dont-believe"],
+      "/alternate_titles": ["josephnguyen-site"],
+      "/author_ids": ["sands-expanded-edition"],
+      "/bibliography/first_published": ["goodreads-dont-believe"],
+      "/bibliography/original_language": ["goodreads-dont-believe"],
+      "/bibliography/editions/0": ["goodreads-dont-believe", "literary-reporter-nguyen"],
+      "/bibliography/editions/1": ["sands-expanded-edition", "vernezze-review", "literary-reporter-nguyen"],
+      "/bibliography/contents": ["goodreads-dont-believe", "vernezze-review", "sebastian-act-review", "josephnguyen-site"],
+      "/discovery/tag_ids": ["goodreads-dont-believe"],
+      "/discovery/audiences": ["goodreads-dont-believe", "sebastian-act-review"],
+      "/discovery/formats_available": ["sands-expanded-edition", "josephnguyen-site"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the publisher record, two independent professional reviews (one substantively critical), a documented interview, the reader-reception record, and context on the unattributed tradition; no full-text read.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: confirm expanded-edition page count against a physical copy."
+    ]
   }
 }
