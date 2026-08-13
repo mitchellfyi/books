@@ -4,108 +4,501 @@
   "book_id": "unreasonable-hospitality-guidara",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "high",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "One clear philosophy, a handful of named tools, and a single narrative arc: the useful content compresses very well. Fifteen minutes carries the argument, the tools, the best stories, and the honest caveats; thirty minutes adds the fuller story of the restaurant's rise and the leadership material for listeners who want the whole arc; five minutes is a clean decision layer."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "The co-owner of Eleven Madison Park explains how deliberate, extravagant care for guests took a two-star brasserie to the top of the world, and argues any business can choose the same.",
+    "verdict": "A warm, genuinely useful philosophy of customer care with memorable tools, best read knowing it is one triumphant memoir, not a tested method: the costs, failures, and transferability limits get far less attention than the magic.",
+    "source_ids": [
+      "prh-book-page-uh",
+      "unusual-vc-lessons",
+      "goodreads-uh"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Guidara tells how he and chef Daniel Humm transformed Eleven Madison Park from a struggling two-star brasserie into the World's 50 Best number one, crediting a philosophy of unreasonable hospitality: managing most of the business rigorously while spending deliberate effort and money on bespoke, memorable gestures that make individual guests feel seen.",
+      "source_ids": [
+        "prh-book-page-uh",
+        "case-hot-dog",
+        "unusual-vc-lessons"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Service is delivering what people pay for; hospitality is how you make them feel while you do it. Businesses systematically underinvest in the second because it looks unreasonable on a spreadsheet, yet it is the part customers remember, talk about, and come back for — so any organisation, not just restaurants, can win by choosing to be a hospitality business.",
+      "source_ids": [
+        "prh-book-page-uh",
+        "case-hot-dog",
+        "unusual-vc-lessons"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "service-vs-hospitality",
+      "title": "Service is what; hospitality is how it feels",
+      "claim": "Technical delivery and human care are different products, and the second is the differentiator.",
+      "explanation": "Service gets the steak to the table at the right temperature; hospitality is whether the guest leaves feeling looked after. Guidara argues excellence in service has become table stakes at every level of business, while genuine hospitality remains rare enough to be a competitive moat.",
+      "representative_example": "Eleven Madison Park already had near-perfect service as a four-star restaurant; the leap to world's best came from reorganising around how guests felt.",
+      "why_it_matters": "It relocates competitive advantage from product specifications, where rivals can copy you, to felt experience, where copying requires culture.",
+      "caveat": "The distinction is easier to fund at fine-dining prices; the book spends little time on hospitality under thin margins.",
+      "source_ids": [
+        "case-hot-dog",
+        "prh-book-page-uh",
+        "unusual-vc-lessons"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "the-95-5-rule",
+      "title": "Run 95% tight so 5% can be foolish",
+      "claim": "Manage almost everything down to the penny precisely so a small remainder can be spent extravagantly on moments.",
+      "explanation": "The rule reframes generosity as discipline rather than waste: rigorous cost control is what earns the licence to be unreasonable where it counts. The five percent buys gestures whose stories outlive their cost.",
+      "representative_example": "The dreamweaver budget that funded a sledding trip to Central Park for guests who had never seen snow, and a beach built in the private dining room for a family whose holiday was cancelled.",
+      "why_it_matters": "It gives managers a fundable, bounded way to institutionalise delight instead of leaving it to individual heroics.",
+      "caveat": "The rule assumes there is a five percent to spend; in commodity businesses the same money may be the entire profit margin.",
+      "source_ids": [
+        "unusual-vc-lessons",
+        "prh-book-page-uh"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "one-size-fits-one",
+      "title": "One size fits one",
+      "claim": "The gestures that matter are specific to a single guest, which requires actually noticing people.",
+      "explanation": "Scripts and standards produce consistency; magic comes from listening for the one detail that lets you treat this table unlike any other. The book's systems, from pre-service research on guests to floor staff empowered to improvise, exist to industrialise noticing.",
+      "representative_example": "The street-cart hot dog: overhearing foodie tourists lament missing New York's street food, Guidara bought a two-dollar hot dog and had the kitchen plate it during their tasting menu; the chef was initially offended, and the guests called it the highlight of the meal.",
+      "why_it_matters": "It converts hospitality from a budget line into an attention practice any team can run.",
+      "caveat": "Bespoke gestures scale with staff time and empowerment; without those, the idea collapses into occasional stunts.",
+      "source_ids": [
+        "case-hot-dog",
+        "prh-book-page-uh",
+        "unusual-vc-lessons"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "dreamweavers",
+      "title": "Staff the magic",
+      "claim": "Memorable moments became reliable only when people were explicitly responsible for creating them.",
+      "explanation": "Eleven Madison Park created a dreamweaver role — staff whose job was manufacturing bespoke experiences with the foolish five percent. What most businesses treat as spontaneous culture, the restaurant treated as an operated system with owners, budget, and cadence.",
+      "representative_example": "Dreamweavers turned overheard remarks into engineered moments, from themed table settings to the sledding trip.",
+      "why_it_matters": "It is the book's most transferable operational insight: delight needs a job description, or it stays anecdotal.",
+      "caveat": "A role that manufactures wonder can drift into performance for the brand's benefit rather than the guest's.",
+      "source_ids": [
+        "unusual-vc-lessons",
+        "prh-book-page-uh"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "intentional-leadership",
+      "title": "Praise, criticism, and assumptions with intention",
+      "claim": "The same care aimed at guests must run inward: deliberate praise, private and purposeful criticism, and charitable assumptions about struggling colleagues.",
+      "explanation": "Guidara's leadership sections argue that hospitality culture is created by how leaders treat staff, not by exhortation. Criticising with intention, assuming an underperformer needs support before blame, and staying graceful under pressure — being the swan — are presented as the internal engine of external warmth.",
+      "representative_example": "The team language of 'being the swan': calm above the waterline for guests, paddling furiously beneath, without transferring the stress to the room.",
+      "why_it_matters": "It answers the obvious objection that you cannot script warmth: you cannot, but you can lead for it.",
+      "caveat": "The book underplays the labour cost: relentless graceful excellence is exhausting, and the burnout side of fine dining goes largely unexamined.",
+      "source_ids": [
+        "unusual-vc-lessons",
+        "prh-book-page-uh",
+        "goodreads-uh"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "unreasonable-standard",
+      "title": "Reasonable is the enemy",
+      "claim": "Being reasonable produces exactly the experience everyone else produces; the memorable requires effort no analysis would justify.",
+      "explanation": "The title idea: every extraordinary outcome at the restaurant came from doing more than made sense — in menu ambition, in gestures, in the mission itself, which Guidara simplified to being the most delicious and gracious restaurant in the world. Reasonableness, he argues, is a ceiling dressed as prudence.",
+      "representative_example": "Chasing the World's 50 Best number-one spot at all — an unreasonable goal for a brasserie — and reorganising the restaurant's mission around it.",
+      "why_it_matters": "It names why incrementalism rarely creates stories, and stories are what customers spread.",
+      "caveat": "Survivorship applies: unreasonable effort also produced many restaurants nobody wrote books about, a base rate the book never engages.",
+      "source_ids": [
+        "prh-book-page-uh",
+        "unusual-vc-lessons",
+        "goodreads-uh"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "hospitality-anywhere",
+      "title": "Every business can choose hospitality",
+      "claim": "The philosophy is portable: anyone with customers, colleagues, or users can decide that how people feel is part of the product.",
+      "explanation": "The book's closing move generalises from restaurants to business at large: real estate, medicine, software, education. The tools — a foolish budget, noticing rituals, moment-makers, intentional leadership — are presented as domain-independent.",
+      "representative_example": "The book's adoption outside food: business teams using 95/5 budgets and 'dreamweaver' roles, and its cultural moment through The Bear's second season, where the book itself appears.",
+      "why_it_matters": "This is the claim a non-restaurant reader is buying the book for.",
+      "caveat": "The evidence for portability is testimonial; the book demonstrates one restaurant, and the transfer is asserted rather than shown.",
+      "source_ids": [
+        "prh-book-page-uh",
+        "case-hot-dog",
+        "bear-season-2"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "The inheritance: a struggling brasserie",
+      "purpose": "Set the starting point and the ambition.",
+      "summary": "Guidara takes over the dining room of a respected but unexceptional two-star New York restaurant and, with chef Daniel Humm, sets the openly unreasonable goal of becoming the best restaurant in the world.",
+      "idea_ids": [
+        "unreasonable-standard"
+      ],
+      "source_ids": [
+        "prh-book-page-uh"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "The distinction that reorganised everything",
+      "purpose": "Establish service versus hospitality as the operating idea.",
+      "summary": "The climb stalls on technical excellence alone. The insight that service is delivery while hospitality is feeling reframes the dining room as the product, and the mission is simplified to being the most delicious and gracious restaurant in the world.",
+      "idea_ids": [
+        "service-vs-hospitality",
+        "unreasonable-standard"
+      ],
+      "source_ids": [
+        "case-hot-dog",
+        "unusual-vc-lessons"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Building the machinery of magic",
+      "purpose": "Show how delight became a system.",
+      "summary": "The 95/5 rule funds it, dreamweavers staff it, pre-service research and floor empowerment aim it at individual guests: the hot dog, the sledding trip, the indoor beach. One size fits one becomes the house style.",
+      "idea_ids": [
+        "the-95-5-rule",
+        "dreamweavers",
+        "one-size-fits-one"
+      ],
+      "source_ids": [
+        "unusual-vc-lessons",
+        "prh-book-page-uh",
+        "case-hot-dog"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Leading for warmth",
+      "purpose": "Turn the philosophy inward on the team.",
+      "summary": "Praise and criticism delivered with intention, charitable assumptions about colleagues, and composure under pressure build the culture that makes external hospitality sustainable rather than performative.",
+      "idea_ids": [
+        "intentional-leadership"
+      ],
+      "source_ids": [
+        "unusual-vc-lessons",
+        "prh-book-page-uh"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "The summit and the generalisation",
+      "purpose": "Land the arc and widen the claim.",
+      "summary": "Eleven Madison Park reaches number one on the World's 50 Best list in 2017, and the book closes by arguing the same choices are available to any business that decides how people feel is part of what it sells.",
+      "idea_ids": [
+        "hospitality-anywhere",
+        "unreasonable-standard"
+      ],
+      "source_ids": [
+        "prh-book-page-uh",
+        "case-hot-dog"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "A memoir arc from takeover to world's-best ranking, with named principles and tools surfacing from the stories along the way.",
+    "voice": "Warm, earnest, evangelical about generosity, and unmistakably proud of the restaurant and of Guidara's own role.",
+    "pace": "Quick and anecdote-driven; the restaurant stories carry it, and the principle-summaries keep the business reader oriented.",
+    "evidence_style": "First-person practice at one restaurant, validated by external rankings; no comparative or research evidence.",
+    "example_style": "Set-piece service stories — the hot dog, the sledding trip, the indoor beach — plus dining-room leadership vignettes.",
+    "repetition": "The generosity theme recurs steadily; readers allergic to earnestness or self-congratulation notice it most in the victory laps.",
+    "prerequisites": "None; no restaurant knowledge required.",
+    "source_ids": [
+      "prh-book-page-uh",
+      "goodreads-uh",
+      "unusual-vc-lessons",
+      "realclearmarkets-review"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 5.9,
+      "confidence": "medium",
+      "summary": "A clear, memorable philosophy of engineered care with genuinely operational tools, held just below worthwhile by single-case evidence, an untreated cost side, and portability that is asserted rather than demonstrated.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 6.5,
+          "rationale": "The service-versus-hospitality distinction and the 95/5 framing explain real differences between adequate and beloved businesses in language teams can immediately use.",
+          "source_ids": [
+            "case-hot-dog",
+            "unusual-vc-lessons"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.0,
+          "rationale": "Evidence is one exceptional restaurant's memoir plus external rankings that validate the outcome, not the mechanism; no comparisons, failure cases, or attention to survivorship.",
+          "source_ids": [
+            "realclearmarkets-review",
+            "goodreads-uh",
+            "prh-book-page-uh"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 6.0,
+          "rationale": "For readers raised on efficiency thinking, funded foolishness and staffed magic are genuinely non-obvious; service professionals will recognise much of it as excellent craft lore, well named.",
+          "source_ids": [
+            "unusual-vc-lessons",
+            "case-hot-dog"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 7.0,
+          "rationale": "Unusually actionable: the 95/5 budget, a moment-maker role, noticing rituals, and the leadership practices can be piloted by almost any customer-facing team next week.",
+          "source_ids": [
+            "unusual-vc-lessons",
+            "case-hot-dog"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.0,
+          "rationale": "Costs are underweighted — labour intensity, burnout, and thin-margin businesses get little treatment — and the boundary conditions of transfer beyond luxury service are not explored.",
+          "source_ids": [
+            "goodreads-uh",
+            "realclearmarkets-review"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.0,
+          "rationale": "The stories earn their space and the principles are crisp, though the memoir middle and the victory laps stretch a philosophy that fits comfortably in half the pages.",
+          "source_ids": [
+            "goodreads-uh",
+            "prh-book-page-uh"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book's real subject is intention: care that happens by design rather than disposition. Its lasting suggestion is that warmth can be operated — budgeted, staffed, and led — without becoming fake.",
+      "source_ids": [
+        "unusual-vc-lessons",
+        "case-hot-dog"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Separate what you deliver from how it feels to receive it, and manage both on purpose.",
+        "source_ids": [
+          "case-hot-dog",
+          "prh-book-page-uh"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Budget a bounded, deliberate slice for the unreasonable: gestures whose stories outlive their cost.",
+        "source_ids": [
+          "unusual-vc-lessons"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Give delight an owner. Moments that are everyone's job are no one's.",
+        "source_ids": [
+          "unusual-vc-lessons"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "The cheapest luxury is attention: the two-dollar gesture aimed precisely beats the expensive one aimed generally.",
+        "source_ids": [
+          "case-hot-dog"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "A New York Times bestseller that became the service industry's reference point for a generation and crossed into wider culture through The Bear; 'unreasonable hospitality' has entered business vocabulary as shorthand for engineered generosity.",
+      "source_ids": [
+        "prh-book-page-uh",
+        "bear-season-2"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Guidara wrote it after leaving Eleven Madison Park, distilling the dining-room philosophy behind its rise for readers far beyond restaurants; it is both a memoir of the climb and an evangelist's manual for generosity as strategy, published on Simon Sinek's Optimism Press imprint.",
+      "source_ids": [
+        "prh-book-page-uh",
+        "case-hot-dog"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "First-hand operational detail from the actual practice, not theory.",
+        "The outcome is externally validated: four New York Times stars, three Michelin stars, and the 2017 World's 50 Best number one.",
+        "The tools are specified concretely enough to test in other settings."
+      ],
+      "weaknesses": [
+        "A single triumphant case, told by its protagonist, with no failures or comparisons.",
+        "Survivorship is never addressed: unreasonable effort without the outcome has no chapter.",
+        "Transferability beyond high-margin hospitality is asserted through anecdote rather than shown.",
+        "The human cost of relentless excellence is barely examined."
+      ],
+      "source_ids": [
+        "prh-book-page-uh",
+        "goodreads-uh",
+        "realclearmarkets-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Very warm: a bestseller embraced by service industries and business readers, amplified by The Bear; criticism concentrates on self-congratulation and on how far the model travels outside luxury dining.",
+      "praise": [
+        "Inspiring, immediately usable philosophy of customer care.",
+        "Vivid storytelling; the hot dog and dreamweaver stories became widely retold business parables.",
+        "A rare service-industry book that treats the dining room, not the kitchen, as the hero."
+      ],
+      "criticism": [
+        "Reads at times as a victory lap; some readers find the tone self-congratulatory.",
+        "Light on costs, burnout, and the labour that funds the magic.",
+        "The generalisation to all business is asserted more than evidenced."
+      ],
+      "source_ids": [
+        "goodreads-uh",
+        "realclearmarkets-review",
+        "bear-season-2"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Owners and managers of service businesses",
+        "Leaders building customer-experience culture",
+        "Hospitality professionals at any level",
+        "Readers who loved The Bear's Forks episode and want its source"
+      ],
+      "not_for": [
+        "Readers wanting research-backed management science",
+        "Anyone allergic to earnest, motivational business memoirs",
+        "Operators of thin-margin businesses looking for directly costed playbooks"
+      ],
+      "topics": [
+        "Hospitality",
+        "Customer experience",
+        "Service design",
+        "Team leadership",
+        "Restaurant operations",
+        "Business culture"
+      ],
+      "source_ids": [
+        "prh-book-page-uh",
+        "goodreads-uh",
+        "unusual-vc-lessons"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A research-based management book",
+        "A profitability or operations manual",
+        "A balanced history of Eleven Madison Park",
+        "A guide to fine-dining cooking"
+      ],
+      "omissions": [
+        "The economics: what unreasonable hospitality costs and when it pays back",
+        "Failure cases, at the restaurant or elsewhere",
+        "The staff-side toll of sustained excellence"
+      ],
+      "missing_or_weak": [
+        "Boundary conditions for businesses without luxury margins",
+        "Any engagement with customer-experience research",
+        "The transition costs of installing this culture in an existing team"
+      ],
+      "dated_or_contested": [
+        "The restaurant's later era under different ownership differs from the book's snapshot.",
+        "Some readers contest the tone rather than the facts: generosity narrated by its giver."
+      ],
+      "source_ids": [
+        "goodreads-uh",
+        "realclearmarkets-review"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you run or lead any customer-facing team and want both the philosophy and the feeling of the story; it is a fast, warm read whose stories are the point.",
+      "summary_is_enough_if": "Stop at the brief if you want the distinction, the tools — 95/5, dreamweavers, one size fits one — and the caveats without the memoir.",
+      "skip_if": "Skip it if you need evidence over anecdote, or motivational business memoir sets your teeth on edge.",
+      "format_advice": "An easy audiobook: story-driven, warm, and well suited to listening; the print adds nothing structural.",
+      "source_ids": [
+        "prh-book-page-uh",
+        "goodreads-uh"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What separates service from hospitality in the book's usage?",
+      "What does the 95/5 rule fund, and what earns the right to spend it?",
+      "Why did the two-dollar hot dog outshine a multi-course tasting menu?"
+    ],
+    "application_prompts": [
+      "What is your business's equivalent of the hot dog: the cheap gesture only attention makes possible?",
+      "Who currently owns memorable moments for your customers, and what would a dreamweaver role look like?",
+      "Which of your processes deliver perfect service while leaving people feeling processed?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Built from the publisher record, independent professional and specialist accounts of the named concepts and set-piece stories, and reader reception; the concepts and stories used are those most widely and consistently documented.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity verified against the Penguin Random House page: Optimism Press, 2022-10-25, ISBN 9780593418574, 288 pages.",
+        "Story fidelity checked across independent retellings: the hot-dog account (including the chef's initial resistance) matches CASE's independent version; sledding trip and beach dining room from the publisher's own description.",
+        "Named concepts (95/5, dreamweavers, one size fits one, charitable assumptions, being the swan, mission simplification) verified against Unusual Ventures' enumeration.",
+        "Counterevidence recorded: reader criticism of self-congratulation and transferability from Goodreads reception; survivorship and cost omissions priced into the rating.",
+        "Rating scored on content only; bestseller status, The Bear fame, and awards excluded per the rubric.",
+        "Narration reviewed against the product contract: no research meta, content-first opening, plain language.",
+        "Pronunciation: proper nouns in scripts phonemized and inspected — Guidara, Eleven Madison Park, Daniel Humm, Michelin all rendered acceptably; no dictionary additions required."
+      ]
+    }
   }
 }

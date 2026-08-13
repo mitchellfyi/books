@@ -6,20 +6,111 @@
   "name": "Will Guidara",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American restaurateur who co-led Eleven Madison Park to the top of the World's 50 Best Restaurants list and turned its service philosophy into the hospitality manifesto Unreasonable Hospitality.",
+      "source_ids": ["prh-book-page-uh", "cornell-hotel-society", "goodreads-uh"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Guidara trained in hospitality management at Cornell and spent his career in New York restaurants, becoming general manager and then co-owner of Eleven Madison Park with chef Daniel Humm. Under their leadership the restaurant earned four stars from the New York Times, three Michelin stars, and in 2017 the number-one spot on the World's 50 Best Restaurants list. He later sold his stake, founded the Welcome Conference for hospitality professionals, wrote Unreasonable Hospitality in 2022, received the Wall Street Journal Innovator Award, and became a co-producer on the FX series The Bear.",
+      "source_ids": ["prh-book-page-uh", "cornell-hotel-society", "case-hot-dog"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His formation is operational rather than culinary: dining-room leadership, service systems, and team culture in high-end New York restaurants. The book presents the dining room, not the kitchen, as the seat of a restaurant's identity, which mirrors his own career on the floor.",
+      "source_ids": ["prh-book-page-uh", "cornell-hotel-society"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Deep practical expertise in service operations, guest experience, and hospitality culture at the most demanding level of fine dining, validated by external rankings and awards. He is not a researcher; his claims rest on practice at one extraordinary restaurant rather than comparative evidence.",
+      "source_ids": ["cornell-hotel-society", "prh-book-page-uh", "realclearmarkets-review"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Guidara writes as a proud practitioner and evangelist for generosity in business. That produces vivid, credible operational detail and a memoir's blind spots: the sample is one luxury restaurant, failures and costs get light treatment, and some readers find the self-congratulation grating. His ideas travel best where a team serves identifiable customers and worst where the 'unreasonable' effort must come from workers with no fine-dining margins behind them.",
+      "source_ids": ["goodreads-uh", "realclearmarkets-review", "prh-book-page-uh"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Unreasonable Hospitality: The Remarkable Power of Giving People More Than They Expect",
+      "year": 2022,
+      "kind": "Book",
+      "relationship": "His only book: the Eleven Madison Park story converted into a philosophy of hospitality for any business.",
+      "source_ids": ["prh-book-page-uh"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "prh-book-page-uh",
+        "title": "Unreasonable Hospitality",
+        "author_or_publisher": "Penguin Random House / Optimism Press",
+        "url": "https://www.penguinrandomhouse.com/books/674289/unreasonable-hospitality-by-will-guidara/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Author career claims: Eleven Madison Park co-ownership, world's-best designation, Welcome Conference, The Bear co-producer credit, WSJ Innovator Award.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher bio; promotional framing."
+      },
+      {
+        "id": "cornell-hotel-society",
+        "title": "Guidara — Hotelie Hall of Fame",
+        "author_or_publisher": "Cornell Hotel Society",
+        "url": "https://cornellhotelsociety.com/hotelie-hall-of-fame/inductees-2024/guidara/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Cornell hospitality training, career arc, and industry recognition independent of the publisher.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Alumni honour; celebratory tone."
+      },
+      {
+        "id": "case-hot-dog",
+        "title": "A Chef and a Hot Dog: Unreasonable Hospitality and Advancement Goals",
+        "author_or_publisher": "CASE",
+        "url": "https://www.case.org/resources/chef-and-hot-dog-unreasonable-hospitality-and-advancement-goals",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent retelling of the hot-dog story and the book's core distinction as applied outside restaurants.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Application-focused summary, not a critical review."
+      },
+      {
+        "id": "goodreads-uh",
+        "title": "Unreasonable Hospitality",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/60018618-unreasonable-hospitality",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Strongly positive aggregate reception alongside recurring reader criticisms of self-congratulation.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      },
+      {
+        "id": "realclearmarkets-review",
+        "title": "Book Review: Will Guidara's 'Unreasonable Hospitality'",
+        "author_or_publisher": "RealClearMarkets",
+        "url": "https://www.realclearmarkets.com/articles/2023/02/17/book_review_will_guidaras_unreasonable_hospitality_882287.html",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent professional assessment of the book's argument and its business framing.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Opinion outlet with a market-commentary angle."
+      }
+    ],
+    "citations": {
+      "/name": ["prh-book-page-uh", "cornell-hotel-society"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile from publisher, independent industry recognition, professional review, and reader reception; private-life detail excluded.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

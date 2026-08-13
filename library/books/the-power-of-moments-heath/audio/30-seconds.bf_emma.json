@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-power-of-moments-heath",
+  "duration": "30-seconds",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-power-of-moments-heath/scripts/30-seconds.md",
+  "source_script_sha256": "a8742f441e1cdbd774c370348e1e5c928b53cae762fbfa40b00e114a97fad423",
+  "pronunciation_dictionary_sha256": "749e2ab64539bcd1df7475cdbc1dc9db469a216689c70ea8f9964a12f11a650a",
+  "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 78,
+  "audio_seconds": 32.792,
+  "measured_wpm": 142.72,
+  "generated_at": "2026-08-13T11:05:43.737907+00:00"
+}

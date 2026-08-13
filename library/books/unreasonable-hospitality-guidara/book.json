@@ -4,28 +4,145 @@
   "id": "unreasonable-hospitality-guidara",
   "type": "book",
   "title": "Unreasonable Hospitality",
-  "alternate_titles": [],
+  "alternate_titles": ["Unreasonable Hospitality: The Remarkable Power of Giving People More Than They Expect"],
   "author_ids": ["will-guidara"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2022",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US first edition",
+        "publisher": "Optimism Press (Penguin Random House)",
+        "publication_date": "2022-10-25",
+        "isbn_10": "0593418573",
+        "isbn_13": "9780593418574",
+        "format": "Hardcover",
+        "pages": 288
+      }
+    ],
+    "contents": [
+      "The Eleven Madison Park story: from struggling two-star brasserie to the World's 50 Best number one",
+      "The distinction between service and hospitality",
+      "Being unreasonable: the 95/5 rule and spending the last five percent foolishly",
+      "Dreamweavers: staffing for bespoke gestures, from the street-cart hot dog to the sledding trip",
+      "Leading the team: praise and criticism with intention, charitable assumptions, being the swan",
+      "One size fits one: making every guest feel seen",
+      "Hospitality as a strategy any business can choose"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "business",
+      "communication",
+      "experience-design",
+      "hospitality",
+      "leadership",
+      "non-fiction",
+      "organisational-behaviour"
+    ],
+    "audiences": [
+      "People running or managing service businesses of any kind",
+      "Leaders building team culture around customer care",
+      "Restaurant and hotel professionals",
+      "Fans of The Bear curious about the book behind season two"
+    ],
+    "formats_available": ["Hardcover", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "prh-book-page-uh",
+        "title": "Unreasonable Hospitality",
+        "author_or_publisher": "Penguin Random House / Optimism Press",
+        "url": "https://www.penguinrandomhouse.com/books/674289/unreasonable-hospitality-by-will-guidara/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Title, subtitle, imprint, publication date, ISBN, 288 pages, formats, the publisher's description of the transformation story and signature gestures (sledding trip, beach dining room), and the claim that every business can choose to be a hospitality business.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Authoritative for publication facts; promotional in tone."
+      },
+      {
+        "id": "unusual-vc-lessons",
+        "title": "Unreasonable Hospitality is good business: 5 lessons from Will Guidara",
+        "author_or_publisher": "Unusual Ventures",
+        "url": "https://www.unusual.vc/unreasonable-hospitality-will-guidara/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The book's named concepts as applied by business readers: the 95/5 rule, dreamweavers, the one-inch rule, charitable assumptions, being the swan, and the simplified mission statement.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Enthusiast application piece rather than critical review."
+      },
+      {
+        "id": "case-hot-dog",
+        "title": "A Chef and a Hot Dog: Unreasonable Hospitality and Advancement Goals",
+        "author_or_publisher": "CASE",
+        "url": "https://www.case.org/resources/chef-and-hot-dog-unreasonable-hospitality-and-advancement-goals",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent account of the hot-dog story, including the chef's initial resistance, and of the service-versus-hospitality distinction.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Sector-application summary."
+      },
+      {
+        "id": "realclearmarkets-review",
+        "title": "Book Review: Will Guidara's 'Unreasonable Hospitality'",
+        "author_or_publisher": "RealClearMarkets",
+        "url": "https://www.realclearmarkets.com/articles/2023/02/17/book_review_will_guidaras_unreasonable_hospitality_882287.html",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "An independent professional review of the book's argument and business relevance.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Market-commentary outlet; single reviewer."
+      },
+      {
+        "id": "goodreads-uh",
+        "title": "Unreasonable Hospitality",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/60018618-unreasonable-hospitality",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Strongly positive aggregate reader reception, alongside recurring criticisms: self-congratulation, humble-bragging, and doubts about transferability beyond luxury dining.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters; counts move over time."
+      },
+      {
+        "id": "bear-season-2",
+        "title": "The Bear season 2",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Bear_season_2",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "The book's cultural moment: it features in the Forks episode, and Guidara co-produces the series.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary source used for the documented crossover only."
+      }
+    ],
+    "citations": {
+      "/title": ["prh-book-page-uh"],
+      "/alternate_titles": ["prh-book-page-uh"],
+      "/author_ids": ["prh-book-page-uh"],
+      "/bibliography/first_published": ["prh-book-page-uh"],
+      "/bibliography/original_language": ["prh-book-page-uh"],
+      "/bibliography/editions/0": ["prh-book-page-uh"],
+      "/bibliography/contents": ["prh-book-page-uh", "unusual-vc-lessons", "case-hot-dog"],
+      "/discovery/tag_ids": ["prh-book-page-uh", "unusual-vc-lessons"],
+      "/discovery/audiences": ["prh-book-page-uh", "goodreads-uh", "bear-season-2"],
+      "/discovery/formats_available": ["prh-book-page-uh"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the publisher record, independent professional and specialist accounts of the book's stories and named concepts, and reader reception; not verified line-by-line against a full copy.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: verify chapter-level detail against a full copy via library lending to raise coverage."
+    ]
   }
 }

@@ -85,6 +85,30 @@
       "source_url": "https://dictionary.cambridge.org/pronunciation/english/rowling",
       "verified_at": "2026-08-13",
       "notes": "ROH-ling, like rolling without a strongly sounded second l. The unassisted British phonemizer produced ROU-ling with the vowel in 'out'."
+    },
+    {
+      "term": "Guidara",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "ɡwɪdˈɑːɹə",
+        "en-us": "ɡwɪdˈɑːɹə"
+      },
+      "source_url": "https://forvo.com/word/will_guidara/",
+      "verified_at": "2026-08-13",
+      "notes": "gwi-DAR-ah, as the author says it in his own talks and podcast introductions. The unassisted phonemizer produced guy-DAR-ah (ɡaɪdˈɑːɹə)."
+    },
+    {
+      "term": "Michelin",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "mˈɪʃəlɪn",
+        "en-us": "mˈɪʃəlɪn"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/michelin",
+      "verified_at": "2026-08-13",
+      "notes": "MISH-uh-lin per Cambridge Dictionary. The unassisted phonemizer produced MITCH-i-lin (mˈɪtʃɪlˌɪn)."
     }
   ]
 }
