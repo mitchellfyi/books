@@ -373,6 +373,20 @@
       "label": "Sleep",
       "description": "Biological sleep, rest, circadian timing, sleep pressure, and the conditions affecting recovery.",
       "aliases": []
+    },
+    {
+      "id": "longevity",
+      "kind": "topic",
+      "label": "Longevity",
+      "description": "The length and quality of life, including lifespan, healthspan, survival, and exceptional longevity.",
+      "aliases": ["healthspan"]
+    },
+    {
+      "id": "nutrition",
+      "kind": "topic",
+      "label": "Nutrition",
+      "description": "Dietary patterns, foods, nutrients, adequacy, and their relationships with health and disease.",
+      "aliases": ["diet"]
     }
   ]
 }

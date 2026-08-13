@@ -259,6 +259,19 @@
         "library/books/exercised-lieberman/book.json#active-grandparent-paper"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "how-not-to-age-written-by-michael-greger",
+      "source_id": "how-not-to-age-greger",
+      "target_id": "michael-greger",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Michael Greger wrote How Not to Age.",
+      "source_refs": [
+        "library/books/how-not-to-age-greger/book.json#publisher-excerpt",
+        "library/books/how-not-to-age-greger/book.json#library-record"
+      ],
+      "confidence": "high"
     }
   ]
 }

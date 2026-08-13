@@ -4,22 +4,207 @@
   "id": "michael-greger",
   "type": "author",
   "name": "Michael Greger",
-  "alternate_names": [],
+  "alternate_names": ["Michael Herschel Greger", "Michael Greger, M.D., FACLM"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American physician, lifestyle-medicine advocate, and nutrition communicator who founded NutritionFacts.org and argues for whole-food, plant-predominant diets.",
+      "source_ids": ["nutritionfacts-about", "cornell-profile", "aclm-fellows"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Greger studied biology at Cornell and earned an M.D. from Tufts. He has worked in public-health and lifestyle-medicine communication and founded the nonprofit NutritionFacts.org, which publishes referenced nutrition videos and articles without advertising or product sponsorship. He says his grandmother's improvement after a low-fat plant-based diet and walking programme shaped his career.",
+      "source_ids": ["cornell-profile", "nutritionfacts-about", "google-books"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His main work is large-scale synthesis and public explanation of nutrition, food safety, chronic-disease prevention, and lifestyle research rather than laboratory ageing research. He is a Fellow and diplomate in lifestyle medicine and has spent more than two decades advocating diet as a major modifiable cause of disease.",
+      "source_ids": ["nutritionfacts-about", "aclm-fellows", "cornell-profile", "lifestyle-panel"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Greger is medically trained and highly experienced at searching, explaining, and popularising nutrition literature. He is not a registered dietitian, geriatrician, biogerontology researcher, or the clinician responsible for an individual reader. His strongest contribution is broad evidence discovery and behaviour-oriented explanation; personalised nutrition, frailty, medication, and disease management require additional expertise.",
+      "source_ids": ["nutritionfacts-about", "aclm-fellows", "hallmarks-paper", "who-healthy-ageing"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Greger openly advocates a whole-food plant-based diet and tends to interpret a very large literature through that prior position. The volume of citations improves traceability but does not prevent selective emphasis, equal treatment of weak and strong designs, or extrapolation from cells, animals, biomarkers, and observational associations. His scepticism towards supplements and commercial anti-ageing claims is useful; his own dietary conclusions need the same adversarial standard.",
+      "source_ids": ["nutritionfacts-about", "critical-prior-book", "kirkus-review", "unaging-review", "cornell-profile"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Bird Flu: A Virus of Our Own Hatching",
+      "year": 2006,
+      "kind": "Book",
+      "relationship": "Public-health account of influenza risk and industrial animal agriculture.",
+      "source_ids": ["nutritionfacts-about"]
+    },
+    {
+      "title": "How Not to Die",
+      "year": 2015,
+      "kind": "Book",
+      "relationship": "Earlier whole-food plant-based guide organised around major causes of death.",
+      "source_ids": ["google-books", "cornell-profile"]
+    },
+    {
+      "title": "How Not to Diet",
+      "year": 2019,
+      "kind": "Book",
+      "relationship": "Evidence synthesis on long-term weight management and dietary pattern.",
+      "source_ids": ["nutritionfacts-about", "cornell-profile"]
+    },
+    {
+      "title": "How Not to Age",
+      "year": 2023,
+      "kind": "Book",
+      "relationship": "Extends his diet and lifestyle framework to ageing pathways, longevity, and preservation of function.",
+      "source_ids": ["google-books", "publisher-excerpt"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "nutritionfacts-about",
+        "title": "About NutritionFacts.org",
+        "author_or_publisher": "NutritionFacts.org",
+        "url": "https://nutritionfacts.org/about/",
+        "type": "author",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Greger's education, physician status, lifestyle-medicine affiliations, nonprofit, mission, funding model, books, and stated dietary perspective.",
+        "limitations": "Self-description by the organisation he founded."
+      },
+      {
+        "id": "cornell-profile",
+        "title": "From Plate to Fate: Why ‘The Power Is at the End of Our Fork’",
+        "author_or_publisher": "Cornell University Alumni Affairs",
+        "url": "https://alumni.cornell.edu/cornellians/greger-diet-longevity/",
+        "type": "interview",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Cornell biology degree, Tufts M.D., early clinical work, grandmother story, communication career, books, and explicit plant-based advocacy.",
+        "limitations": "Favourable alumni profile using the author's account."
+      },
+      {
+        "id": "aclm-fellows",
+        "title": "List of Fellows",
+        "author_or_publisher": "American College of Lifestyle Medicine",
+        "url": "https://connect.lifestylemedicine.org/network/fellows/fellowslist",
+        "type": "official-documentation",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current FACLM and DipABLM credentials.",
+        "limitations": "Professional membership record, not an independent evaluation of research quality."
+      },
+      {
+        "id": "lifestyle-panel",
+        "title": "American College of Lifestyle Medicine Expert Panel Discussion",
+        "author_or_publisher": "American Journal of Lifestyle Medicine",
+        "url": "https://journals.sagepub.com/doi/10.1177/1559827615575692",
+        "type": "specialist-review",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Greger's public-health and animal-agriculture role, NutritionFacts.org, and participation in lifestyle-medicine debate.",
+        "limitations": "Professional panel and biographical note, not an assessment of How Not to Age."
+      },
+      {
+        "id": "google-books",
+        "title": "How Not to Age",
+        "author_or_publisher": "Michael Greger; Flatiron Books via Google Books",
+        "url": "https://books.google.com/books/about/How_Not_to_Age.html?id=B4dWEAAAQBAJ",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Book identity, author biography, education, earlier works, publisher, and topics.",
+        "limitations": "Publisher metadata and limited preview."
+      },
+      {
+        "id": "publisher-excerpt",
+        "title": "How Not to Age",
+        "author_or_publisher": "Michael Greger; Macmillan",
+        "url": "https://us.macmillan.com/books/9781250859228/hownottoage/",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Author's stated purpose, four-part structure, dietary thesis, ageing mechanisms, centenarian framing, and scope.",
+        "limitations": "Publisher-hosted introduction excerpt."
+      },
+      {
+        "id": "critical-prior-book",
+        "title": "How Not to Die by Dr. Michael Greger: A Critical Review",
+        "author_or_publisher": "Denise Minger; Healthline",
+        "url": "https://www.healthline.com/nutrition/how-not-to-die-review",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Documented examples of citation overreach, selective evidence, and strengths in Greger's earlier nutrition synthesis.",
+        "limitations": "Examines an earlier book and cannot establish that the same errors occur in How Not to Age."
+      },
+      {
+        "id": "kirkus-review",
+        "title": "How Not to Age",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/michael-greger/how-not-to-age/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent assessment of scientific style, scepticism, optimism, breadth, single-study claims, and useful function section.",
+        "limitations": "Trade review rather than systematic citation audit."
+      },
+      {
+        "id": "unaging-review",
+        "title": "How Not to Age by Dr. Michael Greger: Review and Summary",
+        "author_or_publisher": "Crissman Loomis; Unaging",
+        "url": "https://www.unaging.com/reviews/how-not-to-age-an-in-depth-review/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Detailed citation-level criticism of calorie and protein restriction, fish, exercise, chapter focus, and information excess.",
+        "limitations": "Uses the reviewer's own longevity scoring model and sometimes makes overly precise lifespan claims."
+      },
+      {
+        "id": "hallmarks-paper",
+        "title": "Hallmarks of Aging: An Expanding Universe",
+        "author_or_publisher": "Carlos López-Otín et al.; Cell",
+        "url": "https://doi.org/10.1016/j.cell.2022.11.001",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current twelve-hallmark biogerontology framework and the interconnected, developing nature of ageing mechanisms.",
+        "limitations": "Mechanistic framework, not a clinical endorsement of Greger's dietary interventions."
+      },
+      {
+        "id": "who-healthy-ageing",
+        "title": "Promoting Physical Activity and Healthy Diets for Healthy Ageing",
+        "author_or_publisher": "World Health Organization Regional Office for Europe",
+        "url": "https://www.who.int/europe/publications/i/item/WHO-EURO-2023-8002-47770-70520",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Healthy-ageing definition, importance of function, diet, physical activity, heterogeneity, and malnutrition risk in older adults.",
+        "limitations": "Population guidance rather than biography."
+      }
+    ],
+    "citations": {
+      "/name": ["nutritionfacts-about", "cornell-profile", "google-books"],
+      "/alternate_names": ["nutritionfacts-about", "aclm-fellows"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile triangulates Greger's organisation, university, professional registry, published work, independent reviews, and external ageing guidance while separating medical training, nutrition communication, advocacy, and biogerontology expertise.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

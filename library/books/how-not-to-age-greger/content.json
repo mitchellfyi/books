@@ -4,108 +4,655 @@
   "book_id": "how-not-to-age-greger",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "high",
+    "complexity": "high",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "Five minutes can preserve the dependable actions and the decisive caution about mechanisms, food-specific claims, protein, and calorie restriction. Fifteen minutes is the shortest level that also explains the eleven-pathway framework, centenarian evidence, function chapters, Anti-Aging Eight, and evidence hierarchy. Thirty minutes adds organ-by-organ examples and enough counterevidence to use the book as a selective reference. The full 640-page work is mainly for readers who want thousands of leads and detailed claim checking, not a proportionally larger decision benefit."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "An encyclopedic attempt to slow age-related decline through a whole-food plant-based diet and lifestyle, moving from cellular pathways to longevity patterns, preserved function, and a final food-and-behaviour checklist.",
+    "verdict": "Its plant-rich foundation and supplement scepticism are useful, but the book buries them under speculative mechanisms, uneven evidence, excessive food-level detail, and risky ambiguity about restricting protein and calories in later life.",
+    "source_ids": [
+      "publisher-excerpt",
+      "kirkus-review",
+      "gracious-vegan-review",
+      "unaging-review",
+      "who-healthy-ageing",
+      "prot-age"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Part I explains eleven processes Greger associates with ageing: AMPK signalling, autophagy, cellular senescence, epigenetic change, glycation, IGF-1, inflammation, mTOR, oxidation, sirtuins, and telomeres. Part II constructs a plant-based regimen from centenarian and Blue Zone patterns plus exercise, weight, sleep, stress, and social connection. Part III surveys how to preserve bones, bowel and bladder function, circulation, hair, hearing, hormones, immunity, joints, mind, muscle, sex, skin, teeth, vision, and dignity. Part IV condenses the proposed priorities into nuts, greens, berries, xenohormesis and microRNA, prebiotics and postbiotics, calorie restriction, protein restriction, and NAD+ preservation.",
+      "source_ids": [
+        "publisher-excerpt",
+        "library-record",
+        "nutritionfacts-videos",
+        "gracious-vegan-review"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Genes explain only part of lifespan variation, and ageing biology responds to environmental inputs. Greger argues that a whole-food plant-based diet can influence every major ageing pathway while also reducing chronic disease and preserving function. He therefore favours ordinary foods and lifestyle over drugs, supplements, and expensive anti-ageing products, with particular emphasis on legumes, whole grains, vegetables, fruit, nuts, greens, and berries.",
+      "source_ids": [
+        "publisher-excerpt",
+        "google-books",
+        "nutritionfacts-videos",
+        "gracious-vegan-review"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "healthspan-over-immortality",
+      "title": "Protect function, not immortality",
+      "claim": "The useful target is more life with mobility, cognition, independence, connection, and dignity, not the fantasy of escaping death.",
+      "explanation": "Age is the strongest risk factor for many diseases, but chronological age does not dictate one fixed trajectory. Preventing or delaying disease and functional loss can compress poor health nearer the end of life. The book repeatedly shifts from lifespan to the abilities that make added years usable.",
+      "representative_example": "A longer life has limited value if added years arrive with avoidable frailty, untreated hearing loss, loss of muscle, isolation, or poorly planned end-of-life care.",
+      "why_it_matters": "It gives the book a humane goal and prevents biomarker optimisation from replacing ordinary function and wellbeing.",
+      "caveat": "The title and anti-ageing language sometimes promise more control than human longevity trials can support.",
+      "source_ids": [
+        "publisher-excerpt",
+        "who-healthy-ageing",
+        "kirkus-review",
+        "library-record"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "pathways-map",
+      "title": "Ageing has interacting pathways",
+      "claim": "Cellular ageing is not one clock but an interacting system of damage, sensing, repair, inflammation, senescence, and altered communication.",
+      "explanation": "Greger organises the biology around AMPK, autophagy, senescent cells, epigenetics, glycation, IGF-1, inflammation, mTOR, oxidation, sirtuins, and telomeres. These overlap with recognised hallmarks such as nutrient sensing, disabled autophagy, cellular senescence, chronic inflammation, and telomere attrition. The map explains why one intervention can affect several markers and why one marker cannot represent all ageing.",
+      "representative_example": "Autophagy recycles damaged cellular material, while senescent cells stop dividing and can release inflammatory signals; both processes interact with nutrient sensing rather than operating as independent switches.",
+      "why_it_matters": "It makes the biology legible and helps readers reject a single miracle molecule or test.",
+      "caveat": "A pathway being important, and a food changing a related biomarker, does not show that eating that food extends human life.",
+      "source_ids": [
+        "publisher-excerpt",
+        "hallmarks-paper",
+        "nutritionfacts-videos",
+        "google-books"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "plant-rich-pattern",
+      "title": "The reliable signal is a dietary pattern",
+      "claim": "Diets rich in minimally processed plants consistently align with lower chronic-disease risk and healthier ageing.",
+      "explanation": "Whole grains, legumes, vegetables, fruit, nuts, and seeds supply fibre, micronutrients, unsaturated fats, and diverse compounds while tending to displace processed meat, refined starch, excess salt, and sugary drinks. Greger prefers a fully plant-based pattern; broader evidence also supports well-planned Mediterranean and other plant-predominant patterns.",
+      "representative_example": "Beans appear across several long-lived populations, but their value lies within a pattern of food, activity, social structure, healthcare, and material conditions rather than as a longevity pill.",
+      "why_it_matters": "It identifies the high-confidence foundation beneath hundreds of smaller recommendations.",
+      "caveat": "Plant-based does not automatically mean healthy, and the evidence does not establish that excluding every animal food is necessary for longevity; fish is associated with several favourable outcomes.",
+      "source_ids": [
+        "plant-diet-meta",
+        "who-healthy-diet",
+        "who-healthy-ageing",
+        "fish-umbrella",
+        "publisher-excerpt"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "foods-over-pills",
+      "title": "Food usually beats isolated anti-ageing pills",
+      "claim": "Whole foods are a safer default than expensive supplements marketed from cell, animal, or biomarker findings.",
+      "explanation": "Greger examines resveratrol, NAD+ boosters, hormones, collagen, antioxidants, and other products with unusual scepticism for the genre. A compound may help at a dietary dose yet fail, reverse, or cause harm at concentrated doses. Supplements also face variable quality and cannot reproduce an entire dietary pattern.",
+      "representative_example": "Spermidine activates autophagy in model organisms and occurs in wheat germ, mushrooms, and tempeh, but a twelve-month randomised supplement trial did not improve its primary memory outcome.",
+      "why_it_matters": "It protects readers from turning preliminary mechanisms into costly routines and directs attention to higher-value basics.",
+      "caveat": "Food is not automatically effective or safe, and targeted supplements such as vitamin B12 are essential for many fully plant-based eaters.",
+      "source_ids": [
+        "gracious-vegan-review",
+        "spermidine-trial",
+        "plant-nutrients-review",
+        "kirkus-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "centenarian-clues",
+      "title": "Centenarians provide clues, not experiments",
+      "claim": "Long-lived populations suggest useful habits but cannot reveal which habit caused exceptional survival.",
+      "explanation": "Blue Zone and centenarian communities often combine plant-rich diets, ordinary movement, social ties, purpose, and low smoking. Genetics, migration, healthcare, poverty, selection, cohort history, reporting, and environment also differ. Even validated ages leave causal attribution unresolved.",
+      "representative_example": "Okinawan longevity cannot be assigned to sweet potatoes alone when diet, energy intake, work, war, healthcare, social relations, and birth cohort changed together.",
+      "why_it_matters": "It preserves the practical pattern without converting cultural observation into a controlled diet trial.",
+      "caveat": "Blue Zone age data have faced serious criticism and defence; formal validation strengthens the records but not the lifestyle causal claim.",
+      "source_ids": [
+        "publisher-excerpt",
+        "blue-zones-response",
+        "gracious-vegan-review",
+        "unaging-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "activity-and-strength",
+      "title": "Movement and strength are central to healthy ageing",
+      "claim": "Aerobic activity, resistance work, balance, and less sedentary time have more direct functional value than many named anti-ageing foods.",
+      "explanation": "Activity supports cardiovascular fitness, glucose control, bone loading, muscle, mood, cognition, balance, and independence. Strength becomes especially important as muscle response and reserve decline. Greger covers exercise and acknowledges resistance training, but the book's space and attention remain heavily weighted towards diet.",
+      "representative_example": "An older adult can improve strength and function with progressive resistance training even when no berry, supplement, or ageing biomarker changes visibly.",
+      "why_it_matters": "Function is the book's stated goal, and physical capacity is one of its most testable determinants.",
+      "caveat": "The safe form and dose depend on health, disability, pain, medication, falls risk, and training history.",
+      "source_ids": [
+        "who-healthy-ageing",
+        "who-activity",
+        "unaging-review",
+        "library-record"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "protect-muscle",
+      "title": "Do not trade theoretical longevity for muscle",
+      "claim": "Protein and calorie restriction may affect nutrient-sensing pathways, but older adults must protect muscle, bone, healing, and adequate nutrition.",
+      "explanation": "Lower energy and certain amino acids can extend life in some model organisms and change IGF-1 or mTOR signalling. Human lifespan evidence is not established. Calorie restriction in younger non-obese adults reduced fat but also fat-free mass. Geriatric nutrition groups commonly advise at least 1.0 to 1.2 grams of protein per kilogram daily for healthy older adults, more with exercise or illness.",
+      "representative_example": "A person can increase their percentage of lean mass while still losing actual muscle if fat falls faster; the percentage alone does not mean they became stronger.",
+      "why_it_matters": "Frailty, falls, delayed healing, and loss of independence are immediate harms that a speculative longevity regimen must not worsen.",
+      "caveat": "Protein needs vary, and kidney disease or other conditions can change advice; personalised assessment matters more than a universal high or low target.",
+      "source_ids": [
+        "calerie-trial",
+        "prot-age",
+        "who-healthy-ageing",
+        "unaging-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "preserve-each-function",
+      "title": "Ageing is experienced function by function",
+      "claim": "Practical healthy ageing includes hearing, vision, teeth, continence, circulation, immunity, joints, cognition, sexuality, skin, and end-of-life dignity.",
+      "explanation": "The largest part of the book moves away from abstract lifespan and asks what preserves each body system. It mixes high-value basics, clinical options, food trials, weak interventions, and debunking. This makes it useful as an idea index but unsafe as a uniform-confidence checklist.",
+      "representative_example": "The hearing chapter recognises hearing aids; the muscle chapter recognises resistance work; the skin chapter stresses sun protection while testing collagen and dietary claims.",
+      "why_it_matters": "Small functional losses compound: hearing affects connection, muscle affects falls, teeth affect nutrition, and cognition affects independence.",
+      "caveat": "Diet cannot replace vaccination, screening, dental care, hearing assessment, vision care, medication, rehabilitation, or treatment of symptoms.",
+      "source_ids": [
+        "library-record",
+        "publisher-excerpt",
+        "gracious-vegan-review",
+        "unaging-review",
+        "who-healthy-ageing"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "anti-ageing-eight",
+      "title": "The Anti-Aging Eight mixes strong basics with speculative categories",
+      "claim": "Nuts, greens, and berries are useful foods, while the remaining categories require more interpretation and caution than a final checklist suggests.",
+      "explanation": "The list adds xenohormesis and microRNA manipulation, prebiotics and postbiotics, calorie restriction, protein restriction, and NAD+ preservation. These categories connect diet to mechanistic research, but many lack a clear human dose, outcome, or comparative trial. A memorable list makes heterogeneous evidence look more equal than it is.",
+      "representative_example": "Eating greens is a straightforward dietary action supported by broader patterns; trying to preserve NAD+ by manipulating named enzymes is not an equally established consumer instruction.",
+      "why_it_matters": "Readers need to rank actions rather than accumulating every intervention mentioned.",
+      "caveat": "Nuts, greens, and berries are valuable components, not uniquely proven lifespan extenders or substitutes for dietary diversity.",
+      "source_ids": [
+        "library-record",
+        "publisher-excerpt",
+        "gracious-vegan-review",
+        "unaging-review",
+        "who-healthy-diet"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "evidence-ladder",
+      "title": "Count study quality, not citation quantity",
+      "claim": "A large reference list is valuable for discovery but cannot make cells, rodents, biomarkers, cohorts, and randomised human outcomes equivalent.",
+      "explanation": "Mechanistic and animal studies can identify possibilities. Observational studies can connect long-term habits with outcomes but retain confounding and healthy-user bias. Trials can improve causal inference yet may be short, small, or measure surrogate outcomes. Lifespan trials are exceptionally difficult. Each claim should inherit the limits of its strongest direct evidence.",
+      "representative_example": "A food may activate autophagy in cells, correlate with longevity in a cohort, and still fail to improve a clinical outcome in a randomised trial.",
+      "why_it_matters": "It is the essential tool for using a book with thousands of citations without turning every paragraph into a new health rule.",
+      "caveat": "No single design answers every question; converging evidence can be stronger than one isolated trial, and long trials have their own selection and adherence limits.",
+      "source_ids": [
+        "hallmarks-paper",
+        "calerie-trial",
+        "spermidine-trial",
+        "plant-diet-meta",
+        "kirkus-review",
+        "unaging-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Part I: Slowing eleven pathways of ageing",
+      "purpose": "Creates a molecular map and connects each pathway to proposed food and lifestyle interventions.",
+      "summary": "The technical opening moves through nutrient sensing, cellular cleaning, senescence, epigenetics, glycation, growth signals, inflammation, oxidation, sirtuins, and telomeres. It supplies vocabulary used later, but often moves from mechanism to dietary action faster than human outcome evidence permits.",
+      "idea_ids": [
+        "pathways-map",
+        "foods-over-pills",
+        "evidence-ladder"
+      ],
+      "source_ids": [
+        "publisher-excerpt",
+        "library-record",
+        "nutritionfacts-videos",
+        "hallmarks-paper"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Part II: The optimal anti-ageing regimen",
+      "purpose": "Builds a whole lifestyle from dietary patterns, centenarians, movement, weight, sleep, stress, and relationships.",
+      "summary": "Greger compares Mediterranean, Okinawan, Blue Zone, and plant-based patterns before briefly treating other lifestyle factors. The strongest message is a minimally processed, plant-rich pattern within an active and connected life; the evidence does not require his strictest exclusions.",
+      "idea_ids": [
+        "plant-rich-pattern",
+        "centenarian-clues",
+        "activity-and-strength"
+      ],
+      "source_ids": [
+        "publisher-excerpt",
+        "library-record",
+        "who-healthy-diet",
+        "who-healthy-ageing",
+        "fish-umbrella"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Part III: Preserving function",
+      "purpose": "Translates healthy ageing into fifteen bodily, cognitive, social, and end-of-life domains.",
+      "summary": "The longest and most useful reference section examines bones through dignity. It combines prevention, treatment, food studies, and failed products. The mind receives the most space. The section broadens ageing beyond lifespan but needs the reader to distinguish clinical basics from exploratory nutrition.",
+      "idea_ids": [
+        "healthspan-over-immortality",
+        "activity-and-strength",
+        "protect-muscle",
+        "preserve-each-function"
+      ],
+      "source_ids": [
+        "library-record",
+        "publisher-excerpt",
+        "gracious-vegan-review",
+        "kirkus-review",
+        "unaging-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Part IV: Dr. Greger's Anti-Aging Eight",
+      "purpose": "Attempts to turn the preceding survey into a memorable action list.",
+      "summary": "Nuts, greens, and berries provide clear food categories. Xenohormesis, microRNA, prebiotics, postbiotics, calorie restriction, protein restriction, and NAD+ are more technical and unevenly actionable. The list compresses unlike evidence into a single format and therefore needs re-ranking by confidence and harm.",
+      "idea_ids": [
+        "anti-ageing-eight",
+        "protect-muscle",
+        "evidence-ladder",
+        "foods-over-pills"
+      ],
+      "source_ids": [
+        "publisher-excerpt",
+        "library-record",
+        "gracious-vegan-review",
+        "unaging-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Four books in one: molecular mechanisms, an overall regimen, an organ-and-function reference, and an eight-part checklist.",
+    "voice": "Energetic, pun-heavy, optimistic, campaigning, citation-saturated, and sceptical of commercial pills and procedures. Greger alternates technical vocabulary with vivid food examples.",
+    "pace": "Fast at sentence level but exhausting overall. Short studies and interventions arrive continuously, while the main dietary conclusion changes little.",
+    "evidence_style": "A very large synthesis spanning cells, model organisms, biomarkers, cohorts, small trials, meta-analyses, centenarian observations, and selected clinical research, with citations and hundreds of companion links kept online.",
+    "example_style": "Named foods, supplements, molecular targets, centenarian populations, clinical conditions, product debunking, striking relative risks, and practical home interventions.",
+    "repetition": "High. Whole plant foods reappear as the answer to many different pathways and functions, and extensive negative findings remain in the narrative rather than being filtered out.",
+    "prerequisites": "Readers need no formal qualification, but Part I rewards basic cell biology and the entire book requires comfort with relative risk, confounding, surrogate outcomes, and unequal study designs.",
+    "source_ids": [
+      "publisher-excerpt",
+      "library-record",
+      "kirkus-review",
+      "gracious-vegan-review",
+      "unaging-review",
+      "goodreads-reception"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 6.0,
+      "confidence": "medium",
+      "summary": "A vast and often useful evidence index whose robust plant-rich and function-preserving core is weakened by mechanistic overreach, uneven calibration, underweighted exercise and geriatric nutrition, and severe information excess.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.0,
+          "rationale": "The four-part movement from pathways to patterns, functions, and action makes ageing multidimensional and modifiable, but eleven selected pathways and hundreds of food effects do not form one clean causal model.",
+          "source_ids": [
+            "publisher-excerpt",
+            "hallmarks-paper",
+            "kirkus-review",
+            "gracious-vegan-review"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.5,
+          "rationale": "The breadth and traceability are exceptional, and several foundations align with independent guidance, but cells, animals, biomarkers, observational associations, and small trials are too often converted into confident food advice while contrary evidence receives uneven weight.",
+          "source_ids": [
+            "hallmarks-paper",
+            "plant-diet-meta",
+            "calerie-trial",
+            "prot-age",
+            "spermidine-trial",
+            "fish-umbrella",
+            "unaging-review"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 6.5,
+          "rationale": "The pathway map, organ-by-organ preservation, failed-intervention coverage, and food-versus-pill analysis add many useful leads, although much of the durable conclusion repeats established plant-rich lifestyle guidance.",
+          "source_ids": [
+            "publisher-excerpt",
+            "library-record",
+            "kirkus-review",
+            "gracious-vegan-review"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 6.5,
+          "rationale": "Readers can improve diet quality, reject weak products, and inspect specific functions, but recommendation overload obscures priorities and calorie or protein restriction can be harmful when applied without geriatric and clinical context.",
+          "source_ids": [
+            "who-healthy-ageing",
+            "who-healthy-diet",
+            "prot-age",
+            "calerie-trial",
+            "gracious-vegan-review",
+            "unaging-review"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.5,
+          "rationale": "The topical scope is enormous and negative studies are often included, yet the book underweights exercise, strength, adequate protein, clinical care, nutritional deficiencies, and viable non-vegan healthy patterns relative to its preferred dietary mechanisms.",
+          "source_ids": [
+            "who-healthy-ageing",
+            "prot-age",
+            "plant-nutrients-review",
+            "fish-umbrella",
+            "unaging-review"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 3.5,
+          "rationale": "Six hundred-plus pages, thousands of citations, hundreds of external links, repeated plant-based conclusions, and many obscure null interventions create a poor ratio of decision value to reading time.",
+          "source_ids": [
+            "library-record",
+            "kirkus-review",
+            "gracious-vegan-review",
+            "unaging-review",
+            "goodreads-reception"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "Ageing is neither completely predetermined nor fully controllable. Everyday diet, movement, sleep, connection, prevention, and care can change the probability and timing of disease and functional loss. The reader should invest first in durable patterns and preserved capability, not expensive molecular promises. The book's deeper lesson is strongest when stripped of its certainty: mechanisms generate hypotheses; human outcomes decide how much confidence they deserve.",
+      "source_ids": [
+        "publisher-excerpt",
+        "who-healthy-ageing",
+        "hallmarks-paper",
+        "kirkus-review",
+        "unaging-review"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Build meals mostly from varied whole grains, legumes, vegetables, fruit, nuts, and seeds while limiting highly processed food, processed meat, excess salt, and sugary drinks.",
+        "source_ids": [
+          "who-healthy-diet",
+          "plant-diet-meta",
+          "publisher-excerpt"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Treat resistance, aerobic, and balance activity as core healthy-ageing interventions, not footnotes to nutrition.",
+        "source_ids": [
+          "who-healthy-ageing",
+          "who-activity"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Protect actual muscle, strength, bone, appetite, healing, and nutrient adequacy before experimenting with calorie or protein restriction.",
+        "source_ids": [
+          "prot-age",
+          "calerie-trial",
+          "plant-nutrients-review",
+          "who-healthy-ageing"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use supplements for a documented need or credible indication rather than because a compound affects an ageing pathway in cells or animals.",
+        "source_ids": [
+          "spermidine-trial",
+          "plant-nutrients-review",
+          "gracious-vegan-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Rank every recommendation by directness, design, outcome, replication, effect size, feasibility, and harm instead of by the number of citations surrounding it.",
+        "source_ids": [
+          "hallmarks-paper",
+          "calerie-trial",
+          "spermidine-trial",
+          "unaging-review"
+        ],
+        "basis": "inference"
+      },
+      {
+        "text": "Preserve hearing, sight, teeth, continence, movement, cognition, relationships, and dignity through appropriate care as well as lifestyle.",
+        "source_ids": [
+          "library-record",
+          "who-healthy-ageing",
+          "publisher-excerpt"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The book is valuable because it directs longevity interest away from miracle products and towards modifiable healthspan, dietary quality, and functional preservation. It also exposes a central weakness in popular evidence-based health writing: citation abundance can create an appearance of certainty even when direct human evidence is thin. Reading it critically teaches both ageing content and how not to rank medical claims.",
+      "source_ids": [
+        "kirkus-review",
+        "gracious-vegan-review",
+        "hallmarks-paper",
+        "who-healthy-ageing",
+        "unaging-review"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Michael Greger is a physician and lifestyle-medicine communicator who founded NutritionFacts.org and advocates whole-food plant-based eating. He wrote How Not to Age after mapping proposed anti-ageing pathways to dietary regulation, then expanded it into a guide to centenarian habits and preserved function. His skill is large-scale nutrition synthesis and explanation; he is not primarily an ageing laboratory scientist, geriatrician, or personal dietitian, and his established dietary position can shape which evidence receives emphasis.",
+      "source_ids": [
+        "publisher-excerpt",
+        "google-books",
+        "kirkus-review",
+        "unaging-review"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Provides unusually broad, searchable references and companion material rather than asking readers to trust uncited authority.",
+        "The plant-rich dietary foundation agrees with independent guidance on whole grains, pulses, fruit, vegetables, fibre, diversity, and reduced highly processed food.",
+        "Includes many failed interventions and is more sceptical of supplements and commercial anti-ageing products than most books in the genre.",
+        "The function section recognises that healthy ageing includes clinical, sensory, muscular, cognitive, social, and end-of-life outcomes.",
+        "Mechanistic pathways are real areas of ageing science and provide a useful map when treated as hypotheses rather than consumer outcomes."
+      ],
+      "weaknesses": [
+        "Citation count obscures large differences among cell, animal, biomarker, observational, small-trial, and hard-outcome evidence.",
+        "A consistent plant-based prior can create selective emphasis, including weak treatment of evidence supporting fish and other plant-predominant patterns.",
+        "Many specific foods are promoted from association, short trials, surrogate outcomes, or mechanisms without comparative evidence that they improve lifespan or function.",
+        "Protein restriction conflicts with common geriatric recommendations to increase protein for muscle and recovery, unless carefully individualised.",
+        "Calorie restriction has uncertain human longevity value and can reduce fat-free mass and bone while becoming increasingly risky with frailty or malnutrition.",
+        "Exercise, resistance training, medical care, vaccination, sensory aids, dental care, and structural conditions receive less emphasis than their functional importance warrants.",
+        "A strict plant-based pattern requires explicit planning for vitamin B12 and sometimes calcium, iodine, vitamin D, iron, zinc, and omega-three status."
+      ],
+      "source_ids": [
+        "who-healthy-diet",
+        "who-healthy-ageing",
+        "plant-diet-meta",
+        "fish-umbrella",
+        "plant-nutrients-review",
+        "prot-age",
+        "calerie-trial",
+        "spermidine-trial",
+        "unaging-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Reviewers consistently call the work encyclopedic, educational, technical, and very long. They praise its research leads, practical function chapters, plant-food case, and scepticism about weak products. Both sympathetic and critical readers struggle with recommendation overload, choppy study-by-study delivery, obscure mechanisms, and enthusiasm that sometimes outruns single-study evidence.",
+      "praise": [
+        "Professional reviewers see less nonsense and more scientific explanation than in the usual anti-ageing book.",
+        "The organ-and-function section is often judged more useful than the lifespan claims because readers can look up a specific concern.",
+        "Sympathetic readers value the extensive references, companion videos, whole-food emphasis, and willingness to report failed supplements.",
+        "Many readers find concrete ideas they can test, especially around diet quality, skin, circulation, cognition, and muscle."
+      ],
+      "criticism": [
+        "The avalanche of studies gives isolated and preliminary findings disproportionate attention.",
+        "The Anti-Aging Eight becomes less clear after nuts, greens, and berries and does not rank evidence or risk consistently.",
+        "Exercise and ordinary care can feel secondary to diet even when they have more direct evidence for function.",
+        "The book is repetitive, choppy, highly technical in places, and better as a reference than a continuous read.",
+        "Critical reviewers identify misleading treatment of calorie restriction, protein, fish, and exercise evidence."
+      ],
+      "source_ids": [
+        "kirkus-review",
+        "library-journal-review",
+        "gracious-vegan-review",
+        "unaging-review",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers who want a large searchable reference on food, ageing biology, and individual functions",
+        "People already interested in plant-predominant eating who will independently rank evidence and monitor nutrient adequacy",
+        "Health and science readers comfortable distinguishing mechanisms, biomarkers, associations, and clinical outcomes",
+        "Readers comparing anti-ageing products who value detailed sceptical coverage of supplements and procedures"
+      ],
+      "not_for": [
+        "Anyone wanting a concise, prioritised, personalised longevity plan",
+        "Frail, underweight, ill, recovering, or sarcopenic readers likely to apply calorie or protein restriction without professional assessment",
+        "Readers seeking a balanced comparison of vegan, Mediterranean, pescatarian, and other healthy dietary patterns",
+        "People likely to replace medical, dental, sensory, rehabilitation, or mental-health care with food interventions",
+        "Listeners who find dense acronyms, puns, rapid citations, and long lists difficult to retain"
+      ],
+      "topics": [
+        "Ageing",
+        "Healthspan",
+        "Longevity",
+        "Plant-based nutrition",
+        "Ageing pathways",
+        "Autophagy",
+        "Cellular senescence",
+        "Inflammation",
+        "Telomeres",
+        "Blue Zones",
+        "Exercise",
+        "Sleep",
+        "Social ties",
+        "Muscle",
+        "Cognition",
+        "Sensory health",
+        "Supplements",
+        "Calorie restriction",
+        "Protein restriction",
+        "End-of-life dignity"
+      ],
+      "source_ids": [
+        "publisher-excerpt",
+        "library-record",
+        "kirkus-review",
+        "gracious-vegan-review",
+        "unaging-review"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "Proof that ageing can be stopped or reversed in humans",
+        "A personalised geriatric, nutrition, exercise, or medical plan",
+        "A neutral comparison of all healthy dietary patterns",
+        "Evidence that every Anti-Aging Eight category extends human life",
+        "A substitute for screening, diagnosis, medication, vaccination, dentistry, sensory aids, rehabilitation, or end-of-life planning"
+      ],
+      "omissions": [
+        "A strict evidence-ranking table separating mechanisms, animals, biomarkers, observational outcomes, trials, and lifespan evidence",
+        "A short tiered plan that places smoking, activity, strength, adequate nutrition, sleep, connection, and healthcare ahead of speculative foods",
+        "Full treatment of frailty, malnutrition, eating disorders, kidney disease, medication interactions, disability, food access, and cultural adaptation",
+        "Balanced comparison with Mediterranean and pescatarian evidence, including potentially beneficial fish associations",
+        "A clear monitoring plan for vitamin B12, calcium, iodine, vitamin D, iron, zinc, and omega-three status in strict plant-based diets"
+      ],
+      "missing_or_weak": [
+        "Direct human evidence that manipulating most named pathways through particular foods changes lifespan or disability-free survival",
+        "Adequate protection against muscle and bone loss when discussing calorie and protein restriction",
+        "Proportional space for resistance training, balance, rehabilitation, hearing aids, dental care, vision care, vaccination, and social determinants",
+        "Comparative effect sizes and absolute risk that would let readers choose among dozens of recommendations",
+        "Editorial removal of null, obscure, or impractical interventions that do not change a reader's decision"
+      ],
+      "dated_or_contested": [
+        "Ageing pathways and hallmarks remain developing, overlapping scientific frameworks; a 2023 synthesis proposed twelve rather than the book's selected eleven.",
+        "Blue Zone age validation and causal interpretation remain contested, and validated longevity does not identify the responsible behaviour.",
+        "Human benefits from spermidine, NAD+ manipulation, xenohormesis, microRNA targeting, and several food-specific interventions remain preliminary.",
+        "Protein restriction for longevity conflicts with geriatric protein guidance aimed at preserving muscle and recovery.",
+        "The net effect and safe application of long-term calorie restriction in older humans remain unresolved."
+      ],
+      "source_ids": [
+        "hallmarks-paper",
+        "blue-zones-response",
+        "spermidine-trial",
+        "prot-age",
+        "calerie-trial",
+        "fish-umbrella",
+        "plant-nutrients-review",
+        "unaging-review"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read selectively if you want an encyclopedic source of ageing and nutrition hypotheses, enjoy following citations, and will use each chapter as a research starting point rather than a uniform prescription.",
+      "summary_is_enough_if": "The fifteen-minute version is enough if you need the reliable priorities, the four-part map, representative mechanisms, and the major reasons not to adopt every food, supplement, calorie, or protein claim.",
+      "skip_if": "Skip it if you need a short ranked plan, have frailty or complex medical needs, already follow a varied plant-rich diet and train for strength, or want an even-handed dietary comparison.",
+      "format_advice": "Use print or ebook as a reference because the contents, acronyms, external links, and claim checking demand navigation. Audio gives energy and personality but is poorly suited to retaining hundreds of study fragments and technical targets.",
+      "source_ids": [
+        "library-record",
+        "kirkus-review",
+        "gracious-vegan-review",
+        "unaging-review",
+        "goodreads-reception"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "How does healthspan differ from simply extending lifespan?",
+      "Why does changing an ageing pathway or biomarker not establish longer human life?",
+      "Which parts of the Anti-Aging Eight have the clearest direct action, and which remain mechanistic?",
+      "Why can calorie and protein restriction conflict with healthy ageing in older adults?",
+      "What evidence ladder should be applied to each food or supplement claim?"
+    ],
+    "application_prompts": [
+      "Sort one recommendation into mechanism, animal, biomarker, observational, trial, or hard-outcome evidence before acting.",
+      "Audit a week for dietary variety, aerobic activity, strength, balance, sleep, connection, and routine preventive care before adding a supplement.",
+      "If eating fully plant-based, identify how vitamin B12 and other at-risk nutrients are supplied and monitored.",
+      "Choose one function—hearing, vision, teeth, muscle, continence, cognition, or mobility—and list clinical as well as lifestyle actions."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "The adversarial pass separated recognised ageing mechanisms from food-mediated human outcomes, treated centenarian patterns as observational clues, compared strict plant-based claims with broader healthy-diet and fish evidence, placed exercise and resistance work beside diet, and tested protein and calorie restriction against muscle, bone, frailty, and geriatric guidance."
   }
 }
