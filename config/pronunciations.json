@@ -333,12 +333,12 @@
       ],
       "case_sensitive": true,
       "phonemes": {
-        "en-gb": "ˌɑːtəwˈɑːlpə",
-        "en-us": "ˌɑːtəwˈɑːlpə"
+        "en-gb": "ˌætəˈwɑːlpə",
+        "en-us": "ˌɑtəˈwɑlpə"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Atahualpa",
+      "source_url": "https://www.collinsdictionary.com/us/dictionary/english/atahualpa",
       "verified_at": "2026-08-13",
-      "notes": "English /ˌɑːtəˈwɑːlpə/ 'ah-tə-WAHL-pə' (Wikipedia; Quechua Ataw Wallpa). The unassisted phonemizer produced 'AT-ə-hyoo-al-pə' (ˈatɐhjˌuːalpə), which is wrong."
+      "notes": "Collins gives British /ˌætəˈwɑːlpə/ and American /ˌɑtəˈwɑlpə/. The unassisted phonemizer produced 'AT-ə-hyoo-al-pə', which is wrong."
     }
   ]
 }
