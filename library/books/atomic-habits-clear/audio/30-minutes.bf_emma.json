@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "atomic-habits-clear",
+  "duration": "30-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.93,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/atomic-habits-clear/scripts/30-minutes.md",
+  "source_script_sha256": "7bbcc172d5b9e2e18b3ffe18fbe0b29ca8020a1a5eec1d725ff0e5573cd3170a",
+  "pronunciation_dictionary_sha256": "96108f5c4b3ea618349a2e118ee88b8a155cb71d2bcedd6a72631d1119d25851",
+  "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 4655,
+  "audio_seconds": 1852.907,
+  "measured_wpm": 150.74,
+  "generated_at": "2026-08-13T15:10:58.408122+00:00"
+}

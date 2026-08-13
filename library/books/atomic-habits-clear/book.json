@@ -194,7 +194,7 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Structure and core techniques checked against the authorised preview and author's summary; empirical claims checked against habit, implementation-intention and identity-intervention reviews; reception checked independently. No user-supplied full text was available.",
     "last_researched": "2026-08-13",

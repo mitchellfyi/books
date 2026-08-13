@@ -546,7 +546,7 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
     "review_notes": "Checked against authorised book contents and summary, publisher metadata, independent reception and research reviews of habits, implementation intentions and identity interventions. No user-supplied full text was available.",
     "quality_review": {
@@ -569,7 +569,7 @@
         "Identity is presented as a plausible reciprocal process with mixed intervention evidence, not a proven master cause.",
         "Clinical, structural and cultural limits are explicit; the book is not presented as treatment or a universal solution.",
         "The 7.3 rating is content-only and excludes sales, endorsements and author popularity.",
-        "Kokoro pronunciation for James Clear and the title was inspected; no dictionary correction was required."
+        "Kokoro pronunciation for James Clear and the title was inspected; no dictionary correction was required. All four local tracks pass freshness, duration and word-rate checks."
       ]
     }
   }
