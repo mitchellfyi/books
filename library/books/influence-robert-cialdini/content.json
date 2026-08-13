@@ -4,108 +4,533 @@
   "book_id": "influence-robert-cialdini",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "high",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "A framework book: seven principles, each with mechanism, exploitation, and defence. Five minutes can name the levers; fifteen carries the mechanisms, the best evidence, and the honest account of which principles have weakened since 1984 — the loss between fifteen and thirty is mostly additional anecdote."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Social psychologist Robert Cialdini spent three years undercover in sales, fundraising, and telemarketing jobs to catalogue the seven psychological levers that make people say yes — and how to resist them.",
+    "verdict": "Still the definitive map of compliance tactics and worth fifteen minutes of anyone's life, but read it as a field guide, not settled science: parts of its laboratory foundation have eroded since 1984.",
+    "source_ids": [
+      "wikipedia-influence",
+      "vaidis-dissonance-2024"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Compliance professionals — salespeople, fundraisers, marketers, recruiters — succeed by triggering automatic responses that normally serve us well. Cialdini organises their entire toolkit under seven principles: reciprocation, commitment and consistency, social proof, liking, authority, scarcity, and, added in the 2021 edition, unity. Each chapter dissects one principle's mechanism, shows it working in the field, and ends with instructions for saying no.",
+      "source_ids": [
+        "wikipedia-influence",
+        "media-studies-influence-ch4"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Human judgement runs on shortcuts — mostly reliable, automatic responses to single cues — and in an information-overloaded world we rely on them more, not less; anyone who learns the trigger features can hijack the shortcuts, so the only durable defence is recognising the click of the tape starting to whirr.",
+      "source_ids": [
+        "wikipedia-influence",
+        "media-studies-influence-ch4"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "click-whirr",
+      "title": "Compliance is automatic, not reasoned",
+      "claim": "Most yeses are produced by fixed-action responses to single trigger features, not by weighing the merits.",
+      "explanation": "Like the turkey that mothers anything that cheeps, humans respond to isolated cues — a price tag, a title, the word 'because' — with pre-recorded behaviour. These shortcuts are usually right and always efficient, which is exactly what makes them exploitable by anyone who fakes the cue.",
+      "representative_example": "Jewellery that would not sell at a fair price sold out immediately when mispriced at double — 'expensive equals good' fired in the buyers' heads.",
+      "why_it_matters": "It reframes persuasion as trigger-engineering rather than argument, which explains why facts so rarely win.",
+      "caveat": "The tidy automaticity story leans on mid-century behavioural research; human 'fixed-action patterns' are looser than the animal analogy implies.",
+      "source_ids": [
+        "wikipedia-influence",
+        "media-studies-influence-ch4"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "reciprocation",
+      "title": "Reciprocation: the debt you never asked for",
+      "claim": "An uninvited favour creates a felt obligation that people repay on the giver's terms, often at a loss.",
+      "explanation": "The rule that built human cooperation — repay what you receive — fires even when the gift is unwanted, tiny, or transparently tactical: the free sample, the charity's enclosed address labels, the flower pressed into your hand. Its sibling is rejection-then-retreat: open with a request designed to be refused, and the concession to a smaller one feels like a gift you must repay with a yes.",
+      "representative_example": "A researcher who bought strangers a ten-cent soft drink sold them twice as many raffle tickets afterwards, regardless of whether they liked him.",
+      "why_it_matters": "It explains why 'free' is the most expensive word in marketing and why negotiators anchor high.",
+      "caveat": "Effect sizes in the founding studies are modest, and the rule weakens when the gift is read as a bribe.",
+      "source_ids": [
+        "wikipedia-influence",
+        "goodreads-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "commitment-consistency",
+      "title": "Commitment and consistency: small yeses grow",
+      "claim": "Once people commit — especially publicly, effortfully, or in writing — they pressure themselves to stay consistent, and compliance professionals harvest the drift.",
+      "explanation": "The foot-in-the-door tactic turns a trivial request into a large one; the lowball closes a car sale at a price that later evaporates, and the buyer completes the purchase anyway, having built new justifications around the decision. Hazing, essay contests, and loyalty rituals all work the same seam: people become what they have committed to.",
+      "representative_example": "Homeowners who had accepted a small window sticker about safe driving later agreed to a huge, ugly 'Drive Carefully' billboard on their lawns at several times the base rate.",
+      "why_it_matters": "It is the persuasion engine behind onboarding funnels, free trials, and escalating extremism alike.",
+      "caveat": "The classic laboratory pillar behind consistency pressure took a documented hit: a thirty-nine-lab replication of the induced-compliance paradigm found no reliable attitude change, so treat the field observations as sturdier than the lab story.",
+      "source_ids": [
+        "wikipedia-influence",
+        "vaidis-dissonance-2024",
+        "aps-observer-dissonance"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "social-proof",
+      "title": "Social proof: we decide by headcount",
+      "claim": "In uncertainty, people determine what is correct by watching what similar others do — a shortcut that scales from canned laughter to mass death.",
+      "explanation": "Laugh tracks make weak jokes funnier; bartenders salt tip jars; and the chapter's dark cases show the ceiling: publicised suicides are followed by measurable spikes in copycat deaths — the Werther effect — and at Jonestown, isolation plus uncertainty let each watcher confirm the others' calm. The bystander studies add the mechanism: pluralistic ignorance, everyone scanning everyone else for a cue that never comes.",
+      "representative_example": "Canned laughter raises audience laughter and rated funniness most reliably for the poorest material — the cue works precisely where the merits are weakest.",
+      "why_it_matters": "Reviews, follower counts, and 'bestseller' flags are this principle industrialised; it is the load-bearing wall of the modern internet.",
+      "caveat": "The chapter's signature anecdote — thirty-eight neighbours watching a murder and doing nothing — was later shown by peer-reviewed reconstruction to be false in nearly every particular, though the bystander experiments it inspired are real.",
+      "source_ids": [
+        "media-studies-influence-ch4",
+        "manning-genovese-2007"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "liking",
+      "title": "Liking: the friendly thief",
+      "claim": "We say yes to people we like, and liking is manufacturable from attractiveness, similarity, compliments, familiarity, and association.",
+      "explanation": "The home-party model sells through friendship rather than to it; salespeople mirror hobbies and hometowns; flattery works even when recognised as flattery; and association does the rest — weathercasters get blamed for rain, and fans say 'we won' but 'they lost' as they bind or cut identity by results.",
+      "representative_example": "Tupperware's genius was moving the seller inside the buyer's social circle: the hostess, not the company, makes the request.",
+      "why_it_matters": "It explains influencer marketing decades early: the product rides the relationship.",
+      "caveat": "Mostly robust, but the component studies vary in strength; attractiveness effects are smaller outside first impressions.",
+      "source_ids": [
+        "wikipedia-influence",
+        "goodreads-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "authority",
+      "title": "Authority: obedience to symbols",
+      "claim": "People defer not just to real authority but to its costume — titles, uniforms, and trappings — often without noticing the deference.",
+      "explanation": "Milgram's subjects delivered what they believed were dangerous shocks under a grey lab coat's insistence; nurses in one study prepared an absurd drug order because a 'doctor' phoned it in; pedestrians followed a jaywalker in a suit at several times the rate of the same man dressed casually. The trigger is the symbol, which is why con artists dress well.",
+      "representative_example": "The security of an entire hospital ward turned on a title spoken down a telephone line.",
+      "why_it_matters": "Credentials, blue ticks, and lab-coat advertising all monetise the same reflex; so do phishing emails from the 'CEO'.",
+      "caveat": "Milgram's work is itself contested — archival re-examinations complicate the obedience story — so the principle stands on wider footing than its most famous study.",
+      "source_ids": [
+        "wikipedia-influence",
+        "goodreads-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "scarcity",
+      "title": "Scarcity: wanting what is leaving",
+      "claim": "Opportunities seem more valuable as they become less available, and the feeling sharpens when the scarcity is new, competitive, or censored.",
+      "explanation": "Psychological reactance makes restricted freedoms burn: two-year-olds fight for the blocked toy, banned information becomes more persuasive unread, and cookies from a nearly empty jar taste better than identical ones from a full jar — especially if the jar just emptied. Deadlines, limited editions, and 'only three left' run the reflex commercially.",
+      "representative_example": "The cookie-jar experiment: the same biscuit rated more desirable purely because ten became two while the rater watched.",
+      "why_it_matters": "Every countdown timer and seat-map 'selling fast' flag on the internet is this chapter operating at scale.",
+      "caveat": "Field-tested and durable, but the book gives little help quantifying when scarcity claims cross from cue to fraud.",
+      "source_ids": [
+        "wikipedia-influence",
+        "goodreads-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "unity",
+      "title": "Unity: the persuasive power of 'we'",
+      "claim": "The 2021 edition's seventh principle: people say yes to those they consider one of themselves — family, tribe, place, or co-creators.",
+      "explanation": "Beyond liking sits belonging: shared identity, kinship language, home-region ties, and acting together — even trivially, like co-writing or synchronised movement — raise compliance. Cialdini added the principle after concluding the six could not explain influence inside 'we' groups.",
+      "representative_example": "Asking customers for 'advice' rather than 'opinions' pulls them into co-creation, and their investment follows the merger of identity.",
+      "why_it_matters": "It is the mechanics of community marketing, fandom, and political tribalism in one frame.",
+      "caveat": "The newest and least-tested principle; its evidence base is thinner than the original six and partly the author's own studies.",
+      "source_ids": [
+        "wikipedia-influence",
+        "bookworm-influence-2021"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Weapons of Influence",
+      "purpose": "Establish the mechanism.",
+      "summary": "Fixed-action patterns, judgment shortcuts, and why exploiters who fake trigger features win against busy minds.",
+      "idea_ids": [
+        "click-whirr"
+      ],
+      "source_ids": [
+        "wikipedia-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Reciprocation",
+      "purpose": "The obligation lever.",
+      "summary": "Uninvited gifts, free samples, and rejection-then-retreat: how givers set the terms of repayment.",
+      "idea_ids": [
+        "reciprocation"
+      ],
+      "source_ids": [
+        "wikipedia-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Commitment and Consistency",
+      "purpose": "The self-image lever.",
+      "summary": "Foot-in-the-door, lowballing, written pledges, and indoctrination: small commitments that grow their own justifications.",
+      "idea_ids": [
+        "commitment-consistency"
+      ],
+      "source_ids": [
+        "wikipedia-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Social Proof",
+      "purpose": "The headcount lever.",
+      "summary": "Canned laughter to Jonestown: uncertainty plus similarity makes other people's behaviour the evidence.",
+      "idea_ids": [
+        "social-proof"
+      ],
+      "source_ids": [
+        "media-studies-influence-ch4"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Liking",
+      "purpose": "The friendship lever.",
+      "summary": "Attractiveness, similarity, compliments, and association — selling through relationships, perfected by the home party.",
+      "idea_ids": [
+        "liking"
+      ],
+      "source_ids": [
+        "wikipedia-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 6,
+      "title": "Authority",
+      "purpose": "The deference lever.",
+      "summary": "Milgram, titles, uniforms, and trappings: obedience triggered by symbols rather than substance.",
+      "idea_ids": [
+        "authority"
+      ],
+      "source_ids": [
+        "wikipedia-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 7,
+      "title": "Scarcity",
+      "purpose": "The loss lever.",
+      "summary": "Reactance, deadlines, censorship, and competition: value assigned by disappearing availability.",
+      "idea_ids": [
+        "scarcity"
+      ],
+      "source_ids": [
+        "wikipedia-influence"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 8,
+      "title": "Unity and Instant Influence",
+      "purpose": "The seventh principle and the closing warning.",
+      "summary": "The 2021 chapter on shared identity, then the epilogue: shortcut reliance grows with information overload, so defending the shortcuts is self-defence.",
+      "idea_ids": [
+        "unity",
+        "click-whirr"
+      ],
+      "source_ids": [
+        "wikipedia-influence",
+        "bookworm-influence-2021"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "One chapter per principle, identically built: mechanism, field examples, laboratory support, defence section. The 2021 edition adds unity, e-commerce boxes, and reader reports.",
+    "voice": "Genial professor telling war stories from his undercover years; deliberately repetitive scaffolding.",
+    "pace": "Even and unhurried; the 2021 expansion nearly doubles the length with diminishing returns per page.",
+    "evidence_style": "Classic social psychology experiments plus participant observation; studies narrated, not quantified — no effect sizes, and the lab record is treated more confidently than it has aged.",
+    "example_style": "Sales-floor anecdotes, famous case studies, and reader-submitted letters.",
+    "repetition": "Substantial by design: each principle is restated at chapter open and close.",
+    "prerequisites": "None.",
+    "source_ids": [
+      "wikipedia-influence",
+      "goodreads-influence",
+      "bookworm-influence-2021"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 6.5,
+      "confidence": "medium",
+      "summary": "Worthwhile and genuinely useful: the definitive taxonomy of compliance tactics with a defensive framing that still distinguishes it, docked for a laboratory evidence base that has visibly eroded — a debunked signature anecdote, a failed multilab replication behind one principle — and for a 2021 expansion that added length faster than substance.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.5,
+          "rationale": "The seven-principle taxonomy carves compliance at real joints and explains a remarkable range of tactics with one mechanism, automaticity; forty years of marketing practice has organised itself around the map.",
+          "source_ids": [
+            "wikipedia-influence"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.5,
+          "rationale": "Unusual triangulation for its genre — three years of field observation plus the experimental literature — but the lab pillar has cracked since: the social proof chapter's central anecdote is documented false, the induced-compliance paradigm failed a thirty-nine-lab replication, and the book reports studies without effect sizes.",
+          "source_ids": [
+            "manning-genovese-2007",
+            "vaidis-dissonance-2024",
+            "media-studies-influence-ch4"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.0,
+          "rationale": "For most readers the principles permanently rename familiar experiences — the free sample, the countdown timer, the 'we' pitch — and the defence sections convert insight into vigilance.",
+          "source_ids": [
+            "wikipedia-influence",
+            "goodreads-influence"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 7.5,
+          "rationale": "Directly applicable on both sides of the counter: each chapter ends with a usable refusal strategy, and the tactics themselves are field-tested by the industries that use them.",
+          "source_ids": [
+            "wikipedia-influence",
+            "media-studies-influence-ch4"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.0,
+          "rationale": "Comprehensive across compliance settings but poorly calibrated about its own evidence: boundary conditions and effect sizes are absent, and the 2021 edition updated examples without reckoning with the replication record of its foundations.",
+          "source_ids": [
+            "vaidis-dissonance-2024",
+            "aps-observer-dissonance"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.0,
+          "rationale": "The classic edition is efficiently modular; the New and Expanded doubles the page count with reader letters and repeated scaffolding, so the ideas-per-page ratio has fallen with each revision.",
+          "source_ids": [
+            "bookworm-influence-2021",
+            "goodreads-influence"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book's lasting claim is double-edged: the shortcuts that make us exploitable are the same ones that make civilisation workable, so the goal is not to stop trusting authority, consensus, or reciprocity, but to punish their counterfeits — Cialdini frames defence as a public duty, keeping the shortcuts reliable for everyone.",
+      "source_ids": [
+        "wikipedia-influence",
+        "media-studies-influence-ch4"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Notice the click: the moment you feel obligated, consistent, rushed, or flattered into a yes, name the principle operating before answering.",
+        "source_ids": [
+          "wikipedia-influence"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Redefine gifts and concessions: accept the favour, but repay tricks as tricks, not debts.",
+        "source_ids": [
+          "wikipedia-influence"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "In emergencies, defeat pluralistic ignorance by singling out one person with one instruction.",
+        "source_ids": [
+          "media-studies-influence-ch4"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Treat named studies from this literature as leads, not proof: check whether the classic finding survived replication before building on it.",
+        "source_ids": [
+          "vaidis-dissonance-2024",
+          "manning-genovese-2007"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "One of the bestselling psychology books ever written — millions of copies in dozens of languages — the founding text of compliance research popularisation, and the acknowledged playbook for four decades of marketing, fundraising, and interface design.",
+      "source_ids": [
+        "wikipedia-influence",
+        "goodreads-influence"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Cialdini, a social psychologist who describes himself as a lifelong easy mark, spent three years undercover in sales, fundraising, and telemarketing training to learn the practitioner's craft, then wrote the book as consumer protection: the stated purpose is to arm the target, not the persuader.",
+      "source_ids": [
+        "wikipedia-influence"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Rare triangulation of participant observation with the experimental literature.",
+        "Field tactics verified by the industries that pay for them.",
+        "The defence sections make the claims testable in daily life."
+      ],
+      "weaknesses": [
+        "The social proof chapter's signature account is documented false in nearly every particular.",
+        "A thirty-nine-lab replication found no effect in the paradigm behind consistency pressure.",
+        "Studies narrated without effect sizes or boundary conditions.",
+        "The 2021 edition modernised examples without auditing the aged evidence."
+      ],
+      "source_ids": [
+        "manning-genovese-2007",
+        "vaidis-dissonance-2024",
+        "media-studies-influence-ch4"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "A four-decade phenomenon: adopted as the marketing canon, assigned across business and psychology courses, and praised for its defensive ethics — while the specialist literature has spent the same decades dismantling parts of the classic research it retails.",
+      "praise": [
+        "Millions of copies in dozens of languages, still selling.",
+        "Standard reading in marketing and social psychology.",
+        "The seven principles became the field's shared vocabulary."
+      ],
+      "criticism": [
+        "Peer-reviewed reconstruction demolished the thirty-eight-witnesses account it teaches.",
+        "The multilab replication record undercut the induced-compliance pillar behind consistency.",
+        "Readers of the 2021 edition report bloat: reader letters and repetition doubled the length."
+      ],
+      "source_ids": [
+        "wikipedia-influence",
+        "manning-genovese-2007",
+        "vaidis-dissonance-2024",
+        "goodreads-influence"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Anyone who buys things on the internet",
+        "Marketers, fundraisers, and salespeople",
+        "Negotiators and product designers",
+        "Readers building a behavioural-science foundation"
+      ],
+      "not_for": [
+        "Readers wanting current, effect-size-quantified psychology",
+        "Those seeking manipulation scripts — the book arms defenders",
+        "Anyone allergic to repeated anecdote scaffolding"
+      ],
+      "topics": [
+        "Persuasion and compliance",
+        "Social psychology",
+        "Marketing and sales tactics",
+        "Consumer self-defence",
+        "Decision shortcuts"
+      ],
+      "source_ids": [
+        "wikipedia-influence",
+        "goodreads-influence"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A manipulation manual — every chapter ends in defence",
+        "Current experimental psychology — the core studies are mid-century",
+        "A negotiation or rhetoric book: it covers automatic compliance, not argument"
+      ],
+      "omissions": [
+        "Effect sizes, boundary conditions, and failed applications",
+        "Digital-era coordinated manipulation (bots, astroturfing) beyond examples",
+        "Any systematic reckoning with the replication crisis in its own citations"
+      ],
+      "missing_or_weak": [
+        "The Genovese account and the dissonance-paradigm pillar are documented casualties",
+        "Unity, the newest principle, rests on the thinnest evidence"
+      ],
+      "dated_or_contested": [
+        "Milgram's obedience studies and the Werther-effect statistics have both been substantially reinterpreted since the book adopted them."
+      ],
+      "source_ids": [
+        "manning-genovese-2007",
+        "vaidis-dissonance-2024",
+        "media-studies-influence-ch4"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you sell, fundraise, negotiate, or design purchase flows for a living — the per-chapter tactic detail and defence drills are the working value — and prefer the leaner pre-2021 edition unless you want the unity chapter.",
+      "summary_is_enough_if": "Stop at a summary if you want the seven principles, their mechanisms, and an honest account of which have weakened; the framework compresses exceptionally well because the anecdotes are illustrations, not arguments.",
+      "skip_if": "Skip it if you need rigorous current evidence on persuasion — read recent meta-analyses instead — or if you already live inside marketing, where these principles are ambient knowledge.",
+      "format_advice": "The revised paperback is the efficient read; the 2021 hardcover adds unity plus considerable padding; the audiobook suits the anecdotal style.",
+      "source_ids": [
+        "bookworm-influence-2021",
+        "goodreads-influence"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "Name the seven principles and the single mechanism underneath all of them.",
+      "How does rejection-then-retreat combine two principles?",
+      "Which two pieces of the book's evidence base are documented casualties, and what survives them?"
+    ],
+    "application_prompts": [
+      "Find one countdown timer or 'only two left' flag today and name the principle before you feel it.",
+      "The next unsolicited free gift you receive, decide out loud whether it is a favour or a tactic before reciprocating.",
+      "Rewrite one request you plan to make this week using unity language — 'advice', 'we' — and notice whether it feels different to send."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Built from a full chapter of the original text, the documented publication and reception record, and the peer-reviewed literature on the book's core cited evidence.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity verified across three editions: 1984 William Morrow first edition (as How and Why People Agree to Things), 2006 Harper Business revised paperback, 2021 New and Expanded hardcover (9780062937650, 592pp).",
+        "Chapter 4 read directly via the hosted text; other chapters reconstructed from the documented record and flagged as such.",
+        "Counterevidence is load-bearing, not decorative: Manning et al. 2007 (Genovese parable) and Vaidis et al. 2024 (induced-compliance multilab) are cited at the exact claims they undercut, and the rating's evidence dimension prices them.",
+        "Rating scored on content only; sales, endorsements, and the author's honours excluded per rubric.",
+        "Narration reviewed against the product contract: content-first, no research meta, defence framing preserved.",
+        "Pronunciation: Cialdini (chal-DEE-nee) already in dictionary; Werther added after the phonemizer produced an English w and voiced th; Genovese, Milgram, Jonestown verified acceptable."
+      ]
+    }
   }
 }

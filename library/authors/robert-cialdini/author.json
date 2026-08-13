@@ -4,22 +4,127 @@
   "id": "robert-cialdini",
   "type": "author",
   "name": "Robert Cialdini",
-  "alternate_names": [],
+  "alternate_names": [
+    "Robert B. Cialdini"
+  ],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American social psychologist who systematised the science of compliance, and the most cited living authority on persuasion.",
+      "source_ids": [
+        "wikipedia-cialdini",
+        "asu-cialdini"
+      ],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in 1945, Cialdini took his BS at the University of Wisconsin–Milwaukee, his PhD in social psychology at the University of North Carolina in 1970, and postdoctoral training at Columbia. He spent his career at Arizona State University, where he is Regents' Professor Emeritus of Psychology and Marketing. To write Influence he spent three years undercover, training in sales, fundraising, and telemarketing jobs to observe compliance tactics from the inside. He was elected to the National Academy of Sciences in 2019, the Society for Personality and Social Psychology awards a field-research prize in his name, and he advised Barack Obama's 2012 presidential campaign. His books have sold millions of copies in dozens of languages.",
+      "source_ids": [
+        "wikipedia-cialdini",
+        "asu-cialdini"
+      ],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His signature method pairs participant observation with the experimental literature: learn what practitioners actually do, then find the psychology that explains why it works. The approach produced the seven-principles framework and a career-long argument that field evidence deserves parity with the laboratory.",
+      "source_ids": [
+        "wikipedia-cialdini"
+      ],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "The social psychology of compliance, field experimentation, and consumer behaviour, backed by hundreds of peer-reviewed papers and the discipline's top honours. He is an academic first: the books popularise a research programme he largely built.",
+      "source_ids": [
+        "wikipedia-cialdini",
+        "asu-cialdini"
+      ],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Cialdini writes as the field's systematiser and as a self-appointed consumer advocate: the framing is defensive, arming targets rather than persuaders. The limits are structural. His taxonomy rests on classic twentieth-century social psychology, parts of whose laboratory record have weakened under the replication crisis, and his consultancy, Influence at Work, gives him a commercial stake in the principles' continued reputation.",
+      "source_ids": [
+        "wikipedia-cialdini",
+        "influence-at-work"
+      ],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Influence: The Psychology of Persuasion",
+      "year": 1984,
+      "kind": "Book",
+      "relationship": "The compliance classic, expanded in 2021 with the unity principle; subject of this profile's book entry.",
+      "source_ids": [
+        "wikipedia-cialdini"
+      ]
+    },
+    {
+      "title": "Yes! 50 Scientifically Proven Ways to Be Persuasive",
+      "year": 2008,
+      "kind": "Book",
+      "relationship": "Co-authored applications volume with Noah Goldstein and Steve Martin.",
+      "source_ids": [
+        "wikipedia-cialdini"
+      ]
+    },
+    {
+      "title": "Pre-Suasion: A Revolutionary Way to Influence and Persuade",
+      "year": 2016,
+      "kind": "Book",
+      "relationship": "The sequel argument: the moment before the message decides its reception.",
+      "source_ids": [
+        "wikipedia-cialdini"
+      ]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-cialdini",
+        "title": "Robert Cialdini",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Robert_Cialdini",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Birth year, education, ASU career, the three-year undercover method, National Academy of Sciences election 2019, the SPSP Cialdini Prize, campaign advising, books and sales.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; flattering emphasis typical of living-person pages."
+      },
+      {
+        "id": "asu-cialdini",
+        "title": "Robert Cialdini (faculty spotlight)",
+        "author_or_publisher": "Arizona State University",
+        "url": "https://www.asu.edu/academics/faculty-excellence/spotlight/Robert-Cialdini",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Regents' Professor Emeritus title, the most-cited-social-psychologist claim, and the university's account of his research standing.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Institutional promotion of its own faculty."
+      },
+      {
+        "id": "influence-at-work",
+        "title": "About Dr. Robert Cialdini",
+        "author_or_publisher": "Influence at Work",
+        "url": "https://www.influenceatwork.com/about-dr-cialdini/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "The existence and scope of his commercial consultancy and speaking practice — the basis of the conflict-of-interest note — plus combined sales figures.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "The author's own marketing site."
+      }
+    ],
+    "citations": {
+      "/name": [
+        "wikipedia-cialdini"
+      ]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs from the documented record; no primary interviews consulted.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

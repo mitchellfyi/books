@@ -463,6 +463,19 @@
         "library/books/at-home-bryson/book.json#wikipedia-at-home"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "influence-contrasts-with-48-laws",
+      "source_id": "influence-robert-cialdini",
+      "target_id": "the-48-laws-of-power-greene",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Both catalogue the levers of social influence; Greene compiles them from history as amoral strategy for the wielder, Cialdini documents them from experiments and fieldwork and writes for the target — one arms the persuader, the other the persuaded.",
+      "source_refs": [
+        "library/books/influence-robert-cialdini/book.json#wikipedia-influence",
+        "library/books/the-48-laws-of-power-greene/book.json#wikipedia-48-laws"
+      ],
+      "confidence": "medium"
     }
   ]
 }

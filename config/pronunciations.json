@@ -241,6 +241,18 @@
       "source_url": "https://dictionary.cambridge.org/pronunciation/english/proust",
       "verified_at": "2026-08-13",
       "notes": "PROOST per Cambridge Dictionary. The unassisted phonemizer produced PROWST."
+    },
+    {
+      "term": "Werther",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "vˈeətə",
+        "en-us": "vˈɛɹtɚ"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/The_Sorrows_of_Young_Werther",
+      "verified_at": "2026-08-13",
+      "notes": "German [ˈveːɐ̯tɐ], anglicised 'VAIR-ter' (as in the Werther effect, named for Goethe's novel). The unassisted phonemizer produced an English w and a voiced th (wˈɜːðə), both wrong."
     }
   ]
 }

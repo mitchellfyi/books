@@ -3,29 +3,231 @@
   "schema_version": 1,
   "id": "influence-robert-cialdini",
   "type": "book",
-  "title": "Influence",
-  "alternate_titles": [],
-  "author_ids": ["robert-cialdini"],
+  "title": "Influence: The Psychology of Persuasion",
+  "alternate_titles": [
+    "Influence: How and Why People Agree to Things",
+    "Influence: Science and Practice",
+    "Influence, New and Expanded: The Psychology of Persuasion"
+  ],
+  "author_ids": [
+    "robert-cialdini"
+  ],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "1984",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US first edition (as Influence: How and Why People Agree to Things)",
+        "publisher": "William Morrow",
+        "publication_date": "1984",
+        "isbn_10": "0688015603",
+        "isbn_13": "9780688015602",
+        "format": "Hardcover",
+        "pages": null
+      },
+      {
+        "label": "Revised edition (The Psychology of Persuasion)",
+        "publisher": "Harper Business",
+        "publication_date": "2006",
+        "isbn_10": "006124189X",
+        "isbn_13": "9780061241895",
+        "format": "Paperback",
+        "pages": 336
+      },
+      {
+        "label": "New and Expanded edition",
+        "publisher": "Harper Business",
+        "publication_date": "2021-05-04",
+        "isbn_10": "0062937650",
+        "isbn_13": "9780062937650",
+        "format": "Hardcover",
+        "pages": 592
+      }
+    ],
+    "contents": [
+      "1. Weapons of Influence: fixed-action patterns and automatic compliance",
+      "2. Reciprocation: the old give and take, and the rejection-then-retreat tactic",
+      "3. Commitment and Consistency: foot-in-the-door, lowballing, and public commitment",
+      "4. Social Proof: canned laughter, the bystander parable, the Werther effect, Jonestown",
+      "5. Liking: attractiveness, similarity, compliments, and association",
+      "6. Authority: Milgram, titles, clothes, and trappings",
+      "7. Scarcity: reactance, deadlines, and the value of the forbidden",
+      "8. Unity (2021 edition): shared identity as the seventh principle",
+      "Epilogue. Instant Influence: automaticity in an information-overloaded age"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "consumer-psychology",
+      "decision-making",
+      "marketing",
+      "non-fiction",
+      "persuasion",
+      "social-psychology"
+    ],
+    "audiences": [
+      "Marketers, salespeople, and fundraisers",
+      "Consumers who want to recognise compliance tactics used on them",
+      "Students of social psychology and behavioural science",
+      "Negotiators and product designers"
+    ],
+    "formats_available": [
+      "Hardcover",
+      "Paperback",
+      "Ebook",
+      "Audiobook"
+    ]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-influence",
+        "title": "Influence: Science and Practice",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Influence:_Science_and_Practice",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication history (1984 William Morrow, 1985 reissue as Science and Practice, textbook editions to 2009), the six principles plus unity, sales in the millions across dozens of languages, and the undercover research method.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; claims traced where used."
+      },
+      {
+        "id": "openlibrary-influence",
+        "title": "Influence (work page)",
+        "author_or_publisher": "Open Library",
+        "url": "https://openlibrary.org/works/OL3902892W/Influence",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "First edition bibliographic detail: William Morrow, 1984, as 'Influence: How and Why People Agree to Things', ISBN 9780688015602, plus the edition chain through Scott Foresman, HarperCollins, Allyn and Bacon, and Pearson.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Catalogue metadata only."
+      },
+      {
+        "id": "bookworm-influence-2021",
+        "title": "Influence, New and Expanded: The Psychology of Persuasion",
+        "author_or_publisher": "The Bookworm (bookstore listing)",
+        "url": "https://bookwormomaha.com/book/9780062937650",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "2021 New and Expanded edition: Harper Business, 2021-05-04, hardcover, ISBN 9780062937650, 592 pages.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Retail listing; bibliographic facts only."
+      },
+      {
+        "id": "media-studies-influence-ch4",
+        "title": "Influence: The Psychology of Persuasion, chapter 4 (Social Proof)",
+        "author_or_publisher": "Cialdini, hosted at media-studies.ca",
+        "url": "https://www.media-studies.ca/articles/influence_ch4.htm",
+        "type": "book",
+        "accessed_at": "2026-08-13",
+        "supports": "Direct text of the social proof chapter: canned laughter, the 'thirty-eight witnesses' Genovese account and pluralistic ignorance, the Werther effect figures, Bandura's dog-phobia studies, and Jonestown.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "One chapter of the pre-2021 text; course-hosted copy."
+      },
+      {
+        "id": "manning-genovese-2007",
+        "title": "The Kitty Genovese murder and the social psychology of helping: The parable of the 38 witnesses",
+        "author_or_publisher": "Manning, Levine & Collins, American Psychologist 62(6)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17874896/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Peer-reviewed demonstration that the 'thirty-eight witnesses' account retailed in the book's social proof chapter is unsupported: no evidence of thirty-eight witnesses, of witnesses observing the full attack, or of total inaction.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Addresses the parable and its use in psychology teaching, not the book as a whole."
+      },
+      {
+        "id": "vaidis-dissonance-2024",
+        "title": "A Multilab Replication of the Induced-Compliance Paradigm of Cognitive Dissonance",
+        "author_or_publisher": "Vaidis et al., Advances in Methods and Practices in Psychological Science",
+        "url": "https://hal.science/hal-04443137",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A 39-lab, 4,898-participant replication of the classic induced-compliance paradigm underpinning consistency-pressure theory found no reliable attitude-change effect, unsettling a laboratory pillar behind the commitment and consistency principle.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Tests the underlying paradigm, not the book directly; commentary (Harmon-Jones 2024) contests the design."
+      },
+      {
+        "id": "aps-observer-dissonance",
+        "title": "Multilab Replication Challenges Long-held Theories on Cognitive Dissonance",
+        "author_or_publisher": "APS Observer, Association for Psychological Science",
+        "url": "https://www.psychologicalscience.org/publications/observer/multilab-replication-cognitive-dissonance.html",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Professional-association framing of the Vaidis result as a challenge to the classic dissonance literature that consistency-based persuasion claims draw on.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Reports on the replication; not a review of the book."
+      },
+      {
+        "id": "goodreads-influence",
+        "title": "Influence: The Psychology of Persuasion",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/28815.Influence",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Four decades of mass readership; consistently rated among the most influential business and psychology titles, with recurring reader complaints about dated examples and repetition.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/title": [
+        "wikipedia-influence",
+        "bookworm-influence-2021"
+      ],
+      "/alternate_titles": [
+        "wikipedia-influence",
+        "openlibrary-influence"
+      ],
+      "/author_ids": [
+        "wikipedia-influence"
+      ],
+      "/bibliography/first_published": [
+        "wikipedia-influence",
+        "openlibrary-influence"
+      ],
+      "/bibliography/original_language": [
+        "openlibrary-influence"
+      ],
+      "/bibliography/editions/0": [
+        "openlibrary-influence"
+      ],
+      "/bibliography/editions/1": [
+        "wikipedia-influence"
+      ],
+      "/bibliography/editions/2": [
+        "bookworm-influence-2021"
+      ],
+      "/bibliography/contents": [
+        "wikipedia-influence",
+        "media-studies-influence-ch4"
+      ],
+      "/discovery/tag_ids": [
+        "wikipedia-influence"
+      ],
+      "/discovery/audiences": [
+        "wikipedia-influence",
+        "goodreads-influence"
+      ],
+      "/discovery/formats_available": [
+        "bookworm-influence-2021"
+      ]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from a full chapter of the original text, the documented publication record, peer-reviewed literature on the fate of its core cited evidence, and four decades of reception.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: verify the 2021 edition's handling of the Genovese account against a full copy."
+    ]
   }
 }
