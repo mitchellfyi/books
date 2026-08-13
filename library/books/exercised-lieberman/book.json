@@ -3,29 +3,254 @@
   "schema_version": 1,
   "id": "exercised-lieberman",
   "type": "book",
-  "title": "Exercised",
-  "alternate_titles": [],
+  "title": "Exercised: Why Something We Never Evolved to Do Is Healthy and Rewarding",
+  "alternate_titles": ["Exercised", "Exercised: The Science of Physical Activity, Rest and Health"],
   "author_ids": ["daniel-lieberman"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2021",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US hardcover",
+        "publisher": "Pantheon Books",
+        "publication_date": "2021-01-05",
+        "isbn_10": "1524746983",
+        "isbn_13": "9781524746988",
+        "format": "Hardcover",
+        "pages": 464
+      },
+      {
+        "label": "US paperback",
+        "publisher": "Vintage",
+        "publication_date": "2021-12-07",
+        "isbn_10": "052543478X",
+        "isbn_13": "9780525434788",
+        "format": "Paperback",
+        "pages": 480
+      }
+    ],
+    "contents": [
+      "Prologue",
+      "1: Are We Born to Rest or Run?",
+      "Part I — Inactivity",
+      "2: Inactivity: The Importance of Being Lazy",
+      "3: Sitting: Is It the New Smoking?",
+      "4: Sleep: Why Stress Thwarts Rest",
+      "Part II — Speed, Strength, and Power",
+      "5: Speed: Neither Tortoise nor Hare",
+      "6: Strength: From Brawny to Scrawny",
+      "7: Fighting and Sports: From Fangs to Football",
+      "Part III — Endurance",
+      "8: Walking: All in a Day's Walk",
+      "9: Running and Dancing: Jumping from One Leg to the Other",
+      "10: Endurance and Aging: The Active Grandparent and Costly Repair Hypotheses",
+      "Part IV — Exercise in the Modern World",
+      "11: To Move or Not to Move: How to Make Exercise Happen",
+      "12: How Much and What Type?",
+      "13: Exercise and Disease",
+      "Epilogue"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": ["ageing", "anthropology", "behavioural-science", "biology", "evolution", "exercise", "health", "human-nature", "motivation", "non-fiction", "public-health", "sleep"],
+    "audiences": [
+      "People who know exercise is beneficial but dislike fitness culture, guilt, or rigid programmes",
+      "Readers interested in human evolution, movement, rest, ageing, and chronic-disease prevention",
+      "Coaches and health communicators seeking a humane explanation of inactivity and adherence",
+      "Active readers testing claims about sitting, sleep, strength, walking, running, and dose"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "google-books",
+        "title": "Exercised",
+        "author_or_publisher": "Daniel E. Lieberman; Knopf Doubleday via Google Books",
+        "url": "https://books.google.com/books/about/Exercised.html?id=YkfCDwAAQBAJ",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "US identity, publication, ISBN, length, topics, searchable preview, argument, and partial contents.",
+        "limitations": "Limited preview with uneven chapter access."
+      },
+      {
+        "id": "library-record",
+        "title": "Exercised",
+        "author_or_publisher": "Keller Public Library catalogue",
+        "url": "https://librarycatalog.cityofkeller.com/GroupedWork/4bcc5a91-1fbe-3b45-732a-4ebe5f63fa96-eng/Home",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "First-edition identity, language, ISBN, publisher, and full chapter structure.",
+        "limitations": "Catalogue record, not content evaluation."
+      },
+      {
+        "id": "harvard-interview",
+        "title": "Daniel Lieberman busts exercising myths",
+        "author_or_publisher": "Harvard Gazette",
+        "url": "https://news.harvard.edu/gazette/story/2021/01/daniel-lieberman-busts-exercising-myths/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Exercise definition, rest instinct, hunter-gatherer comparison, motivation, activity dose, running and knees, sitting, and ageing.",
+        "limitations": "Author interview hosted by his employer; health figures require independent corroboration."
+      },
+      {
+        "id": "harvard-excerpt",
+        "title": "Active Grandparenting",
+        "author_or_publisher": "Daniel E. Lieberman; Harvard Magazine",
+        "url": "https://www.harvardmagazine.com/2020/09/features-active-grandparenting",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Adapted chapter-ten text on ageing, repair, maintenance, physical activity, and the active-grandparent hypothesis.",
+        "limitations": "Publisher-author excerpt from one chapter."
+      },
+      {
+        "id": "exercise-medicine-paper",
+        "title": "Is Exercise Really Medicine? An Evolutionary Perspective",
+        "author_or_publisher": "Daniel E. Lieberman; Current Sports Medicine Reports",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26166056/",
+        "type": "specialist-review",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Peer-reviewed precursor to the exercise-paradox, mismatch, trade-off, and no-single-evolved-dose arguments.",
+        "limitations": "The author's own earlier scholarly argument."
+      },
+      {
+        "id": "oup-review",
+        "title": "Review of Exercised",
+        "author_or_publisher": "Haider J. Warraich; Evolution, Medicine, and Public Health",
+        "url": "https://academic.oup.com/emph/article/2020/1/311/5942685",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Physician assessment of the evolutionary synthesis, motivation problem, health evidence, empathy, clarity, and examples.",
+        "limitations": "Favourable review, not verification of every cited study."
+      },
+      {
+        "id": "physiology-review",
+        "title": "Exercised: The Science of Physical Activity, Rest and Health",
+        "author_or_publisher": "Michael Preedy; The Physiological Society",
+        "url": "https://www.physoc.org/magazine-articles/exercised-the-science-of-physical-activity-rest-and-health-by-professor-daniel-lieberman/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Full-book review, physical-activity definitions, field comparisons, prose, and critique of the exercise distinction.",
+        "limitations": "Single critical review with limited audit of health outcomes."
+      },
+      {
+        "id": "kirkus-review",
+        "title": "Exercised",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/daniel-e-lieberman/exercised/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Natural-history framing, accessible delivery, anthropological detail, limited prescriptiveness, and publication data.",
+        "limitations": "Concise trade review."
+      },
+      {
+        "id": "library-journal-review",
+        "title": "Exercised",
+        "author_or_publisher": "Library Journal",
+        "url": "https://www.libraryjournal.com/review/exercised-why-something-we-never-evolved-to-do-is-healthy-and-rewarding",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent description of the natural history, disease reference, persuasion value, and absence of a workout plan.",
+        "limitations": "Short collection-development review."
+      },
+      {
+        "id": "guardian-review",
+        "title": "Exercised — fitness myths exploded",
+        "author_or_publisher": "David Cox; The Guardian",
+        "url": "https://www.theguardian.com/books/2020/aug/29/exercised-by-daniel-lieberman-review-fitness-myths-exploded",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent assessment of entertainment, information value, running expertise, and myth-busting delivery.",
+        "limitations": "General-audience newspaper review."
+      },
+      {
+        "id": "who-guidelines",
+        "title": "WHO Guidelines on Physical Activity and Sedentary Behaviour",
+        "author_or_publisher": "World Health Organization",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK566046/",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent evidence-based activity, strength, older-adult, and sedentary-behaviour guidance and dose ranges.",
+        "limitations": "Population guidance; individual needs and contraindications vary."
+      },
+      {
+        "id": "running-oa-review",
+        "title": "The Association of Recreational and Competitive Running With Hip and Knee Osteoarthritis",
+        "author_or_publisher": "Journal of Orthopaedic & Sports Physical Therapy via PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28504066/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Meta-analysis finding lower observed osteoarthritis occurrence in recreational runners, with causal and confounding limits.",
+        "limitations": "Mostly observational evidence; prior injury and selection complicate causal interpretation."
+      },
+      {
+        "id": "active-grandparent-paper",
+        "title": "The Active Grandparent Hypothesis",
+        "author_or_publisher": "Daniel E. Lieberman et al.; Proceedings of the National Academy of Sciences",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8685690/",
+        "type": "specialist-review",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Formal development of the evolutionary hypothesis connecting later-life activity, extended human healthspan, repair, and intergenerational provisioning.",
+        "limitations": "Hypothesis and synthesis co-authored by Lieberman, not direct proof of one evolutionary pathway."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "Exercised",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/51152467-exercised",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large reader aggregate and recurring praise for insight and humour alongside criticism that the practical conclusion is simple relative to the length.",
+        "limitations": "Self-selected, merged editions, no control for expertise or completion."
+      }
+    ],
+    "citations": {
+      "/title": ["google-books", "library-record", "kirkus-review"],
+      "/alternate_titles": ["google-books", "physiology-review"],
+      "/author_ids": ["google-books", "library-record"],
+      "/bibliography/first_published": ["google-books", "library-record", "kirkus-review"],
+      "/bibliography/original_language": ["library-record", "google-books"],
+      "/bibliography/editions/0": ["google-books", "library-record", "kirkus-review"],
+      "/bibliography/editions/1": ["goodreads-reception", "google-books"],
+      "/bibliography/contents": ["library-record", "google-books", "physiology-review"],
+      "/discovery/tag_ids": ["google-books", "library-record", "who-guidelines"],
+      "/discovery/audiences": ["kirkus-review", "library-journal-review", "oup-review"],
+      "/discovery/formats_available": ["google-books", "goodreads-reception"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "researched-partial",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Searchable primary preview, the full contents, a substantial author interview, an adapted chapter, the peer-reviewed precursor and sequel hypothesis, independent clinical guidelines and meta-analysis, and four professional or specialist reviews cover every part. No uninterrupted lawful full text was used.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": ["Optional: check each disease-specific endnote against an owner-supplied copy and current clinical reviews before promoting coverage to full-book."]
   }
 }

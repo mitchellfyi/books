@@ -234,6 +234,31 @@
       "description": "Both challenge blame-centred explanations of behaviour; Determined supplies multilevel causal science, while The True Believer offers a compact but less empirical psychology of collective commitment.",
       "source_refs": [],
       "confidence": "medium"
+    },
+    {
+      "id": "exercised-written-by-daniel-lieberman",
+      "source_id": "exercised-lieberman",
+      "target_id": "daniel-lieberman",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Daniel E. Lieberman wrote Exercised.",
+      "source_refs": [
+        "library/books/exercised-lieberman/book.json#google-books",
+        "library/books/exercised-lieberman/book.json#library-record"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "exercised-related-to-how-not-to-age",
+      "source_id": "exercised-lieberman",
+      "target_id": "how-not-to-age-greger",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both address healthspan and chronic-disease prevention; Exercised isolates movement through evolution, while How Not to Age ranges more broadly across lifestyle and clinical nutrition.",
+      "source_refs": [
+        "library/books/exercised-lieberman/book.json#active-grandparent-paper"
+      ],
+      "confidence": "medium"
     }
   ]
 }

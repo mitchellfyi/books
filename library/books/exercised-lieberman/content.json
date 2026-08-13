@@ -7,105 +7,596 @@
     "compression_fit": "medium",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "Five minutes can preserve the exercise paradox and practical conclusion, but not the book's treatment of rest, sitting, sleep, speed, strength, sport, walking, running, ageing, disease, dose, and motivation. Fifteen minutes retains that range and the main evidential limits. Thirty minutes adds the comparative field observations and evolutionary mechanisms that make the original distinctive; the full book is mainly for readers who want Lieberman's stories, myth-by-myth detail, and extensive natural history."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "An evolutionary account of why humans readily move for necessity, reward, and companionship but resist optional exercise, and how modern environments turn that normal instinct into a health problem.",
+    "verdict": "A humane and memorable synthesis that replaces fitness shame with evolutionary explanation, although its ancestral comparisons are more useful for framing questions than prescribing one optimal routine.",
+    "source_ids": [
+      "google-books",
+      "harvard-interview",
+      "oup-review",
+      "physiology-review",
+      "who-guidelines"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Lieberman begins with inactivity: conserving energy, sitting, and sleeping. He then examines the speed, strength, fighting, play, and sporting capacities humans gained or traded away. A third part follows walking, running, dancing, endurance, and the possible role of active older people in human longevity. The final part applies this evolutionary history to motivation, exercise dose, and chronic disease. Across the book he tests fitness myths against anatomy, physiology, field observations, and modern health studies.",
+      "source_ids": [
+        "google-books",
+        "library-record",
+        "harvard-interview",
+        "harvard-excerpt",
+        "kirkus-review"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Humans evolved to be physically active when movement was necessary, socially rewarding, or enjoyable, while conserving limited energy whenever possible. Modern exercise is unusual because it asks people to spend energy voluntarily for delayed health benefits. Reluctance is therefore normal rather than a character defect. Because modern life removes much necessary movement, health now depends on deliberately restoring varied activity and making it rewarding enough to continue.",
+      "source_ids": [
+        "google-books",
+        "harvard-interview",
+        "exercise-medicine-paper",
+        "oup-review"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "exercise-paradox",
+      "title": "Exercise is physical activity made optional",
+      "claim": "The difficulty of exercise begins with its unusual purpose: planned voluntary movement for future fitness rather than immediate necessity or reward.",
+      "explanation": "All exercise is physical activity, but much physical activity in human history was work, travel, food gathering, care, play, or social life. Natural selection did not need to create a desire to waste scarce energy merely because movement might prevent disease decades later. The distinction is motivational, not anatomical: the same muscles perform both kinds of movement.",
+      "representative_example": "A person may resist running on a treadmill yet willingly walk for hours while exploring a city with friends; the energy cost is similar, but the purpose and reward are different.",
+      "why_it_matters": "It explains why health knowledge and good intentions often fail, and directs attention from moral weakness to the design of environments and rewards.",
+      "caveat": "Critics reasonably call the exercise-versus-activity distinction partly semantic; humans clearly evolved the capacity for movements now used as exercise.",
+      "source_ids": [
+        "harvard-interview",
+        "exercise-medicine-paper",
+        "physiology-review",
+        "oup-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "rest-is-adaptive",
+      "title": "Rest is an energy strategy, not a vice",
+      "claim": "Conserving energy helped survival and reproduction, so an instinct to avoid needless effort is adaptive in the environments that shaped humans.",
+      "explanation": "Energy not spent on movement could support growth, immune function, reproduction, food security, and repair. Subsistence populations can work hard while also sitting and resting for long periods. The mismatch is not that modern people rest at all, but that machines and built environments can remove most low-level movement without removing abundant food or chronic stress.",
+      "representative_example": "Hadza adults can sit for many hours a day, but their sitting is often interrupted and embedded in days that also require walking, carrying, digging, and other work.",
+      "why_it_matters": "It removes shame without pretending inactivity is harmless and suggests breaking up stillness instead of treating every chair as toxic.",
+      "caveat": "Contemporary hunter-gatherers and farmers are diverse living societies, not preserved replicas of a single ancestral population.",
+      "source_ids": [
+        "harvard-interview",
+        "google-books",
+        "oup-review",
+        "physiology-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "sitting-and-sleep",
+      "title": "Sitting and sleep depend on pattern and context",
+      "claim": "Neither sitting nor sleep can be reduced to a frightening slogan or a universal number.",
+      "explanation": "Sitting is normal, but long uninterrupted periods combined with little overall activity differ from frequent resting within an active day. Small contractions, posture changes, and movement breaks affect metabolism. Sleep is essential and flexible; duration varies with age, light, season, culture, illness, and stress, while chronic stress can frustrate the ability to rest.",
+      "representative_example": "Replacing an office chair with a standing desk changes posture, but it does not provide the cardiovascular and muscular work of walking, climbing, lifting, or running.",
+      "why_it_matters": "It replaces the claims that sitting is the new smoking and everyone needs exactly eight hours with more useful questions about total behaviour.",
+      "caveat": "The book explains population patterns rather than diagnosing sleep disorders or setting individual clinical thresholds.",
+      "source_ids": [
+        "google-books",
+        "harvard-interview",
+        "physiology-review",
+        "who-guidelines"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "movement-tradeoffs",
+      "title": "The human body is a bundle of movement trade-offs",
+      "claim": "Humans did not evolve to maximise speed, strength, or any single athletic quality; anatomy balances endurance, dexterity, throwing, cooperation, and energetic cost.",
+      "explanation": "Other primates are stronger for their size and many animals sprint faster. Humans instead combine efficient upright walking, unusual endurance, mobile shoulders, accurate throwing, tool use, learning, and collective action. Muscular bulk is expensive to build and maintain, so strength develops in response to use and declines when loading disappears.",
+      "representative_example": "A chimpanzee outmuscles a human of similar size, while a coordinated human group can travel, carry, throw, communicate, and pursue over long distances.",
+      "why_it_matters": "Fitness should develop complementary capacities rather than chase an imagined perfect ancestral body or one performance metric.",
+      "caveat": "Evolutionary trade-offs explain broad capacities; training response, disability, sex, age, occupation, and individual goals still matter.",
+      "source_ids": [
+        "google-books",
+        "library-record",
+        "oup-review",
+        "physiology-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "endurance-human",
+      "title": "Walking is foundational; running and dancing add intensity and reward",
+      "claim": "Human endurance rests on economical walking and capacities for sustained running, with social activities such as dance helping turn effort into reward.",
+      "explanation": "Walking supplies accessible, repeatable activity and is central to subsistence mobility. Running raises intensity through repeated airborne steps and makes distinctive demands on cooling, balance, tendons, and energy. Dance combines endurance with rhythm, learning, display, and group connection. The book treats movement as biological and cultural at once.",
+      "representative_example": "Recreational running is often blamed for knee arthritis, yet observational evidence does not show higher occurrence among recreational runners and may show lower occurrence than among sedentary controls.",
+      "why_it_matters": "It broadens useful exercise beyond gym work and shows why enjoyable movement can be easier to sustain than abstract calorie expenditure.",
+      "caveat": "The running evidence is largely observational; prior injury, training load, selection, and competitive mileage complicate causal claims.",
+      "source_ids": [
+        "harvard-interview",
+        "running-oa-review",
+        "google-books",
+        "guardian-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "active-ageing",
+      "title": "Activity may help explain human healthspan",
+      "claim": "Later-life movement may be part of the evolutionary system that made unusually long and useful human lives possible.",
+      "explanation": "The active-grandparent and costly-repair hypotheses propose that older humans remained valuable by gathering, hunting, carrying, and provisioning younger relatives. Physical activity also creates short-term stress and damage that activates repair, maintenance, antioxidant, metabolic, and immune processes. When activity disappears, energy may be stored while these responses receive less stimulation.",
+      "representative_example": "Unlike most primates, human grandparents can contribute food and knowledge for years after reproduction, making maintained mobility valuable beyond individual survival.",
+      "why_it_matters": "It reframes exercise in older age as support for function, repair, independence, and contribution rather than an attempt to imitate youth.",
+      "caveat": "This is an evolutionary synthesis and hypothesis, not proof that one pathway caused human longevity or that exercise prevents every feature of ageing.",
+      "source_ids": [
+        "harvard-excerpt",
+        "active-grandparent-paper",
+        "harvard-interview",
+        "oup-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "exercise-and-health",
+      "title": "Activity activates maintenance; it is not magic medicine",
+      "claim": "Regular movement lowers many health risks through effects across cardiovascular, metabolic, muscular, skeletal, immune, and nervous systems.",
+      "explanation": "Exercise spends energy, challenges tissues, improves capacity, and triggers repair. It can reduce risk or severity across many common chronic conditions and helps preserve strength with age. Benefits do not require elite performance, but they accumulate through regular exposure. Weight loss from exercise alone is often modest because appetite and other expenditure can compensate.",
+      "representative_example": "Resistance work creates a controlled demand that stimulates muscle maintenance; without loading, age-related muscle loss can accelerate even if body weight barely changes.",
+      "why_it_matters": "It shifts the goal from burning calories or achieving a look to maintaining systems that modern life underuses.",
+      "caveat": "Exercise changes risk rather than guaranteeing protection, responses vary, and injury or excessive training can cause harm.",
+      "source_ids": [
+        "exercise-medicine-paper",
+        "who-guidelines",
+        "harvard-excerpt",
+        "oup-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "dose-and-variety",
+      "title": "Some movement is valuable; variety beats a mythical optimum",
+      "claim": "There is no single evolutionarily correct workout, but most people benefit from combining aerobic activity, strength work, and less uninterrupted sitting.",
+      "explanation": "Evolution produced flexible responses and trade-offs, not a prescription. Public-health guidance gives useful ranges: adults should generally aim for 150 to 300 minutes of moderate aerobic activity, or 75 to 150 minutes vigorous, each week, plus muscle strengthening on at least two days. More can help, but the largest practical step for an inactive person is often beginning.",
+      "representative_example": "A week of brisk walking, cycling, carrying, and two short strength sessions trains more of the system than searching for one supposedly ancestral exercise.",
+      "why_it_matters": "It gives direction without converting a population range into a rigid pass-or-fail target.",
+      "caveat": "Guidelines are population advice, not personalised instructions for illness, injury, disability, pregnancy, or high-performance training.",
+      "source_ids": [
+        "who-guidelines",
+        "exercise-medicine-paper",
+        "harvard-interview"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "motivation-without-shame",
+      "title": "Make movement necessary, social, or rewarding",
+      "claim": "Sustainable activity is more likely when its immediate meaning competes successfully with the immediate appeal of rest.",
+      "explanation": "Distant health risk is a weak reward. Environments can make walking convenient, routines can remove repeated decisions, groups can provide commitment, and games, music, nature, skill, or shared purpose can make movement enjoyable. Choosing an acceptable activity and beginning below one's maximum is more durable than guilt or heroic bursts.",
+      "representative_example": "Meeting a friend for a walk supplies conversation and obligation now, while the health benefit remains delayed and invisible.",
+      "why_it_matters": "It turns the book's evolutionary explanation into a realistic adherence strategy and protects readers from fitness moralism.",
+      "caveat": "Social design cannot remove constraints such as disability, unsafe streets, time poverty, care work, pain, or lack of access.",
+      "source_ids": [
+        "harvard-interview",
+        "oup-review",
+        "library-journal-review",
+        "who-guidelines"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Prologue and chapter 1: The exercise paradox",
+      "purpose": "Defines exercise and replaces the idea that humans naturally seek optional exertion with an evolutionary problem.",
+      "summary": "Lieberman begins from his own ambivalence, separates physical activity from planned exercise, and asks how bodies adapted for regular movement became attached to minds that often prefer rest.",
+      "idea_ids": [
+        "exercise-paradox",
+        "motivation-without-shame"
+      ],
+      "source_ids": [
+        "google-books",
+        "library-record",
+        "harvard-interview"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Part I, chapters 2–4: Inactivity",
+      "purpose": "Explains energy conservation, sitting, and sleep before separating normal rest from modern mismatch.",
+      "summary": "The first part compares industrial and subsistence behaviour, rejects the idea that every seated hour is equivalent, and treats sleep as essential but environmentally and physiologically flexible.",
+      "idea_ids": [
+        "rest-is-adaptive",
+        "sitting-and-sleep"
+      ],
+      "source_ids": [
+        "library-record",
+        "google-books",
+        "harvard-interview",
+        "physiology-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Part II, chapters 5–7: Speed, strength, fighting, and sport",
+      "purpose": "Shows how human physical abilities reflect compromises and how culture transforms useful capacities into contests and play.",
+      "summary": "Humans are neither exceptional sprinters nor exceptionally strong primates. Our distinctive package combines movement economy, throwing, skill, cooperation, competition, and learned games, while strength remains plastic and costly to maintain.",
+      "idea_ids": [
+        "movement-tradeoffs",
+        "motivation-without-shame"
+      ],
+      "source_ids": [
+        "library-record",
+        "google-books",
+        "oup-review",
+        "physiology-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Part III, chapters 8–10: Endurance and ageing",
+      "purpose": "Connects walking, running, dancing, and later-life activity to human anatomy, cooperation, repair, and longevity.",
+      "summary": "The third part moves from ordinary walking through running and dance to the active-grandparent and costly-repair hypotheses. Its central shift is from exercise as sport to movement as a contributor to long-term function and social value.",
+      "idea_ids": [
+        "endurance-human",
+        "active-ageing",
+        "exercise-and-health"
+      ],
+      "source_ids": [
+        "library-record",
+        "harvard-excerpt",
+        "active-grandparent-paper",
+        "running-oa-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Part IV and epilogue, chapters 11–13: Exercise now",
+      "purpose": "Turns the natural history into guidance on adherence, dose, variety, and disease without claiming a perfect ancestral programme.",
+      "summary": "Lieberman argues for making movement necessary, social, and enjoyable; offers broad rather than exact dose guidance; surveys health effects; and closes with a compassionate case for doing some aerobic and strength activity throughout life.",
+      "idea_ids": [
+        "motivation-without-shame",
+        "dose-and-variety",
+        "exercise-and-health"
+      ],
+      "source_ids": [
+        "library-record",
+        "harvard-interview",
+        "exercise-medicine-paper",
+        "who-guidelines"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "A prologue and framing chapter, followed by four thematic parts that move from rest to athletic capacities, endurance and ageing, then practical exercise in modern life.",
+    "voice": "Curious, humane, myth-busting, conversational, and occasionally comic. Lieberman writes as both a researcher and a reluctant exerciser rather than a fitness disciplinarian.",
+    "pace": "Accessible but broad. Field stories and bodily explanations create momentum; repeated comparisons and long anthropological passages slow readers who want only the prescription.",
+    "evidence_style": "Evolutionary synthesis combining anatomy, biomechanics, physiology, epidemiology, experiments, historical evidence, and observations of subsistence populations.",
+    "example_style": "Travel and field encounters, hunter-gatherer and farming communities, animals, athletes, laboratory measurements, personal running, and familiar modern routines.",
+    "repetition": "Moderate. The contrast among necessary movement, optional exercise, and energy-conserving rest recurs across nearly every topic and makes the practical conclusion simpler than the route to it.",
+    "prerequisites": "No scientific training is needed. Readers should be willing to distinguish evolutionary explanation from moral approval and population evidence from personal medical advice.",
+    "source_ids": [
+      "google-books",
+      "kirkus-review",
+      "library-journal-review",
+      "guardian-review",
+      "oup-review",
+      "physiology-review"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 7.4,
+      "confidence": "medium",
+      "summary": "A strong, practical evolutionary synthesis that makes inactivity intelligible and movement easier to design, while relying on incomplete ancestral evidence and taking a long route to a fairly simple prescription.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 8.0,
+          "rationale": "The exercise paradox, energy conservation, mismatch, trade-offs, and immediate-versus-delayed reward form a clear explanation of why movement can be biologically valuable yet motivationally difficult.",
+          "source_ids": [
+            "exercise-medicine-paper",
+            "harvard-interview",
+            "oup-review",
+            "physiology-review"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 7.0,
+          "rationale": "The argument draws on several relevant sciences and field comparisons, but some health claims are observational and the small, varied living populations studied cannot determine one ancestral norm or causal pathway.",
+          "source_ids": [
+            "exercise-medicine-paper",
+            "running-oa-review",
+            "active-grandparent-paper",
+            "who-guidelines",
+            "physiology-review"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 8.0,
+          "rationale": "Treating reluctance as a normal energy strategy rather than failure, and linking adherence to immediate social or practical reward, adds a memorable and non-obvious frame to familiar health advice.",
+          "source_ids": [
+            "harvard-interview",
+            "oup-review",
+            "library-journal-review"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 7.5,
+          "rationale": "The book supports flexible, low-shame action: move more often, use aerobic and strength work, preserve activity with age, and design rewards, while appropriately avoiding a universal detailed programme.",
+          "source_ids": [
+            "harvard-interview",
+            "who-guidelines",
+            "library-journal-review"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 7.0,
+          "rationale": "It covers an unusually wide range and often resists absolutist fitness myths, but gives less attention to disability, structural constraints, individual contraindications, and the limits of generalising field observations.",
+          "source_ids": [
+            "google-books",
+            "who-guidelines",
+            "physiology-review",
+            "kirkus-review"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.5,
+          "rationale": "The examples and comparative natural history make the thesis convincing and enjoyable, but more than four hundred pages deliver a practical message that can be retained in substantially less space.",
+          "source_ids": [
+            "google-books",
+            "kirkus-review",
+            "goodreads-reception"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book turns exercise from a test of virtue into a problem of evolutionary mismatch and environmental design. Bodies still need regular challenge, but minds reasonably prefer conserving energy when movement offers no immediate purpose. The humane response is to create purpose, pleasure, companionship, and convenience around varied movement instead of relying on shame.",
+      "source_ids": [
+        "harvard-interview",
+        "exercise-medicine-paper",
+        "oup-review",
+        "library-journal-review"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Do not interpret reluctance to exercise as proof of laziness or defective character; redesign the immediate incentives and setting.",
+        "source_ids": [
+          "harvard-interview",
+          "oup-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Distinguish normal rest from a life with too little total movement and too many long, unbroken sedentary periods.",
+        "source_ids": [
+          "harvard-interview",
+          "who-guidelines"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use a mixture of accessible aerobic movement and strength work, and continue adapting both through later life.",
+        "source_ids": [
+          "who-guidelines",
+          "harvard-excerpt"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Make activity social, enjoyable, useful, or routine because immediate rewards are more reliable than distant risk reduction.",
+        "source_ids": [
+          "harvard-interview",
+          "library-journal-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use evolutionary history to identify trade-offs and mismatch, not to claim that one surviving population or ancestral story supplies a perfect workout.",
+        "source_ids": [
+          "exercise-medicine-paper",
+          "physiology-review",
+          "active-grandparent-paper"
+        ],
+        "basis": "inference"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "Exercised joins evolution, health, and behaviour in a way that protects the reader's time and dignity: it explains why standard exhortation fails, corrects memorable myths about sitting, running, ageing, and dose, and points towards environments where movement has a present reason. Its contribution is less a novel exercise list than a better model of adherence.",
+      "source_ids": [
+        "harvard-interview",
+        "oup-review",
+        "guardian-review",
+        "library-journal-review"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Daniel E. Lieberman is a Harvard human evolutionary biologist whose research combines anatomy, physiology, biomechanics, fossils, laboratory work, and field comparisons, especially around walking and endurance running. He wrote the book to explain the exercise paradox and replace moralising commands with evolutionary understanding. That expertise is directly relevant to movement history and mechanism, but it does not make the work an individual clinical prescription.",
+      "source_ids": [
+        "harvard-interview",
+        "exercise-medicine-paper",
+        "physiology-review",
+        "google-books"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "strong",
+      "strengths": [
+        "Connects anatomy, physiology, biomechanics, epidemiology, behaviour, culture, and evolutionary trade-offs instead of offering one-factor fitness advice.",
+        "Uses field observation to challenge assumptions about sitting, rest, movement, and ageing in industrial populations.",
+        "Separates broad patterns from an exact evolutionary prescription and accepts that no single dose or activity type is universally optimal.",
+        "Several practical conclusions align with independent public-health guidance and specialist evidence."
+      ],
+      "weaknesses": [
+        "Many disease and longevity claims depend on observational evidence that cannot fully eliminate selection, confounding, or reverse causation.",
+        "Small contemporary hunter-gatherer and subsistence-farming samples cannot represent all living populations or recreate one ancestral environment.",
+        "The exercise-versus-physical-activity distinction is behaviourally illuminating but not a clean physiological boundary.",
+        "The active-grandparent and costly-repair accounts are plausible syntheses rather than direct proof of why human longevity evolved.",
+        "Broad population conclusions leave disability, pain, illness, pregnancy, unsafe environments, care work, and unequal access underdeveloped."
+      ],
+      "source_ids": [
+        "exercise-medicine-paper",
+        "who-guidelines",
+        "running-oa-review",
+        "active-grandparent-paper",
+        "physiology-review",
+        "oup-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Professional and specialist reviews generally regard the book as informative, entertaining, humane, and unusually broad. They value the field comparisons and relief from fitness moralism. Criticism centres on the partly semantic definition of exercise, the length of the anthropological route, and the gap between an intricate natural history and a simple practical conclusion.",
+      "praise": [
+        "Reviewers praise the accessible combination of evolutionary biology, movement science, fieldwork, and familiar health questions.",
+        "The refusal to shame inactive readers and the emphasis on social or enjoyable movement are seen as persuasive strengths.",
+        "The myth-by-myth structure gives readers useful distinctions about sitting, sleep, running, ageing, disease, and dose."
+      ],
+      "criticism": [
+        "The claim that humans did not evolve to exercise can appear to depend on defining exercise by modern intention rather than bodily movement.",
+        "Some anthropological sections feel long relative to the practical conclusion that regular varied activity is beneficial.",
+        "General readers report that insight and humour coexist with repetition and more detail than the final recommendation requires.",
+        "The work is a natural history and motivational frame, not the concrete programme some readers may expect from an exercise book."
+      ],
+      "source_ids": [
+        "oup-review",
+        "physiology-review",
+        "kirkus-review",
+        "library-journal-review",
+        "guardian-review",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "People who accept that movement matters but dislike exercise, guilt, or fitness culture",
+        "Readers interested in evolution, anatomy, walking, running, rest, ageing, and chronic disease",
+        "Coaches, educators, and health communicators trying to improve motivation without shame",
+        "Active readers who enjoy testing popular claims against natural history and evidence"
+      ],
+      "not_for": [
+        "Readers seeking a short personalised workout or rehabilitation programme",
+        "People wanting clinical advice for a particular disease, injury, disability, pregnancy, or eating disorder",
+        "Readers interested only in the minimum weekly target and not the evolutionary explanation",
+        "Anyone unwilling to tolerate long field stories and comparative anthropology"
+      ],
+      "topics": [
+        "Exercise",
+        "Physical activity",
+        "Evolution",
+        "Energy conservation",
+        "Sitting",
+        "Sleep",
+        "Strength",
+        "Sport",
+        "Walking",
+        "Running",
+        "Dance",
+        "Ageing",
+        "Chronic disease",
+        "Motivation",
+        "Public health"
+      ],
+      "source_ids": [
+        "google-books",
+        "library-record",
+        "kirkus-review",
+        "library-journal-review",
+        "oup-review"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A personalised training plan or clinical exercise prescription",
+        "A claim that rest, sitting, or sleep is inherently unhealthy",
+        "A promise that exercise guarantees weight loss, prevents every disease, or stops ageing",
+        "A reconstruction of one exact ancestral lifestyle that modern people should copy"
+      ],
+      "omissions": [
+        "Detailed programme design, progression, technique, rehabilitation, and sport-specific training",
+        "Sustained treatment of disability, chronic pain, pregnancy, eating disorders, unsafe neighbourhoods, time poverty, and unequal access",
+        "A systematic audit of every disease-specific effect or comparison among exercise modes",
+        "A full account of how policy, work, transport, housing, and urban design could restore necessary movement"
+      ],
+      "missing_or_weak": [
+        "Clearer separation between directly measured history, observation of living groups, adaptive explanation, and plausible evolutionary story",
+        "More explicit uncertainty around observational claims about running, weight, disease, and longevity",
+        "More concrete low-cost adaptations for readers excluded by conventional fitness settings",
+        "A shorter synthesis connecting each myth to one decision without repeating the exercise paradox"
+      ],
+      "dated_or_contested": [
+        "The boundary between exercise and physical activity is contested and depends partly on motive rather than movement.",
+        "The active-grandparent and costly-repair hypotheses remain developing explanations rather than settled accounts of human ageing.",
+        "Public-health dose guidance, disease evidence, and estimates of sedentary risk will change as measurement and causal evidence improve.",
+        "Living hunter-gatherer and subsistence groups differ substantially; no one group supplies a universal ancestral baseline."
+      ],
+      "source_ids": [
+        "physiology-review",
+        "exercise-medicine-paper",
+        "active-grandparent-paper",
+        "running-oa-review",
+        "who-guidelines",
+        "kirkus-review"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you want the field stories, anatomy, comparative evidence, humour, and evolutionary reasoning that make its practical message emotionally convincing rather than merely familiar.",
+      "summary_is_enough_if": "The fifteen-minute version is enough if you need the complete decision model: reluctance is normal, modern inactivity is a mismatch, useful movement is varied and regular, and adherence improves when movement has immediate purpose or reward.",
+      "skip_if": "Skip it if you already use that model, need a condition-specific programme, or want concise training instructions without anthropology and natural history.",
+      "format_advice": "Audio suits the stories and conversational voice. Print or ebook is better for checking notes, mechanisms, qualifications, and individual claims. Neither format substitutes for tailored clinical guidance where it is needed.",
+      "source_ids": [
+        "kirkus-review",
+        "library-journal-review",
+        "guardian-review",
+        "physiology-review",
+        "goodreads-reception"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What is the difference between physical activity and exercise in Lieberman's argument?",
+      "Why can energy conservation be adaptive while modern inactivity remains harmful?",
+      "Which movement trade-offs distinguish humans from faster or stronger animals?",
+      "What do the active-grandparent and costly-repair hypotheses try to explain?",
+      "Why does the book favour immediate social or practical rewards over shame?"
+    ],
+    "application_prompts": [
+      "Choose one avoided activity and add an immediate social, practical, playful, or environmental reward.",
+      "Map one normal day for prolonged stillness, light movement, aerobic effort, and strength loading before changing it.",
+      "Replace one all-or-nothing fitness target with a small repeatable action that can grow.",
+      "Test one ancestral-health claim by separating direct evidence, comparison, adaptation, and speculation."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "The adversarial pass distinguished the motivational definition of exercise from the underlying movement, treated living subsistence populations as comparisons rather than preserved ancestors, separated public-health ranges from personal prescriptions, qualified observational running and disease evidence, and presented the active-grandparent and costly-repair accounts as hypotheses."
   }
 }

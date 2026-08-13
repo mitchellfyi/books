@@ -324,6 +324,55 @@
       "label": "Neuroscience",
       "description": "The scientific study of nervous systems, brains, cognition, emotion, and behaviour.",
       "aliases": []
+    },
+    {
+      "id": "ageing",
+      "kind": "topic",
+      "label": "Ageing",
+      "description": "Biological, psychological, and social change across later life, including healthspan and longevity.",
+      "aliases": ["aging"]
+    },
+    {
+      "id": "anthropology",
+      "kind": "topic",
+      "label": "Anthropology",
+      "description": "The comparative study of humans, cultures, societies, bodies, and their development across time.",
+      "aliases": []
+    },
+    {
+      "id": "evolution",
+      "kind": "topic",
+      "label": "Evolution",
+      "description": "Change in inherited traits across generations and the selection, history, and trade-offs shaping organisms.",
+      "aliases": []
+    },
+    {
+      "id": "exercise",
+      "kind": "topic",
+      "label": "Exercise",
+      "description": "Planned or structured physical activity and the broader movement behaviours affecting fitness and health.",
+      "aliases": ["physical-activity"]
+    },
+    {
+      "id": "health",
+      "kind": "topic",
+      "label": "Health",
+      "description": "Physical and mental function, disease risk, prevention, treatment, and wellbeing.",
+      "aliases": []
+    },
+    {
+      "id": "public-health",
+      "kind": "topic",
+      "label": "Public health",
+      "description": "Population-level prevention, health promotion, risk reduction, and the conditions shaping health.",
+      "aliases": []
+    },
+    {
+      "id": "sleep",
+      "kind": "topic",
+      "label": "Sleep",
+      "description": "Biological sleep, rest, circadian timing, sleep pressure, and the conditions affecting recovery.",
+      "aliases": []
     }
   ]
 }

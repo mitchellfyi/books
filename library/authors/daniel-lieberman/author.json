@@ -3,23 +3,196 @@
   "schema_version": 1,
   "id": "daniel-lieberman",
   "type": "author",
-  "name": "Daniel Lieberman",
-  "alternate_names": [],
+  "name": "Daniel E. Lieberman",
+  "alternate_names": ["Daniel Lieberman", "Dan Lieberman"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "Harvard human evolutionary biologist whose field, laboratory, anatomical, and fossil research examines why human bodies move as they do and how physical activity affects health.",
+      "source_ids": ["harvard-faculty", "harvard-programme", "cv"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Lieberman is the Edwin M. Lerner II Professor of Biological Sciences and professor of human evolutionary biology at Harvard. His research combines evolutionary anatomy, physiology, biomechanics, fossils, and field studies. He is particularly associated with human walking and endurance running, while also studying sitting, digging, throwing, carrying, diet, the head, and the transition from apes to hominins.",
+      "source_ids": ["harvard-faculty", "harvard-programme", "cv"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His work compares industrialised populations with subsistence farmers and hunter-gatherers and tests movement in laboratory and field settings. This multi-method perspective lets him connect anatomy and evolutionary history to current behaviour, injury, ageing, and chronic disease.",
+      "source_ids": ["harvard-faculty", "harvard-interview", "physiology-review"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Lieberman's strongest authority is human evolutionary biology, locomotion, anatomy, and physical-activity research. He is a scientist and synthesiser rather than a clinician writing an individual prescription. His evolutionary explanations can reveal why a response exists and where modern mismatch arises, but do not by themselves determine the safest dose for a particular illness, disability, injury, or pregnancy.",
+      "source_ids": ["harvard-faculty", "exercise-medicine-paper", "who-guidelines"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "He treats the body as a product of trade-offs rather than a perfectly engineered machine and resists fitness moralism. Comparisons with small contemporary non-industrial populations add rare evidence but cannot reconstruct one universal ancestral lifestyle. The distinction between necessary physical activity and modern voluntary exercise is behaviourally useful, although critics argue that muscles did evolve for the same movements regardless of motive.",
+      "source_ids": ["physiology-review", "oup-review", "harvard-interview"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "The Evolution of the Human Head",
+      "year": 2011,
+      "kind": "Book",
+      "relationship": "Technical evolutionary account of human cranial anatomy.",
+      "source_ids": ["harvard-faculty"]
+    },
+    {
+      "title": "The Story of the Human Body",
+      "year": 2013,
+      "kind": "Book",
+      "relationship": "Broad history of human bodily evolution, mismatch, health, and disease.",
+      "source_ids": ["harvard-faculty", "google-books"]
+    },
+    {
+      "title": "Exercised",
+      "year": 2021,
+      "kind": "Book",
+      "relationship": "Natural history of physical activity, inactivity, exercise myths, health effects, and motivation.",
+      "source_ids": ["google-books", "library-record"]
+    },
+    {
+      "title": "Fed Up",
+      "year": 2026,
+      "kind": "Book",
+      "relationship": "Later evolutionary treatment of food, diet, and health.",
+      "source_ids": ["harvard-faculty"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "harvard-faculty",
+        "title": "Daniel E. Lieberman",
+        "author_or_publisher": "Harvard Department of Human Evolutionary Biology",
+        "url": "https://heb.fas.harvard.edu/people/daniel-e-lieberman",
+        "type": "employer",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current title, research programme, activities studied, evolutionary approach, and books.",
+        "limitations": "Authoritative employer profile, not independent evaluation."
+      },
+      {
+        "id": "harvard-programme",
+        "title": "Human Evolutionary Biology",
+        "author_or_publisher": "Harvard University",
+        "url": "https://www.harvard.edu/programs/human-evolutionary-biology/",
+        "type": "employer",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Interdisciplinary scope of human evolutionary biology across anatomy, physiology, behaviour, ecology, genetics, genomics, and fossils.",
+        "limitations": "Programme description rather than personal biography."
+      },
+      {
+        "id": "cv",
+        "title": "Daniel Eric Lieberman curriculum vitae",
+        "author_or_publisher": "Daniel E. Lieberman / Collège de France",
+        "url": "https://www.college-de-france.fr/sites/default/files/media/document/2025-07/daniel_lieberman_cv_juin_2024.pdf",
+        "type": "official-documentation",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Education, academic appointments, publications, honours, and research career.",
+        "limitations": "Author-supplied professional record."
+      },
+      {
+        "id": "exercise-medicine-paper",
+        "title": "Is Exercise Really Medicine? An Evolutionary Perspective",
+        "author_or_publisher": "Daniel E. Lieberman; Current Sports Medicine Reports",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26166056/",
+        "type": "specialist-review",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Lieberman's scholarly exercise-paradox framework and explicit warning that evolutionary trade-offs yield no single evolutionarily determined optimal dose or type.",
+        "limitations": "Author's own review and framework."
+      },
+      {
+        "id": "harvard-interview",
+        "title": "Daniel Lieberman busts exercising myths",
+        "author_or_publisher": "Harvard Gazette",
+        "url": "https://news.harvard.edu/gazette/story/2021/01/daniel-lieberman-busts-exercising-myths/",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Author's definitions, field comparisons, motivation advice, running, sitting, ageing, and stated purpose.",
+        "limitations": "Employer interview promoting a faculty book."
+      },
+      {
+        "id": "physiology-review",
+        "title": "Exercised: The Science of Physical Activity, Rest and Health",
+        "author_or_publisher": "Michael Preedy; The Physiological Society",
+        "url": "https://www.physoc.org/magazine-articles/exercised-the-science-of-physical-activity-rest-and-health-by-professor-daniel-lieberman/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent physiological assessment of expertise, field comparisons, writing, and the contested exercise-versus-physical-activity distinction.",
+        "limitations": "One review with a deliberately sceptical and humorous tone."
+      },
+      {
+        "id": "oup-review",
+        "title": "Review of Exercised",
+        "author_or_publisher": "Haider J. Warraich; Evolution, Medicine, and Public Health",
+        "url": "https://academic.oup.com/emph/article/2020/1/311/5942685",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Physician assessment of Lieberman's synthesis, empathy, exercise paradox, health argument, and practical relevance.",
+        "limitations": "Favourable book review rather than a systematic audit."
+      },
+      {
+        "id": "google-books",
+        "title": "Exercised",
+        "author_or_publisher": "Daniel E. Lieberman; Knopf Doubleday via Google Books",
+        "url": "https://books.google.com/books/about/Exercised.html?id=YkfCDwAAQBAJ",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Book identity, author, publication, bibliography, and argument.",
+        "limitations": "Limited preview."
+      },
+      {
+        "id": "library-record",
+        "title": "Exercised",
+        "author_or_publisher": "Keller Public Library catalogue",
+        "url": "https://librarycatalog.cityofkeller.com/GroupedWork/4bcc5a91-1fbe-3b45-732a-4ebe5f63fa96-eng/Home",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "First-edition metadata and complete chapter and part list.",
+        "limitations": "Catalogue record, not biographical analysis."
+      },
+      {
+        "id": "who-guidelines",
+        "title": "WHO Guidelines on Physical Activity and Sedentary Behaviour",
+        "author_or_publisher": "World Health Organization",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK566046/",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current evidence-based activity and strength recommendations and the principle that some activity is better than none.",
+        "limitations": "Population guidance, not individual medical advice."
+      }
+    ],
+    "citations": {
+      "/name": ["harvard-faculty", "cv", "google-books"],
+      "/alternate_names": ["harvard-faculty", "harvard-interview"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile uses current Harvard and CV records, his scholarly framework, and independent medical and physiological reviews; it keeps evolutionary expertise distinct from individual clinical prescribing.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
