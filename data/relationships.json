@@ -353,6 +353,16 @@
       "description": "Sutherland's claim that perceived value is real value is the economic defence of Guidara's practice: it explains why a two-dollar hot dog can outperform a tasting course.",
       "source_refs": [],
       "confidence": "medium"
+    },
+    {
+      "id": "socratic-method-contrasts-with-48-laws",
+      "source_id": "the-socratic-method-farnsworth",
+      "target_id": "the-48-laws-of-power-greene",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Philosophical negatives: Greene treats conversation as position warfare and a changed mind as defeat; Farnsworth treats argument as joint inquiry and a changed mind as the entire victory. Read together they map what a question can be used for.",
+      "source_refs": [],
+      "confidence": "medium"
     }
   ]
 }

@@ -12,18 +12,30 @@
   "card": {
     "one_sentence": "A law dean's plain-language handbook for the Socratic method: how Socrates actually questioned people, how to do it yourself, and why the habit is an antidote to the way we argue now.",
     "verdict": "The clearest practical introduction to Socratic questioning in print — genuinely useful for anyone who thinks or argues for a living — provided you want a patient handbook of a method and its ethic, not new scholarship or a book of drills.",
-    "source_ids": ["godine-socratic", "george-will-wapo", "larb-farnsworth"],
+    "source_ids": [
+      "godine-socratic",
+      "george-will-wapo",
+      "larb-farnsworth"
+    ],
     "basis": "synthesis"
   },
   "overview": {
     "synopsis": {
       "text": "Farnsworth explains what the Socratic method is, where it came from, and how to practise it: the question-driven testing of one's own and others' beliefs that Plato dramatised. Working step by step with examples from the dialogues and hundreds of classical quotations, he presents the method both as a concrete technique — eliciting claims, testing them for consistency, welcoming refutation — and as an ethic of patience, inquiry, humility, and doubt, ending with its relationship to Stoicism and its bearing on modern discourse.",
-      "source_ids": ["godine-socratic", "platos-academy-interview", "philpapers-socratic"],
+      "source_ids": [
+        "godine-socratic",
+        "platos-academy-interview",
+        "philpapers-socratic"
+      ],
       "basis": "synthesis"
     },
     "core_argument": {
       "text": "Better thinking is a practice, not a talent, and the Socratic method is its most tested form: question rather than assert, seek the counterexample, treat being refuted as a gift, and hold your beliefs as candidates rather than possessions. Modern discourse rewards the opposite habits, which is exactly why the old method matters more now than ever.",
-      "source_ids": ["godine-socratic", "george-will-wapo", "platos-academy-interview"],
+      "source_ids": [
+        "godine-socratic",
+        "george-will-wapo",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     }
   },
@@ -36,7 +48,11 @@
       "representative_example": "The dialogues end without settled answers: the method's product is better-examined belief, not doctrine.",
       "why_it_matters": "It makes the book a manual rather than a history: the reader is meant to do this, not admire it.",
       "caveat": "Plato scholarship debates how separable the method is from Plato's philosophy; the handbook smooths that controversy over.",
-      "source_ids": ["godine-socratic", "platos-academy-interview", "larb-farnsworth"],
+      "source_ids": [
+        "godine-socratic",
+        "platos-academy-interview",
+        "larb-farnsworth"
+      ],
       "basis": "synthesis"
     },
     {
@@ -47,7 +63,10 @@
       "representative_example": "The recurring dialogue pattern: a confident definition — of courage, justice, piety — is offered, and a series of agreed examples quietly dismantles it.",
       "why_it_matters": "Consistency-testing is the most transferable reasoning tool in the book: it works on your own beliefs, in a courtroom, or in a code review.",
       "caveat": "Consistency is necessary, not sufficient: a perfectly consistent set of beliefs can still be wrong about the world.",
-      "source_ids": ["godine-socratic", "platos-academy-interview"],
+      "source_ids": [
+        "godine-socratic",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     },
     {
@@ -58,7 +77,10 @@
       "representative_example": "Socrates' verdict on his own wisdom: he knows only that he does not know, which is precisely what his confident interlocutors lack.",
       "why_it_matters": "It reframes being refuted as winning, which is the emotional key to actually practising the method.",
       "caveat": "Institutionalised humility can be performed; the test is whether beliefs actually change under refutation.",
-      "source_ids": ["godine-socratic", "platos-academy-interview"],
+      "source_ids": [
+        "godine-socratic",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     },
     {
@@ -69,7 +91,11 @@
       "representative_example": "The book's distinction between Socratic questioning and courtroom cross-examination: same tools, opposite purposes.",
       "why_it_matters": "It explains why the method cannot be reduced to debate tactics, and why practising it changes the practitioner.",
       "caveat": "The ethic is demanding enough that the book's cheerful confidence in adoption can feel optimistic.",
-      "source_ids": ["godine-socratic", "george-will-wapo", "platos-academy-interview"],
+      "source_ids": [
+        "godine-socratic",
+        "george-will-wapo",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     },
     {
@@ -80,7 +106,10 @@
       "representative_example": "The step-by-step reconstruction of dialogue passages, with Farnsworth showing which move each question is making.",
       "why_it_matters": "This is the practitioner content the title promises: forms you can imitate the next time a claim needs testing.",
       "caveat": "Readers wanting graded exercises will find worked examples instead; it is a handbook in the sense of a guide, not a workbook.",
-      "source_ids": ["godine-socratic", "goodreads-socratic"],
+      "source_ids": [
+        "godine-socratic",
+        "goodreads-socratic"
+      ],
       "basis": "synthesis"
     },
     {
@@ -91,7 +120,10 @@
       "representative_example": "The Socrates and the Stoics chapter, bridging to the author's earlier book The Practicing Stoic.",
       "why_it_matters": "It gives the method a daily, personal use beyond conversation: self-scrutiny as maintenance.",
       "caveat": "The lineage is drawn sympathetically; the real philosophical differences between Socratic scepticism and Stoic doctrine get less attention.",
-      "source_ids": ["godine-socratic", "platos-academy-interview"],
+      "source_ids": [
+        "godine-socratic",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     },
     {
@@ -102,7 +134,11 @@
       "representative_example": "George Will's summary in the Washington Post: the method decelerates reasoning, making space for deliberation when disagreements arise — an antidote to some social pandemics of our day.",
       "why_it_matters": "It is the book's answer to why now, and the reason readers outside philosophy pick it up.",
       "caveat": "The diagnosis is asserted with examples rather than evidence, and the method's scalability to public discourse is hoped for rather than shown.",
-      "source_ids": ["george-will-wapo", "godine-socratic", "platos-academy-interview"],
+      "source_ids": [
+        "george-will-wapo",
+        "godine-socratic",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     }
   ],
@@ -112,8 +148,12 @@
       "title": "What the method is and where it came from",
       "purpose": "Define the subject and set expectations for a practitioner's treatment.",
       "summary": "Socrates as Plato dramatised him, the dialogues as the source material, and the book's promise: to teach the method as a usable craft rather than narrate philosophy's history.",
-      "idea_ids": ["method-not-doctrine"],
-      "source_ids": ["godine-socratic"],
+      "idea_ids": [
+        "method-not-doctrine"
+      ],
+      "source_ids": [
+        "godine-socratic"
+      ],
       "basis": "synthesis"
     },
     {
@@ -121,8 +161,14 @@
       "title": "The elements, step by step",
       "purpose": "Teach the moves.",
       "summary": "Eliciting claims, choosing test cases, building small agreements, springing counterexamples: the question-craft chapters reconstruct dialogue passages and name the move each question makes, so the reader can imitate the forms.",
-      "idea_ids": ["question-craft", "the-elenchus"],
-      "source_ids": ["godine-socratic", "goodreads-socratic"],
+      "idea_ids": [
+        "question-craft",
+        "the-elenchus"
+      ],
+      "source_ids": [
+        "godine-socratic",
+        "goodreads-socratic"
+      ],
       "basis": "synthesis"
     },
     {
@@ -130,8 +176,14 @@
       "title": "Consistency, ignorance, and aporia",
       "purpose": "Explain what the method is actually testing and producing.",
       "summary": "The elenchus tests beliefs against the believer's other commitments; Socratic ignorance treats confident not-knowing as the disease; aporia, the puzzled impasse, is reframed as progress — false certainty dissolved.",
-      "idea_ids": ["the-elenchus", "socratic-ignorance"],
-      "source_ids": ["godine-socratic", "platos-academy-interview"],
+      "idea_ids": [
+        "the-elenchus",
+        "socratic-ignorance"
+      ],
+      "source_ids": [
+        "godine-socratic",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     },
     {
@@ -139,8 +191,12 @@
       "title": "Socratic ethics",
       "purpose": "Elevate the method from technique to character.",
       "summary": "Patience, inquiry, humility, and doubt as the virtues the moves require; the difference between examining and point-scoring; being refuted as a gift received rather than a defeat suffered.",
-      "idea_ids": ["method-as-ethic"],
-      "source_ids": ["godine-socratic"],
+      "idea_ids": [
+        "method-as-ethic"
+      ],
+      "source_ids": [
+        "godine-socratic"
+      ],
       "basis": "synthesis"
     },
     {
@@ -148,8 +204,15 @@
       "title": "The Stoics and the present",
       "purpose": "Carry the method forward to its descendants and to now.",
       "summary": "Stoicism as the method turned inward and made daily; then the contemporary case — modern discourse as the inversion of everything Socratic, and the method as a personal treatment available to anyone willing to slow down.",
-      "idea_ids": ["stoic-descendants", "antidote-to-modern-discourse"],
-      "source_ids": ["godine-socratic", "george-will-wapo", "platos-academy-interview"],
+      "idea_ids": [
+        "stoic-descendants",
+        "antidote-to-modern-discourse"
+      ],
+      "source_ids": [
+        "godine-socratic",
+        "george-will-wapo",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     }
   ],
@@ -161,7 +224,11 @@
     "example_style": "Reconstructed exchanges from Plato — definitions of virtue offered and dismantled — plus modern parallels from law and everyday argument.",
     "repetition": "The core moves recur by design across chapters; readers moving quickly may find the middle reiterative.",
     "prerequisites": "None: no philosophy background is assumed, and the Greek terms are explained on arrival.",
-    "source_ids": ["godine-socratic", "larb-farnsworth", "goodreads-socratic"],
+    "source_ids": [
+      "godine-socratic",
+      "larb-farnsworth",
+      "goodreads-socratic"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
@@ -175,76 +242,116 @@
           "id": "explanatory-power",
           "score": 7.5,
           "rationale": "The method, its moves, and its ethic are explained with unusual clarity; reviewers across the spectrum single out the lucidity, and the step-by-step reconstructions make an ancient practice legible.",
-          "source_ids": ["godine-socratic", "larb-farnsworth", "george-will-wapo"]
+          "source_ids": [
+            "godine-socratic",
+            "larb-farnsworth",
+            "george-will-wapo"
+          ]
         },
         {
           "id": "evidence-and-reasoning",
           "score": 7.0,
           "rationale": "For a book whose claims are about what the method is and how it works, the evidence is the right kind: hundreds of primary quotations with the reasoning shown, though interpretive choices among Plato scholars are made silently.",
-          "source_ids": ["godine-socratic", "philpapers-socratic", "larb-farnsworth"]
+          "source_ids": [
+            "godine-socratic",
+            "philpapers-socratic",
+            "larb-farnsworth"
+          ]
         },
         {
           "id": "insight-value",
           "score": 6.5,
           "rationale": "Refutation-as-gift, aporia-as-progress, and the technique/ethic distinction land as genuine reorientations for most readers; philosophically trained readers will know much of it.",
-          "source_ids": ["godine-socratic", "goodreads-socratic"]
+          "source_ids": [
+            "godine-socratic",
+            "goodreads-socratic"
+          ]
         },
         {
           "id": "practical-utility",
           "score": 6.5,
           "rationale": "The question forms are imitable and the self-scrutiny use is immediate; the handbook stops short of drills or structured practice, so transfer depends on the reader's own discipline.",
-          "source_ids": ["goodreads-socratic", "godine-socratic"]
+          "source_ids": [
+            "goodreads-socratic",
+            "godine-socratic"
+          ]
         },
         {
           "id": "completeness-and-calibration",
           "score": 6.5,
           "rationale": "The method's limits and the difference between examination and point-scoring are treated honestly; the scholarly controversies and the method's failure modes in hostile settings get lighter coverage.",
-          "source_ids": ["larb-farnsworth", "platos-academy-interview"]
+          "source_ids": [
+            "larb-farnsworth",
+            "platos-academy-interview"
+          ]
         },
         {
           "id": "information-efficiency",
           "score": 6.5,
           "rationale": "Clean structure and quotable throughout; the deliberate recurrence of core moves across chapters reads as patient to some and repetitive to others.",
-          "source_ids": ["goodreads-socratic", "larb-farnsworth"]
+          "source_ids": [
+            "goodreads-socratic",
+            "larb-farnsworth"
+          ]
         }
       ],
       "basis": "inference"
     },
     "meaning": {
       "text": "The book's deeper subject is intellectual character: it treats good thinking as a set of habits that can be practised, and locates the oldest, best-documented practice regime in Socrates' questions.",
-      "source_ids": ["godine-socratic", "george-will-wapo"],
+      "source_ids": [
+        "godine-socratic",
+        "george-will-wapo"
+      ],
       "basis": "synthesis"
     },
     "lessons": [
       {
         "text": "Test beliefs — especially your own — against the believer's other commitments; the contradiction is the lesson.",
-        "source_ids": ["godine-socratic"],
+        "source_ids": [
+          "godine-socratic"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Treat being refuted as receiving a gift: the person who shows you your error has done you a service no flatterer can.",
-        "source_ids": ["godine-socratic", "platos-academy-interview"],
+        "source_ids": [
+          "godine-socratic",
+          "platos-academy-interview"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Prefer questions to assertions when stakes are high; questions decelerate reasoning and make deliberation possible.",
-        "source_ids": ["george-will-wapo"],
+        "source_ids": [
+          "george-will-wapo"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Hold puzzlement as progress: aporia is what dissolved false certainty feels like from inside.",
-        "source_ids": ["godine-socratic"],
+        "source_ids": [
+          "godine-socratic"
+        ],
         "basis": "synthesis"
       }
     ],
     "importance": {
       "text": "A quietly influential book that became the standard modern entry point to Socratic practice, bridging the Stoicism revival back to its source and giving professions that run on questioning — law, teaching, coaching — their handbook.",
-      "source_ids": ["godine-socratic", "philpapers-socratic", "platos-academy-interview"],
+      "source_ids": [
+        "godine-socratic",
+        "philpapers-socratic",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     },
     "author_and_purpose": {
       "text": "Farnsworth wrote it as the third act of his classical handbooks, after rhetoric and Stoicism: a law dean who taught by questioning for decades, assembling the primary sources into a usable manual because no such book existed for general readers.",
-      "source_ids": ["godine-socratic", "platos-academy-interview", "larb-farnsworth"],
+      "source_ids": [
+        "godine-socratic",
+        "platos-academy-interview",
+        "larb-farnsworth"
+      ],
       "basis": "synthesis"
     },
     "evidence_quality": {
@@ -259,7 +366,11 @@
         "The modern-discourse diagnosis is argued by example rather than evidence.",
         "No treatment of when the method fails — hostile interlocutors, power asymmetries, time pressure."
       ],
-      "source_ids": ["godine-socratic", "larb-farnsworth", "george-will-wapo"],
+      "source_ids": [
+        "godine-socratic",
+        "larb-farnsworth",
+        "george-will-wapo"
+      ],
       "basis": "synthesis"
     },
     "reception": {
@@ -274,7 +385,12 @@
         "Some readers wanting a workbook find worked examples instead of exercises.",
         "Scholars note the smoothing of interpretive controversy inherent in the format."
       ],
-      "source_ids": ["godine-socratic", "george-will-wapo", "goodreads-socratic", "larb-farnsworth"],
+      "source_ids": [
+        "godine-socratic",
+        "george-will-wapo",
+        "goodreads-socratic",
+        "larb-farnsworth"
+      ],
       "basis": "synthesis"
     },
     "audience": {
@@ -298,7 +414,11 @@
         "Stoicism",
         "Quality of discourse"
       ],
-      "source_ids": ["godine-socratic", "platos-academy-interview", "goodreads-socratic"],
+      "source_ids": [
+        "godine-socratic",
+        "platos-academy-interview",
+        "goodreads-socratic"
+      ],
       "basis": "synthesis"
     },
     "scope": {
@@ -321,7 +441,11 @@
       "dated_or_contested": [
         "Its readings of the dialogues are mainstream but not uncontested among specialists."
       ],
-      "source_ids": ["larb-farnsworth", "goodreads-socratic", "platos-academy-interview"],
+      "source_ids": [
+        "larb-farnsworth",
+        "goodreads-socratic",
+        "platos-academy-interview"
+      ],
       "basis": "synthesis"
     },
     "decision": {
@@ -329,7 +453,11 @@
       "summary_is_enough_if": "The brief is enough if you want the method's core moves, the ethic, and the reasons it matters now, without the worked examples that teach the feel of it.",
       "skip_if": "Skip it if you want debate tactics, new scholarship, or structured exercises; this is a patient manual, not a competition guide or a course.",
       "format_advice": "Print suits it best: the block quotations and stepwise reconstructions reward a pencil; audio works but flattens the quotation structure the book is built on.",
-      "source_ids": ["godine-socratic", "goodreads-socratic", "larb-farnsworth"],
+      "source_ids": [
+        "godine-socratic",
+        "goodreads-socratic",
+        "larb-farnsworth"
+      ],
       "basis": "inference"
     }
   },
