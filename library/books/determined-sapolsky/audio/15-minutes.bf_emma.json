@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "determined-sapolsky",
+  "duration": "15-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/determined-sapolsky/scripts/15-minutes.md",
+  "source_script_sha256": "1bb7cc69e57f88f436519c918a8a756f111dd85fb75a6421fe4703a49ec72f3b",
+  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_terms": [],
+  "script_words": 2093,
+  "audio_seconds": 856.371,
+  "measured_wpm": 146.64,
+  "generated_at": "2026-08-13T09:06:37.322994+00:00"
+}

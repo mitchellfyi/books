@@ -208,7 +208,7 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "The publisher's complete contents and opening chapter were checked directly, then every later chapter and major argument was triangulated through philosophy, neuroethics, science, legal, professional, author-response, and reader sources. No uninterrupted lawful full text was available.",
     "last_researched": "2026-08-13",

@@ -568,8 +568,30 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "The first adversarial pass separated the cumulative causal science from Sapolsky's definitions and moral conclusions, gave compatibilism its strongest form, distinguished unpredictability and randomness from agency, preserved behaviour change and practical accountability, and added due-process, prediction, victim, and institutional-power limits to the quarantine analogy."
+    "review_notes": "The adversarial pass separated the cumulative causal science from Sapolsky's definitions and moral conclusions, gave compatibilism its strongest form, distinguished unpredictability and randomness from agency, preserved behaviour change and practical accountability, and added due-process, prediction, victim, and institutional-power limits to the quarantine analogy.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Verified title variants, author, publication dates, ISBNs, pages, and all fifteen chapters plus interlude and appendix against publisher and independent records.",
+        "Cross-checked the causal-timescale argument, intent, grit, chaos, emergence, quantum indeterminacy, change, punishment, and inequality across primary material and scientific, philosophical, neuroethical, and professional treatments.",
+        "Separated three claims: behaviour has deep causes; ultimate self-creation is implausible; no meaningful agency or responsibility survives. The third remains contested and is presented as such.",
+        "Tested the quarantine model against prediction error, bias, due process, indefinite restraint, institutional abuse, victim needs, and distinctions among capacity, answerability, causal responsibility, and desert.",
+        "Confirmed citation entailment and the configured 6.7 content-only calculation; author prestige, reviews, politics, and popularity do not affect it.",
+        "Inspected Kokoro phonemes for Robert Sapolsky, compatibilism, neuroendocrinologist, and epistemic; no unverified override was needed. All four local files are current, content-only, and duration-calibrated."
+      ]
+    }
   }
 }
