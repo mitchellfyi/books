@@ -3,6 +3,45 @@
   "schema_version": 1,
   "relationships": [
     {
+      "id": "power-habit-written-by-charles-duhigg",
+      "source_id": "the-power-of-habit-duhigg",
+      "target_id": "charles-duhigg",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Charles Duhigg wrote The Power of Habit.",
+      "source_refs": [
+        "library/books/the-power-of-habit-duhigg/book.json#publisher-book",
+        "library/books/the-power-of-habit-duhigg/book.json#google-books"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "power-habit-related-to-deep-work",
+      "source_id": "the-power-of-habit-duhigg",
+      "target_id": "deep-work-newport",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Deep Work gives focused work a more specific philosophy and practice; The Power of Habit explains how stable cues and prepared routines can make that practice more automatic.",
+      "source_refs": [
+        "library/books/the-power-of-habit-duhigg/book.json#habit-review",
+        "library/books/the-power-of-habit-duhigg/book.json#implementation-meta"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "power-habit-related-to-influence",
+      "source_id": "the-power-of-habit-duhigg",
+      "target_id": "influence-robert-cialdini",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both expose how environments shape behaviour; Influence catalogues persuasion principles while The Power of Habit focuses on context-linked automatic routines and commercial cue design.",
+      "source_refs": [
+        "library/books/the-power-of-habit-duhigg/book.json#full-book-copy",
+        "library/books/the-power-of-habit-duhigg/book.json#target-critique"
+      ],
+      "confidence": "medium"
+    },
+    {
       "id": "school-of-life-written-by-school-of-life",
       "source_id": "the-school-of-life-botton",
       "target_id": "the-school-of-life",

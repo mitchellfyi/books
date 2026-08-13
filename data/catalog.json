@@ -405,13 +405,16 @@
     {
       "id": "the-power-of-habit-duhigg",
       "kind": "book",
-      "name": "The Power of Habit",
+      "name": "The Power of Habit: Why We Do What We Do in Life and Business",
       "state": "catalogued",
       "path": "library/books/the-power-of-habit-duhigg/book.json",
       "author_ids": [
         "charles-duhigg"
       ],
-      "aliases": []
+      "aliases": [
+        "The Power of Habit",
+        "The Power of Habit: Why We Do What We Do, and How to Change"
+      ]
     },
     {
       "id": "the-power-of-moments-heath",

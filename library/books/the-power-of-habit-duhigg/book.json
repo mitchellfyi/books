@@ -3,29 +3,321 @@
   "schema_version": 1,
   "id": "the-power-of-habit-duhigg",
   "type": "book",
-  "title": "The Power of Habit",
-  "alternate_titles": [],
+  "title": "The Power of Habit: Why We Do What We Do in Life and Business",
+  "alternate_titles": ["The Power of Habit", "The Power of Habit: Why We Do What We Do, and How to Change"],
   "author_ids": ["charles-duhigg"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2012",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "US hardcover",
+        "publisher": "Random House",
+        "publication_date": "2012-02-28",
+        "isbn_10": "1400069289",
+        "isbn_13": "9781400069286",
+        "format": "Hardcover",
+        "pages": 400
+      },
+      {
+        "label": "US trade paperback",
+        "publisher": "Random House Trade Paperbacks",
+        "publication_date": "2014-01-07",
+        "isbn_10": "081298160X",
+        "isbn_13": "9780812981605",
+        "format": "Paperback",
+        "pages": 416
+      }
+    ],
+    "contents": [
+      "Prologue: The Habit Cure",
+      "Part One — The Habits of Individuals",
+      "1: The Habit Loop — How Habits Work",
+      "2: The Craving Brain — How to Create New Habits",
+      "3: The Golden Rule of Habit Change — Why Transformation Occurs",
+      "Part Two — The Habits of Successful Organizations",
+      "4: Keystone Habits, or The Ballad of Paul O'Neill — Which Habits Matter Most",
+      "5: Starbucks and the Habit of Success — When Willpower Becomes Automatic",
+      "6: The Power of a Crisis — How Leaders Create Habits Through Accident and Design",
+      "7: How Target Knows What You Want Before You Do — When Companies Predict and Manipulate Habits",
+      "Part Three — The Habits of Societies",
+      "8: Saddleback Church and the Montgomery Bus Boycott — How Movements Happen",
+      "9: The Neurology of Free Will — Are We Responsible for Our Habits?",
+      "Appendix: A Reader's Guide to Using These Ideas"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": ["behavioural-science", "business", "decision-making", "leadership", "motivation", "non-fiction", "organisational-behaviour", "personal-development", "productivity", "psychology", "self-help", "work"],
+    "audiences": [
+      "Readers who want a memorable introduction to automatic behaviour and a concrete method for changing one recurring routine",
+      "Managers and leaders examining how procedures, incentives, crises, and informal norms shape organisational conduct",
+      "People interested in consumer behaviour, marketing ethics, social movements, addiction, or responsibility",
+      "Readers who learn well through deeply reported stories and can separate a useful framework from claims that later research has qualified"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "publisher-book",
+        "title": "The Power of Habit",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/202855/the-power-of-habit-by-charles-duhigg/9780679603856/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Canonical title, author, formats, description, sample access, and selected publisher reception.",
+        "limitations": "Promotional page and edition URL represents the ebook."
+      },
+      {
+        "id": "publisher-hardcover",
+        "title": "The Power of Habit — hardcover",
+        "author_or_publisher": "Penguin Random House Retail",
+        "url": "https://www.penguinrandomhouseretail.com/book/?isbn=9781400069286",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "US hardcover publisher, date, ISBN, current pagination, dimensions, subjects, excerpt, and formats.",
+        "limitations": "Current retail record; pagination differs from some original and digital records."
+      },
+      {
+        "id": "google-books",
+        "title": "The Power of Habit: Why We Do What We Do in Life and Business",
+        "author_or_publisher": "Charles Duhigg; Random House via Google Books",
+        "url": "https://books.google.com/books/about/The_Power_of_Habit.html?id=O1MInVXd_aoC",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Book identity, author, publication date, ebook ISBN, description, subjects, and preview.",
+        "limitations": "Edition-specific digital pagination and limited preview."
+      },
+      {
+        "id": "library-contents",
+        "title": "Catalogue record: The Power of Habit",
+        "author_or_publisher": "Iowa Valley Community College District library catalogue",
+        "url": "https://catalog.iavalley.edu/cgi-bin/koha/opac-detail.pl?biblionumber=23977",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Hardcover ISBN and full contents through all nine chapters and appendix.",
+        "limitations": "Local library catalogue; not evidence for substantive claims."
+      },
+      {
+        "id": "full-book-copy",
+        "title": "The Power of Habit: Why We Do What We Do in Life and Business",
+        "author_or_publisher": "Charles Duhigg and Random House; Saraswati Assam host",
+        "url": "https://saraswatiassam.org/BOOKS/The-Power-Of-Habit.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Complete text, argument, stories, appendix method, notes, source qualifications, and reading experience.",
+        "limitations": "Third-party host with uncertain provenance; identity and metadata were cross-checked against publisher and library records."
+      },
+      {
+        "id": "author-tools",
+        "title": "Guides for Using These Ideas",
+        "author_or_publisher": "Charles Duhigg",
+        "url": "https://charlesduhigg.com/tools/",
+        "type": "author",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Author-provided habit-change flowcharts and the continuing practical interpretation of the book.",
+        "limitations": "Promotional companion tools, not independent outcome evidence."
+      },
+      {
+        "id": "mit-habit-learning",
+        "title": "MIT researcher sees first evidence that learned behaviors change the brain",
+        "author_or_publisher": "MIT News",
+        "url": "https://news.mit.edu/1999/behavior",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Primary-institution account of Graybiel's rat research on striatal activity and behavioural chunking during habit learning.",
+        "limitations": "Animal maze learning and institutional news summary; not a universal three-step human habit model."
+      },
+      {
+        "id": "mit-old-habits",
+        "title": "Brain researchers explain why old habits die hard",
+        "author_or_publisher": "MIT News",
+        "url": "https://news.mit.edu/2005/habit",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Rat evidence that learned basal-ganglia patterns can quiet when a reward disappears and re-emerge when cues and reward return.",
+        "limitations": "Animal study; relapse in human behaviour is more varied and context-dependent."
+      },
+      {
+        "id": "habit-review",
+        "title": "Psychology of Habit",
+        "author_or_publisher": "Wendy Wood and Dennis Rünger; Annual Review of Psychology",
+        "url": "https://www.annualreviews.org/doi/10.1146/annurev-psych-122414-033417",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Scientific review of habits as context-linked automatic responses, their cognitive and neurobiological properties, and routes to formation and disruption.",
+        "limitations": "Published after the book and does not test Duhigg's named keystone or organisational frameworks."
+      },
+      {
+        "id": "daily-habits-study",
+        "title": "Habits in everyday life: thought, emotion, and action",
+        "author_or_publisher": "Wendy Wood, Jeffrey Quinn, and Deborah Kashy; Journal of Personality and Social Psychology via PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12500811/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Two diary studies showing frequent behaviour in stable contexts is performed with less task-related thought; source of the widely quoted share of daily habitual acts.",
+        "limitations": "Self-report diaries and a study-specific operational definition; not a fixed percentage for every person."
+      },
+      {
+        "id": "habit-time-review",
+        "title": "Time to Form a Habit: A Systematic Review and Meta-Analysis of Health Behaviour Habit Formation and Its Determinants",
+        "author_or_publisher": "Ben Singh et al.; Healthcare via PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39685110/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current synthesis of health-habit formation, substantial individual variability, importance of repetition, timing, chosen behaviour, pleasure, and context.",
+        "limitations": "Only twenty studies, most at high risk of bias, and health behaviours dominate."
+      },
+      {
+        "id": "lally-study",
+        "title": "How are habits formed: Modelling habit formation in the real world",
+        "author_or_publisher": "Phillippa Lally et al.; European Journal of Social Psychology, repository record",
+        "url": "https://openresearch.surrey.ac.uk/esploro/outputs/journalArticle/How-are-habits-formed-Modelling-habit/99783513802346",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Daily repetition in the same context and nonlinear growth of automaticity over twelve weeks, with variation by person and behaviour.",
+        "limitations": "Small self-selected sample, self-report automaticity, and simple health behaviours."
+      },
+      {
+        "id": "implementation-meta",
+        "title": "Impact of implementation intentions on physical activity practice in adults: A systematic review and meta-analysis of randomized clinical trials",
+        "author_or_publisher": "Mariana Bélanger-Gravel et al.; PLOS One",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6235272/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Qualified experimental support for if-then action planning, particularly with reinforcement and obstacle planning, in adult physical activity.",
+        "limitations": "Small effect, heterogeneous health trials, and not a direct test of the book's complete four-step appendix."
+      },
+      {
+        "id": "ego-depletion-replication",
+        "title": "A Multisite Preregistered Paradigmatic Test of the Ego-Depletion Effect",
+        "author_or_publisher": "Kathleen Vohs et al.; Psychological Science via PubMed Central",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12422598/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "A 36-lab preregistered test finding no confirmatory evidence for the ego-depletion effect and a very small exploratory estimate.",
+        "limitations": "Tests selected paradigms; disagreement continues about task strength and the best model of fatigue."
+      },
+      {
+        "id": "target-critique",
+        "title": "Did Target Really Predict a Teen's Pregnancy? The Inside Story",
+        "author_or_publisher": "Gregory Piatetsky-Shapiro; KDnuggets",
+        "url": "https://www.kdnuggets.com/2014/05/target-predict-teen-pregnancy-inside-story.html",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Adversarial reconstruction of the viral Target story, separating the documented prediction project from an anonymous anecdote and later assumptions.",
+        "limitations": "Industry commentary, not access to Target's model, data, or internal investigation."
+      },
+      {
+        "id": "kirkus-review",
+        "title": "The Power of Habit",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/charles-duhigg/power-of-habit/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent assessment of the loop, cases, diagrams, self-help value, persuasiveness, and simplification.",
+        "limitations": "Short trade review from publication, not a later evidence audit."
+      },
+      {
+        "id": "scientific-american-review",
+        "title": "MIND Reviews: The Power of Habit",
+        "author_or_publisher": "Jordan Lite; Scientific American Mind",
+        "url": "https://www.scientificamerican.com/article/mind-reviews-the-power-of-habit/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Contemporary science-oriented review of automaticity, the loop, substitution, cases, and broad appeal.",
+        "limitations": "Brief 2012 review predating later habit syntheses and replication failures."
+      },
+      {
+        "id": "cbs-review",
+        "title": "Book review: The Power of Habit",
+        "author_or_publisher": "CBS MoneyWatch",
+        "url": "https://www.cbsnews.com/news/book-review-the-power-of-habit/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent praise for combining serious explanation with entertaining reporting and concise account of the replacement rule.",
+        "limitations": "Very short positive review without adversarial analysis."
+      },
+      {
+        "id": "goodreads",
+        "title": "The Power of Habit",
+        "author_or_publisher": "Goodreads reader community",
+        "url": "https://www.goodreads.com/book/show/60310604-the-power-of-habit",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large reader aggregate and recurring praise for applicability and stories alongside criticism of overinterpretation, repetition, and interrupted narrative structure.",
+        "limitations": "Self-selected, mutable, and merged across editions; not used in the content rating."
+      },
+      {
+        "id": "storygraph",
+        "title": "Reviews — The Power of Habit",
+        "author_or_publisher": "The StoryGraph reader community",
+        "url": "https://app.thestorygraph.com/book_reviews/47bd610a-a737-4af4-9e30-2d2274cd09b5",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "A second reader aggregate with recurring reports of useful application, engaging cases, excessive length, limited neurodivergence coverage, and disproportionate value in the appendix.",
+        "limitations": "Self-selected and mutable; reviewer expertise and completion are uncontrolled."
+      }
+    ],
+    "citations": {
+      "/title": ["publisher-book", "publisher-hardcover", "google-books", "library-contents"],
+      "/alternate_titles": ["publisher-book", "google-books"],
+      "/author_ids": ["publisher-book", "google-books", "library-contents"],
+      "/bibliography/first_published": ["publisher-hardcover", "google-books"],
+      "/bibliography/original_language": ["google-books", "full-book-copy"],
+      "/bibliography/editions/0": ["publisher-hardcover", "library-contents"],
+      "/bibliography/editions/1": ["publisher-book"],
+      "/bibliography/contents": ["library-contents", "full-book-copy"],
+      "/discovery/tag_ids": ["publisher-hardcover", "google-books", "full-book-copy"],
+      "/discovery/audiences": ["publisher-book", "kirkus-review", "scientific-american-review", "storygraph"],
+      "/discovery/formats_available": ["publisher-book", "publisher-hardcover"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "researched-partial",
+    "coverage": "full-book",
+    "coverage_notes": "Complete text and notes checked against publisher and library metadata, author tools, six independent habit and self-control research sources, an adversarial Target analysis, three professional reviews, and two reader aggregates. Later research was used to separate durable context-and-repetition claims from dated ego-depletion and broad case-based claims.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": ["Create and time all four content-only narrations, test pronunciation, render local audio, and complete the final quality review."]
   }
 }

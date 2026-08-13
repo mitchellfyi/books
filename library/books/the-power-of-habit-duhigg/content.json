@@ -4,108 +4,652 @@
   "book_id": "the-power-of-habit-duhigg",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
+    "compression_fit": "high",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "Five minutes preserves the loop, substitution rule, diagnostic appendix, and chief limits. Fifteen minutes is optimal because it also explains craving, context, keystone habits, prepared responses, organisations, marketing, movements, responsibility, and the later evidence correction on willpower. Thirty minutes is mainly for the full reading experience and major stories. The practical core is already compressed into a ten-page appendix, while much of the main text supplies narrative persuasion and broader applications."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "A story-led guide to recognising automatic behaviour as a cue-linked routine and redesigning it through experiments, substitution, stable repetition, and prepared responses.",
+    "verdict": "The habit diagnosis method remains unusually clear and useful, but the book stretches a sound individual-level idea across selected corporate and social stories and includes a willpower theory that later large replications weakened.",
+    "source_ids": [
+      "full-book-copy",
+      "habit-review",
+      "habit-time-review",
+      "ego-depletion-replication",
+      "kirkus-review"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "The book moves across three scales. Part One explains automatic individual behaviour through the habit loop, craving, substitution, and belief. Part Two argues that a few routines can organise companies, make willpower more automatic, and become visible during crises; it also shows firms predicting and shaping consumer behaviour. Part Three interprets social movements through friendship, weak ties, and group identity, then compares involuntary acts and gambling to ask when habit reduces responsibility. A final appendix turns the whole book into a four-step personal experiment.",
+      "source_ids": [
+        "full-book-copy",
+        "library-contents",
+        "publisher-book"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Repeated behaviour in a recurring context can become automatic, conserving attention while making good and bad routines easier to trigger. Habits are persistent but not destiny. Change becomes more likely when people identify the cue and actual reward, substitute a competing routine, plan the response in advance, repeat it in a stable context, and build supporting beliefs and social conditions. Similar attention to routine can reveal how organisations and communities coordinate, though those larger claims are less directly evidenced.",
+      "source_ids": [
+        "full-book-copy",
+        "habit-review",
+        "daily-habits-study",
+        "lally-study",
+        "implementation-meta"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "habit-loop",
+      "title": "The habit loop makes automatic behaviour visible",
+      "claim": "A habit can be analysed as a cue that triggers a routine followed by an outcome that has reinforced repetition.",
+      "explanation": "Duhigg's cue-routine-reward loop is a practical simplification of associative learning. As a response repeats in a stable context, features such as time, place, preceding action, or people can begin to trigger it with less conscious guidance. The basal ganglia and related systems contribute to learned action sequences, but habits are not stored in one isolated brain box and every repeated act is not governed by one identical loop.",
+      "representative_example": "The amnesic patient Eugene Pauly could not describe his neighbourhood but repeatedly walked the same route home, showing that habit learning can operate separately from conscious recall.",
+      "why_it_matters": "Breaking a vague problem into observable components creates places to intervene other than issuing another command to try harder.",
+      "caveat": "The three boxes are a design aid, not a complete neuroscience of addiction, compulsion, skill, motivation, or every routine.",
+      "source_ids": [
+        "full-book-copy",
+        "mit-habit-learning",
+        "habit-review",
+        "daily-habits-study",
+        "scientific-american-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "craving-and-reward",
+      "title": "Anticipated rewards pull the loop forward",
+      "claim": "A cue gains force when it predicts an outcome the person has learned to want.",
+      "explanation": "Duhigg adds craving between cue and routine: the trigger creates anticipation, and the expected outcome makes action feel urgent. The reward need not be the obvious object. A snack can provide social contact; a phone check can provide relief from uncertainty; cleaning can provide a sense of completion. New habits become more compelling when cues are clear and the outcome is immediate or intrinsically satisfying.",
+      "representative_example": "Febreze initially failed as an odour remover, then became successful when marketed as the pleasant finishing scent of a cleaning routine.",
+      "why_it_matters": "A replacement aimed at the wrong payoff often fails even if it looks healthier from the outside.",
+      "caveat": "The marketing cases show plausible mechanisms and commercial results, not controlled proof that one craving caused the whole outcome.",
+      "source_ids": [
+        "full-book-copy",
+        "habit-time-review",
+        "lally-study",
+        "cbs-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "golden-rule",
+      "title": "Keep the trigger, replace the routine",
+      "claim": "An established unwanted response is often easier to compete with than to erase.",
+      "explanation": "The book's golden rule keeps a known cue and sought reward while inserting a less harmful action. Habit-reversal training makes the pattern conscious and practises a competing response. Duhigg extends the logic to football, Alcoholics Anonymous, eating, and many other behaviours. The general lesson is strong: design what happens at the cue. The universal claim is not: different problems require different treatments, and the book's own notes say simplified replacement is inadequate for conditions such as depression, gambling problems, and smoking.",
+      "representative_example": "A nail biter learns to notice the hand movement that begins the routine and immediately uses a competing physical response until the urge passes.",
+      "why_it_matters": "It replaces an impossible instruction—never feel the urge—with a response that can be rehearsed when the urge arrives.",
+      "caveat": "Severe addiction, compulsions, eating disorders, and clinical conditions may require specialised treatment, environmental change, medication, or sustained support beyond a substituted routine.",
+      "source_ids": [
+        "full-book-copy",
+        "habit-review",
+        "kirkus-review",
+        "scientific-american-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "diagnose-and-plan",
+      "title": "Diagnose by experiment, then make an if-then plan",
+      "claim": "The most useful part of the book is a four-step method: identify the routine, test rewards, isolate the cue, and plan a replacement.",
+      "explanation": "First name the exact action. Next vary the outcome to discover what is really satisfying the urge. Then record five common cue categories: location, time, emotional state, other people, and the immediately preceding action. Finally write a concrete plan linking the trigger to a replacement that can deliver the relevant payoff. Expect several trials rather than a revelation on the first attempt.",
+      "representative_example": "Duhigg found that his afternoon cookie routine was cued by time and rewarded by social interruption. His replacement plan was to walk to a colleague's desk and talk for ten minutes at half past three.",
+      "why_it_matters": "It converts introspection into observable hypotheses and gives the reader a small experiment that can fail informatively.",
+      "caveat": "Self-tracking can misidentify causes, and an if-then plan has modest, domain-dependent effects; obstacle planning and reinforcement often matter.",
+      "source_ids": [
+        "full-book-copy",
+        "author-tools",
+        "implementation-meta",
+        "habit-time-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "keystone-habits",
+      "title": "Some routines reorganise surrounding systems",
+      "claim": "A keystone habit matters because practising it changes several connected behaviours, expectations, or information flows.",
+      "explanation": "Duhigg argues that exercise, food records, family meals, or workplace safety can create small wins and new structures that spread. The most convincing organisational example is Paul O'Neill's focus on worker safety at Alcoa: serious injury reporting required fast communication from the floor to the chief executive, forcing managers to repair wider processes. The mechanism is not mystical spillover. A well-chosen routine can expose defects, create feedback, reward consistency, and alter identity.",
+      "representative_example": "Requiring rapid reporting of every safety incident made delays, poor training, broken equipment, and weak communication visible across Alcoa.",
+      "why_it_matters": "Change efforts can target a routine that improves the system used to improve everything else.",
+      "caveat": "There is no dependable checklist for identifying a keystone in advance, and selected success stories cannot separate the habit from leadership, investment, labour relations, regulation, or market conditions.",
+      "source_ids": [
+        "full-book-copy",
+        "publisher-book",
+        "kirkus-review",
+        "storygraph"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "prepared-self-control",
+      "title": "Prepare a response before pressure arrives",
+      "claim": "Self-control becomes more reliable when difficult cues have rehearsed responses rather than requiring fresh deliberation.",
+      "explanation": "The Starbucks material shows employees writing plans for predictable moments of anger, stress, or customer conflict. The response is practised until it becomes easier to retrieve. This implementation-intention logic remains useful. The chapter also presents willpower as a muscle-like resource that can be depleted and strengthened. That stronger resource theory has not held up cleanly: large preregistered multi-lab tests found effects near zero in their selected paradigms.",
+      "representative_example": "A worker can pre-write: if a customer becomes hostile, then I will pause, acknowledge the complaint, state the next useful action, and ask for help if the boundary is crossed.",
+      "why_it_matters": "Plans move part of the decision into a calm moment and reduce ambiguity when attention is strained.",
+      "caveat": "Prepared scripts help within sane conditions; they must not shift responsibility for abusive customers, poor staffing, unsafe work, or structural stress onto individual willpower.",
+      "source_ids": [
+        "full-book-copy",
+        "implementation-meta",
+        "ego-depletion-replication",
+        "habit-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "organisational-routines",
+      "title": "Organisations remember through routines",
+      "claim": "Formal procedures and informal truces allow groups to act without renegotiating every decision.",
+      "explanation": "Hospitals, companies, and public agencies depend on routines that distribute authority, information, and conflict. These patterns make coordination possible but can also preserve silence or dangerous hierarchy. A crisis interrupts the normal defence of existing arrangements and can create permission to install a better routine. Leaders matter by choosing which information must travel, who may stop work, and how errors are investigated.",
+      "representative_example": "After a preventable death, a hospital can either blame one person and restore the old routine or change escalation rules so nurses and junior staff can halt unsafe action.",
+      "why_it_matters": "It directs attention from motivational speeches toward the repeated process that actually governs action.",
+      "caveat": "Calling every organisational practice a habit can hide law, incentives, expertise, power, staffing, technology, and deliberate strategy. Crisis also creates fear and opportunism, not automatic reform.",
+      "source_ids": [
+        "full-book-copy",
+        "publisher-book",
+        "kirkus-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "commercial-habit-design",
+      "title": "Other people are designing your cues",
+      "claim": "Retailers and media firms use behavioural and personal data to predict vulnerable transitions and make products feel familiar.",
+      "explanation": "The Target chapter explains how life changes disrupt old shopping routines and create openings for new ones. Predictive models can identify likely needs, while marketers hide a novel offer among familiar material to reduce resistance. The radio-hit story makes a related point: repeated placement beside familiar songs can increase acceptance. The durable lesson is ethical as much as practical—habit knowledge gives institutions power over people who may not know the inference or intervention exists.",
+      "representative_example": "Target's documented pregnancy-prediction project used purchases associated with known expectant customers to score other shoppers and time marketing around likely due dates.",
+      "why_it_matters": "Personal change is not only self-design; environments, platforms, shops, and employers compete to install profitable routines.",
+      "caveat": "The famous story of a father learning of his teenager's pregnancy is anonymous and is often repeated as if its link to the model were proven. The project is documented; that viral causal anecdote is not independently verifiable.",
+      "source_ids": [
+        "full-book-copy",
+        "target-critique",
+        "publisher-book"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "social-movement-habits",
+      "title": "Movements join close ties, social pressure, and new identity",
+      "claim": "Collective action grows when friendship starts participation, wider networks make participation expected, and groups teach routines that sustain a changed identity.",
+      "explanation": "The Montgomery bus boycott begins with Rosa Parks's dense friendships and civic standing, spreads through weak ties that make non-participation socially visible, and persists through churches and meetings that create shared expectations. Saddleback Church illustrates small groups that turn a large institution into repeated personal relationships. Here habit means social pattern more than an automatic cue-response loop.",
+      "representative_example": "A person may join a boycott for a friend, continue because neighbours expect solidarity, and remain involved after beginning to see themselves as part of a movement.",
+      "why_it_matters": "It explains why information or moral agreement alone rarely produces durable coordinated action.",
+      "caveat": "The framework compresses political leadership, repression, ideology, law, resources, institutions, strategy, and historical contingency into a habit vocabulary that cannot carry the whole explanation.",
+      "source_ids": [
+        "full-book-copy",
+        "publisher-book",
+        "scientific-american-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "habit-and-responsibility",
+      "title": "Automaticity changes explanation, not all responsibility",
+      "claim": "Understanding the forces behind a habit can expand the choices available before the next cue without pretending every act was freely chosen in the moment.",
+      "explanation": "The final chapter contrasts a killing during sleep terror with a gambler pursued by casino marketing. It asks why law and morality excuse some involuntary patterns but blame others. Duhigg concludes that once a person recognises a harmful loop, knowledge creates some responsibility to build protections. This is an ethical argument, not a neurological formula: capacity, compulsion, foreseeability, external manipulation, available help, and harm all affect judgement.",
+      "representative_example": "A gambler who knows that access to credit and casino cues trigger destructive play can seek self-exclusion and financial barriers before entering the high-arousal setting.",
+      "why_it_matters": "It avoids both fatalism and the fiction that behaviour is untouched by automatic learning and commercial design.",
+      "caveat": "Awareness alone does not create equal capacity or access to help. The chapter's comparison cannot settle legal responsibility for addiction, parasomnia, or mental disorder.",
+      "source_ids": [
+        "full-book-copy",
+        "habit-review",
+        "mit-old-habits",
+        "target-critique"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Prologue: The Habit Cure",
+      "purpose": "Introduce personal transformation, the idea of a keystone habit, and the book's movement from individuals to organisations and societies.",
+      "summary": "Lisa Allen's shift from smoking toward running anchors an optimistic claim that changing one repeated pattern can reshape others. A military example in Kufa presents crowds through a habit lens. The prologue declares the book's broad ambition and defines habits as choices that have become automatic, while the notes reveal that Lisa's reported study was still unpublished.",
+      "idea_ids": [
+        "habit-loop",
+        "keystone-habits"
+      ],
+      "source_ids": [
+        "full-book-copy",
+        "publisher-book"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Part One: The Habits of Individuals",
+      "purpose": "Explain automaticity, reward anticipation, substitution, belief, and the practical mechanics of personal change.",
+      "summary": "Eugene Pauly and MIT rats show behaviour continuing without declarative memory and changing neural patterns with repetition. Pepsodent and Febreze show cues and anticipated rewards creating routines. Tony Dungy, Alcoholics Anonymous, and habit-reversal therapy support replacing a response rather than trying to erase the loop. The section's memorable synthesis is stronger than its suggestion that one golden rule covers every problem.",
+      "idea_ids": [
+        "habit-loop",
+        "craving-and-reward",
+        "golden-rule"
+      ],
+      "source_ids": [
+        "full-book-copy",
+        "mit-habit-learning",
+        "mit-old-habits",
+        "habit-review",
+        "scientific-american-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Part Two: The Habits of Successful Organizations",
+      "purpose": "Apply routine analysis to leadership, willpower training, safety, crisis, consumer prediction, and manipulation.",
+      "summary": "Paul O'Neill's safety focus illustrates a high-leverage routine that changes communication. Starbucks teaches written responses for pressure but embeds the now-contested resource model of willpower. Hospital and London Underground failures show the danger of informal truces and the reform opportunity created by crisis. Target and radio marketing reveal that firms detect disrupted routines and deliberately build new ones.",
+      "idea_ids": [
+        "keystone-habits",
+        "prepared-self-control",
+        "organisational-routines",
+        "commercial-habit-design"
+      ],
+      "source_ids": [
+        "full-book-copy",
+        "implementation-meta",
+        "ego-depletion-replication",
+        "target-critique",
+        "kirkus-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Part Three: The Habits of Societies",
+      "purpose": "Explain collective mobilisation and examine moral responsibility for automatic or compulsive conduct.",
+      "summary": "The Montgomery boycott and Saddleback Church are interpreted through strong friendships, social expectations carried by weaker ties, and small groups that build identity. The final chapter compares sleep terror with compulsive gambling and commercial pursuit. Both chapters broaden the book from automatic routines to social and moral systems, producing insight but also the loosest use of the word habit.",
+      "idea_ids": [
+        "social-movement-habits",
+        "habit-and-responsibility",
+        "commercial-habit-design"
+      ],
+      "source_ids": [
+        "full-book-copy",
+        "habit-review",
+        "target-critique"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Appendix: A Reader's Guide to Using These Ideas",
+      "purpose": "Turn hundreds of narrative pages into a small diagnostic and planning method.",
+      "summary": "Duhigg explicitly denies that one formula changes every habit. He uses his afternoon cookie to demonstrate four steps: name the routine, vary rewards and record the result, log five cue categories, and write a plan that links the recurring cue to a replacement routine serving the real reward. This is the most efficient and testable part of the book.",
+      "idea_ids": [
+        "diagnose-and-plan",
+        "golden-rule",
+        "craving-and-reward"
+      ],
+      "source_ids": [
+        "full-book-copy",
+        "author-tools",
+        "implementation-meta"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Nine long narrative chapters in three widening parts, followed by a concise practical appendix. Chapters braid several stories, pause them at moments of tension, explain a concept, and return for resolution.",
+    "voice": "Energetic, optimistic explanatory journalism with a strong eye for scene, character, surprise, and a usable label.",
+    "pace": "Fast within stories but long for the amount of practical instruction. Switching between cases creates momentum for some readers and frustration for those who want the conclusion immediately.",
+    "evidence_style": "Hundreds of interviews and extensive endnotes combine laboratory research, case reports, corporate history, anonymous sources, retrospective explanation, and selected success stories. Notes often record source qualifications that the main narrative smooths over.",
+    "example_style": "Memorable extreme and institutional cases: amnesia, maze-running rats, toothpaste, air freshener, elite sport, addiction groups, Alcoa, Starbucks, medical errors, Target, civil rights, megachurches, gambling, and sleep terror.",
+    "repetition": "Cue, routine, reward and the possibility of redesign recur in every domain. Each case adds colour and scope, but the central personal method can be retained without most of the 400 pages.",
+    "prerequisites": "None. Scientific concepts are translated into everyday language, though readers should remember that the book is a journalist's synthesis rather than a textbook or clinical guide.",
+    "source_ids": [
+      "full-book-copy",
+      "kirkus-review",
+      "scientific-american-review",
+      "cbs-review",
+      "goodreads",
+      "storygraph"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 6.8,
+      "confidence": "high",
+      "summary": "The book earns a strong score for a clear, memorable, and testable personal framework whose context-and-repetition core remains consistent with later habit research. It loses ground because selected stories carry larger causal claims, organisational and social uses of habit are loose, the willpower model is dated, and its highest-value instructions occupy a small fraction of the length.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 8.0,
+          "rationale": "Cue, routine, reward, craving, substitution, and planning provide an unusually legible account of why repeated context can overpower current intention and where to intervene.",
+          "source_ids": [
+            "full-book-copy",
+            "habit-review",
+            "daily-habits-study",
+            "kirkus-review"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.5,
+          "rationale": "The book is extensively reported and its individual-habit core has good support, but it relies on animal-to-human translation, unusual cases, unpublished material, selected organisations, and a willpower theory weakened by later replications.",
+          "source_ids": [
+            "full-book-copy",
+            "mit-habit-learning",
+            "habit-review",
+            "habit-time-review",
+            "ego-depletion-replication",
+            "target-critique"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.5,
+          "rationale": "Treating behaviour as designed context rather than character, looking for the actual reward, identifying routines that change information flow, and exposing commercial cue design remain valuable shifts in perspective.",
+          "source_ids": [
+            "full-book-copy",
+            "habit-review",
+            "target-critique",
+            "scientific-american-review"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 8.0,
+          "rationale": "The appendix supplies a specific observation and experiment sequence, and if-then planning has qualified experimental support; readers can test it on a bounded routine without adopting every large claim.",
+          "source_ids": [
+            "full-book-copy",
+            "author-tools",
+            "implementation-meta",
+            "habit-time-review"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.5,
+          "rationale": "The appendix admits there is no universal formula and notes contain valuable qualifications, but the main narrative underdevelops clinical boundaries, failed cases, effect sizes, structural causes, power, neurodivergence, and alternative behaviour-change models.",
+          "source_ids": [
+            "full-book-copy",
+            "habit-time-review",
+            "ego-depletion-replication",
+            "target-critique",
+            "storygraph"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 5.5,
+          "rationale": "The stories make the framework memorable and broaden its use, but the four-step practical core fills roughly ten pages and reader feedback repeatedly identifies excessive length and narrative detours.",
+          "source_ids": [
+            "full-book-copy",
+            "kirkus-review",
+            "goodreads",
+            "storygraph"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book replaces moralised self-command with behavioural investigation. Repeated action is partly a property of context, learned anticipation, and available response, so greater agency comes from changing the loop before the next cue rather than condemning oneself after it.",
+      "source_ids": [
+        "full-book-copy",
+        "habit-review",
+        "daily-habits-study"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Describe the routine in observable terms before trying to change it.",
+        "source_ids": [
+          "full-book-copy",
+          "author-tools"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Vary possible rewards and check what actually removes the urge; do not assume the obvious object is the payoff.",
+        "source_ids": [
+          "full-book-copy",
+          "habit-time-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Track location, time, emotional state, other people, and the preceding action to isolate a recurring cue.",
+        "source_ids": [
+          "full-book-copy",
+          "habit-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Write and rehearse an if-then response for the cue, then repeat it in a stable context long enough for automaticity to grow.",
+        "source_ids": [
+          "full-book-copy",
+          "lally-study",
+          "implementation-meta",
+          "habit-time-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "In organisations, improve the routine that moves bad news and authority rather than merely announcing a new value.",
+        "source_ids": [
+          "full-book-copy"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Audit who else benefits from your cues: a profitable routine may have been designed by a platform, retailer, casino, or employer.",
+        "source_ids": [
+          "full-book-copy",
+          "target-critique"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The book popularised a durable shift from motivation alone toward automaticity, stable context, and response design. Its influence also makes calibration important: later readers should keep the experimental appendix and environment-first thinking while discarding the idea that every personal, corporate, and political outcome reduces to the same loop.",
+      "source_ids": [
+        "publisher-book",
+        "habit-review",
+        "habit-time-review",
+        "ego-depletion-replication",
+        "goodreads"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Charles Duhigg is an investigative journalist trained at Yale and Harvard Business School, not a habit scientist. Reporting in Iraq prompted his interest in trained routines; he then used interviews, scientific papers, corporate access, extensive notes, and narrative scenes to make habit research useful to a mass audience. His strength is explanatory synthesis. The corresponding limit is that a polished story can look more causally decisive than the underlying evidence.",
+      "source_ids": [
+        "full-book-copy",
+        "publisher-book",
+        "kirkus-review",
+        "scientific-american-review"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "The complete text has extensive notes, identifies hundreds of interviews and studies, and records source corrections and disputes.",
+        "Later specialist reviews support the central role of stable context, repetition, automaticity, and cue management.",
+        "The appendix frames change as individual experimentation and explicitly denies that one formula fits every habit.",
+        "If-then planning has qualified support from randomised behaviour-change studies."
+      ],
+      "weaknesses": [
+        "Animal studies, rare neurological cases, anecdotes, corporate histories, and intervention evidence are blended into one seamless narrative.",
+        "Keystone habits and organisational transformations are selected retrospectively, with weak counterfactuals and no base rate for failure.",
+        "The limited-resource account of willpower is substantially less secure after large preregistered replication attempts.",
+        "The Target pregnancy anecdote is more uncertain than its later cultural retelling, and the book lacks direct model performance data."
+      ],
+      "source_ids": [
+        "full-book-copy",
+        "mit-habit-learning",
+        "habit-review",
+        "habit-time-review",
+        "implementation-meta",
+        "ego-depletion-replication",
+        "target-critique"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Professional and reader reception strongly favours the book's clarity, memorable reporting, and immediate applicability. The recurring objection is that the same narrative power encourages scientific overreach: stories are long and repeatedly interrupted, the appendix holds much of the usable method, and a journalist's interpretation can outrun the research.",
+      "praise": [
+        "Kirkus called it more convincing than most self-help and praised the accessible brain-and-behaviour account.",
+        "Scientific American found the loop, substitution method, and movement across personal and institutional cases a fascinating account of human nature.",
+        "CBS praised the rare combination of education and entertainment.",
+        "Large reader communities continue to report that the framework changes how they see daily and professional routines."
+      ],
+      "criticism": [
+        "Readers often find the case detail excessive and the braided stories frustrating when they want direct application.",
+        "Science-literate reviewers and readers question whether entertaining cases justify the breadth of Duhigg's interpretation.",
+        "The book gives little specific help for neurodivergence and complex clinical behaviour.",
+        "Later evidence makes parts of the willpower chapter scientifically dated."
+      ],
+      "source_ids": [
+        "kirkus-review",
+        "scientific-american-review",
+        "cbs-review",
+        "goodreads",
+        "storygraph",
+        "ego-depletion-replication"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "People who can name a bounded recurring behaviour and are willing to observe it for several days",
+        "Readers new to habit science who want memorable cases before technical detail",
+        "Leaders auditing repeated information, escalation, and safety routines",
+        "Marketers, product designers, and consumers interested in the ethics of engineered behaviour"
+      ],
+      "not_for": [
+        "Readers wanting the fastest possible instructions; the appendix or five-minute version may be enough",
+        "Researchers seeking a current technical synthesis of habit neuroscience and intervention effects",
+        "People seeking treatment for addiction, compulsions, eating disorders, gambling harm, or severe mental-health conditions",
+        "Readers who dislike braided narrative, corporate success stories, or broad analogies from individuals to societies"
+      ],
+      "topics": [
+        "automaticity",
+        "cues",
+        "rewards",
+        "craving",
+        "habit replacement",
+        "implementation intentions",
+        "willpower",
+        "keystone habits",
+        "organisational routines",
+        "safety",
+        "consumer prediction",
+        "marketing ethics",
+        "social movements",
+        "gambling",
+        "responsibility"
+      ],
+      "source_ids": [
+        "full-book-copy",
+        "publisher-book",
+        "kirkus-review",
+        "scientific-american-review",
+        "goodreads",
+        "storygraph"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A clinical treatment manual for addiction, compulsion, gambling, or mental illness",
+        "A comprehensive neuroscience or learning-theory textbook",
+        "A guarantee that repeating a routine for a fixed number of days makes it automatic",
+        "A complete theory of organisational performance, political mobilisation, free will, or legal responsibility",
+        "A collection of controlled trials proving every named case caused its reported outcome"
+      ],
+      "omissions": [
+        "Detailed treatment of neurodivergence, disability, trauma, sleep, medication, chronic illness, poverty, caregiving, and unstable environments",
+        "Systematic evidence on habit interventions, adverse effects, attrition, and which techniques work for which behaviour",
+        "Base rates and failed examples of keystone, corporate, marketing, and movement interventions",
+        "Modern platform design, smartphones, recommender systems, and privacy regulation that expanded after 2012"
+      ],
+      "missing_or_weak": [
+        "A firm distinction between habit, routine, ritual, skill, policy, norm, addiction, and compulsion",
+        "Enough emphasis on changing or removing cues rather than always preserving them",
+        "Power and ethics when employers train emotional responses or companies infer sensitive states",
+        "Quantitative model performance for the Target prediction case and independent confirmation of its famous anecdote"
+      ],
+      "dated_or_contested": [
+        "The muscle-like limited-resource theory of willpower has not shown the robust general effect implied by the chapter.",
+        "The three-part loop is useful but simpler than current accounts of context-response learning, goals, reward, and automaticity.",
+        "A fixed figure for how much daily behaviour is habitual depends on diary methods and definitions and should not be treated as a biological constant.",
+        "The claim that almost any habit can be reshaped is motivationally useful but too broad without conditions, support, and treatment boundaries."
+      ],
+      "source_ids": [
+        "full-book-copy",
+        "habit-review",
+        "daily-habits-study",
+        "habit-time-review",
+        "implementation-meta",
+        "ego-depletion-replication",
+        "target-critique",
+        "storygraph"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if stories help you remember a framework, you want the institutional and ethical cases as well as personal technique, or you want to see how explanatory journalism turns many disciplines into one model.",
+      "summary_is_enough_if": "Use the fifteen-minute version if you need the entire argument with its corrections; use five minutes if your only goal is to run the four-step experiment on one routine.",
+      "skip_if": "Skip it if you already understand context-linked automaticity and if-then planning, need current clinical guidance, or prefer effect sizes and systematic reviews to long narrative cases.",
+      "format_advice": "Audio suits the reporting and stories. Print or ebook is better for the appendix, diagrams, endnotes, cue log, and writing a replacement plan beside the text.",
+      "source_ids": [
+        "full-book-copy",
+        "kirkus-review",
+        "scientific-american-review",
+        "goodreads",
+        "storygraph"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What is the difference between a cue, routine, reward, and craving?",
+      "Why can substituting a routine work better than trying to suppress an urge?",
+      "What four steps does the appendix prescribe?",
+      "What mechanism could make a routine 'keystone' rather than merely important?",
+      "Which part of the willpower chapter has been weakened by later research?",
+      "Why is the Target pregnancy story less certain than its popular retelling?"
+    ],
+    "application_prompts": [
+      "Choose one observable routine and log its time, place, emotional state, people, preceding action, and result for five occurrences.",
+      "Test three different rewards without changing the cue; check after fifteen minutes which one removed the urge.",
+      "Write one if-then plan that is small enough to perform under pressure and decide how to rehearse it.",
+      "Identify one organisational routine that controls how bad news moves and who has authority to stop harm.",
+      "Name one platform or company that benefits from a habit you are trying to change, then remove or alter one of its cues."
+    ]
   },
   "workflow": {
-    "status": "stub",
-    "reviewed_against_full_book": false,
-    "review_notes": ""
+    "status": "researched-partial",
+    "reviewed_against_full_book": true,
+    "review_notes": "Checked against the complete text, appendix, and notes. Individual, organisational, commercial, social, and responsibility claims were separated and challenged with later habit reviews, formation evidence, implementation-intention trials, ego-depletion replication, and an adversarial reconstruction of the Target story. Narration and audio review remain.",
+    "quality_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": false
+      },
+      "notes": [
+        "Research and adversarial content review passed; narration timing, pronunciation, and local audio remain."
+      ]
+    }
   }
 }

@@ -6,20 +6,161 @@
   "name": "Charles Duhigg",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "An American investigative journalist who turns behavioural research and reported cases into practical frameworks about habits, productivity, and communication.",
+      "source_ids": ["official-bio", "new-yorker-profile", "publisher-profile"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Duhigg is a Yale and Harvard Business School graduate who worked in private equity and education ventures before becoming a full-time journalist in 2003. He reported for the Los Angeles Times and The New York Times, including from Iraq, and now writes for The New Yorker. He was part of the New York Times team awarded the 2013 Pulitzer Prize for explanatory reporting on Apple's global business practices.",
+      "source_ids": ["official-bio", "new-yorker-profile", "pulitzer"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His training combines history and business education with long-form reporting. The Power of Habit grew from his interest in military routines while reporting in Iraq and uses the methods of explanatory journalism: interviews, scenes, documents, expert interpretation, and extensive notes. His later books use the same story-and-research structure for productivity and conversation.",
+      "source_ids": ["official-bio", "full-book", "new-yorker-profile"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "His strongest demonstrated expertise is investigating organisations, interviewing specialists, and making technical material memorable for a general reader. Awards and a substantial reporting record support that craft. He is not presented by his own, employer, or publisher biographies as a neuroscientist, psychologist, clinician, or behaviour-change trialist, so scientific authority belongs to the cited studies rather than to his credentials.",
+      "source_ids": ["official-bio", "new-yorker-profile", "pulitzer", "publisher-profile"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Duhigg favours a clear model carried by vivid personal and corporate stories. That makes concepts accessible and exposes institutional systems, but selected success stories can imply a single cause, compress contested research, or make an illustrative case feel representative. His business background and journalistic method help him enter organisations; they do not establish intervention efficacy or a complete theory of behaviour.",
+      "source_ids": ["official-bio", "full-book", "kirkus-review", "scientific-american-review"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "The Power of Habit",
+      "year": 2012,
+      "kind": "Book",
+      "relationship": "His first book establishes his signature blend of behavioural science, reporting, organisational cases, and an applied framework.",
+      "source_ids": ["official-bio", "publisher-profile", "publisher-book"]
+    },
+    {
+      "title": "Smarter Faster Better",
+      "year": 2016,
+      "kind": "Book",
+      "relationship": "Extends the method from automatic behaviour to eight ideas about motivation, teams, focus, goals, management, decisions, innovation, and data.",
+      "source_ids": ["official-bio", "publisher-profile"]
+    },
+    {
+      "title": "Supercommunicators",
+      "year": 2024,
+      "kind": "Book",
+      "relationship": "Applies the same story-and-science approach to practical, emotional, and identity conversations.",
+      "source_ids": ["official-bio", "new-yorker-profile", "publisher-profile"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "official-bio",
+        "title": "Charles Duhigg Biography",
+        "author_or_publisher": "Charles Duhigg",
+        "url": "https://charlesduhigg.com/about/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Education, employers, reporting career, prior business and education work, awards, location, and three-book bibliography.",
+        "limitations": "Self-authored professional and promotional biography."
+      },
+      {
+        "id": "new-yorker-profile",
+        "title": "Charles Duhigg",
+        "author_or_publisher": "The New Yorker",
+        "url": "https://www.newyorker.com/contributors/charles-duhigg",
+        "type": "employer",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current contributor role, education, journalism background, books, and major reporting awards.",
+        "limitations": "Employer biography and abbreviated career account."
+      },
+      {
+        "id": "publisher-profile",
+        "title": "Charles Duhigg",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/authors/2256117/charles-duhigg/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Author identity, books, education, journalism, current writing, podcast work, and awards.",
+        "limitations": "Publisher marketing biography."
+      },
+      {
+        "id": "pulitzer",
+        "title": "2013 Prize Winner in Explanatory Reporting: The New York Times Staff",
+        "author_or_publisher": "The Pulitzer Prizes",
+        "url": "https://www.pulitzer.org/winners/staff-74",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent confirmation of the team award, citation, winning work, and Duhigg's bylines.",
+        "limitations": "Confirms one reporting project, not expertise in habit science."
+      },
+      {
+        "id": "full-book",
+        "title": "The Power of Habit: Why We Do What We Do in Life and Business",
+        "author_or_publisher": "Charles Duhigg and Random House; Saraswati Assam host",
+        "url": "https://saraswatiassam.org/BOOKS/The-Power-Of-Habit.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Author's account of the book's origin, stated method, interviews, source process, notes, and reporting style.",
+        "limitations": "Third-party copy with uncertain provenance; used for content and author method, not metadata."
+      },
+      {
+        "id": "publisher-book",
+        "title": "The Power of Habit",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/202855/the-power-of-habit-by-charles-duhigg/9780679603856/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "First-book identity, subject, formats, and publisher account of Duhigg's reporting method.",
+        "limitations": "Promotional copy."
+      },
+      {
+        "id": "kirkus-review",
+        "title": "The Power of Habit",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/charles-duhigg/power-of-habit/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent assessment of his clear, persuasive, case-rich explanatory method and simple diagrams.",
+        "limitations": "Brief review of one book."
+      },
+      {
+        "id": "scientific-american-review",
+        "title": "MIND Reviews: The Power of Habit",
+        "author_or_publisher": "Jordan Lite; Scientific American Mind",
+        "url": "https://www.scientificamerican.com/article/mind-reviews-the-power-of-habit/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent science-oriented appraisal of his synthesis, cases, explanatory reach, and accessible treatment.",
+        "limitations": "Short contemporary review and not a biography."
+      }
+    ],
+    "citations": {
+      "/name": ["official-bio", "new-yorker-profile", "publisher-profile", "pulitzer"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile checked against the author's full biography, current employer and publisher profiles, the official Pulitzer record, his book's method note, and two independent reviews. Scientific expertise is kept distinct from explanatory-journalism expertise.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
