@@ -7,24 +7,287 @@
   "alternate_titles": [],
   "author_ids": ["daniel-kahneman"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2011",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "First US edition",
+        "publisher": "Farrar, Straus and Giroux",
+        "publication_date": "2011-10-25",
+        "isbn_10": "0374275637",
+        "isbn_13": "9780374275631",
+        "format": "Hardcover",
+        "pages": 499
+      },
+      {
+        "label": "UK paperback",
+        "publisher": "Penguin Books",
+        "publication_date": "2012-05-10",
+        "isbn_10": "0141033576",
+        "isbn_13": "9780141033570",
+        "format": "Paperback",
+        "pages": 512
+      }
+    ],
+    "contents": [
+      "Part I, Two Systems: automatic and effortful thought, attention, association and cognitive ease",
+      "Part II, Heuristics and Biases: substitution, small samples, anchoring, availability, representativeness and regression",
+      "Part III, Overconfidence: hindsight, prediction, expert intuition, formulas, the outside view and planning",
+      "Part IV, Choices: prospect theory, reference points, loss aversion, probability weighting, framing and mental accounts",
+      "Part V, Two Selves: experienced wellbeing, remembered experience, the peak-end rule and the focusing illusion"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "attention",
+      "behavioural-economics",
+      "behavioural-science",
+      "decision-making",
+      "memory",
+      "non-fiction",
+      "psychology",
+      "self-awareness"
+    ],
+    "audiences": [
+      "Readers who make consequential decisions under uncertainty",
+      "Students and general readers entering cognitive psychology or behavioural economics",
+      "Managers, analysts, clinicians and policy workers who need to recognise predictable judgment errors",
+      "Readers interested in how memory and framing alter choice and wellbeing"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "fsg-thinking",
+        "title": "Thinking, Fast and Slow",
+        "author_or_publisher": "Farrar, Straus and Giroux / Macmillan",
+        "url": "https://us.macmillan.com/books/9780374275631/thinkingfastandslow/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Title, authorship, US edition identity, the fast-and-slow framework, and the publisher's account of the book's subject and scope.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Authoritative for publication details and stated scope; promotional rather than independent evaluation."
+      },
+      {
+        "id": "google-books-thinking",
+        "title": "Thinking, Fast and Slow",
+        "author_or_publisher": "Google Books / Doubleday Canada",
+        "url": "https://books.google.com/books/about/Thinking_Fast_and_Slow.html?id=TA7Q27RWlj0C",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "2011 publication, edition metadata, 512-page extent, description, five-part structure and chapter contents.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Catalogue and publisher-description material rather than a critical assessment."
+      },
+      {
+        "id": "alfaisal-thinking",
+        "title": "Thinking, Fast and Slow",
+        "author_or_publisher": "Alfaisal University Library",
+        "url": "https://libkoha.alfaisal.edu/cgi-bin/koha/opac-detail.pl?biblionumber=6391&shelfbrowse_itemnumber=7408",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "First-edition Farrar, Straus and Giroux publication in 2011, ISBN 9780374275631, 499 pages, references and index.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Bibliographic record only."
+      },
+      {
+        "id": "penguin-thinking",
+        "title": "Thinking, Fast and Slow",
+        "author_or_publisher": "Penguin Books UK",
+        "url": "https://www.penguin.co.uk/books/56314/thinking-fast-and-slow-by-kahneman-daniel/9780141033570",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "UK paperback ISBN, currently available formats and the publisher's description of the book.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Current product page uses a later reprint date and pagination; promotional for reception."
+      },
+      {
+        "id": "heath-thinking-paperback",
+        "title": "Thinking, Fast and Slow",
+        "author_or_publisher": "Heath Books",
+        "url": "https://www.heathbooks.co.uk/product/thinking-fast-and-slow/9780141033570/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "The 10 May 2012 UK Penguin paperback date, ISBN and 512-page count.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Retail metadata used only to distinguish the original paperback from later reprints."
+      },
+      {
+        "id": "nobel-kahneman-facts",
+        "title": "Daniel Kahneman — Facts",
+        "author_or_publisher": "Nobel Prize Outreach",
+        "url": "https://www.nobelprize.org/nobel_prizes/economic-sciences/laureates/2002/kahneman-facts.html",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "Kahneman's life dates, education, Princeton affiliation, 2002 prize and the cited contribution of integrating psychological research into economics, especially judgment under uncertainty.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Concise laureate profile, not a biography or evaluation of the 2011 book."
+      },
+      {
+        "id": "nobel-kahneman-biographical",
+        "title": "Daniel Kahneman — Biographical",
+        "author_or_publisher": "Daniel Kahneman / Nobel Prize Outreach",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/biographical/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Kahneman's own account of his education, attention research, collaboration with Amos Tversky, heuristics work and prospect theory.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Autobiographical and written before the book."
+      },
+      {
+        "id": "aea-shleifer-review",
+        "title": "Psychologists at the Gate: A Review of Daniel Kahneman's Thinking, Fast and Slow",
+        "author_or_publisher": "Andrei Shleifer, Journal of Economic Literature",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/jel.50.4.1080",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The book's synthesis of four decades of research, its importance to economics, its treatment of imperfect intuition and departures from standard rational-choice models.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Economist's review rather than a replication audit of every study."
+      },
+      {
+        "id": "aps-bazerman-review",
+        "title": "Thinking, Fast and Slow",
+        "author_or_publisher": "Max H. Bazerman, Association for Psychological Science Observer",
+        "url": "https://www.psychologicalscience.org/observer/thinking-fast-and-slow",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The book's influence across applied fields, its combination of theory, field history and intellectual memoir, and the need for careful rather than casual reading.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Strongly favourable review by a scholar in the field."
+      },
+      {
+        "id": "guardian-strawson-thinking",
+        "title": "Thinking, Fast and Slow by Daniel Kahneman – review",
+        "author_or_publisher": "Galen Strawson, The Guardian",
+        "url": "https://www.theguardian.com/books/2011/dec/13/thinking-fast-slow-daniel-kahneman",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent praise for the book's clarity and intellectual demands, plus examples of its original treatment of priming and ego depletion.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Contemporary review predates the replication crisis affecting some examples it praised."
+      },
+      {
+        "id": "kirkus-thinking",
+        "title": "Thinking, Fast and Slow",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/daniel-kahneman/thinking-fast-and-slow/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "US publication date, ISBN, page count and a trade review praising clarity and range while noting dense later sections.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Brief trade review, not specialist evidence review."
+      },
+      {
+        "id": "time-kahneman-interview",
+        "title": "Daniel Kahneman on Thinking, Fast and Slow",
+        "author_or_publisher": "TIME",
+        "url": "https://time.com/6961454/daniel-kahneman-death-interview-thinking/",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "Kahneman's explanation of the two systems, conditions for valid intuition, his goal of improving informed discussion, and his warning that knowing the biases did not broadly improve his own intuition.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Author interview, republished in 2024; useful for intent and self-calibration, not independent verification."
+      },
+      {
+        "id": "kahneman-priming-letter",
+        "title": "A proposal to deal with questions about priming effects",
+        "author_or_publisher": "Daniel Kahneman",
+        "url": "https://www.nature.com/news/polopoly_fs/7.6716.1349271308%21/suppinfoFile/Kahneman%20Letter.pdf",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Kahneman's 2012 warning to social-priming researchers about replication failures, publication bias and a looming credibility crisis, while acknowledging the prominence he gave the work.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "An open letter diagnosing a problem, not a meta-analysis measuring which individual effects survive."
+      },
+      {
+        "id": "melnikoff-dual-process",
+        "title": "The Mythical Number Two",
+        "author_or_publisher": "David E. Melnikoff and John A. Bargh, Mind & Society",
+        "url": "https://link.springer.com/article/10.1007/s13164-019-00446-9",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A major conceptual critique: common dual-process attributes do not reliably cluster into two exclusive systems, making the simple taxonomy too flexible.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Challenges standard dual-process theories; it does not show that automatic and controlled processing distinctions are useless."
+      },
+      {
+        "id": "yavavone-loss-aversion",
+        "title": "The Loss of Loss Aversion: Will It Loom Larger Than Its Gain?",
+        "author_or_publisher": "David Gal and Derek D. Rucker, Journal of Consumer Psychology",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29663131/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Critical review arguing that early evidence for general loss aversion was overinterpreted and that small losses are not consistently weighted more than equivalent gains.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Revisionist review of loss aversion's scope, not a rejection of prospect theory as a whole."
+      },
+      {
+        "id": "nobel-advanced-prospect",
+        "title": "Foundations of Behavioral and Experimental Economics: Daniel Kahneman and Vernon Smith",
+        "author_or_publisher": "Royal Swedish Academy of Sciences",
+        "url": "https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2002-2.pdf",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "The empirical and theoretical importance of Kahneman and Tversky's judgment research and prospect theory to economics.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Prize committee synthesis from 2002; it cannot address later replication findings."
+      },
+      {
+        "id": "nobel-kahneman-lecture",
+        "title": "Maps of Bounded Rationality: Psychology for Behavioral Economics",
+        "author_or_publisher": "Daniel Kahneman / Nobel Prize Outreach",
+        "url": "https://www.nobelprize.org/uploads/2018/06/kahnemann-lecture.pdf",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Kahneman's detailed account of intuitive judgment, accessibility, framing, prospect theory and bounded rationality.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "The author's own technical synthesis, not independent assessment."
+      },
+      {
+        "id": "princeton-publications",
+        "title": "Publications",
+        "author_or_publisher": "Daniel Kahneman, Princeton University",
+        "url": "https://kahneman.scholar.princeton.edu/publications",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Kahneman's principal books and edited collections.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Author-maintained institutional bibliography."
+      }
+    ],
+    "citations": {
+      "/title": ["fsg-thinking", "google-books-thinking"],
+      "/author_ids": ["fsg-thinking", "nobel-kahneman-facts"],
+      "/bibliography/first_published": ["alfaisal-thinking", "google-books-thinking"],
+      "/bibliography/editions/0": ["fsg-thinking", "alfaisal-thinking"],
+      "/bibliography/editions/1": ["penguin-thinking", "heath-thinking-paperback"],
+      "/bibliography/contents": ["google-books-thinking"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "researched-partial",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Five-part structure and central examples checked against publisher and catalogue contents, then assessed with the author's own explanations, specialist reviews, the Nobel technical account and later adversarial work on priming, dual-process theory and loss aversion.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

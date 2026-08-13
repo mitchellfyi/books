@@ -5,137 +5,582 @@
   "content_type": "non-fiction",
   "editorial": {
     "compression_fit": "medium",
-    "complexity": "medium",
-    "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "complexity": "high",
+    "recommended_level": "30-minutes",
+    "rationale": "The central contrast is simple, but the useful book is not merely a list of biases. It connects attention, statistical judgment, prediction, risky choice, memory and wellbeing, with different limits in each area. Fifteen minutes gives the map; thirty preserves the conditions, examples and later corrections needed to use it responsibly."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Daniel Kahneman explains how fast intuition builds convincing judgments from incomplete evidence, why slower reasoning only sometimes corrects them, and how this produces predictable errors in prediction, risk, planning, memory and choice.",
+    "verdict": "An excellent and unusually consequential map of judgment, made less reliable by a few famous findings that did not age well and by a two-system metaphor that is easier to remember than to defend literally.",
+    "source_ids": [
+      "fsg-thinking",
+      "aea-shleifer-review",
+      "kahneman-priming-letter",
+      "melnikoff-dual-process"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "The book moves through five linked problems. First, it introduces fast, automatic thought and slow, effortful thought. Second, it shows how quick judgment substitutes easy questions for hard ones and relies on anchoring, availability and resemblance. Third, it explains overconfidence in stories, predictions and plans. Fourth, it develops prospect theory: people judge outcomes relative to a reference point, react strongly to losses and distort probabilities. Fifth, it separates the self that lives an experience from the self that remembers and chooses between experiences.",
+      "source_ids": [
+        "google-books-thinking",
+        "fsg-thinking",
+        "aea-shleifer-review"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Human judgment is not one rational calculation. Automatic processes continuously create impressions, associations and coherent stories from whatever is available; controlled reasoning can inspect them, but attention is limited and effort is often avoided. The resulting shortcuts are efficient and frequently skilled, yet they also create systematic errors. Better decisions come from recognising when intuition deserves trust and when base rates, outside views, formulas, structured procedures or a better frame should replace it.",
+      "source_ids": [
+        "fsg-thinking",
+        "nobel-kahneman-lecture",
+        "aea-shleifer-review",
+        "time-kahneman-interview"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "two-systems",
+      "title": "Fast intuition proposes; slow attention sometimes checks",
+      "claim": "Kahneman personifies automatic mental activity as System 1 and effortful, controlled activity as System 2.",
+      "explanation": "System 1 recognises faces, completes phrases, reads emotion and produces quick impressions without a felt decision. System 2 handles mental arithmetic, deliberate comparison and rule-following, but effort consumes scarce attention. Most conscious judgments begin as suggestions from the fast process, and the slower process commonly endorses rather than rebuilds them.",
+      "representative_example": "The bat-and-ball problem produces an immediate but wrong answer; a short calculation corrects it only if attention is engaged.",
+      "why_it_matters": "The distinction explains why intelligence and good intentions do not prevent predictable errors: the needed correction may be available but not activated.",
+      "caveat": "Kahneman calls the systems useful fictional characters. Later theory disputes whether their usual features divide cleanly into two actual mechanisms.",
+      "source_ids": [
+        "fsg-thinking",
+        "time-kahneman-interview",
+        "melnikoff-dual-process"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "coherence-and-substitution",
+      "title": "A coherent story can outrun the evidence",
+      "claim": "Fast thought links whatever is present into a plausible story, then answers difficult questions by substituting easier ones.",
+      "explanation": "Associations spread quickly; repetition and clarity create cognitive ease; surprising events become normal after an explanation appears. When asked how happy life is, a person may answer how they feel now. When asked whether a company will succeed, they may answer whether its leader seems impressive. Kahneman calls the deeper information problem WYSIATI: what you see is all there is. Missing evidence rarely announces itself.",
+      "representative_example": "A description of a politically active philosophy graduate makes 'bank teller and feminist' feel more likely than 'bank teller', even though a conjunction cannot be more probable than one of its parts.",
+      "why_it_matters": "Confidence often measures the fluency of the story, not the amount or quality of evidence behind it.",
+      "caveat": "Automatic coherence is not merely a defect; it is essential to perception, language and rapid action. The error is treating fluency as proof.",
+      "source_ids": [
+        "google-books-thinking",
+        "nobel-kahneman-lecture",
+        "aea-shleifer-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "heuristics",
+      "title": "Anchors, availability and resemblance bend judgment",
+      "claim": "When exact calculation is difficult, people use accessible cues that often work but produce directional biases.",
+      "explanation": "Anchoring pulls estimates toward a number that was merely mentioned. Availability makes vivid or recent events seem more frequent. Representativeness judges probability by resemblance to a stereotype, often neglecting base rates and sample size. The patterns are predictable because the substituted cue is predictably related to the original question.",
+      "representative_example": "People exposed to a high arbitrary number subsequently give higher numerical estimates, even when the initial number contains no useful information.",
+      "why_it_matters": "Prices, forecasts, hiring, diagnosis and risk discussions can all be shifted by irrelevant starting points or memorable cases.",
+      "caveat": "A heuristic is not synonymous with irrationality. It can be efficient in the environment that made the cue useful; the book concentrates on mismatches and errors.",
+      "source_ids": [
+        "google-books-thinking",
+        "nobel-kahneman-lecture",
+        "aea-shleifer-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "statistical-thinking",
+      "title": "Base rates and regression beat causal stories",
+      "claim": "People expect small samples to look like populations, neglect prior probabilities and invent causes for ordinary regression toward the mean.",
+      "explanation": "A small hospital appears more likely to produce an extreme result simply because small samples vary more. A vivid case description makes people forget how common each category was before the description arrived. Extreme performances are normally followed by less extreme ones because luck fluctuates, yet praise or blame receives the credit. Statistical truth feels weak because it lacks a character and cause.",
+      "representative_example": "An instructor concludes that criticism improves performance because a bad attempt is often followed by a better one; regression predicts much of the improvement without the criticism causing it.",
+      "why_it_matters": "Misreading noise as signal wastes interventions, creates false confidence and punishes people for ordinary variation.",
+      "caveat": "Base rates do not replace case evidence. They provide a disciplined starting point whose weight should change with the reliability of new information.",
+      "source_ids": [
+        "google-books-thinking",
+        "aea-shleifer-review",
+        "nobel-kahneman-lecture"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "overconfidence-and-outside-view",
+      "title": "The inside story hides uncertainty",
+      "claim": "Coherent narratives create hindsight, overconfident prediction and plans that ignore the outcomes of comparable cases.",
+      "explanation": "Once an event happens, the path to it feels more predictable than it was. Forecasts follow the quality of a story and neglect how weakly the available evidence predicts the outcome. Teams plan from the details of their own project, not the distribution of similar projects. Kahneman's corrective is the outside view: identify a relevant reference class, start with its outcome distribution, then adjust cautiously for genuine differences.",
+      "representative_example": "Kahneman's curriculum team estimated roughly two years from its own plan; similar teams usually took seven to ten years and many never finished. The project still followed the optimistic inside view.",
+      "why_it_matters": "Large overruns often survive because each plan is treated as unique while the relevant history remains outside the room.",
+      "caveat": "Choosing a reference class is itself a judgment, and unique changes can make old distributions less relevant. The method disciplines forecasts rather than guaranteeing them.",
+      "source_ids": [
+        "google-books-thinking",
+        "aea-shleifer-review",
+        "time-kahneman-interview"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "intuition-and-formulas",
+      "title": "Trust intuition only where skill can form",
+      "claim": "Expert intuition becomes credible in sufficiently regular environments with repeated practice and timely, valid feedback; otherwise simple formulas often outperform unaided judgment.",
+      "explanation": "A firefighter can learn stable cues because the environment repeats and consequences arrive. Long-range market or political forecasts offer weaker regularities and ambiguous feedback, so confidence is a poor guide. Human judges also change weights with mood and irrelevant context. A simple rule applies the same factors consistently and therefore can beat a more sophisticated but noisy impression.",
+      "representative_example": "The book contrasts skilled recognition in firefighting or chess with stock selection, where the environment does not reliably teach the claimed predictive intuition.",
+      "why_it_matters": "The right question is not whether a person sounds expert, but whether the environment could have trained the claimed skill.",
+      "caveat": "Formulas depend on valid inputs, objectives and historical data. They can encode stale patterns or unfair choices and still look consistent.",
+      "source_ids": [
+        "time-kahneman-interview",
+        "google-books-thinking",
+        "aea-shleifer-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "prospect-theory",
+      "title": "Choice depends on a reference point",
+      "claim": "Prospect theory models risky choice through gains and losses relative to the status quo, diminishing sensitivity and nonlinear decision weights.",
+      "explanation": "Standard expected-utility theory evaluates final wealth. Kahneman and Tversky instead show that a change is coded as a gain or loss from a reference point. The value curve flattens as amounts grow, and losses commonly have greater impact than equal gains. People also overweight some small probabilities and underweight many moderate or high ones, producing different attitudes across the four combinations of gains or losses and likely or unlikely outcomes.",
+      "representative_example": "A sure gain is often preferred to a gamble with the same expected value, while a sure loss can provoke risk-seeking to preserve a chance of avoiding it.",
+      "why_it_matters": "The frame predicts insurance, lotteries, settlement choices and resistance to giving up an entitlement better than a final-wealth account alone.",
+      "caveat": "Prospect theory remains foundational, but loss aversion is not a universal constant. Later reviews find that its presence and size depend on context and measurement.",
+      "source_ids": [
+        "nobel-advanced-prospect",
+        "nobel-kahneman-lecture",
+        "yavavone-loss-aversion"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "framing-and-accounts",
+      "title": "Equivalent choices do not feel equivalent",
+      "claim": "Descriptions, ownership and mental accounts change decisions even when the underlying outcomes are economically equivalent.",
+      "explanation": "A survival rate and a mortality rate evoke different reactions. Giving something up can feel like a loss, raising the price an owner demands above what a buyer would pay. People also place money and outcomes into separate mental accounts, then make a local choice that conflicts with the wider portfolio. Broad framing asks which policy should apply across repeated decisions, not what feels best in this isolated case.",
+      "representative_example": "The same medical outcome attracts different choices when expressed as patients surviving rather than patients dying.",
+      "why_it_matters": "Good decision design makes the reference point and alternative frames visible before preference is treated as settled.",
+      "caveat": "Frames can communicate genuinely different concerns, not merely manipulate. A broad frame must still preserve morally or practically relevant detail.",
+      "source_ids": [
+        "google-books-thinking",
+        "nobel-kahneman-lecture",
+        "nobel-advanced-prospect"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "two-selves",
+      "title": "The self that remembers can overrule the self that lived",
+      "claim": "Experienced wellbeing and remembered evaluation are different, and memory overweights peaks and endings while neglecting duration.",
+      "explanation": "Moment-by-moment experience measures how life feels while it happens. The remembering self compresses an episode into a story, giving unusual weight to its most intense point and ending. It then chooses whether to repeat the experience. The focusing illusion extends the problem: when attention fixes on one feature of life, that feature temporarily appears more important to happiness than it normally is.",
+      "representative_example": "A painful medical procedure can be remembered more favourably when it lasts longer but ends with a milder period, despite adding pain to the total experience.",
+      "why_it_matters": "Policies, products and personal choices can optimise the remembered story while neglecting the hours actually lived.",
+      "caveat": "Neither self has automatic moral priority. Memory guides future choice and identity; experience accounts for lived time. The conflict is a value question as well as a measurement problem.",
+      "source_ids": [
+        "google-books-thinking",
+        "nobel-kahneman-lecture",
+        "aps-bazerman-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Part I: Two Systems",
+      "purpose": "Build the book's vocabulary for automatic impressions and controlled attention.",
+      "summary": "The opening chapters turn a collection of mental operations into two memorable characters, then show how association, ease, surprise and substitution let quick impressions become endorsed judgments.",
+      "idea_ids": [
+        "two-systems",
+        "coherence-and-substitution"
+      ],
+      "source_ids": [
+        "google-books-thinking",
+        "fsg-thinking"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Part II: Heuristics and Biases",
+      "purpose": "Show the recurring shortcuts behind probability errors.",
+      "summary": "Anchoring, availability and representativeness explain why vivid stories displace base rates, small samples are trusted and regression is mistaken for a causal effect.",
+      "idea_ids": [
+        "heuristics",
+        "statistical-thinking"
+      ],
+      "source_ids": [
+        "google-books-thinking",
+        "aea-shleifer-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Part III: Overconfidence",
+      "purpose": "Move from isolated errors to forecasts, expertise and organisations.",
+      "summary": "Hindsight and narrative confidence hide uncertainty; reference classes and simple algorithms improve prediction; intuitive expertise is restricted to environments that can actually teach it.",
+      "idea_ids": [
+        "overconfidence-and-outside-view",
+        "intuition-and-formulas"
+      ],
+      "source_ids": [
+        "google-books-thinking",
+        "time-kahneman-interview",
+        "aea-shleifer-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Part IV: Choices",
+      "purpose": "Replace the rational-agent model with a descriptive account of risky choice.",
+      "summary": "Prospect theory makes changes, reference points and decision weights central; ownership, framing and narrow mental accounts then explain apparently inconsistent choices.",
+      "idea_ids": [
+        "prospect-theory",
+        "framing-and-accounts"
+      ],
+      "source_ids": [
+        "google-books-thinking",
+        "nobel-advanced-prospect",
+        "nobel-kahneman-lecture"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Part V: Two Selves",
+      "purpose": "Ask which measure of wellbeing decisions should serve.",
+      "summary": "The experiencing and remembering selves value duration, peaks and endings differently, exposing a final conflict between the life lived and the story later used to choose.",
+      "idea_ids": [
+        "two-selves"
+      ],
+      "source_ids": [
+        "google-books-thinking",
+        "aps-bazerman-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Five cumulative parts move from mental machinery to judgment, prediction, choice and wellbeing. Short chapters repeatedly introduce an experiment, invite an intuitive answer, then diagnose it.",
+    "voice": "Patient, precise and personal. Kahneman uses his own mistakes and his collaboration with Amos Tversky to reduce the distance between research history and reader experience.",
+    "pace": "The opening is immediately accessible. Statistical chapters require concentration; the prospect-theory section is denser; the two-selves ending becomes reflective again.",
+    "evidence_style": "A lifetime synthesis built from classic experiments, demonstrations and applied examples. It names much of the research tradition, but a general reader cannot audit every study from the main text alone.",
+    "example_style": "Interactive puzzles, paired descriptions, gambles, forecasts and stories from medicine, business, military service and Kahneman's own projects.",
+    "repetition": "Key distinctions recur productively across new domains, though the same two-system language sometimes makes different mechanisms look more unified than they are.",
+    "prerequisites": "No formal psychology or economics is required, but comfort with probability, averages and slow reading helps.",
+    "source_ids": [
+      "aps-bazerman-review",
+      "guardian-strawson-thinking",
+      "kirkus-thinking",
+      "google-books-thinking"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 0.0,
-      "confidence": "low",
-      "summary": "TODO: give the content-only verdict behind the score.",
+      "score": 8.0,
+      "confidence": "medium",
+      "summary": "Excellent content: a powerful, usable and field-defining synthesis whose central judgment tools survive better than some memorable supporting studies. Its breadth, density and over-unified two-system story prevent a higher score.",
       "dimensions": [
-        { "id": "explanatory-power", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "evidence-and-reasoning", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "insight-value", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "practical-utility", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "completeness-and-calibration", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] }
+        {
+          "id": "explanatory-power",
+          "score": 9.0,
+          "rationale": "The book gives unusually clear mechanisms for predictable errors across judgment, forecasting, risky choice and remembered wellbeing. The two-system device makes the terrain legible, although it unifies more than later theory supports.",
+          "source_ids": [
+            "aea-shleifer-review",
+            "aps-bazerman-review",
+            "melnikoff-dual-process"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 7.0,
+          "rationale": "Prospect theory, judgment under uncertainty and many classic effects have substantial foundations, but several dramatic social-priming and depletion examples became replication liabilities, and general loss aversion needs tighter boundaries.",
+          "source_ids": [
+            "nobel-advanced-prospect",
+            "kahneman-priming-letter",
+            "yavavone-loss-aversion"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 9.0,
+          "rationale": "WYSIATI, substitution, the outside view, conditions for expertise, reference dependence and the two selves each reorganise a common problem in a memorable way; together they form more than one good idea stretched across a book.",
+          "source_ids": [
+            "aea-shleifer-review",
+            "aps-bazerman-review",
+            "nobel-kahneman-lecture"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 8.0,
+          "rationale": "Reference classes, base rates, structured judgment, broad frames and rules for trusting expertise are directly usable. Mere bias awareness rarely fixes personal intuition, so the strongest applications are procedural and organisational.",
+          "source_ids": [
+            "time-kahneman-interview",
+            "aea-shleifer-review"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 8.0,
+          "rationale": "Kahneman regularly states limits and distinguishes skilled intuition from bias, but the book gives too little space to rival models, ecological accounts, cultural variation and the future fragility of some supporting findings.",
+          "source_ids": [
+            "time-kahneman-interview",
+            "melnikoff-dual-process",
+            "kahneman-priming-letter"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.5,
+          "rationale": "The breadth and examples justify substantial length, and repetition supports learning, but the five-part synthesis is dense and sometimes revisits the same fast-versus-slow frame after its marginal value has fallen.",
+          "source_ids": [
+            "aps-bazerman-review",
+            "kirkus-thinking",
+            "guardian-strawson-thinking"
+          ]
+        }
       ],
       "basis": "inference"
     },
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "meaning": {
+      "text": "A convincing thought is not the same as a well-supported judgment. Human minds are built to create usable interpretations quickly, not to display their missing evidence. The responsible response is not permanent suspicion of intuition, but matching the decision process to the environment: intuition where feedback can train it, and statistics, structure and independent checks where it cannot.",
+      "source_ids": [
+        "time-kahneman-interview",
+        "nobel-kahneman-lecture",
+        "aea-shleifer-review"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Before accepting a confident forecast, ask for the base rate and the outcomes of genuinely similar cases.",
+        "source_ids": [
+          "google-books-thinking",
+          "aea-shleifer-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Treat a coherent explanation as a hypothesis, then ask which evidence is absent, selected after the event or too weak to predict the result.",
+        "source_ids": [
+          "nobel-kahneman-lecture",
+          "aea-shleifer-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Trust expertise in regular environments with repeated practice and rapid valid feedback; do not use confidence as a substitute for those conditions.",
+        "source_ids": [
+          "time-kahneman-interview",
+          "google-books-thinking"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "For repeated high-stakes decisions, prefer a checklist, simple model or structured independent judgments to one holistic impression.",
+        "source_ids": [
+          "aea-shleifer-review",
+          "google-books-thinking"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Reframe a choice as gains, losses, survival, mortality and a wider portfolio before assuming the first presentation revealed a stable preference.",
+        "source_ids": [
+          "nobel-advanced-prospect",
+          "nobel-kahneman-lecture"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "When judging an experience, examine both remembered peaks and endings and the full duration actually lived.",
+        "source_ids": [
+          "google-books-thinking",
+          "aps-bazerman-review"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The book made a major research programme usable outside psychology and showed economics, management, medicine and policy why observed choice cannot be understood through an ideal rational agent alone. Its more durable legacy is a shared vocabulary for inspecting judgment and redesigning decisions, not the claim that every featured experiment is settled.",
+      "source_ids": [
+        "nobel-kahneman-facts",
+        "aea-shleifer-review",
+        "aps-bazerman-review",
+        "kahneman-priming-letter"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Kahneman drew on his research in attention, judgment and wellbeing and on decades of collaboration with Amos Tversky. He wrote the book to assemble that work for general readers and improve the quality of informed discussion about other people's judgments. He did not promise that learning a catalogue of biases would transform the reader into an unbiased thinker.",
+      "source_ids": [
+        "nobel-kahneman-biographical",
+        "time-kahneman-interview",
+        "princeton-publications"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "strong",
+      "strengths": [
+        "The book synthesises decades of experimental work and two foundational research programmes: heuristics and biases, and prospect theory.",
+        "Many demonstrations expose a specific error with a comparison, probability problem or observable choice rather than relying on anecdote alone.",
+        "Kahneman distinguishes environments that can support genuine expertise from those that cannot.",
+        "The author later publicly recognised the replication threat to social priming rather than defending every included finding."
+      ],
+      "weaknesses": [
+        "Several striking priming and ego-depletion examples were published before psychology's replication crisis and should not now carry argumentative weight.",
+        "The two-system label groups properties that do not always travel together and is too neat as a literal cognitive taxonomy.",
+        "Loss aversion is presented more generally than later critical reviews support.",
+        "The synthesis focuses on systematic average effects and gives less attention to cultural, institutional and individual variation."
+      ],
+      "source_ids": [
+        "nobel-advanced-prospect",
+        "aea-shleifer-review",
+        "kahneman-priming-letter",
+        "melnikoff-dual-process",
+        "yavavone-loss-aversion"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Specialist and general reviews treated the book as a major, lucid synthesis with reach far beyond psychology. Praise centres on its explanatory vocabulary, research history and practical relevance. Criticism has grown around its density, the oversimplified two-system taxonomy and specific social-psychology findings that failed to replicate reliably.",
+      "praise": [
+        "The Journal of Economic Literature called its publication a major intellectual event and emphasised the scale of the research synthesis.",
+        "The Association for Psychological Science review praised its combination of field theory, intellectual history and personal journey.",
+        "General reviews found the prose clear and the demonstrations memorable despite the technical subject.",
+        "Its ideas travel well into medicine, law, finance, management, negotiation and public policy."
+      ],
+      "criticism": [
+        "The later choice and probability chapters are demanding and can feel dense.",
+        "The two-system story is a helpful teaching device but not a clean division into two literal mechanisms.",
+        "Some of the book's most theatrical priming and self-control examples became dated as replication failures accumulated.",
+        "The generality of loss aversion and some broad claims about human irrationality need more context than the book supplies."
+      ],
+      "source_ids": [
+        "aea-shleifer-review",
+        "aps-bazerman-review",
+        "guardian-strawson-thinking",
+        "kirkus-thinking",
+        "kahneman-priming-letter",
+        "melnikoff-dual-process",
+        "yavavone-loss-aversion"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Decision-makers who can change procedures, forecasts or choice architecture rather than merely memorise biases",
+        "Readers entering cognitive psychology, behavioural economics or evidence-based management",
+        "Analysts, clinicians, policy workers and leaders who make repeated judgments under uncertainty",
+        "Patient general readers who want the research logic and examples, not a quick list of mental tricks"
+      ],
+      "not_for": [
+        "Readers seeking a short self-help programme that promises personal debiasing",
+        "Readers wanting a current replication-screened textbook or a literal neuroscience map",
+        "Anyone unwilling to work through probability, prediction and risky-choice chapters",
+        "Readers whose main interest is emotion, culture, social identity or institutions rather than judgment experiments"
+      ],
+      "topics": [
+        "Automatic and controlled thought",
+        "Attention and cognitive effort",
+        "Heuristics, bias and statistical judgment",
+        "Forecasting, expertise and planning",
+        "Prospect theory, loss and framing",
+        "Memory, experience and wellbeing"
+      ],
+      "source_ids": [
+        "google-books-thinking",
+        "aps-bazerman-review",
+        "time-kahneman-interview"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A manual that removes bias through awareness alone",
+        "A literal claim that the brain contains two separate agents or locations called System 1 and System 2",
+        "A complete introduction to psychology, neuroscience or every form of rational decision-making",
+        "A current replication audit of every study cited in 2011"
+      ],
+      "omissions": [
+        "Detailed treatment of cultural and institutional variation in judgment",
+        "Ecological accounts of when simple heuristics are adapted to real environments rather than biased",
+        "Modern safeguards for algorithmic decision tools, including unfair targets and historical data",
+        "A sustained implementation programme for organisations that want to reduce bias"
+      ],
+      "missing_or_weak": [
+        "Clear separation between the durable research programme and the fragile social-priming examples",
+        "More competing models than the unifying two-system metaphor permits",
+        "Better calibration of when and how strongly losses outweigh gains",
+        "More attention to emotion, power and social context as causes of judgment"
+      ],
+      "dated_or_contested": [
+        "Several social-priming effects highlighted in the opening section became replication-crisis examples; Kahneman warned the field about the problem in 2012.",
+        "Ego depletion, used as evidence that self-control consumes a common resource, is not secure enough to carry the book's broader account of mental effort.",
+        "Dual-process distinctions remain useful, but packaging many attributes into two exclusive systems is strongly contested.",
+        "Loss aversion is important in some settings but is not a context-free law with one stable coefficient."
+      ],
+      "source_ids": [
+        "kahneman-priming-letter",
+        "melnikoff-dual-process",
+        "yavavone-loss-aversion",
+        "time-kahneman-interview"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read it if your work involves forecasts, risk, policy, diagnosis, hiring, investment or repeated judgment, and you want to understand why structured procedures often beat confident impressions.",
+      "summary_is_enough_if": "Fifteen minutes is enough for the complete conceptual map. Use thirty minutes if the distinctions, examples, practical tests and later evidential limits will change real decisions.",
+      "skip_if": "Skip the full book if you want quick personal hacks, cannot use its procedural lessons, or need a current specialist account of replication and cognitive architecture.",
+      "format_advice": "Print or ebook suits the probability problems and diagrams better than passive audio. If listening, slow down for Parts II and IV and use the chapter boundaries rather than treating it as continuous narrative.",
+      "source_ids": [
+        "aps-bazerman-review",
+        "kirkus-thinking",
+        "time-kahneman-interview"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What conditions must exist before confidence in an expert intuition deserves trust?",
+      "How do WYSIATI and substitution turn missing evidence into a coherent judgment?",
+      "How does prospect theory differ from evaluating final wealth alone?",
+      "Why can the experiencing and remembering selves prefer different outcomes?"
+    ],
+    "application_prompts": [
+      "Choose one current forecast, find a relevant reference class and compare its base rate with the inside-view estimate.",
+      "Rewrite one consequential choice in gain, loss, survival and mortality frames before deciding.",
+      "Replace one repeated holistic judgment with independent criteria and a consistent combination rule.",
+      "Audit a claimed expert's environment for regularity, repeated practice and timely valid feedback."
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
-    "review_notes": "",
+    "review_notes": "Checked against authorised contents and descriptions, Kahneman's Nobel autobiography and lecture, specialist reviews, institutional records and later adversarial evidence. No user-supplied full text was available, so coverage is structure-and-claims rather than line-by-line.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
-      "notes": []
+      "notes": [
+        "Identity, first US edition and UK paperback were checked against publisher and independent catalogue records.",
+        "The full five-part architecture and central claims were checked against authorised contents, the author's Nobel lecture and specialist reviews; full-text review is not claimed.",
+        "Adversarial review separates the durable heuristics, prospect-theory and decision-process contributions from fragile priming examples and overgeneralised loss aversion.",
+        "System 1 and System 2 are consistently described as personified explanatory constructs, not literal brain systems.",
+        "Rating uses content and ideas only; the Nobel Prize, popularity and favourable reception do not affect the score.",
+        "Thirty minutes is the shortest version that preserves the book's major domains, practical conditions and evidential corrections.",
+        "The shortest generated audio was sampled for title, author and technical terms; no dictionary correction was required."
+      ]
     }
   }
 }

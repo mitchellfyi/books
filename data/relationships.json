@@ -732,11 +732,25 @@
       "target_id": "influence-robert-cialdini",
       "type": "related-to",
       "basis": "inference",
-      "description": "Discovery justification: Influence explains compliance through judgment shortcuts; Kahneman's book is the canonical scientific account of those shortcuts (heuristics and biases) from the researcher who systematised the field.",
+      "description": "Both examine predictable shortcuts in judgment. Cialdini organises them around compliance situations; Kahneman explains the wider cognitive and statistical machinery, so it is the stronger next step for mechanism and evidence.",
       "source_refs": [
-        "library/books/influence-robert-cialdini/book.json#wikipedia-influence"
+        "library/books/thinking-fast-and-slow-daniel-kahneman/book.json#aea-shleifer-review",
+        "library/books/influence-robert-cialdini/book.json"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "thinking-fast-slow-written-by-daniel-kahneman",
+      "source_id": "thinking-fast-and-slow-daniel-kahneman",
+      "target_id": "daniel-kahneman",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the publisher and library records.",
+      "source_refs": [
+        "library/books/thinking-fast-and-slow-daniel-kahneman/book.json#fsg-thinking",
+        "library/books/thinking-fast-and-slow-daniel-kahneman/book.json#alfaisal-thinking"
+      ],
+      "confidence": "high"
     },
     {
       "id": "atomic-habits-related-to-power-of-habit",

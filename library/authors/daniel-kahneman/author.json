@@ -6,20 +6,211 @@
   "name": "Daniel Kahneman",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "Israeli-American psychologist whose work with Amos Tversky transformed the study of judgment under uncertainty and helped establish behavioural economics.",
+      "source_ids": ["nobel-kahneman-facts", "princeton-kahneman-memorial"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Kahneman was born in Tel Aviv in 1934, studied psychology and mathematics at the Hebrew University of Jerusalem, completed a psychology doctorate at the University of California, Berkeley, and later taught at Princeton. He died in 2024. The 2002 economics prize recognised his integration of psychological research into economics, especially judgment and decisions under uncertainty.",
+      "source_ids": ["nobel-kahneman-facts", "princeton-kahneman-memorial"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His early research concerned perception, attention and mental effort. A long collaboration with Amos Tversky then produced the heuristics-and-biases programme and prospect theory. Later work examined wellbeing, remembered experience and decision quality. Thinking, Fast and Slow brings those strands into one general-reader account.",
+      "source_ids": ["nobel-kahneman-biographical", "nobel-kahneman-lecture", "princeton-publications"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Kahneman had direct research expertise in attention, perception, judgment, decision-making and wellbeing. His strongest authority is over the experiments and theories he helped create; the book's broad two-system narrative is an explanatory synthesis rather than a literal map of separate brain machinery.",
+      "source_ids": ["nobel-kahneman-facts", "nobel-kahneman-biographical", "melnikoff-dual-process"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "He writes as a reflective experimental psychologist, repeatedly showing how confident intuition can outrun evidence. He is unusually candid about uncertainty and his own errors, but the 2011 synthesis also preserved striking social-psychology findings that later proved fragile. His organising metaphors remain useful only if readers do not mistake them for two literal or exhaustive systems.",
+      "source_ids": ["time-kahneman-interview", "kahneman-priming-letter", "melnikoff-dual-process"],
+      "basis": "synthesis"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Attention and Effort",
+      "year": 1973,
+      "kind": "Book",
+      "relationship": "The early account of limited attention and mental effort that underlies the effortful-processing side of Thinking, Fast and Slow.",
+      "source_ids": ["princeton-publications", "google-books-attention"]
+    },
+    {
+      "title": "Judgment under Uncertainty: Heuristics and Biases",
+      "year": 1982,
+      "kind": "Edited book",
+      "relationship": "The research programme's foundational collection, edited with Paul Slovic and Amos Tversky.",
+      "source_ids": ["princeton-publications", "cambridge-judgment"]
+    },
+    {
+      "title": "Choices, Values, and Frames",
+      "year": 2000,
+      "kind": "Edited book",
+      "relationship": "A collection on risky choice, framing and prospect theory, edited with Amos Tversky.",
+      "source_ids": ["princeton-publications", "cambridge-choices"]
+    },
+    {
+      "title": "Thinking, Fast and Slow",
+      "year": 2011,
+      "kind": "Book",
+      "relationship": "The general-reader synthesis of attention, heuristics, risky choice and wellbeing.",
+      "source_ids": ["princeton-publications"]
+    },
+    {
+      "title": "Noise: A Flaw in Human Judgment",
+      "year": 2021,
+      "kind": "Book",
+      "relationship": "With Olivier Sibony and Cass Sunstein, extends the decision-quality project from systematic bias to unwanted variability in judgment.",
+      "source_ids": ["princeton-publications"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "nobel-kahneman-facts",
+        "title": "Daniel Kahneman — Facts",
+        "author_or_publisher": "Nobel Prize Outreach",
+        "url": "https://www.nobelprize.org/nobel_prizes/economic-sciences/laureates/2002/kahneman-facts.html",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "Life dates, education, Princeton affiliation, prize and recognised research contribution.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Concise laureate record."
+      },
+      {
+        "id": "nobel-kahneman-biographical",
+        "title": "Daniel Kahneman — Biographical",
+        "author_or_publisher": "Daniel Kahneman / Nobel Prize Outreach",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/biographical/",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "First-person account of education, attention research, collaboration with Tversky and the development of heuristics and prospect theory.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Autobiographical and written before the 2011 book."
+      },
+      {
+        "id": "nobel-kahneman-lecture",
+        "title": "Maps of Bounded Rationality: Psychology for Behavioral Economics",
+        "author_or_publisher": "Daniel Kahneman / Nobel Prize Outreach",
+        "url": "https://www.nobelprize.org/uploads/2018/06/kahnemann-lecture.pdf",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Kahneman's mature account of intuitive judgment, accessibility, framing, prospect theory and bounded rationality.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "The laureate's own synthesis, not an independent profile."
+      },
+      {
+        "id": "princeton-kahneman-memorial",
+        "title": "In Memoriam: Daniel Kahneman",
+        "author_or_publisher": "Princeton Alumni Weekly",
+        "url": "https://paw.princeton.edu/article/memoriam-40",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Princeton service, emeritus date, Thinking, Fast and Slow publication and death on 27 March 2024 at age 90.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Institutional memorial, not critical scholarship."
+      },
+      {
+        "id": "princeton-publications",
+        "title": "Publications",
+        "author_or_publisher": "Daniel Kahneman, Princeton University",
+        "url": "https://kahneman.scholar.princeton.edu/publications",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Bibliographic record for Kahneman's principal books and edited collections.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Author-maintained institutional bibliography."
+      },
+      {
+        "id": "google-books-attention",
+        "title": "Attention and Effort",
+        "author_or_publisher": "Google Books / Prentice-Hall",
+        "url": "https://books.google.com/books/about/Attention_and_Effort.html?id=tkvuAAAAMAAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Title, authorship and 1973 publication of Attention and Effort.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Bibliographic record only."
+      },
+      {
+        "id": "cambridge-judgment",
+        "title": "Judgment under Uncertainty: Heuristics and Biases",
+        "author_or_publisher": "Cambridge University Press",
+        "url": "https://www.cambridge.org/core/books/judgment-under-uncertainty/6F9E814794E08EC43D426E480A4B412C",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Editors, publication identity and subject of the 1982 collection.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher record."
+      },
+      {
+        "id": "cambridge-choices",
+        "title": "Choices, Values, and Frames",
+        "author_or_publisher": "Cambridge University Press",
+        "url": "https://www.cambridge.org/highereducation/books/choices-values-and-frames/9E500B8A9AB4B7DFE81BFEFDAC55E57E",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Editors, publication identity and subject of the choice-and-framing collection.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher record."
+      },
+      {
+        "id": "time-kahneman-interview",
+        "title": "Daniel Kahneman on Thinking, Fast and Slow",
+        "author_or_publisher": "TIME",
+        "url": "https://time.com/6961454/daniel-kahneman-death-interview-thinking/",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "Kahneman's description of his purpose, framework, limits of intuition and limited success in correcting his own biases.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Author interview rather than external assessment."
+      },
+      {
+        "id": "kahneman-priming-letter",
+        "title": "A proposal to deal with questions about priming effects",
+        "author_or_publisher": "Daniel Kahneman",
+        "url": "https://www.nature.com/news/polopoly_fs/7.6716.1349271308%21/suppinfoFile/Kahneman%20Letter.pdf",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "His direct acknowledgement of the credibility and replication problem in social priming.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Open letter, not a full replication review."
+      },
+      {
+        "id": "melnikoff-dual-process",
+        "title": "The Mythical Number Two",
+        "author_or_publisher": "David E. Melnikoff and John A. Bargh, Mind & Society",
+        "url": "https://link.springer.com/article/10.1007/s13164-019-00446-9",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent conceptual limits on treating common dual-process properties as two coherent systems.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "One critical theoretical review."
+      }
+    ],
+    "citations": {
+      "/name": ["nobel-kahneman-facts", "princeton-kahneman-memorial"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Life, credentials and publication history checked against Nobel and Princeton records; intellectual development checked against Kahneman's autobiography and lecture; limits checked against his priming letter and later dual-process criticism.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
