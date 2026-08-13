@@ -429,12 +429,12 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
     "review_notes": "The adversarial pass checked the complete author-supplied structure and detailed framework against experimental attention-residue research, disputed deliberate-practice evidence, open-office field studies, an occupationally explicit author interview, professional reviews, and reader criticism. It separates focus as a useful input from focus as a sufficient cause of career success, and protects communication, care, coordination, disability, and constrained work from the shallow label.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
         "identity_and_metadata": true,
         "content_fidelity": true,
@@ -443,7 +443,7 @@
         "citation_entailment": true,
         "product_fit": true,
         "plain_language": true,
-        "audio_pronunciation": false
+        "audio_pronunciation": true
       },
       "notes": [
         "Verified title, author, 2016 publication, Grand Central hardcover, ISBN, 304 pages, and the complete two-part, four-rule structure.",
@@ -451,7 +451,10 @@
         "Tested deliberate-practice claims against the 2014 meta-analysis and described focus as one input among knowledge, feedback, resources, opportunity, health, teamwork, judgment, and talent.",
         "Tested workplace claims against open-office research and management analysis without inferring that solitude is universally optimal.",
         "Restored the value of communication, care, service, mentoring, maintenance, rapid judgment, and collaboration where those activities are the work.",
-        "Applied the configured rubric to content only; author popularity, sales, identity, and reader ratings did not affect 7.3."
+        "Applied the configured rubric to content only; author popularity, sales, identity, and reader ratings did not affect 7.3.",
+        "Reviewed all four narrations for distinct decision value, direct British English, substantive endings, and the absence of source, production, methodology, or disclaimer copy.",
+        "Inspected Kokoro phonemes for Cal Newport, Carl Jung, Bollingen, J. K. Rowling, Theodore Roosevelt, M. I. T., myelin, and eudaimonia; added deterministic Cal and Rowling entries and confirmed they were applied.",
+        "Rendered and measured four local MP3s: 77 words in 32.1 seconds, 756 words in 4.95 minutes, 2,096 words in 14.38 minutes, and 4,244 words in 30.22 minutes."
       ]
     }
   }

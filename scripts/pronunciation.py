@@ -2,8 +2,57 @@
 
 from __future__ import annotations
 
+import hashlib
+import json
 import re
 from collections.abc import Callable
+
+
+def pronunciation_terms_in_text(text: str, lang: str, entries: list[dict]) -> list[str]:
+    """Return the canonical dictionary terms that would affect this text."""
+    candidates: list[tuple[str, dict]] = []
+    for entry in entries:
+        if lang not in entry.get("phonemes", {}):
+            continue
+        for spelling in (entry["term"], *entry.get("aliases", [])):
+            candidates.append((spelling, entry))
+    if not candidates:
+        return []
+    candidates.sort(key=lambda item: (-len(item[0]), item[0].casefold()))
+    alternatives = "|".join(re.escape(spelling) for spelling, _entry in candidates)
+    pattern = re.compile(rf"(?<!\w)({alternatives})(?!\w)", re.IGNORECASE)
+    lookup: dict[str, dict] = {}
+    for spelling, entry in candidates:
+        lookup.setdefault(spelling.casefold(), entry)
+
+    used: set[str] = set()
+    for match in pattern.finditer(text):
+        entry = lookup[match.group(0).casefold()]
+        if entry.get("case_sensitive") and match.group(0) not in {
+            entry["term"], *entry.get("aliases", [])
+        }:
+            continue
+        used.add(entry["term"])
+    return sorted(used, key=str.casefold)
+
+
+def pronunciation_signature(terms: list[str], lang: str, entries: list[dict]) -> str:
+    """Hash only the language-specific entries used by one narration."""
+    by_term = {entry["term"]: entry for entry in entries}
+    selected: list[dict] = []
+    for term in sorted(terms, key=str.casefold):
+        entry = by_term.get(term)
+        if entry is None or lang not in entry.get("phonemes", {}):
+            selected.append({"term": term, "missing": True})
+            continue
+        selected.append({
+            "term": entry["term"],
+            "aliases": entry.get("aliases", []),
+            "case_sensitive": entry.get("case_sensitive", False),
+            "phonemes": entry["phonemes"][lang],
+        })
+    payload = json.dumps(selected, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
 def phonemize_with_dictionary(

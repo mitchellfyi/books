@@ -27,6 +27,7 @@
     "source_script": { "type": "string", "minLength": 1 },
     "source_script_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
     "pronunciation_dictionary_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "pronunciation_entries_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
     "pronunciation_terms": {
       "type": "array",
       "items": { "type": "string", "minLength": 1 },

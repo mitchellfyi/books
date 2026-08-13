@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "deep-work-newport",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/deep-work-newport/scripts/5-minutes.md",
+  "source_script_sha256": "91d6eace394150f3e55f469209e9962e1c56a88f052dcb55c45f9c2c711d153a",
+  "pronunciation_dictionary_sha256": "4414c8d5c2a3b94f60fe2da2954b603b4d39bf00975414f3d69f694ba1cf32a4",
+  "pronunciation_terms": [
+    "Cal"
+  ],
+  "pronunciation_entries_sha256": "7a40a4af8edad9274452baea63f985e90b95e60134d3272530d9d93b67546bf2",
+  "script_words": 756,
+  "audio_seconds": 296.823,
+  "measured_wpm": 152.82,
+  "generated_at": "2026-08-13T10:37:14.454892+00:00"
+}

@@ -61,6 +61,30 @@
       "source_url": "https://en.wiktionary.org/wiki/Sforza",
       "verified_at": "2026-08-13",
       "notes": "Italian surname, approximately SFORT-sa. The unassisted British phonemizer treated the initial letters as the word 'S' plus 'forza' and produced ess-FOR-za, so a dictionary override is required."
+    },
+    {
+      "term": "Cal",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "kˈæl",
+        "en-us": "kˈæl"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/cal",
+      "verified_at": "2026-08-13",
+      "notes": "The given name uses the vowel in Calvin or cat. The unassisted British phonemizer produced an open back vowel closer to 'Karl'. Case-sensitive matching avoids unrelated lowercase text."
+    },
+    {
+      "term": "Rowling",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ɹˈəʊlɪŋ",
+        "en-us": "ɹˈoʊlɪŋ"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/rowling",
+      "verified_at": "2026-08-13",
+      "notes": "ROH-ling, like rolling without a strongly sounded second l. The unassisted British phonemizer produced ROU-ling with the vowel in 'out'."
     }
   ]
 }

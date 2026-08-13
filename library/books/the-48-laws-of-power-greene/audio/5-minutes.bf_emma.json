@@ -13,10 +13,11 @@
   "output_format": "mp3",
   "source_script": "library/books/the-48-laws-of-power-greene/scripts/5-minutes.md",
   "source_script_sha256": "3196f98698198e89e272f10a77997b84985903fc39d2524082608e0263c3ef37",
-  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_dictionary_sha256": "4414c8d5c2a3b94f60fe2da2954b603b4d39bf00975414f3d69f694ba1cf32a4",
   "pronunciation_terms": [
     "Joost"
   ],
+  "pronunciation_entries_sha256": "4cdf445c8e517adc440783115d68d03c5d2a6056ced8da2a3918ab8290f11a2c",
   "script_words": 704,
   "audio_seconds": 272.977,
   "measured_wpm": 154.74,

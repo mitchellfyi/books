@@ -13,10 +13,11 @@
   "output_format": "mp3",
   "source_script": "library/books/the-laws-of-human-nature-greene/scripts/30-minutes.md",
   "source_script_sha256": "237f49580a1031f28f00d6fb506d48067105c7825851ee7f4360ce1097d7a064",
-  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_dictionary_sha256": "4414c8d5c2a3b94f60fe2da2954b603b4d39bf00975414f3d69f694ba1cf32a4",
   "pronunciation_terms": [
     "Sforza"
   ],
+  "pronunciation_entries_sha256": "4051cd107b0a358009a56fdffff0dc786f7ef99ff2a73feaf7560c02c78b8c5e",
   "script_words": 4214,
   "audio_seconds": 1730.491,
   "measured_wpm": 146.11,

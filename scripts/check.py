@@ -23,6 +23,7 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
+from pronunciation import pronunciation_signature, pronunciation_terms_in_text
 from rating import rating_errors, rubric_errors
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -158,6 +159,20 @@ def dictionary_affects_script(script_text: str, sidecar: dict, entries: list[dic
             if re.search(rf"(?<!\w){re.escape(spelling)}(?!\w)", script_text, re.IGNORECASE):
                 return True
     return False
+
+
+def pronunciation_is_current(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
+    """Compare only the pronunciation entries that can change this narration."""
+    lang = sidecar.get("lang", "")
+    current_terms = pronunciation_terms_in_text(script_text, lang, entries)
+    previous_terms = sidecar.get("pronunciation_terms", [])
+    previous_signature = sidecar.get("pronunciation_entries_sha256")
+    if previous_signature:
+        return (
+            current_terms == previous_terms
+            and pronunciation_signature(current_terms, lang, entries) == previous_signature
+        )
+    return not dictionary_affects_script(script_text, sidecar, entries)
 
 
 def check_research(doc: dict, path: Path) -> None:
@@ -460,7 +475,7 @@ def main() -> int:
                     warn(f"{rel(audio_file)}: audio is stale (script changed since generation)")
                     entry["audio"] = "stale"
                 elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha \
-                        and dictionary_affects_script(
+                        and not pronunciation_is_current(
                             sp.read_text(encoding="utf-8") if sp.exists() else "",
                             sidecar, pronunciations_cfg["entries"]):
                     warn(f"{rel(audio_file)}: audio is stale (pronunciation dictionary changed "

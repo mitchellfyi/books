@@ -13,12 +13,13 @@
   "output_format": "mp3",
   "source_script": "library/books/the-48-laws-of-power-greene/scripts/15-minutes.md",
   "source_script_sha256": "bba3c9104222f54d7bcc74b6cec416c1b1014f8e8922487e831398fe44fb0ff1",
-  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_dictionary_sha256": "4414c8d5c2a3b94f60fe2da2954b603b4d39bf00975414f3d69f694ba1cf32a4",
   "pronunciation_terms": [
     "Jay-Z",
     "Joost",
     "Kanye"
   ],
+  "pronunciation_entries_sha256": "e97125ee5c5750b7527f917263fed3ad0d91a750026c824782a387e10fdd5dbc",
   "script_words": 2096,
   "audio_seconds": 807.672,
   "measured_wpm": 155.71,

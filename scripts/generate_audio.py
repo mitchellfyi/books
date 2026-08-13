@@ -40,7 +40,11 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 
-from pronunciation import phonemize_with_dictionary
+from pronunciation import (
+    phonemize_with_dictionary,
+    pronunciation_signature,
+    pronunciation_terms_in_text,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 MODELS = ROOT / "models"
@@ -82,6 +86,20 @@ def dictionary_affects(script_text: str, sidecar: dict, entries: list[dict]) -> 
             if re.search(rf"(?<!\w){re.escape(spelling)}(?!\w)", script_text, re.IGNORECASE):
                 return True
     return False
+
+
+def pronunciation_is_current(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
+    """Compare only the pronunciation entries that can change this narration."""
+    lang = sidecar.get("lang", "")
+    current_terms = pronunciation_terms_in_text(script_text, lang, entries)
+    previous_terms = sidecar.get("pronunciation_terms", [])
+    previous_signature = sidecar.get("pronunciation_entries_sha256")
+    if previous_signature:
+        return (
+            current_terms == previous_terms
+            and pronunciation_signature(current_terms, lang, entries) == previous_signature
+        )
+    return not dictionary_affects(script_text, sidecar, entries)
 
 
 def parse_script(path: Path) -> tuple[dict, str]:
@@ -262,7 +280,7 @@ def generate(book_dir: Path, level: str, synth: Synthesiser, config: dict,
         existing = audio_dir / f"{level}.{voice}.{previous.get('output_format', 'wav')}"
         dictionary_ok = (
             previous.get("pronunciation_dictionary_sha256") == config["pronunciation_sha256"]
-            or not dictionary_affects(body, previous, config["pronunciations"])
+            or pronunciation_is_current(body, previous, config["pronunciations"])
         )
         if previous.get("source_script_sha256") == script_sha and dictionary_ok \
                 and existing.exists():
@@ -307,6 +325,9 @@ def generate(book_dir: Path, level: str, synth: Synthesiser, config: dict,
         "source_script_sha256": script_sha,
         "pronunciation_dictionary_sha256": config["pronunciation_sha256"],
         "pronunciation_terms": sorted(synth.used_pronunciations, key=str.casefold),
+        "pronunciation_entries_sha256": pronunciation_signature(
+            sorted(synth.used_pronunciations, key=str.casefold), synth.lang, config["pronunciations"]
+        ),
         "script_words": words,
         "audio_seconds": round(seconds, 3),
         "measured_wpm": round(words / seconds * 60, 2),

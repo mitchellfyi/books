@@ -193,7 +193,7 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "The author's full annotated structure and extended explanations were checked against publisher metadata, a contemporary author interview, independent cognitive and workplace studies, professional reviews, and a large reader aggregate. No unauthorised full text was used.",
     "last_researched": "2026-08-13",
