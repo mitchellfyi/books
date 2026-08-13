@@ -725,6 +725,42 @@
         "library/books/the-socratic-method-farnsworth/book.json"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "thinking-fast-slow-related-to-influence",
+      "source_id": "thinking-fast-and-slow-daniel-kahneman",
+      "target_id": "influence-robert-cialdini",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: Influence explains compliance through judgment shortcuts; Kahneman's book is the canonical scientific account of those shortcuts (heuristics and biases) from the researcher who systematised the field.",
+      "source_refs": [
+        "library/books/influence-robert-cialdini/book.json#wikipedia-influence"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "atomic-habits-related-to-power-of-habit",
+      "source_id": "atomic-habits-clear",
+      "target_id": "the-power-of-habit-duhigg",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: Clear's book is the acknowledged successor to Duhigg's in the habit literature — it operationalises the habit loop into practice and is the standard reader's next step.",
+      "source_refs": [
+        "library/books/the-power-of-habit-duhigg/book.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "guns-germs-related-to-sapiens",
+      "source_id": "guns-germs-and-steel-diamond",
+      "target_id": "sapiens-harari",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: Diamond is Sapiens's documented predecessor in grand-synthesis history — Harari's agricultural-trap thesis borrows Diamond's 'worst mistake' argument, and reviewers routinely pair the two books.",
+      "source_refs": [
+        "library/books/sapiens-harari/book.json#hallpike-review"
+      ],
+      "confidence": "medium"
     }
   ]
 }

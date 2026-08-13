@@ -19,14 +19,6 @@
       "aliases": []
     },
     {
-      "id": "the-school-of-life",
-      "kind": "author",
-      "name": "The School of Life",
-      "state": "catalogued",
-      "path": "library/authors/the-school-of-life/author.json",
-      "aliases": ["The School of Life Press"]
-    },
-    {
       "id": "bill-bryson",
       "kind": "author",
       "name": "Bill Bryson",
@@ -67,6 +59,14 @@
       "aliases": []
     },
     {
+      "id": "daniel-kahneman",
+      "kind": "author",
+      "name": "Daniel Kahneman",
+      "state": "catalogued",
+      "path": "library/authors/daniel-kahneman/author.json",
+      "aliases": []
+    },
+    {
       "id": "daniel-lieberman",
       "kind": "author",
       "name": "Daniel Lieberman",
@@ -83,6 +83,16 @@
       "aliases": []
     },
     {
+      "id": "fumitake-koga",
+      "kind": "author",
+      "name": "Fumitake Koga",
+      "state": "catalogued",
+      "path": "library/authors/fumitake-koga/author.json",
+      "aliases": [
+        "Koga Fumitake"
+      ]
+    },
+    {
       "id": "ichiro-kishimi",
       "kind": "author",
       "name": "Ichiro Kishimi",
@@ -91,12 +101,20 @@
       "aliases": []
     },
     {
-      "id": "fumitake-koga",
+      "id": "james-clear",
       "kind": "author",
-      "name": "Fumitake Koga",
+      "name": "James Clear",
       "state": "catalogued",
-      "path": "library/authors/fumitake-koga/author.json",
-      "aliases": ["Koga Fumitake"]
+      "path": "library/authors/james-clear/author.json",
+      "aliases": []
+    },
+    {
+      "id": "jared-diamond",
+      "kind": "author",
+      "name": "Jared Diamond",
+      "state": "catalogued",
+      "path": "library/authors/jared-diamond/author.json",
+      "aliases": []
     },
     {
       "id": "joseph-nguyen",
@@ -163,6 +181,16 @@
       "aliases": []
     },
     {
+      "id": "the-school-of-life",
+      "kind": "author",
+      "name": "The School of Life",
+      "state": "catalogued",
+      "path": "library/authors/the-school-of-life/author.json",
+      "aliases": [
+        "The School of Life Press"
+      ]
+    },
+    {
       "id": "ward-farnsworth",
       "kind": "author",
       "name": "Ward Farnsworth",
@@ -222,6 +250,29 @@
       "aliases": []
     },
     {
+      "id": "atomic-habits-clear",
+      "kind": "book",
+      "name": "Atomic Habits",
+      "state": "catalogued",
+      "path": "library/books/atomic-habits-clear/book.json",
+      "author_ids": [
+        "james-clear"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "behave-sapolsky",
+      "kind": "book",
+      "name": "Behave: The Biology of Humans at Our Best and Worst",
+      "state": "recommendation-stub",
+      "author_names": [
+        "Robert M. Sapolsky"
+      ],
+      "aliases": [
+        "Behave"
+      ]
+    },
+    {
       "id": "deep-work-newport",
       "kind": "book",
       "name": "Deep Work",
@@ -244,18 +295,6 @@
       "aliases": [
         "Determined: A Science of Life Without Free Will",
         "Determined: The Science of Life Without Free Will"
-      ]
-    },
-    {
-      "id": "behave-sapolsky",
-      "kind": "book",
-      "name": "Behave: The Biology of Humans at Our Best and Worst",
-      "state": "recommendation-stub",
-      "author_names": [
-        "Robert M. Sapolsky"
-      ],
-      "aliases": [
-        "Behave"
       ]
     },
     {
@@ -282,6 +321,17 @@
         "Exercised: Why Something We Never Evolved to Do Is Healthy and Rewarding",
         "Exercised: The Science of Physical Activity, Rest and Health"
       ]
+    },
+    {
+      "id": "guns-germs-and-steel-diamond",
+      "kind": "book",
+      "name": "Guns, Germs, and Steel",
+      "state": "catalogued",
+      "path": "library/books/guns-germs-and-steel-diamond/book.json",
+      "author_ids": [
+        "jared-diamond"
+      ],
+      "aliases": []
     },
     {
       "id": "how-not-to-age-greger",
@@ -434,7 +484,9 @@
         "chip-heath",
         "dan-heath"
       ],
-      "aliases": ["The Power of Moments"]
+      "aliases": [
+        "The Power of Moments"
+      ]
     },
     {
       "id": "the-school-of-life-botton",
@@ -446,7 +498,9 @@
         "the-school-of-life",
         "alain-de-botton"
       ],
-      "aliases": ["The School of Life"]
+      "aliases": [
+        "The School of Life"
+      ]
     },
     {
       "id": "the-socratic-method-farnsworth",
@@ -476,9 +530,10 @@
       "id": "thinking-fast-and-slow-daniel-kahneman",
       "kind": "book",
       "name": "Thinking, Fast and Slow",
-      "state": "recommendation-stub",
-      "author_names": [
-        "Daniel Kahneman"
+      "state": "catalogued",
+      "path": "library/books/thinking-fast-and-slow-daniel-kahneman/book.json",
+      "author_ids": [
+        "daniel-kahneman"
       ],
       "aliases": []
     },
