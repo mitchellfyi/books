@@ -6,20 +6,94 @@
   "name": "Richard Shotton",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "British adman turned behavioural-science consultant who made applied bias research the advertising industry's fashionable toolkit — by actually testing it.",
+      "source_ids": ["harriman-choice-factory"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Shotton spent two decades in London media agencies before founding Astroten, a consultancy applying behavioural science to marketing for clients including Google, Facebook, and Sky. The Choice Factory (2018) became a #1 Amazon bestseller with over 100,000 copies in 15 languages and won the Business Book Awards' sales-and-marketing category; The Illusion of Choice followed in 2023. He holds an honorary lifetime fellowship of the IPA — the UK advertising industry's professional body — and an associate position at Cambridge's Møller Institute.",
+      "source_ids": ["harriman-choice-factory"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His signature method is the cheap field replication: take a classic laboratory bias, rerun it as a quick real-world test on consumers, and report whether it survives contact with a shopping public — a practitioner's answer to the question academics settle with meta-analyses.",
+      "source_ids": ["harriman-choice-factory", "google-books-choice-factory"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Applied consumer behaviour and advertising effectiveness, credentialed by industry practice and honours rather than academic appointment; his authority is the tested campaign, not the journal.",
+      "source_ids": ["harriman-choice-factory"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Shotton writes as the evidence wing of an industry he loves, which aims his sharpest fire at advertising's own fads. The limits are structural: a consultant popularising the biases he sells has an interest in their reputation, his quick field tests trade rigour for relevance, and the classic-bias corpus he draws on includes members the replication era has weakened.",
+      "source_ids": ["harriman-choice-factory", "goodreads-choice-factory"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "The Choice Factory",
+      "year": 2018,
+      "kind": "Book",
+      "relationship": "The 25-bias field manual; subject of this profile's book entry.",
+      "source_ids": ["harriman-choice-factory"]
+    },
+    {
+      "title": "The Illusion of Choice",
+      "year": 2023,
+      "kind": "Book",
+      "relationship": "The sequel: 16½ more psychological levers behind buying.",
+      "source_ids": ["harriman-choice-factory"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "harriman-choice-factory",
+        "title": "The Choice Factory (publisher page)",
+        "author_or_publisher": "Harriman House",
+        "url": "https://www.harriman-house.com/choicefactory",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "The Astroten consultancy and client roster, the IPA honorary fellowship and Cambridge Møller association, sales and translation figures, and the books.",
+        "independence": "interested",
+        "quality": "medium",
+        "limitations": "Publisher biography."
+      },
+      {
+        "id": "google-books-choice-factory",
+        "title": "The Choice Factory",
+        "author_or_publisher": "Google Books",
+        "url": "https://books.google.com/books/about/The_Choice_Factory.html?id=Uc1MDwAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "The evidence mix including the author's own research.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Catalogue material."
+      },
+      {
+        "id": "goodreads-choice-factory",
+        "title": "The Choice Factory",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/36796718-the-choice-factory",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Practitioner reception informing the limits assessment.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/name": ["harriman-choice-factory"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs from the documented record.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

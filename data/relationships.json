@@ -945,6 +945,18 @@
         "library/books/nudge-richard-thaler-cass-sunstein/book.json"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "choice-factory-written-by-richard-shotton",
+      "source_id": "the-choice-factory-richard-shotton",
+      "target_id": "richard-shotton",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Authorship as documented in the book record.",
+      "source_refs": [
+        "library/books/the-choice-factory-richard-shotton/book.json"
+      ],
+      "confidence": "high"
     }
   ]
 }

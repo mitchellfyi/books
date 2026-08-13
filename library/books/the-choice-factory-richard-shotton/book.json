@@ -3,28 +3,139 @@
   "schema_version": 1,
   "id": "the-choice-factory-richard-shotton",
   "type": "book",
-  "title": "The Choice Factory",
-  "alternate_titles": [],
+  "title": "The Choice Factory: 25 Behavioural Biases That Influence What We Buy",
+  "alternate_titles": ["The Choice Factory"],
   "author_ids": ["richard-shotton"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2018-02-12",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "UK first edition",
+        "publisher": "Harriman House",
+        "publication_date": "2018-02-12",
+        "isbn_10": "085719609X",
+        "isbn_13": "9780857196095",
+        "format": "Paperback",
+        "pages": 220
+      }
+    ],
+    "contents": [
+      "A day of decisions: each of 25 short chapters catches one bias operating in an ordinary moment, from the morning commute to the evening shop",
+      "The roster runs from the fundamental attribution error, social proof, and charm pricing to the pratfall effect, the curse of knowledge, and the peak-end rule",
+      "Each chapter: the classic experiment, Shotton's own field replication or test, and the practical application for marketers",
+      "The closing argument: behavioural science as the advertising industry's overdue return to evidence"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "advertising",
+      "behavioural-science",
+      "consumer-psychology",
+      "marketing",
+      "non-fiction",
+      "persuasion"
+    ],
+    "audiences": [
+      "Marketers and advertisers, especially early-career",
+      "Founders and product people who write their own copy",
+      "Alchemy readers wanting the evidence-first companion",
+      "Consumers curious what is being run on them"
+    ],
+    "formats_available": ["Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "harriman-choice-factory",
+        "title": "The Choice Factory",
+        "author_or_publisher": "Harriman House",
+        "url": "https://www.harriman-house.com/choicefactory",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Edition facts (2018-02-12, 220pp, ISBN 9780857196095), the day-of-decisions structure and 25-bias format, the author's Astroten consultancy and IPA fellowship, 100,000+ copies in 15 languages, and the documented praise roster (Godin; Sutherland's 'Haynes Manual for understanding consumer behaviour'; Earls).",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher page; praise quotes are solicited blurbs."
+      },
+      {
+        "id": "campaign-choice-factory",
+        "title": "Shotton's Choice Factory brutally dismantles brand purpose (as documented in the reception record)",
+        "author_or_publisher": "Campaign",
+        "url": "https://www.campaignlive.co.uk/article/shottons-choice-factory-brutally-dismantles-brand-purpose/1461508",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The trade press engaging the book's most combative thread: its evidence-first dismantling of fashionable brand-purpose orthodoxy.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented reference; the full text sits behind the trade paywall."
+      },
+      {
+        "id": "ritson-verdict",
+        "title": "Review verdict (as documented in the book's reception record)",
+        "author_or_publisher": "Mark Ritson, Marketing Week columnist",
+        "url": "https://www.amazon.co.uk/Choice-Factory-behavioural-biases-influence/dp/085719609X",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The marketing professor's documented verdict: 'a short but powerful tome' from which 'you can learn about how marketing actually does influence consumers'.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation in the publisher's roster; solicited."
+      },
+      {
+        "id": "bbh-and-awards",
+        "title": "Award record (as documented)",
+        "author_or_publisher": "BBH World Cup of Advertising Books / Business Book Awards",
+        "url": "https://www.harriman-house.com/choicefactory",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "Voted first in the BBH advertising-books poll and winner of the Business Book Awards sales-and-marketing category.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Industry awards documented via the publisher's record."
+      },
+      {
+        "id": "google-books-choice-factory",
+        "title": "The Choice Factory",
+        "author_or_publisher": "Google Books",
+        "url": "https://books.google.com/books/about/The_Choice_Factory.html?id=Uc1MDwAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Catalogue confirmation of the edition, the 25-chapter structure, and the evidence mix of academic studies, ad campaigns, and the author's own research.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Catalogue and publisher-description material."
+      },
+      {
+        "id": "goodreads-choice-factory",
+        "title": "The Choice Factory",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/36796718-the-choice-factory",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Warm practitioner reception: praised as the most usable marketing-science primer, with recurring notes that the biases are the standard set and the chapters deliberately thin.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/title": ["harriman-choice-factory"],
+      "/alternate_titles": ["harriman-choice-factory"],
+      "/author_ids": ["harriman-choice-factory"],
+      "/bibliography/first_published": ["harriman-choice-factory"],
+      "/bibliography/original_language": ["harriman-choice-factory"],
+      "/bibliography/editions/0": ["harriman-choice-factory", "google-books-choice-factory"],
+      "/bibliography/contents": ["harriman-choice-factory", "google-books-choice-factory"],
+      "/discovery/tag_ids": ["harriman-choice-factory"],
+      "/discovery/audiences": ["harriman-choice-factory", "goodreads-choice-factory"],
+      "/discovery/formats_available": ["harriman-choice-factory"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the publisher record, the documented trade reception and awards, catalogue confirmation, and practitioner reception; a trade paperback with thin scholarly coverage by nature.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

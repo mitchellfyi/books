@@ -4,138 +4,435 @@
   "book_id": "the-choice-factory-richard-shotton",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "high",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "Twenty-five deliberately short, self-contained bias chapters: the method and the best exhibits compress cleanly, and the book's own format is closer to a summary than anything else on this shelf. Fifteen minutes carries the method, a representative tour, and the honest caveats; the full book is the reference deck."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Adman-turned-behavioural-scientist Richard Shotton walks through one ordinary day of decisions — commute, coffee, shopping, an evening out — catching twenty-five psychological biases in the act and showing marketers how to test and apply each one.",
+    "verdict": "The most immediately usable behavioural-marketing book in print — short chapters, real field tests, application on every page — best read as a practitioner's deck of starting hypotheses rather than settled science, since the classic biases it deals in vary in how well they survived the replication era.",
+    "source_ids": [
+      "harriman-choice-factory",
+      "ritson-verdict",
+      "goodreads-choice-factory"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Structured as a single day, the book catches a bias per moment: the fundamental attribution error on the morning commute, social proof at the app store, charm pricing at the till, the pratfall effect in an honest ad, the peak-end rule in the evening's last impression. Each short chapter runs the same loop — the classic experiment, Shotton's own quick field replication or test on real consumers, and the practical application — and the whole is a working argument that advertising should trade fashion for evidence.",
+      "source_ids": [
+        "harriman-choice-factory",
+        "google-books-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Buying decisions are steered by a repertoire of predictable psychological shortcuts; marketers who know the repertoire, and test it on their own customers rather than trusting either lab lore or industry fashion, will reliably beat marketers who run on opinion — so behavioural science is not an academic garnish but the working craft of the trade.",
+      "source_ids": [
+        "harriman-choice-factory",
+        "google-books-choice-factory"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "day-of-biases",
+      "title": "A day is a laboratory",
+      "claim": "The book's structure is its argument: following one ordinary day shows biases operating everywhere, in moments too small to notice and too frequent to resist.",
+      "explanation": "Rather than a taxonomy, Shotton gives a diary: each chapter opens in a mundane scene — a train delay, a coffee order, a supermarket aisle — and catches the shortcut at work before naming it. The form makes the science feel like observation rather than doctrine.",
+      "representative_example": "The commuter fuming at a pushy fellow passenger — attributing character where circumstance would do — opens the fundamental attribution error, and the marketing lesson follows: judge contexts, not consumers.",
+      "why_it_matters": "It teaches noticing, which is the transferable skill; readers finish seeing their own day as a sequence of nudged moments.",
+      "caveat": "The diary framing favours breadth over depth: twenty-five biases in 220 pages means each gets a scene, a study, and a page of advice.",
+      "source_ids": [
+        "harriman-choice-factory",
+        "google-books-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "test-dont-trust",
+      "title": "Replicate it yourself: the book's real method",
+      "claim": "Shotton's distinctive move is the cheap field replication — rerunning classic findings as quick tests on real consumers — which is both the book's evidence and its advice.",
+      "explanation": "Instead of citing a 1970s laboratory result and moving on, chapters report Shotton's own small studies: does charm pricing still shift choices? Does social proof wording move real claims? The implicit instruction to the reader is the book's most valuable content: don't trust the lore — including this book's — test it on your own audience, cheaply, before you bet the budget.",
+      "representative_example": "His rerun of classic pricing experiments on survey panels, checking whether the old effects still move modern shoppers before recommending them.",
+      "why_it_matters": "It models the correct relationship with behavioural science at exactly the moment the replication crisis made blind citation embarrassing.",
+      "caveat": "Quick panel tests are directional, not definitive — the method is honest about being a practitioner's screen, not a journal's standard.",
+      "source_ids": [
+        "google-books-choice-factory",
+        "harriman-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "pratfall-and-honesty",
+      "title": "The pratfall effect: flaws, admitted, sell",
+      "claim": "The book's signature chapter: admitting a weakness makes the rest of a claim more believable — imperfection, deployed honestly, outperforms polish.",
+      "explanation": "From the classic experiment in which a capable person who spills coffee becomes more likeable, Shotton draws advertising's most counterintuitive tradition: campaigns built on admitted flaws — the ugly car, the expensive beer, the second-place rental firm that tries harder — earn credibility polish cannot buy, because a brand that concedes something must be telling the truth about the rest.",
+      "representative_example": "The celebrated flaw-admitting campaigns of advertising history, from cars sold as ugly to lagers sold as reassuringly expensive.",
+      "why_it_matters": "It is the rare persuasion tactic that runs on honesty, and the chapter doubles as the book's ethic in miniature.",
+      "caveat": "It works when the admitted flaw is peripheral and the competence signal is strong — a boundary the book notes practitioners routinely miss.",
+      "source_ids": [
+        "harriman-choice-factory",
+        "goodreads-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "context-beats-messaging",
+      "title": "Context and price cues beat message tweaks",
+      "claim": "The heavy-lifting biases are environmental — social proof, scarcity, charm pricing, framing, the moment of delivery — not clever copy.",
+      "explanation": "Across the day, the chapters keep finding that when and how an offer arrives moves more than what it says: prices ending in nine that read as a category cheaper; queues and claimed popularity doing the persuading; the same price experienced as fair or outrageous depending on the anchor beside it; moods — the commute, the payday, the Friday — changing receptivity wholesale.",
+      "representative_example": "Charm pricing's stubborn power: a penny's difference relocating a price into a cheaper mental bucket.",
+      "why_it_matters": "It redirects marketing effort from wordsmithing to architecture — the same lesson the choice-design literature teaches policy.",
+      "caveat": "Several context effects are exactly the findings the replication era graded down; the book's own test-first method is the defence, unevenly applied.",
+      "source_ids": [
+        "harriman-choice-factory",
+        "goodreads-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "against-fashion",
+      "title": "Evidence against advertising's own fads",
+      "claim": "The book's combative streak: fashionable industry orthodoxies — above all purpose-led branding — mostly lack evidence, and behavioural science is the audit the trade avoids.",
+      "explanation": "The trade press read the book, accurately, as a demolition of brand-purpose orthodoxy: the documented Campaign coverage highlighted exactly that thread. Shotton's consistent move is to ask fashionable claims for their evidence and report what the tests actually show — which endeared the book to the industry's effectiveness wing and made it required reading for sceptics.",
+      "representative_example": "The trade headline: Shotton's Choice Factory brutally dismantles brand purpose.",
+      "why_it_matters": "It positions behavioural science as the industry's conscience, not its latest fad — the book's most durable cultural contribution.",
+      "caveat": "The audit points outward more often than inward; the bias literature's own fashionable fragilities get gentler treatment than purpose does.",
+      "source_ids": [
+        "campaign-choice-factory",
+        "ritson-verdict"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Morning: Errors of Judgment",
+      "purpose": "Open the day and the method.",
+      "summary": "Commute-and-breakfast biases — attribution errors, mood effects, habit windows — each with experiment, field test, and application.",
+      "idea_ids": [
+        "day-of-biases",
+        "test-dont-trust"
+      ],
+      "source_ids": [
+        "harriman-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Daytime: The Purchase Gauntlet",
+      "purpose": "Run the buying biases.",
+      "summary": "Social proof, scarcity, anchoring, charm pricing, framing — the environmental levers that move purchases more than copy does.",
+      "idea_ids": [
+        "context-beats-messaging"
+      ],
+      "source_ids": [
+        "harriman-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Evening: Trust and Memory",
+      "purpose": "Close the day on credibility.",
+      "summary": "The pratfall effect, wit, the peak-end rule — how flaws admitted and endings engineered decide what a brand is remembered as.",
+      "idea_ids": [
+        "pratfall-and-honesty"
+      ],
+      "source_ids": [
+        "harriman-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "The Standing Argument",
+      "purpose": "The book's campaign.",
+      "summary": "Test rather than trust; evidence against fashion; behavioural science as the working craft of an industry that forgot it had one.",
+      "idea_ids": [
+        "against-fashion",
+        "test-dont-trust"
+      ],
+      "source_ids": [
+        "campaign-choice-factory",
+        "harriman-choice-factory"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Twenty-five self-contained chapters averaging eight pages, hung on one day's timeline; readable in any order, built for dipping.",
+    "voice": "Adland anecdote plus study citation: brisk, concrete, allergic to jargon.",
+    "pace": "The fastest read on this shelf — by design a deck of cards, not an argument.",
+    "evidence_style": "Classic experiments paired with the author's own quick field tests; no effect sizes, but an explicit test-it-yourself ethic.",
+    "example_style": "Famous ad campaigns, supermarket moments, and survey-panel results.",
+    "repetition": "Minimal between chapters; the loop format repeats by design.",
+    "prerequisites": "None.",
+    "source_ids": [
+      "harriman-choice-factory",
+      "goodreads-choice-factory"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 0.0,
-      "confidence": "low",
-      "summary": "TODO: give the content-only verdict behind the score.",
+      "score": 6.2,
+      "confidence": "medium",
+      "summary": "Worthwhile: the most immediately usable book on this shelf's persuasion row — short, tested, application-first, and honest about its own method's limits — held below the top tier because the bias roster is the standard set, the chapters trade depth for speed, and the replication-era reckoning with its classic corpus is practised chapter by chapter rather than confronted head-on.",
       "dimensions": [
-        { "id": "explanatory-power", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "evidence-and-reasoning", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "insight-value", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "practical-utility", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "completeness-and-calibration", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] }
+        {
+          "id": "explanatory-power",
+          "score": 6.0,
+          "rationale": "Twenty-five biases explained clearly at working depth — enough mechanism to apply, rarely enough to generalise beyond the use case.",
+          "source_ids": [
+            "harriman-choice-factory",
+            "goodreads-choice-factory"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 6.0,
+          "rationale": "The distinctive virtue is methodological: classic studies paired with the author's own field replications, and an explicit test-don't-trust ethic — offset by quick-panel standards, absent effect sizes, and a classic corpus of mixed replication health.",
+          "source_ids": [
+            "google-books-choice-factory",
+            "goodreads-choice-factory"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 5.5,
+          "rationale": "For its core audience of working marketers the applications land daily; readers arriving from Cialdini and Kahneman will recognise most of the roster, freshened mainly by the field tests and ad-industry cases.",
+          "source_ids": [
+            "ritson-verdict",
+            "goodreads-choice-factory"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 7.5,
+          "rationale": "The book's entire design: every chapter ends in something a practitioner can run this week, and the test-first method is itself the most valuable habit it teaches.",
+          "source_ids": [
+            "harriman-choice-factory",
+            "ritson-verdict"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.5,
+          "rationale": "Honest about individual boundaries (when pratfalls backfire) and about its tests' modesty, but the replication crisis is handled implicitly, and the audit of industry fashion is fiercer than the audit of the bias canon itself.",
+          "source_ids": [
+            "campaign-choice-factory",
+            "goodreads-choice-factory"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 7.5,
+          "rationale": "Twenty-five usable ideas in 220 fast pages — the highest applicable-ideas-per-minute on the persuasion row, by design.",
+          "source_ids": [
+            "harriman-choice-factory",
+            "goodreads-choice-factory"
+          ]
+        }
       ],
       "basis": "inference"
     },
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "meaning": {
+      "text": "Beneath the tactics, the book is a plea for epistemic humility in a confident industry: opinions about what moves buyers are cheap and usually wrong, tests are cheap and occasionally right, and the difference between the two is most of what separates effective marketing from expensive theatre.",
+      "source_ids": [
+        "harriman-choice-factory",
+        "campaign-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Test before you trust: rerun any bias — including this book's — as a cheap experiment on your own audience before betting budget on it.",
+        "source_ids": [
+          "google-books-choice-factory"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Work the context before the copy: timing, anchors, defaults, and social signals move more than message tweaks.",
+        "source_ids": [
+          "harriman-choice-factory"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Admit a real flaw: the pratfall effect converts honesty into credibility — if the flaw is peripheral and the competence is visible.",
+        "source_ids": [
+          "harriman-choice-factory"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Ask fashionable claims for their evidence — the book's habit, applicable to every industry's orthodoxies including its own.",
+        "source_ids": [
+          "campaign-choice-factory"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The book that mainstreamed behavioural science inside the advertising industry: a #1 Amazon bestseller with 100,000+ copies in 15 languages, voted first in the BBH advertising-books poll, a Business Book Awards category winner, and the standard first recommendation for marketers entering the field.",
+      "source_ids": [
+        "harriman-choice-factory",
+        "bbh-and-awards"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Shotton — two decades in London media agencies, then founder of the Astroten consultancy and an IPA honorary fellow — wrote the book to arm working marketers with the tested version of the bias literature, and to shame an industry running on fashion back toward evidence.",
+      "source_ids": [
+        "harriman-choice-factory"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Classic findings paired with the author's own field replications.",
+        "An explicit, teachable test-first ethic.",
+        "Application claims grounded in named campaigns."
+      ],
+      "weaknesses": [
+        "Quick panel tests, not journal-grade studies; no effect sizes.",
+        "The classic bias corpus varies in replication health, unflagged systematically.",
+        "A consultant popularising the toolkit he sells."
+      ],
+      "source_ids": [
+        "google-books-choice-factory",
+        "goodreads-choice-factory"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Adopted as the industry's behavioural-science primer almost immediately: trade awards, a poll win over the advertising canon, columnists' endorsements — Ritson's 'short but powerful tome' — and a trade press reading it, approvingly, as a demolition of purpose-led fashion; the reservations are practitioner ones: familiar roster, deliberately thin chapters.",
+      "praise": [
+        "Ritson: a short but powerful tome on how marketing actually influences consumers.",
+        "Sutherland: a Haynes Manual for understanding consumer behaviour.",
+        "BBH poll winner and Business Book Awards category winner."
+      ],
+      "criticism": [
+        "The roster is the standard bias set for readers of the source literature.",
+        "Eight-page chapters trade boundary conditions for speed.",
+        "The evidence audit spares the bias canon the rigour it applies to brand purpose."
+      ],
+      "source_ids": [
+        "ritson-verdict",
+        "harriman-choice-factory",
+        "campaign-choice-factory",
+        "goodreads-choice-factory"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Working marketers and advertisers, especially early-career",
+        "Founders writing their own copy and pricing",
+        "Alchemy readers wanting the tested, sober companion",
+        "Teams that need a shared, testable vocabulary fast"
+      ],
+      "not_for": [
+        "Readers of Kahneman and Cialdini seeking new science",
+        "Anyone wanting depth per bias — this is a deck, not a treatise",
+        "Readers outside commercial contexts"
+      ],
+      "topics": [
+        "Advertising and marketing",
+        "Consumer psychology",
+        "Pricing and framing",
+        "Field experimentation",
+        "Behavioural science in practice"
+      ],
+      "source_ids": [
+        "harriman-choice-factory",
+        "goodreads-choice-factory"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "New research — it curates and field-tests the known canon",
+        "A policy or ethics book: the consumer's defence is incidental",
+        "Deep on any single bias"
+      ],
+      "omissions": [
+        "Effect sizes and systematic replication status per bias",
+        "The manipulation ethics of deploying the toolkit",
+        "Digital-platform specifics — the cases skew classic media"
+      ],
+      "missing_or_weak": [
+        "Priming-adjacent chapters inherit that literature's post-2015 fragility",
+        "The consultant's-interest caveat goes unexamined in the text"
+      ],
+      "dated_or_contested": [
+        "Several classic effects it deploys are graded down or conditional in the modern replication literature; the book's own test-first ethic is the offered remedy."
+      ],
+      "source_ids": [
+        "goodreads-choice-factory",
+        "google-books-choice-factory"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you market, advertise, or price anything: it is an afternoon's read, a permanent desk reference, and the fastest route from the bias literature to something you can test this week.",
+      "summary_is_enough_if": "Stop at a summary if you wanted the method and the standouts — test before trusting, context beats copy, flaws admitted sell — or if you already own the Cialdini-Kahneman canon this book operationalises.",
+      "skip_if": "Skip it if you want science rather than craft, depth rather than coverage, or if commercial persuasion is not your problem.",
+      "format_advice": "Paperback for the desk — it is a reference deck; the audiobook works but defeats the dip-in design.",
+      "source_ids": [
+        "harriman-choice-factory",
+        "goodreads-choice-factory"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What is the book's method loop — the three steps every chapter runs?",
+      "Why does the pratfall effect work, and when does it backfire?",
+      "Which levers does the book say beat message tweaks, and why?"
+    ],
+    "application_prompts": [
+      "Take one bias from the book and design the five-minute test that would check it on your audience.",
+      "Find the admitted flaw your product could own, and draft the sentence.",
+      "Audit one current campaign or page you run: is it working the context — anchor, proof, timing — or just the copy?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "",
+    "review_notes": "Built from the publisher record, documented trade reception and awards, catalogue confirmation, and practitioner reception; a trade paperback whose scholarly coverage is thin by nature, with limits carried honestly.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
-      "notes": []
+      "notes": [
+        "Identity verified: Harriman House, 2018-02-12, 220pp, ISBN 9780857196095.",
+        "Praise quotes carried only as documented (Ritson, Sutherland, Godin via the publisher roster; solicited-blurb limitation stated).",
+        "The replication-health caveat on the classic bias corpus is applied at the ideas it affects, with the book's own test-first method credited as its answer.",
+        "Rating scored on content; awards and sales live in importance/reception.",
+        "Narration reviewed against the product contract.",
+        "Pronunciation: Shotton verified straightforward; no dictionary additions needed."
+      ]
     }
   }
 }
