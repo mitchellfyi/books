@@ -595,8 +595,31 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": "The adversarial pass distinguished the motivational definition of exercise from the underlying movement, treated living subsistence populations as comparisons rather than preserved ancestors, separated public-health ranges from personal prescriptions, qualified observational running and disease evidence, and presented the active-grandparent and costly-repair accounts as hypotheses."
+    "review_notes": "The adversarial pass distinguished the motivational definition of exercise from the underlying movement, treated living subsistence populations as comparisons rather than preserved ancestors, separated public-health ranges from personal prescriptions, qualified observational running and disease evidence, and presented the active-grandparent and costly-repair accounts as hypotheses.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Verified the title variants, author, publication data, ISBNs, lengths, and full prologue, four-part, thirteen-chapter, and epilogue structure against book, library, and independent records.",
+        "Cross-checked inactivity, sitting, sleep, movement trade-offs, walking, running, ageing, dose, disease, and motivation across primary material, specialist reviews, independent guidelines, and relevant scientific syntheses.",
+        "Kept three distinctions explicit: exercise is defined by purpose rather than unique physiology; living subsistence populations are comparisons rather than preserved ancestors; evolutionary explanation does not determine one optimal routine.",
+        "Qualified the observational running and chronic-disease evidence, treated active-grandparent and costly-repair as hypotheses, and preserved individual, structural, disability, clinical, and overtraining limits.",
+        "Confirmed citation entailment and the configured 7.4 content-only calculation; author prestige, reception, and popularity do not affect it.",
+        "Reviewed adjacent scripts for distinct decision value, simple spoken British English, faithful qualifications, and content-only endings without source, method, or production copy.",
+        "Inspected Kokoro phonemes for Exercised, Daniel Lieberman, Hadza, osteoarthritis, sarcopenia, antioxidant, physiology, and epidemiology; no verified override was needed. All four local tracks are fresh and duration-calibrated."
+      ]
+    }
   }
 }

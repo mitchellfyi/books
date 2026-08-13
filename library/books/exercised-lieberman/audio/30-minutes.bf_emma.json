@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "exercised-lieberman",
+  "duration": "30-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/exercised-lieberman/scripts/30-minutes.md",
+  "source_script_sha256": "ada391aa955ee6f393c4a750c6cdd7d197fc90d0e3322249f1263f0908eb5798",
+  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_terms": [],
+  "script_words": 4450,
+  "audio_seconds": 1807.183,
+  "measured_wpm": 147.74,
+  "generated_at": "2026-08-13T09:46:42.179566+00:00"
+}

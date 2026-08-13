@@ -247,7 +247,7 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Searchable primary preview, the full contents, a substantial author interview, an adapted chapter, the peer-reviewed precursor and sequel hypothesis, independent clinical guidelines and meta-analysis, and four professional or specialist reviews cover every part. No uninterrupted lawful full text was used.",
     "last_researched": "2026-08-13",
