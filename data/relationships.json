@@ -1,0 +1,62 @@
+{
+  "$schema": "../schemas/relationships.schema.json",
+  "schema_version": 1,
+  "relationships": [
+    {
+      "id": "alchemy-written-by-rory-sutherland",
+      "source_id": "alchemy-rory-sutherland",
+      "target_id": "rory-sutherland",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Rory Sutherland wrote Alchemy.",
+      "source_refs": [
+        "library/books/alchemy-rory-sutherland/book.json#publisher-book-page",
+        "library/books/alchemy-rory-sutherland/book.json#worldcat-record"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "alchemy-related-to-thinking-fast-and-slow",
+      "source_id": "alchemy-rory-sutherland",
+      "target_id": "thinking-fast-and-slow-daniel-kahneman",
+      "type": "related-to",
+      "basis": "explicit",
+      "description": "Both examine systematic departures from simple rational-choice models; the publisher explicitly positions Alchemy alongside Kahneman's work.",
+      "source_refs": ["library/books/alchemy-rory-sutherland/book.json#google-books-us"],
+      "confidence": "high"
+    },
+    {
+      "id": "alchemy-related-to-influence",
+      "source_id": "alchemy-rory-sutherland",
+      "target_id": "influence-robert-cialdini",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Read Influence next for a more systematically organised account of persuasion principles that complements Alchemy's case-led, exploratory style.",
+      "source_refs": ["library/books/alchemy-rory-sutherland/book.json#publisher-book-page"],
+      "confidence": "medium"
+    },
+    {
+      "id": "alchemy-related-to-nudge",
+      "source_id": "alchemy-rory-sutherland",
+      "target_id": "nudge-richard-thaler-cass-sunstein",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both apply behavioural insight to practical choice environments; Nudge offers a more policy-centred and framework-driven treatment.",
+      "source_refs": [
+        "library/books/alchemy-rory-sutherland/book.json#publisher-sample",
+        "library/books/alchemy-rory-sutherland/book.json#google-books-us"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "alchemy-related-to-choice-factory",
+      "source_id": "alchemy-rory-sutherland",
+      "target_id": "the-choice-factory-richard-shotton",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "The Choice Factory is a useful follow-on for readers who want behavioural biases presented as a more direct set of advertising applications.",
+      "source_refs": ["library/books/alchemy-rory-sutherland/book.json#consumer-behaviour-lab-interview"],
+      "confidence": "medium"
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "alchemy-rory-sutherland",
+  "type": "book",
+  "title": "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
+  "alternate_titles": [
+    "Alchemy: The Dark Art and Curious Science of Creating Magic in Brands, Business, and Life",
+    "Alchemy: The Magic of Original Thinking in a World of Mind-Numbing Conformity"
+  ],
+  "author_ids": ["rory-sutherland"],
+  "bibliography": {
+    "first_published": "2019",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "UK first edition",
+        "publisher": "WH Allen",
+        "publication_date": "2019",
+        "isbn_10": "0753556502",
+        "isbn_13": "9780753556504",
+        "format": "Hardcover",
+        "pages": 371
+      },
+      {
+        "label": "US edition",
+        "publisher": "HarperCollins",
+        "publication_date": "2019-05-07",
+        "isbn_10": "006238841X",
+        "isbn_13": "9780062388414",
+        "format": "Hardcover",
+        "pages": 384
+      },
+      {
+        "label": "UK paperback",
+        "publisher": "WH Allen",
+        "publication_date": "2021-05-13",
+        "isbn_10": null,
+        "isbn_13": "9780753556528",
+        "format": "Paperback",
+        "pages": 384
+      }
+    ],
+    "contents": [
+      "Foreword: Challenging Coca-Cola",
+      "Introduction: Cracking the (Human) Code",
+      "1: On the Uses and Abuses of Reason",
+      "2: An Alchemist's Tale (or Why Magic Really Still Exists)",
+      "3: Signalling",
+      "4: Subconscious Hacking: Signalling to Ourselves",
+      "5: Satisficing",
+      "6: Psychophysics",
+      "7: How to Be an Alchemist",
+      "Conclusion: On Being a Little Less Logical"
+    ]
+  },
+  "discovery": {
+    "tag_ids": [
+      "advertising",
+      "behavioural-economics",
+      "behavioural-science",
+      "business",
+      "consumer-psychology",
+      "creativity",
+      "decision-making",
+      "innovation",
+      "marketing",
+      "non-fiction",
+      "persuasion",
+      "problem-solving",
+      "psychophysics",
+      "satisficing",
+      "signalling"
+    ],
+    "audiences": [
+      "Marketers and advertisers",
+      "Product and service designers",
+      "Business leaders and entrepreneurs",
+      "Policy and behaviour-change practitioners",
+      "Readers interested in applied psychology and unconventional problem-solving"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
+  },
+  "analysis": {
+    "synopsis": {
+      "text": "An anecdote-led argument that human choices depend on perception, context, signalling, emotion, and evolved shortcuts as well as explicit reason. Sutherland uses advertising and behavioural-science examples to show why small psychological changes can sometimes create more value than expensive changes to a product or system.",
+      "source_ids": ["publisher-book-page", "publisher-sample", "google-books-us", "blinkist-summary"],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Logic is indispensable but insufficient for human problems. Because people respond to subjective meaning rather than objective properties alone, useful solutions often emerge from testing counterintuitive ideas that conventional models dismiss before evidence can be gathered.",
+      "source_ids": ["publisher-sample", "publisher-book-page", "google-books-us", "knowing-making-review"],
+      "basis": "synthesis"
+    },
+    "main_ideas": [
+      {
+        "title": "Psycho-logic",
+        "description": "Behaviour that appears irrational under a narrow economic model can make sense when social meaning, uncertainty, identity, evolutionary incentives, and perception are included.",
+        "source_ids": ["publisher-sample", "google-books-us", "blinkist-summary"],
+        "basis": "synthesis"
+      },
+      {
+        "title": "Logic narrows the solution space",
+        "description": "Organisations favour ideas that can be justified in advance. That protects decision-makers but filters out unusual experiments whose value can be demonstrated only by trying them.",
+        "source_ids": ["publisher-sample", "consumer-behaviour-lab-interview", "knowing-making-review"],
+        "basis": "synthesis"
+      },
+      {
+        "title": "Perceived value is real value",
+        "description": "Framing, reassurance, aesthetics, information, and expectations change an experience. Improving those features can produce real benefit even when the underlying physical product is unchanged.",
+        "source_ids": ["publisher-book-page", "ted-speaker-bio", "google-books-us"],
+        "basis": "synthesis"
+      },
+      {
+        "title": "Signals shape trust and choice",
+        "description": "Cost, effort, form, and apparently inefficient details can signal commitment, quality, scarcity, or intent. Removing them in the name of efficiency can remove the reason people trusted the offer.",
+        "source_ids": ["publisher-sample", "knowing-making-review"],
+        "basis": "synthesis"
+      },
+      {
+        "title": "People also signal to themselves",
+        "description": "Choices help people construct and confirm identities. Products and rituals can therefore influence behaviour by changing what an action says to the person taking it, not only what it communicates to others.",
+        "source_ids": ["publisher-sample", "knowing-making-review"],
+        "basis": "synthesis"
+      },
+      {
+        "title": "Satisficing beats impossible optimisation",
+        "description": "Under uncertainty, people use quick rules and seek an acceptable option rather than calculating a perfect one. Designs that respect those shortcuts often work better than systems built for an abstract average user.",
+        "source_ids": ["publisher-sample", "blinkist-summary", "knowing-making-review"],
+        "basis": "synthesis"
+      },
+      {
+        "title": "Perception is nonlinear",
+        "description": "Physical changes and felt changes are not proportional. Attention, contrast, expectation, and presentation can alter subjective experience, so the cheapest effective intervention may target perception rather than infrastructure.",
+        "source_ids": ["publisher-sample", "publisher-book-page", "knowing-making-review"],
+        "basis": "synthesis"
+      },
+      {
+        "title": "Test the counterintuitive",
+        "description": "An idea need not have a complete theory before it can be tested. Sutherland argues for observational humility, multiple approaches, and small experiments, especially where standard logic has failed to resolve a human problem.",
+        "source_ids": ["publisher-sample", "consumer-behaviour-lab-interview", "blinkist-summary"],
+        "basis": "synthesis"
+      }
+    ],
+    "whole_book_overview": {
+      "text": "The Red Bull opening establishes the puzzle: a product can succeed by violating the qualities a rational planning exercise would optimise. The introduction and first chapter argue that methods successful in the physical sciences are often overextended into messy human systems. The middle chapters build alternative explanations through signalling, self-signalling, satisficing, and psychophysics. The final chapter converts these observations into a working posture: widen the solution set, distrust average-user abstractions, test small counterintuitive changes, and accept useful observations before insisting on a complete causal theory. The conclusion asks readers to use reason as one tool rather than the only admissible tool.",
+      "source_ids": ["publisher-sample", "publisher-book-page", "blinkist-summary", "knowing-making-review"],
+      "basis": "synthesis"
+    },
+    "meaning_lessons_importance": {
+      "text": "The practical lesson is to distinguish objective function from lived experience. Waiting time, trust, risk, status, and ease are partly psychological, so changing how a situation is interpreted may be a legitimate solution rather than cosmetic manipulation. The book is most important as a challenge to institutional risk aversion: if every proposal must sound logical before testing, organisations repeatedly explore the same narrow territory. Its useful discipline is experimentation, not irrationality for its own sake.",
+      "source_ids": ["publisher-book-page", "publisher-sample", "ted-speaker-bio", "knowing-making-review", "goodreads-reception"],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Sutherland wrote from more than two decades as a copywriter and creative director and from his work building Ogilvy's behavioural consulting practice. The book develops a long-running argument visible in his TED talks and columns: psychological value and small contextual changes deserve a place beside material optimisation. It is a practitioner's case for expanding how organisations generate and test solutions, not an academic survey of behavioural science.",
+      "source_ids": ["ogilvy-official-bio", "ted-speaker-bio", "publisher-book-page", "consumer-behaviour-lab-interview"],
+      "basis": "synthesis"
+    },
+    "reception": {
+      "text": "Reception is broadly positive but divided on rigour and structure. The publisher records praise for its humour, accessibility, and application to human behaviour, while Goodreads showed a 4.20 average from more than 9,500 ratings and StoryGraph a 4.02 average when accessed. Positive reviewers value the examples and permission to test neglected ideas. Critical reader reviews object to repetition, loose organisation, straw versions of economics and logic, unsupported generalisation, and cases where provocative claims outrun the evidence. A specialist behavioural-economics review finds a real theoretical backbone but describes the route through it as a philosophical wander driven by anecdotes.",
+      "source_ids": ["publisher-book-page", "goodreads-reception", "storygraph-reception", "knowing-making-review", "customerthink-review"],
+      "basis": "synthesis"
+    },
+    "audience_and_topics": {
+      "text": "Best suited to marketers, advertisers, product and service designers, entrepreneurs, and policy practitioners who can test changes in real settings. It covers behavioural economics, consumer psychology, decision-making, signalling, self-signalling, satisficing, psychophysics, branding, innovation, and organisational aversion to unconventional ideas. General readers may enjoy it as an entertaining introduction to the gap between formal rationality and actual choice.",
+      "source_ids": ["worldcat-record", "google-books-uk", "google-books-us", "blinkist-summary", "knowing-making-review"],
+      "basis": "synthesis"
+    },
+    "scope_and_omissions": {
+      "text": "This is not a behavioural-science textbook, a comprehensive literature review, a catalogue of reliably reproducible interventions, or a step-by-step marketing manual. Its anecdotal method generates hypotheses more readily than it establishes effect sizes or boundary conditions. It gives limited help with deciding when a counterintuitive intervention will generalise, and its attacks on 'logic' sometimes combine careful modelling, institutional convention, and post-hoc corporate justification under one label. Readers seeking formal theory, systematic evidence appraisal, or a compact framework may find it repetitive and insufficiently structured. Readers hostile to advertising examples or Sutherland's deliberately provocative voice are also unlikely to enjoy it.",
+      "source_ids": ["publisher-sample", "goodreads-reception", "storygraph-reception", "knowing-making-review", "customerthink-review"],
+      "basis": "synthesis"
+    },
+    "decision_support": {
+      "best_for": [
+        "Generating unconventional hypotheses for practical tests",
+        "Understanding psychological and perceived value in products and services",
+        "An entertaining, example-rich entry into applied behavioural thinking"
+      ],
+      "not_for": [
+        "A systematic behavioural-science reference",
+        "A tightly sequenced implementation playbook",
+        "A neutral defence of formal economic reasoning"
+      ],
+      "read_if": "You make decisions about products, communication, customer experience, or policy and want better questions and experiments rather than a fixed recipe.",
+      "skip_if": "You mainly want formal models, comprehensive evidence grading, or a short checklist with little anecdote or provocation.",
+      "source_ids": ["publisher-book-page", "goodreads-reception", "storygraph-reception", "knowing-making-review"],
+      "basis": "inference"
+    }
+  },
+  "research": {
+    "sources": [
+      {
+        "id": "publisher-book-page",
+        "title": "Alchemy",
+        "author_or_publisher": "Penguin Books UK",
+        "url": "https://www.penguin.co.uk/books/430379/alchemy-by-rory-sutherland/9780753556528",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "UK paperback metadata, formats, publisher synopsis, author biography, positioning, and selected review excerpts. Promotional rather than independent."
+      },
+      {
+        "id": "publisher-sample",
+        "title": "Alchemy publisher sample",
+        "author_or_publisher": "Rory Sutherland; WH Allen",
+        "url": "https://cdn.penguin.co.uk/dam-assets/books/9780753556528/9780753556528-sample.pdf",
+        "type": "book",
+        "accessed_at": "2026-08-13",
+        "supports": "Copyright and first-publication data, contents, the eleven rules of alchemy, and the book's opening statement of its premise. Covers only the front matter and opening portion."
+      },
+      {
+        "id": "worldcat-record",
+        "title": "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
+        "author_or_publisher": "OCLC WorldCat",
+        "url": "https://search.worldcat.org/title/alchemy-the-surprising-power-of-ideas-that-dont-make-sense/oclc/1105071755",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "UK first-edition publisher, date, physical description, ISBNs, language, and library subject headings."
+      },
+      {
+        "id": "google-books-uk",
+        "title": "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
+        "author_or_publisher": "Google Books; Ebury Publishing",
+        "url": "https://books.google.com/books/about/Alchemy.html?id=rBgZDAAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "UK title variant, 2019 publication, length, subjects, synopsis, and publisher-supplied author biography."
+      },
+      {
+        "id": "google-books-us",
+        "title": "Alchemy: The Dark Art and Curious Science of Creating Magic in Brands, Business, and Life",
+        "author_or_publisher": "Google Books; HarperCollins",
+        "url": "https://books.google.com/books/about/Alchemy.html?id=cfO_swEACAAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "US title, publication date, publisher, ISBNs, length, subjects, positioning, and synopsis."
+      },
+      {
+        "id": "ogilvy-official-bio",
+        "title": "Ogilvy UK team profile: Rory Sutherland",
+        "author_or_publisher": "Ogilvy UK",
+        "url": "https://www.ogilvy.com/uk/about",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Current title, Ogilvy career, behavioural consulting work, professional roles, columns, and listed books."
+      },
+      {
+        "id": "ted-speaker-bio",
+        "title": "Rory Sutherland",
+        "author_or_publisher": "TED",
+        "url": "https://www.ted.com/speakers/rory_sutherland",
+        "type": "author",
+        "accessed_at": "2026-08-13",
+        "supports": "Career background, joining Ogilvy in 1988, early digital advertising work, columns, talk history, and his argument about perceived value."
+      },
+      {
+        "id": "consumer-behaviour-lab-interview",
+        "title": "Interview: Rory Sutherland, author of Alchemy, on why irrational ideas work",
+        "author_or_publisher": "The Consumer Behaviour Lab",
+        "url": "https://www.theconsumerbehaviorlab.com/pdf/interview-rory-sutherland-author-of-alchemy-on-why-irrational-ideas-work.pdf",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "The author's explanation of behavioural science, counterintuitive tests, and examples of applying the book's approach."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "Alchemy by Rory Sutherland",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/26210507-alchemy",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Aggregate reader rating and a range of positive and critical reader reactions, including concerns about structure, evidence, and generalisation."
+      },
+      {
+        "id": "storygraph-reception",
+        "title": "Reviews: Alchemy",
+        "author_or_publisher": "The StoryGraph",
+        "url": "https://beta.thestorygraph.com/book_reviews/b03b81f9-9167-4a93-bad3-83d0a92bf52f",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent reader aggregate and mixed reactions to the book's ideas, reasoning, readability, and audiobook delivery."
+      },
+      {
+        "id": "knowing-making-review",
+        "title": "Book review: Alchemy, by Rory Sutherland",
+        "author_or_publisher": "Knowing and Making",
+        "url": "https://www.knowingandmaking.com/2019/08/book-review-alchemy-by-rory-sutherland.html",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Behavioural-economics analysis of the book's theoretical strands, anecdotal method, and loose structure."
+      },
+      {
+        "id": "customerthink-review",
+        "title": "Book Review: Alchemy",
+        "author_or_publisher": "CustomerThink",
+        "url": "https://customerthink.com/book-review-alchemy-the-dark-art-and-curious-science-of-creating-magic-in-brands-business-and-life/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Marketing-focused assessment of the book's breadth, entertainment value, and challenge of organising its many briefly treated points."
+      },
+      {
+        "id": "blinkist-summary",
+        "title": "Alchemy: Summary of Key Ideas and Review",
+        "author_or_publisher": "Blinkist",
+        "url": "https://www.blinkist.com/en/books/alchemy-en",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Secondary corroboration of the main themes and broad chapter-level ideas; not used for unique factual claims."
+      }
+    ],
+    "citations": {
+      "/title": ["publisher-book-page", "worldcat-record", "google-books-uk"],
+      "/alternate_titles": ["publisher-book-page", "google-books-us"],
+      "/author_ids": ["publisher-book-page", "worldcat-record", "google-books-us"],
+      "/bibliography/first_published": ["publisher-sample", "worldcat-record", "google-books-uk", "google-books-us"],
+      "/bibliography/original_language": ["worldcat-record"],
+      "/bibliography/editions/0": ["worldcat-record", "publisher-sample"],
+      "/bibliography/editions/1": ["google-books-us"],
+      "/bibliography/editions/2": ["publisher-book-page"],
+      "/bibliography/contents": ["publisher-sample"],
+      "/discovery/tag_ids": ["worldcat-record", "google-books-uk", "google-books-us", "publisher-sample"],
+      "/discovery/audiences": ["publisher-book-page", "google-books-us", "blinkist-summary", "knowing-making-review"],
+      "/discovery/formats_available": ["publisher-book-page", "google-books-us"],
+      "/analysis/synopsis": ["publisher-book-page", "publisher-sample", "google-books-us", "blinkist-summary"],
+      "/analysis/core_argument": ["publisher-sample", "publisher-book-page", "knowing-making-review"],
+      "/analysis/main_ideas": ["publisher-sample", "blinkist-summary", "knowing-making-review", "consumer-behaviour-lab-interview"],
+      "/analysis/whole_book_overview": ["publisher-sample", "blinkist-summary", "knowing-making-review"],
+      "/analysis/meaning_lessons_importance": ["publisher-sample", "ted-speaker-bio", "knowing-making-review", "goodreads-reception"],
+      "/analysis/author_and_purpose": ["ogilvy-official-bio", "ted-speaker-bio", "publisher-book-page", "consumer-behaviour-lab-interview"],
+      "/analysis/reception": ["publisher-book-page", "goodreads-reception", "storygraph-reception", "knowing-making-review", "customerthink-review"],
+      "/analysis/audience_and_topics": ["worldcat-record", "google-books-uk", "google-books-us", "knowing-making-review"],
+      "/analysis/scope_and_omissions": ["publisher-sample", "goodreads-reception", "storygraph-reception", "knowing-making-review", "customerthink-review"],
+      "/analysis/decision_support": ["publisher-book-page", "goodreads-reception", "storygraph-reception", "knowing-making-review"]
+    }
+  },
+  "workflow": {
+    "status": "researched-partial",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "The profile uses the publisher's 38-page sample, contents, official records, an author interview, secondary summaries, and independent reception. It has not been checked against a legally accessed full copy. The whole-book overview is therefore a source-based map, not a verified chapter-by-chapter substitute for the complete book.",
+    "last_researched": "2026-08-13",
+    "next_steps": [
+      "Check the analysis against a legally obtained full copy, especially later-chapter examples and the conclusion.",
+      "Add direct professional reviews from major publications if accessible, rather than relying on excerpts reproduced by the publisher.",
+      "Generate 12-minute and 30-minute scripts only after full-book verification."
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/tags.schema.json",
+  "schema_version": 1,
+  "tags": [
+    { "id": "advertising", "kind": "topic", "label": "Advertising", "description": "Paid or designed communication intended to influence attention, perception, or action.", "aliases": [] },
+    { "id": "behavioural-economics", "kind": "topic", "label": "Behavioural economics", "description": "The study of how psychological and contextual factors affect economic decisions.", "aliases": ["behavioral-economics"] },
+    { "id": "behavioural-science", "kind": "topic", "label": "Behavioural science", "description": "Empirical and theoretical study of human behaviour across psychology, economics, and related fields.", "aliases": ["behavioral-science"] },
+    { "id": "business", "kind": "genre", "label": "Business", "description": "Non-fiction about organisations, markets, management, or commercial practice.", "aliases": [] },
+    { "id": "consumer-psychology", "kind": "topic", "label": "Consumer psychology", "description": "How perception, motivation, context, and identity shape consumer choices.", "aliases": [] },
+    { "id": "creativity", "kind": "topic", "label": "Creativity", "description": "Generating and testing original or non-obvious ideas.", "aliases": [] },
+    { "id": "decision-making", "kind": "topic", "label": "Decision-making", "description": "How people or organisations choose among alternatives under constraints and uncertainty.", "aliases": [] },
+    { "id": "innovation", "kind": "topic", "label": "Innovation", "description": "Developing and applying useful new approaches, products, or services.", "aliases": [] },
+    { "id": "marketing", "kind": "topic", "label": "Marketing", "description": "Creating, positioning, communicating, and delivering value to audiences and markets.", "aliases": [] },
+    { "id": "non-fiction", "kind": "genre", "label": "Non-fiction", "description": "Writing presented primarily as factual, explanatory, or argumentative.", "aliases": ["nonfiction"] },
+    { "id": "persuasion", "kind": "topic", "label": "Persuasion", "description": "How communication, context, and signals influence belief or behaviour.", "aliases": [] },
+    { "id": "problem-solving", "kind": "topic", "label": "Problem-solving", "description": "Framing, exploring, testing, and resolving practical or conceptual problems.", "aliases": [] },
+    { "id": "psychophysics", "kind": "topic", "label": "Psychophysics", "description": "Relations between physical stimuli and subjective perception.", "aliases": [] },
+    { "id": "satisficing", "kind": "topic", "label": "Satisficing", "description": "Choosing an adequate option under limited information, time, or cognitive capacity rather than optimising exhaustively.", "aliases": [] },
+    { "id": "signalling", "kind": "topic", "label": "Signalling", "description": "Actions or attributes that communicate otherwise difficult-to-observe qualities or intentions.", "aliases": ["signaling"] }
+  ]
+}

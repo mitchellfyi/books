@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/book.schema.json",
+  "title": "Book profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "type", "title", "alternate_titles", "author_ids", "bibliography", "discovery", "analysis", "research", "workflow"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "id": { "$ref": "#/$defs/id" },
+    "type": { "const": "book" },
+    "title": { "type": "string", "minLength": 1 },
+    "alternate_titles": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "author_ids": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+    "bibliography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["first_published", "original_language", "editions", "contents"],
+      "properties": {
+        "first_published": { "type": ["string", "null"] },
+        "original_language": { "type": ["string", "null"] },
+        "editions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "publisher", "publication_date", "isbn_10", "isbn_13", "format", "pages"],
+            "properties": {
+              "label": { "type": "string", "minLength": 1 },
+              "publisher": { "type": ["string", "null"] },
+              "publication_date": { "type": ["string", "null"] },
+              "isbn_10": { "type": ["string", "null"] },
+              "isbn_13": { "type": ["string", "null"] },
+              "format": { "type": ["string", "null"] },
+              "pages": { "type": ["integer", "null"], "minimum": 1 }
+            }
+          }
+        },
+        "contents": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "discovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag_ids", "audiences", "formats_available"],
+      "properties": {
+        "tag_ids": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+        "audiences": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "formats_available": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["synopsis", "core_argument", "main_ideas", "whole_book_overview", "meaning_lessons_importance", "author_and_purpose", "reception", "audience_and_topics", "scope_and_omissions", "decision_support"],
+      "properties": {
+        "synopsis": { "$ref": "#/$defs/claim" },
+        "core_argument": { "$ref": "#/$defs/claim" },
+        "main_ideas": { "type": "array", "items": { "$ref": "#/$defs/idea" } },
+        "whole_book_overview": { "$ref": "#/$defs/claim" },
+        "meaning_lessons_importance": { "$ref": "#/$defs/claim" },
+        "author_and_purpose": { "$ref": "#/$defs/claim" },
+        "reception": { "$ref": "#/$defs/claim" },
+        "audience_and_topics": { "$ref": "#/$defs/claim" },
+        "scope_and_omissions": { "$ref": "#/$defs/claim" },
+        "decision_support": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["best_for", "not_for", "read_if", "skip_if", "source_ids", "basis"],
+          "properties": {
+            "best_for": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+            "not_for": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+            "read_if": { "type": "string", "minLength": 1 },
+            "skip_if": { "type": "string", "minLength": 1 },
+            "source_ids": { "$ref": "#/$defs/source_ids" },
+            "basis": { "$ref": "#/$defs/basis" }
+          }
+        }
+      }
+    },
+    "research": { "$ref": "#/$defs/research" },
+    "workflow": { "$ref": "#/$defs/workflow" }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "basis": { "enum": ["explicit", "synthesis", "inference"] },
+    "source_ids": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "source_ids", "basis"],
+      "properties": {
+        "text": { "type": "string" },
+        "source_ids": { "$ref": "#/$defs/source_ids" },
+        "basis": { "$ref": "#/$defs/basis" }
+      }
+    },
+    "idea": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "description", "source_ids", "basis"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "source_ids": { "$ref": "#/$defs/source_ids" },
+        "basis": { "$ref": "#/$defs/basis" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "author_or_publisher", "url", "type", "accessed_at", "supports"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "author_or_publisher": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "type": { "enum": ["book", "publisher", "library-catalogue", "author", "employer", "interview", "professional-review", "specialist-review", "reader-aggregate", "secondary-summary", "official-documentation"] },
+        "accessed_at": { "type": "string", "format": "date" },
+        "supports": { "type": "string", "minLength": 1 }
+      }
+    },
+    "research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sources", "citations"],
+      "properties": {
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+        "citations": {
+          "type": "object",
+          "propertyNames": { "pattern": "^/" },
+          "additionalProperties": { "$ref": "#/$defs/source_ids" }
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "coverage", "coverage_notes", "last_researched", "next_steps"],
+      "properties": {
+        "status": { "enum": ["stub", "researched-partial", "complete"] },
+        "coverage": { "enum": ["metadata-only", "sample-and-secondary", "full-book"] },
+        "coverage_notes": { "type": "string" },
+        "last_researched": { "type": "string", "format": "date" },
+        "next_steps": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    }
+  }
+}

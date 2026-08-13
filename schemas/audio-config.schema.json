@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/audio-config.schema.json",
+  "title": "Audio configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "default_preset", "word_count_tolerance_percent", "presets", "tts"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "default_preset": { "type": "string", "minLength": 1 },
+    "word_count_tolerance_percent": { "type": "number", "minimum": 0, "maximum": 25 },
+    "presets": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["words_per_minute", "description", "durations"],
+        "properties": {
+          "words_per_minute": { "type": "integer", "minimum": 80, "maximum": 300 },
+          "description": { "type": "string", "minLength": 1 },
+          "durations": {
+            "type": "object",
+            "required": ["30-seconds", "3-minutes", "12-minutes", "30-minutes"],
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["minutes", "target_words"],
+              "properties": {
+                "minutes": { "type": "number", "exclusiveMinimum": 0 },
+                "target_words": { "type": "integer", "minimum": 1 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "tts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["preferred_engine", "official_repository", "metadata_sidecar_required", "commit_generated_audio", "commit_model_weights"],
+      "properties": {
+        "preferred_engine": { "type": "string", "minLength": 1 },
+        "official_repository": { "type": "string", "format": "uri" },
+        "metadata_sidecar_required": { "type": "boolean" },
+        "commit_generated_audio": { "type": "boolean" },
+        "commit_model_weights": { "type": "boolean" }
+      }
+    }
+  }
+}

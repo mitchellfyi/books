@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "book-id",
+  "type": "book",
+  "title": "Book title",
+  "alternate_titles": [],
+  "author_ids": ["author-id"],
+  "bibliography": {
+    "first_published": null,
+    "original_language": null,
+    "editions": [],
+    "contents": []
+  },
+  "discovery": {
+    "tag_ids": [],
+    "audiences": [],
+    "formats_available": []
+  },
+  "analysis": {
+    "synopsis": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "core_argument": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "main_ideas": [],
+    "whole_book_overview": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "meaning_lessons_importance": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "author_and_purpose": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "reception": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "audience_and_topics": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "scope_and_omissions": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "decision_support": {
+      "best_for": [],
+      "not_for": [],
+      "read_if": "TODO: state the strongest reason to read this book.",
+      "skip_if": "TODO: state the strongest reason to skip this book.",
+      "source_ids": [],
+      "basis": "inference"
+    }
+  },
+  "research": {
+    "sources": [],
+    "citations": {}
+  },
+  "workflow": {
+    "status": "stub",
+    "coverage": "metadata-only",
+    "coverage_notes": "",
+    "last_researched": "1970-01-01",
+    "next_steps": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "../schemas/catalog.schema.json",
+  "schema_version": 1,
+  "entities": [
+    {
+      "id": "rory-sutherland",
+      "kind": "author",
+      "name": "Rory Sutherland",
+      "state": "catalogued",
+      "path": "library/authors/rory-sutherland/author.json",
+      "aliases": []
+    },
+    {
+      "id": "alchemy-rory-sutherland",
+      "kind": "book",
+      "name": "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
+      "state": "catalogued",
+      "path": "library/books/alchemy-rory-sutherland/book.json",
+      "author_ids": ["rory-sutherland"],
+      "aliases": ["Alchemy: The Dark Art and Curious Science of Creating Magic in Brands, Business, and Life"]
+    },
+    {
+      "id": "thinking-fast-and-slow-daniel-kahneman",
+      "kind": "book",
+      "name": "Thinking, Fast and Slow",
+      "state": "recommendation-stub",
+      "author_names": ["Daniel Kahneman"],
+      "aliases": []
+    },
+    {
+      "id": "influence-robert-cialdini",
+      "kind": "book",
+      "name": "Influence: The Psychology of Persuasion",
+      "state": "recommendation-stub",
+      "author_names": ["Robert Cialdini"],
+      "aliases": []
+    },
+    {
+      "id": "nudge-richard-thaler-cass-sunstein",
+      "kind": "book",
+      "name": "Nudge",
+      "state": "recommendation-stub",
+      "author_names": ["Richard H. Thaler", "Cass R. Sunstein"],
+      "aliases": []
+    },
+    {
+      "id": "the-choice-factory-richard-shotton",
+      "kind": "book",
+      "name": "The Choice Factory",
+      "state": "recommendation-stub",
+      "author_names": ["Richard Shotton"],
+      "aliases": []
+    }
+  ]
+}

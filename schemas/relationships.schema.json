@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/relationships.schema.json",
+  "title": "Entity relationships",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "relationships"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "source_id", "target_id", "type", "basis", "description", "source_refs", "confidence"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "source_id": { "$ref": "#/$defs/id" },
+          "target_id": { "$ref": "#/$defs/id" },
+          "type": { "enum": ["written-by", "coauthored-with", "related-to", "responds-to", "influenced-by", "contrasts-with", "same-series", "adapted-from", "recommended-next"] },
+          "basis": { "enum": ["explicit", "synthesis", "inference"] },
+          "description": { "type": "string", "minLength": 1 },
+          "source_refs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+          "confidence": { "enum": ["high", "medium", "low"] }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+  }
+}

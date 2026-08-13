@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/author.schema.json",
+  "title": "Author profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "type", "name", "alternate_names", "profile", "selected_works", "research", "workflow"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "id": { "$ref": "#/$defs/id" },
+    "type": { "const": "author" },
+    "name": { "type": "string", "minLength": 1 },
+    "alternate_names": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["one_line", "biography", "background", "expertise", "perspective_and_limits"],
+      "properties": {
+        "one_line": { "$ref": "#/$defs/claim" },
+        "biography": { "$ref": "#/$defs/claim" },
+        "background": { "$ref": "#/$defs/claim" },
+        "expertise": { "$ref": "#/$defs/claim" },
+        "perspective_and_limits": { "$ref": "#/$defs/claim" }
+      }
+    },
+    "selected_works": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "year", "kind", "relationship", "source_ids"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "year": { "type": ["integer", "null"], "minimum": 1 },
+          "kind": { "type": "string", "minLength": 1 },
+          "relationship": { "type": "string", "minLength": 1 },
+          "source_ids": { "$ref": "#/$defs/source_ids" }
+        }
+      }
+    },
+    "research": { "$ref": "#/$defs/research" },
+    "workflow": { "$ref": "#/$defs/workflow" }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "basis": { "enum": ["explicit", "synthesis", "inference"] },
+    "source_ids": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "source_ids", "basis"],
+      "properties": {
+        "text": { "type": "string" },
+        "source_ids": { "$ref": "#/$defs/source_ids" },
+        "basis": { "$ref": "#/$defs/basis" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "author_or_publisher", "url", "type", "accessed_at", "supports"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "author_or_publisher": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "type": { "enum": ["book", "publisher", "library-catalogue", "author", "employer", "interview", "professional-review", "specialist-review", "reader-aggregate", "secondary-summary", "official-documentation"] },
+        "accessed_at": { "type": "string", "format": "date" },
+        "supports": { "type": "string", "minLength": 1 }
+      }
+    },
+    "research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sources", "citations"],
+      "properties": {
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+        "citations": {
+          "type": "object",
+          "propertyNames": { "pattern": "^/" },
+          "additionalProperties": { "$ref": "#/$defs/source_ids" }
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "coverage_notes", "last_researched", "next_steps"],
+      "properties": {
+        "status": { "enum": ["stub", "researched-partial", "complete"] },
+        "coverage_notes": { "type": "string" },
+        "last_researched": { "type": "string", "format": "date" },
+        "next_steps": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/audio-config.schema.json",
+  "schema_version": 1,
+  "default_preset": "natural",
+  "word_count_tolerance_percent": 7,
+  "presets": {
+    "natural": {
+      "words_per_minute": 150,
+      "description": "Default rate for clear, comfortable narration.",
+      "durations": {
+        "30-seconds": { "minutes": 0.5, "target_words": 75 },
+        "3-minutes": { "minutes": 3, "target_words": 450 },
+        "12-minutes": { "minutes": 12, "target_words": 1800 },
+        "30-minutes": { "minutes": 30, "target_words": 4500 }
+      }
+    },
+    "requested-fast": {
+      "words_per_minute": 250,
+      "description": "Preserves the initially requested word counts; use only when deliberately producing very fast speech.",
+      "durations": {
+        "30-seconds": { "minutes": 0.5, "target_words": 125 },
+        "3-minutes": { "minutes": 3, "target_words": 750 },
+        "12-minutes": { "minutes": 12, "target_words": 3000 },
+        "30-minutes": { "minutes": 30, "target_words": 7500 }
+      }
+    }
+  },
+  "tts": {
+    "preferred_engine": "kokoro",
+    "official_repository": "https://github.com/hexgrad/kokoro",
+    "metadata_sidecar_required": true,
+    "commit_generated_audio": false,
+    "commit_model_weights": false
+  }
+}

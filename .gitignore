@@ -1,0 +1,6 @@
+# Generated narration and sidecar files. Keep directory placeholders.
+library/books/*/audio/*
+!library/books/*/audio/.gitkeep
+
+# Locally downloaded text-to-speech model assets.
+models/

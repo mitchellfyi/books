@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/catalog.schema.json",
+  "title": "Entity catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entities"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "name", "state", "aliases"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "kind": { "enum": ["book", "author"] },
+          "name": { "type": "string", "minLength": 1 },
+          "state": { "enum": ["catalogued", "recommendation-stub", "planned"] },
+          "path": { "type": "string", "minLength": 1 },
+          "author_ids": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+          "author_names": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+          "aliases": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+  }
+}
