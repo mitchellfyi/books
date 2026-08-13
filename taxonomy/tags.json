@@ -240,6 +240,41 @@
       "label": "Stress",
       "description": "Psychological and physiological responses to pressure, uncertainty, demand, or threat.",
       "aliases": []
+    },
+    {
+      "id": "collective-behaviour",
+      "kind": "topic",
+      "label": "Collective behaviour",
+      "description": "How people act, identify, and coordinate as crowds, groups, publics, and movements.",
+      "aliases": ["collective-behavior"]
+    },
+    {
+      "id": "fanaticism",
+      "kind": "topic",
+      "label": "Fanaticism",
+      "description": "Extreme commitment that subordinates evidence, competing values, or individual judgment to a cause.",
+      "aliases": []
+    },
+    {
+      "id": "ideology",
+      "kind": "topic",
+      "label": "Ideology",
+      "description": "A connected system of ideas and values used to interpret society and guide collective action.",
+      "aliases": []
+    },
+    {
+      "id": "mass-movements",
+      "kind": "topic",
+      "label": "Mass movements",
+      "description": "Large organised efforts that mobilise shared identity and sustained action toward social, political, national, or religious change.",
+      "aliases": ["social-movements"]
+    },
+    {
+      "id": "political-psychology",
+      "kind": "topic",
+      "label": "Political psychology",
+      "description": "How cognition, emotion, identity, personality, and groups shape political belief and behaviour.",
+      "aliases": []
     }
   ]
 }

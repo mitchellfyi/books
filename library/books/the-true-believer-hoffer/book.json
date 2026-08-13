@@ -3,29 +3,179 @@
   "schema_version": 1,
   "id": "the-true-believer-hoffer",
   "type": "book",
-  "title": "The True Believer",
-  "alternate_titles": [],
+  "title": "The True Believer: Thoughts on the Nature of Mass Movements",
+  "alternate_titles": ["The True Believer"],
   "author_ids": ["eric-hoffer"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "1951",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "First US edition",
+        "publisher": "Harper & Brothers",
+        "publication_date": "1951",
+        "isbn_10": null,
+        "isbn_13": null,
+        "format": "Hardcover",
+        "pages": 176
+      },
+      {
+        "label": "Harper Perennial Modern Classics paperback",
+        "publisher": "Harper Perennial",
+        "publication_date": "2010-01-19",
+        "isbn_10": "0060505915",
+        "isbn_13": "9780060505912",
+        "format": "Paperback",
+        "pages": 192
+      }
+    ],
+    "contents": [
+      "Preface",
+      "Part One: The Appeal of Mass Movements — Desire for Change; Desire for Substitutes; The Interchangeability of Mass Movements",
+      "Part Two: The Potential Converts — The Role of the Undesirables in Human Affairs; The Poor; Misfits; The Inordinately Selfish; The Ambitious Facing Unlimited Opportunities; Minorities; The Bored; The Sinners",
+      "Part Three: United Action and Self-Sacrifice — Prefatory; Factors Promoting Self-Sacrifice; Unifying Agents",
+      "Part Four: Beginning and End — Men of Words; The Fanatics; The Practical Men of Action; Good and Bad Mass Movements"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": ["collective-behaviour", "fanaticism", "history", "human-nature", "ideology", "mass-movements", "non-fiction", "political-psychology", "psychology", "social-psychology"],
+    "audiences": [
+      "Readers seeking a compact framework for why people join militant political, religious, or nationalist movements",
+      "Leaders, historians, and citizens who want diagnostic questions about recruitment, group unity, hatred, and movement life cycles",
+      "Readers comfortable treating forceful historical generalisations as hypotheses rather than scientific laws"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "google-books-preview",
+        "title": "The True Believer: Thoughts on the Nature of Mass Movements",
+        "author_or_publisher": "Eric Hoffer; HarperCollins via Google Books",
+        "url": "https://books.google.com/books/about/The_True_Believer.html?id=OdJihMArdlAC",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Searchable book passages, structure, numbered sections, core concepts, examples, and publication metadata.",
+        "limitations": "Preview access is uneven and does not expose every page in one continuous reading."
+      },
+      {
+        "id": "open-library-record",
+        "title": "The True Believer",
+        "author_or_publisher": "Open Library / Internet Archive",
+        "url": "https://openlibrary.org/books/OL59085132M/The_True_Believer",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "1951 publication, author, language, subject classification, editions, and preview availability.",
+        "limitations": "Edition metadata is community-maintained and some records merge Harper imprints; corroborated elsewhere."
+      },
+      {
+        "id": "army-review",
+        "title": "Review Essay: The True Believer",
+        "author_or_publisher": "Benjamin Buchholz; Military Review, US Army University Press",
+        "url": "https://www.armyupress.army.mil/Journals/Military-Review/English-Edition-Archives/January-February-2017/ART-019/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current paperback metadata, four-part structure, appeal and convert arguments, movement substitution, and one practitioner application to violent extremism.",
+        "limitations": "Applies Hoffer to radical Islam from a US military perspective; the proposed applications are not validation of the general theory."
+      },
+      {
+        "id": "philosophy-science-review",
+        "title": "Review of Eric Hoffer, The True Believer",
+        "author_or_publisher": "William J. MacKinnon; Philosophy of Science",
+        "url": "https://www.cambridge.org/core/journals/philosophy-of-science/article/eric-hoffer-the-true-believer-thoughts-on-the-nature-of-mass-movements-mentor-book-no-228-new-york-new-american-library-1958-160-pp-50c-paperbound/1A31D72F829FC66A4DCC366C725A97B3",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Contemporary assessment of Hoffer's approach as armchair speculation from loosely controlled observation that can stimulate more rigorous theory and investigation.",
+        "limitations": "Short review of a later paperback edition; it does not test each proposition."
+      },
+      {
+        "id": "intellectual-history-review",
+        "title": "That Other Big Book on Irrational Politics",
+        "author_or_publisher": "Andrew Seal; Society for U.S. Intellectual History",
+        "url": "https://s-usih.org/2023/07/that-other-big-book-on-irrational-politics/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "The book's postwar intellectual context, psychological portrait of the frustrated convert, broad method, and the qualifying importance of its final chapter.",
+        "limitations": "An interpretive intellectual-history essay, not an empirical test of mass-movement theory."
+      },
+      {
+        "id": "terrorism-study",
+        "title": "Eric Hoffer's The True Believer and terrorism research",
+        "author_or_publisher": "Behavioral Sciences of Terrorism and Political Aggression",
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/19434472.2016.1151456",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Later scholarly placement of Hoffer's framework within research on extremist belief, ideology, narrative, and political violence.",
+        "limitations": "Abstract and bibliographic access only; used for context, not detailed claims about findings."
+      },
+      {
+        "id": "acx-review",
+        "title": "The True Believer: review",
+        "author_or_publisher": "ACX Review Archive",
+        "url": "https://acxreviews.robennals.org/reviews/the-true-believer-thoughts-on-the-nature-of-mass-movements-by-eric-hoffer",
+        "type": "secondary-summary",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Detailed reconstruction of the fixed pool and interchangeability arguments and criticism of cherry-picked historical evidence.",
+        "limitations": "Long-form amateur review selected by a review competition, not peer-reviewed scholarship."
+      },
+      {
+        "id": "goodreads-reception",
+        "title": "The True Believer",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/1888320.The_True_Believer",
+        "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "Large reader aggregate and recurring praise for concision and relevance alongside criticism of unsupported assertion and overgeneralisation.",
+        "limitations": "Self-selected reviews, edition merging, and no control for expertise or completion."
+      },
+      {
+        "id": "hoover-archive-profile",
+        "title": "The Longshoreman Philosopher",
+        "author_or_publisher": "Hoover Institution Library & Archives",
+        "url": "https://www.hoover.org/research/longshoreman-philosopher",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Writing context, 1951 publication, intended backdrop of Hitler and Stalin, author career, and documented reception.",
+        "limitations": "The archive holds Hoffer's papers and presents his significance sympathetically."
+      }
+    ],
+    "citations": {
+      "/title": ["google-books-preview", "open-library-record", "army-review"],
+      "/alternate_titles": ["google-books-preview", "open-library-record"],
+      "/author_ids": ["google-books-preview", "open-library-record", "hoover-archive-profile"],
+      "/bibliography/first_published": ["open-library-record", "hoover-archive-profile", "intellectual-history-review"],
+      "/bibliography/original_language": ["open-library-record", "google-books-preview"],
+      "/bibliography/editions/0": ["open-library-record", "google-books-preview"],
+      "/bibliography/editions/1": ["army-review", "goodreads-reception"],
+      "/bibliography/contents": ["google-books-preview", "army-review", "intellectual-history-review"],
+      "/discovery/tag_ids": ["open-library-record", "terrorism-study"],
+      "/discovery/audiences": ["army-review", "intellectual-history-review", "goodreads-reception"],
+      "/discovery/formats_available": ["open-library-record", "goodreads-reception"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "researched-partial",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "The searchable Google Books text and library preview were checked across all four parts and the 125-section progression, then triangulated with contemporary scholarship, later specialist analysis, and detailed independent and reader reviews. No uninterrupted lawful full text was available, so coverage remains sample-and-secondary.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": ["Optional: compare all 125 sections with an owner-supplied or library copy to promote coverage to full-book."]
   }
 }

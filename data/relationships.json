@@ -163,6 +163,42 @@
       "description": "Both catalogue influence tactics, but Cialdini works from controlled research with an explicit ethics of defence, where Greene works from curated history with deliberate amorality; reading them together shows what each method can and cannot claim.",
       "source_refs": [],
       "confidence": "medium"
+    },
+    {
+      "id": "true-believer-written-by-eric-hoffer",
+      "source_id": "the-true-believer-hoffer",
+      "target_id": "eric-hoffer",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Eric Hoffer wrote The True Believer.",
+      "source_refs": [
+        "library/books/the-true-believer-hoffer/book.json#google-books-preview",
+        "library/books/the-true-believer-hoffer/book.json#open-library-record"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "true-believer-related-to-laws-human-nature",
+      "source_id": "the-true-believer-hoffer",
+      "target_id": "the-laws-of-human-nature-greene",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both offer broad historical psychologies of hidden motives; Hoffer is shorter and group-centred, while Greene is longer, individual-centred, and more explicitly practical.",
+      "source_refs": [
+        "library/books/the-true-believer-hoffer/book.json#google-books-preview",
+        "library/books/the-laws-of-human-nature-greene/book.json#google-books-preview"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "true-believer-related-to-sapiens",
+      "source_id": "the-true-believer-hoffer",
+      "target_id": "sapiens-harari",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Read Sapiens next for a much broader account of how shared imagined orders enable large-scale cooperation; it complements Hoffer's narrower focus on fanatical movements.",
+      "source_refs": [],
+      "confidence": "medium"
     }
   ]
 }

@@ -4,108 +4,523 @@
   "book_id": "the-true-believer-hoffer",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
+    "compression_fit": "high",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "Hoffer's core mechanism fits in five minutes, but the useful book includes a varied convert taxonomy, several instruments of unity, and a three-stage movement life cycle. Fifteen minutes preserves those distinctions and the major counterarguments; thirty minutes mainly restores examples and qualifications from an already compact original."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "A compact theory of why frustrated people surrender an unwanted self to a mass cause, how leaders forge unity, and how movements pass from criticism through fanaticism to rule.",
+    "verdict": "One of the sharpest short books for generating questions about fanaticism, but its memorable claims are hypotheses drawn from selected history, not a complete or tested explanation of collective action.",
+    "source_ids": [
+      "google-books-preview",
+      "philosophy-science-review",
+      "intellectual-history-review",
+      "acx-review"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Across 125 short sections in four parts, Hoffer asks what makes mass movements attractive, who is most ready to join, how a movement produces united action and self-sacrifice, and how it begins, hardens, and becomes an institution. He compares religious, nationalist, and revolutionary movements, looking for shared psychological machinery beneath different doctrines.",
+      "source_ids": [
+        "google-books-preview",
+        "army-review",
+        "intellectual-history-review"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "The most zealous convert is often seeking escape from a frustrated or devalued individual life more than a particular doctrine. A movement supplies a substitute identity, extravagant hope, certainty, action, comradeship, and an enemy; these dissolve the self into a collective capable of sacrifice. Because the readiness precedes the creed, rival movements can recruit from the same pool and even exchange converts.",
+      "source_ids": [
+        "google-books-preview",
+        "army-review",
+        "acx-review",
+        "intellectual-history-review"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "frustration-and-change",
+      "title": "Frustration turns change into escape",
+      "claim": "People who experience their present life as spoiled are unusually open to movements promising total change.",
+      "explanation": "Discontent alone is not enough. The potential convert must believe change is possible, locate fulfilment in an imagined future, and lose confidence in individual advancement. A collective mission then converts private failure into public destiny.",
+      "representative_example": "Hoffer repeatedly compares the appeal of revolutionary, nationalist, and religious promises to people whose hopes have risen faster than their ability to fulfil them.",
+      "why_it_matters": "It directs attention from doctrine alone to the relationship between expectations, agency, status, and the felt worth of daily life.",
+      "caveat": "Real grievances and frustrated identity do not mechanically produce fanaticism; organisation, repression, networks, ideology, and political opportunity also matter.",
+      "source_ids": [
+        "google-books-preview",
+        "army-review",
+        "terrorism-study"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "self-renunciation",
+      "title": "The movement offers a substitute self",
+      "claim": "The true believer gains worth by surrendering an unwanted individual identity to a larger whole.",
+      "explanation": "Uniformity, ritual, collective action, and a sacred mission reduce the burden of personal choice. Pride returns indirectly: the individual may feel small, but the nation, party, church, or cause is magnificent and eternal.",
+      "representative_example": "A convert can accept privation or death when personal survival is reframed as less important than the movement's future.",
+      "why_it_matters": "Belonging and self-erasure may explain commitment that cannot be understood as a simple calculation of personal benefit.",
+      "caveat": "Collective identity can also support mutual aid, democratic participation, and moral courage without requiring self-contempt or total surrender.",
+      "source_ids": [
+        "google-books-preview",
+        "intellectual-history-review",
+        "army-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "potential-converts",
+      "title": "Readiness is uneven and often transitional",
+      "claim": "Hoffer locates potential converts among people whose identity, status, ambition, or expectations no longer fit their circumstances.",
+      "explanation": "His catalogue includes the new poor rather than only the destitute, misfits, blocked ambitious people, minorities caught between belonging and assimilation, the bored, the guilty, and people whose intense self-concern has failed to produce a satisfying self. Sudden freedom can feel exposing when habits of agency are weak.",
+      "representative_example": "A recently impoverished person remembers a better life and can imagine recovering it, while someone long adapted to bare survival may have less hope and less appetite for upheaval.",
+      "why_it_matters": "The analysis separates absolute hardship from relative loss, frustrated expectation, and threatened identity.",
+      "caveat": "The categories are suggestive portraits, not measured risk factors, and their language can pathologise outsiders while ignoring contented or principled supporters.",
+      "source_ids": [
+        "google-books-preview",
+        "army-review",
+        "acx-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "interchangeability",
+      "title": "Creeds can compete for the same convert",
+      "claim": "Different mass movements can substitute for one another because they satisfy similar needs for belonging, certainty, action, and self-transcendence.",
+      "explanation": "A prospective fanatic may move between political, religious, and nationalist causes while preserving the style of total commitment. Movements therefore fight especially hard against close rivals, and a less destructive source of collective purpose may sometimes drain recruitment from a violent one.",
+      "representative_example": "Hoffer uses dramatic reversals of allegiance and the rivalry among movements in periods of upheaval to argue that the object of faith can change while the need for faith remains.",
+      "why_it_matters": "It warns against explaining recruitment only by the literal creed and suggests that replacement identities can matter as much as rebuttal.",
+      "caveat": "Doctrine, moral purpose, group structure, and historical conditions constrain conversion; movements are not equivalent merely because some motives overlap.",
+      "source_ids": [
+        "google-books-preview",
+        "army-review",
+        "acx-review",
+        "intellectual-history-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "future-and-action",
+      "title": "Hope is most mobilising when it is extravagant",
+      "claim": "A movement shifts fulfilment out of the disappointing present and into a boundless collective future, then uses action to prevent reflection.",
+      "explanation": "The promised future need not be likely; remoteness protects it from testing. Constant campaigns, marching, building, organising, and conflict occupy attention and make individual doubt feel like betrayal or weakness.",
+      "representative_example": "Sacrifice becomes easier when a generation imagines itself as the bridge to a perfected nation, faith, or social order it may never personally enjoy.",
+      "why_it_matters": "It explains why prediction failure may not weaken a cause if fulfilment is always deferred and activity itself supplies meaning.",
+      "caveat": "Future orientation and coordinated action also sustain legitimate reforms; the diagnostic issue is insulation from correction and the destruction of individual judgment.",
+      "source_ids": [
+        "google-books-preview",
+        "intellectual-history-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "unifying-agents",
+      "title": "Unity is manufactured through several channels",
+      "claim": "Doctrine alone does not bind a movement; imitation, ritual, action, leadership, coercion, suspicion, and hatred reinforce one another.",
+      "explanation": "Doctrine supplies certainty and a total interpretation. Ritual and imitation make sameness visible. Joint action turns strangers into comrades. A leader embodies the cause. Coercion disciplines wavering members, while suspicion polices private difference.",
+      "representative_example": "Hoffer treats spectacle and coordinated action as practical means of making an abstract collective identity feel immediate in the body.",
+      "why_it_matters": "It shows why correcting false propositions may do little when commitment is carried by habit, social cost, identity, and shared activity.",
+      "caveat": "The book often groups persuasion and coercion too loosely and gives limited attention to institutions that distribute power within the movement.",
+      "source_ids": [
+        "google-books-preview",
+        "intellectual-history-review",
+        "army-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "hatred-and-enemy",
+      "title": "A common enemy makes difference disappear",
+      "claim": "Hatred unifies because it gives frustration an external object and turns internal unease into righteous struggle.",
+      "explanation": "Members with little else in common can share an enemy. The movement attributes its disappointments to that target, magnifies the target's power, and makes doubt dangerous because it appears to aid the enemy.",
+      "representative_example": "Competing factions can temporarily become one when a leader supplies a vivid external threat.",
+      "why_it_matters": "Enemy construction is a warning sign that a group is replacing explanation with cohesion and making correction socially costly.",
+      "caveat": "Some enemies are real and dangerous. The test is whether evidence can change the account, responsibility is proportionate, and disagreement remains possible.",
+      "source_ids": [
+        "google-books-preview",
+        "intellectual-history-review",
+        "acx-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "movement-life-cycle",
+      "title": "Movements need different leaders at different stages",
+      "claim": "The people who discredit an old order, mobilise a fanatical struggle, and govern a durable institution are rarely the same type.",
+      "explanation": "Hoffer's men of words expose failure and remove faith from existing institutions. Fanatics convert grievance into uncompromising action. Practical people of action curb permanent upheaval, administer gains, and make ordinary life possible. A movement that cannot change type may consume itself.",
+      "representative_example": "The critic opens intellectual space, the fanatic captures it, and the administrator turns victory into routine—or becomes the fanatic's victim.",
+      "why_it_matters": "The model distinguishes recruitment from consolidation and asks when fervour that enabled change becomes an obstacle to governing.",
+      "caveat": "Real movements contain coalitions, bureaucracies, resources, and external pressures that do not follow a clean three-person sequence.",
+      "source_ids": [
+        "google-books-preview",
+        "intellectual-history-review",
+        "acx-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Part One: The Appeal of Mass Movements",
+      "purpose": "Defines the psychological exchange between a dissatisfied individual and an all-embracing cause.",
+      "summary": "The opening moves from desire for change to desire for a substitute identity, then argues that rival movements can draw on a common pool of ready converts. It establishes self-renunciation, future hope, and interchangeability as the book's organising claims.",
+      "idea_ids": [
+        "frustration-and-change",
+        "self-renunciation",
+        "interchangeability"
+      ],
+      "source_ids": [
+        "google-books-preview",
+        "army-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Part Two: The Potential Converts",
+      "purpose": "Builds a portrait gallery of the conditions Hoffer thinks create readiness for total commitment.",
+      "summary": "The longest part separates the abject poor from the newly poor, then considers misfits, blocked ambition, minorities, boredom, guilt, and frustrated selfishness. The categories accumulate rather than forming a tested predictive model.",
+      "idea_ids": [
+        "frustration-and-change",
+        "potential-converts"
+      ],
+      "source_ids": [
+        "google-books-preview",
+        "army-review",
+        "acx-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Part Three: United Action and Self-Sacrifice",
+      "purpose": "Explains how movements convert private readiness into disciplined collective behaviour.",
+      "summary": "Hoffer examines the devaluation of present identity, faith in a glorious future, insulation from fact, and the unifying force of action, imitation, leadership, coercion, suspicion, and hatred. The focus shifts from why someone is recruitable to how a group keeps commitment intense.",
+      "idea_ids": [
+        "self-renunciation",
+        "future-and-action",
+        "unifying-agents",
+        "hatred-and-enemy"
+      ],
+      "source_ids": [
+        "google-books-preview",
+        "intellectual-history-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Part Four: Beginning and End",
+      "purpose": "Places recruitment and unity inside a movement's political life cycle.",
+      "summary": "Critics first destroy confidence in the existing order; fanatics turn the opening into a struggle for total transformation; practical leaders must later restrain fervour and build institutions. The last chapter distinguishes destructive movements from ones that channel collective energy without permanently crushing self-reliance.",
+      "idea_ids": [
+        "movement-life-cycle",
+        "unifying-agents"
+      ],
+      "source_ids": [
+        "google-books-preview",
+        "intellectual-history-review",
+        "acx-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "A preface and 125 numbered reflections grouped into eighteen chapters and four cumulative parts. Individual sections can stand alone, but the argument moves from attraction to recruits, group technology, and movement maturity.",
+    "voice": "Compressed, confident, aphoristic, and morally wary. Hoffer writes in striking oppositions and broad propositions rather than academic qualification.",
+    "pace": "Fast and dense. Most claims arrive in a paragraph or page, with little procedural explanation between observation and conclusion.",
+    "evidence_style": "Comparative historical and literary examples drawn across religions, revolutions, nationalism, and totalitarianism; there is no systematic sampling, measurement, or sustained testing of alternative causes.",
+    "example_style": "Brief names and episodes accumulate to make a pattern feel universal. They are memorable but often too compressed to judge competing interpretations.",
+    "repetition": "Low for a work of social theory. Core themes recur from new angles, but the 125-section form keeps each pass short.",
+    "prerequisites": "No specialist knowledge is required, though historical familiarity helps readers test the analogies rather than accept them on force of style.",
+    "source_ids": [
+      "google-books-preview",
+      "philosophy-science-review",
+      "intellectual-history-review",
+      "goodreads-reception"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 6.4,
+      "confidence": "medium",
+      "summary": "An unusually concise and generative framework with high insight density, held below strong status by selective evidence, psychological overreach, and weak treatment of institutions and counterexamples.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.5,
+          "rationale": "Self-escape, substitute identity, enemy construction, and movement stages make otherwise puzzling commitment legible, but the framework explains too much through frustrated personality.",
+          "source_ids": [
+            "google-books-preview",
+            "army-review",
+            "intellectual-history-review"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 4.5,
+          "rationale": "Hoffer compares a wide historical range and draws coherent mechanisms, yet selected examples and loosely controlled observation cannot establish prevalence, direction of cause, or predictive validity.",
+          "source_ids": [
+            "google-books-preview",
+            "philosophy-science-review",
+            "acx-review"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.5,
+          "rationale": "The link between a devalued self and collective grandeur, the interchangeability hypothesis, and the critic–fanatic–administrator sequence remain non-obvious and productive.",
+          "source_ids": [
+            "google-books-preview",
+            "intellectual-history-review",
+            "terrorism-study"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 6.5,
+          "rationale": "The book supplies useful questions about recruitment, identity, deferred hope, enemies, and transitions to rule, but it cannot reliably diagnose an individual or prescribe policy by itself.",
+          "source_ids": [
+            "army-review",
+            "terrorism-study",
+            "acx-review"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 4.5,
+          "rationale": "Hoffer includes qualifications and a constructive final chapter, but underdevelops doctrine, justified grievance, networks, institutions, coercive states, ordinary membership, and movements that do not fit the fanatic model.",
+          "source_ids": [
+            "google-books-preview",
+            "intellectual-history-review",
+            "philosophy-science-review"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 8.0,
+          "rationale": "The short numbered sections deliver a complete framework with very little padding; compression sometimes removes the evidence and qualification needed to support its certainty.",
+          "source_ids": [
+            "google-books-preview",
+            "goodreads-reception",
+            "philosophy-science-review"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book changes the question from 'What doctrine convinced these people?' to 'What made total commitment emotionally useful, and what social machinery keeps it so?' Its lasting value is that shift of attention. Its danger is turning a partial lens into a contemptuous diagnosis of everyone whose politics differ from one's own.",
+      "source_ids": [
+        "google-books-preview",
+        "intellectual-history-review",
+        "terrorism-study"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Test whether a cause offers agency and belonging or demands the erasure of individual judgment.",
+        "source_ids": [
+          "google-books-preview",
+          "intellectual-history-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "When expectations rise or status collapses, relative frustration may matter more than absolute deprivation.",
+        "source_ids": [
+          "google-books-preview",
+          "army-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Ask what rituals, activities, social costs, and enemies carry a belief before assuming argument alone will change it.",
+        "source_ids": [
+          "google-books-preview",
+          "intellectual-history-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "A movement's ability to win and its ability to govern require different temperaments and institutions.",
+        "source_ids": [
+          "google-books-preview",
+          "acx-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use Hoffer's categories to generate competing questions about a group, never to infer an individual's motives without evidence.",
+        "source_ids": [
+          "philosophy-science-review",
+          "terrorism-study"
+        ],
+        "basis": "inference"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "Hoffer supplied a portable vocabulary for discussing fanaticism across ideological lines and anticipated later interest in identity, narrative, and radicalisation. The book remains important less because it settled the subject than because it stated bold, testable-looking propositions in a form later researchers and practitioners could refine, challenge, or misuse.",
+      "source_ids": [
+        "philosophy-science-review",
+        "terrorism-study",
+        "hoover-archive-profile"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Eric Hoffer was a self-educated labourer and public philosopher, not a social scientist. He wrote during the shadow of Hitler, Stalin, war, nationalism, and revolution, searching for the family resemblance among mass movements. In his preface he presents the work as a set of thoughts and approaches rather than an authoritative textbook. That modest framing matters because the prose itself often sounds universal and final.",
+      "source_ids": [
+        "google-books-preview",
+        "hoover-archive-profile",
+        "philosophy-science-review"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Compares movements with different declared beliefs, which exposes recurring psychological and organisational questions.",
+        "Connects recruitment, maintenance, and institutional transition rather than treating fanaticism as a static personality.",
+        "Uses many concrete historical contrasts and states mechanisms clearly enough to challenge."
+      ],
+      "weaknesses": [
+        "Historical cases are selected and compressed rather than systematically sampled or tested.",
+        "The direction of cause is often unclear: frustration may produce movements, while movements and institutions also produce frustration.",
+        "Broad categories make counterexamples easy to absorb after the fact and offer few predictive thresholds.",
+        "Psychological explanation displaces ideology, class, networks, state capacity, coercion, and justified material grievance."
+      ],
+      "source_ids": [
+        "google-books-preview",
+        "philosophy-science-review",
+        "terrorism-study",
+        "acx-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "The book has remained widely read because it is short, quotable, and apparently portable across eras. Admirers find its comparisons uncannily relevant and its prose bracing; critics see assertion, selective history, excessive psychological reduction, and a framework easily used to label political opponents irrational.",
+      "praise": [
+        "Professional and practitioner readers value the cross-ideological comparison and its focus on the emotional function of belonging.",
+        "Readers repeatedly praise the density, clarity, memorable distinctions, and continued usefulness of the movement life cycle.",
+        "Later scholarship still treats the book as an influential starting point for questions about extremist commitment."
+      ],
+      "criticism": [
+        "The scholarly criticism identifies armchair speculation and loosely controlled observation rather than rigorous theory testing.",
+        "Detailed readers find examples cherry-picked and the pool-of-converts thesis too flexible to falsify.",
+        "The portrait of the frustrated misfit can become elitist, status-quo protecting, or blind to principled collective action."
+      ],
+      "source_ids": [
+        "philosophy-science-review",
+        "intellectual-history-review",
+        "terrorism-study",
+        "acx-review",
+        "goodreads-reception",
+        "hoover-archive-profile"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers of political psychology and intellectual history who want a compact classic to argue with",
+        "People studying recruitment, radicalisation, group identity, propaganda, or movement leadership",
+        "Leaders who need questions about how organisations maintain unity and survive the transition from campaign to administration"
+      ],
+      "not_for": [
+        "Readers seeking a current empirical textbook, reliable individual diagnosis, or a balanced history of any one movement",
+        "People likely to apply a psychology of fanaticism only to opponents while exempting their own groups",
+        "Readers who need institutions, economics, political opportunity, and networks treated as fully as personality"
+      ],
+      "topics": [
+        "Mass movements",
+        "Fanaticism",
+        "Frustration",
+        "Identity",
+        "Belonging",
+        "Self-sacrifice",
+        "Propaganda",
+        "Hatred",
+        "Leadership",
+        "Revolution",
+        "Institutionalisation"
+      ],
+      "source_ids": [
+        "google-books-preview",
+        "army-review",
+        "terrorism-study",
+        "intellectual-history-review"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A clinical psychology of individual extremists",
+        "An empirical sociology textbook or a predictive radicalisation model",
+        "A detailed history of fascism, communism, nationalism, or religion",
+        "An argument that every collective cause is false or every committed member is psychologically defective"
+      ],
+      "omissions": [
+        "Recruitment through family, friendship, media systems, money, institutions, and organised coercion",
+        "Detailed comparison of doctrines, moral goals, constitutional constraints, and actual policy outcomes",
+        "Ordinary, ambivalent, prosocial, or materially interested members who are neither fanatics nor frustrated misfits",
+        "Gender, race, colonial power, and cultural variation as more than passing historical examples"
+      ],
+      "missing_or_weak": [
+        "Operational definitions, systematic data, base rates, failed predictions, and criteria that could disconfirm a claim",
+        "A strong account of when grievance is accurate, when solidarity is healthy, and how democratic movements preserve dissent",
+        "Evidence separating cause from selection and showing which mechanism matters under which conditions"
+      ],
+      "dated_or_contested": [
+        "Mid-century labels such as 'undesirables' and broad claims about minorities, women, races, and national character require historical distance.",
+        "The interchangeability of movements and the claim that frustrated selves dominate recruitment remain provocative, not established general laws.",
+        "The Nazi and Stalinist backdrop can make the mass-movement category seem more uniformly totalitarian than collective action is."
+      ],
+      "source_ids": [
+        "google-books-preview",
+        "philosophy-science-review",
+        "intellectual-history-review",
+        "terrorism-study",
+        "acx-review"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the original if you value terse, quotable argument and want to encounter all 125 propositions in Hoffer's own severe voice; it is short enough to reward active disagreement in the margins.",
+      "summary_is_enough_if": "The fifteen-minute treatment is enough if you need the complete mechanism, convert categories, unifying tools, life cycle, and evidential warning before applying the framework cautiously.",
+      "skip_if": "Skip it if you want a modern evidence synthesis, a morally differentiated history of movements, or a framework you can apply to individuals with confidence.",
+      "format_advice": "Print or ebook best suits the numbered aphorisms and invites stopping to test each claim. Audio works because the prose is compact, but the historical names and rapid generalisations benefit from pauses and rereading.",
+      "source_ids": [
+        "google-books-preview",
+        "philosophy-science-review",
+        "goodreads-reception"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What does Hoffer think the movement gives a person whose individual life feels spoiled?",
+      "Why might movements with opposed doctrines recruit from the same pool?",
+      "Which tools besides doctrine create unity and self-sacrifice?",
+      "What changes between the critic, fanatic, and practical leader?"
+    ],
+    "application_prompts": [
+      "For a movement you understand, list evidence for frustration, doctrine, networks, material interest, coercion, and political opportunity before ranking causes.",
+      "Choose one group you support and one you oppose. Apply the same tests for enemy construction, correction, private judgment, and deferred promises to both.",
+      "Where does an organisation still reward campaign fervour when it now needs administration and dissent?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "The adversarial pass separated Hoffer's claims from established fact, tested the frustrated-convert model against ideology, institutions, networks, coercion, legitimate grievance, and prosocial solidarity, and treated the movement life cycle as a heuristic rather than a law. It also preserved Hoffer's constructive final qualification and the uncertainty in his own biography."
   }
 }

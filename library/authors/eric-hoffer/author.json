@@ -6,20 +6,139 @@
   "name": "Eric Hoffer",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American public philosopher and longshoreman whose compact, aphoristic books examined mass belief, change, work, freedom, and the frustrated self.",
+      "source_ids": ["hoover-archive-profile", "hoover-biographical-study"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Hoffer worked as a migrant labourer before settling in San Francisco and joining the longshoremen's union in 1943. He worked on the waterfront for almost twenty-five years while reading widely, keeping notebooks, and writing. The True Believer, published in 1951, brought him national attention. He later served on the National Commission on the Causes and Prevention of Violence, spent time as an adjunct professor at the University of California, Berkeley, and received the Presidential Medal of Freedom in February 1983. He died in San Francisco in May that year. His early life is unusually uncertain: the archive that holds his papers says the familiar childhood account came almost entirely from Hoffer and cannot be independently verified; documentary evidence instead supports an 1898 birth date, though 1902 is often printed.",
+      "source_ids": ["hoover-archive-profile", "hoover-biographical-study", "reagan-medal-list"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "Hoffer had no recorded formal higher education. He described an intense, self-directed reading life developed through public libraries and migrant work, then turned observations of working people, political upheaval, history, literature, and his own inner life into notebooks and short essays. His distance from universities was central to his public identity as the 'longshoreman philosopher', although he later gained institutional appointments and a national audience.",
+      "source_ids": ["hoover-archive-profile", "hoover-biographical-study", "hoover-papers-record"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "His strength was compressed comparative observation: he could set religious, nationalist, and revolutionary movements beside one another and notice recurring motives. He was not a trained historian, psychologist, or sociologist and did not conduct systematic empirical studies. Treat his work as a source of hypotheses and diagnostic questions, not settled social science or a predictive model.",
+      "source_ids": ["hoover-papers-record", "philosophy-science-review"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Hoffer's working life gave him a perspective outside the professional class and a strong concern with dignity, self-reliance, displacement, and the emotional costs of rapid change. It also encouraged broad psychological generalisation from observation and historical analogy. His early biography partly rests on his own elusive testimony, while his social analysis underweights institutions, ideology, material interests, coercion, and the ordinary members who do not fit his portrait of the frustrated fanatic.",
+      "source_ids": ["hoover-biographical-study", "philosophy-science-review"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "The True Believer",
+      "year": 1951,
+      "kind": "Book",
+      "relationship": "His first and best-known book, comparing the psychology and development of mass movements.",
+      "source_ids": ["hoover-archive-profile"]
+    },
+    {
+      "title": "The Passionate State of Mind",
+      "year": 1955,
+      "kind": "Book",
+      "relationship": "A collection of aphoristic reflections on desire, creativity, insecurity, and belief.",
+      "source_ids": ["hoover-papers-record"]
+    },
+    {
+      "title": "The Ordeal of Change",
+      "year": 1963,
+      "kind": "Book",
+      "relationship": "Essays on rapid social change, insecurity, and adaptation that extend themes from The True Believer.",
+      "source_ids": ["hoover-papers-record"]
+    },
+    {
+      "title": "Working and Thinking on the Waterfront",
+      "year": 1969,
+      "kind": "Book",
+      "relationship": "A journal-shaped record of waterfront labour and Hoffer's writing and thinking life.",
+      "source_ids": ["hoover-archive-profile"]
+    },
+    {
+      "title": "Reflections on the Human Condition",
+      "year": 1973,
+      "kind": "Book",
+      "relationship": "Later aphorisms on human motives, society, freedom, and creativity.",
+      "source_ids": ["hoover-papers-record"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "hoover-archive-profile",
+        "title": "The Longshoreman Philosopher",
+        "author_or_publisher": "Hoover Institution Library & Archives",
+        "url": "https://www.hoover.org/research/longshoreman-philosopher",
+        "type": "official-documentation",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Archival account of Hoffer's documentary record, migrant and waterfront work, first book, later appointments, papers, uncertain early life, and death.",
+        "limitations": "The institution holds Hoffer's papers and writes with evident admiration; the article carefully distinguishes records from Hoffer's own story."
+      },
+      {
+        "id": "hoover-biographical-study",
+        "title": "Eric Hoffer, Genius—And Enigma",
+        "author_or_publisher": "Thomas Bethell; Hoover Institution",
+        "url": "https://www.hoover.org/research/eric-hoffer-genius-and-enigma",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Biographer's explanation of why Hoffer's first decades cannot be independently reconstructed and why later claims have a firmer public record.",
+        "limitations": "Written by an admiring biographer published by the archive holding Hoffer's papers."
+      },
+      {
+        "id": "hoover-papers-record",
+        "title": "Eric Hoffer papers",
+        "author_or_publisher": "Hoover Institution Library & Archives Digital Collections",
+        "url": "https://digitalcollections.hoover.org/objects/98/eric-hoffer-papers",
+        "type": "official-documentation",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Existence, scope, dates, and contents of the Eric Hoffer papers and the documentary basis for his writing career.",
+        "limitations": "A collection record rather than a narrative biography."
+      },
+      {
+        "id": "reagan-medal-list",
+        "title": "Recipients of the Presidential Medal of Freedom, 1981–1989",
+        "author_or_publisher": "Ronald Reagan Presidential Library",
+        "url": "https://www.reaganlibrary.gov/reagans/reagan-administration/recipients-presidential-medal-freedom-1981-1989",
+        "type": "official-documentation",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Eric Hoffer's receipt of the Presidential Medal of Freedom on 23 February 1983.",
+        "limitations": "Supports the award and date only."
+      },
+      {
+        "id": "philosophy-science-review",
+        "title": "Review of Eric Hoffer, The True Believer",
+        "author_or_publisher": "William J. MacKinnon; Philosophy of Science",
+        "url": "https://www.cambridge.org/core/journals/philosophy-of-science/article/eric-hoffer-the-true-believer-thoughts-on-the-nature-of-mass-movements-mentor-book-no-228-new-york-new-american-library-1958-160-pp-50c-paperbound/1A31D72F829FC66A4DCC366C725A97B3",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Contemporary scholarly characterisation of the work as armchair speculation grounded in loosely controlled observation, while noting its potential to prompt rigorous investigation.",
+        "limitations": "A short review of the 1958 Mentor edition rather than a full biography or modern evidence review."
+      }
+    ],
+    "citations": {
+      "/name": ["hoover-archive-profile", "hoover-papers-record"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile prioritises the archival record and explicitly preserves uncertainty about the undocumented first half of Hoffer's life. Career facts are corroborated by official archive and award records.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
