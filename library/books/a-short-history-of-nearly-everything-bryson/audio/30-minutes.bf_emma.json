@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "a-short-history-of-nearly-everything-bryson",
+  "duration": "30-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.84,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/a-short-history-of-nearly-everything-bryson/scripts/30-minutes.md",
+  "source_script_sha256": "c7436a2dca5a63a2a3286f2e2b9244f536df1e569c269a7efab2495265f11f7f",
+  "pronunciation_dictionary_sha256": "bdc28e82b2ca5bbc57f1f6d80ad69ac5928a882d7fd33dd3be4ece5fa4bc8504",
+  "pronunciation_terms": [
+    "Descartes"
+  ],
+  "pronunciation_entries_sha256": "01c781384c48f82d23c541ff2d3646c8f3866a9440fecf825d31bb3e428801ca",
+  "script_words": 4237,
+  "audio_seconds": 1629.365,
+  "measured_wpm": 156.02,
+  "generated_at": "2026-08-13T12:22:16.263239+00:00"
+}
