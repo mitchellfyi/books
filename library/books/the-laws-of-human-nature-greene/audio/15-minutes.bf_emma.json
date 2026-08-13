@@ -1,0 +1,24 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-laws-of-human-nature-greene",
+  "duration": "15-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-laws-of-human-nature-greene/scripts/15-minutes.md",
+  "source_script_sha256": "32ad2d7c2c40b0ba4c3728f55aa2d357f8ee363bca56b74ceb45473e80063550",
+  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_terms": [
+    "Sforza"
+  ],
+  "script_words": 2174,
+  "audio_seconds": 919.072,
+  "measured_wpm": 141.93,
+  "generated_at": "2026-08-13T08:06:10.666121+00:00"
+}

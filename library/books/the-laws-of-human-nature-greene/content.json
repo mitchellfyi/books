@@ -487,19 +487,26 @@
     "reviewed_against_full_book": false,
     "review_notes": "The review separated observation prompts from universal or causal claims, tested the framework against situational and institutional explanations, added risks of projection and amateur diagnosis, and treated historical cases as illustration rather than validation. Every law was cross-checked across primary preview material and two detailed chapter accounts.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
-      "notes": ["Complete after scripts, pronunciation inspection, and local audio generation."]
+      "notes": [
+        "Verified title, author, dates, ISBNs, formats, length, and all eighteen law titles against publisher and book records.",
+        "Cross-checked every law and its principal historical example across primary preview material and two independent detailed chapter accounts.",
+        "Separated illustration from causal proof and challenged projection, body-language certainty, gender binaries, generational labels, individualism, and the framework's weak treatment of institutions and cooperation.",
+        "Confirmed that the 5.7 rating follows the configured content-only calculation and that all inline citations entail the attached claims.",
+        "Reviewed every narration level for distinct function, plain language, content-only endings, word tolerance, and internal consistency.",
+        "Inspected Kokoro phonemes for the author and historical names; added and verified the Sforza override, which both longer tracks used. All four local files are current and duration-calibrated."
+      ]
     }
   }
 }

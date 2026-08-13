@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-laws-of-human-nature-greene",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.12,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-laws-of-human-nature-greene/scripts/5-minutes.md",
+  "source_script_sha256": "ec510122346e59005dfb3eb46d6b26c750e50ad40830b6c067bb7e07d6b95a49",
+  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "pronunciation_terms": [],
+  "script_words": 740,
+  "audio_seconds": 305.702,
+  "measured_wpm": 145.24,
+  "generated_at": "2026-08-13T08:07:25.678864+00:00"
+}
