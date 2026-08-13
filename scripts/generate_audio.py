@@ -178,17 +178,44 @@ class Synthesiser:
         return samples.astype(np.float32)
 
     def calibrate(self, paragraphs: list[list[str]], base_speed: float, target_wpm: int) -> float:
-        """Measure the voice's natural pace on the opening chunks, return adjusted speed."""
-        sample = [chunk for paragraph in paragraphs for chunk in paragraph][:3]
-        if not sample:
+        """Estimate whole-script pace from representative chunks, including fixed pauses."""
+        chunks = [chunk for paragraph in paragraphs for chunk in paragraph]
+        if not chunks:
             return base_speed
-        words = sum(len(chunk.split()) for chunk in sample)
-        seconds = sum(len(self.create(chunk, base_speed)) for chunk in sample) / SAMPLE_RATE
-        measured = words / seconds * 60
-        if abs(measured - target_wpm) / target_wpm <= 0.05:
+
+        # Openings can contain unusually short, fast sentences. Sample across the
+        # whole script so long-form timing is not determined by its first paragraph.
+        sample_count = min(12, len(chunks))
+        if sample_count == 1:
+            sample = chunks
+        else:
+            indices = {
+                round(index * (len(chunks) - 1) / (sample_count - 1))
+                for index in range(sample_count)
+            }
+            sample = [chunks[index] for index in sorted(indices)]
+
+        sample_words = sum(len(chunk.split()) for chunk in sample)
+        sample_seconds = sum(len(self.create(chunk, base_speed)) for chunk in sample) / SAMPLE_RATE
+        speech_wpm = sample_words / sample_seconds * 60
+        total_words = sum(len(chunk.split()) for chunk in chunks)
+        estimated_speech_seconds = total_words / speech_wpm * 60
+        fixed_gap_seconds = (
+            sum(max(0, len(paragraph) - 1) for paragraph in paragraphs) * 0.30
+            + max(0, len(paragraphs) - 1) * 0.55
+        )
+        estimated_wpm = total_words / (estimated_speech_seconds + fixed_gap_seconds) * 60
+        if abs(estimated_wpm - target_wpm) / target_wpm <= 0.05:
             return base_speed
-        adjusted = round(min(1.4, max(0.7, base_speed * target_wpm / measured)), 2)
-        print(f"  calibrated speed {base_speed} -> {adjusted} ({measured:.0f} wpm vs target {target_wpm})")
+
+        target_seconds = total_words / target_wpm * 60
+        target_speech_seconds = max(1, target_seconds - fixed_gap_seconds)
+        adjusted = round(min(1.4, max(0.7,
+            base_speed * estimated_speech_seconds / target_speech_seconds)), 2)
+        print(
+            f"  calibrated speed {base_speed} -> {adjusted} "
+            f"(estimated {estimated_wpm:.0f} wpm vs target {target_wpm})"
+        )
         return adjusted
 
     def render(self, paragraphs: list[list[str]], speed: float) -> np.ndarray:
