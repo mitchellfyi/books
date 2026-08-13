@@ -285,7 +285,7 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Five-part structure and central examples checked against publisher and catalogue contents, then assessed with the author's own explanations, specialist reviews, the Nobel technical account and later adversarial work on priming, dual-process theory and loss aversion.",
     "last_researched": "2026-08-13",

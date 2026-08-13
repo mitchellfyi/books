@@ -556,7 +556,7 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
     "review_notes": "Checked against authorised contents and descriptions, Kahneman's Nobel autobiography and lecture, specialist reviews, institutional records and later adversarial evidence. No user-supplied full text was available, so coverage is structure-and-claims rather than line-by-line.",
     "quality_review": {
@@ -579,7 +579,7 @@
         "System 1 and System 2 are consistently described as personified explanatory constructs, not literal brain systems.",
         "Rating uses content and ideas only; the Nobel Prize, popularity and favourable reception do not affect the score.",
         "Thirty minutes is the shortest version that preserves the book's major domains, practical conditions and evidential corrections.",
-        "The shortest generated audio was sampled for title, author and technical terms; no dictionary correction was required."
+        "Kokoro's British-English phonemes for Daniel Kahneman and the title were inspected; no dictionary correction was required. All four local tracks pass freshness, duration and word-rate checks."
       ]
     }
   }
