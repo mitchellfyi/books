@@ -4,108 +4,485 @@
   "book_id": "a-short-history-of-nearly-everything-bryson",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
+    "compression_fit": "low",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "A five-hundred-page tour of all science: briefs can carry the frame, the method, the standout stories, and the honest verdict on accuracy, but the pleasure is the accumulation. Fifteen minutes covers the arc and the judgement; thirty minutes tours the parts properly; the full experience is the book."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Bill Bryson, admitting he knew nothing about science, spends three years asking scientists how we know what we know, and turns the answers into the bestselling grand tour of the universe, the Earth, life, and us.",
+    "verdict": "The most painless introduction to the whole of science ever written — read it for wonder and the history of discovery, not for precision, because its documented error rate is the price of its charm.",
+    "source_ids": [
+      "prh-short-history",
+      "viu-johnston-review",
+      "jupiter-scientific-review"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Across six parts and thirty chapters, Bryson travels from the Big Bang to the rise of humans: how the universe's scale was discovered, how the Earth was weighed and dated, how Einstein and the quantum physicists rebuilt reality, how meteor strikes and supervolcanoes threaten the planet, how life began and persisted, and how precariously our species arrived — all told through the discoverers, their rivalries, and their mostly forgotten lives.",
+      "source_ids": [
+        "wikipedia-short-history",
+        "prh-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Science is the best story humans have — the universe's whole biography, reconstructed by obsessive, fallible, frequently unlucky people — and the only reason it bores anyone is that it is taught as settled facts instead of as the astonishing detective story of how the facts were won.",
+      "source_ids": [
+        "prh-short-history",
+        "viu-johnston-review"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "history-of-knowing",
+      "title": "How we know, not just what we know",
+      "claim": "The book's real subject is the history of discovery: every fact arrives with the story of the person who won it.",
+      "explanation": "Rather than teaching science directly, Bryson narrates how knowledge was obtained — who weighed the Earth, who dated it, who decoded the atom — an approach an academic reviewer identified as the book's defining method and its key difference from a textbook.",
+      "representative_example": "The Earth's age emerges through generations of attempts — from counting Biblical generations to radiometric dating — each told as biography.",
+      "why_it_matters": "It converts science from a pile of answers into a detective story, which is why the book works on science-averse readers.",
+      "caveat": "The method teaches the drama of discovery better than the content discovered; readers finish knowing the stories more than the science.",
+      "source_ids": [
+        "viu-johnston-review",
+        "wikipedia-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "scale-and-wonder",
+      "title": "The scales are unimaginable, and that is the point",
+      "claim": "The universe, deep time, and the atomic realm operate at magnitudes human intuition cannot hold, and confronting them honestly is the book's engine of wonder.",
+      "explanation": "Bryson's signature move is the scale analogy: solar systems shrunk to diagrams that reveal how empty space is, Earth's history compressed to a day, atoms multiplied until their smallness registers. The analogies made the book famous and beloved of teachers.",
+      "representative_example": "His rendering of the solar system to scale, where planets become peas and the textbook diagrams are exposed as necessary lies.",
+      "why_it_matters": "Scale literacy is arguably the book's most durable educational gift.",
+      "caveat": "Some published analogies contain the book's documented numerical errors; the wonder is reliable, the figures not always.",
+      "source_ids": [
+        "prh-short-history",
+        "jupiter-scientific-review",
+        "goodreads-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "forgotten-discoverers",
+      "title": "Science ran on unlucky obsessives",
+      "claim": "Discovery's history is full of priority disputes, cranks, gentleman amateurs, and researchers robbed of credit, and the book restores them.",
+      "explanation": "Bryson's cast policy favours the overlooked: the clergymen-geologists, the assistants who did the work, the rivals who lost the naming rights. The famous appear too — Newton, Darwin, Einstein — but always as flawed humans in contests, not statues.",
+      "representative_example": "The fossil wars and dating disputes, told as feuds with careers and reputations at stake.",
+      "why_it_matters": "It humanises science as an institution made of rivalry, luck, and persistence.",
+      "caveat": "Great-oddball history entertains but flattens: institutions, funding, and collaborative reality recede behind personalities.",
+      "source_ids": [
+        "wikipedia-short-history",
+        "viu-johnston-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "precarious-existence",
+      "title": "Existence is precarious at every scale",
+      "claim": "From asteroid impacts and supervolcanoes to extinction's statistics, the book keeps returning to how improbable and fragile our presence is.",
+      "explanation": "Part four is an inventory of planetary hazards — impacts, earthquakes, Yellowstone — and the life chapters run on extinction: nearly every species that ever existed is gone, and our lineage squeaked through repeatedly. The book's wonder is always shadowed by contingency.",
+      "representative_example": "The Yellowstone supervolcano chapter, which made the caldera a household anxiety.",
+      "why_it_matters": "It reframes human existence as a lottery win that carries obligations of attention.",
+      "caveat": "Hazard chapters lean on drama; frequencies and risk framing are among the details specialists have corrected.",
+      "source_ids": [
+        "wikipedia-short-history",
+        "jupiter-scientific-review"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "ignorance-frontier",
+      "title": "How much remains unknown",
+      "claim": "The book is honest that science's map has enormous blank spaces — from the deep sea to the nature of most of the universe.",
+      "explanation": "A recurring and humbling note: we have catalogued a fraction of living species, barely explored the oceans, and cannot account for most of the cosmos. Bryson treats the ignorance as invitation rather than scandal.",
+      "representative_example": "His running tallies of how few species are described versus how many are estimated to exist.",
+      "why_it_matters": "It leaves readers with curiosity rather than the false sense of a finished edifice.",
+      "caveat": "Two decades on, some frontiers described have moved; the book is a 2003 snapshot.",
+      "source_ids": [
+        "wikipedia-short-history",
+        "prh-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "charm-versus-accuracy",
+      "title": "The charm has an error rate",
+      "claim": "The book's documented factual slips are the direct cost of its method: one charming amateur synthesising all of science from secondary sources.",
+      "explanation": "Specialist reviewers catalogued genuine errors in the 2003 text — numerical slips, garbled mechanisms — and noted the reliance on popular sources. None sink the book's purpose, but they define its proper use: a gateway and a wonder-machine, not a reference.",
+      "representative_example": "A science site's published error catalogue for the first edition, alongside its recommendation of the book.",
+      "why_it_matters": "Knowing the failure mode lets a reader enjoy the book correctly and check before repeating its numbers.",
+      "caveat": "Later editions corrected some errors; the audiobook and older printings retain them.",
+      "source_ids": [
+        "jupiter-scientific-review",
+        "goodreads-short-history",
+        "wikipedia-short-history"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "Lost in the Cosmos",
+      "purpose": "Open at the largest scale.",
+      "summary": "The Big Bang, the birth of the solar system, and the discovery of the universe's size and emptiness, told through the astronomers who measured it.",
+      "idea_ids": [
+        "scale-and-wonder",
+        "history-of-knowing"
+      ],
+      "source_ids": [
+        "wikipedia-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "The Size of the Earth",
+      "purpose": "Weigh, measure, and date the planet.",
+      "summary": "The surveyors, geologists, and eccentrics who determined the Earth's mass, shape, and staggering age, inventing modern geology in the process.",
+      "idea_ids": [
+        "history-of-knowing",
+        "forgotten-discoverers"
+      ],
+      "source_ids": [
+        "wikipedia-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "A New Age Dawns",
+      "purpose": "Rebuild reality with physics.",
+      "summary": "Einstein and relativity, the quantum revolution, the atom's anatomy, and en route the story of leaded petrol — science's power and its capacity for harm in one arc.",
+      "idea_ids": [
+        "history-of-knowing",
+        "scale-and-wonder"
+      ],
+      "source_ids": [
+        "wikipedia-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Dangerous Planet",
+      "purpose": "Inventory the hazards.",
+      "summary": "Meteor impacts, earthquakes, and the Yellowstone supervolcano: the planet as a precarious host, with the risk chapters that lodged in a generation's imagination.",
+      "idea_ids": [
+        "precarious-existence"
+      ],
+      "source_ids": [
+        "wikipedia-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Life Itself",
+      "purpose": "Tell life's improbable story.",
+      "summary": "The cell, Darwin, DNA's decoding, taxonomy's chaos, and extinction's arithmetic — the longest section, carrying the book's deepest wonder and its ignorance-frontier honesty.",
+      "idea_ids": [
+        "ignorance-frontier",
+        "forgotten-discoverers",
+        "precarious-existence"
+      ],
+      "source_ids": [
+        "wikipedia-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 6,
+      "title": "The Road to Us",
+      "purpose": "Arrive at humans, humbly.",
+      "summary": "Hominid discoveries and the precarious, lucky emergence of our species, ending with the responsibility that knowledge implies.",
+      "idea_ids": [
+        "precarious-existence",
+        "history-of-knowing"
+      ],
+      "source_ids": [
+        "wikipedia-short-history"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Six parts, thirty chapters, arranged from cosmos to humans; each chapter a narrative essay of discovery stories.",
+    "voice": "Bryson's full charm: wide-eyed, funny, awed, translating every abstraction into anecdote and analogy.",
+    "pace": "Consistently brisk; five hundred pages that read far shorter, though the accumulation is best taken in sittings.",
+    "evidence_style": "Secondary synthesis from interviews and popular sources, retold without apparatus; a documented error rate in the details.",
+    "example_style": "Scale analogies, biographical miniatures of discoverers, and vivid catastrophe scenarios.",
+    "repetition": "Little; the subjects rotate continuously.",
+    "prerequisites": "None — the book exists precisely for readers without any.",
+    "source_ids": [
+      "prh-short-history",
+      "viu-johnston-review",
+      "goodreads-short-history"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 5.2,
+      "confidence": "medium",
+      "summary": "Limited as science, superb as invitation: the most effective wonder-machine in popular science writing, taxed by a documented error rate, secondhand sourcing, and a method that teaches discovery stories more than the science itself.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 6.0,
+          "rationale": "The scale analogies and discovery narratives genuinely convey magnitudes and method, but the underlying science is explained at postcard depth, and mechanisms sometimes garble.",
+          "source_ids": [
+            "viu-johnston-review",
+            "jupiter-scientific-review"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 4.5,
+          "rationale": "A charming amateur's synthesis of secondary sources with a specialist-catalogued error rate in the first edition; trustworthy in outline, unreliable in detail.",
+          "source_ids": [
+            "jupiter-scientific-review",
+            "wikipedia-short-history"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 6.0,
+          "rationale": "Scale literacy, deep time, and existence-as-lottery land as durable reorientations for general readers; specialists find familiar material.",
+          "source_ids": [
+            "prh-short-history",
+            "goodreads-short-history"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 3.5,
+          "rationale": "Nothing applicable beyond perspective and conversation; the book neither offers nor intends method.",
+          "source_ids": [
+            "goodreads-short-history"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.5,
+          "rationale": "Remarkable breadth with honest ignorance-frontier passages; but a 2003 snapshot, thin on some fields, and silent about its own reliability limits.",
+          "source_ids": [
+            "wikipedia-short-history",
+            "jupiter-scientific-review"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.0,
+          "rationale": "For its scope the book is remarkably economical, and the rotation of subjects keeps pages earning; the anecdote overhead is the chosen price.",
+          "source_ids": [
+            "viu-johnston-review",
+            "goodreads-short-history"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book's cumulative claim is a double wonder: that the universe is stranger and older and emptier than intuition allows, and that fallible humans nonetheless worked nearly all of it out — which makes both existence and knowledge feel like the improbable gifts they are.",
+      "source_ids": [
+        "prh-short-history",
+        "viu-johnston-review"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Hold the scales: cosmic distance, deep time, and atomic smallness deserve occasional honest contemplation.",
+        "source_ids": [
+          "prh-short-history"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Learn science as the story of how we know; the facts stick when the discovery does.",
+        "source_ids": [
+          "viu-johnston-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Check before repeating: the book's numbers are charming and occasionally wrong.",
+        "source_ids": [
+          "jupiter-scientific-review"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Treat existence statistically: nearly everything that ever lived is extinct, and we are the exception that gets to know it.",
+        "source_ids": [
+          "wikipedia-short-history"
+        ],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "One of the bestselling science books ever written, winner of the Aventis and Descartes prizes, a fixture of school reading lists, and for two decades the default answer to 'which one book makes science exciting?'",
+      "source_ids": [
+        "wikipedia-short-history",
+        "goodreads-short-history"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Bryson wrote it from confessed ignorance: a celebrated travel writer who realised mid-flight that he could not explain the sea, the atom, or the age of anything, and spent three years reading and questioning scientists so that his readers would never have to start from zero again.",
+      "source_ids": [
+        "prh-short-history",
+        "wikipedia-short-history"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Wide synthesis with input from working scientists.",
+        "Two decades of mass readership have stress-tested the set pieces.",
+        "Honest about scientific ignorance where it existed in 2003."
+      ],
+      "weaknesses": [
+        "Specialists catalogued genuine errors in the first edition.",
+        "Heavy reliance on popular secondary sources.",
+        "No in-text sourcing; details untraceable.",
+        "A 2003 snapshot in fast-moving fields."
+      ],
+      "source_ids": [
+        "jupiter-scientific-review",
+        "wikipedia-short-history",
+        "cern-courier-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "A phenomenon: adored by general readers and teachers, honoured with the era's top science-communication prizes, respectfully reviewed by scientists who simultaneously kept lists of its mistakes.",
+      "praise": [
+        "The Aventis Prize 2004 and Descartes Prize 2005.",
+        "Reviewers found it informative, entertaining, and the best single on-ramp to science.",
+        "Teachers adopted it wholesale; a young readers' edition followed."
+      ],
+      "criticism": [
+        "Documented factual errors and garbled mechanisms in the 2003 text.",
+        "Reliance on popular sources over primary literature.",
+        "Physics-and-geology-forward balance; some fields skimmed."
+      ],
+      "source_ids": [
+        "wikipedia-short-history",
+        "jupiter-scientific-review",
+        "cern-courier-review"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers who found school science dull",
+        "Teenagers and adults wanting one grand tour",
+        "Bryson devotees",
+        "Anyone needing wonder restocked"
+      ],
+      "not_for": [
+        "Readers wanting reliable reference detail",
+        "Scientists seeking depth in their own field",
+        "Readers who need current findings"
+      ],
+      "topics": [
+        "Cosmology",
+        "Geology",
+        "Physics",
+        "Evolution",
+        "Natural hazards",
+        "History of science"
+      ],
+      "source_ids": [
+        "prh-short-history",
+        "goodreads-short-history",
+        "wikipedia-short-history"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A textbook or reference",
+        "Current science — it is a 2003 snapshot",
+        "A sourced scholarly work",
+        "Deep on any single field"
+      ],
+      "omissions": [
+        "Mathematics, chemistry as a discipline, and most technology",
+        "The social and institutional structure of modern science",
+        "In-text evidence for its figures"
+      ],
+      "missing_or_weak": [
+        "Documented numerical and mechanistic errors in the first edition",
+        "The balance tilts to physics and geology over the life sciences' modern revolutions"
+      ],
+      "dated_or_contested": [
+        "Two decades of discovery have moved several of its frontiers, from exoplanets to human origins."
+      ],
+      "source_ids": [
+        "jupiter-scientific-review",
+        "wikipedia-short-history"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if you want the wonder itself: the grand tour in Bryson's company remains the most enjoyable route into science ever written, and the young readers who love it become scientists often enough to constitute its best review.",
+      "summary_is_enough_if": "The brief is enough if you want to know what the book does, its arc, and its reliability profile before gifting or committing.",
+      "skip_if": "Skip it if you need accuracy you can cite or science more current than 2003; read a modern field-specific book instead.",
+      "format_advice": "Print or audio both work — the audiobook's narration suits the anecdotes — but prefer a recent corrected edition over early printings.",
+      "source_ids": [
+        "goodreads-short-history",
+        "jupiter-scientific-review"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What is the book's method — what does it teach instead of science itself?",
+      "Why do the scale analogies matter, and what is their known weakness?",
+      "What does the book keep saying about extinction and our own existence?"
+    ],
+    "application_prompts": [
+      "Which scientific 'fact' you repeat could you not currently trace to how it is known?",
+      "Explain deep time to someone this week using one of the book's compression analogies.",
+      "What everyday phenomenon — the sea's salt, the sky's colour — can you not explain, and where would you start?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Built from the documented record, specialist reviews including a published error catalogue, an academic review of its method, and two decades of reception.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity verified: Doubleday 2003 UK first edition (ISBN 9780385408189, 515 pages) and Broadway US paperback; prizes (Aventis 2004 with donated winnings, Descartes 2005) from the documented record.",
+        "Structure follows the documented six parts and thirty chapters; part-level themes from the documented summaries.",
+        "The accuracy critique is central and sourced: a specialist site's error catalogue plus the documented reliance on popular sources; priced into the rating and stated plainly in narration.",
+        "Rating scored on content only; sales, prizes, and Bryson's fame excluded per the rubric (prizes appear in reception, not scoring).",
+        "Narration reviewed against the product contract: content-first opening, no research meta.",
+        "Pronunciation: Descartes was mispronounced by the phonemizer (dis-KARTS) and corrected in the dictionary; Einstein, Yellowstone, and the rest passed."
+      ]
+    }
   }
 }

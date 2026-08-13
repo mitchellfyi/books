@@ -145,6 +145,54 @@
       "source_url": "https://www.brandeis.edu/about/",
       "verified_at": "2026-08-13",
       "notes": "BRAN-dice, as the university and Justice Louis Brandeis's name are pronounced. The unassisted phonemizer produced BRAN-days (bɹˈandeɪz)."
+    },
+    {
+      "term": "Descartes",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "deɪkˈɑːt",
+        "en-us": "deɪkˈɑːɹt"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/descartes",
+      "verified_at": "2026-08-13",
+      "notes": "day-KART with silent s, per Cambridge Dictionary. The unassisted phonemizer produced dis-KARTS (dɪskˈɑːts)."
+    },
+    {
+      "term": "Duhigg",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "dˈuːhɪɡ",
+        "en-us": "dˈuːhɪɡ"
+      },
+      "source_url": "https://www.loc.gov/nls/who-we-are/guidelines-and-specifications/say-how/",
+      "verified_at": "2026-08-13",
+      "notes": "DOO-hig per the Library of Congress Say How guide. The unassisted British phonemizer produced dyoo-hig (djˈuːhɪɡ)."
+    },
+    {
+      "term": "Febreze",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "fəbɹˈiːz",
+        "en-us": "fəbɹˈiːz"
+      },
+      "source_url": "https://forvo.com/word/febreze/",
+      "verified_at": "2026-08-13",
+      "notes": "fuh-BREEZ, supported by the recorded English pronunciations and phonetic spelling. The unassisted phonemizer produced FEB-rez (fˈɛbɹɛz)."
+    },
+    {
+      "term": "Kufa",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "kˈuːfə",
+        "en-us": "kˈuːfə"
+      },
+      "source_url": "https://www.dictionary.com/browse/kufa",
+      "verified_at": "2026-08-13",
+      "notes": "KOO-fuh for the Iraqi city, per Random House's pronunciation at Dictionary.com. The unassisted British phonemizer produced KYOO-fuh (kjˈuːfə)."
     }
   ]
 }

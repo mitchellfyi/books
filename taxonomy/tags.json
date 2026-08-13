@@ -411,6 +411,13 @@
       "aliases": []
     },
     {
+      "id": "science",
+      "kind": "topic",
+      "label": "Science",
+      "description": "Works whose primary subject is scientific knowledge, discovery, or method across disciplines.",
+      "aliases": []
+    },
+    {
       "id": "self-awareness",
       "kind": "topic",
       "label": "Self-awareness",

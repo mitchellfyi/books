@@ -7,25 +7,148 @@
   "alternate_titles": [],
   "author_ids": ["bill-bryson"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2003",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "UK first edition",
+        "publisher": "Doubleday",
+        "publication_date": "2003",
+        "isbn_10": "0385408188",
+        "isbn_13": "9780385408189",
+        "format": "Hardcover",
+        "pages": 515
+      },
+      {
+        "label": "US paperback",
+        "publisher": "Broadway Books",
+        "publication_date": "2004",
+        "isbn_10": "076790818X",
+        "isbn_13": "9780767908184",
+        "format": "Paperback",
+        "pages": 544
+      }
+    ],
+    "contents": [
+      "Part I, Lost in the Cosmos: the Big Bang, the solar system, and the discovery of the universe's scale",
+      "Part II, The Size of the Earth: weighing, measuring, and dating the planet",
+      "Part III, A New Age Dawns: Einstein, relativity, quantum theory, and the atom",
+      "Part IV, Dangerous Planet: meteor impacts, earthquakes, and the Yellowstone supervolcano",
+      "Part V, Life Itself: the cell, Darwin, DNA, and the improbable persistence of life",
+      "Part VI, The Road to Us: human evolution and the precarious rise of our species"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "biology",
+      "evolution",
+      "history",
+      "non-fiction",
+      "science"
+    ],
+    "audiences": [
+      "Readers who found school science dull and suspect it shouldn't have been",
+      "Fans of Bryson's voice",
+      "Young readers and adults wanting one grand tour of scientific knowledge",
+      "Trivia lovers"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-short-history",
+        "title": "A Short History of Nearly Everything",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/A_Short_History_of_Nearly_Everything",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication facts, six-part structure, the Aventis Prize 2004 (prize money donated) and Descartes Prize 2005, and the documented balance of praise and accuracy criticism.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; claims traced where used."
+      },
+      {
+        "id": "prh-short-history",
+        "title": "A Short History of Nearly Everything",
+        "author_or_publisher": "Penguin Random House",
+        "url": "https://www.penguinrandomhouse.com/books/20549/a-short-history-of-nearly-everything-by-bill-bryson/",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "In-print US edition, ISBN 9780767908184, and the publisher's description of the book's aim and method.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Publisher copy."
+      },
+      {
+        "id": "cern-courier-review",
+        "title": "A Short History of Nearly Everything (review)",
+        "author_or_publisher": "CERN Courier",
+        "url": "https://cerncourier.com/a/a-short-history-of-nearly-everything/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A physics-community review of the book's scope, accessibility, and treatment of physical science.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Focuses on the physics content."
+      },
+      {
+        "id": "jupiter-scientific-review",
+        "title": "Book Review for A Short History of Nearly Everything",
+        "author_or_publisher": "Jupiter Scientific",
+        "url": "http://www.jupiterscientific.org/review/shne.html",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A science-site review that catalogues specific factual errors in the 2003 text while assessing its overall merit.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Site of uneven editorial formality; error catalogue is specific and checkable."
+      },
+      {
+        "id": "viu-johnston-review",
+        "title": "Review of A Short History of Nearly Everything",
+        "author_or_publisher": "Ian Johnston, Vancouver Island University",
+        "url": "https://web.viu.ca/johnstoi/reviews/shorthistoryofnearlyeverything.htm",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "An academic reviewer's assessment of the book's method — history of discovery rather than science instruction — and its literary quality.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Individual academic's review page."
+      },
+      {
+        "id": "goodreads-short-history",
+        "title": "A Short History of Nearly Everything",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/21.A_Short_History_of_Nearly_Everything",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "One of the most-rated science books on the platform, with two decades of warm reception and recurring accuracy complaints.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/title": ["wikipedia-short-history", "prh-short-history"],
+      "/author_ids": ["wikipedia-short-history", "prh-short-history"],
+      "/bibliography/first_published": ["wikipedia-short-history"],
+      "/bibliography/original_language": ["wikipedia-short-history"],
+      "/bibliography/editions/0": ["wikipedia-short-history"],
+      "/bibliography/editions/1": ["prh-short-history"],
+      "/bibliography/contents": ["wikipedia-short-history"],
+      "/discovery/tag_ids": ["wikipedia-short-history", "prh-short-history"],
+      "/discovery/audiences": ["prh-short-history", "goodreads-short-history"],
+      "/discovery/formats_available": ["prh-short-history"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the documented record, specialist and academic reviews including an error catalogue, and two decades of reception.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: verify chapter-level details against a full copy via library lending."
+    ]
   }
 }
