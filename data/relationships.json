@@ -801,6 +801,90 @@
         "library/books/guns-germs-and-steel-diamond/book.json"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "behave-related-to-determined",
+      "source_id": "behave-sapolsky",
+      "target_id": "determined-sapolsky",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: the same author's encyclopaedic survey of the biology of behaviour; Determined is its free-will sequel, and the two books share the multi-timescale explanatory machinery.",
+      "source_refs": [
+        "library/books/determined-sapolsky/book.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nudge-related-to-thinking-fast-slow",
+      "source_id": "nudge-richard-thaler-cass-sunstein",
+      "target_id": "thinking-fast-and-slow-daniel-kahneman",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: Nudge is the policy application of the heuristics-and-biases programme Kahneman's book synthesises; Thaler is Kahneman's longtime collaborator.",
+      "source_refs": [
+        "library/books/thinking-fast-and-slow-daniel-kahneman/book.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nudge-related-to-influence",
+      "source_id": "nudge-richard-thaler-cass-sunstein",
+      "target_id": "influence-robert-cialdini",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: both catalogue how choice environments steer decisions — Cialdini from the persuader's field, Thaler and Sunstein from the policy designer's desk.",
+      "source_refs": [
+        "library/books/influence-robert-cialdini/book.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "choice-factory-related-to-alchemy",
+      "source_id": "the-choice-factory-richard-shotton",
+      "target_id": "alchemy-rory-sutherland",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: Shotton's experiment-per-chapter advertising book is the evidence-first companion to Sutherland's Alchemy — same industry, same behavioural toolkit, opposite epistemic style.",
+      "source_refs": [
+        "library/books/alchemy-rory-sutherland/book.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "why-nations-fail-contrasts-with-guns-germs",
+      "source_id": "why-nations-fail-acemoglu",
+      "target_id": "guns-germs-and-steel-diamond",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Discovery justification: the institutions answer to Diamond's geography answer — Acemoglu and Robinson's reversal-of-fortune critique is already documented in the Guns, Germs, and Steel source ledger, and their book is the standard counter-read.",
+      "source_refs": [
+        "library/books/guns-germs-and-steel-diamond/book.json#acemoglu-reversal"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "meditations-related-to-socratic-method",
+      "source_id": "meditations-aurelius",
+      "target_id": "the-socratic-method-farnsworth",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: the surviving classic of applied Greek philosophical practice — Farnsworth's book treats the Stoics as the Socratic method's heirs, and Meditations is the tradition's most-read text.",
+      "source_refs": [
+        "library/books/the-socratic-method-farnsworth/book.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "meditations-related-to-dont-believe",
+      "source_id": "meditations-aurelius",
+      "target_id": "don-t-believe-everything-you-think-nguyen",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Discovery justification: the professional critique in the Nguyen record names Stoic impression-handling as the rigorous ancestor of its thought-distancing move; Meditations is where readers are pointed.",
+      "source_refs": [
+        "library/books/don-t-believe-everything-you-think-nguyen/book.json#vernezze-review"
+      ],
+      "confidence": "medium"
     }
   ]
 }

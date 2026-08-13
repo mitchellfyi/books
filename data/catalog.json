@@ -75,6 +75,14 @@
       "aliases": []
     },
     {
+      "id": "daron-acemoglu",
+      "kind": "author",
+      "name": "Daron Acemoglu",
+      "state": "catalogued",
+      "path": "library/authors/daron-acemoglu/author.json",
+      "aliases": []
+    },
+    {
       "id": "eric-hoffer",
       "kind": "author",
       "name": "Eric Hoffer",
@@ -125,6 +133,14 @@
       "aliases": []
     },
     {
+      "id": "marcus-aurelius",
+      "kind": "author",
+      "name": "Marcus Aurelius",
+      "state": "catalogued",
+      "path": "library/authors/marcus-aurelius/author.json",
+      "aliases": []
+    },
+    {
       "id": "mel-robbins",
       "kind": "author",
       "name": "Mel Robbins",
@@ -138,6 +154,22 @@
       "name": "Michael Greger",
       "state": "catalogued",
       "path": "library/authors/michael-greger/author.json",
+      "aliases": []
+    },
+    {
+      "id": "richard-shotton",
+      "kind": "author",
+      "name": "Richard Shotton",
+      "state": "catalogued",
+      "path": "library/authors/richard-shotton/author.json",
+      "aliases": []
+    },
+    {
+      "id": "richard-thaler",
+      "kind": "author",
+      "name": "Richard Thaler",
+      "state": "catalogued",
+      "path": "library/authors/richard-thaler/author.json",
       "aliases": []
     },
     {
@@ -264,9 +296,10 @@
       "id": "behave-sapolsky",
       "kind": "book",
       "name": "Behave: The Biology of Humans at Our Best and Worst",
-      "state": "recommendation-stub",
-      "author_names": [
-        "Robert M. Sapolsky"
+      "state": "catalogued",
+      "path": "library/books/behave-sapolsky/book.json",
+      "author_ids": [
+        "robert-m-sapolsky"
       ],
       "aliases": [
         "Behave"
@@ -358,13 +391,24 @@
       "aliases": []
     },
     {
+      "id": "meditations-aurelius",
+      "kind": "book",
+      "name": "Meditations",
+      "state": "catalogued",
+      "path": "library/books/meditations-aurelius/book.json",
+      "author_ids": [
+        "marcus-aurelius"
+      ],
+      "aliases": []
+    },
+    {
       "id": "nudge-richard-thaler-cass-sunstein",
       "kind": "book",
       "name": "Nudge",
-      "state": "recommendation-stub",
-      "author_names": [
-        "Richard H. Thaler",
-        "Cass R. Sunstein"
+      "state": "catalogued",
+      "path": "library/books/nudge-richard-thaler-cass-sunstein/book.json",
+      "author_ids": [
+        "richard-thaler"
       ],
       "aliases": []
     },
@@ -407,9 +451,10 @@
       "id": "the-choice-factory-richard-shotton",
       "kind": "book",
       "name": "The Choice Factory",
-      "state": "recommendation-stub",
-      "author_names": [
-        "Richard Shotton"
+      "state": "catalogued",
+      "path": "library/books/the-choice-factory-richard-shotton/book.json",
+      "author_ids": [
+        "richard-shotton"
       ],
       "aliases": []
     },
@@ -545,6 +590,17 @@
       "path": "library/books/unreasonable-hospitality-guidara/book.json",
       "author_ids": [
         "will-guidara"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "why-nations-fail-acemoglu",
+      "kind": "book",
+      "name": "Why Nations Fail",
+      "state": "catalogued",
+      "path": "library/books/why-nations-fail-acemoglu/book.json",
+      "author_ids": [
+        "daron-acemoglu"
       ],
       "aliases": []
     }
