@@ -11,22 +11,31 @@
     "original_language": "Hebrew",
     "editions": [
       {
-        "label": "UK edition",
-        "publisher": "Harvill Secker / Vintage",
+        "label": "First English-language UK hardback",
+        "publisher": "Harvill Secker",
         "publication_date": "2014",
+        "isbn_10": "1846558239",
+        "isbn_13": "9781846558238",
+        "format": "Hardcover",
+        "pages": 443
+      },
+      {
+        "label": "UK Vintage paperback",
+        "publisher": "Vintage",
+        "publication_date": "2015-04-30",
         "isbn_10": "0099590085",
         "isbn_13": "9780099590088",
         "format": "Paperback",
-        "pages": 498
+        "pages": 528
       },
       {
-        "label": "US edition",
+        "label": "US Harper hardcover",
         "publisher": "Harper",
-        "publication_date": "2015",
+        "publication_date": "2015-02-10",
         "isbn_10": "0062316095",
         "isbn_13": "9780062316097",
         "format": "Hardcover",
-        "pages": null
+        "pages": 464
       }
     ],
     "contents": [
@@ -56,40 +65,100 @@
   "research": {
     "sources": [
       {
-        "id": "wikipedia-sapiens",
-        "title": "Sapiens: A Brief History of Humankind",
-        "author_or_publisher": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind",
-        "type": "secondary-summary",
-        "accessed_at": "2026-08-13",
-        "supports": "Publication history (Hebrew 2011, English 2014), the four-revolution structure, the shared-fictions thesis, 65 translations and 182 weeks on the NYT bestseller list, and the documented reception on both sides.",
-        "independence": "community",
-        "quality": "medium",
-        "limitations": "Tertiary; reception quotes traced to named reviewers."
-      },
-      {
-        "id": "openlibrary-sapiens",
-        "title": "Sapiens (work page)",
-        "author_or_publisher": "Open Library",
-        "url": "https://openlibrary.org/works/OL17075811W/Sapiens",
+        "id": "nli-sapiens",
+        "title": "קיצור תולדות האנושות",
+        "author_or_publisher": "National Library of Israel",
+        "url": "https://www.nli.org.il/he/books/NNL_ALEPH990052817830205171/NLI",
         "type": "library-catalogue",
         "accessed_at": "2026-08-13",
-        "supports": "UK edition bibliographic detail (ISBN 9780099590088, 498pp) and the US Harper edition (ISBN 9780062316097).",
-        "independence": "community",
-        "quality": "medium",
-        "limitations": "Catalogue metadata; imprint labels loose between Harvill Secker and Vintage."
+        "supports": "The original Hebrew title, authorship, language and the book's stated aim of surveying the main processes and turning points of human history.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Hebrew catalogue record; it describes the work rather than evaluating its arguments."
+      },
+      {
+        "id": "worldcat-sapiens-uk",
+        "title": "Sapiens: A Brief History of Humankind",
+        "author_or_publisher": "OCLC WorldCat",
+        "url": "https://search.worldcat.org/title/Sapiens-%3A-a-brief-history-of-humankind/oclc/898654432",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "English print edition by Harvill Secker in London in 2014, with the Hebrew work copyrighted in 2011.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Library metadata does not expose the ISBN or pagination on the public page."
+      },
+      {
+        "id": "google-books-sapiens-uk",
+        "title": "Sapiens: A Brief History of Humankind",
+        "author_or_publisher": "Google Books",
+        "url": "https://books.google.com/books/about/Sapiens.html?id=B4ARBAAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "The 2014 Harvill Secker edition, ISBN 9781846558238, 443 pages, and the book's stated subject range.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Catalogue and publisher-description material; not an independent assessment."
+      },
+      {
+        "id": "penguin-sapiens",
+        "title": "Sapiens",
+        "author_or_publisher": "Penguin Books UK",
+        "url": "https://www.penguin.co.uk/books/419795/sapiens-by-harari-yuval-noah/9780099590088",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "The Vintage paperback's 30 April 2015 publication date, ISBN 9780099590088, 528 pages, available formats, description and selected praise.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Authoritative for its edition and formats; promotional for content and reception."
+      },
+      {
+        "id": "kirkus-sapiens",
+        "title": "Sapiens",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/yuval-noah-harari/sapiens/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The US Harper hardcover's publication date, ISBN and 464-page count; a positive review of the book's concise, vigorous handling of major debates and competing views.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Trade review rather than specialist peer review."
+      },
+      {
+        "id": "publishers-weekly-sapiens",
+        "title": "Sapiens: A Brief History of Humankind",
+        "author_or_publisher": "Publishers Weekly",
+        "url": "https://www.publishersweekly.com/9780062316097",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "US edition metadata, the three named revolutions, the fictive-language thesis, the happiness question, and a balanced verdict: provocative and entertaining but limited to skimming the surface.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Short trade review; it does not test the book field by field."
       },
       {
         "id": "strawson-guardian-review",
-        "title": "Sapiens: A Brief History of Humankind review (as documented in the book's reception record)",
+        "title": "Sapiens: A Brief History of Humankind by Yuval Noah Harari – review",
         "author_or_publisher": "Galen Strawson, The Guardian",
         "url": "https://www.theguardian.com/books/2014/sep/11/sapiens-brief-history-humankind-yuval-noah-harari-review",
         "type": "professional-review",
         "accessed_at": "2026-08-13",
-        "supports": "A philosopher's documented verdict: much of the book is interesting and well written, but it is marred by 'carelessness, exaggeration and sensationalism'.",
+        "supports": "The book's main historical arc, engaging delivery, agriculture and happiness arguments, and specific criticism of careless causal claims, exaggeration and sensationalism.",
         "independence": "independent",
         "quality": "high",
-        "limitations": "Accessed via documented quotation."
+        "limitations": "A philosopher's newspaper review, not a systematic review of every discipline covered."
+      },
+      {
+        "id": "shephard-observer-review",
+        "title": "Sapiens: A Brief History of Humankind review – thrilling story, dark message",
+        "author_or_publisher": "Ben Shephard, The Observer",
+        "url": "https://www.theguardian.com/books/2014/sep/21/sapiens-brief-history-mankind-review-yuval-noah-harari",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The four-part structure and a balanced assessment: clear, witty, erudite and thrilling, but broad-brush, occasionally over-simple and prone to overstating science's role in colonialism.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Professional review rather than peer-reviewed scholarship."
       },
       {
         "id": "hallpike-review",
@@ -100,8 +169,8 @@
         "accessed_at": "2026-08-13",
         "supports": "A career anthropologist's documented assessment: the summaries of accepted knowledge are serviceable, but 'whenever he tries to strike out on his own he often gets things wrong' — the book is not 'a serious contribution to knowledge'.",
         "independence": "independent",
-        "quality": "high",
-        "limitations": "Polemical register; Hallpike has his own contested positions."
+        "quality": "medium",
+        "limitations": "A strongly polemical essay in an ideological magazine, not peer review; useful as one named anthropologist's critique, not as field consensus."
       },
       {
         "id": "narayanan-current-affairs",
@@ -112,20 +181,32 @@
         "accessed_at": "2026-08-13",
         "supports": "An evolutionary biologist's documented error catalogue: animal 'vocal languages' misstated, chimpanzees fighting cheetahs they never geographically meet, the Waorani miscast as evidence for state pacification — plus the 'science populist' charge and the thesis-advisor quote about asking questions too large to be wrong.",
         "independence": "independent",
-        "quality": "high",
-        "limitations": "Advocacy-magazine venue; specific claims checkable and checked."
+        "quality": "medium",
+        "limitations": "An expert-authored essay in an advocacy magazine, not peer review; its examples are specific but its wider verdict remains the author's."
       },
       {
-        "id": "mann-wsj-review",
-        "title": "Review of Sapiens (as documented in the book's reception record)",
-        "author_or_publisher": "Charles C. Mann, The Wall Street Journal",
-        "url": "https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind",
-        "type": "professional-review",
+        "id": "mcbrearty-brooks",
+        "title": "The revolution that wasn't: a new interpretation of the origin of modern human behavior",
+        "author_or_publisher": "Sally McBrearty and Alison S. Brooks, Journal of Human Evolution",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11102266/",
+        "type": "specialist-review",
         "accessed_at": "2026-08-13",
-        "supports": "A science journalist's documented verdict: 'a whiff of dorm-room bull sessions' about the book's stimulating but often unsourced assertions.",
+        "supports": "Primary specialist counterevidence to a sudden late Cognitive Revolution: modern human behaviour accumulated in Africa over a long period rather than appearing as a single abrupt package.",
         "independence": "independent",
-        "quality": "medium",
-        "limitations": "Accessed via documented quotation."
+        "quality": "high",
+        "limitations": "Published before Sapiens and therefore evaluates the underlying archaeological model, not Harari's book."
+      },
+      {
+        "id": "larsen-agriculture",
+        "title": "The Agricultural Revolution as Environmental Catastrophe: Implications for Health and Lifestyle in the Holocene",
+        "author_or_publisher": "Clark Spencer Larsen, Annual Review of Anthropology",
+        "url": "https://doi.org/10.1146/annurev.anthro.35.081705.123215",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Bioarchaeological evidence that the shift to agriculture often reduced health and quality of life, while also enabling population growth and complex societies.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Supports an important part of Harari's agriculture argument, not his complete 'fraud' framing or every society."
       },
       {
         "id": "ynharari-sapiens",
@@ -136,43 +217,56 @@
         "accessed_at": "2026-08-13",
         "supports": "The author's own framing of the book's questions and its origin in his Hebrew University world-history course.",
         "independence": "interested",
-        "quality": "medium",
-        "limitations": "Marketing copy."
+        "quality": "high",
+        "limitations": "Author-controlled promotional framing; authoritative for the book's intended claims, not for whether they are correct."
       },
       {
-        "id": "goodreads-sapiens",
-        "title": "Sapiens: A Brief History of Humankind",
-        "author_or_publisher": "Goodreads",
-        "url": "https://www.goodreads.com/book/show/23692271-sapiens",
-        "type": "reader-aggregate",
+        "id": "lemonde-harari-profile",
+        "title": "Yuval Noah Harari, prophète contesté de la big history",
+        "author_or_publisher": "Le Monde",
+        "url": "https://www.lemonde.fr/idees/article/2024/12/13/yuval-noah-harari-auteur-de-sapiens-et-de-nexus-prophete-de-la-big-history_6446839_3232.html",
+        "type": "secondary-summary",
         "accessed_at": "2026-08-13",
-        "supports": "One of the platform's most-rated nonfiction titles: overwhelming warm reception, with a persistent critical minority flagging speculation delivered as fact.",
-        "independence": "community",
-        "quality": "medium",
-        "limitations": "Self-selected raters."
+        "supports": "A retrospective account of Harari's place in big history, his narrative method and influence, plus named scholarly objections to controversial interpretation and overbroad generalisation.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "A journalistic profile in French; it surveys rather than independently adjudicates every disputed claim."
+      },
+      {
+        "id": "huji-harari",
+        "title": "Prof. Yuval Noah Harari",
+        "author_or_publisher": "Hebrew University of Jerusalem, History Department",
+        "url": "https://en.history.huji.ac.il/people/yuval-noah-harari",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Harari's Oxford PhD, original specialisms in world, medieval and military history, current macrohistorical research questions and main books.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Official employer profile; authoritative for credentials and research topics, not an independent evaluation of his work."
       }
     ],
     "citations": {
-      "/title": ["wikipedia-sapiens", "openlibrary-sapiens"],
-      "/alternate_titles": ["wikipedia-sapiens"],
-      "/author_ids": ["wikipedia-sapiens"],
-      "/bibliography/first_published": ["wikipedia-sapiens"],
-      "/bibliography/original_language": ["wikipedia-sapiens"],
-      "/bibliography/editions/0": ["openlibrary-sapiens"],
-      "/bibliography/editions/1": ["openlibrary-sapiens"],
-      "/bibliography/contents": ["wikipedia-sapiens"],
-      "/discovery/tag_ids": ["wikipedia-sapiens"],
-      "/discovery/audiences": ["wikipedia-sapiens", "goodreads-sapiens"],
-      "/discovery/formats_available": ["openlibrary-sapiens", "goodreads-sapiens"]
+      "/title": ["worldcat-sapiens-uk", "google-books-sapiens-uk", "penguin-sapiens"],
+      "/alternate_titles": ["nli-sapiens"],
+      "/author_ids": ["nli-sapiens", "worldcat-sapiens-uk"],
+      "/bibliography/first_published": ["worldcat-sapiens-uk", "kirkus-sapiens"],
+      "/bibliography/original_language": ["nli-sapiens", "worldcat-sapiens-uk"],
+      "/bibliography/editions/0": ["google-books-sapiens-uk", "worldcat-sapiens-uk"],
+      "/bibliography/editions/1": ["penguin-sapiens", "publishers-weekly-sapiens"],
+      "/bibliography/editions/2": ["kirkus-sapiens", "publishers-weekly-sapiens"],
+      "/bibliography/contents": ["ynharari-sapiens", "publishers-weekly-sapiens", "shephard-observer-review"],
+      "/discovery/tag_ids": ["google-books-sapiens-uk", "kirkus-sapiens"],
+      "/discovery/audiences": ["penguin-sapiens", "kirkus-sapiens", "publishers-weekly-sapiens"],
+      "/discovery/formats_available": ["penguin-sapiens", "publishers-weekly-sapiens"]
     }
   },
   "workflow": {
-    "status": "complete",
+    "status": "researched-partial",
     "coverage": "sample-and-secondary",
-    "coverage_notes": "Built from the documented record, two specialist critiques with checkable error catalogues, two documented professional reviews, and a decade of reception.",
+    "coverage_notes": "Checked against publisher and national-library records, the author's stated thesis, four direct professional reviews or profiles, two expert critical essays, and peer-reviewed archaeology and bioarchaeology used to test major claims. No full text was supplied, so coverage remains sample-and-secondary.",
     "last_researched": "2026-08-13",
     "next_steps": [
-      "Optional: verify US hardcover page count against a physical copy."
+      "Regenerate and verify all four local audio tracks after the independent factual audit."
     ]
   }
 }

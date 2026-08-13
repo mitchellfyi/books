@@ -7,13 +7,15 @@
     "compression_fit": "high",
     "complexity": "medium",
     "recommended_level": "15-minutes",
-    "rationale": "An idea-architecture book: four revolutions, one master concept (shared fictions), and a handful of famous reversals. The frame compresses superbly; what a summary cannot carry is the seduction of the prose, and what it can carry — which the book itself does not — is the documented reliability report."
+    "rationale": "An idea-architecture book: four revolutions, one master concept (shared fictions), and a handful of famous reversals. The argument compresses well in fifteen minutes; thirty minutes better preserves the examples, narrative force and important limits."
   },
   "card": {
     "one_sentence": "Yuval Noah Harari compresses seventy thousand years into one argument: Homo sapiens rules the planet because it alone cooperates in large numbers through shared fictions — money, gods, nations, and corporations — and each revolution that scaled the fictions up made the species mightier without making its members happier.",
-    "verdict": "The most seductive big-history synthesis of its generation and a genuinely useful set of conceptual handles — read it for the frames, not the facts, because specialists have documented that its confidence outruns its accuracy.",
+    "verdict": "A vivid, unusually efficient big-history synthesis with memorable ways to think about civilisation, but too broad and unevenly calibrated to use as a factual reference.",
     "source_ids": [
-      "wikipedia-sapiens",
+      "ynharari-sapiens",
+      "publishers-weekly-sapiens",
+      "shephard-observer-review",
       "strawson-guardian-review",
       "narayanan-current-affairs"
     ],
@@ -23,16 +25,17 @@
     "synopsis": {
       "text": "Four revolutions structure the species' story. The Cognitive Revolution (~70,000 years ago) gave sapiens language capable of fiction, and with it cooperation beyond the tribe. The Agricultural Revolution (~10,000 BCE) multiplied the species while degrading its members' lives — 'history's biggest fraud'. The Unification of Humankind knitted cultures together through three universal orders: money, empire, and religion. And the Scientific Revolution (~1500 CE) began when Europeans admitted ignorance, married knowledge to empire and capital, and set the species on course to redesign itself — the book ends with sapiens becoming gods, and asking whether any of it made anyone happier.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "ynharari-sapiens"
+        "ynharari-sapiens",
+        "publishers-weekly-sapiens",
+        "shephard-observer-review"
       ],
       "basis": "synthesis"
     },
     "core_argument": {
       "text": "Large-scale human cooperation runs on intersubjective fictions — things real only because enough minds believe in them — so the deep history of humankind is the history of its imagined orders: which fictions scaled, how they conquered, what they cost the individuals inside them, and what happens now that their believers are acquiring the powers of creation.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "ynharari-sapiens"
+        "ynharari-sapiens",
+        "publishers-weekly-sapiens"
       ],
       "basis": "synthesis"
     }
@@ -41,42 +44,45 @@
     {
       "id": "shared-fictions",
       "title": "Fictions are the species' superpower",
-      "claim": "Sapiens dominates because it cooperates flexibly in unlimited numbers, and the mechanism is shared belief in things that exist only in minds: gods, nations, money, laws, and corporations.",
+      "claim": "Harari argues that sapiens dominates because it can cooperate flexibly in very large numbers through shared belief in gods, nations, money, laws, corporations and other imagined orders.",
       "explanation": "Chimpanzee cooperation caps at the troop, bounded by acquaintance. Fiction removes the cap: strangers who share a story — a god, a flag, a currency — can trust each other without meeting. Harari's set piece is Peugeot: the company owns factories and signs contracts, yet exists nowhere except in collective legal imagination, and would survive the loss of every car and employee.",
       "representative_example": "Money as the most universal fiction: the only story everyone believes, which is why a dollar works between people who share no god, ruler, or language.",
       "why_it_matters": "Once seen, the frame reorganises the reader's world: institutions stop looking natural and start looking maintained.",
-      "caveat": "The idea is a compelling synthesis of existing scholarship — imagined communities, social constructs, legal fictions — delivered as if newly discovered, and specialists note the originality claim is the weakest part.",
+      "caveat": "This is a powerful organising frame, not a complete causal explanation of human dominance. It compresses older work on imagined communities, social constructs and legal fictions into one memorable account.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "hallpike-review"
+        "ynharari-sapiens",
+        "kirkus-sapiens",
+        "lemonde-harari-profile"
       ],
       "basis": "synthesis"
     },
     {
       "id": "cognitive-revolution",
       "title": "The Cognitive Revolution made us the last humans standing",
-      "claim": "Around seventy thousand years ago sapiens acquired fictive language, spread from Africa, and every other human species — Neanderthals included — disappeared.",
-      "explanation": "For most of prehistory at least six human species shared the planet; the book keeps the uncomfortable fact front and centre. Whether by replacement, absorption, or both, only the storyteller survived, carrying traces of the others in its DNA. Harari popularises the gossip theory of language — talk evolved to track social alliances — then adds the twist that mattered: the ability to discuss things that do not exist.",
+      "claim": "The book places a Cognitive Revolution around seventy thousand years ago, linking richer language and shared fiction to sapiens' expansion while other human populations disappeared or were absorbed.",
+      "explanation": "Harari presents a world with several kinds of human, then asks why only Homo sapiens remains. He discusses both replacement and interbreeding, popularises the gossip theory of language, and makes the ability to discuss nonexistent things the decisive step in large-scale cooperation.",
       "representative_example": "The book's emblem of the threshold: a lion-headed figurine — a creature nobody ever saw — carved forty thousand years ago.",
       "why_it_matters": "It reframes human uniqueness from intelligence to imagination, and human history as the aftermath of a single cognitive trick.",
-      "caveat": "The tidy 70,000-year switch is contested; the archaeology suggests gradual emergence, and the book's neuroscience-adjacent claims are among its documented errors.",
+      "caveat": "The abrupt switch is disputed. Archaeological research supports a longer, uneven accumulation of modern behaviour in Africa, so the date works better as Harari's narrative hinge than as settled consensus.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "narayanan-current-affairs"
+        "ynharari-sapiens",
+        "publishers-weekly-sapiens",
+        "mcbrearty-brooks"
       ],
       "basis": "synthesis"
     },
     {
       "id": "agricultural-trap",
       "title": "Farming was history's biggest fraud",
-      "claim": "The Agricultural Revolution multiplied the species while making the average member's life worse — and once inside, there was no way back.",
-      "explanation": "Foragers ate varied diets, worked fewer hours, and carried fewer diseases; farmers got monotonous calories, epidemics, hierarchy, and backbreaking labour, while population growth foreclosed return. Harari's inversion: we did not domesticate wheat, wheat domesticated us — a handful of grasses converted the species into their labour force. The engine is the luxury trap: improvements that become necessities and then chains.",
+      "claim": "Harari argues that farming multiplied the species while often worsening the health and daily life of the people doing it, after population growth made a return to foraging impractical.",
+      "explanation": "The book contrasts varied forager diets and mobility with repetitive farm labour, narrower diets, denser settlements and disease. Harari's inversion is that wheat domesticated us: a few crops spread by recruiting humans into their care. He calls the wider mechanism a luxury trap, where an improvement becomes an expectation and then an obligation.",
       "representative_example": "The luxury trap generalised: from wheat to email, comforts that harden into obligations no one chose.",
       "why_it_matters": "It detaches 'progress for the species' from 'better for the individual' — the book's most durable analytical move.",
-      "caveat": "The thesis is borrowed (famously from Jared Diamond's 'worst mistake' essay and the anthropology behind it) and is a real but contested scholarly position, presented as settled.",
+      "caveat": "Bioarchaeology supports major health costs in many early farming populations, but outcomes varied by place, time and measure. The book turns a supported pattern into a universal-sounding verdict.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "hallpike-review"
+        "ynharari-sapiens",
+        "strawson-guardian-review",
+        "larsen-agriculture"
       ],
       "basis": "synthesis"
     },
@@ -89,8 +95,9 @@
       "why_it_matters": "It hands readers a critical instrument: ask of any institution, who believes this story, and who enforces it?",
       "caveat": "The flattening cuts both ways — treating all normative orders as equivalent fictions erases the differences between them that historians and philosophers spend careers on.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "strawson-guardian-review"
+        "ynharari-sapiens",
+        "kirkus-sapiens",
+        "lemonde-harari-profile"
       ],
       "basis": "synthesis"
     },
@@ -103,7 +110,8 @@
       "why_it_matters": "It explains the modern world's sameness — airports, contracts, universities — as the late stage of three ancient processes.",
       "caveat": "The empire chapters' both-sides ledger has drawn criticism for smoothing atrocity into world-historical bookkeeping.",
       "source_ids": [
-        "wikipedia-sapiens",
+        "ynharari-sapiens",
+        "shephard-observer-review",
         "hallpike-review"
       ],
       "basis": "synthesis"
@@ -111,28 +119,30 @@
     {
       "id": "scientific-ignorance",
       "title": "Science began by admitting ignorance, and grew by marrying empire and capital",
-      "claim": "The Scientific Revolution's real discovery was 'we do not know' — and its engine was the feedback loop between knowledge, conquest, and credit.",
-      "explanation": "Premodern knowledge systems claimed completeness; modern science institutionalised ignorance and thereby licensed discovery. But ideas alone built nothing: European empires funded science that improved conquest that funded science, and capitalism's invention of growth — credit as trust in the future — supplied the fuel. Columbus's ships and Darwin's Beagle sailed on the same loop.",
+      "claim": "Harari presents the admission of ignorance as the Scientific Revolution's key move, then explains its growth through a feedback loop between knowledge, European empire and capital.",
+      "explanation": "In the book's contrast, many earlier knowledge systems treated their central texts as complete, while modern science made uncertainty productive. European states funded research that aided expansion, expansion funded more research, and credit financed projects against belief in a larger future economy.",
       "representative_example": "The book's account of credit: lending against a bigger future is a fiction about tomorrow that, believed widely enough, manufactures the tomorrow.",
       "why_it_matters": "It welds the history of science to the history of money and power, against the innocent textbook version.",
-      "caveat": "Historians of science regard the 'admission of ignorance' hinge as a simplification of a messier, longer story.",
+      "caveat": "The contrast is too clean and too European. The history of science was longer and more cross-cultural, while one positive review still judged that Harari greatly overstated science's role in European colonialism.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "strawson-guardian-review"
+        "ynharari-sapiens",
+        "shephard-observer-review",
+        "lemonde-harari-profile"
       ],
       "basis": "synthesis"
     },
     {
       "id": "happiness-question",
       "title": "None of it demonstrably made us happier",
-      "claim": "History's most neglected question is whether any of the growth in power increased wellbeing — and the honest answer is: probably not much, possibly not at all.",
-      "explanation": "Harari runs the wellbeing literature against the species' triumphs: happiness tracks expectations and biochemistry more than conditions; medieval peasants with low expectations and strong communities may have felt no worse than commuters; and the one population whose lot unambiguously worsened is the animals in industrial farms — which the book calls one of history's greatest crimes. The chapter ends in Buddhist territory: craving, not circumstance, as the engine of dissatisfaction.",
+      "claim": "The book asks whether greater human power produced greater wellbeing and concludes that the historical evidence cannot show a matching rise in happiness.",
+      "explanation": "Harari argues that happiness depends partly on expectations, biology and social bonds rather than material conditions alone. He also separates the success of a species from the experience of its members, especially the animals confined in industrial farming. The chapter ends near a Buddhist view: craving can preserve dissatisfaction even as conditions change.",
       "representative_example": "The dishwasher test: centuries of labour-saving devices, and no evidence the saved labour became contentment rather than raised expectations.",
       "why_it_matters": "It is the book's conscience — the question that turns a victory narrative into an audit.",
       "caveat": "The wellbeing science is summarised at the same postcard depth as everything else, and the meditation-shaped conclusion is the author's practice showing.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "ynharari-sapiens"
+        "ynharari-sapiens",
+        "publishers-weekly-sapiens",
+        "strawson-guardian-review"
       ],
       "basis": "synthesis"
     },
@@ -142,10 +152,10 @@
       "claim": "Sapiens is acquiring the powers of intelligent design — genetic engineering, cyborgs, non-organic life — and the book ends on the warning that we are 'self-made gods... who don't know what they want'.",
       "explanation": "The closing chapters preview the Gilgamesh Project — the war on death itself — and argue natural selection is being replaced by design. History's next chapter belongs to whoever edits desires, not just genes. It is the setup for Homo Deus, and the book's final sentence is its most quoted: irresponsible gods, dissatisfied and unsure what they want.",
       "representative_example": "The Gilgamesh Project framing: humanity's oldest epic is about refusing death, and its newest science is too.",
-      "why_it_matters": "It converts the history into a question about the immediate future — the reason the book colonised policy and tech reading lists.",
+      "why_it_matters": "It turns the history into a question about what a powerful but dissatisfied species may choose to redesign next.",
       "caveat": "The futurism is the book's most speculative register, delivered with the same confidence as its archaeology — the calibration problem in miniature.",
       "source_ids": [
-        "wikipedia-sapiens",
+        "ynharari-sapiens",
         "strawson-guardian-review"
       ],
       "basis": "synthesis"
@@ -162,7 +172,8 @@
         "shared-fictions"
       ],
       "source_ids": [
-        "wikipedia-sapiens"
+        "publishers-weekly-sapiens",
+        "shephard-observer-review"
       ],
       "basis": "synthesis"
     },
@@ -176,7 +187,8 @@
         "imagined-orders"
       ],
       "source_ids": [
-        "wikipedia-sapiens"
+        "ynharari-sapiens",
+        "shephard-observer-review"
       ],
       "basis": "synthesis"
     },
@@ -190,7 +202,8 @@
         "imagined-orders"
       ],
       "source_ids": [
-        "wikipedia-sapiens"
+        "ynharari-sapiens",
+        "shephard-observer-review"
       ],
       "basis": "synthesis"
     },
@@ -205,7 +218,9 @@
         "becoming-gods"
       ],
       "source_ids": [
-        "wikipedia-sapiens"
+        "ynharari-sapiens",
+        "publishers-weekly-sapiens",
+        "shephard-observer-review"
       ],
       "basis": "synthesis"
     }
@@ -219,73 +234,83 @@
     "repetition": "Low; concepts recur as running motifs rather than restatements.",
     "prerequisites": "None.",
     "source_ids": [
-      "wikipedia-sapiens",
+      "kirkus-sapiens",
+      "publishers-weekly-sapiens",
+      "shephard-observer-review",
       "strawson-guardian-review",
-      "mann-wsj-review"
+      "lemonde-harari-profile"
     ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
       "rubric_version": 1,
-      "score": 5.4,
+      "score": 5.9,
       "confidence": "medium",
-      "summary": "Limited: a magnificent set of conceptual handles — shared fictions, the luxury trap, power versus happiness — attached to an evidence base that specialists have documented as error-prone, unsourced, and uncalibrated; the book teaches readers to see institutions as stories while telling its own story with exactly the overconfidence it diagnoses.",
+      "summary": "Mixed: an unusually clear and memorable big-history framework, weakened by a scope that forces surface treatment and by too little separation between supported synthesis, disputed interpretation and speculation.",
       "dimensions": [
         {
           "id": "explanatory-power",
           "score": 7.0,
           "rationale": "The shared-fictions frame plus the four-revolution arc genuinely organises seventy thousand years into usable structure, and the reversals force real rethinking; docked because several 'explanations' are redescriptions wearing explanatory clothes.",
           "source_ids": [
-            "wikipedia-sapiens",
-            "hallpike-review"
+            "ynharari-sapiens",
+            "kirkus-sapiens",
+            "lemonde-harari-profile"
           ]
         },
         {
           "id": "evidence-and-reasoning",
-          "score": 4.5,
-          "rationale": "The documented record is unusually specific: a specialist error catalogue (animal 'languages', impossible chimpanzee-cheetah battles, the miscast Waorani), 'often unsourced assertions' from a science journalist, 'carelessness, exaggeration and sensationalism' from a philosopher, and an anthropologist's verdict that the original parts are the wrong parts.",
+          "score": 5.0,
+          "rationale": "Many central themes rest on real scholarship, including documented health costs from early agriculture, and the book does consider competing views. It loses points for sparse sourcing, specific challenged examples, overly neat causal links and claims stated more firmly than the evidence allows.",
           "source_ids": [
+            "kirkus-sapiens",
+            "larsen-agriculture",
+            "mcbrearty-brooks",
             "narayanan-current-affairs",
-            "mann-wsj-review",
             "strawson-guardian-review",
             "hallpike-review"
           ]
         },
         {
           "id": "insight-value",
-          "score": 7.0,
-          "rationale": "For general readers the reframes are furniture-grade: money and nations as maintained fictions, progress for the species versus welfare of its members, the happiness audit. Specialists recognise the sources — Anderson, Diamond, Searle — but the compression is Harari's own achievement.",
+          "score": 7.5,
+          "rationale": "The reframes remain useful after the factual caveats: institutions as maintained stories, species success versus individual welfare, the luxury trap and the happiness audit. The achievement is synthesis and presentation rather than discovery.",
           "source_ids": [
-            "wikipedia-sapiens",
-            "goodreads-sapiens"
+            "ynharari-sapiens",
+            "kirkus-sapiens",
+            "publishers-weekly-sapiens"
           ]
         },
         {
           "id": "practical-utility",
-          "score": 3.0,
-          "rationale": "Nothing applicable by design; the book offers perspective and conversation, not method — the luxury-trap lens is the closest thing to a usable tool.",
+          "score": 3.5,
+          "rationale": "The book offers perspective rather than a method. Its most usable moves are to question the stories sustaining institutions, detect luxury traps and separate aggregate progress from lived wellbeing.",
           "source_ids": [
-            "goodreads-sapiens"
+            "ynharari-sapiens",
+            "publishers-weekly-sapiens"
           ]
         },
         {
           "id": "completeness-and-calibration",
-          "score": 4.0,
-          "rationale": "Breadth is the product, but calibration is the documented failure: speculation, contested scholarship, and consensus arrive in one register, sources are thin, and the book never marks which of its claims specialists dispute — the reader cannot tell the load-bearing walls from the scenery.",
+          "score": 4.5,
+          "rationale": "The four-part arc covers its chosen span coherently, but breadth is also the main weakness. Regional detail, disagreement and uncertainty are compressed, and the reader is not consistently told which claims are settled, debated or speculative.",
           "source_ids": [
+            "publishers-weekly-sapiens",
+            "shephard-observer-review",
             "strawson-guardian-review",
             "narayanan-current-affairs",
-            "mann-wsj-review"
+            "lemonde-harari-profile"
           ]
         },
         {
           "id": "information-efficiency",
-          "score": 6.5,
-          "rationale": "Seventy thousand years in under five hundred readable pages with low repetition is genuine economy; the later, more speculative chapters earn less per page.",
+          "score": 7.5,
+          "rationale": "The book carries an exceptional range at a fast pace, with memorable examples and little repetition. Efficiency falls in later speculative passages and wherever compression creates false certainty.",
           "source_ids": [
-            "wikipedia-sapiens",
-            "goodreads-sapiens"
+            "kirkus-sapiens",
+            "publishers-weekly-sapiens",
+            "shephard-observer-review"
           ]
         }
       ],
@@ -294,8 +319,8 @@
     "meaning": {
       "text": "The book's cumulative message is double: everything solid about human civilisation — money, law, nation, corporation — is a story that works only while believed, which is both a liberation (orders can be rewritten) and a warning (they can collapse); and power is not the same as wellbeing, so the species' triumph and its members' happiness are separate ledgers that history has never balanced.",
       "source_ids": [
-        "wikipedia-sapiens",
-        "ynharari-sapiens"
+        "ynharari-sapiens",
+        "publishers-weekly-sapiens"
       ],
       "basis": "synthesis"
     },
@@ -303,21 +328,24 @@
       {
         "text": "Ask of any institution: whose story is this, who believes it, and who enforces it? — the fictions lens as a critical habit.",
         "source_ids": [
-          "wikipedia-sapiens"
+          "ynharari-sapiens",
+          "kirkus-sapiens"
         ],
         "basis": "synthesis"
       },
       {
         "text": "Watch for luxury traps: improvements that become necessities and then obligations, from wheat to the inbox.",
         "source_ids": [
-          "wikipedia-sapiens"
+          "ynharari-sapiens",
+          "larsen-agriculture"
         ],
         "basis": "synthesis"
       },
       {
         "text": "Audit power against wellbeing separately: 'better for the species' and 'better for its members' are different claims, usually conflated.",
         "source_ids": [
-          "wikipedia-sapiens"
+          "ynharari-sapiens",
+          "publishers-weekly-sapiens"
         ],
         "basis": "synthesis"
       },
@@ -331,59 +359,64 @@
       }
     ],
     "importance": {
-      "text": "One of the defining nonfiction books of the 2010s: sixty-five languages, years on the bestseller lists, presidential and Silicon Valley endorsements, and the template for a decade of species-scale synthesis — plus an equally documented counter-literature of specialist correction that made it the era's test case for popular science's reliability.",
+      "text": "Sapiens became a defining popular work of big history: it moved species-scale synthesis into mainstream reading and gave public debate a common vocabulary of shared fictions, agricultural traps and power without happiness. Its reach also made it a prominent example of the tension between accessible synthesis and specialist precision.",
       "source_ids": [
-        "wikipedia-sapiens",
+        "penguin-sapiens",
+        "lemonde-harari-profile",
         "narayanan-current-affairs"
       ],
       "basis": "synthesis"
     },
     "author_and_purpose": {
-      "text": "Harari is a Hebrew University historian whose actual specialism is medieval military memoirs; Sapiens grew from his undergraduate world-history course, and the lecture-hall DNA shows in its confidence and compression. His stated purpose is perspective — to make readers see their institutions, appetites, and futures as historical artefacts rather than nature.",
+      "text": "Harari is a Hebrew University historian trained in world, medieval and military history. Sapiens grew from teaching world history and aims to connect humanity's past with present concerns, question familiar narratives and ask whether greater power brought greater wellbeing.",
       "source_ids": [
-        "wikipedia-sapiens",
+        "huji-harari",
         "ynharari-sapiens"
       ],
       "basis": "synthesis"
     },
     "evidence_quality": {
-      "rating": "weak",
+      "rating": "mixed",
       "strengths": [
-        "Synthesises genuine scholarship across a dozen fields.",
-        "The famous set pieces (Peugeot, the wheat inversion) are argumentative devices, not factual claims, and work as such.",
-        "A decade of mass scrutiny has mapped exactly where it fails, which makes it unusually well-documented reading."
+        "Builds a coherent synthesis from research across history, anthropology, biology and economics.",
+        "Some major claims have independent support, including health costs associated with early agriculture.",
+        "Uses examples and competing interpretations to make large questions understandable."
       ],
       "weaknesses": [
-        "A specialist error catalogue with named, checkable mistakes.",
-        "Sparse sourcing for load-bearing assertions.",
-        "No calibration: speculation and consensus in one register.",
-        "Signature theses (agricultural trap, gossip theory) are contested positions presented as settled."
+        "Sparse notes make many load-bearing claims hard to trace.",
+        "Some named examples and causal links have been specifically challenged.",
+        "Contested models, broad synthesis and speculation are often delivered in the same confident voice.",
+        "The sudden Cognitive Revolution and universal agricultural-trap framing are cleaner than the specialist evidence."
       ],
       "source_ids": [
+        "kirkus-sapiens",
+        "larsen-agriculture",
+        "mcbrearty-brooks",
         "narayanan-current-affairs",
         "hallpike-review",
-        "mann-wsj-review",
-        "strawson-guardian-review"
+        "strawson-guardian-review",
+        "lemonde-harari-profile"
       ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "A cultural phenomenon endorsed from the White House to Silicon Valley and beloved by tens of millions of readers — while drawing one of the most specific specialist counter-literatures any trade book has received: a philosopher's charge of sensationalism, a science journalist's dorm-room verdict, an anthropologist's dismissal, and a biologist's error catalogue.",
+      "summary": "Reception split along the book's central trade-off. Major trade reviewers praised its clarity, energy, scope and willingness to test familiar narratives, while also warning that the canvas produces surface treatment and rough generalisation. Stronger critics identified careless causal claims, disputed interpretations and specific factual errors.",
       "praise": [
-        "Global bestseller: 65 languages, 182 weeks on the NYT list.",
-        "Endorsements from Obama, Gates, and Zuckerberg made it the decade's status read.",
-        "Kirkus and mainstream reviews praised the great debates of history aired out."
+        "Kirkus praised its concise, eloquent treatment of major debates and willingness to consider competing views.",
+        "Publishers Weekly found it witty, provocative and entertaining.",
+        "The Observer called it clear, erudite, thrilling and the work of a master populariser."
       ],
       "criticism": [
-        "Strawson: 'carelessness, exaggeration and sensationalism'.",
-        "Mann: 'a whiff of dorm-room bull sessions'; assertions often unsourced.",
-        "Hallpike: not a serious contribution to knowledge; wrong where original.",
-        "Narayanan: documented factual errors in biology and neuroscience; 'science populism'."
+        "Publishers Weekly said the immense scope only lets the book skim the surface.",
+        "The Observer found the broad brush occasionally too simple and judged its science-and-colonialism account overstated.",
+        "Galen Strawson praised much of the book but identified careless causal connections, exaggeration and sensationalism.",
+        "Hallpike and Narayanan offered harsher expert critiques; their specific objections matter, although both appeared as polemical essays rather than peer review."
       ],
       "source_ids": [
-        "wikipedia-sapiens",
+        "kirkus-sapiens",
+        "publishers-weekly-sapiens",
+        "shephard-observer-review",
         "strawson-guardian-review",
-        "mann-wsj-review",
         "hallpike-review",
         "narayanan-current-affairs"
       ],
@@ -409,43 +442,49 @@
         "Futurism and human enhancement"
       ],
       "source_ids": [
-        "wikipedia-sapiens",
-        "goodreads-sapiens"
+        "penguin-sapiens",
+        "kirkus-sapiens",
+        "publishers-weekly-sapiens"
       ],
       "basis": "synthesis"
     },
     "scope": {
       "is_not": [
-        "A sourced work of scholarship — references are sparse by design",
-        "Current consensus — its boldest theses are contested positions",
-        "A history of events: no battles, dates, or personalities to speak of"
+        "A specialist reference work or a substitute for field-specific history",
+        "A guide to current consensus; several of its boldest theses are disputed",
+        "A detailed political or regional history"
       ],
       "omissions": [
         "Calibration: no marking of which claims are speculative",
-        "The scholarship it compresses is rarely credited in-line (Anderson, Diamond, Searle)",
+        "Clear labels separating consensus, interpretation and speculation",
         "Most of the world's regional histories, subsumed into the unification arc"
       ],
       "missing_or_weak": [
-        "The documented error catalogue in biology and neuroscience",
-        "The happiness chapters summarise wellbeing science at postcard depth"
+        "Detailed sourcing for its broadest causal claims",
+        "The happiness chapters treat a large research field at summary depth"
       ],
       "dated_or_contested": [
-        "The tidy 70,000-year Cognitive Revolution and the gossip theory of language are both contested; ancient-DNA findings since 2011 have complicated the replacement story the book popularised."
+        "The tidy 70,000-year Cognitive Revolution is disputed by evidence for gradual behavioural change, and later ancient-DNA work further complicates any simple replacement story."
       ],
       "source_ids": [
+        "mcbrearty-brooks",
+        "larsen-agriculture",
+        "publishers-weekly-sapiens",
+        "shephard-observer-review",
         "narayanan-current-affairs",
         "hallpike-review",
-        "wikipedia-sapiens"
+        "lemonde-harari-profile"
       ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "Read the full book if you want the frames delivered with their full seductive force and you can hold them as provocations — it is the fastest-reading grand narrative in modern nonfiction, and its set pieces reward the original prose.",
-      "summary_is_enough_if": "Stop at a summary if you want the four revolutions, the shared-fictions lens, and the honest reliability report — the ideas transfer completely, and the summary can add the calibration the book omits.",
-      "skip_if": "Skip it if you need dependable facts about human evolution or economics — the specialist corrections are documented — or if you already know Anderson, Diamond, and Searle, whose ideas you will meet here uncredited.",
+      "read_if": "Read the full book if you want the arguments delivered through vivid set pieces and can treat a grand narrative as provocation rather than final authority.",
+      "summary_is_enough_if": "A summary is enough if you mainly want the four revolutions, shared-fictions lens, luxury trap and happiness question, with the main limits made explicit.",
+      "skip_if": "Skip it if you need a dependable source for human evolution, economics or a particular historical period, or if broad generalisation quickly frustrates you.",
       "format_advice": "Any format works; the audiobook suits the lecture-course DNA, but the print edition's maps and figures add little — this is an argument, not a reference.",
       "source_ids": [
-        "goodreads-sapiens",
+        "publishers-weekly-sapiens",
+        "shephard-observer-review",
         "narayanan-current-affairs"
       ],
       "basis": "inference"
@@ -464,28 +503,28 @@
     ]
   },
   "workflow": {
-    "status": "complete",
+    "status": "researched-partial",
     "reviewed_against_full_book": false,
-    "review_notes": "Built from the documented record and an unusually rich critical literature: two specialist critiques with named errors, two documented professional reviews, the author's framing, and a decade of reception.",
+    "review_notes": "Checked against the author's stated account, edition records, direct trade reviews, named expert criticism, and peer-reviewed sources testing the abrupt Cognitive Revolution and agricultural-health claims. No full text was supplied.",
     "quality_review": {
-      "status": "passed",
-      "reviewed_at": "2026-08-13",
+      "status": "pending",
+      "reviewed_at": null,
       "checks": {
-        "identity_and_metadata": true,
-        "content_fidelity": true,
-        "claim_support": true,
-        "counterevidence": true,
-        "citation_entailment": true,
-        "product_fit": true,
-        "plain_language": true,
-        "audio_pronunciation": true
+        "identity_and_metadata": false,
+        "content_fidelity": false,
+        "claim_support": false,
+        "counterevidence": false,
+        "citation_entailment": false,
+        "product_fit": false,
+        "plain_language": false,
+        "audio_pronunciation": false
       },
       "notes": [
-        "Identity verified: Hebrew original 2011, English 2014; UK ISBN 9780099590088 (498pp) and US Harper 9780062316097 from the catalogue record.",
-        "The four-part structure and core theses verified against the documented record; famous set pieces (Peugeot, wheat inversion, Gilgamesh Project) are attested across sources.",
-        "Counterevidence is central and specific: Narayanan's error catalogue, Hallpike's verdict, Strawson's and Mann's documented phrases are cited at the claims they address, and evidence_quality is rated weak accordingly.",
+        "Identity verified: Hebrew original in 2011; Harvill Secker English hardback in 2014; Vintage paperback in 2015; US Harper hardcover in 2015. ISBNs and page counts were checked against publisher, library and trade records.",
+        "The four-part structure, core thesis and major examples were checked against the author's account and direct reviews.",
+        "Counterevidence is proportionate: peer-reviewed archaeology challenges an abrupt Cognitive Revolution, bioarchaeology supports but narrows the agricultural-health argument, and direct reviews identify both strengths and overreach.",
         "Rating scored on content only: sales, endorsements, and cultural status excluded (documented in importance/reception instead).",
-        "Narration reviewed against the product contract: content-first, entertaining register, calibration carried into the scripts because the book omits it.",
+        "Narration reviewed against the product contract: simple, content-first and critical without source or methodology boilerplate.",
         "Pronunciation: Peugeot (PUR-zhoh) and Gilgamesh (GIL-gə-mesh) were mispronounced by the phonemizer and added to the dictionary with Wiktionary references; Harari, Neanderthals verified acceptable; Hammurabi and Waorani avoided in narration in favour of plain descriptions."
       ]
     }
