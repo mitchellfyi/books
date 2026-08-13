@@ -19,6 +19,14 @@
       "aliases": []
     },
     {
+      "id": "the-school-of-life",
+      "kind": "author",
+      "name": "The School of Life",
+      "state": "catalogued",
+      "path": "library/authors/the-school-of-life/author.json",
+      "aliases": ["The School of Life Press"]
+    },
+    {
       "id": "bill-bryson",
       "kind": "author",
       "name": "Bill Bryson",
@@ -420,13 +428,14 @@
     {
       "id": "the-school-of-life-botton",
       "kind": "book",
-      "name": "The School of Life",
+      "name": "The School of Life: An Emotional Education",
       "state": "catalogued",
       "path": "library/books/the-school-of-life-botton/book.json",
       "author_ids": [
+        "the-school-of-life",
         "alain-de-botton"
       ],
-      "aliases": []
+      "aliases": ["The School of Life"]
     },
     {
       "id": "the-socratic-method-farnsworth",

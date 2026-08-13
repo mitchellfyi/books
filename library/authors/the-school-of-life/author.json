@@ -1,0 +1,186 @@
+{
+  "$schema": "../../../schemas/author.schema.json",
+  "schema_version": 1,
+  "id": "the-school-of-life",
+  "type": "author",
+  "name": "The School of Life",
+  "alternate_names": ["The School of Life Press"],
+  "profile": {
+    "one_line": {
+      "text": "A commercial emotional-education organisation and collective publisher using psychology, psychotherapy, philosophy, art, and culture across books, media, therapy, and workplace programmes.",
+      "source_ids": ["about", "faq", "press-catalogue"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Founded in London in 2008 by Alain de Botton with colleagues from education, arts, and culture, The School of Life developed from classes and talks into an international media, publishing, therapeutic, retail, and business-training organisation. Its stated mission is to improve calm, self-understanding, relationships, work, and fulfilment through psychological education.",
+      "source_ids": ["faq", "about", "founder-interview"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "The organisation describes its content as collaborative and draws on psychology, psychotherapy, philosophy, art, and culture. Its publishing arm turns the creative team's work into a coherent house voice across dozens of books and tools. An Emotional Education is an anthology of earlier School of Life Press and blog material, with eighteen contributors thanked and Alain de Botton formally credited and introducing the work.",
+      "source_ids": ["about", "faq", "press-catalogue", "penguin-sample", "smh-review"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Its practical expertise comes from sustained production of educational media, publishing, classes, workplace programmes, and therapeutic services around recurring emotional themes. This supports breadth, editorial consistency, and public communication. It does not make every collective claim a scientific consensus or identify which unnamed contributor has subject expertise for each passage.",
+      "source_ids": ["about", "faq", "books-page", "press-catalogue", "founder-interview"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "The collective favours a calm, reassuring, psychoanalytic, culturally literate voice and treats emotional maturity as teachable. The same organisation defines the need, publishes the advice, sells related tools and programmes, and provides therapy, so its claims require independent checking. Collective authorship also obscures individual responsibility and credentials unless a specific contributor is named.",
+      "source_ids": ["about", "books-page", "press-catalogue", "founder-interview", "smh-review"],
+      "basis": "inference"
+    }
+  },
+  "selected_works": [
+    {
+      "title": "The School of Life: An Emotional Education",
+      "year": 2019,
+      "kind": "Collective anthology",
+      "relationship": "The broadest single compendium of the organisation's first decade of thinking on self, others, relationships, work, and culture.",
+      "source_ids": ["penguin-sample", "book-page"]
+    },
+    {
+      "title": "The Emotionally Intelligent Office",
+      "year": null,
+      "kind": "Book",
+      "relationship": "Applies the collective's emotional-skills framework specifically to workplace behaviour.",
+      "source_ids": ["books-page", "press-catalogue"]
+    },
+    {
+      "title": "The School of Life: Collected Essays",
+      "year": null,
+      "kind": "Book",
+      "relationship": "A later anniversary collection of core essays on self-knowledge, relationships, work, and culture.",
+      "source_ids": ["collected-essays"]
+    }
+  ],
+  "research": {
+    "sources": [
+      {
+        "id": "about",
+        "title": "About Us",
+        "author_or_publisher": "The School of Life",
+        "url": "https://www.theschooloflife.com/about-us/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Current mission, subject sources, psychological-education model, formats, therapy, and corporate offering.",
+        "limitations": "Institutional self-description and marketing."
+      },
+      {
+        "id": "faq",
+        "title": "General FAQs",
+        "author_or_publisher": "The School of Life",
+        "url": "https://www.theschooloflife.com/faq/general-faqs/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Founding date, founder and colleagues, activities, and collaborative content production.",
+        "limitations": "Institutional self-description."
+      },
+      {
+        "id": "books-page",
+        "title": "Books",
+        "author_or_publisher": "The School of Life Shop",
+        "url": "https://shop.theschooloflife.com/collections/books",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Scale and themes of the current publishing catalogue.",
+        "limitations": "Mutable sales catalogue."
+      },
+      {
+        "id": "press-catalogue",
+        "title": "The School of Life Press trade catalogue",
+        "author_or_publisher": "The School of Life Press",
+        "url": "https://assets.theschooloflife.com/wp-content/uploads/2024/05/07092030/AW24-Trade-Catalogue_v5-Digital-Version.pdf",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "The publishing arm's statement that books combine the creative team's thinking into one coherent, calm house voice and its range of subjects and works.",
+        "limitations": "Trade sales document from 2024."
+      },
+      {
+        "id": "founder-interview",
+        "title": "The School of Life: An Interview with Alain de Botton",
+        "author_or_publisher": "Mark Matousek; Psychology Today",
+        "url": "https://www.psychologytoday.com/gb/blog/ethical-wisdom/201311/the-school-life-interview-alain-de-botton/amp",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Founder's account of purpose, early services, staff, reach, commercial goals, and emotional-intelligence positioning.",
+        "limitations": "Friendly 2013 interview; operational figures are historical and self-reported."
+      },
+      {
+        "id": "penguin-sample",
+        "title": "The School of Life: An Emotional Education — sample",
+        "author_or_publisher": "Alain de Botton, The School of Life, and Penguin Books",
+        "url": "https://cdn.penguin.co.uk/dam-assets/books/9780241985830/9780241985830-sample.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Collective copyright, anthology provenance, publication history, formal Alain de Botton credit, and stated curriculum.",
+        "limitations": "Publisher sample; does not name authors for each collected passage."
+      },
+      {
+        "id": "book-page",
+        "title": "An Emotional Education",
+        "author_or_publisher": "The School of Life",
+        "url": "https://shop.theschooloflife.com/products/an-emotional-education",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "The organisation's current account of the anthology and its relationship to de Botton and the first decade of work.",
+        "limitations": "Sales copy."
+      },
+      {
+        "id": "collected-essays",
+        "title": "The School of Life: Collected Essays",
+        "author_or_publisher": "The School of Life",
+        "url": "https://www.theschooloflife.com/shop/the-school-of-life-collected-essays/",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "A later collection and continuity of the collective's major subjects and essay method.",
+        "limitations": "Sales page with no independent assessment."
+      },
+      {
+        "id": "smh-review",
+        "title": "The School of Life: An Emotional Education — review",
+        "author_or_publisher": "Andrew Leigh; Sydney Morning Herald",
+        "url": "https://www.andrewleigh.com/the_school_of_life_an_emotional_education_review_sydney_morning_herald",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent evidence of eighteen contributors, de Botton's shaping role, and the unusually smooth collective voice.",
+        "limitations": "Single book review rather than an institutional investigation."
+      }
+    ],
+    "citations": {
+      "/name": ["about", "faq", "penguin-sample"],
+      "/alternate_names": ["press-catalogue", "penguin-sample"],
+      "/profile/one_line": ["about", "faq", "press-catalogue"],
+      "/profile/biography": ["faq", "about", "founder-interview"],
+      "/profile/background": ["about", "faq", "press-catalogue", "penguin-sample", "smh-review"],
+      "/profile/expertise": ["about", "faq", "books-page", "press-catalogue", "founder-interview"],
+      "/profile/perspective_and_limits": ["about", "books-page", "press-catalogue", "founder-interview", "smh-review"],
+      "/selected_works": ["penguin-sample", "book-page", "books-page", "press-catalogue", "collected-essays"]
+    }
+  },
+  "workflow": {
+    "status": "complete",
+    "coverage_notes": "Organisational author profile checked against current mission and FAQ pages, trade catalogue, book catalogue, formal anthology credits, founder interview, and an independent review. Collective expertise and commercial interests are both explicit.",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}

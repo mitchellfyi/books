@@ -4,108 +4,372 @@
   "book_id": "the-school-of-life-botton",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "high",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "A curriculum digest built from short essays: its claims are aphoristic and compress extremely well. Fifteen minutes carries the philosophy, the five domains, the strongest reframes, and the caveats; thirty minutes walks each domain properly; five minutes is the decision layer. What no brief reproduces is the book's consoling voice at length, which is much of what buyers are buying."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Alain de Botton's distillation of his School of Life: a gently pessimistic curriculum in emotional intelligence covering self-knowledge, other people, love, work, and the uses of culture.",
+    "verdict": "An elegant, consoling primer whose reframes genuinely help some readers — hold it as literary wisdom rather than psychology, because the claims rest on beautiful assertion, not evidence, and the voice divides readers into consoled and cloyed.",
+    "source_ids": ["penguin-school-of-life", "smh-leigh-review", "goodreads-school-of-life"],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Distilling the first decade of the London organisation he founded, de Botton's 2019 volume argues that emotional intelligence is the most important untaught skill, and teaches it through five domains: understanding the self, dealing kindly with others, loving without romantic illusions, working with realistic ambition, and using culture as a therapeutic resource.",
+      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Modern life educates minds and abandons emotions; the result is preventable misery in love, work, and selfhood. Emotional maturity can be taught, and its foundation is the deliberate surrender of perfectionist illusions — about ourselves, our partners, and our prospects — in favour of a kindly, darkly amused realism.",
+      "source_ids": ["penguin-school-of-life", "smh-leigh-review"],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "emotional-education-gap",
+      "title": "The missing subject",
+      "claim": "Schools teach everything except the skills on which happiness actually depends.",
+      "explanation": "We are trained in mathematics and grammar, then released into lives whose outcomes turn on choosing partners, managing moods, handling failure, and understanding ourselves — subjects for which we receive no instruction at all. The book positions itself as the missing curriculum.",
+      "representative_example": "The founding conceit of The School of Life itself: an institution teaching what school never did.",
+      "why_it_matters": "It reframes emotional struggle as an education gap rather than a personal failing.",
+      "caveat": "Whether these skills are teachable by essay, rather than practice or therapy, is assumed more than argued.",
+      "source_ids": ["penguin-school-of-life", "smh-leigh-review"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "self-knowledge-first",
+      "title": "The self is a stranger",
+      "claim": "We are largely opaque to ourselves, and emotional maturity begins with organised introspection.",
+      "explanation": "Drawing on the psychoanalytic tradition, the book argues our adult patterns are shaped by childhoods we barely remember and emotions we rarely examine; it prescribes deliberate practices — philosophical meditation, examining moods for their underlying messages — to convert anxiety and irritability into information.",
+      "representative_example": "The book's signature question: not 'am I upset?' but 'what is my upset trying to tell me that I have not yet heard?'",
+      "why_it_matters": "It turns moods from weather into data, the book's most practical habit.",
+      "caveat": "The psychoanalytic frame is asserted with confidence the evidence base does not share.",
+      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "against-romanticism",
+      "title": "Romanticism ruined love",
+      "claim": "The Romantic ideal — the soulmate, love as feeling, no work required — systematically wrecks real relationships.",
+      "explanation": "The book's central polemic, carried over from de Botton's fiction: expecting a partner to intuit our needs, complete us, and sustain passion indefinitely guarantees disappointment. Love, properly understood, is a skill: choosing to interpret a flawed person charitably, communicating needs like an adult, and accepting that everyone is somewhat impossible to live with.",
+      "representative_example": "His much-quoted reframe that we do not find the right person; we learn to love a wrong one wisely — compatibility as an achievement of love rather than its precondition.",
+      "why_it_matters": "For many readers this chapter alone justifies the book: a workable philosophy of long-term love.",
+      "caveat": "Critics note it universalises one temperament's solution and leans on assertion; the genuinely incompatible exist.",
+      "source_ids": ["penguin-school-of-life", "smh-leigh-review", "goodreads-school-of-life"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "charitable-interpretation",
+      "title": "Interpret others charitably",
+      "claim": "Most rudeness and coldness is overflowing pain, not malice, and reading it that way improves both parties.",
+      "explanation": "The Others chapters teach a hermeneutic of charity: the colleague who snaps is frightened, the friend who withdraws is ashamed. Politeness, vulnerability, and warm interpretation are presented as learnable social technologies rather than natural gifts.",
+      "representative_example": "The book's habit of recasting 'difficult people' as anxious children in adult bodies, including ourselves.",
+      "why_it_matters": "A practical daily reframe that lowers the temperature of ordinary conflict.",
+      "caveat": "Charity as default can shade into excusing genuinely harmful behaviour; the book draws no boundary.",
+      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "wisdom-of-pessimism",
+      "title": "Cheerful pessimism",
+      "claim": "Lowering expectations, about life, love, work, and ourselves, is a route to calm rather than despair.",
+      "explanation": "Against the perfectibility promised by advertising and self-help alike, the book prescribes a smiling gloom: everyone is flawed, every life disappoints somewhere, and accepting this in advance converts catastrophe into normality. Maturity is the ability to mourn the perfect life without bitterness.",
+      "representative_example": "The recurring counsel that a good enough life, in the psychoanalyst's phrase, is the realistic summit.",
+      "why_it_matters": "It is the book's emotional core, and the direct antidote it offers to perfectionist anxiety.",
+      "caveat": "Readers seeking ambition or transformation find this counsel deflating; pessimism as programme suits some temperaments only.",
+      "source_ids": ["penguin-school-of-life", "goodreads-school-of-life", "smh-leigh-review"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "work-and-meaning",
+      "title": "Work, status, and enough",
+      "claim": "Career anguish is largely manufactured by meritocratic mythology; meaning at work comes from service and craft, not status.",
+      "explanation": "The Work chapters extend de Botton's status-anxiety argument: a culture that pretends success is deserved makes failure shameful. The book counsels realistic ambition, work aimed at helping someone, and the separation of self-worth from professional rank.",
+      "representative_example": "The reframing of career crises as identity questions wearing economic clothes.",
+      "why_it_matters": "It addresses the anxieties most working readers actually carry.",
+      "caveat": "Comfortably abstract about economic reality; advice reads differently with rent due.",
+      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
+      "basis": "synthesis"
+    },
+    {
+      "id": "culture-as-therapy",
+      "title": "Culture is a pharmacy",
+      "claim": "Art, ritual, music, and ideas exist, at their best, to console, correct, and rebalance us.",
+      "explanation": "The closing chapters argue culture should be used, not just admired: a painting as a dose of calm, a novel as rehearsal for empathy, ritual as scheduled emotion. Religion's forms are mined for secular use — a de Botton signature — with museums and books recast as instruments of emotional repair.",
+      "representative_example": "The proposal to organise culture by need — what to read when anxious, what to look at when grieving — rather than by period and school.",
+      "why_it_matters": "It hands secular readers a usable relationship with art and ritual.",
+      "caveat": "Aesthetes find the instrumental view of art reductive; the therapeutic framing is the book's most contested aesthetic claim.",
+      "source_ids": ["penguin-school-of-life", "school-of-life-press-edition"],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "The case for an emotional education",
+      "purpose": "Frame the missing curriculum.",
+      "summary": "Modernity educates minds and abandons emotions; emotional intelligence is the master skill, and it can be taught. The book announces itself as the syllabus.",
+      "idea_ids": ["emotional-education-gap"],
+      "source_ids": ["penguin-school-of-life"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Self",
+      "purpose": "Teach organised self-knowledge.",
+      "summary": "Childhood's long shadow, the strangeness of one's own mind, and practices for converting moods into information: introspection as a discipline rather than a mood.",
+      "idea_ids": ["self-knowledge-first", "wisdom-of-pessimism"],
+      "source_ids": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Others and Relationships",
+      "purpose": "Reform how we read people and how we love.",
+      "summary": "Charitable interpretation, politeness, and vulnerability with others; then the anti-romantic centrepiece — love as a skill, partners as lovable wrong people, compatibility as achievement.",
+      "idea_ids": ["charitable-interpretation", "against-romanticism"],
+      "source_ids": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Work",
+      "purpose": "Calm the career.",
+      "summary": "Status anxiety, meritocratic shame, and the search for meaning: realistic ambition and service over rank.",
+      "idea_ids": ["work-and-meaning", "wisdom-of-pessimism"],
+      "source_ids": ["school-of-life-press-edition", "penguin-school-of-life"],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Culture",
+      "purpose": "Put art and ritual to work.",
+      "summary": "Culture as pharmacy: art, books, music, and borrowed religious forms deployed as instruments of consolation and correction, closing the curriculum where de Botton's project began.",
+      "idea_ids": ["culture-as-therapy"],
+      "source_ids": ["school-of-life-press-edition", "penguin-school-of-life"],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Five thematic parts assembled from short, self-contained essays in the School of Life house style; readable in any order.",
+    "voice": "Elegant, aphoristic, gently melancholy, and deliberately consoling; the prose is the product.",
+    "pace": "Quick within essays; even and unhurried across the book, with no argumentative build.",
+    "evidence_style": "Essayistic assertion, drawing on psychoanalytic ideas and cultural examples; no studies or data.",
+    "example_style": "Composite vignettes of ordinary anguish, artworks, and philosophers deployed as consolations.",
+    "repetition": "The pessimist-kindness note sounds throughout; readers hear it as a theme or a drone by temperament.",
+    "prerequisites": "None.",
+    "source_ids": ["penguin-school-of-life", "goodreads-school-of-life", "about-humanity-review"],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 5.7,
+      "confidence": "medium",
+      "summary": "Limited as psychology, real as consolation: humane and quotable reframes for love, work, and selfhood, resting on elegant assertion rather than evidence, in a voice that decides whether the book works on you at all.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 6.0,
+          "rationale": "The reframes — love as skill, moods as messages, status anxiety as manufactured — give ordinary misery clear and usable names, though explanation stays at the level of the aphorism.",
+          "source_ids": ["penguin-school-of-life", "smh-leigh-review"]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 4.5,
+          "rationale": "Claims are asserted beautifully, never tested: the psychoanalytic frame is taken on faith, no research is engaged, and critics' charge of philosophy rendered into bitesize commodities has force.",
+          "source_ids": ["about-humanity-review", "goodreads-school-of-life"]
+        },
+        {
+          "id": "insight-value",
+          "score": 6.0,
+          "rationale": "For readers new to the tradition, the anti-romantic love chapters and the cheerful pessimism genuinely reorganise expectations; readers of de Botton's earlier books meet familiar material rearranged.",
+          "source_ids": ["smh-leigh-review", "goodreads-school-of-life"]
+        },
+        {
+          "id": "practical-utility",
+          "score": 6.0,
+          "rationale": "The daily reframes — charitable interpretation, mood-as-message, mourning perfection — are usable immediately, though the book offers orientation rather than practice.",
+          "source_ids": ["penguin-school-of-life", "goodreads-school-of-life"]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.0,
+          "rationale": "No engagement with evidence, boundary cases, or when its counsel fails; charity toward the harmful and pessimism for the ambitious go unexamined.",
+          "source_ids": ["about-humanity-review", "goodreads-school-of-life"]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 6.0,
+          "rationale": "Essays are short and quotable; across the volume the single emotional note repeats, and the curriculum could compress considerably without loss of instruction.",
+          "source_ids": ["goodreads-school-of-life", "smh-leigh-review"]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book's underlying proposal is that maturity is a curriculum of losses gracefully absorbed: of the perfect self, the perfect partner, the perfect career — and that a culture honest about this would be kinder and calmer.",
+      "source_ids": ["penguin-school-of-life", "smh-leigh-review"],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Treat moods as messages: ask what the anxiety or irritation is trying to say before obeying or suppressing it.",
+        "source_ids": ["penguin-school-of-life"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Love as a skill: interpret your partner charitably, state needs plainly, and expect to be somewhat impossible yourself.",
+        "source_ids": ["penguin-school-of-life", "smh-leigh-review"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Mourn perfection on purpose: lowered expectations, chosen consciously, convert disappointment into calm.",
+        "source_ids": ["penguin-school-of-life"],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Use culture as a pharmacy: pick the book, image, or ritual for the state you are in, not the canon you were assigned.",
+        "source_ids": ["school-of-life-press-edition"],
+        "basis": "synthesis"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "The flagship volume of the most visible emotional-education brand of its era: a Sunday Times bestseller, a TLS Book of the Year, and the print distillation of a school, a publishing line, and a YouTube presence that shaped how a generation talks about feelings.",
+      "source_ids": ["penguin-school-of-life", "tls-books-of-year"],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "De Botton founded The School of Life in 2008 to institutionalise his method of applying ideas to ordinary suffering; a decade on, this book collects the curriculum under his name, both as manifesto for emotional education and as the organisation's calling card.",
+      "source_ids": ["penguin-school-of-life", "smh-leigh-review"],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "weak",
+      "strengths": [
+        "Draws honestly on a coherent tradition — psychoanalytic and philosophical — rather than inventing novelty.",
+        "The composite vignettes ring true to ordinary experience.",
+        "Makes no false claims of scientific backing; the register is openly essayistic."
+      ],
+      "weaknesses": [
+        "No evidence is offered or engaged for any psychological claim.",
+        "The psychoanalytic frame is treated as settled truth.",
+        "Universalises one temperament's consolations; boundary conditions unexamined.",
+        "Critics reasonably describe the method as philosophy commodified into bitesize comfort."
+      ],
+      "source_ids": ["about-humanity-review", "goodreads-school-of-life", "smh-leigh-review"],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Commercially strong and culturally visible, with a long-standing critical split over de Botton himself: elegant consoler to admirers, purveyor of beautiful platitudes to detractors.",
+      "praise": [
+        "A TLS Book of the Year: elegant prose treating self-improvement as a serious existential endeavour.",
+        "An engaging encapsulation of de Botton's philosophy in one volume.",
+        "Readers report genuine consolation, particularly from the relationships chapters."
+      ],
+      "criticism": [
+        "Not his best book — a digest rather than a development.",
+        "The bitesize-commodity charge: complexity smoothed into sentimental aphorism.",
+        "Repetitive in tone; the pessimist-kindness note becomes a drone for some readers."
+      ],
+      "source_ids": ["tls-books-of-year", "smh-leigh-review", "about-humanity-review", "goodreads-school-of-life"],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers wanting a humane, literary entry to emotional skills",
+        "People rethinking romantic expectations",
+        "Fans of the School of Life videos wanting the book",
+        "Gift-buyers: it is built to be given"
+      ],
+      "not_for": [
+        "Readers wanting evidence-based psychology or therapy substitutes",
+        "Those allergic to aphorism and gentle melancholy",
+        "Readers of de Botton's earlier books seeking new material"
+      ],
+      "topics": [
+        "Emotional intelligence",
+        "Self-knowledge",
+        "Romantic relationships",
+        "Work and status",
+        "Consolation",
+        "Culture as therapy"
+      ],
+      "source_ids": ["penguin-school-of-life", "goodreads-school-of-life"],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "Evidence-based psychology",
+        "A therapy manual or substitute",
+        "A structured skills programme",
+        "New ground for existing de Botton readers"
+      ],
+      "omissions": [
+        "Any research on emotional intelligence, relationships, or wellbeing",
+        "Boundary conditions: when charity, pessimism, or introspection misfire",
+        "Economic reality in the work chapters"
+      ],
+      "missing_or_weak": [
+        "The psychoanalytic claims are undefended",
+        "Practice is thin: orientation without exercises",
+        "The therapeutic view of art is asserted against known objections"
+      ],
+      "dated_or_contested": [
+        "The de Botton register itself is the contested object: consolation to some, commodified philosophy to others."
+      ],
+      "source_ids": ["about-humanity-review", "goodreads-school-of-life"],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if the voice works on you — sample any School of Life essay first — and you want a humane bedside companion for love, work, and mood, taken a few essays at a time.",
+      "summary_is_enough_if": "The brief is enough if you want the philosophy and its best reframes without three hundred pages of the register.",
+      "skip_if": "Skip it if you need evidence, exercises, or therapy, or if elegant melancholy reads to you as performance.",
+      "format_advice": "A natural audiobook and an even better bedside print copy for dipping; it is built for episodes, not a straight read.",
+      "source_ids": ["penguin-school-of-life", "goodreads-school-of-life"],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What does the book blame Romanticism for, and what does it propose instead?",
+      "What is the 'mood as message' practice?",
+      "Why does the book prescribe pessimism, and of what kind?"
+    ],
+    "application_prompts": [
+      "Which expectation — of yourself, a partner, or your work — would hurt less consciously mourned than secretly held?",
+      "Choose one difficult person and run a week of charitable interpretation: what changes?",
+      "What would your personal 'pharmacy' of consoling books, music, and images contain?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Built from publisher records, an independent newspaper review, documented TLS recognition, the standing critical line on de Botton's method, and reader reception.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity verified: Penguin page (paperback 2020-09-03, ISBN 9780241985830, 320 pages) and the 2019 School of Life Press first edition (ISBN 9781912891160).",
+        "Structure and themes follow the documented chapter list (Self, Others, Relationships, Work, Culture) and publisher description; signature claims (love as skill, mood as message, culture as pharmacy) are the organisation's most-documented positions.",
+        "Counterevidence recorded: the bitesize-commodity critique, the not-his-best verdict, and reader complaints of repetition — priced into the rating.",
+        "Rating scored on content only; bestseller status and brand reach excluded per the rubric.",
+        "Narration reviewed against the product contract: no research meta, content-first opening, plain language.",
+        "Pronunciation: 'Alain de Botton' phonemized and inspected before audio; a dictionary entry was added because the phonemizer mangled the surname."
+      ]
+    }
   }
 }

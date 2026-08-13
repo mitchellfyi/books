@@ -3,6 +3,45 @@
   "schema_version": 1,
   "relationships": [
     {
+      "id": "school-of-life-written-by-school-of-life",
+      "source_id": "the-school-of-life-botton",
+      "target_id": "the-school-of-life",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "The book is an anthology of The School of Life's collective publishing and blog material.",
+      "source_refs": [
+        "library/books/the-school-of-life-botton/book.json#penguin-sample",
+        "library/books/the-school-of-life-botton/book.json#worldcat"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "school-of-life-written-by-alain-de-botton",
+      "source_id": "the-school-of-life-botton",
+      "target_id": "alain-de-botton",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Alain de Botton introduced and shaped the collective anthology and is formally identified as an author in the Penguin edition.",
+      "source_refs": [
+        "library/books/the-school-of-life-botton/book.json#penguin-sample",
+        "library/books/the-school-of-life-botton/book.json#smh-review"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "school-of-life-related-to-farther-reaches",
+      "source_id": "the-school-of-life-botton",
+      "target_id": "the-farther-reaches-of-human-nature-maslow",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both present human development as an unfinished educational task; Maslow offers a denser humanistic psychology while An Emotional Education offers a broader and more accessible practical curriculum.",
+      "source_refs": [
+        "library/books/the-school-of-life-botton/book.json#penguin-sample",
+        "library/books/the-school-of-life-botton/book.json#full-text-copy"
+      ],
+      "confidence": "medium"
+    },
+    {
       "id": "laws-human-nature-written-by-robert-greene",
       "source_id": "the-laws-of-human-nature-greene",
       "target_id": "robert-greene",

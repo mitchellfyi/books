@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "the-farther-reaches-of-human-nature-maslow",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.9,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/the-farther-reaches-of-human-nature-maslow/scripts/5-minutes.md",
+  "source_script_sha256": "6025c2699b5c1bf3a44564e764a5de47565a9699b254382e27e056643071f859",
+  "pronunciation_dictionary_sha256": "0cdd6a76593b6767bc765006b700f833aee567ca5dc31fc60eaaae967c8c1eb6",
+  "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 742,
+  "audio_seconds": 291.605,
+  "measured_wpm": 152.67,
+  "generated_at": "2026-08-13T11:40:00.804751+00:00"
+}

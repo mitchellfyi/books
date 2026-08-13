@@ -6,20 +6,216 @@
   "name": "Alain de Botton",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "A Swiss-born British essayist and School of Life founder who uses philosophy, literature, art, and psychotherapy to interpret everyday problems of love, status, work, travel, and meaning.",
+      "source_ids": ["official-cv", "psychology-today-interview", "penguin-author"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Zurich in 1969 and based in London, de Botton published Essays in Love at twenty-three and built a career in essayistic books sometimes described as a philosophy of everyday life. His subjects have included Proust, philosophy, travel, status, architecture, work, religion, art, news, and long-term love. In 2008 he helped found The School of Life, an educational and commercial organisation devoted to emotional skills.",
+      "source_ids": ["official-cv", "psychology-today-interview", "school-faq", "penguin-author"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "De Botton grew up first in multilingual Switzerland, later attended school in Britain, and earned a master's degree in philosophy at King's College London after study at Cambridge. His professional background is public-facing writing, broadcasting, and institution-building. He describes his method as developing ideas about ordinary life with help from earlier thinkers rather than producing academic commentary for specialists.",
+      "source_ids": ["psychology-today-interview", "official-cv"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "His demonstrated expertise is literary and philosophical synthesis: turning complex cultural material into clear interpretations of familiar emotional experience, then building books and educational media around it. Decades of work on love, work, status, art, and secular uses of philosophy make him an experienced guide to his own framework. The available profiles do not establish clinical practice or empirical research expertise.",
+      "source_ids": ["official-cv", "penguin-author", "psychology-today-interview"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "De Botton favours accessible usefulness, psychoanalytic interpretation, cultural examples, gentle pessimism, and a secular recovery of functions once served by religion. This produces memorable language and broad reach, but critics argue that it can simplify philosophy, generalise from intuition, and turn complex traditions into polished self-help. His role as founder of an organisation that sells books, therapy, courses, and workplace programmes also gives him an interest in the category of emotional education he promotes.",
+      "source_ids": ["official-cv", "psychology-today-interview", "school-faq", "larb-critique", "new-republic-critique"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Essays in Love",
+      "year": 1993,
+      "kind": "Book",
+      "relationship": "His first book established the hybrid of narrative and reflection on romantic life that he later returned to.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "How Proust Can Change Your Life",
+      "year": 1997,
+      "kind": "Book",
+      "relationship": "An early model of treating difficult literature as practical guidance for ordinary life.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "The Consolations of Philosophy",
+      "year": 2000,
+      "kind": "Book",
+      "relationship": "Applies six philosophers to common forms of suffering and helps define his practical-philosophy method.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "Status Anxiety",
+      "year": 2004,
+      "kind": "Book",
+      "relationship": "Develops the book's later concerns with envy, recognition, success, and social judgement.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "The Architecture of Happiness",
+      "year": 2006,
+      "kind": "Book",
+      "relationship": "Examines how built environments express values and affect emotional life, anticipating the therapeutic use of culture.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "The Pleasures and Sorrows of Work",
+      "year": 2009,
+      "kind": "Book",
+      "relationship": "A longer narrative investigation of meaning, dignity, frustration, and modern work.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "Religion for Atheists",
+      "year": 2012,
+      "kind": "Book",
+      "relationship": "Argues that secular society can borrow religion's practices of ritual, community, art, and repeated moral education.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "Art as Therapy",
+      "year": 2013,
+      "kind": "Book, co-written with John Armstrong",
+      "relationship": "Directly develops the view of art as an instrument for managing ordinary psychological needs.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "The Course of Love",
+      "year": 2016,
+      "kind": "Novel",
+      "relationship": "A narrative treatment of the anti-Romantic account of long-term partnership central to An Emotional Education.",
+      "source_ids": ["official-cv", "penguin-author"]
+    },
+    {
+      "title": "The School of Life: An Emotional Education",
+      "year": 2019,
+      "kind": "Collective anthology, introduced and shaped by Alain de Botton",
+      "relationship": "Gathers the School of Life's first decade of emotional teaching into a five-part curriculum.",
+      "source_ids": ["official-cv", "penguin-sample", "school-book-page"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "official-cv",
+        "title": "CV",
+        "author_or_publisher": "Alain de Botton",
+        "url": "https://www.alaindebotton.com/cv/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Birthplace and year, residence, self-described approach, founding role, career arc, major subjects, selected works, and his description of the 2019 anthology.",
+        "limitations": "Self-authored professional biography; promotional and not independent."
+      },
+      {
+        "id": "penguin-author",
+        "title": "Alain de Botton",
+        "author_or_publisher": "Penguin Books",
+        "url": "https://www.penguin.co.uk/authors/26489/alain-de-botton",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Publisher bibliography and current catalogue relationship, including The School of Life and major related works.",
+        "limitations": "Publisher page emphasises sales presentation and praise."
+      },
+      {
+        "id": "psychology-today-interview",
+        "title": "The School of Life: An Interview with Alain de Botton",
+        "author_or_publisher": "Mark Matousek; Psychology Today",
+        "url": "https://www.psychologytoday.com/gb/blog/ethical-wisdom/201311/the-school-life-interview-alain-de-botton/amp",
+        "type": "interview",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Education and upbringing, public career, the author's own account of founding the School, its purpose, activities, staff, business character, and emotional-intelligence framing.",
+        "limitations": "Friendly interview from 2013; the institutional details are historical and the author's claims are not independently audited."
+      },
+      {
+        "id": "school-faq",
+        "title": "General FAQs",
+        "author_or_publisher": "The School of Life",
+        "url": "https://www.theschooloflife.com/faq/general-faqs/",
+        "type": "employer",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "The organisation's account of its 2008 founding by de Botton and colleagues and the collective nature of its content work.",
+        "limitations": "Institutional self-description."
+      },
+      {
+        "id": "penguin-sample",
+        "title": "The School of Life: An Emotional Education — sample",
+        "author_or_publisher": "Alain de Botton, The School of Life, and Penguin Books",
+        "url": "https://cdn.penguin.co.uk/dam-assets/books/9780241985830/9780241985830-sample.pdf",
+        "type": "book",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "Formal author assertion, collective copyright, anthology provenance, publication data, and the author's role in the book.",
+        "limitations": "Publisher sample and legal credits leave some contributor roles implicit."
+      },
+      {
+        "id": "school-book-page",
+        "title": "An Emotional Education",
+        "author_or_publisher": "The School of Life",
+        "url": "https://shop.theschooloflife.com/products/an-emotional-education",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "accessed_at": "2026-08-13",
+        "supports": "The organisation's description of de Botton presenting its gathered first decade of work.",
+        "limitations": "Current sales copy."
+      },
+      {
+        "id": "larb-critique",
+        "title": "How to Think More (but Not Better): Alain de Botton's School of Life",
+        "author_or_publisher": "Los Angeles Review of Books",
+        "url": "https://lareviewofbooks.org/article/how-to-think-more-but-not-better-alain-de-bottons-school-of-life/",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "A critical view of the School's simplification, house language, and use of philosophy as bite-sized self-help.",
+        "limitations": "Published in 2013 and critiques the broader project, not this 2019 book."
+      },
+      {
+        "id": "new-republic-critique",
+        "title": "Why Alain de Botton Is a Boring Thinker",
+        "author_or_publisher": "The New Republic",
+        "url": "https://newrepublic.com/article/111550/alain-de-botton-school-of-life-how-to",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "accessed_at": "2026-08-13",
+        "supports": "A strongly adversarial assessment of his popularising method, commercial framing, and reduction of literature and philosophy to lessons.",
+        "limitations": "Polemic from 2013; useful as counter-position but not a neutral biography or review of the 2019 anthology."
+      }
+    ],
+    "citations": {
+      "/name": ["official-cv", "penguin-author", "psychology-today-interview"],
+      "/profile/one_line": ["official-cv", "psychology-today-interview", "penguin-author"],
+      "/profile/biography": ["official-cv", "psychology-today-interview", "school-faq", "penguin-author"],
+      "/profile/background": ["official-cv", "psychology-today-interview"],
+      "/profile/expertise": ["official-cv", "penguin-author", "psychology-today-interview"],
+      "/profile/perspective_and_limits": ["official-cv", "psychology-today-interview", "school-faq", "larb-critique", "new-republic-critique"],
+      "/selected_works": ["official-cv", "penguin-author", "penguin-sample", "school-book-page"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile checked against the author's CV, publisher catalogue, a detailed author interview, institutional FAQ, book credits, and two independent adversarial critiques. Expertise is stated by demonstrated work rather than inflated into clinical or research authority.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
