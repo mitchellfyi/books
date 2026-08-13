@@ -313,6 +313,32 @@
       "source_url": "https://en.wiktionary.org/wiki/Nguyen",
       "verified_at": "2026-08-13",
       "notes": "Wiktionary anglicised: /wɪn/, /nwɪn/; 'noo-YEN' is listed only as a spelling pronunciation, and the unassisted phonemizer produced it (nˈuːjɛn)."
+    },
+    {
+      "term": "Cajamarca",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "kˌɑːhəmˈɑːkə",
+        "en-us": "kˌɑːhəmˈɑːɹkə"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Cajamarca",
+      "verified_at": "2026-08-13",
+      "notes": "Spanish /kaxaˈmaɾka/ (Wiktionary), anglicised 'kah-ha-MAR-ka' — the j is an h sound. The unassisted phonemizer produced 'ka-JAH-mah-ka' (kˈadʒɐmˌɑːkə), which is wrong."
+    },
+    {
+      "term": "Atahuallpa",
+      "aliases": [
+        "Atahualpa"
+      ],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ˌɑːtəwˈɑːlpə",
+        "en-us": "ˌɑːtəwˈɑːlpə"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Atahualpa",
+      "verified_at": "2026-08-13",
+      "notes": "English /ˌɑːtəˈwɑːlpə/ 'ah-tə-WAHL-pə' (Wikipedia; Quechua Ataw Wallpa). The unassisted phonemizer produced 'AT-ə-hyoo-al-pə' (ˈatɐhjˌuːalpə), which is wrong."
     }
   ]
 }

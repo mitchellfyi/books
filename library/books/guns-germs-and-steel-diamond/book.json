@@ -3,28 +3,259 @@
   "schema_version": 1,
   "id": "guns-germs-and-steel-diamond",
   "type": "book",
-  "title": "Guns, Germs, and Steel",
-  "alternate_titles": [],
-  "author_ids": ["jared-diamond"],
+  "title": "Guns, Germs, and Steel: The Fates of Human Societies",
+  "alternate_titles": [
+    "Guns, Germs and Steel: A Short History of Everybody for the Last 13,000 Years"
+  ],
+  "author_ids": [
+    "jared-diamond"
+  ],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "1997-03-01",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "First US edition",
+        "publisher": "W. W. Norton & Company",
+        "publication_date": "1997-03-01",
+        "isbn_10": "0393038912",
+        "isbn_13": "9780393038910",
+        "format": "Hardcover",
+        "pages": 480
+      },
+      {
+        "label": "Twenty-year anniversary edition",
+        "publisher": "W. W. Norton & Company",
+        "publication_date": "2017-03-07",
+        "isbn_10": "0393609294",
+        "isbn_13": "9780393609295",
+        "format": "Paperback",
+        "pages": 528
+      }
+    ],
+    "contents": [
+      "Prologue: Yali's question and the proposed environmental answer",
+      "Part One, From Eden to Cajamarca: different starting trajectories, Polynesia as comparison, and Pizarro's capture of Atahuallpa",
+      "Part Two, The Rise and Spread of Food Production: domesticable species, independent origins, diffusion and continental axes",
+      "Part Three, From Food to Guns, Germs, and Steel: disease, writing, technology and political organisation as downstream effects",
+      "Part Four, Around the World: applications to Australia and New Guinea, East Asia, Austronesian expansion, the Americas and Africa",
+      "Epilogue: the proposal to study long-run history as a science"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "anthropology",
+      "evolution",
+      "history",
+      "inequality",
+      "non-fiction",
+      "science"
+    ],
+    "audiences": [
+      "Readers asking why power and material development diverged across continents",
+      "Readers of big-history synthesis who want explicit causal mechanisms",
+      "Students entering debates about geography, culture and institutions",
+      "Readers who want an environmental alternative to racial explanations of conquest"
+    ],
+    "formats_available": [
+      "Hardcover",
+      "Paperback",
+      "Ebook",
+      "Audiobook"
+    ]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "google-books-ggs-1997",
+        "title": "Guns, Germs, and Steel: The Fates of Human Societies",
+        "author_or_publisher": "Google Books / W. W. Norton & Company",
+        "url": "https://books.google.com/books/about/Guns_Germs_and_Steel.html?id=kLKTa_OeoNIC",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "First-edition title, author, publisher, year, ISBNs, 480-page extent, subject, core premise and authorised contents.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Catalogue and publisher-description material; not an independent assessment."
+      },
+      {
+        "id": "google-books-ggs-2017",
+        "title": "Guns, Germs, and Steel: The Fates of Human Societies",
+        "author_or_publisher": "Google Books / W. W. Norton & Company",
+        "url": "https://books.google.com/books/about/Guns_Germs_and_Steel.html?id=XLo9DgAAQBAJ",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "2017 anniversary-edition date, ISBN, 528 pages, expanded contents and the publisher's current account of the argument.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Catalogue and publisher-description material."
+      },
+      {
+        "id": "pbs-ggs-book",
+        "title": "Guns Germs & Steel: About the Book",
+        "author_or_publisher": "PBS / National Geographic",
+        "url": "https://www.pbs.org/gunsgermssteel/about/index.html",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "1 March 1997 first US publication, subtitle history, awards, translation and selected contemporary reception.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Page for the television adaptation and book, promotional in tone."
+      },
+      {
+        "id": "pulitzer-ggs",
+        "title": "The 1998 Pulitzer Prize Winner in General Nonfiction",
+        "author_or_publisher": "The Pulitzer Prizes",
+        "url": "https://www.pulitzer.org/winners/jared-diamond",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "Prize identity, title, author, publisher, 1997 copyright, stated core argument and contemporary author biography.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Prize record reproduces promotional jacket description for the content."
+      },
+      {
+        "id": "kirkus-ggs",
+        "title": "Guns, Germs, and Steel",
+        "author_or_publisher": "Kirkus Reviews",
+        "url": "https://www.kirkusreviews.com/book-reviews/jared-diamond/guns-germs-and-steel/",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Release date, ISBN, an independent outline of the biogeographic case, praise for its synthesis and anti-racist conclusion, and criticism of prose and redundancy.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Short contemporary trade review; its displayed page count conflicts with the Norton/Google Books record and is not used."
+      },
+      {
+        "id": "mcneill-nyrb",
+        "title": "History Upside Down",
+        "author_or_publisher": "William H. McNeill, The New York Review of Books",
+        "url": "https://www.nybooks.com/articles/1997/05/15/history-upside-down/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A world historian's balanced assessment: praise for the fresh biogeographic angle and axis mechanism, alongside criticism that recorded cultural history is reduced to inadequate natural processes.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "One historian's contemporary review."
+      },
+      {
+        "id": "diamond-mcneill-exchange",
+        "title": "Guns, Germs, and Steel — author reply and reviewer response",
+        "author_or_publisher": "Jared Diamond and William H. McNeill, The New York Review of Books",
+        "url": "https://www.nybooks.com/articles/1997/06/26/guns-germs-and-steel/",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "Diamond's stated continental, 13,000-year scope and anti-racist purpose, and McNeill's direct rebuttal concerning culture's capacity to alter environmental constraints.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "A short adversarial exchange, not a systematic evidence review."
+      },
+      {
+        "id": "axis-quantitative-test",
+        "title": "Geography is not destiny: A quantitative test of Diamond's axis of orientation hypothesis",
+        "author_or_publisher": "Bromham and Cardillo, PLOS ONE",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10808877/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A direct quantitative test finding scarce prior evidence and challenging the strong form of continental-axis determinism while discussing qualified diffusion patterns.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Tests one central mechanism with proxy measures; it does not evaluate the whole book."
+      },
+      {
+        "id": "olsson-hibbs-biogeography",
+        "title": "Biogeography and Long-Run Economic Development",
+        "author_or_publisher": "Ola Olsson and Douglas A. Hibbs Jr., European Economic Review",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0014292103001016",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A formal model and cross-country evidence supporting durable links from initial geography and biogeography through agriculture and later development.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "One empirical extension of Diamond; observational long-run relationships do not settle every causal route."
+      },
+      {
+        "id": "acemoglu-reversal",
+        "title": "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income Distribution",
+        "author_or_publisher": "Daron Acemoglu, Simon Johnson and James A. Robinson, Quarterly Journal of Economics",
+        "url": "https://economics.mit.edu/sites/default/files/publications/reversal-of-fortune.pdf",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Evidence that institutional reversals among former colonies are central to modern income differences and cannot be explained by a simple time-invariant geography account.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Addresses modern comparative development rather than directly testing Diamond's prehistoric continental explanation."
+      },
+      {
+        "id": "evolution-education-review",
+        "title": "Guns, Germs, and Steel by Jared Diamond",
+        "author_or_publisher": "Joseph Fail Jr., Evolution: Education and Outreach",
+        "url": "https://link.springer.com/article/10.1007/s12052-008-0030-2",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Praise for the book's accessible teaching of ecology, evolution, germs and regional application, together with criticism that the central lesson is repeatedly delivered across more than 400 pages.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "A short ecology-education review, not a historian's audit."
+      },
+      {
+        "id": "blaut-direct-critique",
+        "title": "Environmentalism and Eurocentrism: A Review Essay",
+        "author_or_publisher": "James M. Blaut",
+        "url": "https://www.columbia.edu/~lnp3/mydocs/Blaut/diamond.htm",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A geographer's direct criticism of environmental determinism, diffusion claims and Eurocentric treatment of innovations.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "A strongly polemical review representing one academic critic; use alongside McNeill and empirical work, not as consensus."
+      },
+      {
+        "id": "antrosio-critique",
+        "title": "Guns, Germs, and Steel by Jared Diamond: Against History",
+        "author_or_publisher": "Jason Antrosio",
+        "url": "https://www.livinganthropologically.com/archaeology/guns-germs-and-steel-jared-diamond/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "An anthropologist's direct criticism that the framework reduces European domination to distant accidents and underweights political decisions, Indigenous alliances and human agency.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "A forceful teaching essay rather than peer-reviewed research; use as a named agency critique alongside McNeill, Blaut and empirical studies."
+      }
+    ],
+    "citations": {
+      "/title": [
+        "google-books-ggs-1997",
+        "pulitzer-ggs"
+      ],
+      "/alternate_titles": [
+        "pbs-ggs-book"
+      ],
+      "/author_ids": [
+        "google-books-ggs-1997",
+        "pulitzer-ggs"
+      ],
+      "/bibliography/first_published": [
+        "pbs-ggs-book",
+        "kirkus-ggs"
+      ],
+      "/bibliography/editions/0": [
+        "google-books-ggs-1997",
+        "pbs-ggs-book"
+      ],
+      "/bibliography/editions/1": [
+        "google-books-ggs-2017"
+      ],
+      "/bibliography/contents": [
+        "google-books-ggs-1997",
+        "google-books-ggs-2017"
+      ]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Structure and claims checked against authorised contents and edition records; purpose checked in Diamond's direct reply; assessment triangulated across contemporary history and ecology reviews plus later empirical work supporting and challenging the biogeographic framework.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }

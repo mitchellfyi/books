@@ -4,22 +4,163 @@
   "id": "jared-diamond",
   "type": "author",
   "name": "Jared Diamond",
-  "alternate_names": [],
+  "alternate_names": ["Jared Mason Diamond", "Jared M. Diamond"],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American scientist and writer whose work spans physiology, ecology, biogeography and continent-scale explanations of human societies.",
+      "source_ids": ["ucla-geography-diamond", "ucla-medicine-diamond", "pulitzer-diamond"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Boston in 1937, Diamond studied at Harvard and completed a Cambridge doctorate. His scientific career began in physiology and expanded into evolutionary biology, ecology and biogeography, including extensive fieldwork in New Guinea. At UCLA he held roles across geography, physiology and public health. His general-reader books move from human evolution to environmental explanations of history, societal collapse, traditional societies and national crises.",
+      "source_ids": ["google-books-diamond", "ucla-geography-diamond", "ucla-medicine-diamond", "pulitzer-diamond"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "Diamond approaches large historical questions through comparative natural experiments: islands, continents and populations become cases in which environmental differences may help explain divergent outcomes. New Guinea fieldwork supplied both local knowledge and the question that opens Guns, Germs, and Steel.",
+      "source_ids": ["ucla-geography-diamond", "pulitzer-diamond", "mcneill-diamond-method"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "His direct research expertise includes integrative and evolutionary physiology, ecology and biogeography; UCLA also lists geography and human society among his research interests. He is an interdisciplinary synthesiser rather than a conventionally trained historian, so his claims about culture, institutions and particular regions need comparison with specialists in those fields.",
+      "source_ids": ["ucla-geography-diamond", "ucla-medicine-diamond", "mcneill-diamond-method"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "He deliberately shifts explanation away from racial difference and towards environmental starting conditions over very long timescales. This makes biogeographic constraints visible, but his natural-science method can compress human agency, cultural invention, institutions and conflict. William McNeill praised the new angle while arguing that Diamond treated cultural history as too automatic a product of environment.",
+      "source_ids": ["diamond-mcneill-purpose", "mcneill-diamond-method"],
+      "basis": "synthesis"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "The Third Chimpanzee",
+      "year": 1991,
+      "kind": "Book",
+      "relationship": "The earlier general-reader synthesis on human evolution and behaviour.",
+      "source_ids": ["pulitzer-diamond", "google-books-diamond"]
+    },
+    {
+      "title": "Guns, Germs, and Steel: The Fates of Human Societies",
+      "year": 1997,
+      "kind": "Book",
+      "relationship": "The environmental explanation of continent-scale divergence and the subject of this profile.",
+      "source_ids": ["pulitzer-diamond", "google-books-diamond"]
+    },
+    {
+      "title": "Collapse: How Societies Choose to Fail or Succeed",
+      "year": 2005,
+      "kind": "Book",
+      "relationship": "Extends the comparative environmental method to societal endurance and failure.",
+      "source_ids": ["norton-diamond-books"]
+    },
+    {
+      "title": "The World Until Yesterday",
+      "year": 2012,
+      "kind": "Book",
+      "relationship": "Uses traditional societies as comparisons for modern social problems.",
+      "source_ids": ["norton-diamond-books"]
+    },
+    {
+      "title": "Upheaval: Turning Points for Nations in Crisis",
+      "year": 2019,
+      "kind": "Book",
+      "relationship": "Applies a comparative crisis framework to selected modern nations.",
+      "source_ids": ["norton-diamond-books"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "ucla-geography-diamond",
+        "title": "Jared Diamond",
+        "author_or_publisher": "UCLA Department of Geography",
+        "url": "https://geog.ucla.edu/person/jared-diamond/",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Harvard and Cambridge education, emeritus status, research in biogeography and human society, teaching and selected scientific publications and awards.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Institutional profile with a selective publication list."
+      },
+      {
+        "id": "ucla-medicine-diamond",
+        "title": "Jared Diamond, PhD",
+        "author_or_publisher": "UCLA David Geffen School of Medicine",
+        "url": "https://medschool.ucla.edu/people/jared-diamond-phd",
+        "type": "employer",
+        "accessed_at": "2026-08-13",
+        "supports": "Roles across geography, physiology and public health and direct research expertise in nutrient transport and integrative and evolutionary physiology.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Current institutional profile; does not give a full career history."
+      },
+      {
+        "id": "pulitzer-diamond",
+        "title": "Jared Diamond",
+        "author_or_publisher": "The Pulitzer Prizes",
+        "url": "https://www.pulitzer.org/winners/jared-diamond",
+        "type": "official-documentation",
+        "accessed_at": "2026-08-13",
+        "supports": "1998 General Nonfiction award, physiology appointment at publication, scientific range, academy memberships and The Third Chimpanzee.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Contemporary prize biography rather than a complete current profile."
+      },
+      {
+        "id": "google-books-diamond",
+        "title": "Guns, Germs, and Steel — About the author",
+        "author_or_publisher": "Google Books / W. W. Norton & Company",
+        "url": "https://books.google.com/books/about/Guns_Germs_and_Steel.html?id=kLKTa_OeoNIC",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Full name, 1937 birth in Boston, Harvard and Cambridge education, physiology and ecology background and early book history.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Publisher biography embedded in a catalogue record."
+      },
+      {
+        "id": "mcneill-diamond-method",
+        "title": "History Upside Down",
+        "author_or_publisher": "William H. McNeill, The New York Review of Books",
+        "url": "https://www.nybooks.com/articles/1997/05/15/history-upside-down/",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent assessment of Diamond's evolutionary-biological and biogeographic method, its fresh perspective and its tendency to reduce cultural history.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Assessment through one book by one world historian."
+      },
+      {
+        "id": "diamond-mcneill-purpose",
+        "title": "Guns, Germs, and Steel — author reply and reviewer response",
+        "author_or_publisher": "Jared Diamond and William H. McNeill, The New York Review of Books",
+        "url": "https://www.nybooks.com/articles/1997/06/26/guns-germs-and-steel/",
+        "type": "interview",
+        "accessed_at": "2026-08-13",
+        "supports": "Diamond's own statement of his continental scale, environmental emphasis and anti-racist purpose, followed by McNeill's direct methodological objection.",
+        "independence": "primary",
+        "quality": "high",
+        "limitations": "Short exchange focused on Guns, Germs, and Steel."
+      },
+      {
+        "id": "norton-diamond-books",
+        "title": "Guns, Germs, and Steel",
+        "author_or_publisher": "W. W. Norton & Company",
+        "url": "https://wwnorton.co.uk/books/9780393354324-guns-germs-and-steel",
+        "type": "publisher",
+        "accessed_at": "2026-08-13",
+        "supports": "Diamond's later principal books and current publisher biography.",
+        "independence": "interested",
+        "quality": "high",
+        "limitations": "Promotional publisher page."
+      }
+    ],
+    "citations": {"/name": ["google-books-diamond", "pulitzer-diamond"]}
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Education, appointments and scientific expertise checked against UCLA, life and early works against publisher, catalogue and Pulitzer records, and method assessed with Diamond's own statement and McNeill's direct critique.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
