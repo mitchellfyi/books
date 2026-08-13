@@ -4,28 +4,151 @@
   "id": "at-home-bryson",
   "type": "book",
   "title": "At Home: A Short History of Private Life",
-  "alternate_titles": [],
+  "alternate_titles": ["At Home"],
   "author_ids": ["bill-bryson"],
   "bibliography": {
-    "first_published": null,
-    "original_language": null,
-    "editions": [],
-    "contents": []
+    "first_published": "2010",
+    "original_language": "English",
+    "editions": [
+      {
+        "label": "UK first edition",
+        "publisher": "Doubleday",
+        "publication_date": "2010-05-27",
+        "isbn_10": "0385608276",
+        "isbn_13": "9780385608275",
+        "format": "Hardcover",
+        "pages": 536
+      },
+      {
+        "label": "US paperback",
+        "publisher": "Anchor",
+        "publication_date": "2011",
+        "isbn_10": "0767919394",
+        "isbn_13": "9780767919395",
+        "format": "Paperback",
+        "pages": 512
+      }
+    ],
+    "contents": [
+      "The Year and The Setting: 1851, the Crystal Palace, and the Norfolk rectory",
+      "The Hall; The Kitchen; The Scullery and Larder",
+      "The Fuse Box; The Drawing Room; The Dining Room",
+      "The Cellar; The Passage; The Study; The Garden",
+      "The Plum Room; The Stairs; The Bedroom",
+      "The Bathroom; The Dressing Room; The Nursery; The Attic"
+    ]
   },
   "discovery": {
-    "tag_ids": [],
-    "audiences": [],
-    "formats_available": []
+    "tag_ids": [
+      "anthropology",
+      "history",
+      "non-fiction",
+      "technology"
+    ],
+    "audiences": [
+      "Readers who love history told through everyday objects",
+      "Bryson's travel-writing audience",
+      "Trivia lovers and dinner-party fact collectors",
+      "Anyone curious why houses are the way they are"
+    ],
+    "formats_available": ["Hardcover", "Paperback", "Ebook", "Audiobook"]
   },
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-at-home",
+        "title": "At Home: A Short History of Private Life",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/At_Home:_A_Short_History_of_Private_Life",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication facts (Doubleday, 2010-05-27, 536 pages, ISBN 9780385608275), the full chapter list, the 1851 Crystal Palace framing, thematic summary, and documented reception.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; reception traced to named sources."
+      },
+      {
+        "id": "guardian-at-home",
+        "title": "The Guardian on At Home (as documented in the reception record)",
+        "author_or_publisher": "The Guardian",
+        "url": "https://en.wikipedia.org/wiki/At_Home:_A_Short_History_of_Private_Life",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The assessment that the book is a venue for presenting historical events as well-turned stories.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation."
+      },
+      {
+        "id": "flanders-assessment",
+        "title": "Judith Flanders on At Home (as documented in the reception record)",
+        "author_or_publisher": "Judith Flanders",
+        "url": "https://en.wikipedia.org/wiki/At_Home:_A_Short_History_of_Private_Life",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A domestic-history specialist's judgement: a treasure that occasionally has better jokes than a sense of history.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Via documented quotation."
+      },
+      {
+        "id": "internet-archive-at-home",
+        "title": "At home: a short history of private life",
+        "author_or_publisher": "Internet Archive",
+        "url": "https://archive.org/details/athomeshorthisto00bill",
+        "type": "library-catalogue",
+        "accessed_at": "2026-08-13",
+        "supports": "Independent bibliographic confirmation and a lendable full-text record.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Catalogue record."
+      },
+      {
+        "id": "goodreads-at-home",
+        "title": "At Home: A Short History of Private Life",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/7507825-at-home",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Large, warm reader reception; recurring delight in the facts and complaints about digressiveness.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      },
+      {
+        "id": "carpe-librum-review",
+        "title": "Review: At Home — A Short History of Private Life",
+        "author_or_publisher": "Carpe Librum",
+        "url": "https://www.carpelibrum.net/2022/01/review-at-home-bill-bryson.html",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "A reader-critic's account of the book's texture: room-by-room digressions and the balance of delight and sprawl.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Book blog."
+      }
+    ],
+    "citations": {
+      "/title": ["wikipedia-at-home", "internet-archive-at-home"],
+      "/alternate_titles": ["wikipedia-at-home"],
+      "/author_ids": ["wikipedia-at-home", "internet-archive-at-home"],
+      "/bibliography/first_published": ["wikipedia-at-home", "internet-archive-at-home"],
+      "/bibliography/original_language": ["internet-archive-at-home"],
+      "/bibliography/editions/0": ["wikipedia-at-home"],
+      "/bibliography/editions/1": ["internet-archive-at-home"],
+      "/bibliography/contents": ["wikipedia-at-home"],
+      "/discovery/tag_ids": ["wikipedia-at-home"],
+      "/discovery/audiences": ["goodreads-at-home", "guardian-at-home"],
+      "/discovery/formats_available": ["wikipedia-at-home"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage": "metadata-only",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the documented record including the full chapter list, independent professional and specialist assessments, and reader reception; a lendable full text exists at the Internet Archive.",
     "last_researched": "2026-08-13",
-    "next_steps": []
+    "next_steps": [
+      "Optional: borrow the Internet Archive copy to verify chapter-level detail."
+    ]
   }
 }

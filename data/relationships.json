@@ -451,6 +451,18 @@
       "description": "Maslow's final message — we are self-evolvers, responsible for choosing growth — is nearly the exact claim Sapolsky's neuroscience of no-free-will exists to demolish; together they frame the deepest open question under all self-improvement writing.",
       "source_refs": [],
       "confidence": "medium"
+    },
+    {
+      "id": "at-home-related-to-short-history",
+      "source_id": "at-home-bryson",
+      "target_id": "a-short-history-of-nearly-everything-bryson",
+      "type": "related-to",
+      "basis": "explicit",
+      "description": "The same author and method aimed at opposite telescopes: the science synthesis covers the cosmos and the cell, the domestic one the house; At Home was written as its announced domestic counterpart.",
+      "source_refs": [
+        "library/books/at-home-bryson/book.json#wikipedia-at-home"
+      ],
+      "confidence": "high"
     }
   ]
 }

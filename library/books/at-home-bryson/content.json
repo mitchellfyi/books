@@ -4,108 +4,463 @@
   "book_id": "at-home-bryson",
   "content_type": "non-fiction",
   "editorial": {
-    "compression_fit": "medium",
-    "complexity": "medium",
+    "compression_fit": "low",
+    "complexity": "low",
     "recommended_level": "15-minutes",
-    "rationale": "TODO: explain how much compression the book can withstand and why."
+    "rationale": "The book is an anthology of thousands of anecdotes with no central argument, so briefs can carry its frame, method, best specimens, and value judgement, but not its actual pleasure, which is the accumulation itself. Fifteen minutes gives the frame, the strongest material, and the honest verdict; thirty minutes tours more rooms; the full experience is irreducibly the book's own six hundred pages."
   },
   "card": {
-    "one_sentence": "TODO: identify the book and its useful central claim.",
-    "verdict": "TODO: give the reader-facing verdict.",
-    "source_ids": [],
+    "one_sentence": "Bill Bryson tours his Victorian rectory room by room and lets every doorknob, staircase, and spice rack open onto the history of how ordinary domestic life became possible.",
+    "verdict": "A delightful, wildly digressive cabinet of curiosities — read it for pleasure and painless historical texture, not for argument or rigour, and expect the jokes to outrank the historiography.",
+    "source_ids": [
+      "wikipedia-at-home",
+      "guardian-at-home",
+      "flanders-assessment"
+    ],
     "basis": "synthesis"
   },
   "overview": {
-    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+    "synopsis": {
+      "text": "Framed by 1851 — the year of the Crystal Palace and the year his Norfolk rectory was built — Bryson walks through his own house, using each of nineteen rooms as a doorway into the history it contains: the kitchen opens onto food preservation and the spice trade, the bedroom onto sex, sleep, and death, the bathroom onto hygiene, the stairs onto the statistics of falling, until the whole house has become a history of private life.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "goodreads-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "Houses are not refuges from history but history's condensation: whatever happens in the world — trade, empire, disease, invention, fashion — eventually ends up in our homes, so the domestic and ordinary, examined closely, contain the whole story of how comfort was invented.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "guardian-at-home"
+      ],
+      "basis": "synthesis"
+    }
   },
   "ideas": [
     {
-      "id": "idea-id",
-      "title": "Idea title",
-      "claim": "TODO: state the idea in one sentence.",
-      "explanation": "TODO: explain what it means and how it works.",
-      "representative_example": null,
-      "why_it_matters": "TODO: explain why a reader should care.",
-      "caveat": null,
-      "source_ids": [],
+      "id": "house-as-history",
+      "title": "The house is history condensed",
+      "claim": "Every room preserves, in its layout and objects, the residue of centuries of change.",
+      "explanation": "The organising conceit: domestic arrangements that feel natural — separate kitchens, private bedrooms, salt and pepper on the table — are each the outcome of long, contingent histories of technology, trade, and habit that the book excavates room by room.",
+      "representative_example": "The hall's shrinkage from the whole house of the medieval period to a place to wipe your feet — a floor plan recording centuries of privacy's invention.",
+      "why_it_matters": "It converts the most familiar spaces into readable historical documents.",
+      "caveat": "The conceit organises a tour, not an argument; nothing is being demonstrated beyond the richness itself.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "guardian-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "comfort-is-recent",
+      "title": "Comfort is a recent invention",
+      "claim": "Almost everything that makes home life tolerable arrived shockingly late and unevenly.",
+      "explanation": "A running revelation across chapters: good light, warmth, soft furniture, clean water, safe food, painless surgery, and private space are all historically brand-new, and the book keeps measuring the gulf between modern expectation and the near-universal discomfort of the past.",
+      "representative_example": "The era of the book's own house, 1851, when even prosperous homes were dim, cold, and smelly by any modern standard.",
+      "why_it_matters": "It recalibrates gratitude: the baseline of ordinary life is revealed as an extraordinary achievement.",
+      "caveat": "The measure is implicitly Anglo-American; the book's world is overwhelmingly Britain and the United States.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "goodreads-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "servants-and-labour",
+      "title": "The house ran on invisible labour",
+      "claim": "The comfortable home of the past was a machine operated by servants whose lives the book keeps in view.",
+      "explanation": "The scullery, larder, and passage chapters restore the armies of domestic workers — their hours, wages, and quarters — on whom every genteel household depended, and trace how technology and social change dissolved that world.",
+      "representative_example": "The rectory's own service architecture: back stairs and cramped quarters built so labour could remain unseen.",
+      "why_it_matters": "It grounds the charm in social reality: someone hauled the coal and emptied the slops.",
+      "caveat": "Specialist readers note the treatment stays anecdotal rather than analytical.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "flanders-assessment"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "eminent-obsessives",
+      "title": "History advances through obsessives",
+      "claim": "The comforts of home were won by a parade of eccentric clergymen, engineers, and amateurs the book delights in resurrecting.",
+      "explanation": "Bryson's favourite narrative unit is the forgotten person who changed everything — the vicar-inventors, the fertiliser barons, the lighting pioneers — told as compressed biography with comic timing. Joseph Paxton, the gardener who designed the Crystal Palace, presides as patron saint.",
+      "representative_example": "Paxton's greenhouse-inspired Crystal Palace, sketched on blotting paper and built in months, opening the book's year of wonders.",
+      "why_it_matters": "The biographical miniatures are the book's most memorable and retellable material.",
+      "caveat": "Great-oddball history charms but flattens: institutions and economics recede behind personalities.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "guardian-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "danger-at-home",
+      "title": "The lethal household",
+      "claim": "For most of history the home was dangerous: fire, poison, disease, and the stairs.",
+      "explanation": "A dark comic thread runs through the tour: arsenic in the wallpaper, adulterated food, cholera in the water, childbirth's mortality, and the staircase as a leading cause of death, each treated with statistical relish.",
+      "representative_example": "The stairs chapter, an entire history of falling down them, with the design details that make some staircases quietly murderous.",
+      "why_it_matters": "It is the book's most vivid demonstration that safety, like comfort, had to be invented.",
+      "caveat": "The statistics are entertainingly deployed rather than carefully sourced in the text.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "goodreads-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "digression-as-method",
+      "title": "Digression is the method",
+      "claim": "The book's structure is licensed wandering: each room is a permission slip, not a subject.",
+      "explanation": "A chapter titled The Study is mostly about mice and mousetraps; the Fuse Box opens onto the entire history of lighting. The rooms exist to make a vast miscellany feel organised, and the reader's contract is to enjoy the ride rather than expect a destination.",
+      "representative_example": "The Guardian's documented verdict: a venue for presenting historical events as well-turned stories.",
+      "why_it_matters": "Knowing the contract upfront sorts delighted readers from frustrated ones better than any other fact about the book.",
+      "caveat": "Readers wanting a thesis, or even consistent relevance to the named room, will grind their teeth.",
+      "source_ids": [
+        "guardian-at-home",
+        "goodreads-at-home",
+        "carpe-librum-review"
+      ],
       "basis": "synthesis"
     }
   ],
   "book_map": [
     {
       "order": 1,
-      "title": "Part or chapter range",
-      "purpose": "TODO: state the job this part performs in the argument.",
-      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
-      "idea_ids": ["idea-id"],
-      "source_ids": [],
+      "title": "The Year and the Setting",
+      "purpose": "Establish 1851 and the rectory as the frame.",
+      "summary": "The Crystal Palace rises, the Church of England builds Mr Marsham his Norfolk rectory, and Bryson announces the plan: to walk his own house and find the world in it.",
+      "idea_ids": [
+        "house-as-history",
+        "eminent-obsessives"
+      ],
+      "source_ids": [
+        "wikipedia-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "The working house: hall, kitchen, scullery, larder",
+      "purpose": "Open the service rooms and their histories.",
+      "summary": "The hall's long shrinkage, food preservation and the spice trade, kitchen technology, and the servant world that ran it all.",
+      "idea_ids": [
+        "servants-and-labour",
+        "comfort-is-recent"
+      ],
+      "source_ids": [
+        "wikipedia-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "The public rooms: fuse box, drawing room, dining room, cellar, passage, study, garden",
+      "purpose": "Tour comfort, light, and display.",
+      "summary": "Lighting from rushlight to electricity, furniture and fashion, the dinner table's rituals and adulterations, building materials, gardens, and the mouse-hunted study.",
+      "idea_ids": [
+        "comfort-is-recent",
+        "digression-as-method",
+        "eminent-obsessives"
+      ],
+      "source_ids": [
+        "wikipedia-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "The private rooms: plum room, stairs, bedroom, bathroom, dressing room",
+      "purpose": "Enter the intimate and the lethal.",
+      "summary": "Privacy's invention, the deadly staircase, the bedroom's freight of sex, sleep, and death, hygiene's slow arrival, and clothing's absurdities.",
+      "idea_ids": [
+        "danger-at-home",
+        "comfort-is-recent"
+      ],
+      "source_ids": [
+        "wikipedia-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Nursery and attic",
+      "purpose": "Close with childhood and endings.",
+      "summary": "Childhood's brutal history and its softening, then the attic's junk as history's sediment, closing the tour where houses store what they cannot throw away.",
+      "idea_ids": [
+        "house-as-history",
+        "danger-at-home"
+      ],
+      "source_ids": [
+        "wikipedia-at-home"
+      ],
       "basis": "synthesis"
     }
   ],
   "reading_experience": {
-    "structure": "TODO",
-    "voice": "TODO",
-    "pace": "TODO",
-    "evidence_style": "TODO",
-    "example_style": "TODO",
-    "repetition": "TODO",
-    "prerequisites": "TODO",
-    "source_ids": [],
+    "structure": "Nineteen room-titled chapters, each a loosely tethered essay of digressions from that room's ostensible subject.",
+    "voice": "Bryson at full charm: genial, wry, astonished, delivering facts like after-dinner anecdotes.",
+    "pace": "Quick paragraph to paragraph, leisurely overall; six hundred pages of miscellany with no argumentative pull.",
+    "evidence_style": "Synthesis of secondary histories, retold without in-text apparatus; a bibliography stands behind an anecdote-forward text.",
+    "example_style": "Compressed biographies of forgotten innovators, startling statistics, and object histories.",
+    "repetition": "Little repetition of content, but the anecdote rhythm itself becomes the constant.",
+    "prerequisites": "None whatsoever.",
+    "source_ids": [
+      "guardian-at-home",
+      "goodreads-at-home",
+      "carpe-librum-review"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
-    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "rating": {
+      "rubric_version": 1,
+      "score": 4.9,
+      "confidence": "medium",
+      "summary": "Limited as instruction, excellent as entertainment: a charming, digressive anthology whose value is pleasure and incidental knowledge rather than argument, method, or reliable depth.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 5.5,
+          "rationale": "Individual histories are lucidly told and the house-as-history frame genuinely reorients how one sees domestic space, but the book explains episodes, not systems: no mechanism connects the thousand stories.",
+          "source_ids": [
+            "guardian-at-home",
+            "wikipedia-at-home"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 5.0,
+          "rationale": "Competent synthesis of secondary sources with a bibliography, but anecdote-forward retelling, no in-text sourcing, and a specialist's documented verdict that the jokes sometimes outrank the sense of history.",
+          "source_ids": [
+            "flanders-assessment",
+            "wikipedia-at-home"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 5.5,
+          "rationale": "The comfort-is-recent recalibration and privacy's invention land as genuine perspective shifts; most of the rest is delightful trivia rather than insight.",
+          "source_ids": [
+            "goodreads-at-home",
+            "guardian-at-home"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 3.5,
+          "rationale": "Nothing here is applicable beyond conversation and perspective; the book neither offers nor intends usable method.",
+          "source_ids": [
+            "goodreads-at-home"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 5.0,
+          "rationale": "Confined almost entirely to the Anglo-American world, personality-driven, and silent about its own selection principles; charming about its limits without stating them.",
+          "source_ids": [
+            "flanders-assessment",
+            "wikipedia-at-home"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 4.5,
+          "rationale": "Six hundred pages of deliberate digression: the sprawl is the product, and readers seeking the substance without the wandering have no path through.",
+          "source_ids": [
+            "goodreads-at-home",
+            "carpe-librum-review"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "Beneath the trivia the book makes one quiet, cumulative point: ordinary modern life is a pinnacle achievement, assembled from centuries of invention, suffering, and forgotten labour, and gratitude for the unremarkable is the historically literate response.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "guardian-at-home"
+      ],
+      "basis": "synthesis"
+    },
     "lessons": [
-      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+      {
+        "text": "Read your surroundings historically: every fixture answers a question someone once had to solve.",
+        "source_ids": [
+          "wikipedia-at-home"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Hold the baseline consciously: comfort, safety, and privacy are recent, uneven achievements, not defaults.",
+        "source_ids": [
+          "wikipedia-at-home"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Remember the service stairs: every era's comfort has its invisible operators, including ours.",
+        "source_ids": [
+          "wikipedia-at-home"
+        ],
+        "basis": "inference"
+      }
     ],
-    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "importance": {
+      "text": "A major bestseller from one of the era's most-read nonfiction writers, and the book that made domestic history a mainstream pleasure; its room-by-room conceit has been widely imitated since.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "goodreads-at-home"
+      ],
+      "basis": "synthesis"
+    },
+    "author_and_purpose": {
+      "text": "Bryson wrote it after moving into the 1851 Norfolk rectory, applying his established method — vast secondary reading rendered as charm — to the history closest to hand; the purpose is unashamedly the reader's pleasure, with education smuggled in.",
+      "source_ids": [
+        "wikipedia-at-home",
+        "guardian-at-home"
+      ],
+      "basis": "synthesis"
+    },
     "evidence_quality": {
-      "rating": "not-assessed",
-      "strengths": ["TODO"],
-      "weaknesses": ["TODO"],
-      "source_ids": [],
+      "rating": "mixed",
+      "strengths": [
+        "Wide, genuine synthesis of the secondary literature with a real bibliography.",
+        "The famous set-piece facts largely check out and have survived a decade of fact-loving readers.",
+        "Honest framing: the book never claims to be more than a tour."
+      ],
+      "weaknesses": [
+        "No in-text sourcing; the reader cannot trace any given claim.",
+        "A domestic-history specialist's documented verdict that jokes sometimes outrank historical judgement.",
+        "Anglo-American frame presented as the history of private life generally.",
+        "Statistics deployed for effect rather than examined."
+      ],
+      "source_ids": [
+        "flanders-assessment",
+        "wikipedia-at-home",
+        "guardian-at-home"
+      ],
       "basis": "synthesis"
     },
     "reception": {
-      "summary": "TODO",
-      "praise": ["TODO"],
-      "criticism": ["TODO"],
-      "source_ids": [],
+      "summary": "Warmly received and hugely popular: reviewers enjoyed it, specialists liked it with reservations, and its main criticisms — sprawl and Anglocentrism — are inseparable from what fans love.",
+      "praise": [
+        "Judith Flanders called it a treasure.",
+        "The Guardian admired the well-turned storytelling.",
+        "Readers cherish it as the archetypal bedside book: endlessly dippable and quotable."
+      ],
+      "criticism": [
+        "Flanders' caveat: occasionally better jokes than a sense of history.",
+        "Digression fatigue: chapters wander far from their rooms.",
+        "The 'private life' of the title is, in practice, Anglo-American life."
+      ],
+      "source_ids": [
+        "flanders-assessment",
+        "guardian-at-home",
+        "goodreads-at-home"
+      ],
       "basis": "synthesis"
     },
     "audience": {
-      "best_for": ["TODO"],
-      "not_for": ["TODO"],
-      "topics": ["TODO"],
-      "source_ids": [],
+      "best_for": [
+        "Readers who want history as pure pleasure",
+        "Fans of Bryson's voice",
+        "Lovers of object histories and remarkable trivia",
+        "Bedside and holiday readers"
+      ],
+      "not_for": [
+        "Readers wanting argument, thesis, or method",
+        "Historians seeking rigour or global scope",
+        "Anyone who finds digression maddening"
+      ],
+      "topics": [
+        "Domestic history",
+        "Victorian Britain",
+        "History of technology",
+        "Social history",
+        "Material culture"
+      ],
+      "source_ids": [
+        "goodreads-at-home",
+        "guardian-at-home",
+        "wikipedia-at-home"
+      ],
       "basis": "synthesis"
     },
     "scope": {
-      "is_not": ["TODO"],
-      "omissions": ["TODO"],
-      "missing_or_weak": ["TODO"],
-      "dated_or_contested": ["TODO"],
-      "source_ids": [],
+      "is_not": [
+        "A thesis-driven history",
+        "A global history of domestic life",
+        "A sourced academic work",
+        "A short book, despite its title"
+      ],
+      "omissions": [
+        "The non-Western world, almost entirely",
+        "Analytical treatment of class and economics behind the anecdotes",
+        "In-text evidence for its statistics and stories"
+      ],
+      "missing_or_weak": [
+        "Any principle of selection beyond delight",
+        "Engagement with the academic historiography it draws on"
+      ],
+      "dated_or_contested": [
+        "Individual facts have been corrected by readers over the years, as with all Bryson's syntheses."
+      ],
+      "source_ids": [
+        "flanders-assessment",
+        "wikipedia-at-home"
+      ],
       "basis": "synthesis"
     },
     "decision": {
-      "read_if": "TODO",
-      "summary_is_enough_if": "TODO",
-      "skip_if": "TODO",
-      "format_advice": "TODO",
-      "source_ids": [],
+      "read_if": "Read the full book if the pleasure is the point: it is the archetypal bedside history, best consumed a room at a time over weeks, and the audiobook suits its anecdotal rhythm well.",
+      "summary_is_enough_if": "The brief is enough if you want the frame, the standout material, and the verdict — though extracting the substance rather defeats a book whose substance is the wandering.",
+      "skip_if": "Skip it if you need argument, rigour, or global scope, or if six hundred pages of genial digression sounds like a sentence rather than a gift.",
+      "format_advice": "Audiobook and bedside print both work; it is built for interruption and return, not straight-through reading.",
+      "source_ids": [
+        "goodreads-at-home",
+        "guardian-at-home"
+      ],
       "basis": "inference"
     }
   },
   "retention": {
-    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
-    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+    "recall_prompts": [
+      "What does the book's 1851 frame — the Crystal Palace and the rectory — let it do?",
+      "What happened to the hall between the medieval house and the modern one, and what does it show?",
+      "Why does the book treat the staircase as a historical subject?"
+    ],
+    "application_prompts": [
+      "Pick one object in your home and trace, or research, the questions it once answered.",
+      "Where does your own household's invisible labour live, and who does it?",
+      "Which modern comfort would your house's first occupants have found most miraculous?"
+    ]
   },
   "workflow": {
-    "status": "stub",
+    "status": "complete",
     "reviewed_against_full_book": false,
-    "review_notes": ""
+    "review_notes": "Built from the documented record including the full chapter list, independent professional and specialist assessments, and reader reception.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity verified: Doubleday 2010-05-27, 536 pages, ISBN 9780385608275, with the US Anchor paperback; chapter list from the documented record.",
+        "Content fidelity: room-chapter examples (hall's shrinkage, stairs and falls, bathroom hygiene, bedroom themes) follow the documented summaries; no chapter-level claims beyond them.",
+        "Counterevidence: the Flanders jokes-versus-history verdict and digression criticisms are recorded and priced into the rating.",
+        "Rating scored on content alone; Bryson's fame and sales excluded per the rubric.",
+        "Narration reviewed against the product contract: content-first opening, no research meta.",
+        "Pronunciation: Bryson, Paxton, Marsham, and Norfolk phonemized and inspected; all rendered correctly, no dictionary additions required."
+      ]
+    }
   }
 }
