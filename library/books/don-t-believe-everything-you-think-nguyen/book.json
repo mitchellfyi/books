@@ -229,12 +229,10 @@
     }
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "coverage": "sample-and-secondary",
     "coverage_notes": "Built from records for both original formats and the expanded edition, an authorised contents preview, publisher description, three independent professional readings, reader reception, and two research reviews used to test the related cognitive-defusion mechanism; no full-text read.",
     "last_researched": "2026-08-13",
-    "next_steps": [
-      "Regenerate and verify all four local audio tracks after the independent evidence and edition audit."
-    ]
+    "next_steps": []
   }
 }

@@ -8,18 +8,18 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.9,
+  "speed": 0.92,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/don-t-believe-everything-you-think-nguyen/scripts/30-seconds.md",
-  "source_script_sha256": "a1c8794480c25fb407876dd88078f8188a1bd19e15ba2baa888d4dc751fe06c1",
+  "source_script_sha256": "16b71116cb30c72e9c298a65a62685b311f71e0bbb553081248c511c45f32e9b",
   "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
   "pronunciation_terms": [
     "Nguyen"
   ],
   "pronunciation_entries_sha256": "f0029780c1f01280d17d47104072656e0a9a33a62e2c2d28ab654e02872c7ffd",
-  "script_words": 71,
-  "audio_seconds": 27.607,
-  "measured_wpm": 154.31,
-  "generated_at": "2026-08-13T13:39:00.835111+00:00"
+  "script_words": 80,
+  "audio_seconds": 31.233,
+  "measured_wpm": 153.68,
+  "generated_at": "2026-08-13T14:19:18.030240+00:00"
 }

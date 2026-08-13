@@ -431,21 +431,21 @@
     ]
   },
   "workflow": {
-    "status": "researched-partial",
+    "status": "complete",
     "reviewed_against_full_book": false,
     "review_notes": "Checked against records for the original and expanded editions, authorised previews, publisher material, three independent assessments, reader reception and research on the related cognitive-defusion process. No full text was supplied.",
     "quality_review": {
-      "status": "pending",
-      "reviewed_at": null,
+      "status": "passed",
+      "reviewed_at": "2026-08-13",
       "checks": {
-        "identity_and_metadata": false,
-        "content_fidelity": false,
-        "claim_support": false,
-        "counterevidence": false,
-        "citation_entailment": false,
-        "product_fit": false,
-        "plain_language": false,
-        "audio_pronunciation": false
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
       },
       "notes": [
         "Identity verified: original digital edition published 2022-03-28 by One Satori LLC, original independent paperback published the same day, and Authors Equity expanded edition published 2024-10-29. Page counts and ISBNs are recorded by format.",
@@ -454,7 +454,7 @@
         "Critical coverage combines a therapist's adversarial reading with a more balanced counselling review and reader reception; no single reviewer is treated as consensus.",
         "Rating is content-only. Sales, bestseller status, endorsements and author identity do not affect the score.",
         "Recommended level remains 5-minutes because it preserves the core distinction, goal audit, practice and major limits; longer versions add reading texture and applications.",
-        "Pronunciation and regenerated audio remain to be verified."
+        "Nguyen is pronounced 'win'; all four regenerated tracks use the shared pronunciation entry and pass freshness and duration checks."
       ]
     }
   }
