@@ -476,6 +476,71 @@
         "library/books/the-48-laws-of-power-greene/book.json#wikipedia-48-laws"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "courage-disliked-written-by-ichiro-kishimi",
+      "source_id": "the-courage-to-be-disliked-kishimi",
+      "target_id": "ichiro-kishimi",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Ichiro Kishimi co-wrote The Courage to Be Disliked and supplied its philosophical and Adlerian substance.",
+      "source_refs": [
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#diamond-original",
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#simon-schuster-us"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "courage-disliked-written-by-fumitake-koga",
+      "source_id": "the-courage-to-be-disliked-kishimi",
+      "target_id": "fumitake-koga",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Fumitake Koga co-wrote The Courage to Be Disliked and shaped Kishimi's teaching into its five-night dialogue.",
+      "source_refs": [
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#diamond-original",
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#simon-schuster-us"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "courage-disliked-related-to-let-them",
+      "source_id": "the-courage-to-be-disliked-kishimi",
+      "target_id": "the-let-them-theory-robbins",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both separate personal action from other people's reactions; The Courage to Be Disliked develops the theme through task ownership, approval, community, and a more radical philosophy of agency.",
+      "source_refs": [
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#full-book-english",
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#sefad-review"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "courage-disliked-contrasts-with-determined",
+      "source_id": "the-courage-to-be-disliked-kishimi",
+      "target_id": "determined-sapolsky",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Kishimi and Koga foreground present purpose and chosen meaning; Sapolsky foregrounds the biological, developmental, and social causes that make behaviour possible. Read together, each exposes the other's tendency to overstate one side of agency and constraint.",
+      "source_refs": [
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#full-book-english",
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#va-ptsd"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "courage-disliked-contrasts-with-socratic-method",
+      "source_id": "the-courage-to-be-disliked-kishimi",
+      "target_id": "the-socratic-method-farnsworth",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "The Courage to Be Disliked borrows the appearance of Socratic dialogue to deliver a settled doctrine; Farnsworth presents questioning as genuinely joint inquiry whose conclusion remains open to revision.",
+      "source_refs": [
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#full-book-english",
+        "library/books/the-courage-to-be-disliked-kishimi/book.json#sefad-review"
+      ],
+      "confidence": "medium"
     }
   ]
 }
