@@ -59,15 +59,18 @@
     "source": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "title", "author_or_publisher", "url", "type", "accessed_at", "supports"],
+      "required": ["id", "title", "author_or_publisher", "url", "type", "independence", "quality", "accessed_at", "supports", "limitations"],
       "properties": {
         "id": { "$ref": "#/$defs/id" },
         "title": { "type": "string", "minLength": 1 },
         "author_or_publisher": { "type": "string", "minLength": 1 },
         "url": { "type": "string", "format": "uri" },
         "type": { "enum": ["book", "publisher", "library-catalogue", "author", "employer", "interview", "professional-review", "specialist-review", "reader-aggregate", "secondary-summary", "official-documentation"] },
+        "independence": { "enum": ["primary", "independent", "interested", "community"] },
+        "quality": { "enum": ["high", "medium", "limited"] },
         "accessed_at": { "type": "string", "format": "date" },
-        "supports": { "type": "string", "minLength": 1 }
+        "supports": { "type": "string", "minLength": 1 },
+        "limitations": { "type": "string", "minLength": 1 }
       }
     },
     "research": {

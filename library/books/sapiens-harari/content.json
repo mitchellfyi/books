@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../schemas/content.schema.json",
+  "schema_version": 1,
+  "book_id": "sapiens-harari",
+  "content_type": "non-fiction",
+  "editorial": {
+    "compression_fit": "medium",
+    "complexity": "medium",
+    "recommended_level": "15-minutes",
+    "rationale": "TODO: explain how much compression the book can withstand and why."
+  },
+  "card": {
+    "one_sentence": "TODO: identify the book and its useful central claim.",
+    "verdict": "TODO: give the reader-facing verdict.",
+    "source_ids": [],
+    "basis": "synthesis"
+  },
+  "overview": {
+    "synopsis": { "text": "TODO: say what the book is and covers.", "source_ids": [], "basis": "synthesis" },
+    "core_argument": { "text": "TODO: state the claim the author is trying to establish.", "source_ids": [], "basis": "synthesis" }
+  },
+  "ideas": [
+    {
+      "id": "idea-id",
+      "title": "Idea title",
+      "claim": "TODO: state the idea in one sentence.",
+      "explanation": "TODO: explain what it means and how it works.",
+      "representative_example": null,
+      "why_it_matters": "TODO: explain why a reader should care.",
+      "caveat": null,
+      "source_ids": [],
+      "basis": "synthesis"
+    }
+  ],
+  "book_map": [
+    {
+      "order": 1,
+      "title": "Part or chapter range",
+      "purpose": "TODO: state the job this part performs in the argument.",
+      "summary": "TODO: summarise its new contribution without repeating the idea definitions.",
+      "idea_ids": ["idea-id"],
+      "source_ids": [],
+      "basis": "synthesis"
+    }
+  ],
+  "reading_experience": {
+    "structure": "TODO",
+    "voice": "TODO",
+    "pace": "TODO",
+    "evidence_style": "TODO",
+    "example_style": "TODO",
+    "repetition": "TODO",
+    "prerequisites": "TODO",
+    "source_ids": [],
+    "basis": "synthesis"
+  },
+  "assessment": {
+    "meaning": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "lessons": [
+      { "text": "TODO", "source_ids": [], "basis": "synthesis" }
+    ],
+    "importance": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "author_and_purpose": { "text": "TODO", "source_ids": [], "basis": "synthesis" },
+    "evidence_quality": {
+      "rating": "not-assessed",
+      "strengths": ["TODO"],
+      "weaknesses": ["TODO"],
+      "source_ids": [],
+      "basis": "synthesis"
+    },
+    "reception": {
+      "summary": "TODO",
+      "praise": ["TODO"],
+      "criticism": ["TODO"],
+      "source_ids": [],
+      "basis": "synthesis"
+    },
+    "audience": {
+      "best_for": ["TODO"],
+      "not_for": ["TODO"],
+      "topics": ["TODO"],
+      "source_ids": [],
+      "basis": "synthesis"
+    },
+    "scope": {
+      "is_not": ["TODO"],
+      "omissions": ["TODO"],
+      "missing_or_weak": ["TODO"],
+      "dated_or_contested": ["TODO"],
+      "source_ids": [],
+      "basis": "synthesis"
+    },
+    "decision": {
+      "read_if": "TODO",
+      "summary_is_enough_if": "TODO",
+      "skip_if": "TODO",
+      "format_advice": "TODO",
+      "source_ids": [],
+      "basis": "inference"
+    }
+  },
+  "retention": {
+    "recall_prompts": ["TODO: ask a question that requires recalling the core argument."],
+    "application_prompts": ["TODO: ask where the idea could be tested or applied."]
+  },
+  "workflow": {
+    "status": "stub",
+    "reviewed_against_full_book": false,
+    "review_notes": ""
+  }
+}

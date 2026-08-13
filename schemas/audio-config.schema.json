@@ -4,48 +4,65 @@
   "title": "Audio configuration",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "default_preset", "word_count_tolerance_percent", "presets", "tts"],
+  "required": ["schema_version", "base_words_per_minute", "default_level", "word_count_tolerance_percent", "levels", "playback_speeds", "tts"],
   "properties": {
     "$schema": { "type": "string" },
-    "schema_version": { "const": 1 },
-    "default_preset": { "type": "string", "minLength": 1 },
-    "word_count_tolerance_percent": { "type": "number", "minimum": 0, "maximum": 25 },
-    "presets": {
+    "schema_version": { "const": 3 },
+    "base_words_per_minute": { "type": "integer", "minimum": 100, "maximum": 220 },
+    "default_level": { "const": "15-minutes" },
+    "word_count_tolerance_percent": { "type": "number", "minimum": 0, "maximum": 15 },
+    "levels": {
       "type": "object",
-      "minProperties": 1,
-      "additionalProperties": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["words_per_minute", "description", "durations"],
-        "properties": {
-          "words_per_minute": { "type": "integer", "minimum": 80, "maximum": 300 },
-          "description": { "type": "string", "minLength": 1 },
-          "durations": {
-            "type": "object",
-            "required": ["30-seconds", "3-minutes", "12-minutes", "30-minutes"],
-            "additionalProperties": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": ["minutes", "target_words"],
-              "properties": {
-                "minutes": { "type": "number", "exclusiveMinimum": 0 },
-                "target_words": { "type": "integer", "minimum": 1 }
-              }
-            }
-          }
-        }
+      "additionalProperties": false,
+      "required": ["30-seconds", "5-minutes", "15-minutes", "30-minutes"],
+      "properties": {
+        "30-seconds": { "$ref": "#/$defs/level" },
+        "5-minutes": { "$ref": "#/$defs/level" },
+        "15-minutes": { "$ref": "#/$defs/level" },
+        "30-minutes": { "$ref": "#/$defs/level" }
       }
     },
+    "playback_speeds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "number", "minimum": 0.75, "maximum": 2.5 }
+    },
+    "default_playback_speed": { "type": "number", "minimum": 0.75, "maximum": 2.5 },
     "tts": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["preferred_engine", "official_repository", "metadata_sidecar_required", "commit_generated_audio", "commit_model_weights"],
+      "required": ["preferred_engine", "official_repository", "implementation_repository", "output_format", "pronunciation_dictionary", "default_language_code", "default_voice", "metadata_sidecar_required", "commit_generated_audio", "commit_model_weights"],
       "properties": {
         "preferred_engine": { "type": "string", "minLength": 1 },
         "official_repository": { "type": "string", "format": "uri" },
+        "implementation_repository": { "type": "string", "format": "uri" },
+        "output_format": { "enum": ["mp3", "wav"] },
+        "pronunciation_dictionary": { "type": "string", "pattern": "^config/[a-z0-9-]+\\.json$" },
+        "default_language_code": { "type": "string", "minLength": 1 },
+        "default_voice": { "type": "string", "minLength": 1 },
+        "voices": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": { "pattern": "^[a-z]{2}_[a-z]+$" },
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        },
         "metadata_sidecar_required": { "type": "boolean" },
         "commit_generated_audio": { "type": "boolean" },
         "commit_model_weights": { "type": "boolean" }
+      }
+    }
+  },
+  "$defs": {
+    "level": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minutes", "target_words", "purpose", "required"],
+      "properties": {
+        "minutes": { "type": "number", "exclusiveMinimum": 0 },
+        "target_words": { "type": "integer", "minimum": 1 },
+        "purpose": { "type": "string", "minLength": 1 },
+        "required": { "type": "boolean" }
       }
     }
   }

@@ -3,6 +3,126 @@
   "schema_version": 1,
   "entities": [
     {
+      "id": "abraham-maslow",
+      "kind": "author",
+      "name": "Abraham Maslow",
+      "state": "catalogued",
+      "path": "library/authors/abraham-maslow/author.json",
+      "aliases": []
+    },
+    {
+      "id": "alain-de-botton",
+      "kind": "author",
+      "name": "Alain de Botton",
+      "state": "catalogued",
+      "path": "library/authors/alain-de-botton/author.json",
+      "aliases": []
+    },
+    {
+      "id": "bill-bryson",
+      "kind": "author",
+      "name": "Bill Bryson",
+      "state": "catalogued",
+      "path": "library/authors/bill-bryson/author.json",
+      "aliases": []
+    },
+    {
+      "id": "cal-newport",
+      "kind": "author",
+      "name": "Cal Newport",
+      "state": "catalogued",
+      "path": "library/authors/cal-newport/author.json",
+      "aliases": []
+    },
+    {
+      "id": "charles-duhigg",
+      "kind": "author",
+      "name": "Charles Duhigg",
+      "state": "catalogued",
+      "path": "library/authors/charles-duhigg/author.json",
+      "aliases": []
+    },
+    {
+      "id": "chip-heath",
+      "kind": "author",
+      "name": "Chip Heath",
+      "state": "catalogued",
+      "path": "library/authors/chip-heath/author.json",
+      "aliases": []
+    },
+    {
+      "id": "daniel-lieberman",
+      "kind": "author",
+      "name": "Daniel Lieberman",
+      "state": "catalogued",
+      "path": "library/authors/daniel-lieberman/author.json",
+      "aliases": []
+    },
+    {
+      "id": "eric-hoffer",
+      "kind": "author",
+      "name": "Eric Hoffer",
+      "state": "catalogued",
+      "path": "library/authors/eric-hoffer/author.json",
+      "aliases": []
+    },
+    {
+      "id": "ichiro-kishimi",
+      "kind": "author",
+      "name": "Ichiro Kishimi",
+      "state": "catalogued",
+      "path": "library/authors/ichiro-kishimi/author.json",
+      "aliases": []
+    },
+    {
+      "id": "joseph-nguyen",
+      "kind": "author",
+      "name": "Joseph Nguyen",
+      "state": "catalogued",
+      "path": "library/authors/joseph-nguyen/author.json",
+      "aliases": []
+    },
+    {
+      "id": "mel-robbins",
+      "kind": "author",
+      "name": "Mel Robbins",
+      "state": "catalogued",
+      "path": "library/authors/mel-robbins/author.json",
+      "aliases": []
+    },
+    {
+      "id": "michael-greger",
+      "kind": "author",
+      "name": "Michael Greger",
+      "state": "catalogued",
+      "path": "library/authors/michael-greger/author.json",
+      "aliases": []
+    },
+    {
+      "id": "robert-cialdini",
+      "kind": "author",
+      "name": "Robert Cialdini",
+      "state": "catalogued",
+      "path": "library/authors/robert-cialdini/author.json",
+      "aliases": []
+    },
+    {
+      "id": "robert-greene",
+      "kind": "author",
+      "name": "Robert Greene",
+      "state": "catalogued",
+      "path": "library/authors/robert-greene/author.json",
+      "aliases": []
+    },
+    {
+      "id": "robert-m-sapolsky",
+      "kind": "author",
+      "name": "Robert M. Sapolsky",
+      "state": "catalogued",
+      "path": "library/authors/robert-m-sapolsky/author.json",
+      "aliases": []
+    },
+    {
       "id": "rory-sutherland",
       "kind": "author",
       "name": "Rory Sutherland",
@@ -11,28 +131,128 @@
       "aliases": []
     },
     {
+      "id": "ward-farnsworth",
+      "kind": "author",
+      "name": "Ward Farnsworth",
+      "state": "catalogued",
+      "path": "library/authors/ward-farnsworth/author.json",
+      "aliases": []
+    },
+    {
+      "id": "will-guidara",
+      "kind": "author",
+      "name": "Will Guidara",
+      "state": "catalogued",
+      "path": "library/authors/will-guidara/author.json",
+      "aliases": []
+    },
+    {
+      "id": "yuval-noah-harari",
+      "kind": "author",
+      "name": "Yuval Noah Harari",
+      "state": "catalogued",
+      "path": "library/authors/yuval-noah-harari/author.json",
+      "aliases": []
+    },
+    {
+      "id": "a-short-history-of-nearly-everything-bryson",
+      "kind": "book",
+      "name": "A Short History of Nearly Everything",
+      "state": "catalogued",
+      "path": "library/books/a-short-history-of-nearly-everything-bryson/book.json",
+      "author_ids": [
+        "bill-bryson"
+      ],
+      "aliases": []
+    },
+    {
       "id": "alchemy-rory-sutherland",
       "kind": "book",
       "name": "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
       "state": "catalogued",
       "path": "library/books/alchemy-rory-sutherland/book.json",
-      "author_ids": ["rory-sutherland"],
-      "aliases": ["Alchemy: The Dark Art and Curious Science of Creating Magic in Brands, Business, and Life"]
+      "author_ids": [
+        "rory-sutherland"
+      ],
+      "aliases": [
+        "Alchemy: The Dark Art and Curious Science of Creating Magic in Brands, Business, and Life"
+      ]
     },
     {
-      "id": "thinking-fast-and-slow-daniel-kahneman",
+      "id": "at-home-bryson",
       "kind": "book",
-      "name": "Thinking, Fast and Slow",
-      "state": "recommendation-stub",
-      "author_names": ["Daniel Kahneman"],
+      "name": "At Home: A Short History of Private Life",
+      "state": "catalogued",
+      "path": "library/books/at-home-bryson/book.json",
+      "author_ids": [
+        "bill-bryson"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "deep-work-newport",
+      "kind": "book",
+      "name": "Deep Work",
+      "state": "catalogued",
+      "path": "library/books/deep-work-newport/book.json",
+      "author_ids": [
+        "cal-newport"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "determined-sapolsky",
+      "kind": "book",
+      "name": "Determined",
+      "state": "catalogued",
+      "path": "library/books/determined-sapolsky/book.json",
+      "author_ids": [
+        "robert-m-sapolsky"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "don-t-believe-everything-you-think-nguyen",
+      "kind": "book",
+      "name": "Don't Believe Everything You Think",
+      "state": "catalogued",
+      "path": "library/books/don-t-believe-everything-you-think-nguyen/book.json",
+      "author_ids": [
+        "joseph-nguyen"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "exercised-lieberman",
+      "kind": "book",
+      "name": "Exercised",
+      "state": "catalogued",
+      "path": "library/books/exercised-lieberman/book.json",
+      "author_ids": [
+        "daniel-lieberman"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "how-not-to-age-greger",
+      "kind": "book",
+      "name": "How Not to Age",
+      "state": "catalogued",
+      "path": "library/books/how-not-to-age-greger/book.json",
+      "author_ids": [
+        "michael-greger"
+      ],
       "aliases": []
     },
     {
       "id": "influence-robert-cialdini",
       "kind": "book",
-      "name": "Influence: The Psychology of Persuasion",
-      "state": "recommendation-stub",
-      "author_names": ["Robert Cialdini"],
+      "name": "Influence",
+      "state": "catalogued",
+      "path": "library/books/influence-robert-cialdini/book.json",
+      "author_ids": [
+        "robert-cialdini"
+      ],
       "aliases": []
     },
     {
@@ -40,7 +260,43 @@
       "kind": "book",
       "name": "Nudge",
       "state": "recommendation-stub",
-      "author_names": ["Richard H. Thaler", "Cass R. Sunstein"],
+      "author_names": [
+        "Richard H. Thaler",
+        "Cass R. Sunstein"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "sapiens-harari",
+      "kind": "book",
+      "name": "Sapiens: A Brief History of Humankind",
+      "state": "catalogued",
+      "path": "library/books/sapiens-harari/book.json",
+      "author_ids": [
+        "yuval-noah-harari"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "supercommunicators-duhigg",
+      "kind": "book",
+      "name": "Supercommunicators",
+      "state": "catalogued",
+      "path": "library/books/supercommunicators-duhigg/book.json",
+      "author_ids": [
+        "charles-duhigg"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-48-laws-of-power-greene",
+      "kind": "book",
+      "name": "The 48 Laws of Power",
+      "state": "catalogued",
+      "path": "library/books/the-48-laws-of-power-greene/book.json",
+      "author_ids": [
+        "robert-greene"
+      ],
       "aliases": []
     },
     {
@@ -48,7 +304,129 @@
       "kind": "book",
       "name": "The Choice Factory",
       "state": "recommendation-stub",
-      "author_names": ["Richard Shotton"],
+      "author_names": [
+        "Richard Shotton"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-courage-to-be-disliked-kishimi",
+      "kind": "book",
+      "name": "The Courage to Be Disliked",
+      "state": "catalogued",
+      "path": "library/books/the-courage-to-be-disliked-kishimi/book.json",
+      "author_ids": [
+        "ichiro-kishimi"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-farther-reaches-of-human-nature-maslow",
+      "kind": "book",
+      "name": "The Farther Reaches of Human Nature",
+      "state": "catalogued",
+      "path": "library/books/the-farther-reaches-of-human-nature-maslow/book.json",
+      "author_ids": [
+        "abraham-maslow"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-laws-of-human-nature-greene",
+      "kind": "book",
+      "name": "The Laws of Human Nature",
+      "state": "catalogued",
+      "path": "library/books/the-laws-of-human-nature-greene/book.json",
+      "author_ids": [
+        "robert-greene"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-let-them-theory-robbins",
+      "kind": "book",
+      "name": "The Let Them Theory",
+      "state": "catalogued",
+      "path": "library/books/the-let-them-theory-robbins/book.json",
+      "author_ids": [
+        "mel-robbins"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-power-of-habit-duhigg",
+      "kind": "book",
+      "name": "The Power of Habit",
+      "state": "catalogued",
+      "path": "library/books/the-power-of-habit-duhigg/book.json",
+      "author_ids": [
+        "charles-duhigg"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-power-of-moments-heath",
+      "kind": "book",
+      "name": "The Power of Moments",
+      "state": "catalogued",
+      "path": "library/books/the-power-of-moments-heath/book.json",
+      "author_ids": [
+        "chip-heath"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-school-of-life-botton",
+      "kind": "book",
+      "name": "The School of Life",
+      "state": "catalogued",
+      "path": "library/books/the-school-of-life-botton/book.json",
+      "author_ids": [
+        "alain-de-botton"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-socratic-method-farnsworth",
+      "kind": "book",
+      "name": "The Socratic Method",
+      "state": "catalogued",
+      "path": "library/books/the-socratic-method-farnsworth/book.json",
+      "author_ids": [
+        "ward-farnsworth"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "the-true-believer-hoffer",
+      "kind": "book",
+      "name": "The True Believer",
+      "state": "catalogued",
+      "path": "library/books/the-true-believer-hoffer/book.json",
+      "author_ids": [
+        "eric-hoffer"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "thinking-fast-and-slow-daniel-kahneman",
+      "kind": "book",
+      "name": "Thinking, Fast and Slow",
+      "state": "recommendation-stub",
+      "author_names": [
+        "Daniel Kahneman"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "unreasonable-hospitality-guidara",
+      "kind": "book",
+      "name": "Unreasonable Hospitality",
+      "state": "catalogued",
+      "path": "library/books/unreasonable-hospitality-guidara/book.json",
+      "author_ids": [
+        "will-guidara"
+      ],
       "aliases": []
     }
   ]

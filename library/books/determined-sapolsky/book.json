@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "determined-sapolsky",
+  "type": "book",
+  "title": "Determined",
+  "alternate_titles": [],
+  "author_ids": ["robert-m-sapolsky"],
+  "bibliography": {
+    "first_published": null,
+    "original_language": null,
+    "editions": [],
+    "contents": []
+  },
+  "discovery": {
+    "tag_ids": [],
+    "audiences": [],
+    "formats_available": []
+  },
+  "research": {
+    "sources": [],
+    "citations": {}
+  },
+  "workflow": {
+    "status": "stub",
+    "coverage": "metadata-only",
+    "coverage_notes": "",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}

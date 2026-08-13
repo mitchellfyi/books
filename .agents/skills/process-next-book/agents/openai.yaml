@@ -1,0 +1,6 @@
+interface:
+  display_name: "Process Next Book"
+  short_description: "Fact-check and complete the next queued book"
+  default_prompt: "Use $process-next-book to claim, fact-check, and complete the next ready book in this repository."
+policy:
+  allow_implicit_invocation: false

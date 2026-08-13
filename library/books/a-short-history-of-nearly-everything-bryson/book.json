@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "a-short-history-of-nearly-everything-bryson",
+  "type": "book",
+  "title": "A Short History of Nearly Everything",
+  "alternate_titles": [],
+  "author_ids": ["bill-bryson"],
+  "bibliography": {
+    "first_published": null,
+    "original_language": null,
+    "editions": [],
+    "contents": []
+  },
+  "discovery": {
+    "tag_ids": [],
+    "audiences": [],
+    "formats_available": []
+  },
+  "research": {
+    "sources": [],
+    "citations": {}
+  },
+  "workflow": {
+    "status": "stub",
+    "coverage": "metadata-only",
+    "coverage_notes": "",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}

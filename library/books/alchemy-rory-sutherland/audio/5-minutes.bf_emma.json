@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "alchemy-rory-sutherland",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/alchemy-rory-sutherland/scripts/5-minutes.md",
+  "source_script_sha256": "915c9b68206f5c8b042815e11cc048c46cc788529205dc6468e383b14c7287ee",
+  "pronunciation_dictionary_sha256": "9c4bcb9e8a304a8516dc4324a4db0ab59ac57a1517d6ba03014a58ad3f6b2277",
+  "pronunciation_terms": [],
+  "script_words": 736,
+  "audio_seconds": 304.033,
+  "measured_wpm": 145.25,
+  "generated_at": "2026-08-13T06:54:13.083243+00:00"
+}

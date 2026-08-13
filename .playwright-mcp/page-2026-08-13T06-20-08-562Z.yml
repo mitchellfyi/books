@@ -1,0 +1,13 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Book Briefs" [ref=e3] [cursor=pointer]:
+      - /url: ./
+    - generic [ref=e4]:
+      - generic [ref=e5]: Search books
+      - searchbox "Search books" [ref=e6]
+    - button "Playlist (0)" [ref=e7] [cursor=pointer]
+  - generic [ref=e8]:
+    - complementary [ref=e9]:
+      - paragraph [ref=e10]: Loading…
+      - navigation "Books"
+    - main [ref=e11]

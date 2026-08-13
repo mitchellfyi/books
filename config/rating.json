@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/rating-config.schema.json",
+  "schema_version": 1,
+  "scale": {
+    "minimum": 0,
+    "maximum": 10,
+    "dimension_increment": 0.5,
+    "output_decimals": 1
+  },
+  "dimensions": [
+    {
+      "id": "explanatory-power",
+      "label": "Explanatory power",
+      "weight": 0.2,
+      "question": "How clearly and usefully do the book's ideas explain their subject?"
+    },
+    {
+      "id": "evidence-and-reasoning",
+      "label": "Evidence and reasoning",
+      "weight": 0.25,
+      "question": "How well do evidence and reasoning support the book's important claims?"
+    },
+    {
+      "id": "insight-value",
+      "label": "Insight value",
+      "weight": 0.2,
+      "question": "How much non-obvious understanding does the content add?"
+    },
+    {
+      "id": "practical-utility",
+      "label": "Practical utility",
+      "weight": 0.15,
+      "question": "How well can a reader use or test the ideas where they apply?"
+    },
+    {
+      "id": "completeness-and-calibration",
+      "label": "Completeness and calibration",
+      "weight": 0.1,
+      "question": "Does the content cover necessary distinctions, limits, uncertainty, and counterarguments?"
+    },
+    {
+      "id": "information-efficiency",
+      "label": "Information efficiency",
+      "weight": 0.1,
+      "question": "How much decision-relevant understanding does the book deliver without avoidable repetition or padding?"
+    }
+  ],
+  "anchors": [
+    {
+      "score": 0,
+      "description": "No defensible content value, or the central content is seriously misleading."
+    },
+    {
+      "score": 2.5,
+      "description": "A weak treatment with major flaws and little dependable value."
+    },
+    {
+      "score": 5,
+      "description": "Mixed: some useful content, but important weaknesses limit reliance or value."
+    },
+    {
+      "score": 7.5,
+      "description": "Strong: clear, well-supported, useful content with bounded weaknesses."
+    },
+    {
+      "score": 10,
+      "description": "Exceptional content: unusually powerful, rigorous, useful, complete, and efficient."
+    }
+  ],
+  "score_bands": [
+    { "minimum": 0, "maximum": 1.9, "label": "negligible" },
+    { "minimum": 2, "maximum": 3.9, "label": "weak" },
+    { "minimum": 4, "maximum": 5.9, "label": "limited" },
+    { "minimum": 6, "maximum": 6.9, "label": "worthwhile" },
+    { "minimum": 7, "maximum": 7.9, "label": "strong" },
+    { "minimum": 8, "maximum": 8.9, "label": "excellent" },
+    { "minimum": 9, "maximum": 10, "label": "exceptional" }
+  ],
+  "confidence": {
+    "low": "Important parts or source support remain uncertain.",
+    "medium": "The content is substantially covered, with material limits recorded.",
+    "high": "The whole work and its important claims have strong, direct coverage."
+  },
+  "excluded_factors": [
+    "The author's identity, fame, credentials, politics, or reputation",
+    "Sales, awards, popularity, cultural status, or review aggregates",
+    "Personal agreement with the conclusion or affinity with the author",
+    "Narration, cover, physical format, or prose style except where repetition reduces information efficiency"
+  ]
+}

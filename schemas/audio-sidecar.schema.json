@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/audio-sidecar.schema.json",
+  "title": "Generated audio sidecar metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "book_id", "duration", "engine", "engine_version",
+    "model", "voice", "lang", "speed", "sample_rate", "output_format",
+    "source_script", "source_script_sha256", "pronunciation_dictionary_sha256",
+    "pronunciation_terms", "script_words", "audio_seconds",
+    "measured_wpm", "generated_at"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 2 },
+    "book_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "duration": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "engine": { "type": "string", "minLength": 1 },
+    "engine_version": { "type": "string", "minLength": 1 },
+    "model": { "type": "string", "minLength": 1 },
+    "voice": { "type": "string", "minLength": 1 },
+    "lang": { "type": "string", "minLength": 1 },
+    "speed": { "type": "number", "exclusiveMinimum": 0 },
+    "sample_rate": { "type": "integer", "minimum": 1 },
+    "output_format": { "type": "string", "minLength": 1 },
+    "source_script": { "type": "string", "minLength": 1 },
+    "source_script_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "pronunciation_dictionary_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "pronunciation_terms": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "script_words": { "type": "integer", "minimum": 1 },
+    "audio_seconds": { "type": "number", "exclusiveMinimum": 0 },
+    "measured_wpm": { "type": "number", "exclusiveMinimum": 0 },
+    "generated_at": { "type": "string", "format": "date-time" }
+  }
+}

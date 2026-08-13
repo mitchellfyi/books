@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/pronunciations.schema.json",
+  "title": "Deterministic TTS pronunciation dictionary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entries"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["term", "aliases", "case_sensitive", "phonemes", "source_url", "verified_at", "notes"],
+        "properties": {
+          "term": { "type": "string", "minLength": 1 },
+          "aliases": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true
+          },
+          "case_sensitive": { "type": "boolean" },
+          "phonemes": {
+            "type": "object",
+            "minProperties": 1,
+            "propertyNames": { "pattern": "^[a-z]{2}(?:-[a-z]{2})?$" },
+            "additionalProperties": { "type": "string", "minLength": 1 }
+          },
+          "source_url": { "type": ["string", "null"], "format": "uri" },
+          "verified_at": { "type": "string", "format": "date" },
+          "notes": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

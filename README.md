@@ -1,17 +1,92 @@
-# Books
+# 5MinBooks
 
-A research-backed book library for deciding what to read, listen to, borrow, or buy.
+A local, research-backed non-fiction library for deciding what to read, listen to, borrow, or buy.
 
-Each book has concise structured metadata, a readable analysis, cited research, and optional audio scripts. Authors and books are connected through a small typed graph so the library can recommend useful next reads without duplicating relationship lists in every profile.
+The UI presents each book at progressively deeper levels. The current levels
+and targets live in [`config/audio.json`](config/audio.json); their research
+basis is in [the content model](docs/research-and-content-model.md).
 
-Start with [AGENTS.md](AGENTS.md). The first example is [Alchemy by Rory Sutherland](library/books/alchemy-rory-sutherland/summary.md).
+## Use it
 
-## Design
+Requirements: Python 3.10 or later and [uv](https://docs.astral.sh/uv/). The library app itself has no JavaScript build step.
 
-- Markdown holds summaries and narration scripts.
-- JSON holds metadata, citations, workflow state, tags, and relationships.
-- `taxonomy/tags.json` prevents uncontrolled tag variants.
-- `data/catalog.json` provides the discoverable entity index.
-- `data/relationships.json` provides traversable book-author-idea connections.
+```bash
+./bookflow check
+./bookflow serve
+```
 
-Audio targets default to 150 words per minute. See `config/audio.json` for the duration presets and the retained 250-WPM alternative.
+`serve` builds the browser data and opens the local UI at `http://127.0.0.1:8042/`. It supports search, layered briefs, transcripts, playback speed, queues, and saved playlists. Saved playlists use `data/playlists.json` under the local server and browser storage under a plain static server.
+
+Create a book workspace:
+
+```bash
+./bookflow init --title "Book title" --author "Author name"
+```
+
+An AI agent then follows [AGENTS.md](AGENTS.md) to research and fill the structured files. The command creates the complete scaffold; it does not pretend to research the book.
+
+## Process the queue with an agent
+
+Start either CLI in the repository root, then invoke the project skill in its
+prompt. In Codex CLI:
+
+```text
+$process-next-book
+```
+
+In Claude Code:
+
+```text
+/process-next-book
+```
+
+The two commands use the same canonical
+[skill](.agents/skills/process-next-book/SKILL.md); the Claude project path is
+a symlink, so its instructions cannot drift. The skill claims one ready book,
+researches and reviews it, calculates its content-only rating, derives each
+useful narration length, hands local audio generation to `bookflow`, validates
+the repository, and updates the queue. If a CLI session was already open when
+the skill directory was first added, restart it. As a discovery fallback, use
+this plain prompt: `Read .agents/skills/process-next-book/SKILL.md and follow it
+to process the next queued book.` See the official [Codex skill
+guide](https://developers.openai.com/codex/skills) and [Claude Code skill
+guide](https://code.claude.com/docs/en/slash-commands) for discovery and
+invocation details.
+
+The rating total is deterministic once its evidence-backed component scores
+are filled:
+
+```bash
+./bookflow rate <book-id>          # inspect the calculated score
+./bookflow rate <book-id> --write  # write the calculated total
+```
+
+Its rubric lives in `config/rating.json`; the [rating model](docs/rating-model.md)
+explains the research basis and limits. It evaluates the content and ideas,
+not the author's identity, popularity, awards, or review score.
+
+Generate approved audio locally with the Apache-licensed [Kokoro model](https://github.com/hexgrad/kokoro) through the lightweight MIT-licensed [Kokoro-ONNX runtime](https://github.com/thewh1teagle/kokoro-onnx):
+
+```bash
+./bookflow audio <book-id>             # every approved level for one book
+./bookflow audio <book-id> 5-minutes   # one level
+./bookflow audio --all                 # every approved script in the library
+```
+
+The first run installs the declared Python packages and may download model data. Audio is stored under each book's `audio/` directory; audio and model weights stay local and are not committed. A JSON sidecar records how each file was made and becomes stale after a script or pronunciation-dictionary change. See [the TTS guide](docs/tts.md) before adding or correcting a pronunciation.
+
+Inspect the phonemes and any shared-dictionary match for a difficult term:
+
+```bash
+./bookflow pronunciation "author name or specialist term"
+```
+
+## Structure
+
+- `book.json`: identity, editions, discovery, research sources, and coverage.
+- `content.json`: the canonical argument, ideas, book map, rating, reading experience, critique, audience, and decision.
+- `scripts/*.md`: audio-ready presentations derived from the structured content.
+- `data/relationships.json`: traversable links between books and authors.
+- `taxonomy/tags.json`: controlled discovery terms.
+
+Books are processed from `data/queue.json` in priority order: `./bookflow queue` shows what each book still needs, and `./bookflow next` hands an agent the next ready book with its research prompt. Coverage (`sample-and-secondary` versus `full-book`) is recorded on every profile as plain metadata — it never blocks a brief from being written, it just tells you how it was researched.

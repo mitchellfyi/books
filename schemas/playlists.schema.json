@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/playlists.schema.json",
+  "title": "Saved playlists",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "playlists"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "playlists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "items", "updated_at"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "name": { "type": "string", "minLength": 1 },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["book_id", "duration"],
+              "properties": {
+                "book_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+                "duration": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+              }
+            }
+          },
+          "updated_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

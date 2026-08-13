@@ -1,193 +1,353 @@
 @/Users/m12n/.codex/RTK.md
 
-# Book library agent guide
+# 5MinBooks agent guide
 
-## Purpose
+## Mission
 
-This repository is a research-backed library for deciding whether to read, listen to, borrow, or buy a book. It should let a reader:
+Build a research-backed library of non-fiction books that helps a reader decide whether to read, listen to, borrow, or buy the original. Protect the reader's time and attention. Explain the useful argument faithfully, show what the full book is like to consume, and say plainly when the summary is enough or the book is unlikely to help.
 
-- understand a book at several levels of detail;
-- judge its relevance, strengths, limitations, and likely value;
-- discover connected books, ideas, and authors;
-- turn concise, original summaries into spoken audio.
+This is not a contest to produce the most text. Use the shortest treatment that preserves the book's useful distinctions, evidence, examples, limits, and reading experience.
 
-Optimise for accuracy, traceability, clear judgement, and fast scanning. Do not optimise for the number of files or the amount of prose.
+## Editorial contract
 
-## Repository map
+- Non-fiction only.
+- Use simple, precise British English. Explain necessary technical terms at first use.
+- Lead with meaning. Remove throat-clearing, generic praise, filler, and repeated conclusions.
+- Do not repeat one explanation across the synopsis, ideas, book map, assessment, and scripts. Each field has a separate job.
+- Represent the author's argument before evaluating it. Distinguish what the book says from what reviewers say and what the library infers.
+- Preserve conditions and uncertainty. Do not turn a qualified claim into a rule.
+- Use one representative example when it reveals how an important idea works or where it fails. Remove decorative anecdotes and repeated examples.
+- Be critical when evidence, reasoning, omissions, or delivery warrant it. Do not manufacture balance when the evidence is one-sided.
+- Write for the product rather than transcribing. Use exact wording only when it improves accuracy, and cite it.
+- Never imply that a partial sample or other summary is the full book.
+
+## Source of truth
 
 ```text
-config/                         Shared settings, including audio lengths
-data/
-  catalog.json                  All known book and author nodes
-  relationships.json            Typed edges between nodes
-library/
-  authors/<author-id>/
-    author.json                 Cited factual profile and concise synthesis
-    profile.md                  Readable author profile
-  books/<book-id>/
-    book.json                   Cited metadata and concise analysis
-    summary.md                  Complete readable book analysis
-    scripts/                    Audio-ready scripts by duration
-    audio/                      Generated audio; normally ignored by Git
-schemas/                        JSON Schemas for maintained JSON files
-taxonomy/tags.json              Canonical tags and their definitions
-templates/                      Files to copy when adding an entity
+bookflow                                  CLI: queue, rate, check, build, serve, audio
+config/audio.json                         Lengths, word targets, and TTS defaults
+config/pronunciations.json                Verified, language-specific TTS pronunciations
+config/rating.json                        Content-only rating rubric and weights
+data/catalog.json                         Discoverable book and author nodes
+data/relationships.json                   Typed connections between nodes
+data/playlists.json                       Saved listening playlists (written by the UI)
+docs/research-and-content-model.md        Why the levels and fields are what they are
+docs/rating-model.md                      Rating rationale, limits, and calibration
+docs/review-method.md                      Fact-checking and adversarial review protocol
+docs/tts.md                                Local audio and pronunciation workflow
+library/authors/<author-id>/author.json   Cited author profile
+library/books/<book-id>/book.json         Identity, editions, discovery, sources, coverage
+library/books/<book-id>/content.json      Canonical ideas, book map, and assessment
+library/books/<book-id>/scripts/*.md      Derived, audio-ready treatments
+library/books/<book-id>/audio/             Generated audio and provenance sidecars
+schemas/                                   Machine-enforced structure
+scripts/                                   check.py and generate_audio.py (run via uv)
+taxonomy/tags.json                         Canonical discovery vocabulary
+templates/                                 New entity scaffolds
+app/                                       Local search, reading, player, and playlist UI
 ```
 
-Use Markdown for prose people will read or narrate. Use JSON for structured facts, source records, tags, workflow state, and graph data. Do not bury long summaries inside JSON strings.
+`content.json` is the single semantic source for a book. Scripts and the UI are presentations of it. Do not copy the full summary into `book.json`, an extra Markdown summary, or several duration files. Update structured content first, then revise affected scripts.
 
-## IDs, paths, and editions
+Use stable lowercase ASCII kebab-case IDs. A book ID identifies the work rather than one edition. Record edition details and ISBNs under `bibliography.editions`. Use canonical tag IDs only. Add a tag only if it will help discovery across books; define it in `taxonomy/tags.json` and do not create synonyms as separate tags.
 
-- Use stable, lowercase, ASCII kebab-case IDs: `alchemy-rory-sutherland` and `rory-sutherland`.
-- A book ID identifies the work, not a particular edition. Store edition-specific ISBNs and publication details in `book.json`.
-- If two books would produce the same ID, append the first publication year.
-- Never rename an established ID without updating the catalog, relationships, citations, and inbound links.
-- Use British English unless a title or quotation uses another form.
+## What every complete book must answer
 
-## Required book coverage
+Populate the fields for their stated purpose:
 
-Every completed book must answer these questions without repeating the same explanation in several sections:
+- `card`: one-sentence identity and a direct reader verdict.
+- `overview.synopsis`: what the book is and covers.
+- `overview.core_argument`: the central claim the author is trying to establish.
+- `ideas`: each distinct main idea, with a short title, claim, explanation, significance, representative example, and caveat.
+- `book_map`: how every substantive part develops the argument from beginning to end. Do not redefine ideas here.
+- `reading_experience`: structure, voice, pace, evidence style, example style, repetition, prerequisites, and what sustained reading or listening feels like.
+- `assessment.rating`: a sourced, content-only score with confidence and the complete configured dimension breakdown.
+- `assessment.meaning`, `lessons`, and `importance`: what the work changes, what is worth retaining or applying, and why it matters.
+- `assessment.author_and_purpose`: who wrote it, relevant background and expertise, likely purpose, perspective, and limits. Keep fuller career and bibliography details in the author profile.
+- `assessment.evidence_quality`: strengths and weaknesses of the book's support, not the popularity of its conclusion.
+- `assessment.reception`: professional, specialist, and reader responses to both content and delivery, including material disagreement.
+- `assessment.audience`: who benefits, who will not, the topics covered, and why they matter to those readers.
+- `assessment.scope`: what the book is not, what it omits, what is missing or weak, and what is dated or contested.
+- `assessment.decision`: when to read the full book, when the brief is enough, when to skip it, and which format best suits its delivery.
+- `retention`: a few optional recall and application prompts. A summary helps orientation; it does not by itself guarantee learning.
 
-1. **Synopsis:** What is the book, in a compact paragraph?
-2. **Core argument:** What central claim is the author trying to establish?
-3. **Main ideas:** What are the distinct ideas? Give each a short title and a precise description.
-4. **Whole-book summary:** How does the argument or narrative develop from beginning to end? Cover all substantive parts, not just the premise or opening chapters.
-5. **Meaning, lessons, and importance:** What should a reader retain, apply, question, or see differently?
-6. **Author and purpose:** Who wrote it, what relevant background and expertise do they have, why was it written, and what else have they written?
-7. **Reception:** How did professional reviewers, subject specialists, and readers receive the content and its delivery? Include material praise and criticism.
-8. **Audience and topics:** Who is it for, what does it cover, and why might those readers care?
-9. **Scope and omissions:** What is it not? What does it not cover? What is missing, weakly supported, dated, or outside its stated scope? Who is unlikely to enjoy or benefit from it?
-10. **Connections:** Which books, authors, and ideas should a reader explore next, and why?
+Connections belong in `data/relationships.json`, not repeated recommendation lists. Give each edge a type, useful rationale, basis, confidence, and evidence references when explicit. Add an uncatalogued book or author as a catalogue stub before linking to it.
 
-For fiction, adapt the same headings: treat the core argument as themes or governing concerns, main ideas as themes/motifs/formal choices, and whole-book summary as a clearly labelled spoiler synopsis.
+## Research standard
 
-## Research is mandatory
+Online research is mandatory for every book and author. Search broadly enough to verify identity, understand the argument, find disagreement, assess the author's authority, and describe reception. Use as many sources as add distinct evidence; stop when new results only repeat what is already supported. As a minimum working floor, aim for six useful book sources, three author sources, and two independent reception sources. Important claims should use multiple sources when independent corroboration exists.
 
-Browse the web for every new book and author, even if the facts appear familiar. Record the access date. Prefer the most direct and authoritative source available for each claim.
+Do not ask the owner to OCR a book before exhausting online sources. Use any
+lawfully available full text, preview, repository copy, transcript, author
+extract, library access, or owner-provided file or OCR. Download and search a
+long source when that is the efficient way to cover the book. Do not bypass
+paywalls, access controls or digital rights management, and do not use copies
+that appear to be unauthorised.
 
-Use a mix of source types:
+The repository imposes no arbitrary excerpt limit. Product purpose controls
+selection: summarise the work, use exact wording only where it improves
+accuracy, cite it, and never pad a brief with source text.
 
-1. the book itself, a legally accessed copy, publisher-provided sample, table of contents, notes, or index;
-2. official publisher and library catalogue records for titles, editions, dates, ISBNs, and subjects;
-3. the author's site, employer, university, professional body, or recorded interviews for biography, expertise, intent, and influences;
-4. independent professional reviews from reputable publications;
-5. subject-matter reviews or scholarly commentary when the book makes technical, historical, scientific, medical, legal, or financial claims;
-6. reader aggregates such as Goodreads or StoryGraph for broad reception patterns, never as the sole authority;
-7. secondary summaries only as discovery aids or corroboration, not as substitutes for the book.
+Prefer sources in this order, according to the claim:
 
-Research broadly enough to find disagreement. As a working floor, seek at least six useful sources for a book, at least three for an author, and at least two genuinely independent sources for reception. These are minimums, not quotas. Keep adding sources while they contribute a new fact, perspective, correction, or criticism; stop when additional results merely repeat existing material.
+1. a lawfully accessed full book, its notes and index, or a publisher sample and contents;
+2. publisher and library records for edition facts;
+3. official author, employer, university, or professional profiles for background;
+4. direct interviews for the author's intent and own account;
+5. reputable professional reviews;
+6. subject specialists or scholarly work for technical claims and evidential criticism;
+7. reader aggregates for broad patterns in delivery and appeal;
+8. commercial secondary summaries only for discovery or corroboration.
 
-Do not use unattributed SEO summaries, scraped copies, AI-generated pages, retailer blurbs presented as reviews, or pirated books as evidence. A publisher page is authoritative for publication facts and marketing positioning, but it is not independent evidence of quality.
+Reject pirated copies, scraped text, unattributed SEO summaries, apparent AI content, spam sites, and retailer blurbs presented as reviews. A source can be authoritative for a narrow fact and still be interested or promotional.
 
-If the full book is unavailable, say so in `workflow.coverage_notes`. Do not describe a summary as complete when it is based only on a blurb, sample, interview, or other summary. Mark unsupported areas as incomplete and leave a clear next step.
+Each source record must include:
 
-## Citations and evidence
+- a stable source ID, title, publisher or author, direct URL, type, and access date;
+- `independence`: `primary`, `independent`, `interested`, or `community`;
+- `quality`: `high`, `medium`, or `limited` for the claim it supports;
+- a precise statement of what it supports;
+- limitations, bias, conflicts, or coverage boundaries.
 
-Facts in `book.json` and `author.json` must be traceable to their `research.sources` entries.
+Use `research.citations` for metadata fields in `book.json` and `author.json`. Use local `source_ids` on interpretive records in `content.json` and the author profile. Do not duplicate both citation methods for one field. Source IDs in `content.json` resolve against `book.json`.
 
-- Give every source a stable local ID such as `publisher-book-page`.
-- Store title, publisher or author, URL, source type, access date, and a short note explaining what the source supports.
-- Map JSON Pointers to source IDs in `research.citations`. Example:
+Set `basis` accurately:
 
-```json
-{
-  "/bibliography/first_published": ["publisher-book-page", "worldcat-record"],
-  "/profile/career": ["official-employer-bio", "ted-speaker-bio"]
-}
+- `explicit`: the source directly states it;
+- `synthesis`: it combines or paraphrases supported material;
+- `inference`: it is the library's reasoned judgement. The text must make the reasoning understandable.
+
+Do not cite a search-results page or a page that merely mentions the topic. Keep short notes while researching and batch related searches. Verify unstable facts such as roles, review aggregates, and available editions on the day of research.
+
+## Rating model
+
+`config/rating.json` is the sole rubric. Score every configured dimension from
+0 to 10 in 0.5-point steps, explain the judgement, and cite the content and
+evidence used. Use the anchors consistently across books. Then run:
+
+```bash
+./bookflow rate <book-id> --write
 ```
 
-- Cite important interpretive items locally with `source_ids`, especially main ideas, attributed author intent, criticisms, reception claims, and relationship rationales.
-- Use two or more sources for consequential facts when independent corroboration is available.
-- Label a statement as `synthesis` when it combines evidence, and as `inference` when it is the agent's reasoned conclusion rather than a source's explicit statement. Explain the inference briefly.
-- Do not cite a search-results page. Cite the page that contains the evidence.
-- Do not cite a source that merely mentions the topic without supporting the claim.
-- Keep direct quotations short and necessary. Prefer an original paraphrase with a citation.
+The command applies the weights and writes the one-decimal total. Never tune
+the total by hand. The score judges only the book's content and ideas: their
+explanatory power, support, insight, utility, calibration, and information
+efficiency. Do not reward or punish the author's identity, reputation,
+credentials, politics, sales, awards, popularity, reception, or the agent's
+agreement with the conclusion. Reviews may reveal a claim worth checking, but
+they are not votes. Prose and format matter only where avoidable repetition
+reduces information efficiency.
 
-For Markdown, use descriptive inline links or compact source markers that resolve to the profile's source list. A reader should be able to distinguish the author's position, a reviewer's judgement, and the library's synthesis.
+Set rating confidence separately from quality. Confidence records how fully
+the available sources cover the work; limited access lowers confidence, not
+the score. Do not claim precision that the evidence cannot support.
 
-## Writing standard
+## Coverage is recorded, not a gate
 
-- Lead with the answer. Use short, concrete sentences.
-- Do not repeat the synopsis in the core argument, the core argument in every main idea, or the author's biography in the book summary.
-- Separate content from evaluation: first explain what the book says, then assess its evidence, delivery, limitations, and usefulness.
-- Attribute contested claims. Do not turn the author's opinion into fact.
-- Include counterarguments when reputable sources raise them.
-- Make uncertainty visible. Use `unknown` or a coverage note instead of guessing.
-- Avoid promotional language, generic praise, filler, throat-clearing, and conclusions that add no information.
-- Preserve the book's nuance. Do not flatten a conditional argument into an absolute rule.
-- Use original wording. Summaries must not reconstruct or replace the book.
+The owner's instruction: profiles should be as complete and full as the
+sources allow, for personal purchase decisions. Coverage never blocks work:
+every configured level may be completed and voiced at any coverage.
 
-## Summary and audio lengths
+`workflow.coverage` stays as plain metadata because it costs nothing and
+tells a later agent where deepening would help most:
 
-`config/audio.json` is authoritative. The default narration rate is 150 words per minute, giving these targets:
+- `metadata-only`: identity known, analysis not yet written.
+- `sample-and-secondary`: built from samples, previews, interviews, reviews,
+  and detailed secondary accounts.
+- `full-book`: checked against a full copy.
 
-| Label | Duration | Target words |
-| --- | ---: | ---: |
-| `30-seconds` | 0.5 min | 75 |
-| `3-minutes` | 3 min | 450 |
-| `12-minutes` | 12 min | 1,800 |
-| `30-minutes` | 30 min | 4,500 |
+Maximise real coverage through free, lawful full-text routes before settling
+for less: the owner's own copies, public-library ebook lending (Libby),
+Internet Archive / Open Library lending, publisher samples, Google Books
+preview, author-published excerpts, and detailed chapter-level secondary
+accounts. Do not use pirated copies — with library lending available they
+are an unnecessary risk, and scraped text is unreliable evidence anyway.
 
-The original requested counts (125, 750, 3,000, and 7,500) imply 250 words per minute, so they are retained in the config as the `requested-fast` preset. Do not mix rates within a book. State the selected preset in each script's front matter and keep within the configured tolerance.
+Two rules survive because they protect the owner, not a policy: never invent
+specifics no source supports (a wrong "fact" corrupts the buying decision),
+and keep `coverage` truthful so nobody re-researches or over-trusts a
+profile by mistake.
 
-Each duration has a different job:
+## Length model
 
-- **30 seconds:** identity, core argument, ideal reader, and the most important caveat.
-- **3 minutes:** synopsis, main ideas, value, audience, and limitations.
-- **12 minutes:** whole-book arc, main ideas with examples, author context, reception, lessons, omissions, and next reads.
-- **30 minutes:** detailed whole-book treatment with argument development, examples, counterarguments, reception, practical interpretation, and connections. It must add depth rather than repeat the shorter script.
+`config/audio.json` is the only source for levels, targets, tolerance, playback
+speeds and TTS defaults. Do not copy those values into other files or hardcode
+them in new code. Treat word targets as ceilings as well as targets. Never pad.
 
-Audio scripts must sound natural when spoken. Expand ambiguous abbreviations, avoid tables and raw URLs, limit parenthetical asides, and use brief signposts. Run a word count before marking a script complete.
+Use the configured decision brief as the maximum normal unit for one coherent
+idea. Join several semantic chapters for longer whole-book briefs.
 
-Generated audio belongs under `library/books/<book-id>/audio/`. Use Kokoro as the preferred local, open-weight TTS option when audio generation is requested, but read its current official documentation and licence before installing or updating it. Record the model, voice, language, speed, source script, generation date, and tool version in a sidecar JSON file. Do not commit model weights or large generated audio unless the repository policy later opts in.
+Draft the configured levels, compare adjacent versions, and set
+`editorial.recommended_level` to the shortest version whose next level adds no
+decision-relevant or understanding-relevant information. Extra causal steps,
+technical foundations, competing interpretations or necessary structure are
+information; repeated explanation and decoration are not. Record the reason
+in `editorial.rationale`.
 
-## Tags and relationships
+Each level is independently edited for its job; it is not a mechanical truncation of the longer script. Longer audio uses short semantic sections and clear transitions. Expand ambiguous abbreviations, remove tables and raw URLs, and read difficult sentences aloud. Playback speed belongs to the player. Do not rewrite at 250 words per minute to simulate faster listening.
 
-Use only canonical IDs from `taxonomy/tags.json`. Add a tag only when it improves discovery across multiple entities. A new tag needs a definition, kind, and any aliases; do not create near-duplicates.
+The research behind these rules, including its limits, is recorded once in
+`docs/research-and-content-model.md`.
 
-Store relationships as typed edges in `data/relationships.json`, not as free-form related-book lists copied into several profiles. Every edge needs:
+## Processing queue
 
-- stable source and target entity IDs;
-- a canonical relationship type;
-- a concise explanation of the useful connection;
-- evidence source references when the link is explicit;
-- `basis: "inference"` and a rationale when it is a conceptual recommendation;
-- a confidence level.
+`data/queue.json` is the work dispatcher: which books to process, in what
+order, and where each stands (`ready`, `in-progress`, `done`, `blocked`).
 
-Use `data/catalog.json` for discoverable nodes, including uncatalogued recommendations. An external recommendation may be a stub, but it must have enough identity data to avoid ambiguity.
+```bash
+./bookflow queue                     # the full queue, ordered, with what each book needs
+./bookflow next                      # the next ready book and its research prompt
+./bookflow next --claim              # same, and mark it in-progress
+./bookflow queue --set <id> done     # update a status
+```
 
-## Workflow for adding a book
+Work strictly in priority order unless the owner says otherwise. `init` adds
+new books to the end of the queue automatically. Queue status is dispatch
+state; the content state stays in each book's own `workflow` fields.
 
-1. Search the catalog by title, author, ISBN, and aliases to prevent duplicates.
-2. Copy the book and author templates. Reuse an existing author profile when possible.
-3. Resolve the work, editions, and canonical IDs.
-4. Gather primary and authoritative sources, then independent reception and criticism.
-5. Read the legally available book or full text when provided. Otherwise document the coverage limit.
-6. Complete cited JSON profiles before writing long prose.
-7. Write `summary.md`, then derive audio scripts from it. Short scripts are independent edits, not mechanically truncated long scripts.
-8. Add canonical tags, catalog entries, and meaningful relationship edges.
-9. Validate all JSON against its schema, check internal IDs and source references, count script words, and inspect links.
-10. Mark the profile complete only when every required section is present, factual claims are cited, reception is balanced, and coverage is honestly labelled.
+**When the queue has no ready books, refill it by discovery.** Research
+outward from the existing library: which books do the catalogued works cite,
+answer, or get recommended alongside; what do readers of them read next;
+which related titles are demonstrably popular or important. Verify each
+candidate with online sources, then `./bookflow init --discovered` it,
+record the relationship edges that justify the addition, and let the owner
+reorder priorities. Prefer a few well-justified additions over many
+speculative ones.
+
+## Workflow
+
+### 1. Initialise
+
+Check the catalogue by title, author, alternate title, and ISBN to prevent duplicates. Then run:
+
+```bash
+./bookflow init --title "Book title" --author "Author name"
+```
+
+The command refuses titles that normalise to a different existing catalogue
+entry (`--force` overrides), promotes a matching recommendation stub when its
+ID is supplied, creates the book and author scaffolds and catalogue entries,
+then prints a research prompt. Add the cited written-by relationship during
+research. The command does not perform research.
+
+### 2. Research
+
+Resolve the exact work and editions. Gather primary and bibliographic sources first, then author context, independent reception, subject criticism, and reader patterns. Record sources as they are used, including limitations. Acquire or receive lawful full-book access before claiming full coverage.
+
+### 3. Write structured content
+
+Complete `book.json`, the author's `author.json`, and `content.json`. Cover the whole book before polishing prose. Consolidate overlapping ideas. Map every content source ID to a recorded source. Label inference. Complete the rating dimensions and let `./bookflow rate <book-id> --write` calculate the total. Choose the recommended duration from the loss caused by compression, not from page count.
+
+### 4. Fact-check and adversarially review
+
+Follow `docs/review-method.md`. Verify basic identity and edition facts, the
+book's actual argument, consequential external claims, citation entailment,
+and the strongest credible counterevidence. Then review the profile against
+the tone, purpose and simple-language standard of 5MinBooks. Inspect and fix
+the work rather than only reporting defects. Preserve honest partial status.
+Run these passes separately:
+
+1. **Identity:** correct title, author, work, editions, dates, ISBNs, and duplicate detection.
+2. **Coverage:** every substantive part represented; full-book claims supported by full-book access.
+3. **Evidence:** consequential claims supported; source quality, independence, disagreement, and bias described accurately.
+4. **Rating:** every component follows the rubric, uses content-only evidence, and the calculated total is current.
+5. **Compression:** repeated claims and examples removed; fields keep distinct jobs; no important distinction lost.
+6. **Reader advocacy:** direct best-for, not-for, missing, read/summary/skip, and format guidance.
+7. **Plain language and audio:** clear sentences, necessary terms explained, natural spoken rhythm, target met without padding.
+
+Record material corrections in `workflow.review_notes` or `next_steps`. Do not mark work complete merely because the files are full.
+Set `workflow.quality_review` to `passed` only after every check is complete,
+the audio pronunciation sample has passed, and the review date and remaining
+uncertainties are recorded.
+
+### 5. Derive scripts, choose the length, and generate audio
+
+Draft every level from the same `content.json`. Compare
+adjacent drafts with the loss test, set `editorial.recommended_level` and its
+`rationale`, mark the kept levels `complete`, and drop a drafted level that
+can only pad or only truncate. An absent optional script is a finding, not a
+gap. Update scripts after changing `content.json`, then validate.
+
+Generate audio in listening-priority order — the recommended level first,
+then the configured discovery level, then the remaining kept levels. Running
+the command without a level does this automatically:
+
+```bash
+./bookflow audio <book-id>
+```
+
+The first run downloads packages and the Kokoro model into `models/`; after
+that, generation is fully local. Only scripts marked `status: complete` are
+voiced; unchanged scripts are skipped (`--force` regenerates), and speaking
+speed is calibrated to `base_words_per_minute`. Each audio file (MP3 by
+default) receives a committed sidecar containing the script hash, engine,
+model, voice, speed, measured duration, and pronunciation-dictionary hash;
+`check` uses the hashes to flag stale audio. Audio is stored locally under the
+book's `audio/` directory. Do not commit model weights or the audio itself.
+
+Follow `docs/tts.md` for pronunciation. Generate and listen to the shortest
+approved script before marking `audio_pronunciation` passed. Check the author,
+title, technical terms, abbreviations and numbers. If Kokoro is wrong, add a
+language-specific entry to `config/pronunciations.json` only after verifying
+it from a reliable pronunciation source or the person's own speech. Never
+guess a phoneme string. Regenerate all affected audio; the dictionary hash
+makes older output stale automatically. Use the shared dictionary rather than
+retraining or modifying the model, which keeps every correction reviewable
+and repeatable.
+
+### 6. Validate and use the library
+
+```bash
+./bookflow check
+./bookflow build
+./bookflow serve
+```
+
+`check` validates schemas, IDs, tags, citations, ratings, content references, relationship endpoints, word counts, coverage labels, and audio freshness. `serve` rebuilds the local data and opens the search, reading, audio, speed, and playlist UI.
+
+## Agent operating rules
+
+Precision and economy matter as much as correctness. Agents working here:
+
+1. **Do exactly the task.** One book, or the named set, per run. No drive-by
+   reformatting, renaming, or restructuring outside the task. Changes to
+   shared structure — schemas, templates, `bookflow`, `scripts/`, `app/`,
+   this file — are their own task, stated in advance.
+2. **Protect concurrent work.** Inspect Git status before editing and do not
+   overwrite changes you did not make. Content work on different books can
+   run in parallel; coordinate explicit ownership before changing shared
+   schemas, tooling, taxonomy, catalogues, relationships, or the app. Extend
+   shared code in place.
+3. **Check first, work, check last.** Start with `./bookflow check <book-id>`
+   to see the true state; hand off only when `./bookflow check` is clean.
+   Do not run the full check after every small edit, and do not re-verify
+   facts the profile already cites unless something contradicts them.
+4. **Never redo settled work.** Do not re-research a recently researched
+   profile, regenerate audio that `check` reports fresh, or rewrite scripts
+   that meet their targets, unless asked or the content changed.
+5. **No surviving TODOs.** Template text may not remain in any file whose
+   status claims completion; audio generation refuses scripts containing
+   TODO.
+6. **Stop instead of improvising.** If sources conflict irreconcilably or
+   the schema does not fit the non-fiction work in hand, record the
+   situation in `workflow` (and `blocked` in the queue) and stop. Missing
+   full-text access is not a stop condition — write the fullest profile the
+   available sources support and record the coverage.
+7. **Budget research effort.** Batch related searches, keep notes as you go,
+   and stop searching when new sources only repeat what is already cited.
+   The floors in the research standard are floors, not a checklist to pad.
 
 ## Definition of done
 
-A book is complete when:
+A completed book has valid structured files; the fullest treatment its sources allow, with coverage recorded; distinct, sourced ideas; a complete book map; a current content-only rating; clear reading experience, evidence, reception, audience, omissions, and decision advice; a passed adversarial quality review; every required configured script within tolerance; checked pronunciation; locally generated current audio; useful graph links; a queue entry marked `done`; and no unresolved validation errors. Optional depth is included only when earned. The text is concise enough to scan, natural enough to hear, and honest enough to trust.
 
-- the JSON files parse and conform to the current schemas;
-- all cited source IDs resolve and all catalogued relationship endpoints exist;
-- the full-content summary covers the whole work rather than the marketing premise;
-- author background, purpose, reception, audience, topics, omissions, and next-book links are present;
-- fact, attributed opinion, synthesis, and inference are distinguishable;
-- scripts meet their intended duration and do not repeat themselves internally;
-- the prose is concise, original, and suitable for both scanning and narration;
-- workflow status and research date are current.
-
-Before finishing, run at least:
+Before handing off any change, run:
 
 ```bash
-rtk git status --short
-jq empty data/*.json taxonomy/*.json library/books/*/*.json library/authors/*/*.json
-wc -w library/books/*/scripts/*.md
+./bookflow check
+./bookflow build
 ```
 
-If this directory is not yet a Git repository, skip the Git command and report that fact.
+If the directory is a Git repository, also review `git status` and the diff
+(`rtk git status --short` and `rtk git diff` when RTK is installed); if it is
+not, say so in the handoff instead.

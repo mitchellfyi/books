@@ -1,0 +1,133 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Book Briefs" [ref=e3] [cursor=pointer]:
+      - /url: ./
+    - generic [ref=e4]:
+      - generic [ref=e5]: Search books
+      - searchbox "Search books" [ref=e6]
+    - button "Playlist (0)" [ref=e7] [cursor=pointer]
+  - generic [ref=e8]:
+    - complementary [ref=e9]:
+      - paragraph [ref=e10]: 22 non-fiction books
+      - navigation "Books" [ref=e11]:
+        - button "A Short History of Nearly Everything Bill Bryson" [ref=e12] [cursor=pointer]:
+          - strong [ref=e13]: A Short History of Nearly Everything
+          - generic [ref=e14]: Bill Bryson
+        - 'button "Alchemy: The Surprising Power of Ideas That Don''t Make Sense Rory Sutherland 6.4/10 ▶ 6 min" [ref=e15] [cursor=pointer]':
+          - strong [ref=e16]: "Alchemy: The Surprising Power of Ideas That Don't Make Sense"
+          - generic [ref=e17]: Rory Sutherland
+          - generic [ref=e18]: 6.4/10
+          - generic "Play the longest available brief" [ref=e19]: ▶ 6 min
+        - 'button "At Home: A Short History of Private Life Bill Bryson" [ref=e20] [cursor=pointer]':
+          - strong [ref=e21]: "At Home: A Short History of Private Life"
+          - generic [ref=e22]: Bill Bryson
+        - button "Deep Work Cal Newport" [ref=e23] [cursor=pointer]:
+          - strong [ref=e24]: Deep Work
+          - generic [ref=e25]: Cal Newport
+        - button "Determined Robert M. Sapolsky" [ref=e26] [cursor=pointer]:
+          - strong [ref=e27]: Determined
+          - generic [ref=e28]: Robert M. Sapolsky
+        - button "Don't Believe Everything You Think Joseph Nguyen" [ref=e29] [cursor=pointer]:
+          - strong [ref=e30]: Don't Believe Everything You Think
+          - generic [ref=e31]: Joseph Nguyen
+        - button "Exercised Daniel Lieberman" [ref=e32] [cursor=pointer]:
+          - strong [ref=e33]: Exercised
+          - generic [ref=e34]: Daniel Lieberman
+        - button "How Not to Age Michael Greger" [ref=e35] [cursor=pointer]:
+          - strong [ref=e36]: How Not to Age
+          - generic [ref=e37]: Michael Greger
+        - button "Influence Robert Cialdini" [ref=e38] [cursor=pointer]:
+          - strong [ref=e39]: Influence
+          - generic [ref=e40]: Robert Cialdini
+        - 'button "Sapiens: A Brief History of Humankind Yuval Noah Harari" [ref=e41] [cursor=pointer]':
+          - strong [ref=e42]: "Sapiens: A Brief History of Humankind"
+          - generic [ref=e43]: Yuval Noah Harari
+        - button "Supercommunicators Charles Duhigg" [ref=e44] [cursor=pointer]:
+          - strong [ref=e45]: Supercommunicators
+          - generic [ref=e46]: Charles Duhigg
+        - button "The 48 Laws of Power Robert Greene" [ref=e47] [cursor=pointer]:
+          - strong [ref=e48]: The 48 Laws of Power
+          - generic [ref=e49]: Robert Greene
+        - button "The Courage to Be Disliked Ichiro Kishimi" [ref=e50] [cursor=pointer]:
+          - strong [ref=e51]: The Courage to Be Disliked
+          - generic [ref=e52]: Ichiro Kishimi
+        - button "The Farther Reaches of Human Nature Abraham Maslow" [ref=e53] [cursor=pointer]:
+          - strong [ref=e54]: The Farther Reaches of Human Nature
+          - generic [ref=e55]: Abraham Maslow
+        - button "The Laws of Human Nature Robert Greene" [ref=e56] [cursor=pointer]:
+          - strong [ref=e57]: The Laws of Human Nature
+          - generic [ref=e58]: Robert Greene
+        - button "The Let Them Theory Mel Robbins" [ref=e59] [cursor=pointer]:
+          - strong [ref=e60]: The Let Them Theory
+          - generic [ref=e61]: Mel Robbins
+        - button "The Power of Habit Charles Duhigg" [ref=e62] [cursor=pointer]:
+          - strong [ref=e63]: The Power of Habit
+          - generic [ref=e64]: Charles Duhigg
+        - button "The Power of Moments Chip Heath" [ref=e65] [cursor=pointer]:
+          - strong [ref=e66]: The Power of Moments
+          - generic [ref=e67]: Chip Heath
+        - button "The School of Life Alain de Botton" [ref=e68] [cursor=pointer]:
+          - strong [ref=e69]: The School of Life
+          - generic [ref=e70]: Alain de Botton
+        - button "The Socratic Method Ward Farnsworth" [ref=e71] [cursor=pointer]:
+          - strong [ref=e72]: The Socratic Method
+          - generic [ref=e73]: Ward Farnsworth
+        - button "The True Believer Eric Hoffer" [ref=e74] [cursor=pointer]:
+          - strong [ref=e75]: The True Believer
+          - generic [ref=e76]: Eric Hoffer
+        - button "Unreasonable Hospitality Will Guidara" [ref=e77] [cursor=pointer]:
+          - strong [ref=e78]: Unreasonable Hospitality
+          - generic [ref=e79]: Will Guidara
+    - main [ref=e80]:
+      - article [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]: 15-minutes recommended · medium compression fit
+          - heading "A Short History of Nearly Everything" [level=1] [ref=e84]
+          - generic [ref=e85]: Bill Bryson · Date unknown
+          - paragraph [ref=e86]: "TODO: give the reader-facing verdict."
+          - generic [ref=e87]: metadata-only · not verified against the full book
+        - navigation "Summary length" [ref=e88]:
+          - button "30 Seconds · 75 words" [ref=e89] [cursor=pointer]
+          - button "6 Minutes · 900 words" [ref=e90] [cursor=pointer]
+          - button "★ 15 Minutes · 2250 words" [ref=e91] [cursor=pointer]
+          - button "30 Minutes · 4500 words" [ref=e92] [cursor=pointer]
+        - generic [ref=e93]:
+          - heading "What it says" [level=2] [ref=e94]
+          - paragraph [ref=e95]: "TODO: state the claim the author is trying to establish."
+          - paragraph [ref=e96]: "TODO: say what the book is and covers."
+        - generic [ref=e97]:
+          - heading "Main ideas" [level=2] [ref=e98]
+          - article [ref=e100]:
+            - heading "Idea title" [level=3] [ref=e101]
+            - paragraph [ref=e102]: "TODO: explain what it means and how it works."
+        - generic [ref=e103]:
+          - heading "Your decision" [level=2] [ref=e104]
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - heading "Read it if" [level=3] [ref=e107]
+              - paragraph [ref=e108]: TODO
+            - generic [ref=e109]:
+              - heading "The brief is enough if" [level=3] [ref=e110]
+              - paragraph [ref=e111]: TODO
+            - generic [ref=e112]:
+              - heading "Skip it if" [level=3] [ref=e113]
+              - paragraph [ref=e114]: TODO
+          - paragraph [ref=e115]:
+            - strong [ref=e116]: "Format:"
+            - text: TODO
+        - group [ref=e117]:
+          - generic "What it is like to read" [ref=e118] [cursor=pointer]
+        - group [ref=e119]:
+          - generic "Assessment" [ref=e120] [cursor=pointer]
+        - group [ref=e121]:
+          - generic "Audience and topics" [ref=e122] [cursor=pointer]
+        - group [ref=e123]:
+          - generic "Book map" [ref=e124] [cursor=pointer]
+        - group [ref=e125]:
+          - generic "Related books and authors" [ref=e126] [cursor=pointer]
+        - group [ref=e127]:
+          - generic "Author" [ref=e128] [cursor=pointer]
+        - group [ref=e129]:
+          - generic "Remember and apply" [ref=e130] [cursor=pointer]
+        - group [ref=e132]:
+          - generic "0 research sources" [ref=e133] [cursor=pointer]

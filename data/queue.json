@@ -1,0 +1,170 @@
+{
+  "$schema": "../schemas/queue.schema.json",
+  "schema_version": 1,
+  "queue": [
+    {
+      "book_id": "the-let-them-theory-robbins",
+      "priority": 1,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "the-48-laws-of-power-greene",
+      "priority": 2,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "the-laws-of-human-nature-greene",
+      "priority": 3,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "the-true-believer-hoffer",
+      "priority": 4,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Full title: The True Believer: Thoughts on the Nature of Mass Movements."
+    },
+    {
+      "book_id": "determined-sapolsky",
+      "priority": 5,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Full title: Determined: A Science of Life Without Free Will."
+    },
+    {
+      "book_id": "exercised-lieberman",
+      "priority": 6,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "how-not-to-age-greger",
+      "priority": 7,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "deep-work-newport",
+      "priority": 8,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "the-power-of-moments-heath",
+      "priority": 9,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Co-authored with Dan Heath; add both author profiles."
+    },
+    {
+      "book_id": "unreasonable-hospitality-guidara",
+      "priority": 10,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Request spelt the surname 'Guidera'; correct spelling is Guidara."
+    },
+    {
+      "book_id": "the-socratic-method-farnsworth",
+      "priority": 11,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "the-farther-reaches-of-human-nature-maslow",
+      "priority": 12,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Request said 'Father Reaches'; canonical title is The Farther Reaches of Human Nature."
+    },
+    {
+      "book_id": "the-school-of-life-botton",
+      "priority": 13,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Full title: The School of Life: An Emotional Education."
+    },
+    {
+      "book_id": "at-home-bryson",
+      "priority": 14,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "a-short-history-of-nearly-everything-bryson",
+      "priority": 15,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "the-power-of-habit-duhigg",
+      "priority": 16,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "influence-robert-cialdini",
+      "priority": 17,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Promoted from recommendation stub; full title Influence: The Psychology of Persuasion."
+    },
+    {
+      "book_id": "the-courage-to-be-disliked-kishimi",
+      "priority": 18,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Co-authored with Fumitake Koga (request credited Koga)."
+    },
+    {
+      "book_id": "supercommunicators-duhigg",
+      "priority": 19,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13",
+      "notes": "Request wrote 'Super Communicators'; canonical title is Supercommunicators."
+    },
+    {
+      "book_id": "sapiens-harari",
+      "priority": 20,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "don-t-believe-everything-you-think-nguyen",
+      "priority": 21,
+      "status": "ready",
+      "source": "user",
+      "added_at": "2026-08-13"
+    },
+    {
+      "book_id": "alchemy-rory-sutherland",
+      "priority": 22,
+      "status": "in-progress",
+      "source": "user",
+      "notes": "Existing profile; now needs the 15-minute brief written from best available sources (coverage gate removed), the recommended level confirmed, and its audio.",
+      "added_at": "2026-08-13"
+    }
+  ]
+}

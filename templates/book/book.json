@@ -17,25 +17,6 @@
     "audiences": [],
     "formats_available": []
   },
-  "analysis": {
-    "synopsis": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "core_argument": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "main_ideas": [],
-    "whole_book_overview": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "meaning_lessons_importance": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "author_and_purpose": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "reception": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "audience_and_topics": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "scope_and_omissions": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "decision_support": {
-      "best_for": [],
-      "not_for": [],
-      "read_if": "TODO: state the strongest reason to read this book.",
-      "skip_if": "TODO: state the strongest reason to skip this book.",
-      "source_ids": [],
-      "basis": "inference"
-    }
-  },
   "research": {
     "sources": [],
     "citations": {}

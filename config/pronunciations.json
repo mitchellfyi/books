@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/pronunciations.schema.json",
+  "schema_version": 1,
+  "entries": [
+    {
+      "term": "Cialdini",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "tʃaldˈiːni",
+        "en-us": "tʃældˈiːni"
+      },
+      "source_url": "https://forvo.com/word/cialdini/",
+      "verified_at": "2026-08-13",
+      "notes": "Italian surname: 'ci' before a vowel is the 'ch' sound, so chal-DEE-nee. Documented by pronunciation dictionaries (Forvo, Italian entry) and consistent with the author's own anglicised usage. The unassisted phonemizer produced 'sigh-al-DEE-ni' (sˌaɪəldˈiːnɪ), which is wrong."
+    }
+  ]
+}

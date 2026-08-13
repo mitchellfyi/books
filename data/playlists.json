@@ -1,0 +1,5 @@
+{
+  "$schema": "../schemas/playlists.schema.json",
+  "schema_version": 1,
+  "playlists": []
+}

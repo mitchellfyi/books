@@ -1,0 +1,124 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Book Briefs" [ref=e3] [cursor=pointer]:
+      - /url: ./
+    - generic [ref=e4]:
+      - generic [ref=e5]: Search books
+      - searchbox "Search books" [ref=e6]
+    - button "Playlist (0)" [ref=e7] [cursor=pointer]
+  - generic [ref=e8]:
+    - complementary [ref=e9]:
+      - paragraph [ref=e10]: 1 non-fiction book
+      - navigation "Books" [ref=e11]:
+        - 'button "Alchemy: The Surprising Power of Ideas That Don''t Make Sense Rory Sutherland ▶ 6 min" [ref=e12] [cursor=pointer]':
+          - strong [ref=e13]: "Alchemy: The Surprising Power of Ideas That Don't Make Sense"
+          - generic [ref=e14]: Rory Sutherland
+          - generic "Play the longest available brief" [ref=e15]: ▶ 6 min
+    - main [ref=e16]:
+      - article [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: 15-minutes recommended · high compression fit
+          - 'heading "Alchemy: The Surprising Power of Ideas That Don''t Make Sense" [level=1] [ref=e20]'
+          - generic [ref=e21]: Rory Sutherland · 2019
+          - paragraph [ref=e22]: Useful for generating neglected hypotheses; less useful as a systematic guide to behavioural evidence.
+          - generic [ref=e23]: sample-and-secondary · not verified against the full book
+        - navigation "Summary length" [ref=e24]:
+          - button "30 Seconds · 31 sec" [ref=e25] [cursor=pointer]
+          - button "6 Minutes · 6 min" [ref=e26] [cursor=pointer]
+          - button "★ 15 Minutes · 2250 words" [disabled] [ref=e27]
+          - button "30 Minutes · 4500 words" [disabled] [ref=e28]
+        - generic [ref=e29]:
+          - heading "What it says" [level=2] [ref=e30]
+          - paragraph [ref=e31]: Logic is indispensable but insufficient for problems involving people. Organisations should test counterintuitive ideas instead of rejecting anything that cannot be justified by a simple model in advance.
+          - paragraph [ref=e32]: Sutherland uses advertising cases and ideas from behavioural economics, evolutionary psychology, and perception to argue that context, expectation, identity, and signals can create real value. Small psychological changes can therefore outperform expensive physical improvements.
+        - generic [ref=e33]:
+          - heading "Main ideas" [level=2] [ref=e34]
+          - generic [ref=e35]:
+            - article [ref=e36]:
+              - heading "Psycho-logic" [level=3] [ref=e37]
+              - paragraph [ref=e38]: Narrow economic accounts often omit uncertainty, identity, social meaning, and evolved shortcuts. Sutherland asks the reader to look for this hidden logic before treating variation as noise.
+              - paragraph [ref=e39]:
+                - strong [ref=e40]: "Example:"
+                - text: A countdown display can improve a train wait without making the train arrive sooner because uncertainty, rather than elapsed time alone, causes discomfort.
+              - paragraph [ref=e41]:
+                - strong [ref=e42]: "Limit:"
+                - text: Explaining behaviour after the event is easier than predicting it; psycho-logic still needs prospective testing.
+            - article [ref=e43]:
+              - heading "Logic narrows the solution space" [level=3] [ref=e44]
+              - paragraph [ref=e45]: A familiar proposal can be supported by conventional forecasts. An original proposal often looks irresponsible until it works, which makes institutional approval systems reward conformity.
+              - paragraph [ref=e46]:
+                - strong [ref=e47]: "Limit:"
+                - text: Being unconventional is not evidence of quality; the corrective is inexpensive testing, not intuition without controls.
+            - article [ref=e48]:
+              - heading "Perceived value is real value" [level=3] [ref=e49]
+              - paragraph [ref=e50]: If a person's outcome includes trust, enjoyment, reduced anxiety, or a sense of quality, changing perception can be a legitimate product improvement rather than empty decoration.
+              - paragraph [ref=e51]:
+                - strong [ref=e52]: "Example:"
+                - text: "Red Bull violated the obvious product brief: it was expensive, came in a small can, and had a divisive taste, yet those features helped give it a distinct meaning."
+              - paragraph [ref=e53]:
+                - strong [ref=e54]: "Limit:"
+                - text: Perceptual improvements should not be used to conceal a serious material failure.
+            - article [ref=e55]:
+              - heading "Signals shape trust and choice" [level=3] [ref=e56]
+              - paragraph [ref=e57]: A signal is useful when it reveals a quality that is otherwise hard to observe. Removing every costly feature may therefore remove the reason an offer was credible.
+              - paragraph [ref=e58]:
+                - strong [ref=e59]: "Limit:"
+                - text: A signal can be imitated or manipulated, so its meaning depends on context and credibility.
+            - article [ref=e60]:
+              - heading "People signal to themselves" [level=3] [ref=e61]
+              - paragraph [ref=e62]: Products, habits, and rituals affect behaviour partly through what the action tells the person taking it, not only through what it communicates to others.
+              - paragraph [ref=e63]:
+                - strong [ref=e64]: "Limit:"
+                - text: Identity-based explanations can become unfalsifiable if they are inferred only after observing the choice.
+            - article [ref=e65]:
+              - heading "People satisfice" [level=3] [ref=e66]
+              - paragraph [ref=e67]: Real decisions rely on thresholds and shortcuts. Designs built for a perfectly informed average user can add work without improving the decision.
+              - paragraph [ref=e68]:
+                - strong [ref=e69]: "Limit:"
+                - text: A shortcut that works in one environment can fail when incentives or risks change.
+            - article [ref=e70]:
+              - heading "Perception is nonlinear" [level=3] [ref=e71]
+              - paragraph [ref=e72]: Attention, contrast, expectation, and presentation alter subjective experience. An expensive technical gain may go unnoticed, while a small contextual intervention may produce a large felt benefit.
+              - paragraph [ref=e73]:
+                - strong [ref=e74]: "Example:"
+                - text: Making a wait predictable can matter more than making it slightly shorter.
+              - paragraph [ref=e75]:
+                - strong [ref=e76]: "Limit:"
+                - text: Perception measures complement, rather than replace, safety, reliability, and other objective outcomes.
+            - article [ref=e77]:
+              - heading "Test the counterintuitive" [level=3] [ref=e78]
+              - paragraph [ref=e79]: Sutherland argues for several competing explanations, reversible tests, and willingness to follow results that standard reasoning would not predict.
+              - paragraph [ref=e80]:
+                - strong [ref=e81]: "Limit:"
+                - text: Experiments need meaningful outcomes and controls; otherwise anecdotes merely replace one form of confidence with another.
+        - generic [ref=e82]:
+          - heading "Your decision" [level=2] [ref=e83]
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - heading "Read it if" [level=3] [ref=e86]
+              - paragraph [ref=e87]: Read the full book if you want Sutherland's voice, range of cases, and repeated practice in reframing ordinary problems.
+            - generic [ref=e88]:
+              - heading "The brief is enough if" [level=3] [ref=e89]
+              - paragraph [ref=e90]: The decision brief is enough if you mainly want the thesis, mechanisms, strongest examples, and cautions for later use. Wait for a full-book-verified brief before treating it as complete coverage.
+            - generic [ref=e91]:
+              - heading "Skip it if" [level=3] [ref=e92]
+              - paragraph [ref=e93]: Skip it if you need a formal evidence review, effect sizes, or a compact operational framework.
+          - paragraph [ref=e94]:
+            - strong [ref=e95]: "Format:"
+            - text: The author's speaking style is part of the appeal, so the author-narrated audiobook may suit readers who enjoy the voice; use text when you want to inspect claims and sources closely.
+        - group [ref=e96]:
+          - generic "What it is like to read" [ref=e97] [cursor=pointer]
+        - group [ref=e98]:
+          - generic "Assessment" [ref=e99] [cursor=pointer]
+        - group [ref=e100]:
+          - generic "Audience and topics" [ref=e101] [cursor=pointer]
+        - group [ref=e102]:
+          - generic "Book map" [ref=e103] [cursor=pointer]
+        - group [ref=e104]:
+          - generic "Related books and authors" [ref=e105] [cursor=pointer]
+        - group [ref=e106]:
+          - generic "Author" [ref=e107] [cursor=pointer]
+        - group [ref=e108]:
+          - generic "Remember and apply" [ref=e109] [cursor=pointer]
+        - group [ref=e111]:
+          - generic "13 research sources" [ref=e112] [cursor=pointer]

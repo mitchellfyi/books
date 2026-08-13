@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "unreasonable-hospitality-guidara",
+  "type": "book",
+  "title": "Unreasonable Hospitality",
+  "alternate_titles": [],
+  "author_ids": ["will-guidara"],
+  "bibliography": {
+    "first_published": null,
+    "original_language": null,
+    "editions": [],
+    "contents": []
+  },
+  "discovery": {
+    "tag_ids": [],
+    "audiences": [],
+    "formats_available": []
+  },
+  "research": {
+    "sources": [],
+    "citations": {}
+  },
+  "workflow": {
+    "status": "stub",
+    "coverage": "metadata-only",
+    "coverage_notes": "",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}

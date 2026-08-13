@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../schemas/author.schema.json",
+  "schema_version": 1,
+  "id": "robert-greene",
+  "type": "author",
+  "name": "Robert Greene",
+  "alternate_names": [],
+  "profile": {
+    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
+    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+  },
+  "selected_works": [],
+  "research": {
+    "sources": [],
+    "citations": {}
+  },
+  "workflow": {
+    "status": "stub",
+    "coverage_notes": "",
+    "last_researched": "2026-08-13",
+    "next_steps": []
+  }
+}

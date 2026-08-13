@@ -1,0 +1,648 @@
+#!/usr/bin/env python3
+"""Local entry point for creating, checking, building, serving, and voicing books."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import shutil
+import subprocess
+import unicodedata
+import webbrowser
+from datetime import date
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+from pathlib import Path
+
+from scripts.rating import calculate_rating, rating_errors, rubric_errors, score_band
+
+ROOT = Path(__file__).resolve().parent
+
+
+def slug(text: str) -> str:
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"(^-|-$)", "", re.sub(r"[^a-z0-9]+", "-", text))
+
+
+def load(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def save(path: Path, value: object) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def replace_tree(path: Path, replacements: dict[str, str]) -> None:
+    for file in path.rglob("*"):
+        if not file.is_file():
+            continue
+        text = file.read_text(encoding="utf-8")
+        for old, new in replacements.items():
+            text = text.replace(old, new)
+        file.write_text(text, encoding="utf-8")
+
+
+def normalise(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]+", "", text.casefold())).strip()
+
+
+def find_duplicate(catalog: dict, title: str) -> dict | None:
+    wanted_full = normalise(title)
+    wanted_short = normalise(title.split(":", 1)[0])
+    for entity in catalog["entities"]:
+        if entity["kind"] != "book":
+            continue
+        for name in (entity["name"], *entity.get("aliases", [])):
+            known = normalise(name)
+            if known == wanted_full or normalise(name.split(":", 1)[0]) == wanted_short:
+                return entity
+    return None
+
+
+def init_book(args: argparse.Namespace) -> None:
+    author_id = args.author_id or slug(args.author)
+    short_title = args.title.split(":", 1)[0]
+    book_id = args.book_id or f"{slug(short_title)}-{slug(args.author.split()[-1])}"
+    book_dir = ROOT / "library/books" / book_id
+    author_dir = ROOT / "library/authors" / author_id
+    catalog_path = ROOT / "data/catalog.json"
+    catalog = load(catalog_path)
+    by_id = {item["id"]: item for item in catalog["entities"]}
+    if book_dir.exists():
+        raise SystemExit(f"Book already exists: {book_dir.relative_to(ROOT)}")
+    if book_id in by_id and by_id[book_id]["kind"] != "book":
+        raise SystemExit(f"ID already belongs to a non-book entity: {book_id}")
+    if author_id in by_id and by_id[author_id]["kind"] != "author":
+        raise SystemExit(f"ID already belongs to a non-author entity: {author_id}")
+    duplicate = find_duplicate(catalog, args.title)
+    if duplicate and duplicate["id"] != book_id and not args.force:
+        raise SystemExit(
+            f"A catalogued entry looks like the same work: '{duplicate['name']}' "
+            f"(id: {duplicate['id']}, state: {duplicate['state']}).\n"
+            "If this really is a different work, re-run with --force and a --book-id "
+            "that includes the first publication year."
+        )
+
+    shutil.copytree(ROOT / "templates/book", book_dir)
+    replace_tree(book_dir, {
+        "book-id": book_id,
+        "author-id": author_id,
+        "Book title": args.title,
+        "YYYY-MM-DD": date.today().isoformat(),
+        "1970-01-01": date.today().isoformat(),
+    })
+    (book_dir / "audio").mkdir()
+    (book_dir / "audio/.gitkeep").touch()
+
+    if not author_dir.exists():
+        shutil.copytree(ROOT / "templates/author", author_dir)
+        replace_tree(author_dir, {
+            "author-id": author_id,
+            "Author name": args.author,
+            "YYYY-MM-DD": date.today().isoformat(),
+            "1970-01-01": date.today().isoformat(),
+        })
+
+    author_entry = {
+        "id": author_id,
+        "kind": "author",
+        "name": args.author,
+        "state": "catalogued",
+        "path": f"library/authors/{author_id}/author.json",
+        "aliases": by_id.get(author_id, {}).get("aliases", []),
+    }
+    if author_id in by_id:
+        by_id[author_id].clear()
+        by_id[author_id].update(author_entry)
+    else:
+        catalog["entities"].append(author_entry)
+
+    book_entry = {
+        "id": book_id,
+        "kind": "book",
+        "name": args.title,
+        "state": "catalogued",
+        "path": f"library/books/{book_id}/book.json",
+        "author_ids": [author_id],
+        "aliases": by_id.get(book_id, {}).get("aliases", []),
+    }
+    if book_id in by_id:
+        by_id[book_id].clear()
+        by_id[book_id].update(book_entry)
+    else:
+        catalog["entities"].append(book_entry)
+    catalog["entities"].sort(key=lambda item: (item["kind"], item["name"].casefold()))
+    save(catalog_path, catalog)
+
+    queue_add(book_id, source="discovery" if args.discovered else "user",
+              notes=args.note or "")
+
+    print(f"Created {book_dir.relative_to(ROOT)} and queued it for processing")
+    print("\nResearch prompt for an agent:\n")
+    print(research_prompt(args.title, args.author, book_id))
+
+
+def research_prompt(title: str, author: str, book_id: str) -> str:
+    return (
+        f"  Complete the profile for '{title}' by {author} "
+        f"(book id: {book_id}) in this repository.\n"
+        "  Follow AGENTS.md exactly: research authoritative online sources first,\n"
+        f"  fill library/books/{book_id}/book.json and content.json with cited\n"
+        "  claims, complete the author profile if it is new, add canonical tags,\n"
+        "  catalog aliases, and relationship edges with evidence. Score only the\n"
+        "  content and ideas against config/rating.json, then calculate the total\n"
+        f"  with ./bookflow rate {book_id} --write. Write and compare the narration\n"
+        "  scripts, set the recommended level, run the adversarial review in\n"
+        "  docs/review-method.md, then check pronunciation and generate audio.\n"
+        "  Run ./bookflow check, fix every issue, and mark the queue\n"
+        f"  entry done with: ./bookflow queue --set {book_id} done"
+    )
+
+
+def load_queue() -> dict:
+    path = ROOT / "data/queue.json"
+    if path.exists():
+        return load(path)
+    return {"$schema": "../schemas/queue.schema.json", "schema_version": 1, "queue": []}
+
+
+def queue_add(book_id: str, source: str, notes: str = "") -> None:
+    data = load_queue()
+    if any(item["book_id"] == book_id for item in data["queue"]):
+        return
+    entry = {
+        "book_id": book_id,
+        "priority": max((item["priority"] for item in data["queue"]), default=0) + 1,
+        "status": "ready",
+        "source": source,
+        "added_at": date.today().isoformat(),
+    }
+    if notes:
+        entry["notes"] = notes
+    data["queue"].append(entry)
+    save(ROOT / "data/queue.json", data)
+
+
+def book_needs(book_id: str) -> str:
+    """Summarise what a queued book still needs, from its files."""
+    directory = ROOT / "library/books" / book_id
+    if not directory.exists():
+        return "scaffold missing"
+    needs = []
+    content_path = directory / "content.json"
+    content = load(content_path) if content_path.exists() else None
+    if content is None or "TODO" in content_path.read_text(encoding="utf-8"):
+        needs.append("content")
+    rating = (content or {}).get("assessment", {}).get("rating")
+    rubric = load(ROOT / "config/rating.json")
+    if rating_errors(rating, rubric):
+        needs.append("rating")
+    quality_review = (content or {}).get("workflow", {}).get("quality_review", {})
+    if quality_review.get("status") != "passed" or not all(
+        quality_review.get("checks", {}).values()
+    ):
+        needs.append("adversarial review")
+    book_path = directory / "book.json"
+    if book_path.exists() and not load(book_path).get("research", {}).get("sources"):
+        needs.append("research")
+    config = load(ROOT / "config/audio.json")
+    missing_scripts, missing_audio = [], []
+    for level in config["levels"]:
+        script_path = directory / "scripts" / f"{level}.md"
+        if not script_path.exists():
+            continue
+        script = parse_script(script_path)
+        if script["meta"].get("status") != "complete":
+            missing_scripts.append(level)
+        elif not any(p for p in (directory / "audio").glob(f"{level}.*")
+                     if p.suffix not in {".json", ".gitkeep"}):
+            missing_audio.append(level)
+    if missing_scripts:
+        needs.append("scripts: " + ", ".join(missing_scripts))
+    if missing_audio:
+        needs.append("audio: " + ", ".join(missing_audio))
+    return "; ".join(needs) or "nothing — ready to mark done"
+
+
+def cmd_queue(args: argparse.Namespace) -> None:
+    data = load_queue()
+    if args.set:
+        book_id, status = args.set
+        allowed = ("ready", "in-progress", "done", "blocked")
+        if status not in allowed:
+            raise SystemExit(f"status must be one of: {', '.join(allowed)}")
+        for item in data["queue"]:
+            if item["book_id"] == book_id:
+                item["status"] = status
+                save(ROOT / "data/queue.json", data)
+                print(f"{book_id}: {status}")
+                return
+        raise SystemExit(f"not in queue: {book_id}")
+    if not data["queue"]:
+        print("Queue is empty. Add books with ./bookflow init, or run discovery (see AGENTS.md).")
+        return
+    print(f"{'#':>3}  {'status':12} {'source':10} {'book':44} needs")
+    for item in sorted(data["queue"], key=lambda entry: entry["priority"]):
+        needs = book_needs(item["book_id"]) if item["status"] != "done" else "—"
+        print(f"{item['priority']:>3}  {item['status']:12} {item['source']:10} "
+              f"{item['book_id']:44} {needs}")
+        if item.get("notes"):
+            print(f"{'':32}note: {item['notes']}")
+
+
+def cmd_next(args: argparse.Namespace) -> None:
+    data = load_queue()
+    ready = sorted((item for item in data["queue"] if item["status"] == "ready"),
+                   key=lambda entry: entry["priority"])
+    if not ready:
+        print("No books are marked ready.")
+        print("Discovery step (AGENTS.md): research which related, popular, or important")
+        print("books the existing library points to, add the strongest candidates with")
+        print("./bookflow init, and record the relationship edges that justify them.")
+        return
+    item = ready[0]
+    catalog = load(ROOT / "data/catalog.json")
+    entity = next((e for e in catalog["entities"] if e["id"] == item["book_id"]), {})
+    authors = ", ".join(
+        next((e["name"] for e in catalog["entities"] if e["id"] == author_id), author_id)
+        for author_id in entity.get("author_ids", [])
+    ) or "unknown author"
+    print(f"Next: {entity.get('name', item['book_id'])} — {authors}")
+    print(f"Queue position {item['priority']} · source {item['source']}"
+          + (f" · note: {item['notes']}" if item.get("notes") else ""))
+    print(f"Still needs: {book_needs(item['book_id'])}\n")
+    print(research_prompt(entity.get("name", item["book_id"]), authors, item["book_id"]))
+    if args.claim:
+        item["status"] = "in-progress"
+        save(ROOT / "data/queue.json", data)
+        print(f"\nMarked in-progress: {item['book_id']}")
+
+
+def parse_script(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8")
+    meta: dict[str, object] = {}
+    body = text
+    if text.startswith("---\n") and "\n---\n" in text[4:]:
+        end = text.find("\n---\n", 4)
+        body = text[end + 5:].strip()
+        for line in text[4:end].splitlines():
+            key, separator, value = line.partition(":")
+            if separator:
+                meta[key.strip()] = value.strip()
+    words = len(re.sub(r"[#*_>`]", "", body).split())
+    return {"meta": meta, "body": body, "words": words}
+
+
+def cmd_rate(args: argparse.Namespace) -> None:
+    """Calculate a book's overall rating from its agent-assessed dimensions."""
+    content_path = ROOT / "library/books" / args.book_id / "content.json"
+    if not content_path.exists():
+        raise SystemExit(f"content file missing: {content_path.relative_to(ROOT)}")
+    rubric = load(ROOT / "config/rating.json")
+    problems = rubric_errors(rubric)
+    if problems:
+        raise SystemExit("Invalid config/rating.json:\n  " + "\n  ".join(problems))
+    content = load(content_path)
+    rating = content.get("assessment", {}).get("rating")
+    if rating is None:
+        print("Add assessment.rating using these configured dimensions:")
+        for item in rubric["dimensions"]:
+            print(f"  {item['id']:30} {item['weight']:.0%}  {item['question']}")
+        raise SystemExit("No rating found; complete the dimensions before calculating the total.")
+
+    problems = rating_errors(rating, rubric, check_total=not args.write)
+    if problems:
+        raise SystemExit("Cannot calculate rating:\n  " + "\n  ".join(problems))
+
+    total = calculate_rating(rating, rubric)
+    if args.write:
+        rating["score"] = total
+        save(content_path, content)
+        print(f"Updated {content_path.relative_to(ROOT)}")
+    print(f"{args.book_id}: {total:.1f}/10 · {score_band(total, rubric)} "
+          f"· {rating.get('confidence', 'confidence missing')} confidence")
+    by_id = {item["id"]: item for item in rubric["dimensions"]}
+    for item in rating["dimensions"]:
+        configured = by_id[item["id"]]
+        print(f"  {configured['label']:30} {item['score']:>4.1f} × {configured['weight']:.0%}")
+
+
+DIST = ROOT / "dist"
+
+
+def build_app(_: argparse.Namespace | None = None) -> None:
+    """Assemble dist/: a root-layout static site deployable to any static host."""
+    config = load(ROOT / "config/audio.json")
+    rating_config = load(ROOT / "config/rating.json")
+    catalog = load(ROOT / "data/catalog.json")
+    relations = load(ROOT / "data/relationships.json")["relationships"]
+    tags = {tag["id"]: tag for tag in load(ROOT / "taxonomy/tags.json")["tags"]}
+    authors: dict[str, dict] = {}
+    for path in sorted((ROOT / "library/authors").glob("*/author.json")):
+        author = load(path)
+        authors[author["id"]] = author
+
+    if DIST.exists():
+        shutil.rmtree(DIST)
+    (DIST / "data").mkdir(parents=True)
+    for asset in ("index.html", "app.js", "styles.css"):
+        shutil.copy2(ROOT / "app" / asset, DIST / asset)
+
+    books = []
+    audio_files = 0
+    for book_path in sorted((ROOT / "library/books").glob("*/book.json")):
+        directory = book_path.parent
+        content_path = directory / "content.json"
+        if not content_path.exists():
+            continue
+        book = load(book_path)
+        content = load(content_path)
+        scripts = {}
+        for level in config["levels"]:
+            script_path = directory / "scripts" / f"{level}.md"
+            if not script_path.exists():
+                continue
+            script = parse_script(script_path)
+            # audio variants per voice: <level>.<voice>.<format> + sidecar json
+            variants = {}
+            for audio in sorted((directory / "audio").glob(f"{level}.*")):
+                if audio.suffix in {".json", ".gitkeep"}:
+                    continue
+                parts = audio.name.split(".")
+                voice = parts[1] if len(parts) == 3 else "unknown"
+                sidecar_path = directory / "audio" / f"{level}.{voice}.json"
+                seconds = load(sidecar_path).get("audio_seconds") if sidecar_path.exists() else None
+                destination = DIST / "audio" / book["id"]
+                destination.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(audio, destination / audio.name)
+                audio_files += 1
+                variants[voice] = {
+                    "url": f"audio/{book['id']}/{audio.name}",
+                    "seconds": seconds,
+                }
+            scripts[level] = {
+                **script,
+                "target_words": config["levels"][level]["target_words"],
+                "audio": variants,
+            }
+        books.append({
+            "id": book["id"],
+            "title": book["title"],
+            "authors": [authors[aid] for aid in book["author_ids"] if aid in authors],
+            "bibliography": book["bibliography"],
+            "discovery": book["discovery"],
+            "tag_details": [tags[tid] for tid in book["discovery"]["tag_ids"] if tid in tags],
+            "research": book["research"],
+            "workflow": book["workflow"],
+            "content": content,
+            "scripts": scripts,
+            "relationships": [rel for rel in relations
+                              if book["id"] in (rel["source_id"], rel["target_id"])],
+        })
+
+    output = {
+        "schema_version": 2,
+        "generated_at": date.today().isoformat(),
+        "config": config,
+        "rating_config": rating_config,
+        "catalog": catalog,
+        "books": books,
+    }
+    save(DIST / "data/library.json", output)
+    print(f"Built dist/ with {len(books)} book(s) and {audio_files} audio file(s); "
+          "deploy the dist directory to any static host")
+
+
+def check(args: argparse.Namespace) -> None:
+    command = ["uv", "run", "scripts/check.py"]
+    if args.quiet:
+        command.append("--quiet")
+    if args.book_id:
+        command.append(args.book_id)
+    raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
+
+
+def generate_audio(args: argparse.Namespace) -> None:
+    command = ["uv", "run", "scripts/generate_audio.py"]
+    if args.book_id:
+        command.append(args.book_id)
+    if args.level:
+        command.append(args.level)
+    if args.all:
+        command.append("--all")
+    if args.voice:
+        command.extend(["--voice", args.voice])
+    if args.speed is not None:
+        command.extend(["--speed", str(args.speed)])
+    for flag in ("force", "allow_draft", "no_calibrate", "quantized"):
+        if getattr(args, flag):
+            command.append("--" + flag.replace("_", "-"))
+    raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
+
+
+def inspect_pronunciation(args: argparse.Namespace) -> None:
+    command = [
+        "uv", "run", "scripts/generate_audio.py",
+        "--inspect-pronunciation", args.text,
+    ]
+    if args.voice:
+        command.extend(["--voice", args.voice])
+    if args.quantized:
+        command.append("--quantized")
+    raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
+
+
+class LibraryHandler(SimpleHTTPRequestHandler):
+    """Static server plus playlist persistence, audio seeking, and fresh data."""
+
+    def do_GET(self) -> None:  # noqa: N802 (http.server naming)
+        path = self.path.split("?", 1)[0]
+        if path == "/api/playlists":
+            playlists_path = ROOT / "data/playlists.json"
+            if playlists_path.exists():
+                body = playlists_path.read_bytes()
+            else:
+                body = json.dumps({"schema_version": 1, "playlists": []}).encode()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        if self.headers.get("Range") and self.range_file() is not None:
+            self.send_ranged(self.range_file())
+            return
+        if path.endswith("/data/library.json"):
+            self.no_cache = True
+        super().do_GET()
+
+    def end_headers(self) -> None:
+        if getattr(self, "no_cache", False):
+            self.send_header("Cache-Control", "no-store")
+            self.no_cache = False
+        super().end_headers()
+
+    def do_PUT(self) -> None:  # noqa: N802
+        if self.path.split("?", 1)[0] != "/api/playlists":
+            self.send_error(404)
+            return
+        length = int(self.headers.get("Content-Length", 0))
+        if not 0 < length <= 2_000_000:
+            self.send_error(413)
+            return
+        try:
+            payload = json.loads(self.rfile.read(length))
+            if payload.get("schema_version") != 1 or not isinstance(payload.get("playlists"), list):
+                raise ValueError("bad shape")
+            for playlist in payload["playlists"]:
+                if not isinstance(playlist.get("id"), str) or not isinstance(playlist.get("name"), str):
+                    raise ValueError("bad playlist")
+                for item in playlist.get("items", []):
+                    if not isinstance(item.get("book_id"), str) or not isinstance(item.get("duration"), str):
+                        raise ValueError("bad item")
+        except (json.JSONDecodeError, ValueError, AttributeError):
+            self.send_error(400, "invalid playlists payload")
+            return
+        target = ROOT / "data/playlists.json"
+        scratch = target.with_suffix(".json.tmp")
+        scratch.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        scratch.replace(target)
+        body = b'{"ok": true}'
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def range_file(self) -> Path | None:
+        candidate = Path(self.translate_path(self.path.split("?", 1)[0]))
+        return candidate if candidate.is_file() else None
+
+    def send_ranged(self, file: Path) -> None:
+        size = file.stat().st_size
+        match = re.match(r"bytes=(\d*)-(\d*)$", self.headers["Range"].strip())
+        start, end = 0, size - 1
+        if match and (match.group(1) or match.group(2)):
+            if match.group(1):
+                start = int(match.group(1))
+                if match.group(2):
+                    end = min(int(match.group(2)), size - 1)
+            else:
+                start = max(0, size - int(match.group(2)))
+        if start >= size or start > end:
+            self.send_response(416)
+            self.send_header("Content-Range", f"bytes */{size}")
+            self.end_headers()
+            return
+        self.send_response(206)
+        self.send_header("Content-Type", self.guess_type(str(file)))
+        self.send_header("Accept-Ranges", "bytes")
+        self.send_header("Content-Range", f"bytes {start}-{end}/{size}")
+        self.send_header("Content-Length", str(end - start + 1))
+        self.end_headers()
+        with file.open("rb") as handle:
+            handle.seek(start)
+            remaining = end - start + 1
+            while remaining > 0:
+                block = handle.read(min(65536, remaining))
+                if not block:
+                    break
+                try:
+                    self.wfile.write(block)
+                except (BrokenPipeError, ConnectionResetError):
+                    return
+                remaining -= len(block)
+
+    def log_message(self, format: str, *args: object) -> None:
+        if len(args) > 1 and str(args[1]).startswith(("2", "3")):
+            return  # successful requests are noise
+        super().log_message(format, *args)
+
+
+def serve(args: argparse.Namespace) -> None:
+    build_app()
+    os.chdir(DIST)
+    url = f"http://127.0.0.1:{args.port}/"
+    print(f"Library: {url}")
+    if not args.no_open:
+        webbrowser.open(url)
+    server = ThreadingHTTPServer(("127.0.0.1", args.port), LibraryHandler)
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nLibrary server stopped.")
+    finally:
+        server.server_close()
+
+
+def parser() -> argparse.ArgumentParser:
+    root = argparse.ArgumentParser(description=__doc__)
+    commands = root.add_subparsers(dest="command", required=True)
+    create = commands.add_parser("init", help="create a researched-book workspace")
+    create.add_argument("--title", required=True)
+    create.add_argument("--author", required=True)
+    create.add_argument("--book-id")
+    create.add_argument("--author-id")
+    create.add_argument("--force", action="store_true",
+                        help="create even when the catalog has a similar-looking title")
+    create.add_argument("--note", help="note stored on the queue entry (edition caveats, co-authors)")
+    create.add_argument("--discovered", action="store_true",
+                        help="queue this book as agent-discovered rather than owner-requested")
+    create.set_defaults(run=init_book)
+
+    work = commands.add_parser("queue", help="show the processing queue and what each book needs")
+    work.add_argument("--set", nargs=2, metavar=("BOOK_ID", "STATUS"),
+                      help="set a queue entry to ready, in-progress, done, or blocked")
+    work.set_defaults(run=cmd_queue)
+
+    upcoming = commands.add_parser("next", help="show the next ready book and its research prompt")
+    upcoming.add_argument("--claim", action="store_true", help="mark it in-progress")
+    upcoming.set_defaults(run=cmd_next)
+
+    rate = commands.add_parser("rate", help="calculate a content-only score from rubric dimensions")
+    rate.add_argument("book_id")
+    rate.add_argument("--write", action="store_true", help="write the calculated total to content.json")
+    rate.set_defaults(run=cmd_rate)
+
+    validate = commands.add_parser("check", help="validate schemas, references, and word counts")
+    validate.add_argument("book_id", nargs="?")
+    validate.add_argument("--quiet", action="store_true", help="show only warnings and errors")
+    validate.set_defaults(run=check)
+
+    build = commands.add_parser("build", help="build the static app data")
+    build.set_defaults(run=build_app)
+
+    local = commands.add_parser("serve", help="build and serve the local library UI")
+    local.add_argument("--port", type=int, default=8042)
+    local.add_argument("--no-open", action="store_true")
+    local.set_defaults(run=serve)
+
+    audio = commands.add_parser("audio", help="generate local Kokoro audio (a book, a level, or --all)")
+    audio.add_argument("book_id", nargs="?")
+    audio.add_argument("level", nargs="?")
+    audio.add_argument("--all", action="store_true", help="every book, every level")
+    audio.add_argument("--voice")
+    audio.add_argument("--speed", type=float)
+    audio.add_argument("--force", action="store_true", help="regenerate even when up to date")
+    audio.add_argument("--allow-draft", action="store_true", help="voice scripts not marked complete")
+    audio.add_argument("--no-calibrate", action="store_true", help="skip words-per-minute calibration")
+    audio.add_argument("--quantized", action="store_true", help="use the smaller int8 model")
+    audio.set_defaults(run=generate_audio)
+
+    pronunciation = commands.add_parser(
+        "pronunciation",
+        help="inspect Kokoro phonemes and shared-dictionary matches",
+    )
+    pronunciation.add_argument("text", help="a name, title, term, or short phrase")
+    pronunciation.add_argument("--voice")
+    pronunciation.add_argument("--quantized", action="store_true", help="use the smaller int8 model")
+    pronunciation.set_defaults(run=inspect_pronunciation)
+    return root
+
+
+if __name__ == "__main__":
+    arguments = parser().parse_args()
+    arguments.run(arguments)

@@ -56,8 +56,11 @@
         "author_or_publisher": "Ogilvy UK",
         "url": "https://www.ogilvy.com/uk/about",
         "type": "employer",
+        "independence": "interested",
+        "quality": "high",
         "accessed_at": "2026-08-13",
-        "supports": "Current title, career at Ogilvy, behavioural consulting work, professional roles, columns, and selected books."
+        "supports": "Current title, career at Ogilvy, behavioural consulting work, professional roles, columns, and selected books.",
+        "limitations": "An employer biography is authoritative for roles but presents the subject favourably."
       },
       {
         "id": "penguin-book-bio",
@@ -65,8 +68,11 @@
         "author_or_publisher": "Penguin Books UK",
         "url": "https://www.penguin.co.uk/books/430379/alchemy-by-rory-sutherland/9780753556528",
         "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
         "accessed_at": "2026-08-13",
-        "supports": "Author role, behavioural-science practice, columns, broadcasting, professional affiliations, TED audience, and publication history."
+        "supports": "Author role, behavioural-science practice, columns, broadcasting, professional affiliations, TED audience, and publication history.",
+        "limitations": "Publisher copy is promotional and may repeat an author-supplied biography."
       },
       {
         "id": "penguin-author-page",
@@ -74,8 +80,11 @@
         "author_or_publisher": "Penguin Books UK",
         "url": "https://www.penguin.co.uk/authors/235988/rory-sutherland",
         "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
         "accessed_at": "2026-08-13",
-        "supports": "Publisher author identity, books, articles, and reception associated with Alchemy."
+        "supports": "Publisher author identity, books, articles, and reception associated with Alchemy.",
+        "limitations": "Useful for the publisher's own catalogue, not independent assessment."
       },
       {
         "id": "ted-speaker-bio",
@@ -83,8 +92,11 @@
         "author_or_publisher": "TED",
         "url": "https://www.ted.com/speakers/rory_sutherland",
         "type": "author",
+        "independence": "independent",
+        "quality": "medium",
         "accessed_at": "2026-08-13",
-        "supports": "Early background, joining Ogilvy in 1988, copywriting and Microsoft work, digital-media interest, columns, and TED talk history."
+        "supports": "Early background, joining Ogilvy in 1988, copywriting and Microsoft work, digital-media interest, columns, and TED talk history.",
+        "limitations": "A short speaker profile designed to introduce talks, not a comprehensive biography."
       },
       {
         "id": "spectator-podcast",
@@ -92,8 +104,11 @@
         "author_or_publisher": "The Spectator",
         "url": "https://www.spectator.co.uk/podcast/with-rory-sutherland/",
         "type": "interview",
+        "independence": "independent",
+        "quality": "medium",
         "accessed_at": "2026-08-13",
-        "supports": "Independent confirmation of his Ogilvy role and Wiki Man column."
+        "supports": "Independent confirmation of his Ogilvy role and Wiki Man column.",
+        "limitations": "A programme introduction with little detail and no systematic verification."
       },
       {
         "id": "consumer-behaviour-lab-interview",
@@ -101,8 +116,11 @@
         "author_or_publisher": "The Consumer Behaviour Lab",
         "url": "https://www.theconsumerbehaviorlab.com/pdf/interview-rory-sutherland-author-of-alchemy-on-why-irrational-ideas-work.pdf",
         "type": "interview",
+        "independence": "primary",
+        "quality": "medium",
         "accessed_at": "2026-08-13",
-        "supports": "Sutherland's own account of his applied behavioural approach and the reasoning behind Alchemy."
+        "supports": "Sutherland's own account of his applied behavioural approach and the reasoning behind Alchemy.",
+        "limitations": "Primary evidence for his views and intent, but self-report rather than independent evaluation."
       },
       {
         "id": "worldcat-record",
@@ -110,8 +128,11 @@
         "author_or_publisher": "OCLC WorldCat",
         "url": "https://search.worldcat.org/title/alchemy-the-surprising-power-of-ideas-that-dont-make-sense/oclc/1105071755",
         "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
         "accessed_at": "2026-08-13",
-        "supports": "Independent bibliographic confirmation of Alchemy's authorship and 2019 publication."
+        "supports": "Independent bibliographic confirmation of Alchemy's authorship and 2019 publication.",
+        "limitations": "Bibliographic evidence only; it says nothing about expertise or quality."
       },
       {
         "id": "knowing-making-review",
@@ -119,8 +140,11 @@
         "author_or_publisher": "Knowing and Making",
         "url": "https://www.knowingandmaking.com/2019/08/book-review-alchemy-by-rory-sutherland.html",
         "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
         "accessed_at": "2026-08-13",
-        "supports": "Independent behavioural-economics assessment of Sutherland's theoretical sources, anecdotal style, and practitioner perspective."
+        "supports": "Independent behavioural-economics assessment of Sutherland's theoretical sources, anecdotal style, and practitioner perspective.",
+        "limitations": "One specialist review, not peer-reviewed scholarship or a consensus view."
       },
       {
         "id": "goodreads-reception",
@@ -128,19 +152,15 @@
         "author_or_publisher": "Goodreads",
         "url": "https://www.goodreads.com/book/show/26210507-alchemy",
         "type": "reader-aggregate",
+        "independence": "community",
+        "quality": "medium",
         "accessed_at": "2026-08-13",
-        "supports": "Reader criticism used to identify limits of the author's presentation and evidential style."
+        "supports": "Reader criticism used to identify limits of the author's presentation and evidential style.",
+        "limitations": "Self-selected reviews, possible edition merging, and no control for reader background."
       }
     ],
     "citations": {
-      "/name": ["ogilvy-official-bio", "penguin-author-page", "ted-speaker-bio", "worldcat-record"],
-      "/profile/one_line": ["ogilvy-official-bio", "penguin-book-bio", "ted-speaker-bio"],
-      "/profile/biography": ["ogilvy-official-bio", "penguin-book-bio", "ted-speaker-bio", "spectator-podcast"],
-      "/profile/background": ["ted-speaker-bio", "ogilvy-official-bio", "penguin-book-bio"],
-      "/profile/expertise": ["ogilvy-official-bio", "ted-speaker-bio", "consumer-behaviour-lab-interview"],
-      "/profile/perspective_and_limits": ["ogilvy-official-bio", "ted-speaker-bio", "knowing-making-review", "goodreads-reception"],
-      "/selected_works/0": ["penguin-book-bio", "ogilvy-official-bio"],
-      "/selected_works/1": ["penguin-book-bio", "ogilvy-official-bio", "worldcat-record"]
+      "/name": ["ogilvy-official-bio", "penguin-author-page", "ted-speaker-bio", "worldcat-record"]
     }
   },
   "workflow": {

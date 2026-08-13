@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/queue.schema.json",
+  "title": "Processing queue",
+  "description": "Work dispatch for agents: which books to process, in what order, and where each stands. Content state itself lives in each book's workflow fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "queue"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "queue": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["book_id", "priority", "status", "source", "added_at"],
+        "properties": {
+          "book_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "priority": { "type": "integer", "minimum": 1 },
+          "status": { "enum": ["ready", "in-progress", "done", "blocked"] },
+          "source": { "enum": ["user", "discovery"] },
+          "notes": { "type": "string" },
+          "added_at": { "type": "string", "format": "date" }
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 ---
 book_id: book-id
 duration: 30-minutes
-audio_preset: natural
 target_words: 4500
+source: content.json
 status: stub
 ---
 
-Write a detailed audio-ready treatment of the book's development, examples, evidence, counterarguments, reception, implications, and connections. Add depth; do not pad with repetition.
+Write a detailed audio-ready treatment only when `content.json` recommends it. Add warranted detail, comparisons, examples, evidence, counterarguments, and connections. Do not pad or retell the 15-minute version.

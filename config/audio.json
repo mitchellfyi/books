@@ -1,33 +1,53 @@
 {
   "$schema": "../schemas/audio-config.schema.json",
-  "schema_version": 1,
-  "default_preset": "natural",
+  "schema_version": 3,
+  "base_words_per_minute": 150,
+  "default_level": "15-minutes",
   "word_count_tolerance_percent": 7,
-  "presets": {
-    "natural": {
-      "words_per_minute": 150,
-      "description": "Default rate for clear, comfortable narration.",
-      "durations": {
-        "30-seconds": { "minutes": 0.5, "target_words": 75 },
-        "3-minutes": { "minutes": 3, "target_words": 450 },
-        "12-minutes": { "minutes": 12, "target_words": 1800 },
-        "30-minutes": { "minutes": 30, "target_words": 4500 }
-      }
+  "levels": {
+    "30-seconds": {
+      "minutes": 0.5,
+      "target_words": 75,
+      "purpose": "Decide whether to inspect the book.",
+      "required": true
     },
-    "requested-fast": {
-      "words_per_minute": 250,
-      "description": "Preserves the initially requested word counts; use only when deliberately producing very fast speech.",
-      "durations": {
-        "30-seconds": { "minutes": 0.5, "target_words": 125 },
-        "3-minutes": { "minutes": 3, "target_words": 750 },
-        "12-minutes": { "minutes": 12, "target_words": 3000 },
-        "30-minutes": { "minutes": 30, "target_words": 7500 }
-      }
+    "5-minutes": {
+      "minutes": 5,
+      "target_words": 750,
+      "purpose": "Decide whether the full book is worth the reader's time or money.",
+      "required": true
+    },
+    "15-minutes": {
+      "minutes": 15,
+      "target_words": 2250,
+      "purpose": "Understand the book's complete useful argument, examples, limits, and reading experience.",
+      "required": true
+    },
+    "30-minutes": {
+      "minutes": 30,
+      "target_words": 4500,
+      "purpose": "Add warranted depth for dense, broad, technical, or unusually important books.",
+      "required": false
     }
   },
+  "playback_speeds": [1, 1.1, 1.25, 1.5, 2],
+  "default_playback_speed": 1.1,
   "tts": {
-    "preferred_engine": "kokoro",
+    "preferred_engine": "kokoro-onnx",
     "official_repository": "https://github.com/hexgrad/kokoro",
+    "implementation_repository": "https://github.com/thewh1teagle/kokoro-onnx",
+    "output_format": "mp3",
+    "pronunciation_dictionary": "config/pronunciations.json",
+    "default_language_code": "b",
+    "default_voice": "bf_emma",
+    "voices": {
+      "bf_emma": "Emma — British female",
+      "bf_isabella": "Isabella — British female",
+      "bm_george": "George — British male",
+      "bm_fable": "Fable — British male",
+      "af_heart": "Heart — American female",
+      "am_michael": "Michael — American male"
+    },
     "metadata_sidecar_required": true,
     "commit_generated_audio": false,
     "commit_model_weights": false

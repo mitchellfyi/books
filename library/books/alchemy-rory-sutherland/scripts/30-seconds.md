@@ -1,8 +1,8 @@
 ---
 book_id: alchemy-rory-sutherland
 duration: 30-seconds
-audio_preset: natural
 target_words: 75
+source: content.json
 status: complete
 ---
 

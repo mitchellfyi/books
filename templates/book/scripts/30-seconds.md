@@ -1,9 +1,9 @@
 ---
 book_id: book-id
 duration: 30-seconds
-audio_preset: natural
 target_words: 75
+source: content.json
 status: stub
 ---
 
-Write an audio-ready summary covering identity, core argument, ideal reader, and the main caveat.
+Write an audio-ready verdict covering identity, core argument, ideal reader, and the main caveat.

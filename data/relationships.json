@@ -22,7 +22,9 @@
       "type": "related-to",
       "basis": "explicit",
       "description": "Both examine systematic departures from simple rational-choice models; the publisher explicitly positions Alchemy alongside Kahneman's work.",
-      "source_refs": ["library/books/alchemy-rory-sutherland/book.json#google-books-us"],
+      "source_refs": [
+        "library/books/alchemy-rory-sutherland/book.json#google-books-us"
+      ],
       "confidence": "high"
     },
     {
@@ -32,7 +34,9 @@
       "type": "related-to",
       "basis": "inference",
       "description": "Read Influence next for a more systematically organised account of persuasion principles that complements Alchemy's case-led, exploratory style.",
-      "source_refs": ["library/books/alchemy-rory-sutherland/book.json#publisher-book-page"],
+      "source_refs": [
+        "library/books/alchemy-rory-sutherland/book.json#publisher-book-page"
+      ],
       "confidence": "medium"
     },
     {
@@ -55,7 +59,9 @@
       "type": "related-to",
       "basis": "inference",
       "description": "The Choice Factory is a useful follow-on for readers who want behavioural biases presented as a more direct set of advertising applications.",
-      "source_refs": ["library/books/alchemy-rory-sutherland/book.json#consumer-behaviour-lab-interview"],
+      "source_refs": [
+        "library/books/alchemy-rory-sutherland/book.json#consumer-behaviour-lab-interview"
+      ],
       "confidence": "medium"
     }
   ]
