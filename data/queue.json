@@ -201,7 +201,7 @@
     {
       "book_id": "nudge-richard-thaler-cass-sunstein",
       "priority": 27,
-      "status": "ready",
+      "status": "in-progress",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Promoted from recommendation stub. Co-authored with Cass Sunstein. Discovered from Thinking, Fast and Slow and Influence: the policy application of the judgment-shortcuts literature."
@@ -225,7 +225,7 @@
     {
       "book_id": "meditations-aurelius",
       "priority": 30,
-      "status": "in-progress",
+      "status": "done",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Discovered from The Socratic Method and Don't Believe Everything You Think: the Stoic source both books' assessments point readers toward."

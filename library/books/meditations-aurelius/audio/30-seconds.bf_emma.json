@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "meditations-aurelius",
+  "duration": "30-seconds",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/meditations-aurelius/scripts/30-seconds.md",
+  "source_script_sha256": "090f53143ce4996dc3f64ddab7fee40c4e64e8bf06d7c74122083c8d59710fca",
+  "pronunciation_dictionary_sha256": "3f3614933c80457f183cb71a6de6d464cf98d29f9a48ab5131c48dcb786a4fc0",
+  "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 72,
+  "audio_seconds": 27.543,
+  "measured_wpm": 156.85,
+  "generated_at": "2026-08-13T20:14:06.799253+00:00"
+}
