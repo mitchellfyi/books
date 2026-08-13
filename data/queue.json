@@ -201,7 +201,7 @@
     {
       "book_id": "nudge-richard-thaler-cass-sunstein",
       "priority": 27,
-      "status": "in-progress",
+      "status": "done",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Promoted from recommendation stub. Co-authored with Cass Sunstein. Discovered from Thinking, Fast and Slow and Influence: the policy application of the judgment-shortcuts literature."
@@ -209,7 +209,7 @@
     {
       "book_id": "the-choice-factory-richard-shotton",
       "priority": 28,
-      "status": "ready",
+      "status": "in-progress",
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Promoted from recommendation stub. Discovered from Alchemy: the evidence-first companion to Sutherland's behavioural advertising world."

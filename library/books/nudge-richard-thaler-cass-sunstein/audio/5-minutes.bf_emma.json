@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "nudge-richard-thaler-cass-sunstein",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.94,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/nudge-richard-thaler-cass-sunstein/scripts/5-minutes.md",
+  "source_script_sha256": "43888a9954a505ea88c9e8c31562693874e13cc33f15e0d87014f279111e264d",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
+  "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 796,
+  "audio_seconds": 300.587,
+  "measured_wpm": 158.89,
+  "generated_at": "2026-08-13T20:32:17.696578+00:00"
+}
