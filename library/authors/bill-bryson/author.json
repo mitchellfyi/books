@@ -6,20 +6,120 @@
   "name": "Bill Bryson",
   "alternate_names": [],
   "profile": {
-    "one_line": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "biography": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "background": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "expertise": { "text": "", "source_ids": [], "basis": "synthesis" },
-    "perspective_and_limits": { "text": "", "source_ids": [], "basis": "inference" }
+    "one_line": {
+      "text": "American-British writer whose bestselling books turn travel, science, language, and domestic history into companionable, joke-studded narrative.",
+      "source_ids": ["wikipedia-at-home", "guardian-at-home", "goodreads-at-home"],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Des Moines, Iowa in 1951, Bryson settled in Britain in his twenties, worked as a subeditor on English newspapers, and became famous with comic travel books including Notes from a Small Island and A Walk in the Woods. He then widened into popular synthesis: A Short History of Nearly Everything on science, books on Shakespeare and the English language, and At Home on domestic life, written from the Victorian rectory in Norfolk where he lived. He served as chancellor of Durham University and received an honorary OBE for services to literature.",
+      "source_ids": ["wikipedia-at-home", "guardian-at-home"],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His method is consistent across subjects: read enormously in the secondary literature, harvest the most vivid characters and facts, and retell them as anecdote with comic timing. He is a professional explainer and entertainer, not a researcher; the archives he mines are other people's books.",
+      "source_ids": ["guardian-at-home", "flanders-assessment"],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "Decades of practice in narrative synthesis and a proven instinct for the memorable detail. He holds no academic specialisation in the histories and sciences he covers, and his books occasionally repeat errors from his sources — a known cost of the magpie method.",
+      "source_ids": ["flanders-assessment", "guardian-at-home"],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Bryson writes as the delighted amateur: curious, self-deprecating, Anglophile, and endlessly amused by human oddity. The perspective makes forbidding subjects welcoming and sells millions of copies; its limits are structural looseness, an entertainer's priority on the good story over the qualified truth, and a historian's judgement, in Judith Flanders' words, that the books occasionally have better jokes than a sense of history.",
+      "source_ids": ["flanders-assessment", "guardian-at-home", "goodreads-at-home"],
+      "basis": "inference"
+    }
   },
-  "selected_works": [],
+  "selected_works": [
+    {
+      "title": "Notes from a Small Island",
+      "year": 1995,
+      "kind": "Book",
+      "relationship": "The beloved British travelogue that made him a household name in the UK.",
+      "source_ids": ["wikipedia-at-home"]
+    },
+    {
+      "title": "A Short History of Nearly Everything",
+      "year": 2003,
+      "kind": "Book",
+      "relationship": "His science synthesis; catalogued separately in this library.",
+      "source_ids": ["wikipedia-at-home"]
+    },
+    {
+      "title": "At Home: A Short History of Private Life",
+      "year": 2010,
+      "kind": "Book",
+      "relationship": "The domestic-history companion, subject of this profile's book entry.",
+      "source_ids": ["wikipedia-at-home"]
+    },
+    {
+      "title": "The Body: A Guide for Occupants",
+      "year": 2019,
+      "kind": "Book",
+      "relationship": "The same method applied to human biology.",
+      "source_ids": ["wikipedia-at-home"]
+    }
+  ],
   "research": {
-    "sources": [],
-    "citations": {}
+    "sources": [
+      {
+        "id": "wikipedia-at-home",
+        "title": "At Home: A Short History of Private Life",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/At_Home:_A_Short_History_of_Private_Life",
+        "type": "secondary-summary",
+        "accessed_at": "2026-08-13",
+        "supports": "Publication facts, the chapter structure, the 1851 framing, and documented reception including the Flanders and Guardian assessments; Bryson's career outline.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Tertiary; reception claims traced to their named sources."
+      },
+      {
+        "id": "guardian-at-home",
+        "title": "The Guardian on At Home (as documented in the book's reception record)",
+        "author_or_publisher": "The Guardian",
+        "url": "https://en.wikipedia.org/wiki/At_Home:_A_Short_History_of_Private_Life",
+        "type": "professional-review",
+        "accessed_at": "2026-08-13",
+        "supports": "The assessment of the book as a venue for presenting historical events as well-turned stories.",
+        "independence": "independent",
+        "quality": "medium",
+        "limitations": "Accessed via documented quotation."
+      },
+      {
+        "id": "flanders-assessment",
+        "title": "Judith Flanders on At Home (as documented in the book's reception record)",
+        "author_or_publisher": "Judith Flanders",
+        "url": "https://en.wikipedia.org/wiki/At_Home:_A_Short_History_of_Private_Life",
+        "type": "specialist-review",
+        "accessed_at": "2026-08-13",
+        "supports": "A domestic-history specialist's verdict: a treasure that occasionally has better jokes than a sense of history.",
+        "independence": "independent",
+        "quality": "high",
+        "limitations": "Accessed via documented quotation; Flanders writes in the same field."
+      },
+      {
+        "id": "goodreads-at-home",
+        "title": "At Home: A Short History of Private Life",
+        "author_or_publisher": "Goodreads",
+        "url": "https://www.goodreads.com/book/show/7507825-at-home",
+        "type": "reader-aggregate",
+        "accessed_at": "2026-08-13",
+        "supports": "Large, warm reader reception with recurring notes on digressiveness.",
+        "independence": "community",
+        "quality": "medium",
+        "limitations": "Self-selected raters."
+      }
+    ],
+    "citations": {
+      "/name": ["wikipedia-at-home"]
+    }
   },
   "workflow": {
-    "status": "stub",
-    "coverage_notes": "",
+    "status": "complete",
+    "coverage_notes": "Profile scaled to the library's needs; Bryson's biography is documented far beyond them. Serves both catalogued Bryson titles.",
     "last_researched": "2026-08-13",
     "next_steps": []
   }
