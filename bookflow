@@ -12,7 +12,7 @@ import sys
 import unicodedata
 import webbrowser
 from datetime import date
-from functools import partial
+from functools import lru_cache, partial
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 
@@ -29,6 +29,12 @@ def slug(text: str) -> str:
 
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+@lru_cache(maxsize=None)
+def load_config(name: str) -> dict:
+    """Load a config/ file once per (short-lived) CLI invocation."""
+    return load(ROOT / "config" / name)
 
 
 def save(path: Path, value: object) -> None:
@@ -64,6 +70,10 @@ def find_duplicate(catalog: dict, title: str) -> dict | None:
 
 
 def init_book(args: argparse.Namespace) -> None:
+    if not slug(args.title):
+        raise SystemExit("--title must contain at least one letter or number")
+    if not slug(args.author):
+        raise SystemExit("--author must contain at least one letter or number")
     author_id = args.author_id or slug(args.author)
     short_title = args.title.split(":", 1)[0]
     book_id = args.book_id or f"{slug(short_title)}-{slug(args.author.split()[-1])}"
@@ -194,12 +204,12 @@ def book_needs(book_id: str) -> str:
         return "scaffold missing"
     needs = []
     content_path = directory / "content.json"
-    content = load(content_path) if content_path.exists() else None
-    if content is None or "TODO" in content_path.read_text(encoding="utf-8"):
+    content_text = content_path.read_text(encoding="utf-8") if content_path.exists() else None
+    content = json.loads(content_text) if content_text else None
+    if content is None or "TODO" in content_text:
         needs.append("content")
     rating = (content or {}).get("assessment", {}).get("rating")
-    rubric = load(ROOT / "config/rating.json")
-    if rating_errors(rating, rubric):
+    if rating_errors(rating, load_config("rating.json")):
         needs.append("rating")
     quality_review = (content or {}).get("workflow", {}).get("quality_review", {})
     if quality_review.get("status") != "passed" or not all(
@@ -209,7 +219,7 @@ def book_needs(book_id: str) -> str:
     book_path = directory / "book.json"
     if book_path.exists() and not load(book_path).get("research", {}).get("sources"):
         needs.append("research")
-    config = load(ROOT / "config/audio.json")
+    config = load_config("audio.json")
     missing_scripts, missing_audio = [], []
     for level in config["levels"]:
         script_path = directory / "scripts" / f"{level}.md"
@@ -562,11 +572,15 @@ class LibraryHandler(SimpleHTTPRequestHandler):
 def serve(args: argparse.Namespace) -> None:
     build_app()
     url = f"http://127.0.0.1:{args.port}/"
+    handler = partial(LibraryHandler, directory=str(DIST))
+    try:
+        server = ThreadingHTTPServer(("127.0.0.1", args.port), handler)
+    except OSError as error:
+        raise SystemExit(f"Cannot serve on port {args.port} ({error.strerror or error}); "
+                         "another server may be running — try --port")
     print(f"Library: {url}")
     if not args.no_open:
         webbrowser.open(url)
-    handler = partial(LibraryHandler, directory=str(DIST))
-    server = ThreadingHTTPServer(("127.0.0.1", args.port), handler)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
