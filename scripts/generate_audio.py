@@ -296,8 +296,8 @@ def generate(book_dir: Path, level: str, synth: Synthesiser, config: dict,
     return f"wrote audio/{output.name} ({seconds / 60:.1f} min at {sidecar['measured_wpm']:.0f} wpm)"
 
 
-def listening_priority(book_dir: Path, levels: list[str]) -> list[str]:
-    """Recommended level first, then the 30-second scan layer, then the rest."""
+def listening_priority(book_dir: Path, levels: list[str], level_config: dict) -> list[str]:
+    """Recommended level first, then the shortest scan layer, then the rest."""
     if len(levels) == 1:
         return levels
     first: list[str] = []
@@ -308,8 +308,9 @@ def listening_priority(book_dir: Path, levels: list[str]) -> list[str]:
             first.append(recommended)
     except (FileNotFoundError, json.JSONDecodeError):
         pass
-    if "30-seconds" in levels and "30-seconds" not in first:
-        first.append("30-seconds")
+    scan = min(levels, key=lambda level: level_config[level]["minutes"])
+    if scan not in first:
+        first.append(scan)
     return first + [level for level in levels if level not in first]
 
 
@@ -367,7 +368,7 @@ def main() -> int:
     failures = 0
     for book_dir in books:
         print(f"{book_dir.name}:")
-        for level in listening_priority(book_dir, levels):
+        for level in listening_priority(book_dir, levels, config["levels"]):
             try:
                 outcome = generate(book_dir, level, synth, config, args)
             except Exception as error:
