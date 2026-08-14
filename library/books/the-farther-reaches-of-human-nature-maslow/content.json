@@ -249,8 +249,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 5.7,
+      "rubric_version": 2,
+      "score": 5.5,
       "confidence": "medium",
       "summary": "Limited as reliable psychology, large as vision: a generative vocabulary for the upper range of human life whose evidence was thin by its own admission, delivered in an uneven posthumous assembly.",
       "dimensions": [
@@ -306,6 +306,15 @@
           "source_ids": [
             "goodreads-farther",
             "bu-review-farther"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 4.5,
+          "rationale": "Posthumously assembled lectures and papers with documented repetition and academic wandering; the reader does the editing the book never received.",
+          "source_ids": [
+            "bu-review-farther",
+            "goodreads-farther"
           ]
         }
       ],

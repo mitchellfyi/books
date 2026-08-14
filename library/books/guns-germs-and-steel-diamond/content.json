@@ -216,8 +216,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.5,
+      "rubric_version": 2,
+      "score": 6.4,
       "confidence": "medium",
       "summary": "Worthwhile content: a genuinely explanatory environmental framework with memorable mechanisms and comparative cases. Its prehistoric continental account is stronger than its treatment of recorded and modern history, where culture, institutions and agency become too dependent on geography.",
       "dimensions": [
@@ -272,6 +272,15 @@
           "id": "information-efficiency",
           "score": 5.5,
           "rationale": "The argument is complete by mid-book; the regional chapters re-run the checklist with diminishing returns, and the contemporary reviews already flagged the redundancies.",
+          "source_ids": [
+            "kirkus-ggs",
+            "evolution-education-review"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 6.0,
+          "rationale": "Workmanlike prose serving a monumental argument; contemporary reviews documented serviceable rather than brilliant writing and a repetitive case parade, though the material carries it.",
           "source_ids": [
             "kirkus-ggs",
             "evolution-education-review"

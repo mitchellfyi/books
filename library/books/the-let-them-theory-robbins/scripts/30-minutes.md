@@ -130,7 +130,7 @@ Its practical utility is also strong. The cue can be tried immediately. Ask what
 
 Information efficiency is the weak point. Five minutes can convey the full decision. Fifteen can preserve the principal relationship distinctions and limitations. The longer book earns its time only if repetition, story, and the author's voice are part of how you learn. That is not nothing: habits often require rehearsal. It is still a poor trade for a reader who retains concepts quickly.
 
-The fairest content rating is six out of ten. The book is worthwhile. It makes a useful pattern unusually memorable and applies it across real problems. It is not rigorous, original, complete, or concise enough to be strong overall. Fame, sales, and the identities of the authors do not enter that judgment.
+The fairest content rating is five point seven out of ten. The book falls just short of worthwhile. It makes a useful pattern unusually memorable and applies it across real problems. It is not rigorous, original, complete, or concise enough to be strong overall. Fame, sales, and the identities of the authors do not enter that judgment.
 
 The best audience is someone who habitually monitors, fixes, chases, appeases, or rescues other adults. It can help a reader caught in social judgment, changing friendship, family frustration, uncertain romance, or the guilt of setting a boundary. It also suits people who prefer energetic coaching and abundant examples to abstraction.
 

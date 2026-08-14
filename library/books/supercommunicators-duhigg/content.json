@@ -216,8 +216,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.0,
+      "rubric_version": 2,
+      "score": 6.1,
       "confidence": "medium",
       "summary": "Worthwhile: one clarifying taxonomy plus genuinely practisable techniques, delivered efficiently — held back by familiar science presented without quantification, an oversold neural garnish, and a toolkit that visibly thins at the scale of the hardest conversations it invokes.",
       "dimensions": [
@@ -269,6 +269,15 @@
           "id": "information-efficiency",
           "score": 6.0,
           "rationale": "A tight 320 pages by the genre's standards; the case stories earn their space, though the frame is fully delivered early and the later chapters mostly illustrate it.",
+          "source_ids": [
+            "kirkus-supercommunicators",
+            "goodreads-supercommunicators"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 7.0,
+          "rationale": "Duhigg's case-file warmth keeps the pages turning; documented reception finds it engaging while noting the formula.",
           "source_ids": [
             "kirkus-supercommunicators",
             "goodreads-supercommunicators"

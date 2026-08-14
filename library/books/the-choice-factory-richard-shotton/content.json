@@ -182,8 +182,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.2,
+      "rubric_version": 2,
+      "score": 6.3,
       "confidence": "medium",
       "summary": "Worthwhile: the most immediately usable book on this shelf's persuasion row — short, tested, application-first, and honest about its own method's limits — held below the top tier because the bias roster is the standard set, the chapters trade depth for speed, and the replication-era reckoning with its classic corpus is practised chapter by chapter rather than confronted head-on.",
       "dimensions": [
@@ -236,6 +236,15 @@
           "id": "information-efficiency",
           "score": 7.5,
           "rationale": "Twenty-five usable ideas in 220 fast pages — the highest applicable-ideas-per-minute on the persuasion row, by design.",
+          "source_ids": [
+            "harriman-choice-factory",
+            "goodreads-choice-factory"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 7.0,
+          "rationale": "Brisk eight-page chapters in a wry trade voice, built for dipping; documented reception praises how painless it is.",
           "source_ids": [
             "harriman-choice-factory",
             "goodreads-choice-factory"

@@ -76,7 +76,7 @@ The objections are equally consistent. “Theory” gives a common-sense practic
 
 The right safeguard is active curiosity. Before stepping back, ask whether you have said what you mean, heard the other person, checked your interpretation, and owned your contribution. Then observe what happens. Acceptance should make reality clearer; if it merely protects you from awkward information, it is doing the opposite.
 
-The book's fairest rating is six out of ten. The tool has strong explanatory clarity and practical recall. Its evidence is mixed, its novelty modest, and its application broad. Significant repetition and weak boundary analysis cap its value. Popularity does not change that content judgment.
+The book's fairest rating is five point seven out of ten. The tool has strong explanatory clarity and practical recall. Its evidence is mixed, its novelty modest, and its application broad. Significant repetition and weak boundary analysis cap its value. Popularity does not change that content judgment.
 
 Read it when examples are what turn understanding into behaviour, or when approval, friendship, rescuing, and relationship uncertainty are consuming your attention. A shorter treatment is enough when you already grasp the complete movement: see another person's freedom accurately, feel what it reveals, and choose your own response.
 

@@ -228,8 +228,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 5.2,
+      "rubric_version": 2,
+      "score": 5.9,
       "confidence": "medium",
       "summary": "Limited as science, superb as invitation: the most effective wonder-machine in popular science writing, taxed by a documented error rate, secondhand sourcing, and a method that teaches discovery stories more than the science itself.",
       "dimensions": [
@@ -281,6 +281,15 @@
           "id": "information-efficiency",
           "score": 6.0,
           "rationale": "For its scope the book is remarkably economical, and the rotation of subjects keeps pages earning; the anecdote overhead is the chosen price.",
+          "source_ids": [
+            "viu-johnston-review",
+            "goodreads-short-history"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 9.5,
+          "rationale": "The book's reputation rests on its prose: reviewers document it as the most painless, charming guided tour popular science has produced, sustaining wit across four hundred pages of material that is dry in every other telling.",
           "source_ids": [
             "viu-johnston-review",
             "goodreads-short-history"

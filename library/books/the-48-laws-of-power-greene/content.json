@@ -254,8 +254,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 5.4,
+      "rubric_version": 2,
+      "score": 5.7,
       "confidence": "medium",
       "summary": "Limited as reliable guidance: memorable observation of status games and a genuinely useful defensive lens, undermined by cherry-picked historical evidence, internal contradictions, and an unexamined zero-sum premise.",
       "dimensions": [
@@ -312,6 +312,15 @@
           "source_ids": [
             "wikipedia-48-laws",
             "prh-book-page"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 7.5,
+          "rationale": "A designed object with a voice: lacquered aphorisms, striking marginalia, and vivid court histories; documented reception treats the sinister styling as the pleasure.",
+          "source_ids": [
+            "audible-editorial",
+            "kirkus-48-laws"
           ]
         }
       ],

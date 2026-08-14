@@ -297,7 +297,7 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
+      "rubric_version": 2,
       "score": 7.4,
       "confidence": "medium",
       "summary": "A strong, practical evolutionary synthesis that makes inactivity intelligible and movement easier to design, while relying on incomplete ancestral evidence and taking a long route to a fairly simple prescription.",
@@ -364,6 +364,15 @@
             "google-books",
             "kirkus-review",
             "goodreads-reception"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 7.5,
+          "rationale": "Documented reception praises the storytelling — field scenes from Kenya and Mexico woven through the physiology — as genuinely enjoyable science writing.",
+          "source_ids": [
+            "guardian-review",
+            "kirkus-review"
           ]
         }
       ],

@@ -189,7 +189,7 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
+      "rubric_version": 2,
       "score": 3.9,
       "confidence": "medium",
       "summary": "Weak overall: a clear and potentially useful introduction to separating thoughts from facts, expanded too far into a universal theory of suffering and supported mainly by testimony. The current edition adds exercises, but its evidence, limits and distinction between rumination and necessary thinking remain thin.",
@@ -253,6 +253,15 @@
             "goodreads-dont-believe",
             "getabstract-review",
             "google-books-expanded"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 4.0,
+          "rationale": "Plain, heavily repetitive self-help prose; documented reader reception repeatedly flags the padding and recycled phrasing.",
+          "source_ids": [
+            "goodreads-dont-believe",
+            "vernezze-review"
           ]
         }
       ],

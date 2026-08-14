@@ -213,8 +213,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.3,
+      "rubric_version": 2,
+      "score": 6.5,
       "confidence": "medium",
       "summary": "Worthwhile and the evidentiary summit of its genre: a genuinely magisterial synthesis whose 'it's complicated' is earned mechanism by mechanism — docked for its 2017 vintage in replication-sensitive fields, documented factual disputes, a philosophically thin free-will chapter, and a density that makes the full climb a real cost.",
       "dimensions": [
@@ -270,6 +270,15 @@
           "source_ids": [
             "goodreads-behave",
             "bookmarks-behave"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 7.5,
+          "rationale": "Sapolsky's footnoted stand-up-professor voice is documented as the reason an eight-hundred-page neuroscience tome became a bestseller — genuinely funny, though the density taxes stamina.",
+          "source_ids": [
+            "bookmarks-behave",
+            "goodreads-behave"
           ]
         }
       ],

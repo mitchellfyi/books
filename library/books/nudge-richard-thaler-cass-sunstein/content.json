@@ -194,7 +194,7 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
+      "rubric_version": 2,
       "score": 6.2,
       "confidence": "medium",
       "summary": "Worthwhile: the most consequential applied-behavioural book ever published, whose core exports — defaults decide, no design is neutral, sludge is a crime scene — remain permanently useful, docked because its bias catalogue and average-effect claims sit in a documented modern dispute, its politics never answers the manipulation objection cleanly, and its policy middle reads as case lists.",
@@ -248,6 +248,15 @@
           "score": 5.5,
           "rationale": "The framework arrives fast; the domain chapters re-run it as policy lists — the standing reader complaint across editions.",
           "source_ids": [
+            "goodreads-nudge"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 6.5,
+          "rationale": "Genial and often funny by economics standards, with documented wonkish stretches — the policy chapters read like the reports they summarise.",
+          "source_ids": [
+            "wikipedia-nudge",
             "goodreads-nudge"
           ]
         }

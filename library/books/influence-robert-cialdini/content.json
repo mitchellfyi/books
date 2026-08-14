@@ -276,8 +276,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.5,
+      "rubric_version": 2,
+      "score": 6.6,
       "confidence": "medium",
       "summary": "Worthwhile and genuinely useful: the definitive taxonomy of compliance tactics with a defensive framing that still distinguishes it, docked for a laboratory evidence base that has visibly eroded — a debunked signature anecdote, a failed multilab replication behind one principle — and for a 2021 expansion that added length faster than substance.",
       "dimensions": [
@@ -332,6 +332,15 @@
           "rationale": "The classic edition is efficiently modular; the New and Expanded doubles the page count with reader letters and repeated scaffolding, so the ideas-per-page ratio has fallen with each revision.",
           "source_ids": [
             "bookworm-influence-2021",
+            "goodreads-influence"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 7.5,
+          "rationale": "Genial teacher's voice with story-driven chapters; decades of documented reception credit the anecdotal style for the book's staying power.",
+          "source_ids": [
+            "wikipedia-influence",
             "goodreads-influence"
           ]
         }

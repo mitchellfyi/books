@@ -274,10 +274,10 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 8.0,
+      "rubric_version": 2,
+      "score": 7.7,
       "confidence": "medium",
-      "summary": "Excellent content: a powerful, usable and field-defining synthesis whose central judgment tools survive better than some memorable supporting studies. Its breadth, density and over-unified two-system story prevent a higher score.",
+      "summary": "Strong content: a powerful, usable and field-defining synthesis whose central judgment tools survive better than some memorable supporting studies. Its breadth, grinding density and over-unified two-system story prevent a higher score.",
       "dimensions": [
         {
           "id": "explanatory-power",
@@ -336,6 +336,15 @@
             "aps-bazerman-review",
             "kirkus-thinking",
             "guardian-strawson-thinking"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 6.0,
+          "rationale": "Sentence-level prose is lucid and often elegant, but the documented reading experience is a long cumulative grind — a book widely bought, admired, and abandoned midway.",
+          "source_ids": [
+            "guardian-strawson-thinking",
+            "google-books-thinking"
           ]
         }
       ],

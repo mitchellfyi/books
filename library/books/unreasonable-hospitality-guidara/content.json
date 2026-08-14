@@ -238,10 +238,10 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 5.9,
+      "rubric_version": 2,
+      "score": 6.0,
       "confidence": "medium",
-      "summary": "A clear, memorable philosophy of engineered care with genuinely operational tools, held just below worthwhile by single-case evidence, an untreated cost side, and portability that is asserted rather than demonstrated.",
+      "summary": "A clear, memorable philosophy of engineered care with genuinely operational tools and warmly told service stories, lifted into worthwhile once the memoir's craft is priced — still taxed by single-case evidence, an untreated cost side, and portability that is asserted rather than demonstrated.",
       "dimensions": [
         {
           "id": "explanatory-power",
@@ -296,6 +296,15 @@
           "source_ids": [
             "goodreads-uh",
             "prh-book-page-uh"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 7.0,
+          "rationale": "Warm, propulsive restaurant-memoir storytelling; documented reception finds the service stories genuinely fun to read.",
+          "source_ids": [
+            "prh-book-page-uh",
+            "goodreads-uh"
           ]
         }
       ],

@@ -272,8 +272,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 7.3,
+      "rubric_version": 2,
+      "score": 7.2,
       "confidence": "medium",
       "summary": "Strong content: exceptionally usable environmental and implementation design, assembled from ideas with a real research base. Its scientific packaging sometimes exceeds direct evidence for the full framework, while repetition and an individual-agency bias limit efficiency and completeness.",
       "dimensions": [
@@ -334,6 +334,15 @@
           "id": "information-efficiency",
           "score": 6.5,
           "rationale": "The framework is extremely compressible. Examples and restatement improve memory and motivation, yet a substantial part of the 320 pages repeats laws whose inversions are already apparent.",
+          "source_ids": [
+            "army-atomic-review",
+            "google-books-atomic"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 7.0,
+          "rationale": "Exceptionally clear, frictionless sentences engineered for skimming and retention; the documented cost is a formulaic, listicle cadence with little voice.",
           "source_ids": [
             "army-atomic-review",
             "google-books-atomic"

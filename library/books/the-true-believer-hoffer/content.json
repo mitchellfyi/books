@@ -248,8 +248,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.4,
+      "rubric_version": 2,
+      "score": 6.6,
       "confidence": "medium",
       "summary": "An unusually concise and generative framework with high insight density, held below strong status by selective evidence, psychological overreach, and weak treatment of institutions and counterexamples.",
       "dimensions": [
@@ -311,6 +311,15 @@
             "google-books-preview",
             "goodreads-reception",
             "philosophy-science-review"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 8.0,
+          "rationale": "Hoffer's epigrammatic longshoreman-philosopher style is the most documented fact about the book — compressed, quotable, aphorism after aphorism.",
+          "source_ids": [
+            "intellectual-history-review",
+            "google-books-preview"
           ]
         }
       ],

@@ -214,8 +214,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 4.9,
+      "rubric_version": 2,
+      "score": 5.5,
       "confidence": "medium",
       "summary": "Limited as instruction, excellent as entertainment: a charming, digressive anthology whose value is pleasure and incidental knowledge rather than argument, method, or reliable depth.",
       "dimensions": [
@@ -269,6 +269,15 @@
           "rationale": "Six hundred pages of deliberate digression: the sprawl is the product, and readers seeking the substance without the wandering have no path through.",
           "source_ids": [
             "goodreads-at-home",
+            "carpe-librum-review"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 8.5,
+          "rationale": "Bryson's companionable, digressive charm is the documented draw — reviewers praise the room-by-room conceit and the anecdotal sparkle even while noting the wandering.",
+          "source_ids": [
+            "guardian-at-home",
             "carpe-librum-review"
           ]
         }

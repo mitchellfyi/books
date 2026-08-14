@@ -263,8 +263,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.4,
+      "rubric_version": 2,
+      "score": 6.7,
       "confidence": "medium",
       "summary": "A worthwhile generator of practical hypotheses whose explanatory value exceeds its evidential rigour; weak boundary conditions and repetition cap the score.",
       "dimensions": [
@@ -325,6 +325,15 @@
             "publisher-sample",
             "knowing-making-review",
             "customerthink-review"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 8.5,
+          "rationale": "Sutherland's voice — aphoristic, funny, compulsively quotable — is the documented reason the book gets read and reread; reviewers treat the style as the product.",
+          "source_ids": [
+            "knowing-making-review",
+            "goodreads-reception"
           ]
         }
       ],

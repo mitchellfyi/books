@@ -12,18 +12,33 @@
   "card": {
     "one_sentence": "A practical case for protecting distraction-free concentration on demanding work, training attention, choosing digital tools by their real value, and containing low-value communication.",
     "verdict": "A clear and unusually usable productivity framework whose central practices survive scrutiny, although the career argument outruns its evidence and the lifestyle is much easier for autonomous makers than for responsive or care-heavy roles.",
-    "source_ids": ["author-contents", "attention-residue-paper", "eighty-thousand-interview", "forte-review", "goodreads-reception"],
+    "source_ids": [
+      "author-contents",
+      "attention-residue-paper",
+      "eighty-thousand-interview",
+      "forte-review",
+      "goodreads-reception"
+    ],
     "basis": "synthesis"
   },
   "overview": {
     "synopsis": {
       "text": "The introduction defines deep work as demanding professional activity performed with unbroken concentration, and shallow work as replicable logistical activity often done while distracted. Part One argues that depth is valuable for learning and producing, rare because organisations reward visible responsiveness, and meaningful because sustained attention can create craftsmanship and flow. Part Two turns that case into four rules: design a repeatable deep-work practice, train the ability to tolerate boredom, select network tools by their contribution to important goals, and reduce or batch shallow obligations.",
-      "source_ids": ["author-contents", "hachette-book", "eighty-thousand-interview"],
+      "source_ids": [
+        "author-contents",
+        "hachette-book",
+        "eighty-thousand-interview"
+      ],
       "basis": "synthesis"
     },
     "core_argument": {
       "text": "Modern knowledge work rewards people who can learn difficult things and produce valuable results, yet email, meetings, feeds, open offices, and visible busyness fragment the attention required for both. Focus should therefore be treated as a scarce, trainable professional capability. Protect it with schedules, rituals, boundaries, selective tool use, and deliberate rest instead of waiting for spare time or motivation.",
-      "source_ids": ["author-contents", "attention-residue-paper", "open-office-paper", "eighty-thousand-interview"],
+      "source_ids": [
+        "author-contents",
+        "attention-residue-paper",
+        "open-office-paper",
+        "eighty-thousand-interview"
+      ],
       "basis": "synthesis"
     }
   },
@@ -36,7 +51,11 @@
       "representative_example": "Writing and testing a difficult proof is deep; arranging the meeting at which it will be discussed is shallow. The meeting may matter, but it does not require the same mental state.",
       "why_it_matters": "The distinction lets a worker allocate attention by value rather than by urgency, visibility, or inbox order.",
       "caveat": "Depth is contextual. A fast diagnosis, sensitive conversation, emergency response, or coordinated team decision may be cognitively difficult and valuable even when interrupted or collaborative.",
-      "source_ids": ["author-contents", "eighty-thousand-interview", "forte-review"],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "forte-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -47,7 +66,11 @@
       "representative_example": "Ninety protected minutes spent solving unfamiliar problems can build more skill than a longer study period broken by messages and unrelated tabs.",
       "why_it_matters": "It makes attention part of professional development rather than a mood that happens to arrive on good days.",
       "caveat": "Performance also depends on prior knowledge, feedback quality, health, resources, opportunity, teamwork, judgment, and talent. Meta-analysis finds deliberate practice important but far from a complete explanation, especially in professional domains.",
-      "source_ids": ["author-contents", "eighty-thousand-interview", "practice-meta-analysis"],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "practice-meta-analysis"
+      ],
       "basis": "synthesis"
     },
     {
@@ -58,7 +81,10 @@
       "representative_example": "After reading an urgent email and returning immediately to an analysis, part of the mind continues rehearsing the reply even though the document is back on screen.",
       "why_it_matters": "It explains why tiny checks can cost more than the seconds they occupy and why uninterrupted blocks feel qualitatively different.",
       "caveat": "The original experiments establish a particular transition effect, not a universal recovery time or proof that every interruption causes major real-world harm.",
-      "source_ids": ["attention-residue-paper", "author-contents"],
+      "source_ids": [
+        "attention-residue-paper",
+        "author-contents"
+      ],
       "basis": "synthesis"
     },
     {
@@ -69,7 +95,12 @@
       "representative_example": "A team adopts instant messaging to speed questions, then every member pays the attention cost of everyone else's convenience.",
       "why_it_matters": "It moves the problem beyond personal willpower towards workflow, incentives, office design, norms, and management.",
       "caveat": "Communication is not mere theatre when coordination, trust, safety, service, or rapid decisions are the actual output. Open-plan evidence also does not establish that isolation is always best.",
-      "source_ids": ["author-contents", "open-office-paper", "wharton-review", "forte-review"],
+      "source_ids": [
+        "author-contents",
+        "open-office-paper",
+        "wharton-review",
+        "forte-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -80,7 +111,11 @@
       "representative_example": "A programmer may reserve the first ninety minutes of every weekday, while a researcher may batch teaching and meetings into one part of the week and protect the rest.",
       "why_it_matters": "Matching the method to actual autonomy prevents an attractive ideal from failing on contact with the calendar.",
       "caveat": "The journalistic approach demands trained switching; the monastic and bimodal approaches may transfer coordination costs to colleagues or family.",
-      "source_ids": ["author-contents", "eighty-thousand-interview", "goodreads-reception"],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     },
     {
@@ -91,7 +126,11 @@
       "representative_example": "From nine until ten-thirty, close communication tools, work in one document, state the next deliverable, keep reference material ready, and mark the completed block afterwards.",
       "why_it_matters": "It converts a vague wish to focus into an observable practice that can be tested and improved.",
       "caveat": "Tracking can become shallow work of its own. Hours are a useful input measure only when connected to quality and outcomes.",
-      "source_ids": ["author-contents", "eighty-thousand-interview", "guardian-review"],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "guardian-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -102,7 +141,11 @@
       "representative_example": "When waiting in a queue, leave the phone untouched. The purpose is not moral purity; it is practising the ability to experience an unstimulating moment without automatic escape.",
       "why_it_matters": "It recognises that distraction control outside a work block affects what is possible inside it.",
       "caveat": "The exact training effect and optimal dose are not established by the book. Boredom tolerance is not treatment for attention disorders, exhaustion, anxiety, pain, or unsafe working conditions.",
-      "source_ids": ["author-contents", "author-retrospective", "goodreads-reception"],
+      "source_ids": [
+        "author-contents",
+        "author-retrospective",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     },
     {
@@ -113,7 +156,12 @@
       "representative_example": "A designer should not keep every platform because each might reveal one lead; the question is which channels reliably create enough good work or relationships to repay their total cost.",
       "why_it_matters": "It replaces blanket anti-technology rules with a disciplined decision process.",
       "caveat": "Network effects, community access, disability support, professional visibility, and marginalised voices can make a service valuable in ways a narrow output test misses.",
-      "source_ids": ["author-contents", "hachette-book", "forte-review", "goodreads-reception"],
+      "source_ids": [
+        "author-contents",
+        "hachette-book",
+        "forte-review",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     },
     {
@@ -124,7 +172,12 @@
       "representative_example": "Before finishing, scan the calendar and task list, capture each unresolved commitment, decide the next step, then stop rehearsing work throughout the evening.",
       "why_it_matters": "Limits create pressure to choose, improve communication, and recover instead of extending a fragmented workday indefinitely.",
       "caveat": "Rigid time blocks can create more administration, and delayed replies may harm people whose work depends on the response. Teams need explicit service levels and escalation routes.",
-      "source_ids": ["author-contents", "eighty-thousand-interview", "guardian-review", "wharton-review"],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "guardian-review",
+        "wharton-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -135,7 +188,11 @@
       "representative_example": "A metalworker attending closely to heat, force, and form can experience meaning through skilled engagement rather than through the social status of the product.",
       "why_it_matters": "It gives depth an intrinsic reason beyond promotion or output.",
       "caveat": "Focus cannot make exploitative, pointless, unsafe, or badly paid work meaningful by itself, and relationships or service may provide meaning through responsiveness rather than solitude.",
-      "source_ids": ["author-contents", "eighty-thousand-interview", "forte-review"],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "forte-review"
+      ],
       "basis": "synthesis"
     }
   ],
@@ -145,8 +202,14 @@
       "title": "Introduction: The deep work hypothesis",
       "purpose": "Defines deep and shallow work and states the claim that focus is becoming more valuable while becoming rarer.",
       "summary": "Newport contrasts demanding, distraction-free creation and learning with logistical activity performed amid interruptions. He uses his academic and writing practice to argue that depth can produce unusually high output without indefinitely long hours.",
-      "idea_ids": ["deep-versus-shallow", "learning-and-output"],
-      "source_ids": ["author-contents", "hachette-book"],
+      "idea_ids": [
+        "deep-versus-shallow",
+        "learning-and-output"
+      ],
+      "source_ids": [
+        "author-contents",
+        "hachette-book"
+      ],
       "basis": "synthesis"
     },
     {
@@ -154,8 +217,15 @@
       "title": "Part One, chapter 1: Deep work is valuable",
       "purpose": "Connects concentration to learning hard skills and producing scarce, high-quality work.",
       "summary": "Examples from technology, craft, and high achievement support a simple economic model: people who can learn complicated systems and turn expertise into valuable output have an advantage. Deliberate practice and intense production both require focus, although the evidence does not make focus sufficient for success.",
-      "idea_ids": ["learning-and-output", "attention-residue"],
-      "source_ids": ["author-contents", "eighty-thousand-interview", "practice-meta-analysis"],
+      "idea_ids": [
+        "learning-and-output",
+        "attention-residue"
+      ],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "practice-meta-analysis"
+      ],
       "basis": "synthesis"
     },
     {
@@ -163,8 +233,15 @@
       "title": "Part One, chapters 2 and 3: Rare and meaningful",
       "purpose": "Explains why organisations undermine concentration and why depth can still be worth pursuing for its own sake.",
       "summary": "The principle of least resistance, busyness as a proxy for productivity, open plans, and faith in network tools make distraction normal. Against this, Newport presents craftsmanship, flow, and deliberate attention as sources of order and satisfaction.",
-      "idea_ids": ["depth-is-rare", "depth-and-meaning"],
-      "source_ids": ["author-contents", "open-office-paper", "wharton-review"],
+      "idea_ids": [
+        "depth-is-rare",
+        "depth-and-meaning"
+      ],
+      "source_ids": [
+        "author-contents",
+        "open-office-paper",
+        "wharton-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -172,8 +249,16 @@
       "title": "Rule 1: Work deeply",
       "purpose": "Builds a repeatable system for scheduling, entering, measuring, and leaving concentration.",
       "summary": "The reader selects a monastic, bimodal, rhythmic, or journalistic schedule, designs rituals, sometimes uses a grand gesture or collaboration, tracks hours on important goals, and performs a shutdown that protects recovery. Newport rejects the idea that depth must mean working alone at all stages.",
-      "idea_ids": ["choose-depth-philosophy", "ritualise-and-measure", "drain-shallows"],
-      "source_ids": ["author-contents", "eighty-thousand-interview", "guardian-review"],
+      "idea_ids": [
+        "choose-depth-philosophy",
+        "ritualise-and-measure",
+        "drain-shallows"
+      ],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "guardian-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -181,8 +266,16 @@
       "title": "Rules 2 and 3: Embrace boredom and quit social media",
       "purpose": "Trains sustained attention and makes digital-tool use selective rather than automatic.",
       "summary": "Internet access is scheduled, boredom is allowed, focused sprints and productive meditation exercise return to one target, and services are judged by whether they materially serve important goals. The provocative instruction to quit social media is ultimately a demand for a higher adoption threshold rather than universal abstinence.",
-      "idea_ids": ["train-boredom", "craftsman-tool-test", "attention-residue"],
-      "source_ids": ["author-contents", "hachette-book", "forte-review"],
+      "idea_ids": [
+        "train-boredom",
+        "craftsman-tool-test",
+        "attention-residue"
+      ],
+      "source_ids": [
+        "author-contents",
+        "hachette-book",
+        "forte-review"
+      ],
       "basis": "synthesis"
     },
     {
@@ -190,8 +283,16 @@
       "title": "Rule 4 and conclusion: Drain the shallows",
       "purpose": "Protects depth by constraining communication, administration, and total working time.",
       "summary": "Time blocks make trade-offs visible; a shallow-work budget and fixed finishing time force prioritisation; clearer email and access rules reduce open loops. The conclusion restates depth as a demanding but more productive and satisfying alternative to continuous busyness.",
-      "idea_ids": ["drain-shallows", "deep-versus-shallow", "depth-and-meaning"],
-      "source_ids": ["author-contents", "eighty-thousand-interview", "goodreads-reception"],
+      "idea_ids": [
+        "drain-shallows",
+        "deep-versus-shallow",
+        "depth-and-meaning"
+      ],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     }
   ],
@@ -203,13 +304,18 @@
     "example_style": "Memorable high-achiever and craft examples, including writers, academics, executives, programmers, psychologists, and artisans. They make practices vivid but overrepresent exceptional people with unusual autonomy.",
     "repetition": "Moderate to high. The distinction between valuable focus and shallow busyness is restated often; many readers can obtain the decision value from a careful fifteen-minute version.",
     "prerequisites": "No technical background is required. The advice is easiest to use when the reader can identify a valuable cognitive output and control at least one recurring part of the day.",
-    "source_ids": ["author-contents", "guardian-review", "forte-review", "goodreads-reception"],
+    "source_ids": [
+      "author-contents",
+      "guardian-review",
+      "forte-review",
+      "goodreads-reception"
+    ],
     "basis": "synthesis"
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 7.3,
+      "rubric_version": 2,
+      "score": 7.1,
       "confidence": "medium",
       "summary": "The framework is memorable, actionable, and mostly well calibrated at the level of practice. It loses points because stories and adjacent studies carry claims about career outcomes that they cannot establish, the schedule assumptions exclude many roles, and the same useful model could be delivered more efficiently.",
       "dimensions": [
@@ -217,86 +323,153 @@
           "id": "explanatory-power",
           "score": 8.0,
           "rationale": "The deep-versus-shallow distinction, attention residue, visible busyness, and four-rule structure explain a common knowledge-work failure in language readers can immediately apply.",
-          "source_ids": ["author-contents", "attention-residue-paper", "wharton-review"]
+          "source_ids": [
+            "author-contents",
+            "attention-residue-paper",
+            "wharton-review"
+          ]
         },
         {
           "id": "evidence-and-reasoning",
           "score": 6.5,
           "rationale": "The book uses real research and sensible mechanisms, but often moves from focused-work examples and narrow studies to broad economic, neural, and career conclusions without direct tests of the complete programme.",
-          "source_ids": ["attention-residue-paper", "practice-meta-analysis", "eighty-thousand-interview", "open-office-paper"]
+          "source_ids": [
+            "attention-residue-paper",
+            "practice-meta-analysis",
+            "eighty-thousand-interview",
+            "open-office-paper"
+          ]
         },
         {
           "id": "insight-value",
           "score": 7.5,
           "rationale": "Concentration is not a new value, but naming deep and shallow work and connecting scheduling, boredom, tool selection, and organisational incentives creates a distinctive and durable synthesis.",
-          "source_ids": ["author-contents", "guardian-review", "goodreads-reception"]
+          "source_ids": [
+            "author-contents",
+            "guardian-review",
+            "goodreads-reception"
+          ]
         },
         {
           "id": "practical-utility",
           "score": 8.0,
           "rationale": "Readers receive multiple scheduling models, rituals, time blocks, tool tests, communication tactics, measurement, and shutdown practices that can be tried without specialised equipment.",
-          "source_ids": ["author-contents", "eighty-thousand-interview", "guardian-review"]
+          "source_ids": [
+            "author-contents",
+            "eighty-thousand-interview",
+            "guardian-review"
+          ]
         },
         {
           "id": "completeness-and-calibration",
           "score": 6.5,
           "rationale": "Newport acknowledges some communication-heavy exceptions and collaboration, but underdevelops organisational power, care, disability, neurodiversity, service work, team dependencies, and the value of responsive labour.",
-          "source_ids": ["eighty-thousand-interview", "forte-review", "wharton-review", "goodreads-reception"]
+          "source_ids": [
+            "eighty-thousand-interview",
+            "forte-review",
+            "wharton-review",
+            "goodreads-reception"
+          ]
         },
         {
           "id": "information-efficiency",
           "score": 7.0,
           "rationale": "The labels and rules are easy to retain, yet a compact core is expanded through repeated argument and exceptional-person stories. Fifteen minutes captures most decision value; thirty minutes captures nearly all practical nuance.",
-          "source_ids": ["author-contents", "hachette-book", "goodreads-reception"]
+          "source_ids": [
+            "author-contents",
+            "hachette-book",
+            "goodreads-reception"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 6.5,
+          "rationale": "Clean, direct, efficient prose that serves the argument without ornament; documented reception praises clarity rather than pleasure.",
+          "source_ids": [
+            "guardian-review",
+            "goodreads-reception"
+          ]
         }
       ],
       "basis": "inference"
     },
     "meaning": {
       "text": "Attention is not merely a private feeling; it is a productive resource and part of the life a person experiences. If other people, platforms, and incoming requests allocate it by default, important work receives only fragments. The answer is to decide what deserves full cognition, create reliable conditions for it, and make communication serve that work rather than consume it.",
-      "source_ids": ["author-contents", "author-retrospective", "attention-residue-paper"],
+      "source_ids": [
+        "author-contents",
+        "author-retrospective",
+        "attention-residue-paper"
+      ],
       "basis": "synthesis"
     },
     "lessons": [
       {
         "text": "Name the one or two outputs that genuinely require your full ability before trying to optimise the calendar.",
-        "source_ids": ["author-contents", "eighty-thousand-interview"],
+        "source_ids": [
+          "author-contents",
+          "eighty-thousand-interview"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Protect recurring blocks and define a start ritual, target, allowed tools, stopping point, and next action.",
-        "source_ids": ["author-contents", "attention-residue-paper"],
+        "source_ids": [
+          "author-contents",
+          "attention-residue-paper"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Batch avoidable switching and use clean hand-offs; do not confuse a two-minute message with a two-minute cognitive cost.",
-        "source_ids": ["attention-residue-paper", "author-contents"],
+        "source_ids": [
+          "attention-residue-paper",
+          "author-contents"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Choose digital tools by their net contribution to important goals, including opportunity cost, rather than by whether any benefit exists.",
-        "source_ids": ["author-contents", "forte-review"],
+        "source_ids": [
+          "author-contents",
+          "forte-review"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "Contain shallow work with budgets, explicit response expectations, time blocks, and better processes instead of treating every request as equally urgent.",
-        "source_ids": ["author-contents", "wharton-review"],
+        "source_ids": [
+          "author-contents",
+          "wharton-review"
+        ],
         "basis": "synthesis"
       },
       {
         "text": "End work deliberately and recover; concentration is finite, and endless availability is not evidence of commitment.",
-        "source_ids": ["author-contents", "guardian-review"],
+        "source_ids": [
+          "author-contents",
+          "guardian-review"
+        ],
         "basis": "synthesis"
       }
     ],
     "importance": {
       "text": "The book gave a memorable name and operational structure to the loss of sustained thought in digitally mediated work. Its lasting value is less the claim that focus guarantees exceptional careers than the insistence that organisations and individuals must actively protect cognition. Later evidence on task switching and open offices supports the problem, while later debate makes the organisational rather than purely personal solution even more important.",
-      "source_ids": ["author-retrospective", "attention-residue-paper", "open-office-paper", "wharton-review"],
+      "source_ids": [
+        "author-retrospective",
+        "attention-residue-paper",
+        "open-office-paper",
+        "wharton-review"
+      ],
       "basis": "synthesis"
     },
     "author_and_purpose": {
       "text": "Cal Newport is a Georgetown computer scientist and writer whose academic work concerns distributed systems and whose public work concerns attention, technology, and knowledge work. He developed Deep Work from his own effort to publish difficult research and books within bounded hours. He later described the aim as exposing how organisations undervalue thinking and creating a competitive framework for people willing to protect it. His direct experience is highly relevant to autonomous research and writing, but does not make him an experimental attention scientist or expert in every occupation.",
-      "source_ids": ["hachette-book", "author-contents", "author-retrospective", "eighty-thousand-interview"],
+      "source_ids": [
+        "hachette-book",
+        "author-contents",
+        "author-retrospective",
+        "eighty-thousand-interview"
+      ],
       "basis": "synthesis"
     },
     "evidence_quality": {
@@ -316,7 +489,14 @@
         "The programme is not tested as a complete intervention across occupations, teams, disability, care responsibilities, or levels of job control.",
         "The deep-versus-shallow binary can underrate coordination, mentoring, emotional labour, maintenance, and rapid judgment."
       ],
-      "source_ids": ["attention-residue-paper", "practice-meta-analysis", "open-office-paper", "eighty-thousand-interview", "forte-review", "wharton-review"],
+      "source_ids": [
+        "attention-residue-paper",
+        "practice-meta-analysis",
+        "open-office-paper",
+        "eighty-thousand-interview",
+        "forte-review",
+        "wharton-review"
+      ],
       "basis": "synthesis"
     },
     "reception": {
@@ -335,7 +515,13 @@
         "Personal anecdotes and adjacent studies are sometimes presented with more causal force than they can carry.",
         "Social-media advice can understate professional, community, accessibility, and network benefits."
       ],
-      "source_ids": ["hachette-book", "guardian-review", "forte-review", "wharton-review", "goodreads-reception"],
+      "source_ids": [
+        "hachette-book",
+        "guardian-review",
+        "forte-review",
+        "wharton-review",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     },
     "audience": {
@@ -369,7 +555,13 @@
         "Rest",
         "Meaning and craftsmanship"
       ],
-      "source_ids": ["author-contents", "eighty-thousand-interview", "forte-review", "wharton-review", "goodreads-reception"],
+      "source_ids": [
+        "author-contents",
+        "eighty-thousand-interview",
+        "forte-review",
+        "wharton-review",
+        "goodreads-reception"
+      ],
       "basis": "synthesis"
     },
     "scope": {
@@ -400,7 +592,14 @@
         "Remote and hybrid work alter where distraction, coordination, autonomy, and isolation occur but do not remove the trade-off.",
         "Later work by Newport shifts more responsibility from individual discipline towards redesigning communication systems and workload."
       ],
-      "source_ids": ["practice-meta-analysis", "open-office-paper", "eighty-thousand-interview", "forte-review", "wharton-review", "author-retrospective"],
+      "source_ids": [
+        "practice-meta-analysis",
+        "open-office-paper",
+        "eighty-thousand-interview",
+        "forte-review",
+        "wharton-review",
+        "author-retrospective"
+      ],
       "basis": "synthesis"
     },
     "decision": {
@@ -408,7 +607,12 @@
       "summary_is_enough_if": "The fifteen-minute version is enough if you already believe concentration matters and need the complete framework, main techniques, evidence limits, and a practical way to adapt it.",
       "skip_if": "Skip it if your work is mainly valuable because you respond, coordinate, care, decide quickly, or maintain relationships and you have no authority to change the surrounding system.",
       "format_advice": "Audio suits the argument and examples. Use print or ebook if you want to copy the scheduling philosophies, ritual questions, tool test, time-block method, and email tactics into a working plan.",
-      "source_ids": ["author-contents", "guardian-review", "forte-review", "goodreads-reception"],
+      "source_ids": [
+        "author-contents",
+        "guardian-review",
+        "forte-review",
+        "goodreads-reception"
+      ],
       "basis": "inference"
     }
   },

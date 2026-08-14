@@ -105,7 +105,7 @@
           "additionalProperties": false,
           "required": ["rubric_version", "score", "confidence", "summary", "dimensions", "basis"],
           "properties": {
-            "rubric_version": { "const": 1 },
+            "rubric_version": { "const": 2 },
             "score": { "type": "number", "minimum": 0, "maximum": 10 },
             "confidence": { "enum": ["low", "medium", "high"] },
             "summary": { "type": "string", "minLength": 1 },

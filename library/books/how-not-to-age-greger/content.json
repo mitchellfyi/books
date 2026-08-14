@@ -309,10 +309,10 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.0,
+      "rubric_version": 2,
+      "score": 5.7,
       "confidence": "medium",
-      "summary": "A vast and often useful evidence index whose robust plant-rich and function-preserving core is weakened by mechanistic overreach, uneven calibration, underweighted exercise and geriatric nutrition, and severe information excess.",
+      "summary": "A vast and often useful evidence index whose robust plant-rich and function-preserving core is weakened by mechanistic overreach, uneven calibration, underweighted exercise and geriatric nutrition, severe information excess, and a reference-database reading experience.",
       "dimensions": [
         {
           "id": "explanatory-power",
@@ -384,6 +384,15 @@
             "kirkus-review",
             "gracious-vegan-review",
             "unaging-review",
+            "goodreads-reception"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 4.5,
+          "rationale": "Reads as an annotated database: relentless list-and-citation cadence with no narrative pull, documented across reception as exhausting to read straight through.",
+          "source_ids": [
+            "kirkus-review",
             "goodreads-reception"
           ]
         }

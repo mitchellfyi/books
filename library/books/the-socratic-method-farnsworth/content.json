@@ -233,10 +233,10 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.8,
+      "rubric_version": 2,
+      "score": 7.0,
       "confidence": "medium",
-      "summary": "Worthwhile and near its ceiling for the genre: an exceptionally clear, primary-source-grounded manual for a genuinely valuable thinking method, limited mainly by smoothed-over scholarly debate and a practice component that stops at worked examples.",
+      "summary": "Strong and near its ceiling for the genre: an exceptionally clear, elegantly written, primary-source-grounded manual for a genuinely valuable thinking method, limited mainly by smoothed-over scholarly debate and a practice component that stops at worked examples.",
       "dimensions": [
         {
           "id": "explanatory-power",
@@ -292,6 +292,15 @@
           "source_ids": [
             "goodreads-socratic",
             "larb-farnsworth"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 8.0,
+          "rationale": "Documented as unusually elegant for a method book: lucid, witty, patient prose that itself models the clarity it teaches.",
+          "source_ids": [
+            "larb-farnsworth",
+            "godine-socratic"
           ]
         }
       ],

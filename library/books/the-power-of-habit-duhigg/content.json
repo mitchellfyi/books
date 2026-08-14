@@ -313,10 +313,10 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.8,
+      "rubric_version": 2,
+      "score": 6.9,
       "confidence": "high",
-      "summary": "The book earns a strong score for a clear, memorable, and testable personal framework whose context-and-repetition core remains consistent with later habit research. It loses ground because selected stories carry larger causal claims, organisational and social uses of habit are loose, the willpower model is dated, and its highest-value instructions occupy a small fraction of the length.",
+      "summary": "The book earns its near-strong score for a clear, memorable, and testable personal framework whose context-and-repetition core remains consistent with later habit research. It loses ground because selected stories carry larger causal claims, organisational and social uses of habit are loose, the willpower model is dated, and its highest-value instructions occupy a small fraction of the length.",
       "dimensions": [
         {
           "id": "explanatory-power",
@@ -385,6 +385,15 @@
             "kirkus-review",
             "goodreads",
             "storygraph"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 8.0,
+          "rationale": "Propulsive narrative journalism — the reporting-driven scenes are documented as the genre's high-water mark for making research read like story.",
+          "source_ids": [
+            "scientific-american-review",
+            "kirkus-review"
           ]
         }
       ],

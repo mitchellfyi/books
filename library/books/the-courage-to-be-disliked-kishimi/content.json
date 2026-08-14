@@ -283,8 +283,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 5.7,
+      "rubric_version": 2,
+      "score": 5.8,
       "confidence": "medium",
       "summary": "A strong set of agency and boundary reframes delivered with memorable force, held below a dependable recommendation by weak evidence, false binaries, trauma denial, missing structural context, and a debate engineered so the book cannot lose.",
       "dimensions": [
@@ -346,6 +346,15 @@
           "rationale": "Short sections and concrete objections make hard ideas easy to retain, but the philosopher-youth cycle repeats and the five-night argument can be compressed substantially without losing its usable content.",
           "source_ids": [
             "simon-schuster-us",
+            "sefad-review",
+            "storygraph-reception"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 6.5,
+          "rationale": "The Socratic-dialogue format is documented as divisive — propulsive and dramatic for many readers, artificial and circular for others.",
+          "source_ids": [
             "sefad-review",
             "storygraph-reception"
           ]

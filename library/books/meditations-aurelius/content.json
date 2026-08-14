@@ -186,10 +186,10 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.2,
+      "rubric_version": 2,
+      "score": 6.5,
       "confidence": "medium",
-      "summary": "Worthwhile with an asterisk the rubric cannot see: as argued content it is thin — no structure, no evidence, doctrine assumed, endlessly repeated — but its insight density and practical usability per sentence are the highest in this catalogue, and eighteen centuries of continuous use is a replication record no modern book can match.",
+      "summary": "Worthwhile, and now credited for what a content-only rubric once missed: as argued content it is thin — no structure, no evidence, doctrine assumed, endlessly repeated — but its aphoristic craft, insight density, and practical usability per sentence are among the highest in this catalogue, and eighteen centuries of continuous use is a replication record no modern book can match.",
       "dimensions": [
         {
           "id": "explanatory-power",
@@ -243,6 +243,15 @@
           "source_ids": [
             "goodreads-meditations",
             "wikipedia-meditations"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 8.0,
+          "rationale": "In a good modern translation the entries have documented aphoristic force — spare, direct, quotable; the craft is why it survived, though the repetition and absence of structure are part of the read.",
+          "source_ids": [
+            "hays-introduction",
+            "goodreads-meditations"
           ]
         }
       ],

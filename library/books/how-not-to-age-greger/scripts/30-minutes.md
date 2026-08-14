@@ -154,7 +154,7 @@ Time horizon matters. Better blood pressure can appear quickly and has establish
 
 Do not attempt everything. A routine that is nutritionally adequate, socially workable, affordable, and repeatable has more value than an elaborate protocol abandoned after a month. More foods, rules, and biomarkers can increase anxiety without improving function.
 
-The book rates as worthwhile rather than excellent. Its explanation of multidimensional ageing is strong. Its breadth and source discovery are impressive. Its plant-rich foundation, anti-supplement scepticism, and function section offer real value. Its reasoning weakens when pathway plausibility becomes food advice and a plant-based prior narrows comparison.
+The book rates as limited rather than worthwhile. Its explanation of multidimensional ageing is strong. Its breadth and source discovery are impressive. Its plant-rich foundation, anti-supplement scepticism, and function section offer real value. Its reasoning weakens when pathway plausibility becomes food advice and a plant-based prior narrows comparison.
 
 Its practical value also needs safeguards. Restricting calories or protein can conflict with muscle, bone, appetite, and recovery. A strict plant diet needs nutrient planning. Exercise and strength deserve higher priority. Clinical care and social conditions cannot be reduced to personal food choice. Six hundred pages deliver a decision core that can fit comfortably inside fifteen minutes.
 

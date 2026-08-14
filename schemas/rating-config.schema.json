@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.local/schemas/rating-config.schema.json",
-  "title": "Content-only book rating rubric",
+  "title": "Book rating rubric",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "scale", "dimensions", "anchors", "score_bands", "confidence", "excluded_factors"],
   "properties": {
     "$schema": { "type": "string" },
-    "schema_version": { "const": 1 },
+    "schema_version": { "const": 2 },
     "scale": {
       "type": "object",
       "additionalProperties": false,

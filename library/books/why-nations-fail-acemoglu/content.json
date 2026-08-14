@@ -198,8 +198,8 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 6.1,
+      "rubric_version": 2,
+      "score": 6.0,
       "confidence": "medium",
       "summary": "Worthwhile: the institutions lens is one of the most useful tools in modern social science and this is its definitive popular statement, grounded in Nobel-honoured research — docked because the trade-book version applies its one dichotomy with documented vagueness, dismisses rivals it should weigh, answers its standing counterexample by extending deadlines, and re-proves itself case after case at 546 pages.",
       "dimensions": [
@@ -254,6 +254,15 @@
           "score": 5.0,
           "rationale": "The theory is fully delivered by mid-book; the remaining continents re-prove it, and the repetition is the readership's standing complaint.",
           "source_ids": [
+            "goodreads-wnf"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 5.5,
+          "rationale": "Clear, patient explanatory prose undermined by the documented repetition of the case-study parade — the same thesis re-proved country after country.",
+          "source_ids": [
+            "washpost-wnf",
             "goodreads-wnf"
           ]
         }

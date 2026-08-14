@@ -244,10 +244,10 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
-      "score": 5.9,
+      "rubric_version": 2,
+      "score": 6.5,
       "confidence": "medium",
-      "summary": "Mixed: an unusually clear and memorable big-history framework, weakened by a scope that forces surface treatment and by too little separation between supported synthesis, disputed interpretation and speculation.",
+      "summary": "Worthwhile: an unusually clear, memorable, and superbly written big-history framework — the craft is real and now counted — weakened by a scope that forces surface treatment and by too little separation between supported synthesis, disputed interpretation and speculation.",
       "dimensions": [
         {
           "id": "explanatory-power",
@@ -311,6 +311,15 @@
             "kirkus-sapiens",
             "publishers-weekly-sapiens",
             "shephard-observer-review"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 9.0,
+          "rationale": "The prose is the phenomenon: documented across professional reception as seductive, aphoristic, and compulsively readable — even reviewers who reject the arguments concede the style.",
+          "source_ids": [
+            "shephard-observer-review",
+            "kirkus-sapiens"
           ]
         }
       ],
