@@ -27,11 +27,13 @@ rules here.
 5. Complete `content.json`, tags, catalogue metadata, and evidenced graph
    relationships. Keep fields distinct, concise, critical, and useful for the
    reader's decision.
-6. Read `config/rating.json`. Assess every dimension from the book's content
-   and ideas alone, with a source-backed rationale. Exclude author prestige,
-   popularity, awards, reception scores, and personal agreement. Record
-   coverage uncertainty as confidence; do not alter component scores because
-   access was partial. Run `./bookflow rate <book-id> --write` to calculate the
+6. Read `config/rating.json`. Assess every configured dimension — the ideas
+   as delivered on the page and the reading craft of their delivery — with a
+   source-backed rationale. Score craft from documented reading-experience
+   and reception evidence, never the rater's taste. Exclude author prestige,
+   popularity, awards, aggregate review scores, and personal agreement.
+   Record coverage uncertainty as confidence; do not alter component scores
+   because access was partial. Run `./bookflow rate <book-id> --write` to calculate the
    total. Never choose or hand-edit the total.
 7. Read `docs/review-method.md` and run its fact-check and adversarial passes
    separately. Verify identity and edition metadata, fidelity to the book,
