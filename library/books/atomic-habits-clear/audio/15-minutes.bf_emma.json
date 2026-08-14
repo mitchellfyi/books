@@ -12,12 +12,12 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/atomic-habits-clear/scripts/15-minutes.md",
-  "source_script_sha256": "db76beb813ad553f5c248acb8638d5eb98b9b9da0606fc9c2b51eedeed947ae5",
-  "pronunciation_dictionary_sha256": "96108f5c4b3ea618349a2e118ee88b8a155cb71d2bcedd6a72631d1119d25851",
+  "source_script_sha256": "dd2a004f9babcfdb1f77517ee8351b823aefe093e4870181521e272a232f1b98",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [],
   "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
   "script_words": 2177,
-  "audio_seconds": 836.816,
-  "measured_wpm": 156.09,
-  "generated_at": "2026-08-13T15:05:20.246503+00:00"
+  "audio_seconds": 836.581,
+  "measured_wpm": 156.14,
+  "generated_at": "2026-08-14T06:14:22.281842+00:00"
 }

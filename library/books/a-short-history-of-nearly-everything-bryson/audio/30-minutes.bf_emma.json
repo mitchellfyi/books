@@ -8,18 +8,18 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.83,
+  "speed": 0.84,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/a-short-history-of-nearly-everything-bryson/scripts/30-minutes.md",
-  "source_script_sha256": "8b02b2f486e354f37b64f37395435dff20325082a274d4891da3455f8a0914f0",
-  "pronunciation_dictionary_sha256": "09636851dc40f9d861f2b7a993ff82c8fd9df24f4152972007facc639a86a240",
+  "source_script_sha256": "78bf528224a47c6bd5a8923f59ab87e12a69f8e1e2806b5a631c9c12332d8cdd",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Descartes"
   ],
   "pronunciation_entries_sha256": "01c781384c48f82d23c541ff2d3646c8f3866a9440fecf825d31bb3e428801ca",
-  "script_words": 4218,
-  "audio_seconds": 1641.31,
-  "measured_wpm": 154.19,
-  "generated_at": "2026-08-13T16:12:23.768545+00:00"
+  "script_words": 4241,
+  "audio_seconds": 1629.877,
+  "measured_wpm": 156.12,
+  "generated_at": "2026-08-14T06:11:01.322559+00:00"
 }
