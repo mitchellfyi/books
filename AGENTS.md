@@ -370,6 +370,9 @@ Before handing off any change, run:
 ./bookflow build
 ```
 
+After changing shared tooling (`bookflow`, `scripts/`), also run
+`./bookflow test`.
+
 If the directory is a Git repository, also review `git status` and the diff
 (`rtk git status --short` and `rtk git diff` when RTK is installed); if it is
 not, say so in the handoff instead.

@@ -8,6 +8,7 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 import unicodedata
 import webbrowser
 from datetime import date
@@ -424,6 +425,11 @@ def check(args: argparse.Namespace) -> None:
     raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
 
 
+def run_tests(_: argparse.Namespace) -> None:
+    command = [sys.executable, "-m", "unittest", "discover", "-s", "tests"]
+    raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
+
+
 def generate_audio(args: argparse.Namespace) -> None:
     command = ["uv", "run", "scripts/generate_audio.py"]
     if args.book_id:
@@ -611,6 +617,9 @@ def parser() -> argparse.ArgumentParser:
     validate.add_argument("book_id", nargs="?")
     validate.add_argument("--quiet", action="store_true", help="show only warnings and errors")
     validate.set_defaults(run=check)
+
+    verify = commands.add_parser("test", help="run the unit tests for the shared tooling")
+    verify.set_defaults(run=run_tests)
 
     build = commands.add_parser("build", help="build the static app data")
     build.set_defaults(run=build_app)

@@ -15,6 +15,10 @@ Requirements: Python 3.10 or later and [uv](https://docs.astral.sh/uv/). The lib
 ./bookflow serve
 ```
 
+`./bookflow test` runs the unit tests for the shared tooling (rating
+arithmetic and pronunciation matching); run it after changing anything in
+`scripts/`.
+
 `serve` builds the browser data and opens the local UI at `http://127.0.0.1:8042/`. It supports search, rating sort, layered briefs, transcripts, playback speed, book and author detail pages with linked relationships, queues, and saved playlists. Saved playlists use `data/playlists.json` under the local server and browser storage under a plain static server.
 
 Create a book workspace:
