@@ -1,4 +1,4 @@
-"""Shared deterministic calculation and validation for content-only book ratings."""
+"""Shared deterministic calculation and validation for reputation-blind book ratings."""
 
 from __future__ import annotations
 

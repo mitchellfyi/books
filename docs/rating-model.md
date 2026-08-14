@@ -1,9 +1,13 @@
 # Rating model
 
-The rating estimates the value of a book's content and ideas for an
-information-seeking reader. It is not a score for the author, prose, cultural
-status, popularity, or likely enjoyment. Those facts can inform the separate
-reader decision without changing the rating.
+The rating estimates the value of a book as delivered on the page — its
+content, ideas, and reading craft — for an information-seeking reader. It is
+not a score for the author, cultural status, popularity, or sales. Those
+facts can inform the separate reader decision without changing the rating.
+Since rubric version 2, the writing itself is scored: a reading-craft
+dimension prices clarity, voice, structure, and the pleasure of sustained
+reading, judged from documented reading-experience and reception evidence
+rather than the rater's taste.
 
 ## Why this structure
 
@@ -28,9 +32,11 @@ non-fiction.
 The dimensions and weights in `config/rating.json` are a product decision for
 this library. Evidence and reasoning receive the largest weight because weak
 support limits reliance. Explanatory power and insight measure understanding;
-utility measures use; completeness checks limits and counterarguments; and
-information efficiency protects the reader's time. The last factor judges
-avoidable repetition, not literary taste.
+utility measures use; completeness checks limits and counterarguments;
+information efficiency protects the reader's time; and reading craft prices
+the experience of actually reading the book, because for trade non-fiction
+the writing is part of the product. Efficiency judges avoidable repetition;
+craft judges the prose as experienced, anchored to documented reception.
 
 ## Calculation and calibration
 

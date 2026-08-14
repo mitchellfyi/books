@@ -13,8 +13,9 @@ frontend is maintained separately as
 sequence for each supported language. Longer matches take priority, so a full
 name can override one part of that name. The generator first phonemises normal
 text, substitutes verified entries, then sends the final phonemes to Kokoro.
-Its sidecar records the dictionary hash and the entries used. Any dictionary
-change makes existing audio stale.
+Its sidecar records the dictionary hash and the entries used. A dictionary
+change stales only audio whose script contains an affected term; unrelated
+audio stays fresh.
 
 ## Correction workflow
 

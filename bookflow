@@ -602,7 +602,7 @@ def parser() -> argparse.ArgumentParser:
     upcoming.add_argument("--claim", action="store_true", help="mark it in-progress")
     upcoming.set_defaults(run=cmd_next)
 
-    rate = commands.add_parser("rate", help="calculate a content-only score from rubric dimensions")
+    rate = commands.add_parser("rate", help="calculate a reputation-blind score from rubric dimensions")
     rate.add_argument("book_id")
     rate.add_argument("--write", action="store_true", help="write the calculated total to content.json")
     rate.set_defaults(run=cmd_rate)

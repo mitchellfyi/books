@@ -1,6 +1,6 @@
 ---
 name: process-next-book
-description: Process and adversarially fact-check the next ready non-fiction book in this repository from claim through research, structured content, content-only rating, narration, local audio, validation, and queue completion. Use only when the user explicitly asks to run or process the book queue.
+description: Process and adversarially fact-check the next ready non-fiction book in this repository from claim through research, structured content, reputation-blind rating, narration, local audio, validation, and queue completion. Use only when the user explicitly asks to run or process the book queue.
 ---
 
 # Process Next Book

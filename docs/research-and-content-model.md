@@ -10,6 +10,7 @@ There is no proven universal length for a non-fiction book or summary. The
 reader's task, prior knowledge and the book's density all change what is
 enough. This product therefore uses progressive depth:
 
+- thirty seconds as a discovery card for search and browsing;
 - five minutes for one useful idea and a read, buy or skip decision;
 - fifteen minutes as the default useful account of a whole book;
 - thirty minutes only when fifteen would lose necessary reasoning, evidence,

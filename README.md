@@ -15,7 +15,7 @@ Requirements: Python 3.10 or later and [uv](https://docs.astral.sh/uv/). The lib
 ./bookflow serve
 ```
 
-`serve` builds the browser data and opens the local UI at `http://127.0.0.1:8042/`. It supports search, layered briefs, transcripts, playback speed, queues, and saved playlists. Saved playlists use `data/playlists.json` under the local server and browser storage under a plain static server.
+`serve` builds the browser data and opens the local UI at `http://127.0.0.1:8042/`. It supports search, rating sort, layered briefs, transcripts, playback speed, book and author detail pages with linked relationships, queues, and saved playlists. Saved playlists use `data/playlists.json` under the local server and browser storage under a plain static server.
 
 Create a book workspace:
 
@@ -43,7 +43,7 @@ In Claude Code:
 The two commands use the same canonical
 [skill](.agents/skills/process-next-book/SKILL.md); the Claude project path is
 a symlink, so its instructions cannot drift. The skill claims one ready book,
-researches and reviews it, calculates its content-only rating, derives every
+researches and reviews it, calculates its reputation-blind rating, derives every
 configured narration length, hands local audio generation to `bookflow`, validates
 the repository, and updates the queue. If a CLI session was already open when
 the skill directory was first added, restart it. As a discovery fallback, use
@@ -67,8 +67,9 @@ are filled:
 ```
 
 Its rubric lives in `config/rating.json`; the [rating model](docs/rating-model.md)
-explains the research basis and limits. It evaluates the content and ideas,
-not the author's identity, popularity, awards, or review score.
+explains the research basis and limits. It evaluates what is on the page —
+the ideas and the reading craft of their delivery — never the author's
+identity, popularity, awards, or review score.
 
 Generate approved audio locally with the Apache-licensed [Kokoro model](https://github.com/hexgrad/kokoro) through the lightweight MIT-licensed [Kokoro-ONNX runtime](https://github.com/thewh1teagle/kokoro-onnx):
 
@@ -107,6 +108,7 @@ books or audio.
 - `book.json`: identity, editions, discovery, research sources, and coverage.
 - `content.json`: the canonical argument, ideas, book map, rating, reading experience, critique, audience, and decision.
 - `scripts/*.md`: audio-ready presentations derived from the structured content.
+- `library/authors/<author-id>/author.json`: sourced author profiles behind the app's author pages.
 - `data/relationships.json`: traversable links between books and authors.
 - `taxonomy/tags.json`: controlled discovery terms.
 

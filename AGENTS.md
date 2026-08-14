@@ -36,7 +36,7 @@ This is not a contest to produce the most text. Use the shortest treatment that 
 bookflow                                  CLI: queue, rate, check, build, serve, audio
 config/audio.json                         Lengths, word targets, and TTS defaults
 config/pronunciations.json                Verified, language-specific TTS pronunciations
-config/rating.json                        Content-only rating rubric and weights
+config/rating.json                        Rating rubric (ideas and craft) and weights
 data/catalog.json                         Discoverable book and author nodes
 data/relationships.json                   Typed connections between nodes
 data/playlists.json                       Saved listening playlists (written by the UI)
@@ -70,7 +70,7 @@ Populate the fields for their stated purpose:
 - `ideas`: each distinct main idea, with a short title, claim, explanation, significance, representative example, and caveat.
 - `book_map`: how every substantive part develops the argument from beginning to end. Do not redefine ideas here.
 - `reading_experience`: structure, voice, pace, evidence style, example style, repetition, prerequisites, and what sustained reading or listening feels like.
-- `assessment.rating`: a sourced, content-only score with confidence and the complete configured dimension breakdown.
+- `assessment.rating`: a sourced, reputation-blind score with confidence and the complete configured dimension breakdown.
 - `assessment.meaning`, `lessons`, and `importance`: what the work changes, what is worth retaining or applying, and why it matters.
 - `assessment.author_and_purpose`: who wrote it, relevant background and expertise, likely purpose, perspective, and limits. Keep fuller career and bibliography details in the author profile.
 - `assessment.evidence_quality`: strengths and weaknesses of the book's support, not the popularity of its conclusion.
@@ -144,13 +144,15 @@ evidence used. Use the anchors consistently across books. Then run:
 ```
 
 The command applies the weights and writes the one-decimal total. Never tune
-the total by hand. The score judges only the book's content and ideas: their
+the total by hand. The score judges the book as delivered on the page: the ideas'
 explanatory power, support, insight, utility, calibration, and information
-efficiency. Do not reward or punish the author's identity, reputation,
-credentials, politics, sales, awards, popularity, reception, or the agent's
-agreement with the conclusion. Reviews may reveal a claim worth checking, but
-they are not votes. Prose and format matter only where avoidable repetition
-reduces information efficiency.
+efficiency, plus the reading craft of their delivery — clarity, voice,
+structure, and the pleasure of sustained reading — scored from documented
+reading-experience and reception evidence, not the rater's taste. Do not
+reward or punish the author's identity, reputation, credentials, politics,
+sales, awards, popularity, aggregate review scores, or the agent's agreement
+with the conclusion. Reviews may reveal a claim or a craft judgement worth
+checking, but they are not votes.
 
 Set rating confidence separately from quality. Confidence records how fully
 the available sources cover the work; limited access lowers confidence, not
@@ -265,7 +267,7 @@ Run these passes separately:
 1. **Identity:** correct title, author, work, editions, dates, ISBNs, and duplicate detection.
 2. **Coverage:** every substantive part represented; full-book claims supported by full-book access.
 3. **Evidence:** consequential claims supported; source quality, independence, disagreement, and bias described accurately.
-4. **Rating:** every component follows the rubric, uses content-only evidence, and the calculated total is current.
+4. **Rating:** every component follows the rubric, cites its evidence, and the calculated total is current.
 5. **Compression:** repeated claims and examples removed; fields keep distinct jobs; no important distinction lost.
 6. **Reader advocacy:** direct best-for, not-for, missing, read/summary/skip, and format guidance.
 7. **Plain language and audio:** clear sentences, necessary terms explained, natural spoken rhythm, target met without padding.
@@ -354,7 +356,7 @@ Precision and economy matter as much as correctness. Agents working here:
 
 ## Definition of done
 
-A completed book has valid structured files; the fullest treatment its sources allow, with coverage recorded; distinct, sourced ideas; a complete book map; a current content-only rating; clear reading experience, evidence, reception, audience, omissions, and decision advice; a passed adversarial quality review; every configured script within tolerance; checked pronunciation; locally generated current audio for every level; useful graph links; a queue entry marked `done`; and no unresolved validation errors. The text is concise enough to scan, natural enough to hear, and honest enough to trust.
+A completed book has valid structured files; the fullest treatment its sources allow, with coverage recorded; distinct, sourced ideas; a complete book map; a current reputation-blind rating; clear reading experience, evidence, reception, audience, omissions, and decision advice; a passed adversarial quality review; every configured script within tolerance; checked pronunciation; locally generated current audio for every level; useful graph links; a queue entry marked `done`; and no unresolved validation errors. The text is concise enough to scan, natural enough to hear, and honest enough to trust.
 
 When the owner asks to process the queue and commit the work, commit shared
 workflow changes first, then make one focused commit after each completed
