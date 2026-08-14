@@ -23,7 +23,7 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
-from pronunciation import pronunciation_signature, pronunciation_terms_in_text
+from pronunciation import pronunciation_is_current
 from rating import rating_errors, rubric_errors
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -142,40 +142,6 @@ def has_inline_sources(doc: dict, pointer: str) -> bool:
     if isinstance(node, list):
         return all(isinstance(i, dict) and "source_ids" in i for i in node) and bool(node)
     return False
-
-
-def dictionary_affects_script(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
-    """A pronunciation-dictionary change only stales audio it could actually alter.
-
-    Stale when the sidecar recorded applied terms (their entries may have
-    changed or gone), or when any current entry's spelling appears in the
-    script for the sidecar's language. Otherwise the regenerated audio would
-    be byte-identical in pronunciation, so the old file stays fresh.
-    """
-    if sidecar.get("pronunciation_terms"):
-        return True
-    lang = sidecar.get("lang", "")
-    for entry in entries:
-        if lang not in entry.get("phonemes", {}):
-            continue
-        for spelling in (entry["term"], *entry.get("aliases", [])):
-            if re.search(rf"(?<!\w){re.escape(spelling)}(?!\w)", script_text, re.IGNORECASE):
-                return True
-    return False
-
-
-def pronunciation_is_current(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
-    """Compare only the pronunciation entries that can change this narration."""
-    lang = sidecar.get("lang", "")
-    current_terms = pronunciation_terms_in_text(script_text, lang, entries)
-    previous_terms = sidecar.get("pronunciation_terms", [])
-    previous_signature = sidecar.get("pronunciation_entries_sha256")
-    if previous_signature:
-        return (
-            current_terms == previous_terms
-            and pronunciation_signature(current_terms, lang, entries) == previous_signature
-        )
-    return not dictionary_affects_script(script_text, sidecar, entries)
 
 
 def check_research(doc: dict, path: Path) -> None:

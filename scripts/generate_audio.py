@@ -42,8 +42,8 @@ import soundfile as sf
 
 from pronunciation import (
     phonemize_with_dictionary,
+    pronunciation_is_current,
     pronunciation_signature,
-    pronunciation_terms_in_text,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -72,34 +72,6 @@ def load_config() -> dict:
 def voice_lang(voice: str) -> str:
     """Kokoro voice ids start with the language: a* American, b* British."""
     return "en-us" if voice.startswith("a") else "en-gb"
-
-
-def dictionary_affects(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
-    """A dictionary change only stales audio it could actually alter (mirrors check.py)."""
-    if sidecar.get("pronunciation_terms"):
-        return True
-    lang = sidecar.get("lang", "")
-    for entry in entries:
-        if lang not in entry.get("phonemes", {}):
-            continue
-        for spelling in (entry["term"], *entry.get("aliases", [])):
-            if re.search(rf"(?<!\w){re.escape(spelling)}(?!\w)", script_text, re.IGNORECASE):
-                return True
-    return False
-
-
-def pronunciation_is_current(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
-    """Compare only the pronunciation entries that can change this narration."""
-    lang = sidecar.get("lang", "")
-    current_terms = pronunciation_terms_in_text(script_text, lang, entries)
-    previous_terms = sidecar.get("pronunciation_terms", [])
-    previous_signature = sidecar.get("pronunciation_entries_sha256")
-    if previous_signature:
-        return (
-            current_terms == previous_terms
-            and pronunciation_signature(current_terms, lang, entries) == previous_signature
-        )
-    return not dictionary_affects(script_text, sidecar, entries)
 
 
 def parse_script(path: Path) -> tuple[dict, str]:

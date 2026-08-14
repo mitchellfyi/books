@@ -4,6 +4,7 @@ import unittest
 
 from scripts.pronunciation import (
     phonemize_with_dictionary,
+    pronunciation_is_current,
     pronunciation_signature,
     pronunciation_terms_in_text,
 )
@@ -95,6 +96,43 @@ class PronunciationTests(unittest.TestCase):
             "phonemes": {"en-gb": "G"},
         })
         self.assertEqual(before, pronunciation_signature(["Ada"], "en-gb", entries))
+
+
+class FreshnessTests(unittest.TestCase):
+    entries = [{
+        "term": "Ada",
+        "aliases": [],
+        "case_sensitive": False,
+        "phonemes": {"en-gb": "A"},
+    }]
+
+    def sidecar_with_signature(self) -> dict:
+        return {
+            "lang": "en-gb",
+            "pronunciation_terms": ["Ada"],
+            "pronunciation_entries_sha256": pronunciation_signature(
+                ["Ada"], "en-gb", self.entries,
+            ),
+        }
+
+    def test_matching_signature_is_current(self) -> None:
+        self.assertTrue(pronunciation_is_current(
+            "Ada wrote", self.sidecar_with_signature(), self.entries,
+        ))
+
+    def test_changed_phonemes_make_audio_stale(self) -> None:
+        changed = [{**self.entries[0], "phonemes": {"en-gb": "B"}}]
+        self.assertFalse(pronunciation_is_current(
+            "Ada wrote", self.sidecar_with_signature(), changed,
+        ))
+
+    def test_legacy_sidecar_stays_current_when_no_entry_matches(self) -> None:
+        sidecar = {"lang": "en-gb", "pronunciation_terms": []}
+        self.assertTrue(pronunciation_is_current("Grace wrote", sidecar, self.entries))
+
+    def test_legacy_sidecar_stales_when_script_contains_a_term(self) -> None:
+        sidecar = {"lang": "en-gb", "pronunciation_terms": []}
+        self.assertFalse(pronunciation_is_current("Ada wrote", sidecar, self.entries))
 
 
 if __name__ == "__main__":
