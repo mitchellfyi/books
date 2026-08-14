@@ -5,6 +5,7 @@ const state = {
   serverPlaylists: false,
   voice: localStorage.getItem('voice') || null,
   bookSort: localStorage.getItem('book-sort') || 'rating',
+  keepScrollOnNextRoute: false,
 };
 const el = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -124,7 +125,8 @@ function route() {
 function renderDetail() {
   if (state.view?.type === 'author') renderAuthor(state.view.id);
   else renderBook();
-  if (location.hash) el('book-detail').scrollIntoView({block: 'start'});
+  if (state.keepScrollOnNextRoute) state.keepScrollOnNextRoute = false;
+  else if (location.hash) el('book-detail').scrollIntoView({block: 'start'});
 }
 
 function bind() {
@@ -186,9 +188,10 @@ function renderList() {
       playItem(featuredItem(book));
       return;
     }
+    state.keepScrollOnNextRoute = true;
     if (location.hash === `#book/${book.id}`) { route(); }
     else location.hash = `book/${book.id}`;
-    el('book-detail').focus();
+    el('book-detail').focus({preventScroll: true});
   }));
   if (!books.length) {
     el('book-detail').replaceChildren(el('empty-state').content.cloneNode(true));
