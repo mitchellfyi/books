@@ -259,6 +259,8 @@ def main() -> int:
             warn(f"{rel(d)}/author.json: fewer than three useful author sources")
 
     # --- books ---
+    if only and not (ROOT / "library/books" / only).is_dir():
+        err(f"no such book: {only}")
     levels = audio_cfg["levels"]
     durations = list(levels)
     tolerance = audio_cfg["word_count_tolerance_percent"] / 100
@@ -389,7 +391,9 @@ def main() -> int:
             audio_files = list((d / "audio").glob(f"{duration}.*")) if (d / "audio").exists() else []
             media = [a for a in audio_files if a.suffix != ".json"]
             sidecars = [a for a in audio_files if a.suffix == ".json"]
-            script_sha = hashlib.sha256(sp.read_bytes()).hexdigest() if sp.exists() else None
+            script_bytes = sp.read_bytes() if sp.exists() else None
+            script_sha = hashlib.sha256(script_bytes).hexdigest() if script_bytes is not None else None
+            script_text = script_bytes.decode("utf-8") if script_bytes is not None else ""
             for audio_file in media:
                 parts = audio_file.name.split(".")
                 if len(parts) != 3:
@@ -415,8 +419,7 @@ def main() -> int:
                     entry["audio"] = "stale"
                 elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha \
                         and not pronunciation_is_current(
-                            sp.read_text(encoding="utf-8") if sp.exists() else "",
-                            sidecar, pronunciations_cfg["entries"]):
+                            script_text, sidecar, pronunciations_cfg["entries"]):
                     warn(f"{rel(audio_file)}: audio is stale (pronunciation dictionary changed "
                          "for a term this script uses)")
                     entry["audio"] = "stale"
