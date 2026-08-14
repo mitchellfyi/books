@@ -40,6 +40,7 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 
+from narration import parse_front_matter
 from pronunciation import (
     phonemize_with_dictionary,
     pronunciation_is_current,
@@ -72,20 +73,6 @@ def load_config() -> dict:
 def voice_lang(voice: str) -> str:
     """Kokoro voice ids start with the language: a* American, b* British."""
     return "en-us" if voice.startswith("a") else "en-gb"
-
-
-def parse_script(path: Path) -> tuple[dict, str]:
-    text = path.read_text(encoding="utf-8")
-    meta: dict[str, str] = {}
-    if text.startswith("---\n"):
-        end = text.find("\n---\n", 4)
-        if end != -1:
-            for line in text[4:end].splitlines():
-                key, separator, value = line.partition(":")
-                if separator:
-                    meta[key.strip()] = value.strip()
-            text = text[end + 5:]
-    return meta, text
 
 
 def narration(text: str) -> str:
@@ -234,7 +221,7 @@ def generate(book_dir: Path, level: str, synth: Synthesiser, config: dict,
     script_path = book_dir / "scripts" / f"{level}.md"
     if not script_path.exists():
         return "no script"
-    meta, body = parse_script(script_path)
+    meta, body = parse_front_matter(script_path)
     if meta.get("status") != "complete" and not args.allow_draft:
         return f"skipped (status: {meta.get('status', 'unknown')})"
     text = narration(body)

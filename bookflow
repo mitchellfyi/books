@@ -16,6 +16,7 @@ from functools import partial
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 
+from scripts.narration import parse_front_matter, word_count
 from scripts.rating import calculate_rating, rating_errors, rubric_errors, score_band
 
 ROOT = Path(__file__).resolve().parent
@@ -282,18 +283,8 @@ def cmd_next(args: argparse.Namespace) -> None:
 
 
 def parse_script(path: Path) -> dict:
-    text = path.read_text(encoding="utf-8")
-    meta: dict[str, object] = {}
-    body = text
-    if text.startswith("---\n") and "\n---\n" in text[4:]:
-        end = text.find("\n---\n", 4)
-        body = text[end + 5:].strip()
-        for line in text[4:end].splitlines():
-            key, separator, value = line.partition(":")
-            if separator:
-                meta[key.strip()] = value.strip()
-    words = len(re.sub(r"[#*_>`]", "", body).split())
-    return {"meta": meta, "body": body, "words": words}
+    meta, body = parse_front_matter(path)
+    return {"meta": meta, "body": body, "words": word_count(body)}
 
 
 def cmd_rate(args: argparse.Namespace) -> None:
