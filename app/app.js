@@ -9,7 +9,7 @@ const state = {
 };
 const el = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const label = value => value.replace('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
+const label = value => value.replaceAll('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
 const list = values => `<ul class="compact-list">${values.map(v => `<li>${esc(v.text ?? v)}</li>`).join('')}</ul>`;
 const findBook = id => state.library.books.find(book => book.id === id);
 // Authors are embedded per book; index them once with their library books attached.
@@ -522,8 +522,14 @@ function playNext() {
 const toFile = item => ({book_id: item.bookId, duration: item.level});
 const fromFile = item => ({bookId: item.book_id, level: item.duration});
 
+// Corrupt stored JSON must not break start(); treat it as absent instead.
+function readStored(key) {
+  try { return JSON.parse(localStorage.getItem(key) || 'null'); }
+  catch (error) { return null; }
+}
+
 async function loadPlaylists() {
-  const legacy = JSON.parse(localStorage.getItem('book-brief-playlist') || 'null');
+  const legacy = readStored('book-brief-playlist');
   if (Array.isArray(legacy) && legacy.length) {
     state.queue = legacy;
     localStorage.removeItem('book-brief-playlist');
@@ -538,7 +544,7 @@ async function loadPlaylists() {
     }
   } catch (error) { /* static server without the playlists API */ }
   state.serverPlaylists = false;
-  const local = JSON.parse(localStorage.getItem('book-brief-saved') || 'null');
+  const local = readStored('book-brief-saved');
   if (local) state.saved = local;
 }
 
