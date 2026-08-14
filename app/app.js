@@ -215,13 +215,21 @@ function renderBook() {
   const sources = book.research.sources;
   // Authorship edges are shown in the byline and Author section; the related
   // list keeps cross-book and cross-author connections only.
-  const related = book.relationships
+  const relatedByEntity = book.relationships
     .filter(relationship => relationship.type !== 'written-by')
     .map(relationship => {
       const otherId = relationship.source_id === book.id ? relationship.target_id : relationship.source_id;
       const entity = state.library.catalog.entities.find(item => item.id === otherId);
       return {...relationship, otherId, entity};
-    });
+    })
+    .reduce((items, relationship) => {
+      const current = items.get(relationship.otherId);
+      if (!current || (current.source_id !== book.id && relationship.source_id === book.id)) {
+        items.set(relationship.otherId, relationship);
+      }
+      return items;
+    }, new Map());
+  const related = [...relatedByEntity.values()];
   const relatedItem = item => {
     const name = item.entity?.name || item.otherId;
     const linkedBook = item.entity?.kind !== 'author' && findBook(item.otherId);

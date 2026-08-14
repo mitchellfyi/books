@@ -82,6 +82,11 @@ Populate the fields for their stated purpose:
 
 Connections belong in `data/relationships.json`, not repeated recommendation lists. Give each edge a type, useful rationale, basis, confidence, and evidence references when explicit. Add an uncatalogued book or author as a catalogue stub before linking to it.
 
+For a complete book, normally record three to six distinct outgoing book
+connections: the most useful next read, a meaningful contrast, and any work
+that deepens, applies, or challenges its argument. Use fewer when the
+catalogue has no defensible match; never add a weak edge to meet a count.
+
 ## Research standard
 
 Online research is mandatory for every book and author. Search broadly enough to verify identity, understand the argument, find disagreement, assess the author's authority, and describe reception. Use as many sources as add distinct evidence; stop when new results only repeat what is already supported. As a minimum working floor, aim for six useful book sources, three author sources, and two independent reception sources. Important claims should use multiple sources when independent corroboration exists.

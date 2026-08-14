@@ -808,9 +808,64 @@
       "target_id": "determined-sapolsky",
       "type": "related-to",
       "basis": "inference",
-      "description": "Discovery justification: the same author's encyclopaedic survey of the biology of behaviour; Determined is its free-will sequel, and the two books share the multi-timescale explanatory machinery.",
+      "description": "Determined narrows Sapolsky's multi-timescale biology of behaviour into a sustained argument against free will, making it the closest continuation of Behave.",
       "source_refs": [
-        "library/books/determined-sapolsky/book.json"
+        "library/books/behave-sapolsky/book.json#prh-behave",
+        "library/books/determined-sapolsky/book.json#publisher-preview"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "behave-related-to-thinking-fast-and-slow",
+      "source_id": "behave-sapolsky",
+      "target_id": "thinking-fast-and-slow-daniel-kahneman",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Thinking, Fast and Slow examines the cognitive machinery of judgment in detail; Behave places thought inside a wider chain of neural, hormonal, developmental, cultural, and evolutionary causes.",
+      "source_refs": [
+        "library/books/behave-sapolsky/book.json#prh-behave",
+        "library/books/thinking-fast-and-slow-daniel-kahneman/book.json#fsg-thinking"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "behave-related-to-exercised",
+      "source_id": "behave-sapolsky",
+      "target_id": "exercised-lieberman",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Exercised applies evolutionary biology and anthropology to one narrower problem: why humans avoid physical activity and why modern health still depends on it.",
+      "source_refs": [
+        "library/books/behave-sapolsky/book.json#prh-behave",
+        "library/books/exercised-lieberman/book.json#exercise-medicine-paper"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "behave-related-to-true-believer",
+      "source_id": "behave-sapolsky",
+      "target_id": "the-true-believer-hoffer",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "The True Believer gives a short, speculative psychology of mass movements; Behave offers a broader and more evidence-heavy account of tribalism, hierarchy, aggression, and cooperation.",
+      "source_refs": [
+        "library/books/behave-sapolsky/book.json#prh-behave",
+        "library/books/the-true-believer-hoffer/book.json#google-books-preview",
+        "library/books/the-true-believer-hoffer/book.json#philosophy-science-review"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "behave-contrasts-with-laws-of-human-nature",
+      "source_id": "behave-sapolsky",
+      "target_id": "the-laws-of-human-nature-greene",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Both try to explain human behaviour across a wide range of cases. Sapolsky builds from biology and research; Greene builds strategic lessons from selected lives and historical stories.",
+      "source_refs": [
+        "library/books/behave-sapolsky/book.json#prh-behave",
+        "library/books/the-laws-of-human-nature-greene/book.json#publisher-sample",
+        "library/books/the-laws-of-human-nature-greene/book.json#kirkus-review"
       ],
       "confidence": "medium"
     },
