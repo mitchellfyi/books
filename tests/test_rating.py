@@ -24,23 +24,29 @@ class RatingTests(unittest.TestCase):
             ],
         }
 
+    @property
+    def dimension_count(self) -> int:
+        return len(self.rubric["dimensions"])
+
     def test_rubric_weights_total_one(self) -> None:
         self.assertEqual(rubric_errors(self.rubric), [])
 
-    def test_weighted_score_uses_configured_weights_and_one_decimal(self) -> None:
-        rating = self.rating([7.5, 5.0, 7.0, 7.5, 5.5, 5.5], 6.4)
-        self.assertEqual(calculate_rating(rating, self.rubric), 6.4)
+    def test_weighted_score_uses_configured_weights_and_rounds_half_up(self) -> None:
+        # Rubric v2 weights: .15, .2, .2, .1, .1, .1, .15. These scores total
+        # exactly 6.45, so half-up rounding must give 6.5 (half-even would not).
+        rating = self.rating([7.0, 6.5, 7.0, 6.0, 6.0, 6.0, 6.0], 6.5)
+        self.assertEqual(calculate_rating(rating, self.rubric), 6.5)
         self.assertEqual(rating_errors(rating, self.rubric, require_complete=False), [])
 
     def test_stale_total_is_rejected(self) -> None:
-        rating = self.rating([5.0] * 6, 5.1)
+        rating = self.rating([5.0] * self.dimension_count, 5.1)
         self.assertIn(
             "stored score 5.1 does not equal calculated 5.0",
             rating_errors(rating, self.rubric, require_complete=False),
         )
 
     def test_component_scores_use_half_point_steps(self) -> None:
-        rating = self.rating([5.1, 5.0, 5.0, 5.0, 5.0, 5.0], 5.0)
+        rating = self.rating([5.1] + [5.0] * (self.dimension_count - 1), 5.0)
         self.assertTrue(any("not in 0.5-point increments" in item
                             for item in rating_errors(rating, self.rubric, require_complete=False)))
 
