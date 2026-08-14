@@ -246,7 +246,7 @@ function renderBook() {
         <div class="eyebrow">${esc(c.editorial.recommended_level)} recommended · ${esc(c.editorial.compression_fit)} compression fit</div>
         <h1>${esc(book.title)}</h1>
         <div class="byline">${authorLinks} · ${esc(book.bibliography.first_published || 'Date unknown')}</div>
-        ${rating ? `<div class="rating-summary"><strong>${rating.score.toFixed(1)}/10</strong><span>${esc(rating.confidence)} confidence · content and ideas</span></div>` : ''}
+        ${rating ? `<div class="rating-summary"><strong>${rating.score.toFixed(1)}/10</strong><span>${esc(rating.confidence)} confidence · ideas and craft, reputation excluded</span></div>` : ''}
         <p class="verdict">${esc(c.card.verdict)}</p>
         ${book.workflow.coverage !== 'full-book' ? `<span class="coverage">${esc(book.workflow.coverage)} · not verified against the full book</span>` : ''}
       </header>
