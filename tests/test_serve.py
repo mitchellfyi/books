@@ -178,7 +178,12 @@ class PlaylistApiTests(ServerTestCase):
         self.assertEqual(self.put("/api/playlists", None, raw=b"{not json")[0], 400)
 
     def test_an_empty_body_is_a_bad_request_not_an_oversized_one(self) -> None:
-        self.assertEqual(self.put("/api/playlists", None, raw=b"")[0], 400)
+        status, body = self.put("/api/playlists", None, raw=b"")
+        self.assertEqual(status, 400)
+        # Not just the status: an empty body and a malformed one are different
+        # mistakes, and saying "invalid" for a missing one sends the reader
+        # looking at a payload that was never sent.
+        self.assertIn("missing playlists payload", body.decode())
 
     def test_an_oversized_body_is_refused_unread(self) -> None:
         huge = {"schema_version": 1, "playlists": [

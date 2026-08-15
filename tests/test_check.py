@@ -216,6 +216,30 @@ class LibraryCheckTests(unittest.TestCase):
         })
         write(path, document)
 
+    def test_a_schema_pointer_at_the_wrong_depth_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            path = root / "library/books" / FIXTURE_BOOK / "content.json"
+            content = read(path)
+            content["$schema"] = "../../schemas/content.schema.json"
+            write(path, content)
+            status, errors, _ = self.run_check(root)
+        self.assertEqual(status, 1)
+        self.assertTrue(any("does not resolve to schemas/content.schema.json" in e
+                            for e in errors), errors)
+
+    def test_an_absolute_schema_pointer_is_left_alone(self) -> None:
+        # A URI is a legitimate way to write $schema; only relative pointers
+        # can silently break by moving depth, so only those are resolved.
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            path = root / "library/books" / FIXTURE_BOOK / "content.json"
+            content = read(path)
+            content["$schema"] = "https://example.org/content.schema.json"
+            write(path, content)
+            status, errors, warnings = self.run_check(root)
+        self.assertEqual((status, errors, warnings), (0, [], []))
+
     def test_a_spelling_claimed_twice_names_both_entries(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = one_book_repository(Path(directory))
