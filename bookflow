@@ -633,6 +633,9 @@ def inspect_pronunciation(args: argparse.Namespace) -> None:
 # Room for far more playlists than a person will make, and small enough that a
 # runaway or hostile PUT cannot fill memory.
 MAX_PLAYLIST_BYTES = 2_000_000
+# The browser sends playlists, not repository conventions. The server owns the
+# file's shape, so it restores the schema pointer every other data file carries.
+PLAYLISTS_SCHEMA = "../schemas/playlists.schema.json"
 
 
 class LibraryHandler(SimpleHTTPRequestHandler):
@@ -715,7 +718,9 @@ class LibraryHandler(SimpleHTTPRequestHandler):
             return
         target = ROOT / "data/playlists.json"
         scratch = target.with_suffix(".json.tmp")
-        scratch.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        document = {"$schema": PLAYLISTS_SCHEMA, **payload}
+        scratch.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n",
+                           encoding="utf-8")
         scratch.replace(target)
         body = b'{"ok": true}'
         self.send_response(200)

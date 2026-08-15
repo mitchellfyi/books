@@ -1,11 +1,18 @@
+// Browsers throw on localStorage when storage is blocked for the site, and an
+// unhandled throw here would leave a blank page rather than a working library
+// that simply forgets. Remembering is a convenience; reading is not.
+const recall = key => { try { return localStorage.getItem(key); } catch (error) { return null; } };
+const remember = (key, value) => { try { localStorage.setItem(key, value); } catch (error) { /* not remembered */ } };
+const forget = key => { try { localStorage.removeItem(key); } catch (error) { /* nothing to forget */ } };
+
 const state = {
   library: null, selectedBook: null, level: null,
   view: null, authorIndex: null,
   queue: [], queueIndex: -1,
   saved: { schema_version: 1, playlists: [] },
   serverPlaylists: false,
-  voice: localStorage.getItem('voice') || null,
-  bookSort: localStorage.getItem('book-sort') || 'rating',
+  voice: recall('voice') || null,
+  bookSort: recall('book-sort') || 'rating',
   keepScrollOnNextRoute: false,
 };
 const el = id => document.getElementById(id);
@@ -179,7 +186,7 @@ function bind() {
   el('search').addEventListener('input', renderList);
   el('book-sort').addEventListener('change', event => {
     state.bookSort = event.target.value;
-    localStorage.setItem('book-sort', state.bookSort);
+    remember('book-sort', state.bookSort);
     renderList();
   });
   el('playlist-toggle').addEventListener('click', () => {
@@ -200,14 +207,14 @@ function bind() {
   el('speed').addEventListener('change', event => { el('audio').playbackRate = Number(event.target.value); });
   el('voice').addEventListener('change', event => {
     state.voice = event.target.value;
-    localStorage.setItem('voice', state.voice);
+    remember('voice', state.voice);
     renderDetail();  // not renderBook: that would replace an open author page
     const playing = state.queue[state.queueIndex] && !el('audio').paused;
     if (playing) playCurrent();  // position is restored from the saved position
   });
   const audio = el('audio');
   audio.addEventListener('ended', () => {
-    localStorage.removeItem(positionKey());
+    forget(positionKey());
     playNext();
   });
   // timeupdate fires about four times a second; a whole-second resume point
@@ -216,7 +223,7 @@ function bind() {
   audio.addEventListener('timeupdate', () => {
     if (audio.currentTime <= 5 || Math.abs(audio.currentTime - lastSaved) < 5) return;
     lastSaved = audio.currentTime;
-    localStorage.setItem(positionKey(), String(audio.currentTime));
+    remember(positionKey(), String(audio.currentTime));
   });
 }
 
@@ -568,8 +575,7 @@ function enqueue(item, {render = true} = {}) {
 // The queue survives a reload like every other choice the app remembers.
 // Entries for books no longer in the library are dropped on the way back in.
 function saveQueue() {
-  localStorage.setItem('book-brief-queue',
-    JSON.stringify({items: state.queue, index: state.queueIndex}));
+  remember('book-brief-queue', JSON.stringify({items: state.queue, index: state.queueIndex}));
 }
 
 // Nothing is playing after a reload, so the queue comes back with no current
@@ -638,7 +644,7 @@ function playCurrent() {
   audio.dataset.level = item.level;
   audio.dataset.voice = pickedAudio(book, item.level).voice;
   audio.playbackRate = Number(el('speed').value);
-  const savedPosition = Number(localStorage.getItem(positionKey()) || 0);
+  const savedPosition = Number(recall(positionKey()) || 0);
   if (savedPosition > 5) audio.currentTime = savedPosition;
   // Changing src or calling load() aborts a pending play(); that is a normal
   // consequence of switching tracks or stopping, not a playback failure.
@@ -665,7 +671,7 @@ const fromFile = item => ({bookId: item.book_id, level: item.duration});
 
 // Corrupt stored JSON must not break start(); treat it as absent instead.
 function readStored(key) {
-  try { return JSON.parse(localStorage.getItem(key) || 'null'); }
+  try { return JSON.parse(recall(key) || 'null'); }
   catch (error) { return null; }
 }
 
@@ -676,7 +682,7 @@ async function loadPlaylists() {
     // Retire the old key only once the queue is safely rewritten — and never
     // let an entirely unplayable legacy queue overwrite a good stored one.
     if (state.queue.length) saveQueue();
-    localStorage.removeItem('book-brief-playlist');
+    forget('book-brief-playlist');
   }
   try {
     const response = await fetch('api/playlists', {cache: 'no-store'});
@@ -705,10 +711,10 @@ async function persistPlaylists() {
     } catch (error) {
       say('Could not save to the library; keeping these playlists in this browser.');
       state.serverPlaylists = false;
-      localStorage.setItem('book-brief-saved', JSON.stringify(state.saved));
+      remember('book-brief-saved', JSON.stringify(state.saved));
     }
   } else {
-    localStorage.setItem('book-brief-saved', JSON.stringify(state.saved));
+    remember('book-brief-saved', JSON.stringify(state.saved));
   }
   renderPlaylist();
 }

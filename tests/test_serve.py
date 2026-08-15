@@ -144,9 +144,21 @@ class PlaylistApiTests(ServerTestCase):
 
     def test_a_saved_playlist_round_trips_to_the_library(self) -> None:
         self.assertEqual(self.put("/api/playlists", self.valid)[0], 200)
-        stored = json.loads((self.root / "data/playlists.json").read_text(encoding="utf-8"))
-        self.assertEqual(stored, self.valid)
-        self.assertEqual(json.loads(self.get("/api/playlists")[2]), self.valid)
+        stored = self.stored()
+        self.assertEqual({k: v for k, v in stored.items() if k != "$schema"}, self.valid)
+        self.assertEqual(json.loads(self.get("/api/playlists")[2]), stored)
+
+    def test_the_schema_pointer_survives_a_save(self) -> None:
+        # The browser sends playlists, not repository conventions; without this
+        # the first save strips the pointer every sibling data file carries.
+        self.put("/api/playlists", self.valid)
+        self.assertEqual(self.stored()["$schema"], "../schemas/playlists.schema.json")
+        # And a payload that carries its own does not end up with two.
+        self.put("/api/playlists", {"$schema": "../schemas/playlists.schema.json", **self.valid})
+        self.assertEqual(list(self.stored()), ["$schema", "schema_version", "playlists"])
+
+    def stored(self) -> dict:
+        return json.loads((self.root / "data/playlists.json").read_text(encoding="utf-8"))
 
     def test_a_rejected_payload_leaves_the_stored_playlists_alone(self) -> None:
         self.put("/api/playlists", self.valid)
@@ -160,8 +172,7 @@ class PlaylistApiTests(ServerTestCase):
         for payload in rejected:
             with self.subTest(payload=payload):
                 self.assertEqual(self.put("/api/playlists", payload)[0], 400)
-        stored = json.loads((self.root / "data/playlists.json").read_text(encoding="utf-8"))
-        self.assertEqual(stored, self.valid)
+        self.assertEqual({k: v for k, v in self.stored().items() if k != "$schema"}, self.valid)
 
     def test_malformed_json_is_rejected(self) -> None:
         self.assertEqual(self.put("/api/playlists", None, raw=b"{not json")[0], 400)
