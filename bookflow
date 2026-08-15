@@ -93,13 +93,13 @@ def scaffold_scripts(book_dir: Path, book_id: str) -> None:
     levels = load_config("audio.json")["levels"]
     scripts_dir = book_dir / "scripts"
     templates = ROOT / "templates/book/scripts"
+    scripts_dir.mkdir(parents=True, exist_ok=True)
     for path in scripts_dir.glob("*.md"):
         path.unlink()
     for level, settings in levels.items():
         template = templates / f"{level}.md"
         guidance = (parse_front_matter(template)[1].strip() if template.exists()
                     else settings.get("purpose", "Write an audio-ready treatment."))
-        scripts_dir.mkdir(parents=True, exist_ok=True)
         (scripts_dir / f"{level}.md").write_text(
             "---\n"
             f"book_id: {book_id}\n"
@@ -126,11 +126,12 @@ def init_book(args: argparse.Namespace) -> None:
     book_id = args.book_id or f"{slug(short_title)}-{slug(args.author.split()[-1])}"
     # A title or surname with no ASCII-able characters derives a malformed id
     # (a CJK title gives '-surname'); ask for one rather than scaffold it.
-    for flag, value in (("--book-id", book_id), ("--author-id", author_id)):
-        if slug(value) != value:
-            raise SystemExit(
-                f"Could not derive a usable id from the title and author "
-                f"(got '{value}'). Pass {flag} explicitly.")
+    # Only the book id can be malformed here: author_id is slug() output,
+    # and slug is idempotent.
+    if slug(book_id) != book_id:
+        raise SystemExit(
+            f"Could not derive a usable book id from the title and author "
+            f"(got '{book_id}'). Pass --book-id explicitly.")
     book_dir = ROOT / "library/books" / book_id
     author_dir = ROOT / "library/authors" / author_id
     catalog_path = ROOT / "data/catalog.json"
@@ -152,7 +153,6 @@ def init_book(args: argparse.Namespace) -> None:
         )
 
     shutil.copytree(ROOT / "templates/book", book_dir)
-    scaffold_scripts(book_dir, book_id)
     replace_tree(book_dir, {
         "book-id": book_id,
         "author-id": author_id,
@@ -160,6 +160,9 @@ def init_book(args: argparse.Namespace) -> None:
         "YYYY-MM-DD": date.today().isoformat(),
         "1970-01-01": date.today().isoformat(),
     })
+    # After replace_tree: these carry the real id already, and substituting
+    # into them again would expand an id that contains 'book-id' twice.
+    scaffold_scripts(book_dir, book_id)
     (book_dir / "audio").mkdir()
     (book_dir / "audio/.gitkeep").touch()
 

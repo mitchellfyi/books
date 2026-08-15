@@ -129,9 +129,10 @@ function route({moveFocus = false} = {}) {
     if (state.selectedBook?.id !== id) state.level = null;
     state.selectedBook = findBook(id);
     state.view = {type: 'book', id};
-  } else if (!entityLink && state.view) {
+  } else if (location.hash && !entityLink && state.view) {
     // Plain fragments like the skip link's #book-detail are in-page anchors,
-    // not library links: leave the URL and the rendered view alone.
+    // not library links: leave the URL and the rendered view alone. An empty
+    // hash is not one of those — it is Back out of a book or author link.
     return;
   } else {
     state.view = state.selectedBook ? {type: 'book', id: state.selectedBook.id} : null;
@@ -160,10 +161,14 @@ function bind() {
     localStorage.setItem('book-sort', state.bookSort);
     renderList();
   });
-  el('playlist-toggle').addEventListener('click', () => openPlaylist());
+  el('playlist-toggle').addEventListener('click', () => {
+    if (el('playlist').hidden) openPlaylist(); else closePlaylist();
+  });
   el('playlist-close').addEventListener('click', () => closePlaylist());
-  el('playlist').addEventListener('keydown', event => {
-    if (event.key === 'Escape') closePlaylist();
+  // On the document, not the panel: the panel is non-modal, so focus can be
+  // outside it while it is still open.
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !el('playlist').hidden) closePlaylist();
   });
   el('playlist-clear').addEventListener('click', () => {
     state.queue = [];
@@ -555,10 +560,10 @@ function restoreQueue() {
 }
 
 // Stored entries are only as trustworthy as the file or browser they came
-// from; a malformed one must not take the whole app down on render.
+// from, and a queue entry is only useful if it can actually play — the same
+// bar the Add button applies. Resolving the audio URL covers both.
 function playableEntry(item) {
-  const book = item && findBook(item.bookId);
-  return Boolean(book && typeof item.level === 'string' && book.scripts[item.level]);
+  return Boolean(item && item.bookId && audioUrl(item));
 }
 
 function dedupeByBook(items) {
@@ -643,7 +648,8 @@ function readStored(key) {
 async function loadPlaylists() {
   const legacy = readStored('book-brief-playlist');
   if (Array.isArray(legacy) && legacy.length) {
-    state.queue = legacy;
+    state.queue = legacy.filter(playableEntry);
+    saveQueue();  // retire the old key only once the queue is safely rewritten
     localStorage.removeItem('book-brief-playlist');
   }
   try {
