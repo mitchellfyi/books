@@ -206,6 +206,23 @@ class BookNeedsTests(unittest.TestCase):
         self.assertIn("research", summary)
 
 
+class PortTests(unittest.TestCase):
+    def test_a_usable_port_is_accepted(self) -> None:
+        self.assertEqual(bookflow.port_number("8042"), 8042)
+        self.assertEqual(bookflow.port_number("0"), 0)  # any free port
+
+    def test_a_port_outside_the_range_is_a_usage_error(self) -> None:
+        # Binding one raises OverflowError, which serve's OSError handler
+        # cannot catch: argparse should refuse it before that.
+        for value in ("99999", "-1", "65536"):
+            with self.subTest(value=value), self.assertRaises(argparse.ArgumentTypeError):
+                bookflow.port_number(value)
+
+    def test_a_non_numeric_port_is_refused(self) -> None:
+        with self.assertRaises(ValueError):
+            bookflow.port_number("abc")
+
+
 class ManagedToolTests(unittest.TestCase):
     def test_a_missing_uv_explains_itself(self) -> None:
         with self.assertRaises(SystemExit) as caught:

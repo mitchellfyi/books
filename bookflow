@@ -809,14 +809,18 @@ class LibraryHandler(SimpleHTTPRequestHandler):
 
 
 def serve(args: argparse.Namespace) -> None:
-    build_app()
-    url = f"http://127.0.0.1:{args.port}/"
     handler = partial(LibraryHandler, directory=str(ROOT / "dist"))
+    # Claim the port before rebuilding: a port already in use should say so in
+    # a moment rather than after the build. Handlers are built per request, so
+    # dist need not exist yet.
     try:
         server = ThreadingHTTPServer(("127.0.0.1", args.port), handler)
     except OSError as error:
         raise SystemExit(f"Cannot serve on port {args.port} ({error.strerror or error}); "
                          "another server may be running — try --port")
+    build_app()
+    # The bound port, not the requested one: --port 0 takes a free one.
+    url = f"http://127.0.0.1:{server.server_address[1]}/"
     print(f"Library: {url}")
     if not args.no_open:
         webbrowser.open(url)
@@ -826,6 +830,14 @@ def serve(args: argparse.Namespace) -> None:
         print("\nLibrary server stopped.")
     finally:
         server.server_close()
+
+
+def port_number(value: str) -> int:
+    """A TCP port. Out of range is a usage error, not an OverflowError from bind."""
+    number = int(value)
+    if not 0 <= number <= 65535:
+        raise argparse.ArgumentTypeError(f"port must be between 0 and 65535, not {number}")
+    return number
 
 
 def parser() -> argparse.ArgumentParser:
@@ -869,7 +881,8 @@ def parser() -> argparse.ArgumentParser:
     build.set_defaults(run=build_app)
 
     local = commands.add_parser("serve", help="build and serve the local library UI")
-    local.add_argument("--port", type=int, default=8042)
+    local.add_argument("--port", type=port_number, default=8042,
+                       help="0 takes any free port (default: %(default)s)")
     local.add_argument("--no-open", action="store_true")
     local.set_defaults(run=serve)
 
