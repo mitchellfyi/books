@@ -86,6 +86,16 @@ class SpokenTextTests(unittest.TestCase):
         self.assertEqual(spoken_text("- first point\n2. second point"),
                          "first point\nsecond point")
 
+    def test_a_marker_behind_emphasis_or_a_quote_still_goes(self) -> None:
+        # Emphasis is removed before list markers are looked for. The other
+        # order left the dash in place, to be counted and read aloud.
+        for text, expected in (("> - a quoted point", "a quoted point"),
+                               ("_- emphasised", "emphasised"),
+                               ("`- hyphen-keeping", "hyphen-keeping")):
+            with self.subTest(text):
+                self.assertEqual(spoken_text(text), expected)
+        self.assertEqual(word_count("> - a quoted point"), 3)
+
     def test_paragraph_breaks_survive_for_chunking(self) -> None:
         self.assertEqual(spoken_text("One.\n\nTwo."), "One.\n\nTwo.")
 

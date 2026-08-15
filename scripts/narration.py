@@ -42,9 +42,12 @@ def spoken_text(body: str) -> str:
     characters nobody hears.
     """
     body = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", body)  # links -> their text
-    body = re.sub(r"^#+\s*", "", body, flags=re.M)  # heading markers
-    body = re.sub(r"^\s*(?:[-*]|\d+\.)\s+", "", body, flags=re.M)  # list markers
+    body = re.sub(r"^#+\s*", "", body, flags=re.M)  # heading markers, while # is still here
+    # Emphasis before list markers, not after: a quoted or emphasised item
+    # ('> - point') hid its marker behind a character this rule removes, and
+    # the leftover dash was then counted as a word and read aloud.
     body = re.sub(r"[*_`>#]", "", body)  # inline emphasis and quoting
+    body = re.sub(r"^\s*(?:[-*]|\d+\.)\s+", "", body, flags=re.M)  # list markers
     return re.sub(r"[ \t]+", " ", body).strip()
 
 
