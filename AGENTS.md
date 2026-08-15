@@ -338,6 +338,12 @@ and repeatable.
 
 `check` validates schemas, IDs, tags, citations, ratings, content references, relationship endpoints, word counts, coverage labels, and audio freshness. `serve` rebuilds the local data and opens the search, reading, audio, speed, and playlist UI.
 
+Audio that has not been generated on this machine is a warning, not an error:
+recordings are not committed, so a fresh clone has none. Audio whose sidecar
+disagrees with its script is an error — that mismatch is committed. The
+definition of done still requires current local audio for every level; `check`'s
+status table and `./bookflow queue` both show which levels are still missing it.
+
 ## Agent operating rules
 
 Precision and economy matter as much as correctness. Agents working here:

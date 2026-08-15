@@ -18,6 +18,12 @@ step.
 ./bookflow serve
 ```
 
+Narration audio is not committed — it is reproducible from the scripts — so a
+fresh clone has none, and `check` says so as a warning per book rather than an
+error. Generate it with `./bookflow audio --all`, or read and browse without
+it. Audio whose sidecar disagrees with its script *is* an error: that
+mismatch is committed, so it travels.
+
 `./bookflow test` runs the unit tests for the shared tooling — the CLI, the
 validator, the static build, the local server, rating arithmetic, pronunciation
 matching and script parsing — then lints it for unused imports and undefined

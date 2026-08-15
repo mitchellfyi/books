@@ -446,7 +446,6 @@ def check_audio(d: Path, duration: str, narration: str, audio_cfg: dict,
     script_path = d / "scripts" / f"{duration}.md"
     files = list((d / "audio").glob(f"{duration}.*")) if (d / "audio").exists() else []
     media = [a for a in files if a.suffix != ".json"]
-    sidecars = [a for a in files if a.suffix == ".json"]
     script_sha = hashlib.sha256(script_path.read_bytes()).hexdigest() \
         if script_path.exists() else None
 
@@ -481,24 +480,30 @@ def check_audio(d: Path, duration: str, narration: str, audio_cfg: dict,
         else:
             entry["audio"] = entry["audio"] or "fresh"
 
-    for orphan in sidecars:
-        stem = orphan.name[: -len(".json")]
-        if not any(m.name.startswith(stem + ".") for m in media):
-            warn(f"{rel(orphan)}: sidecar present but audio file missing")
-
 
 def check_required_levels(d: Path, durations: dict, levels: dict) -> None:
-    """A complete book owes a complete script and current audio at every required level."""
-    missing_scripts = [du for du, e in durations.items()
-                       if levels[du]["required"] and e["script"] != "complete"]
+    """A complete book owes a complete script and current audio at every required level.
+
+    Stale audio is an error and absent audio is not, because only one of them
+    is a defect in the repository. A sidecar that disagrees with the script
+    beside it is committed, portable and wrong. Audio that is merely absent is
+    a fact about this machine: the recordings are deliberately not committed,
+    so a fresh clone has none, and reporting that as 31 errors would teach
+    everyone to distrust the command.
+    """
+    required = [du for du in durations if levels[du]["required"]]
+    missing_scripts = [du for du in required if durations[du]["script"] != "complete"]
     if missing_scripts:
         err(f"{rel(d)}/book.json: status 'complete' but scripts not complete: "
             f"{', '.join(missing_scripts)}")
-    missing_audio = [du for du, e in durations.items()
-                     if levels[du]["required"] and e["audio"] != "fresh"]
-    if missing_audio:
-        err(f"{rel(d)}/book.json: status 'complete' but local audio is missing or stale: "
-            f"{', '.join(missing_audio)}")
+    stale = [du for du in required if durations[du]["audio"] == "stale"]
+    if stale:
+        err(f"{rel(d)}/book.json: status 'complete' but local audio is stale: "
+            f"{', '.join(stale)}")
+    absent = [du for du in required if durations[du]["audio"] is None]
+    if absent:
+        warn(f"{rel(d)}/book.json: no local audio for {', '.join(absent)}; "
+             f"generate it with ./bookflow audio {d.name}")
 
 
 def check_books(only: str | None, audio_cfg: dict, rating_cfg: dict,

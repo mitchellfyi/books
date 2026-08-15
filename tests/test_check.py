@@ -165,7 +165,20 @@ class LibraryCheckTests(unittest.TestCase):
         self.assertTrue(any("script changed since generation" in w for w in warnings), warnings)
         # A complete book with stale audio is an error, not only a warning.
         self.assertEqual(status, 1)
-        self.assertTrue(any("local audio is missing or stale" in e for e in errors), errors)
+        self.assertTrue(any("local audio is stale" in e for e in errors), errors)
+
+    def test_audio_that_was_never_generated_here_is_not_an_error(self) -> None:
+        # Recordings are deliberately not committed, so a fresh clone has none.
+        # Reporting that as an error on every book would make check untrusted.
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            for media in (root / "library/books" / FIXTURE_BOOK / "audio").glob("*.mp3"):
+                media.unlink()
+            status, errors, warnings = self.run_check(root)
+        self.assertEqual((status, errors), (0, []))
+        self.assertEqual(len(warnings), 1, warnings)
+        self.assertIn("no local audio for", warnings[0])
+        self.assertIn(f"./bookflow audio {FIXTURE_BOOK}", warnings[0])
 
     def test_a_missing_sidecar_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
