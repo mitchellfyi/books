@@ -611,9 +611,15 @@ class LibraryHandler(SimpleHTTPRequestHandler):
         if self.path.split("?", 1)[0] != "/api/playlists":
             self.send_error(404)
             return
-        length = int(self.headers.get("Content-Length", 0))
-        if not 0 < length <= 2_000_000:
-            self.send_error(413)
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+        except ValueError:
+            length = -1
+        if length > 2_000_000:
+            self.send_error(413, "playlists payload too large")
+            return
+        if length <= 0:
+            self.send_error(400, "missing playlists payload")
             return
         try:
             payload = json.loads(self.rfile.read(length))

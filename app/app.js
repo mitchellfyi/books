@@ -1,5 +1,6 @@
 const state = {
   library: null, selectedBook: null, level: null,
+  view: null, authorIndex: null,
   queue: [], queueIndex: -1,
   saved: { schema_version: 1, playlists: [] },
   serverPlaylists: false,
@@ -102,11 +103,7 @@ async function start() {
     const defaultSpeed = state.library.config.default_playback_speed || 1;
     el('speed').innerHTML = speeds.map(speed =>
       `<option value="${speed}" ${speed === defaultSpeed ? 'selected' : ''}>${speed}×</option>`).join('');
-    const voiceNames = state.library.config.tts.voices
-      || {[state.library.config.tts.default_voice]: state.library.config.tts.default_voice};
-    if (!state.voice || !voiceNames[state.voice]) state.voice = state.library.config.tts.default_voice;
-    el('voice').innerHTML = Object.entries(voiceNames).map(([id, name]) =>
-      `<option value="${id}" ${id === state.voice ? 'selected' : ''}>${esc(name.split(' — ')[0])}</option>`).join('');
+    fillVoiceSelector();
     bind();
     // Following a link replaces the whole detail pane, which would drop focus
     // to the body; move it to the new content instead.
@@ -116,6 +113,27 @@ async function start() {
   } catch (error) {
     el('book-detail').innerHTML = `<section class="empty"><h1>Library data is not ready</h1><p>${esc(error.message)}</p></section>`;
   }
+}
+
+// Offer only voices the library has actually recorded. config/audio.json lists
+// every voice `./bookflow audio --voice` accepts, but choosing one with no
+// audio silently plays another — a control that appears to work and does not.
+// A one-voice library has nothing to switch between, so the control goes away.
+function fillVoiceSelector() {
+  const {voices: names = {}, default_voice: fallback} = state.library.config.tts;
+  const recorded = new Set();
+  state.library.books.forEach(book => Object.values(book.scripts).forEach(
+    script => Object.keys(script.audio).forEach(voice => recorded.add(voice))));
+  const voiceName = id => (names[id] || id).split(' — ')[0];
+  const available = [...recorded].sort((a, b) => voiceName(a).localeCompare(voiceName(b), 'en-GB'));
+  // A stored choice that is not recorded yet is left in storage, not rewritten:
+  // generating that voice later brings the listener's preference back.
+  const selected = available.includes(state.voice) ? state.voice
+    : available.includes(fallback) ? fallback : available[0] || null;
+  state.voice = selected;
+  el('voice').innerHTML = available.map(id =>
+    `<option value="${esc(id)}" ${id === selected ? 'selected' : ''}>${esc(voiceName(id))}</option>`).join('');
+  el('voice').closest('label').hidden = available.length < 2;
 }
 
 // Hash routes: #book/<id> and #author/<id>. The detail pane renders whichever
@@ -244,7 +262,7 @@ function renderList() {
       : '';
     return `
     <div class="book-row">
-      <button class="book-card" type="button" data-book="${book.id}" aria-current="${state.view?.type !== 'author' && book.id === state.selectedBook?.id}">
+      <button class="book-card" type="button" data-book="${esc(book.id)}" aria-current="${state.view?.type !== 'author' && book.id === state.selectedBook?.id}">
         <strong>${esc(book.title)}</strong>
         <span>${esc(book.authors.map(a => a.name).join(', '))}</span>
         ${rating ? `<span class="rating-chip">${rating.score.toFixed(1)}/10</span>` : ''}
@@ -325,7 +343,7 @@ function renderBook() {
           const script = book.scripts[key];
           const recommended = key === recommendedLevel(book);
           const timing = hasAudio(book, key) ? timeLabel(levelSeconds(book, key)) : `${level.target_words} words`;
-          return `<button type="button" data-level="${key}" aria-pressed="${selected === key}"
+          return `<button type="button" data-level="${esc(key)}" aria-pressed="${selected === key}"
             class="${recommended ? 'recommended' : ''}" ${!script ? 'disabled' : ''}
             title="${esc(level.purpose || '')}${recommended ? ' (recommended for this book)' : ''}">
             ${recommended ? '★ ' : ''}${esc(label(key))}<small> · ${esc(timing)}</small></button>`;

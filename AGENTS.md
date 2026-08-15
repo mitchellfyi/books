@@ -44,21 +44,21 @@ data/relationships.json                   Typed connections between nodes
 data/playlists.json                       Saved listening playlists (written by the UI)
 docs/research-and-content-model.md        Why the levels and fields are what they are
 docs/rating-model.md                      Rating rationale, limits, and calibration
-docs/review-method.md                      Fact-checking and adversarial review protocol
-docs/tts.md                                Local audio and pronunciation workflow
+docs/review-method.md                     Fact-checking and adversarial review protocol
+docs/tts.md                               Local audio and pronunciation workflow
 library/authors/<author-id>/author.json   Cited author profile
 library/books/<book-id>/book.json         Identity, editions, discovery, sources, coverage
 library/books/<book-id>/content.json      Canonical ideas, book map, and assessment
 library/books/<book-id>/scripts/*.md      Derived, audio-ready treatments
-library/books/<book-id>/audio/             Generated audio and provenance sidecars
-schemas/                                   Machine-enforced structure
-scripts/                                   check.py and generate_audio.py (run via uv);
-                                           narration.py, pronunciation.py and rating.py
-                                           are shared modules imported by bookflow
-tests/                                     unit tests for those shared modules
-taxonomy/tags.json                         Canonical discovery vocabulary
-templates/                                 New entity scaffolds
-app/                                       Local search, reading, player, and playlist UI
+library/books/<book-id>/audio/            Generated audio and provenance sidecars
+schemas/                                  Machine-enforced structure
+scripts/                                  check.py and generate_audio.py (run via uv);
+                                          narration.py, pronunciation.py and rating.py
+                                          are shared modules imported by bookflow
+tests/                                    Unit tests for those shared modules
+taxonomy/tags.json                        Canonical discovery vocabulary
+templates/                                New entity scaffolds
+app/                                      Local search, reading, player, and playlist UI
 ```
 
 `content.json` is the single semantic source for a book. Scripts and the UI are presentations of it. Do not copy the full summary into `book.json`, an extra Markdown summary, or several duration files. Update structured content first, then revise affected scripts.

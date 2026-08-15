@@ -88,18 +88,21 @@ Generate approved audio locally with the Apache-licensed [Kokoro model](https://
 
 Useful flags: `--voice <id>` picks another configured voice, `--force`
 regenerates audio the sidecar says is current, `--allow-draft` voices scripts
-not yet marked complete, `--no-calibrate` keeps the raw speed instead of
-matching `base_words_per_minute`, and `--quantized` uses the smaller int8
-model. `./bookflow serve` takes `--port` and `--no-open`; `./bookflow check`
-takes `--quiet`; `./bookflow init` takes `--book-id`, `--author-id`, `--note`,
-`--force` and `--discovered`.
+not yet marked complete, `--speed <n>` sets the base speed before calibration,
+`--no-calibrate` keeps the raw speed instead of matching
+`base_words_per_minute`, and `--quantized` uses the smaller int8 model.
+`./bookflow serve` takes `--port` and `--no-open`; `./bookflow check` takes
+`--quiet` and an optional book id to check one book; `./bookflow init` takes
+`--book-id`, `--author-id`, `--note`, `--force` and `--discovered`.
 
 The first run installs the declared Python packages and may download model data. Audio is stored under each book's `audio/` directory; audio and model weights stay local and are not committed. A JSON sidecar records how each file was made: a script change makes that audio stale, and a pronunciation-dictionary change stales only the audio whose script uses an affected term. See [the TTS guide](docs/tts.md) before adding or correcting a pronunciation.
 
 Voices come from `tts.voices` in [`config/audio.json`](config/audio.json), with
 `tts.default_voice` used unless `--voice` says otherwise. Each level is voiced
-per voice as `<level>.<voice>.<format>` alongside a matching sidecar, and the
-player's voice selector switches between whichever voices a book has.
+per voice as `<level>.<voice>.<format>` alongside a matching sidecar. The
+player's voice selector offers the voices the library has actually recorded,
+and hides itself while there is only one; generate a second voice and it
+appears.
 
 Inspect the phonemes and any shared-dictionary match for a difficult term:
 
