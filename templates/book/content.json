@@ -56,17 +56,18 @@
   },
   "assessment": {
     "rating": {
-      "rubric_version": 1,
+      "rubric_version": 2,
       "score": 0.0,
       "confidence": "low",
-      "summary": "TODO: give the content-only verdict behind the score.",
+      "summary": "TODO: give the reputation-blind verdict (ideas and craft) behind the score.",
       "dimensions": [
         { "id": "explanatory-power", "score": 0.0, "rationale": "TODO", "source_ids": [] },
         { "id": "evidence-and-reasoning", "score": 0.0, "rationale": "TODO", "source_ids": [] },
         { "id": "insight-value", "score": 0.0, "rationale": "TODO", "source_ids": [] },
         { "id": "practical-utility", "score": 0.0, "rationale": "TODO", "source_ids": [] },
         { "id": "completeness-and-calibration", "score": 0.0, "rationale": "TODO", "source_ids": [] },
-        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] }
+        { "id": "information-efficiency", "score": 0.0, "rationale": "TODO", "source_ids": [] },
+        { "id": "reading-craft", "score": 0.0, "rationale": "TODO", "source_ids": [] }
       ],
       "basis": "inference"
     },
