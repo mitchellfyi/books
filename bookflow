@@ -74,6 +74,9 @@ def init_book(args: argparse.Namespace) -> None:
         raise SystemExit("--title must contain at least one letter or number")
     if not slug(args.author):
         raise SystemExit("--author must contain at least one letter or number")
+    for flag, value in (("--book-id", args.book_id), ("--author-id", args.author_id)):
+        if value and slug(value) != value:
+            raise SystemExit(f"{flag} must be lowercase kebab-case; try '{slug(value)}'")
     author_id = args.author_id or slug(args.author)
     short_title = args.title.split(":", 1)[0]
     book_id = args.book_id or f"{slug(short_title)}-{slug(args.author.split()[-1])}"
