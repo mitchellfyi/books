@@ -67,6 +67,13 @@ class InlineSourceTests(unittest.TestCase):
     def test_an_empty_list_is_not_inline(self) -> None:
         self.assertFalse(check.has_inline_sources({"a": []}, "/a"))
 
+    def test_a_pointer_through_a_list_index_resolves(self) -> None:
+        # Citations name one item, not the whole list: '/selected_works/0'.
+        doc = {"a": [{"source_ids": ["s1"]}, {"other": 1}]}
+        self.assertTrue(check.has_inline_sources(doc, "/a/0"))
+        self.assertFalse(check.has_inline_sources(doc, "/a/1"))
+        self.assertFalse(check.has_inline_sources(doc, "/a/9"))
+
 
 class SourceIdTests(unittest.TestCase):
     def collect(self, doc: dict, **options) -> list[str]:
