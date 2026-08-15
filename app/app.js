@@ -121,7 +121,10 @@ async function start() {
 // Hash routes: #book/<id> and #author/<id>. The detail pane renders whichever
 // entity the hash names; anything unrecognised falls back to the selected book.
 function route({moveFocus = false} = {}) {
-  const [type, id] = decodeURIComponent(location.hash.slice(1)).split('/');
+  // A malformed percent-escape in the hash must not take the page down.
+  let fragment = location.hash.slice(1);
+  try { fragment = decodeURIComponent(fragment); } catch (error) { /* use it raw */ }
+  const [type, id] = fragment.split('/');
   const entityLink = type === 'book' || type === 'author';
   if (type === 'author' && findAuthor(id)) {
     state.view = {type: 'author', id};
@@ -210,9 +213,12 @@ function openPlaylist() {
 
 function closePlaylist() {
   if (el('playlist').hidden) return;
+  // Only reclaim focus if it was inside the panel; Escape pressed while typing
+  // in the search box should not yank the caret to the toggle.
+  const hadFocus = el('playlist').contains(document.activeElement);
   el('playlist').hidden = true;
   el('playlist-toggle').setAttribute('aria-expanded', 'false');
-  el('playlist-toggle').focus();
+  if (hadFocus) el('playlist-toggle').focus();
 }
 
 function matches(book, query) {
@@ -649,7 +655,9 @@ async function loadPlaylists() {
   const legacy = readStored('book-brief-playlist');
   if (Array.isArray(legacy) && legacy.length) {
     state.queue = legacy.filter(playableEntry);
-    saveQueue();  // retire the old key only once the queue is safely rewritten
+    // Retire the old key only once the queue is safely rewritten — and never
+    // let an entirely unplayable legacy queue overwrite a good stored one.
+    if (state.queue.length) saveQueue();
     localStorage.removeItem('book-brief-playlist');
   }
   try {
@@ -777,10 +785,12 @@ function renderPlaylist() {
     // Render once at the end: rendering per item rebuilds this very button.
     const playlist = state.saved.playlists[Number(button.dataset.append)];
     const before = state.queue.length;
-    playlist.items.filter(playableEntry).forEach(item => enqueue(item, {render: false}));
+    const playable = playlist.items.filter(playableEntry);
+    playable.forEach(item => enqueue(item, {render: false}));
     renderPlaylist();
     const added = state.queue.length - before;  // queued books are replaced, not duplicated
-    say(added ? `Added ${added} to the queue.` : 'Those are already queued.');
+    if (!playable.length) say('Nothing in that playlist is playable.');
+    else say(added ? `Added ${added} to the queue.` : 'Those are already queued.');
   }));
   el('saved-lists').querySelectorAll('[data-delete]').forEach(button => button.addEventListener('click', () => {
     const playlist = state.saved.playlists[Number(button.dataset.delete)];

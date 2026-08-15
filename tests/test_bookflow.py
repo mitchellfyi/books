@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+import argparse
+import contextlib
+import io
 import json
+import shutil
 import sys
 import tempfile
 import types
@@ -82,14 +86,56 @@ class ScaffoldScriptsTests(unittest.TestCase):
             self.assertFalse((book_dir / "scripts" / "99-minutes.md").exists())
             self.assertEqual(keep.read_text(encoding="utf-8"), "kept")
 
-    def test_an_id_containing_the_placeholder_survives_intact(self) -> None:
-        # scaffold_scripts runs after replace_tree, so 'book-id' inside the id
-        # must not be expanded a second time.
+class InitBookTests(unittest.TestCase):
+    """init_book end to end against a throwaway copy of the repository.
+
+    scaffold_scripts must run after replace_tree: reversing them expands a
+    'book-id' substring inside the real id a second time, which scaffolds a
+    book that fails check. Only a full init reaches that ordering.
+    """
+
+    def init(self, root: Path, title: str, author: str) -> Path:
+        for relative in ("templates", "config", "data/catalog.json", "data/queue.json"):
+            source = ROOT / relative
+            target = root / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            if source.is_dir():
+                shutil.copytree(source, target)
+            else:
+                shutil.copy2(source, target)
+        (root / "library/books").mkdir(parents=True)
+        (root / "library/authors").mkdir(parents=True)
+
+        original = bookflow.ROOT
+        bookflow.ROOT = root
+        bookflow.load_config.cache_clear()
+        try:
+            # init_book prints a research prompt; keep it out of the test run.
+            with contextlib.redirect_stdout(io.StringIO()):
+                bookflow.init_book(argparse.Namespace(
+                    title=title, author=author, book_id=None, author_id=None,
+                    force=True, note="", discovered=False))
+        finally:
+            bookflow.ROOT = original
+            bookflow.load_config.cache_clear()
+        return root / "library/books"
+
+    def test_an_id_containing_the_placeholder_is_not_expanded_twice(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            book_dir = self.scaffold(directory, "the-book-id-problem-smith")
-            meta, _ = bookflow.parse_front_matter(
-                book_dir / "scripts" / "30-seconds.md")
-        self.assertEqual(meta["book_id"], "the-book-id-problem-smith")
+            books = self.init(Path(directory), "The Book ID Problem", "Jane Smith")
+            book_dir = books / "the-book-id-problem-smith"
+            self.assertTrue(book_dir.is_dir(), sorted(p.name for p in books.iterdir()))
+            meta, _ = bookflow.parse_front_matter(book_dir / "scripts" / "30-seconds.md")
+            self.assertEqual(meta["book_id"], "the-book-id-problem-smith")
+            content = json.loads((book_dir / "content.json").read_text(encoding="utf-8"))
+            self.assertEqual(content["book_id"], "the-book-id-problem-smith")
+
+    def test_scaffolds_one_script_per_configured_level(self) -> None:
+        levels = sorted(bookflow.load_config("audio.json")["levels"])
+        with tempfile.TemporaryDirectory() as directory:
+            books = self.init(Path(directory), "An Ordinary Book", "Alice Author")
+            scripts = books / "an-ordinary-book-author" / "scripts"
+            self.assertEqual(sorted(p.stem for p in scripts.glob("*.md")), levels)
 
 
 class LoadTests(unittest.TestCase):
