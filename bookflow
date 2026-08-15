@@ -82,6 +82,37 @@ def find_duplicate(catalog: dict, title: str) -> dict | None:
     return None
 
 
+def scaffold_scripts(book_dir: Path, book_id: str) -> None:
+    """Write one script stub per configured level.
+
+    config/audio.json owns the levels and their word targets, so the templates
+    supply only the per-level writing guidance. Deriving the front matter here
+    keeps a retargeted or newly added level from scaffolding books that fail
+    ./bookflow check.
+    """
+    levels = load_config("audio.json")["levels"]
+    scripts_dir = book_dir / "scripts"
+    templates = ROOT / "templates/book/scripts"
+    for path in scripts_dir.glob("*.md"):
+        path.unlink()
+    for level, settings in levels.items():
+        template = templates / f"{level}.md"
+        guidance = (parse_front_matter(template)[1].strip() if template.exists()
+                    else settings.get("purpose", "Write an audio-ready treatment."))
+        scripts_dir.mkdir(parents=True, exist_ok=True)
+        (scripts_dir / f"{level}.md").write_text(
+            "---\n"
+            f"book_id: {book_id}\n"
+            f"duration: {level}\n"
+            f"target_words: {settings['target_words']}\n"
+            "source: content.json\n"
+            "status: stub\n"
+            "---\n\n"
+            f"{guidance}\n",
+            encoding="utf-8",
+        )
+
+
 def init_book(args: argparse.Namespace) -> None:
     if not slug(args.title):
         raise SystemExit("--title must contain at least one letter or number")
@@ -114,6 +145,7 @@ def init_book(args: argparse.Namespace) -> None:
         )
 
     shutil.copytree(ROOT / "templates/book", book_dir)
+    scaffold_scripts(book_dir, book_id)
     replace_tree(book_dir, {
         "book-id": book_id,
         "author-id": author_id,
