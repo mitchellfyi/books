@@ -206,6 +206,22 @@ class LibraryCheckTests(unittest.TestCase):
                 self.assertEqual(status, 1)
                 self.assertTrue(any(expected in e for e in errors), errors)
 
+    def test_each_book_map_part_names_itself_when_it_cites_a_lost_idea(self) -> None:
+        # Renaming one idea usually breaks several parts at once; identical
+        # lines would leave nothing to search for.
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            path = root / "library/books" / FIXTURE_BOOK / "content.json"
+            content = read(path)
+            for section in content["book_map"][:2]:
+                section["idea_ids"] = ["renamed-away"]
+            write(path, content)
+            status, errors, _ = self.run_check(root)
+        cited = [e for e in errors if "cites unknown idea 'renamed-away'" in e]
+        self.assertEqual(status, 1)
+        self.assertEqual(len(cited), 2, errors)
+        self.assertEqual(len(set(cited)), 2, cited)
+
     def test_a_thin_source_list_blocks_a_complete_book(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = one_book_repository(Path(directory))

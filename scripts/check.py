@@ -378,7 +378,10 @@ def check_book_content(d: Path, doc: dict, rating_cfg: dict) -> dict | None:
         for section in content.get("book_map", []):
             for idea_id in section.get("idea_ids", []):
                 if idea_id not in known_ideas:
-                    err(f"{rel(content_path)}: book_map cites unknown idea '{idea_id}'")
+                    # Named: several parts often cite one renamed idea, and
+                    # identical lines leave the reader nothing to search for.
+                    err(f"{rel(content_path)}: book_map part "
+                        f"{section.get('order', '?')} cites unknown idea '{idea_id}'")
         # content.json interprets the book; its citations resolve against the
         # sources book.json records.
         content_researched = content.get("workflow", {}).get("status") != "stub"
