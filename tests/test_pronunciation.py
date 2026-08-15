@@ -98,6 +98,34 @@ class PronunciationTests(unittest.TestCase):
         self.assertEqual(before, pronunciation_signature(["Ada"], "en-gb", entries))
 
 
+class PossessiveTests(unittest.TestCase):
+    def phonemes_for(self, text: str, custom: str) -> str:
+        entries = [{
+            "term": "Name", "aliases": [], "case_sensitive": False,
+            "phonemes": {"en-gb": custom},
+        }]
+        return phonemize_with_dictionary(text, "en-gb", entries, ordinary)[0]
+
+    def test_voiceless_ending_takes_s(self) -> None:
+        # Proust -> pɹˈuːst: without this the stray "'s" is read as "ess".
+        self.assertEqual(self.phonemes_for("Name's book", "pɹˈuːst"), "pɹˈuːsts <book>")
+
+    def test_voiced_ending_takes_z(self) -> None:
+        self.assertEqual(self.phonemes_for("Name's book", "tʃaldˈiːni"), "tʃaldˈiːniz <book>")
+
+    def test_sibilant_ending_takes_iz(self) -> None:
+        self.assertEqual(self.phonemes_for("Name's book", "hˈɒɹəs"), "hˈɒɹəsɪz <book>")
+
+    def test_trailing_length_and_stress_marks_are_ignored(self) -> None:
+        self.assertEqual(self.phonemes_for("Name's book", "bʊədjˈɜː"), "bʊədjˈɜːz <book>")
+
+    def test_typographic_apostrophe_is_matched(self) -> None:
+        self.assertEqual(self.phonemes_for("Name’s book", "ɹˈɪlkə"), "ɹˈɪlkəz <book>")
+
+    def test_plain_term_is_unchanged(self) -> None:
+        self.assertEqual(self.phonemes_for("Name wrote", "ɹˈɪlkə"), "ɹˈɪlkə <wrote>")
+
+
 class FreshnessTests(unittest.TestCase):
     entries = [{
         "term": "Ada",

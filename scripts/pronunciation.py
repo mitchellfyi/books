@@ -89,6 +89,22 @@ def pronunciation_signature(terms: list[str], lang: str, entries: list[dict]) ->
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
+SIBILANTS = ("tʃ", "dʒ", "s", "z", "ʃ", "ʒ")
+VOICELESS = ("p", "t", "k", "f", "θ")
+
+
+def possessive_suffix(phonemes: str) -> str:
+    """The English possessive ending that follows these phonemes.
+
+    Without this, a dictionary term swallows the name and leaves a bare "'s"
+    to be phonemised alone, which Kokoro reads as the letter: "Proust ess".
+    """
+    tail = phonemes.rstrip("ˈˌː ")
+    if tail.endswith(SIBILANTS):
+        return "ɪz"
+    return "s" if tail.endswith(VOICELESS) else "z"
+
+
 def phonemize_with_dictionary(
     text: str,
     lang: str,
@@ -109,7 +125,9 @@ def phonemize_with_dictionary(
     # Longest spelling wins when a full name and one of its parts both exist.
     candidates.sort(key=lambda item: (-len(item[0]), item[0].casefold()))
     alternatives = "|".join(re.escape(item[0]) for item in candidates)
-    pattern = re.compile(rf"(?<!\w)({alternatives})(?!\w)", re.IGNORECASE)
+    # A trailing possessive is part of the match: left behind, it is phonemised
+    # on its own and spoken as the letter "ess".
+    pattern = re.compile(rf"(?<!\w)({alternatives})(['’]s)?(?!\w)", re.IGNORECASE)
     lookup: dict[str, dict] = {}
     for spelling, entry in candidates:
         lookup.setdefault(spelling.casefold(), entry)
@@ -118,8 +136,9 @@ def phonemize_with_dictionary(
     used: list[str] = []
     cursor = 0
     for match in pattern.finditer(text):
-        entry = lookup[match.group(0).casefold()]
-        if entry.get("case_sensitive") and match.group(0) not in {
+        spelling, possessive = match.group(1), match.group(2)
+        entry = lookup[spelling.casefold()]
+        if entry.get("case_sensitive") and spelling not in {
             entry["term"], *entry.get("aliases", [])
         }:
             continue
@@ -133,7 +152,7 @@ def phonemize_with_dictionary(
             if invalid:
                 rendered = " ".join(repr(item) for item in invalid)
                 raise ValueError(f"pronunciation for '{entry['term']}' has unsupported symbols: {rendered}")
-        pieces.append(custom)
+        pieces.append(custom + possessive_suffix(custom) if possessive else custom)
         used.append(entry["term"])
         cursor = match.end()
 

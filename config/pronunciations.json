@@ -70,9 +70,7 @@
     },
     {
       "term": "Bourdieu",
-      "aliases": [
-        "Pierre Bourdieu"
-      ],
+      "aliases": [],
       "case_sensitive": false,
       "phonemes": {
         "en-gb": "bʊədjˈɜː",
@@ -80,7 +78,7 @@
       },
       "source_url": "https://en.wikipedia.org/wiki/Pierre_Bourdieu",
       "verified_at": "2026-08-15",
-      "notes": "Wikipedia gives UK /bʊərˈdjɜː/ and US /bʊərˈd(j)uː/. The unassisted phonemizer produced 'BUR-dee-oo' (bˈɜːdɪˌuː)."
+      "notes": "Wikipedia gives UK /bʊərˈdjɜː/ and US /bʊərˈd(j)uː/. The unassisted phonemizer produced 'BUR-dee-oo' (bˈɜːdɪˌuː). No full-name alias: an alias whose phonemes cover only the surname would swallow the given name."
     },
     {
       "term": "Brandeis",
@@ -132,9 +130,7 @@
     },
     {
       "term": "Cioran",
-      "aliases": [
-        "Emil Cioran"
-      ],
+      "aliases": [],
       "case_sensitive": false,
       "phonemes": {
         "en-gb": "tʃˈɔːɹɑːn",
@@ -142,7 +138,7 @@
       },
       "source_url": "https://en.wikipedia.org/wiki/Emil_Cioran",
       "verified_at": "2026-08-15",
-      "notes": "English /ˈtʃɔːrɑːn/, Romanian [tʃoˈran]: Romanian 'ci' is the 'ch' sound. The unassisted phonemizer produced 'see-OR-un' (sɪˈɔːɹən)."
+      "notes": "English /ˈtʃɔːrɑːn/, Romanian [tʃoˈran]: Romanian 'ci' is the 'ch' sound. The unassisted phonemizer produced 'see-OR-un' (sɪˈɔːɹən). No full-name alias: an alias whose phonemes cover only the surname would swallow the given name."
     },
     {
       "term": "Commodus",
@@ -158,9 +154,7 @@
     },
     {
       "term": "Coubertin",
-      "aliases": [
-        "Pierre de Coubertin"
-      ],
+      "aliases": [],
       "case_sensitive": false,
       "phonemes": {
         "en-gb": "kˌuːbətˈan",
@@ -168,7 +162,7 @@
       },
       "source_url": "https://en.wikipedia.org/wiki/Pierre_de_Coubertin",
       "verified_at": "2026-08-15",
-      "notes": "French [kubɛʁtɛ̃]: the first syllable is 'koo', not 'cow'. Anglicised without the French nasal vowel. The unassisted phonemizer produced 'COW-ber-tin' (kˈaʊbətˌɪn)."
+      "notes": "French [kubɛʁtɛ̃]: the first syllable is 'koo', not 'cow'. Anglicised without the French nasal vowel. The unassisted phonemizer produced 'COW-ber-tin' (kˈaʊbətˌɪn). No full-name alias: an alias whose phonemes cover only the surname would swallow the given name."
     },
     {
       "term": "Descartes",
@@ -400,9 +394,7 @@
     },
     {
       "term": "Rilke",
-      "aliases": [
-        "Rainer Maria Rilke"
-      ],
+      "aliases": [],
       "case_sensitive": false,
       "phonemes": {
         "en-gb": "ɹˈɪlkə",
@@ -410,7 +402,7 @@
       },
       "source_url": "https://en.wiktionary.org/wiki/Rilke",
       "verified_at": "2026-08-15",
-      "notes": "Standard German [ˈʁɪlkə], two syllables with a final schwa. The unassisted phonemizer dropped the schwa entirely (ɹˈɪlk, 'rilk')."
+      "notes": "Standard German [ˈʁɪlkə], two syllables with a final schwa. The unassisted phonemizer dropped the schwa entirely (ɹˈɪlk, 'rilk'). No full-name alias: an alias whose phonemes cover only the surname would swallow the given name."
     },
     {
       "term": "Rorschach",
@@ -450,9 +442,7 @@
     },
     {
       "term": "Sloterdijk",
-      "aliases": [
-        "Peter Sloterdijk"
-      ],
+      "aliases": [],
       "case_sensitive": false,
       "phonemes": {
         "en-gb": "slˈəʊtədˌaɪk",
@@ -460,7 +450,7 @@
       },
       "source_url": "https://en.wikipedia.org/wiki/Peter_Sloterdijk",
       "verified_at": "2026-08-15",
-      "notes": "English /ˈsloʊtərdaɪk/, German [ˈsloːtɐˌdaɪk]: the Dutch 'dijk' element rhymes with 'dike'. The unassisted phonemizer ended it '-dake' (slˈəʊtədˌeɪk)."
+      "notes": "English /ˈsloʊtərdaɪk/, German [ˈsloːtɐˌdaɪk]: the Dutch 'dijk' element rhymes with 'dike'. The unassisted phonemizer ended it '-dake' (slˈəʊtədˌeɪk). No full-name alias: an alias whose phonemes cover only the surname would swallow the given name."
     },
     {
       "term": "Werther",
