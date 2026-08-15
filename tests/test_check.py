@@ -206,6 +206,19 @@ class LibraryCheckTests(unittest.TestCase):
                 self.assertEqual(status, 1)
                 self.assertTrue(any(expected in e for e in errors), errors)
 
+    def test_files_left_by_a_renamed_level_are_reported(self) -> None:
+        # This library renamed a level once. Every other check iterates the
+        # configured levels, so what the rename left behind is invisible.
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            book = root / "library/books" / FIXTURE_BOOK
+            (book / "scripts/6-minutes.md").write_text("old", encoding="utf-8")
+            (book / "audio/6-minutes.bf_emma.json").write_text("{}", encoding="utf-8")
+            status, errors, warnings = self.run_check(root)
+        self.assertEqual((status, errors), (0, []))
+        self.assertEqual(len(warnings), 2, warnings)
+        self.assertTrue(all("not a level in config/audio.json" in w for w in warnings), warnings)
+
     def test_a_playlist_naming_an_unknown_book_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = one_book_repository(Path(directory))

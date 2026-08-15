@@ -506,6 +506,23 @@ def check_required_levels(d: Path, durations: dict, levels: dict) -> None:
              f"generate it with ./bookflow audio {d.name}")
 
 
+def check_unconfigured_levels(d: Path, levels: dict) -> None:
+    """Report scripts and sidecars for a level config/audio.json no longer names.
+
+    Renaming a level leaves the old files behind, and nothing else looks at
+    them: every other check iterates the configured levels, so the leftovers
+    are invisible — and would be voiced again if the name ever came back.
+    """
+    for path in sorted((d / "scripts").glob("*.md")):
+        if path.stem not in levels:
+            warn(f"{rel(path)}: '{path.stem}' is not a level in config/audio.json; "
+                 "delete it or configure the level")
+    for path in sorted((d / "audio").glob("*")):
+        if path.name != ".gitkeep" and path.name.split(".")[0] not in levels:
+            warn(f"{rel(path)}: '{path.name.split('.')[0]}' is not a level in "
+                 "config/audio.json; delete it or configure the level")
+
+
 def check_books(only: str | None, audio_cfg: dict, rating_cfg: dict,
                 pronunciations: list[dict], pronunciation_sha: str,
                 entities: dict, tag_ids: set) -> dict:
@@ -520,6 +537,7 @@ def check_books(only: str | None, audio_cfg: dict, rating_cfg: dict,
             continue
         check_book_record(d, doc, entities, tag_ids)
         check_book_content(d, doc, rating_cfg)
+        check_unconfigured_levels(d, audio_cfg["levels"])
 
         durations: dict[str, dict] = {}
         for duration in audio_cfg["levels"]:
