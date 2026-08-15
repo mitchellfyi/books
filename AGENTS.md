@@ -258,6 +258,13 @@ Resolve the exact work and editions. Gather primary and bibliographic sources fi
 
 ### 3. Write structured content
 
+Fill in the scaffold `init` created rather than writing these files from
+scratch. Field shapes differ between neighbouring fields — some lists hold
+sourced claim objects, others plain strings; sources use `accessed_at` and a
+closed `type` enum; `selected_works` years are integers — and the templates
+already have every shape right. Source IDs used in `content.json` must exist
+in that book's `book.json`, even when the claim is about the author.
+
 Complete `book.json`, the author's `author.json`, and `content.json`. Cover the whole book before polishing prose. Consolidate overlapping ideas. Map every content source ID to a recorded source. Label inference. Complete the rating dimensions and let `./bookflow rate <book-id> --write` calculate the total. Choose the recommended duration from the loss caused by compression, not from page count.
 
 ### 4. Fact-check and adversarially review
