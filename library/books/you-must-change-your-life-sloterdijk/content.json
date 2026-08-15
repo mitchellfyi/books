@@ -1,0 +1,472 @@
+{
+  "$schema": "../../../schemas/content.schema.json",
+  "schema_version": 1,
+  "book_id": "you-must-change-your-life-sloterdijk",
+  "content_type": "non-fiction",
+  "editorial": {
+    "compression_fit": "high",
+    "complexity": "high",
+    "recommended_level": "15-minutes",
+    "rationale": "The book has one reframing and a long historical demonstration of it. Fifteen minutes carries the reframing, the strongest illustrations, and the serious objections; thirty minutes adds more of the historical parade without changing what a reader decides. Compression fit is high because the argument is repeated rather than developed."
+  },
+  "card": {
+    "one_sentence": "A German philosopher argues that what we call religion is better understood as systems of practice, and that humans are the animal that trains.",
+    "verdict": "A genuinely useful reframing of self-improvement buried in 500 demanding pages; take the idea from a summary unless you want the philosophy itself.",
+    "source_ids": [
+      "author-site",
+      "radphil-power",
+      "new-humanist"
+    ],
+    "basis": "synthesis"
+  },
+  "overview": {
+    "synopsis": {
+      "text": "Sloterdijk surveys several thousand years of asceticism, athletics, monasticism, philosophy and art to argue that they share a structure: they are all training regimes. He starts from Rilke's line about an ancient statue, 'You must change your life', treats it as a command that arrives without a commander, and uses it to reread religions as exercise systems, moderns as people who transferred training from the soul to the body and the state, and the present as a moment that needs a shared discipline rather than a shared belief.",
+      "source_ids": [
+        "author-site",
+        "book-encyclopedia",
+        "ndpr-mendieta",
+        "new-humanist"
+      ],
+      "basis": "synthesis"
+    },
+    "core_argument": {
+      "text": "There is no such thing as religion; there are only systems of practice through which humans work on themselves. Because the human being is constitutionally unfinished, it is the creature that must train, and history is best read as the record of those training programmes rather than of beliefs.",
+      "source_ids": [
+        "author-site",
+        "book-encyclopedia",
+        "ndpr-mendieta"
+      ],
+      "basis": "synthesis"
+    }
+  },
+  "ideas": [
+    {
+      "id": "anthropotechnics",
+      "title": "Humans are the animal that trains",
+      "claim": "Human beings form themselves through techniques of practice, individually and collectively — what Sloterdijk calls anthropotechnics.",
+      "explanation": "Rather than treating people as creatures with fixed natures who then acquire beliefs, Sloterdijk treats the practising itself as primary. Farmers, athletes, monks, musicians, soldiers and writers are all doing versions of the same thing: repeating an exercise until it reshapes the person doing it. On this account you are not what you believe; you are what you rehearse.",
+      "representative_example": "The book takes its title from the last line of Rilke's poem about an archaic torso of Apollo — a broken statue that somehow issues a command. Sloterdijk reads this as the pure form of the imperative to change: authority with no author behind it.",
+      "why_it_matters": "It relocates self-improvement from motivation to structure, which is why the idea travels well beyond philosophy. If practice is what forms people, then the question stops being how to want change and becomes which regime you are already enrolled in.",
+      "caveat": "The claim is offered as a reframing, not tested against alternatives; nothing in the book would come out differently if the thesis were false.",
+      "source_ids": [
+        "author-site",
+        "book-encyclopedia",
+        "ndpr-mendieta",
+        "rilke-poem"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "religions-are-exercise-systems",
+      "title": "Religions do not exist",
+      "claim": "What gets called religion is a set of spiritual exercise systems, so the 'return of religion' is a category error.",
+      "explanation": "Sloterdijk's provocation is that the shared feature of the traditions is not doctrine but drill: fasting, prayer, repetition, submission to a rule, supervision by a teacher. Read that way, monastic orders, ascetic schools and modern movements belong to one family, and secularisation did not end the family — it redistributed it.",
+      "representative_example": "The chapter that runs from Pierre de Coubertin, who revived the Olympic Games as a quasi-religious cult of training, to L. Ron Hubbard, who built a movement out of graded exercises, is his demonstration that exercise systems flourish precisely where doctrine has evaporated.",
+      "why_it_matters": "It dissolves a debate the culture keeps having about belief by pointing at practice instead. It gives a reader a sharper question than 'is religion returning': what disciplines are people submitting to now, and who sets them?",
+      "caveat": "Defining religion as practice makes the thesis very hard to falsify — almost any repeated activity qualifies, which is part of why reviewers find the theme a catch-all.",
+      "source_ids": [
+        "author-site",
+        "publisher-record",
+        "new-humanist"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "vertical-tension",
+      "title": "Vertical tension: the pull towards the improbable",
+      "claim": "Cultures are organised by a felt difference between higher and lower forms of life, which draws people upward into difficult practice.",
+      "explanation": "Sloterdijk argues that what makes anyone train is a perceived gap between where they are and a more accomplished state they can sense but not yet reach. He calls this vertical tension, and treats the acrobat — the figure suspended between the merely human and something beyond it — as the emblem of the practising life.",
+      "representative_example": "His reading of the armless performer Carl Hermann Unthan, who learned to play the violin and shoot with his feet, is used to show a life organised entirely around converting an impossibility into a routine.",
+      "why_it_matters": "It explains why difficulty is attractive rather than merely tolerated, which most accounts of motivation get backwards. It reframes ambition as a response to a perceived height rather than a personality trait.",
+      "caveat": "Nina Power's review notes that the ideal being described is a contemplative, elite one, and that treating this pull as universal ignores who has the time and money to answer it.",
+      "source_ids": [
+        "ndpr-mendieta",
+        "publisher-record",
+        "radphil-power",
+        "unthan-biography"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "immune-systems",
+      "title": "Three immune systems",
+      "claim": "Humans protect themselves biologically, socially and symbolically, and practice is how the symbolic layer is built and maintained.",
+      "explanation": "Alongside the body's biological defences, Sloterdijk sets social arrangements such as solidarity and law, and symbolic ones such as ritual, philosophy and art, which inoculate people against meaninglessness and death. Exercise systems are how the third kind gets constructed. He offers this 'general immunology' as a replacement for metaphysics.",
+      "representative_example": "He argues that ecological threat now requires a shared 'co-immunity' — a global practice regime rather than a global belief — because no single society can immunise itself alone.",
+      "why_it_matters": "It supplies the book's bridge from private discipline to collective survival. It is the one point where the book's argument turns into a political proposal.",
+      "caveat": "Even a sympathetic reviewer treats it as an open question whether general immunology can bear the weight of replacing metaphysics.",
+      "source_ids": [
+        "ndpr-mendieta",
+        "radphil-power"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "id": "modern-transfer-of-asceticism",
+      "title": "Modernity did not end asceticism; it nationalised it",
+      "claim": "The modern era moved training out of the monastery and into the school, the gym, the clinic and the state's programmes for improving populations.",
+      "explanation": "On Sloterdijk's account the ascetic impulse was not abandoned at secularisation but redirected: from saving one soul to rebuilding whole populations through education, hygiene, sport, work discipline and political mobilisation. The demand to change your life became a demand to change life in general.",
+      "representative_example": "The revived Olympic movement is his clearest case: an explicitly modern, secular institution built on cultic devotion to training.",
+      "why_it_matters": "It connects private self-improvement to the state's interest in shaping citizens, which is the book's most historically concrete thread. It explains why self-optimisation feels simultaneously personal and obligatory.",
+      "caveat": "The move from individual to mass asceticism runs close to twentieth-century programmes for remaking populations, and the book does less than it should to separate them.",
+      "source_ids": [
+        "new-humanist",
+        "publisher-record"
+      ],
+      "basis": "synthesis"
+    }
+  ],
+  "book_map": [
+    {
+      "order": 1,
+      "title": "Introduction: On the Anthropotechnic Turn",
+      "purpose": "State the thesis and the term the book will defend.",
+      "summary": "Sets up the claim that the practising, self-forming human displaces religion as the unit of analysis, and announces the turn from belief to technique.",
+      "idea_ids": [
+        "anthropotechnics"
+      ],
+      "source_ids": [
+        "publisher-record",
+        "author-site"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 2,
+      "title": "Part One: The Planet of the Practising",
+      "purpose": "Establish the imperative and the cast of practitioners through close readings.",
+      "summary": "Moves through Rilke's commanding statue, Nietzsche's picture of an ascetic antiquity, the performer Unthan, Kafka's hunger artists and Cioran, before arriving at the chapter that denies religions exist and reads Coubertin and Hubbard as builders of exercise systems.",
+      "idea_ids": [
+        "anthropotechnics",
+        "religions-are-exercise-systems",
+        "vertical-tension"
+      ],
+      "source_ids": [
+        "publisher-record",
+        "radphil-power"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 3,
+      "title": "Part Two: For a History of the Practising Life",
+      "purpose": "Give the thesis a historical spine.",
+      "summary": "Traces the practising life through its programmes, its eccentric withdrawals, the tension between completion and incompletion, the role of masters and trainers, and the moments when changing trainer amounts to revolution.",
+      "idea_ids": [
+        "vertical-tension",
+        "modern-transfer-of-asceticism"
+      ],
+      "source_ids": [
+        "publisher-record"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 4,
+      "title": "Part Three: Exaggeration Procedures",
+      "purpose": "Follow the ascetic impulse into secular modernity.",
+      "summary": "Covers the re-secularisation of the withdrawn subject, art practised on human beings, self-referential training, exercises that go wrong, and the argument that culture itself operates as a monastic rule.",
+      "idea_ids": [
+        "modern-transfer-of-asceticism",
+        "immune-systems"
+      ],
+      "source_ids": [
+        "publisher-record",
+        "new-humanist"
+      ],
+      "basis": "synthesis"
+    },
+    {
+      "order": 5,
+      "title": "Outlook",
+      "purpose": "Turn the historical argument towards the present.",
+      "summary": "Closes with the base camps of the practising life, the question of why the human is an artist, retreats into unusualness, and the shift from re-embedding the subject to a relapse into total care — ending on the demand for shared discipline in the face of global risk.",
+      "idea_ids": [
+        "immune-systems"
+      ],
+      "source_ids": [
+        "publisher-record",
+        "ndpr-mendieta"
+      ],
+      "basis": "synthesis"
+    }
+  ],
+  "reading_experience": {
+    "structure": "An introduction, three long parts and an outlook, built from chapter-length essays on individual figures rather than a stepwise argument; the contents list runs to more than twenty chapters across roughly 500 pages.",
+    "voice": "Erudite, aphoristic and deliberately provocative, closer to a literary essayist than an academic philosopher, with a taste for coined terms and grand pronouncement.",
+    "pace": "Slow and non-linear. The thesis arrives early and the remaining hundreds of pages accumulate illustrations rather than advancing steps, so progress feels lateral.",
+    "evidence_style": "Readings of texts and figures — Rilke, Nietzsche, Kafka, Cioran, Wittgenstein, Bourdieu — rather than data or systematic argument. Nothing is tested; much is reinterpreted.",
+    "example_style": "Extended set-pieces on individual practitioners, several of them memorable, which carry more of the argument than the abstract passages do.",
+    "repetition": "High. The central claim recurs in new costumes throughout, which is what makes the book compressible without much loss.",
+    "prerequisites": "Comfort with continental philosophy helps considerably; reviewers describe the prose as stodgy and long-winded, and even a specialist reviewer notes the style has slowed the book's reception.",
+    "source_ids": [
+      "publisher-record",
+      "new-humanist",
+      "intl-dialogue-lemmens",
+      "radphil-power"
+    ],
+    "basis": "synthesis"
+  },
+  "assessment": {
+    "rating": {
+      "rubric_version": 2,
+      "score": 5.4,
+      "confidence": "medium",
+      "summary": "A powerful and genuinely portable reframing, delivered at a length and in a prose style that most readers will find disproportionate to what they take away, and argued by association rather than evidence.",
+      "dimensions": [
+        {
+          "id": "explanatory-power",
+          "score": 7.5,
+          "rationale": "The practice-not-belief frame does real work: it makes sense of why monasticism, athletics and modern self-optimisation rhyme, and reviewers across the political range agree it reorganises the material usefully.",
+          "source_ids": [
+            "ndpr-mendieta",
+            "radphil-power",
+            "new-humanist"
+          ]
+        },
+        {
+          "id": "evidence-and-reasoning",
+          "score": 4.0,
+          "rationale": "The method is erudite association across texts, not argument that could fail. Defining religion as practice makes the thesis near-unfalsifiable, and a specialist reviewer notes the self at its centre is 'remarkably underhistoricized'.",
+          "source_ids": [
+            "radphil-power",
+            "intl-dialogue-lemmens"
+          ]
+        },
+        {
+          "id": "insight-value",
+          "score": 7.5,
+          "rationale": "'Religions do not exist; exercise systems do' is a genuinely non-obvious move, and vertical tension names something most accounts of motivation miss. Even the critical review credits the readings of practice and habit.",
+          "source_ids": [
+            "radphil-power",
+            "ndpr-mendieta"
+          ]
+        },
+        {
+          "id": "practical-utility",
+          "score": 4.5,
+          "rationale": "The reframing changes how a reader interprets their own habits, but the book offers no method, and its practical upshot has been fairly criticised as amounting to 'pull your socks up' while ignoring who has time to practise.",
+          "source_ids": [
+            "radphil-power"
+          ]
+        },
+        {
+          "id": "completeness-and-calibration",
+          "score": 4.0,
+          "rationale": "Counterarguments are largely absent, women are nearly missing from a book about human practice, and the elitist assumption behind the contemplative ideal goes unexamined; the sympathetic reviewer likewise leaves general immunology's central claim as an open question.",
+          "source_ids": [
+            "radphil-power",
+            "ndpr-mendieta"
+          ]
+        },
+        {
+          "id": "information-efficiency",
+          "score": 3.0,
+          "rationale": "One idea is restated across roughly 500 pages. Reviewers describe long infuriating and tedious stretches and an out-of-focus thesis, and the historical apparatus is not needed to grasp the point.",
+          "source_ids": [
+            "new-humanist",
+            "radphil-power"
+          ]
+        },
+        {
+          "id": "reading-craft",
+          "score": 5.5,
+          "rationale": "Documented reception splits sharply: praise for 'the pleasure of the text, the vigor of the writing, the novelty of the language' and passages of distilled poetic beauty, against 'stodgy and long-winded' prose, a style that has impeded the book's own reception, and a translator judged to have been overwhelmed in places.",
+          "source_ids": [
+            "ndpr-mendieta",
+            "new-humanist",
+            "intl-dialogue-lemmens"
+          ]
+        }
+      ],
+      "basis": "inference"
+    },
+    "meaning": {
+      "text": "The book's lasting contribution is a vocabulary: anthropotechnics, vertical tension, exercise systems. It gives a reader a way to see training everywhere it is happening, including where it is not called training.",
+      "source_ids": [
+        "author-site",
+        "ndpr-mendieta"
+      ],
+      "basis": "synthesis"
+    },
+    "lessons": [
+      {
+        "text": "Look at what you rehearse rather than what you believe; the repetitions are what shape you.",
+        "source_ids": [
+          "author-site",
+          "ndpr-mendieta"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Difficulty attracts effort when a higher state feels visible, so the useful question is what you are looking up at.",
+        "source_ids": [
+          "ndpr-mendieta"
+        ],
+        "basis": "synthesis"
+      },
+      {
+        "text": "Ask who set the regime you are following, and whose interest it serves — schools, employers and states all issue training programmes.",
+        "source_ids": [
+          "new-humanist",
+          "radphil-power"
+        ],
+        "basis": "inference"
+      }
+    ],
+    "importance": {
+      "text": "It matters as one of the more serious attempts to explain self-improvement without either moralising or reducing it to psychology, and as the book that put anthropotechnics into circulation. Its influence is on how the subject is framed rather than on what anyone does.",
+      "source_ids": [
+        "intl-dialogue-lemmens",
+        "ndpr-mendieta"
+      ],
+      "basis": "inference"
+    },
+    "author_and_purpose": {
+      "text": "Peter Sloterdijk is a German philosopher and cultural theorist, long the rector of the Karlsruhe University of Arts and Design and a public intellectual through broadcasting and polemic. His aim here is explicitly revisionary: to displace the debate about religion's return by describing the practising human instead. His method is literary and associative, and his public record includes interventions that drew charges of elitism — the same charge reviewers bring against this book's ideal.",
+      "source_ids": [
+        "author-background",
+        "author-site",
+        "radphil-power"
+      ],
+      "basis": "synthesis"
+    },
+    "evidence_quality": {
+      "rating": "weak",
+      "strengths": [
+        "Wide, genuinely learned reading across philosophy, religious history, literature and sport",
+        "Close textual readings that specialists on both sides of the argument credit as incisive",
+        "A clear, consistently applied organising concept"
+      ],
+      "weaknesses": [
+        "No empirical evidence and no test the thesis could fail",
+        "Defining religion as practice makes the central claim close to unfalsifiable",
+        "The self capable of self-improvement is assumed rather than historicised",
+        "Almost no women among the practitioners surveyed"
+      ],
+      "source_ids": [
+        "radphil-power",
+        "intl-dialogue-lemmens",
+        "ndpr-mendieta"
+      ],
+      "basis": "synthesis"
+    },
+    "reception": {
+      "summary": "Specialists admire the erudition and the reframing; the sharpest criticism is political and methodological rather than factual, and even admirers concede the style has slowed the book's uptake in English.",
+      "praise": [
+        "A specialist reviewer praises its incisive and provocative readings and 'the pleasure of the text, the vigor of the writing, the novelty of the language'.",
+        "A critical reviewer still credits the readings of thinkers on practice and habit — Rilke, Nietzsche, Wittgenstein, Bourdieu.",
+        "Reviewers describe Sloterdijk as seriously learned and brilliantly creative, and worth shelf-space alongside Nietzsche, Heidegger and Foucault."
+      ],
+      "criticism": [
+        "Nina Power argues the book assumes an unexamined, underhistoricised self, and that its practical advice amounts to 'pull your socks up' while ignoring paid work and care obligations.",
+        "The same review notes women are nearly absent, with only brief mentions of Simone Weil and Hannah Arendt, and that the ideal celebrated belongs to an educated class with time to contemplate.",
+        "It treats dullness and dejection as more pressing than exploitation, dispossession and war.",
+        "The prose is called stodgy and long-winded, with a reviewer suspecting the copious prose was sometimes too much for the translator."
+      ],
+      "source_ids": [
+        "ndpr-mendieta",
+        "radphil-power",
+        "new-humanist",
+        "intl-dialogue-lemmens"
+      ],
+      "basis": "synthesis"
+    },
+    "audience": {
+      "best_for": [
+        "Readers who already enjoy continental philosophy and want its account of self-formation.",
+        "Anyone who thinks about habit, training or self-improvement and wants a deeper frame than the self-help shelf offers.",
+        "Readers interested in why secular societies keep reinventing disciplines and rules."
+      ],
+      "not_for": [
+        "Anyone wanting a method, a programme or anything actionable.",
+        "Readers who want claims supported by evidence rather than reframed by association.",
+        "Readers with low tolerance for dense, digressive prose over hundreds of pages."
+      ],
+      "topics": [
+        "Practice, training and self-formation",
+        "Religion reinterpreted as exercise systems",
+        "Asceticism, discipline and the modern state"
+      ],
+      "source_ids": [
+        "author-site",
+        "radphil-power",
+        "new-humanist"
+      ],
+      "basis": "synthesis"
+    },
+    "scope": {
+      "is_not": [
+        "Not a self-help book: it offers no programme and names no technique to adopt.",
+        "Not a history of religion in any conventional sense, despite ranging across religious traditions."
+      ],
+      "omissions": [
+        "Women practitioners are almost entirely absent from a book about how humans form themselves.",
+        "The material conditions that make sustained practice possible — money, time, freedom from care work — go unexamined."
+      ],
+      "missing_or_weak": [
+        "There is no test the thesis could fail, so the historical parade illustrates rather than supports it.",
+        "The move from individual asceticism to state programmes for remaking populations is asserted more than argued, and sits uncomfortably close to twentieth-century projects it does not squarely address."
+      ],
+      "dated_or_contested": [
+        "The contemplative ideal at its centre is contested as elitist, a charge also made against the author's public interventions.",
+        "Whether general immunology can replace metaphysics is left open even by sympathetic specialists."
+      ],
+      "source_ids": [
+        "radphil-power",
+        "ndpr-mendieta",
+        "new-humanist"
+      ],
+      "basis": "synthesis"
+    },
+    "decision": {
+      "read_if": "You read philosophy for pleasure and want the full weight of the argument, the readings of Rilke, Nietzsche and Kafka, and the historical sweep that surrounds the thesis.",
+      "summary_is_enough_if": "You want the idea — practice rather than belief, vertical tension, exercise systems — which is portable in a few minutes and is restated rather than developed across the remaining hundreds of pages.",
+      "skip_if": "You want evidence, method, or anything to do on Monday; this book reframes and does not instruct.",
+      "format_advice": "Read it in print if you read it at all. The chapter-essay structure suits dipping, the terminology needs re-reading, and the digressive prose is hard to follow in audio.",
+      "source_ids": [
+        "radphil-power",
+        "new-humanist",
+        "intl-dialogue-lemmens"
+      ],
+      "basis": "inference"
+    }
+  },
+  "retention": {
+    "recall_prompts": [
+      "What does Sloterdijk claim we find when we look behind what people call religion?",
+      "What is vertical tension, and what does it explain about why people take on difficulty?"
+    ],
+    "application_prompts": [
+      "List what you actually repeat in a week. Which of those regimes did you choose, and who set the others?",
+      "Name the accomplished state you can currently see above you. Is the practice you are doing the one that leads there?"
+    ]
+  },
+  "workflow": {
+    "status": "complete",
+    "reviewed_against_full_book": false,
+    "review_notes": "Built from the publisher's full contents list, the author's own statement of aim, and four independent reviews. Part Two and Part Three summaries follow the published chapter titles and reviewers' accounts rather than a reading of the chapters themselves; that limit is recorded in book.json coverage.",
+    "quality_review": {
+      "status": "passed",
+      "reviewed_at": "2026-08-15",
+      "checks": {
+        "identity_and_metadata": true,
+        "content_fidelity": true,
+        "claim_support": true,
+        "counterevidence": true,
+        "citation_entailment": true,
+        "product_fit": true,
+        "plain_language": true,
+        "audio_pronunciation": true
+      },
+      "notes": [
+        "Identity: German first edition 2009 (Suhrkamp) and English 2013 (Polity, trans. Wieland Hoban, 503pp, ISBN 978-0-7456-4921-4) confirmed against the publisher record and the Radical Philosophy review header. The Collège de France profile dates the book to 2011; that outlier was rejected in favour of two corroborating records and the discrepancy is noted on the source.",
+        "Content fidelity: the argument, the named figures and the part structure follow the publisher's full table of contents and reviewers' accounts. Interpretations of Part Two and Part Three chapter titles are labelled synthesis, and coverage records that they were not read directly.",
+        "Claim support: the two concrete biographical claims the narration makes — Rilke's 1908 sonnet and its closing line, and Unthan's armless violin playing, shooting and typing — were verified against dedicated sources added for that purpose rather than left resting on reviews that only mention the chapters.",
+        "Counterevidence: Nina Power's review supplies the substantive case against (underhistoricised self, elitism, absent women, material constraints ignored, priorities misplaced) and is represented in the rating, the scope section and every script.",
+        "Plain language and audio: names checked for narration — Sloterdijk, Rilke, Cioran, Coubertin, Unthan, Bourdieu, Habermas. The score is spoken as 'five point four out of ten'."
+      ]
+    }
+  }
+}

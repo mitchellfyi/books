@@ -1,0 +1,29 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "you-must-change-your-life-sloterdijk",
+  "duration": "5-minutes",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.85,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/you-must-change-your-life-sloterdijk/scripts/5-minutes.md",
+  "source_script_sha256": "dd8a176ff3c063732c866c95088d71d225c60fd6ebc18d4f395f551af8e1e363",
+  "pronunciation_dictionary_sha256": "2476d3b13a96ef201c02c41bfbd2715aa076a9af450ab6d256960af539290ea7",
+  "pronunciation_terms": [
+    "Bourdieu",
+    "Cioran",
+    "Coubertin",
+    "Rilke",
+    "Sloterdijk"
+  ],
+  "pronunciation_entries_sha256": "b08e27de72a57c051db18b4e516d3499d07236335b7b293faabdcb0a71417a5c",
+  "script_words": 774,
+  "audio_seconds": 298.524,
+  "measured_wpm": 155.57,
+  "generated_at": "2026-08-15T13:08:45.467443+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/audio-sidecar.schema.json",
+  "schema_version": 2,
+  "book_id": "you-must-change-your-life-sloterdijk",
+  "duration": "30-seconds",
+  "engine": "kokoro-onnx",
+  "engine_version": "0.5.0",
+  "model": "kokoro-v1.0.onnx",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "speed": 0.95,
+  "sample_rate": 24000,
+  "output_format": "mp3",
+  "source_script": "library/books/you-must-change-your-life-sloterdijk/scripts/30-seconds.md",
+  "source_script_sha256": "b83522c614d8caaf78dda33a6a2510b4e8f20576712625311595d9aec1067e29",
+  "pronunciation_dictionary_sha256": "2476d3b13a96ef201c02c41bfbd2715aa076a9af450ab6d256960af539290ea7",
+  "pronunciation_terms": [
+    "Sloterdijk"
+  ],
+  "pronunciation_entries_sha256": "50441a020a6fb21b2fab6ab024d3adf0a5dae8f7e4e72812100ce6901318a7f7",
+  "script_words": 73,
+  "audio_seconds": 28.439,
+  "measured_wpm": 154.02,
+  "generated_at": "2026-08-15T13:07:21.992392+00:00"
+}

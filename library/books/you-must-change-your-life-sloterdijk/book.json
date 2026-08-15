@@ -1,0 +1,229 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "you-must-change-your-life-sloterdijk",
+  "type": "book",
+  "title": "You Must Change Your Life: On Anthropotechnics",
+  "alternate_titles": [
+    "Du mußt dein Leben ändern: Über Anthropotechnik",
+    "You Must Change Your Life"
+  ],
+  "author_ids": [
+    "peter-sloterdijk"
+  ],
+  "bibliography": {
+    "first_published": "2009",
+    "original_language": "de",
+    "editions": [
+      {
+        "label": "German first edition (Du mußt dein Leben ändern. Über Anthropotechnik)",
+        "publisher": "Suhrkamp",
+        "publication_date": "2009",
+        "isbn_10": null,
+        "isbn_13": null,
+        "format": "hardback",
+        "pages": null
+      },
+      {
+        "label": "English hardback, translated by Wieland Hoban",
+        "publisher": "Polity",
+        "publication_date": "2013",
+        "isbn_10": "0745649211",
+        "isbn_13": "978-0-7456-4921-4",
+        "format": "hardback",
+        "pages": 503
+      },
+      {
+        "label": "English paperback",
+        "publisher": "Polity",
+        "publication_date": "2014",
+        "isbn_10": "074564922X",
+        "isbn_13": "978-0-7456-4922-1",
+        "format": "paperback",
+        "pages": 500
+      }
+    ],
+    "contents": [
+      "Introduction: On the Anthropotechnic Turn",
+      "Part One: The Planet of the Practising",
+      "The Command from the Stone: Rilke's Experience",
+      "Remote View of the Ascetic Planet: Nietzsche's Antiquity Project",
+      "Only Cripples Will Survive: Unthan's Lesson",
+      "Last Hunger Art: Kafka's Artistes",
+      "Parisian Buddhism: Cioran's Exercises",
+      "Religions Do Not Exist: From Pierre de Coubertin to L. Ron Hubbard",
+      "Part Two: For a History of the Practising Life (Programme, First Eccentricity, The Complete and the Incomplete, Master Games, Change of Trainer and Revolution)",
+      "Part Three: Exaggeration Procedures (The Re-Secularization of the Withdrawn Subject, Art with Humans, In the Auto-Operatively Curved Space, Exercises and Misexercises, Culture Is a Monastic Rule)",
+      "Outlook: Sleepless in Ephesus; On the Base Camps of the Practising Life; Cur Homo Artista; Retreats into Unusualness; From the Re-Embedding of the Subject to the Relapse into Total Care",
+      "Notes",
+      "Index"
+    ]
+  },
+  "discovery": {
+    "tag_ids": [
+      "philosophy",
+      "human-nature",
+      "personal-development",
+      "history",
+      "anthropology",
+      "self-awareness",
+      "motivation"
+    ],
+    "audiences": [
+      "Readers of continental philosophy who want a theory of self-improvement that is not self-help",
+      "Anyone interested in why habit, practice and training recur across religions, sport and art",
+      "Readers willing to spend 500 dense pages on one reframing"
+    ],
+    "formats_available": [
+      "hardback",
+      "paperback",
+      "ebook"
+    ]
+  },
+  "research": {
+    "sources": [
+      {
+        "id": "publisher-record",
+        "title": "You Must Change Your Life — publisher bibliographic record and table of contents",
+        "author_or_publisher": "Polity / John Wiley & Sons (via Google Books)",
+        "url": "https://books.google.co.uk/books/about/You_Must_Change_Your_Life.html?id=a_DcBAAAQBAJ",
+        "type": "publisher",
+        "independence": "interested",
+        "quality": "high",
+        "supports": "Translator (Wieland Hoban), English publisher and page count, ISBN, and the full chapter list used to build the book map.",
+        "limitations": "Publisher-supplied marketing description; the promotional framing of the argument is not independent evidence. Page counts differ slightly between editions and retailers.",
+        "accessed_at": "2026-08-15"
+      },
+      {
+        "id": "book-encyclopedia",
+        "title": "You Must Change Your Life (encyclopedia article)",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/You_Must_Change_Your_Life",
+        "type": "secondary-summary",
+        "independence": "community",
+        "quality": "medium",
+        "supports": "German original title, publisher and year; English edition year and ISBN; the Rilke source of the title and its description as 'the absolute imperative'; the anthropotechnics definition.",
+        "limitations": "Community-edited and thinly sourced in places; edition facts were cross-checked against the publisher record before use.",
+        "accessed_at": "2026-08-15"
+      },
+      {
+        "id": "author-site",
+        "title": "You must change your life — the author's own work page",
+        "author_or_publisher": "petersloterdijk.net",
+        "url": "https://petersloterdijk.net/work/you-must-change-your-life/",
+        "type": "author",
+        "independence": "primary",
+        "quality": "medium",
+        "supports": "Sloterdijk's own framing of the book as a critique of the myth of religion's return, and of the human as a practising, self-creating being.",
+        "limitations": "The author's own promotional description; states the aim rather than demonstrating that the book achieves it. Its stated page count disagrees with the publisher record.",
+        "accessed_at": "2026-08-15"
+      },
+      {
+        "id": "ndpr-mendieta",
+        "title": "Review of You Must Change Your Life",
+        "author_or_publisher": "Eduardo Mendieta, Notre Dame Philosophical Reviews",
+        "url": "https://ndpr.nd.edu/reviews/you-must-change-your-life/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "supports": "The 'general immunology' framing, the acrobat figure, the co-immunity argument about ecological crisis, and praise for the book's readings and prose.",
+        "limitations": "Strongly favourable and offers almost no criticism, so it is weak evidence about the book's weaknesses; the reviewer is a Sloterdijk scholar and translator of related work.",
+        "accessed_at": "2026-08-15"
+      },
+      {
+        "id": "radphil-power",
+        "title": "On your bike (review of You Must Change Your Life)",
+        "author_or_publisher": "Nina Power, Radical Philosophy 183",
+        "url": "https://www.radicalphilosophy.com/reviews/individual-reviews/on-your-bike",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "supports": "The three immune systems; the near-absence of women; the elitism of a contemplative ideal; the underhistoricised self; the charge that material constraints such as paid work and care are ignored; the priority given to dullness over exploitation.",
+        "limitations": "Written from an explicitly left political position, so its political objections reflect a stated commitment; that does not affect its factual observations about the book's contents.",
+        "accessed_at": "2026-08-15"
+      },
+      {
+        "id": "new-humanist",
+        "title": "Book review: You must change your life by Peter Sloterdijk",
+        "author_or_publisher": "New Humanist",
+        "url": "https://newhumanist.org.uk/articles/2898/book-review-you-must-change-your-life-by-peter-sloterdijk",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "medium",
+        "supports": "The shift of asceticism from individual reform to mass rebuilding under the modern state; the judgement that the prose is 'stodgy and long-winded' and that the translator was at times overwhelmed.",
+        "limitations": "Unsigned in the version consulted, and the reviewer admits uncertainty about having grasped the whole argument.",
+        "accessed_at": "2026-08-15"
+      },
+      {
+        "id": "intl-dialogue-lemmens",
+        "title": "Sloterdijk: You Must Change Your Life; In the World Interior of Capital; Globes",
+        "author_or_publisher": "Pieter Lemmens, International Dialogue vol. 5",
+        "url": "https://digitalcommons.unomaha.edu/id-journal/vol5/iss1/5/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "supports": "The delayed Anglophone reception, and the characterisation of the style as 'highly idiosyncratic' and 'lavishly exuberant, intensely literary' — a barrier to academic uptake.",
+        "limitations": "A combined review of three books, so its remarks are not always specific to this title; only the abstract and citation page were consulted.",
+        "accessed_at": "2026-08-15"
+      },
+      {
+        "id": "author-background",
+        "title": "Peter Sloterdijk (encyclopedia article)",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Peter_Sloterdijk",
+        "type": "secondary-summary",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-15",
+        "supports": "The author's positions and public record, including the 1999 'Rules for the Human Park' dispute with Habermas and the 2009 welfare-state argument that drew charges of elitism.",
+        "limitations": "Community-edited; used for the existence and outline of widely documented controversies rather than for adjudicating them."
+      },
+      {
+        "id": "rilke-poem",
+        "title": "Archaic Torso of Apollo (poem)",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Archaic_Torso_of_Apollo",
+        "type": "secondary-summary",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-15",
+        "supports": "That Rilke published the sonnet in 1908 in New Poems, that it describes a headless archaic torso, and that its closing lines run 'there is no place that does not see you. You must change your life.'",
+        "limitations": "Community-edited, and the English wording depends on the translation quoted; used only for the poem's date, subject and closing line."
+      },
+      {
+        "id": "unthan-biography",
+        "title": "Carl Herman Unthan",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Carl_Herman_Unthan",
+        "type": "secondary-summary",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-15",
+        "supports": "That Unthan (1848–1929) was born without arms, taught himself the violin, performed as 'The Armless Fiddler', shot a rifle with his feet, and typed his autobiography with his feet.",
+        "limitations": "Community-edited biography used for the performer's documented facts, not for Sloterdijk's reading of him."
+      }
+    ],
+    "citations": {
+      "/bibliography/editions/1": [
+        "publisher-record",
+        "radphil-power"
+      ],
+      "/bibliography/contents": [
+        "publisher-record"
+      ],
+      "/bibliography/first_published": [
+        "book-encyclopedia",
+        "publisher-record"
+      ]
+    }
+  },
+  "workflow": {
+    "status": "complete",
+    "coverage": "sample-and-secondary",
+    "coverage_notes": "Built from the publisher's full table of contents, the author's own statement of aim, four independent reviews (two of them detailed specialist reviews that quote and argue with the text), and encyclopedic edition records. Not checked against a full copy, so chapter-level detail beyond the contents list and the passages reviewers quote is not independently verified.",
+    "last_researched": "2026-08-15",
+    "next_steps": [
+      "If a full copy becomes available, verify the Part Two and Part Three chapter summaries directly and deepen the book map beyond the published contents list."
+    ]
+  }
+}

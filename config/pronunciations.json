@@ -3,64 +3,108 @@
   "schema_version": 1,
   "entries": [
     {
-      "term": "Cialdini",
+      "term": "Acemoglu",
+      "aliases": [
+        "Acemoğlu"
+      ],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ˌɑːdʒəmˈəʊluː",
+        "en-us": "ˌɑːdʒəmˈoʊluː"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Daron_Acemoglu",
+      "verified_at": "2026-08-13",
+      "notes": "Turkish [aˈdʒemoːɫu] (Wikipedia lead IPA): the c is a j sound and the ğ is silent — 'ah-jem-OH-loo'. The unassisted phonemizer produced 'a-SEM-oh-gloo' (ɐsˈɛməɡlˌuː), which is wrong."
+    },
+    {
+      "term": "akrasia",
       "aliases": [],
       "case_sensitive": false,
       "phonemes": {
-        "en-gb": "tʃaldˈiːni",
-        "en-us": "tʃældˈiːni"
+        "en-gb": "əkɹˈeɪzɪə",
+        "en-us": "əkɹˈeɪziə"
       },
-      "source_url": "https://forvo.com/word/cialdini/",
+      "source_url": "https://www.collinsdictionary.com/dictionary/english/akrasia",
       "verified_at": "2026-08-13",
-      "notes": "Italian surname: 'ci' before a vowel is the 'ch' sound, so chal-DEE-nee. Documented by pronunciation dictionaries (Forvo, Italian entry) and consistent with the author's own anglicised usage. The unassisted phonemizer produced 'sigh-al-DEE-ni' (sˌaɪəldˈiːnɪ), which is wrong."
+      "notes": "uh-KRAY-zee-uh per Collins. The unassisted phonemizer began with a full a vowel."
     },
     {
-      "term": "Joost",
+      "term": "Alain de Botton",
       "aliases": [],
       "case_sensitive": true,
       "phonemes": {
-        "en-gb": "jˈəʊst",
-        "en-us": "jˈoʊst"
+        "en-gb": "ɐlˈɑː də bˈɒtən",
+        "en-us": "ɐlˈɑː də bˈɑːtən"
       },
-      "source_url": "https://forvo.com/word/joost/",
+      "source_url": "https://www.tapesearch.com/episode/unedited-alain-de-botton-with-krista-tippett-2012/22JC8xunPQeWTQgQhmNLdc",
       "verified_at": "2026-08-13",
-      "notes": "Dutch given name pronounced yohst, documented by Forvo's Dutch entries. The unassisted phonemizer produced 'juiced' (dʒˈuːst). Case-sensitive to avoid touching unrelated words."
+      "notes": "uh-LAHN duh BOT-un, based on de Botton saying his own name after the interviewer asks at 00:30. The unassisted phonemizer produced uh-LAYN."
     },
     {
-      "term": "Kanye",
+      "term": "amygdala",
+      "aliases": [
+        "amygdalae"
+      ],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "əmˈɪɡdələ",
+        "en-us": "əmˈɪɡdələ"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/amygdala",
+      "verified_at": "2026-08-13",
+      "notes": "Cambridge: /əˈmɪɡ.dəl.ə/ (ə-MIG-də-lə). The unassisted phonemizer produced 'am-ig-DAH-lə' (ˌamɪɡdˈɑːlə) with wrong stress and vowel."
+    },
+    {
+      "term": "Atahuallpa",
+      "aliases": [
+        "Atahualpa"
+      ],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ˌætəˈwɑːlpə",
+        "en-us": "ˌɑtəˈwɑlpə"
+      },
+      "source_url": "https://www.collinsdictionary.com/us/dictionary/english/atahualpa",
+      "verified_at": "2026-08-13",
+      "notes": "Collins gives British /ˌætəˈwɑːlpə/ and American /ˌɑtəˈwɑlpə/. The unassisted phonemizer produced 'AT-ə-hyoo-al-pə', which is wrong."
+    },
+    {
+      "term": "Bourdieu",
+      "aliases": [
+        "Pierre Bourdieu"
+      ],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "bʊədjˈɜː",
+        "en-us": "bʊɹdjˈuː"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Pierre_Bourdieu",
+      "verified_at": "2026-08-15",
+      "notes": "Wikipedia gives UK /bʊərˈdjɜː/ and US /bʊərˈd(j)uː/. The unassisted phonemizer produced 'BUR-dee-oo' (bˈɜːdɪˌuː)."
+    },
+    {
+      "term": "Brandeis",
       "aliases": [],
       "case_sensitive": true,
       "phonemes": {
-        "en-gb": "kˈɑːnjeɪ",
-        "en-us": "kˈɑːnjeɪ"
+        "en-gb": "bɹˈandaɪs",
+        "en-us": "bɹˈændaɪs"
       },
-      "source_url": "https://forvo.com/word/kanye_west/",
+      "source_url": "https://www.brandeis.edu/about/",
       "verified_at": "2026-08-13",
-      "notes": "KAHN-yay, per the artist's own usage and pronunciation dictionaries. The unassisted phonemizer produced KAN-eye (kˈanaɪ)."
+      "notes": "BRAN-dice, as the university and Justice Louis Brandeis's name are pronounced. The unassisted phonemizer produced BRAN-days (bɹˈandeɪz)."
     },
     {
-      "term": "Jay-Z",
+      "term": "Cajamarca",
       "aliases": [],
-      "case_sensitive": false,
+      "case_sensitive": true,
       "phonemes": {
-        "en-gb": "dʒˈeɪ zˈiː",
-        "en-us": "dʒˈeɪ zˈiː"
+        "en-gb": "kˌɑːhəmˈɑːkə",
+        "en-us": "kˌɑːhəmˈɑːɹkə"
       },
-      "source_url": "https://forvo.com/word/jay-z/",
+      "source_url": "https://en.wiktionary.org/wiki/Cajamarca",
       "verified_at": "2026-08-13",
-      "notes": "The artist's name is universally jay-ZEE, including in British usage. The unassisted en-gb phonemizer produced jay-ZED (dʒˈeɪzˈɛd)."
-    },
-    {
-      "term": "Sforza",
-      "aliases": [],
-      "case_sensitive": false,
-      "phonemes": {
-        "en-gb": "sfˈɔːtsə",
-        "en-us": "sfˈɔːɹtsə"
-      },
-      "source_url": "https://en.wiktionary.org/wiki/Sforza",
-      "verified_at": "2026-08-13",
-      "notes": "Italian surname, approximately SFORT-sa. The unassisted British phonemizer treated the initial letters as the word 'S' plus 'forza' and produced ess-FOR-za, so a dictionary override is required."
+      "notes": "Spanish /kaxaˈmaɾka/ (Wiktionary), anglicised 'kah-ha-MAR-ka' — the j is an h sound. The unassisted phonemizer produced 'ka-JAH-mah-ka' (kˈadʒɐmˌɑːkə), which is wrong."
     },
     {
       "term": "Cal",
@@ -75,76 +119,56 @@
       "notes": "The given name uses the vowel in Calvin or cat. The unassisted British phonemizer produced an open back vowel closer to 'Karl'. Case-sensitive matching avoids unrelated lowercase text."
     },
     {
-      "term": "Rowling",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "ɹˈəʊlɪŋ",
-        "en-us": "ɹˈoʊlɪŋ"
-      },
-      "source_url": "https://dictionary.cambridge.org/pronunciation/english/rowling",
-      "verified_at": "2026-08-13",
-      "notes": "ROH-ling, like rolling without a strongly sounded second l. The unassisted British phonemizer produced ROU-ling with the vowel in 'out'."
-    },
-    {
-      "term": "Guidara",
+      "term": "Cialdini",
       "aliases": [],
       "case_sensitive": false,
       "phonemes": {
-        "en-gb": "ɡwɪdˈɑːɹə",
-        "en-us": "ɡwɪdˈɑːɹə"
+        "en-gb": "tʃaldˈiːni",
+        "en-us": "tʃældˈiːni"
       },
-      "source_url": "https://forvo.com/word/will_guidara/",
+      "source_url": "https://forvo.com/word/cialdini/",
       "verified_at": "2026-08-13",
-      "notes": "gwi-DAR-ah, as the author says it in his own talks and podcast introductions. The unassisted phonemizer produced guy-DAR-ah (ɡaɪdˈɑːɹə)."
+      "notes": "Italian surname: 'ci' before a vowel is the 'ch' sound, so chal-DEE-nee. Documented by pronunciation dictionaries (Forvo, Italian entry) and consistent with the author's own anglicised usage. The unassisted phonemizer produced 'sigh-al-DEE-ni' (sˌaɪəldˈiːnɪ), which is wrong."
     },
     {
-      "term": "Michelin",
-      "aliases": [],
+      "term": "Cioran",
+      "aliases": [
+        "Emil Cioran"
+      ],
       "case_sensitive": false,
       "phonemes": {
-        "en-gb": "mˈɪʃəlɪn",
-        "en-us": "mˈɪʃəlɪn"
+        "en-gb": "tʃˈɔːɹɑːn",
+        "en-us": "tʃˈɔːɹɑːn"
       },
-      "source_url": "https://dictionary.cambridge.org/pronunciation/english/michelin",
-      "verified_at": "2026-08-13",
-      "notes": "MISH-uh-lin per Cambridge Dictionary. The unassisted phonemizer produced MITCH-i-lin (mˈɪtʃɪlˌɪn)."
+      "source_url": "https://en.wikipedia.org/wiki/Emil_Cioran",
+      "verified_at": "2026-08-15",
+      "notes": "English /ˈtʃɔːrɑːn/, Romanian [tʃoˈran]: Romanian 'ci' is the 'ch' sound. The unassisted phonemizer produced 'see-OR-un' (sɪˈɔːɹən)."
     },
     {
-      "term": "elenchus",
-      "aliases": [],
-      "case_sensitive": false,
-      "phonemes": {
-        "en-gb": "ɪlˈɛŋkəs",
-        "en-us": "ɪlˈɛŋkəs"
-      },
-      "source_url": "https://www.merriam-webster.com/dictionary/elenchus",
-      "verified_at": "2026-08-13",
-      "notes": "ih-LENG-kus, with the Greek chi as a hard k, per Merriam-Webster. The unassisted phonemizer produced ih-LEN-chus with a church-ch (ɪlˈɛntʃəs)."
-    },
-    {
-      "term": "Plato",
+      "term": "Commodus",
       "aliases": [],
       "case_sensitive": true,
       "phonemes": {
-        "en-gb": "plˈeɪtəʊ",
-        "en-us": "plˈeɪtoʊ"
+        "en-gb": "kˈɒmədəs",
+        "en-us": "kˈɑːmədəs"
       },
-      "source_url": "https://dictionary.cambridge.org/pronunciation/english/plato",
+      "source_url": "https://en.wiktionary.org/wiki/Commodus",
       "verified_at": "2026-08-13",
-      "notes": "PLAY-toe per Cambridge Dictionary. The unassisted British phonemizer produced PLAH-toe (plˈɑːtəʊ). Case-sensitive to avoid touching unrelated lowercase text."
+      "notes": "Standard English /ˈkɒmədəs/ 'KOM-ə-dəs'. The unassisted phonemizer produced 'kə-MOD-əs' (kəmˈɒdəs) with wrong stress."
     },
     {
-      "term": "Brandeis",
-      "aliases": [],
-      "case_sensitive": true,
+      "term": "Coubertin",
+      "aliases": [
+        "Pierre de Coubertin"
+      ],
+      "case_sensitive": false,
       "phonemes": {
-        "en-gb": "bɹˈandaɪs",
-        "en-us": "bɹˈændaɪs"
+        "en-gb": "kˌuːbətˈan",
+        "en-us": "kˌuːbɚtˈan"
       },
-      "source_url": "https://www.brandeis.edu/about/",
-      "verified_at": "2026-08-13",
-      "notes": "BRAN-dice, as the university and Justice Louis Brandeis's name are pronounced. The unassisted phonemizer produced BRAN-days (bɹˈandeɪz)."
+      "source_url": "https://en.wikipedia.org/wiki/Pierre_de_Coubertin",
+      "verified_at": "2026-08-15",
+      "notes": "French [kubɛʁtɛ̃]: the first syllable is 'koo', not 'cow'. Anglicised without the French nasal vowel. The unassisted phonemizer produced 'COW-ber-tin' (kˈaʊbətˌɪn)."
     },
     {
       "term": "Descartes",
@@ -171,202 +195,16 @@
       "notes": "DOO-hig per the Library of Congress Say How guide. The unassisted British phonemizer produced dyoo-hig (djˈuːhɪɡ)."
     },
     {
-      "term": "Febreze",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "fəbɹˈiːz",
-        "en-us": "fəbɹˈiːz"
-      },
-      "source_url": "https://forvo.com/word/febreze/",
-      "verified_at": "2026-08-13",
-      "notes": "fuh-BREEZ, supported by the recorded English pronunciations and phonetic spelling. The unassisted phonemizer produced FEB-rez (fˈɛbɹɛz)."
-    },
-    {
-      "term": "Kufa",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "kˈuːfə",
-        "en-us": "kˈuːfə"
-      },
-      "source_url": "https://www.dictionary.com/browse/kufa",
-      "verified_at": "2026-08-13",
-      "notes": "KOO-fuh for the Iraqi city, per Random House's pronunciation at Dictionary.com. The unassisted British phonemizer produced KYOO-fuh (kjˈuːfə)."
-    },
-    {
-      "term": "Alain de Botton",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "ɐlˈɑː də bˈɒtən",
-        "en-us": "ɐlˈɑː də bˈɑːtən"
-      },
-      "source_url": "https://www.tapesearch.com/episode/unedited-alain-de-botton-with-krista-tippett-2012/22JC8xunPQeWTQgQhmNLdc",
-      "verified_at": "2026-08-13",
-      "notes": "uh-LAHN duh BOT-un, based on de Botton saying his own name after the interviewer asks at 00:30. The unassisted phonemizer produced uh-LAYN."
-    },
-    {
-      "term": "akrasia",
+      "term": "elenchus",
       "aliases": [],
       "case_sensitive": false,
       "phonemes": {
-        "en-gb": "əkɹˈeɪzɪə",
-        "en-us": "əkɹˈeɪziə"
+        "en-gb": "ɪlˈɛŋkəs",
+        "en-us": "ɪlˈɛŋkəs"
       },
-      "source_url": "https://www.collinsdictionary.com/dictionary/english/akrasia",
+      "source_url": "https://www.merriam-webster.com/dictionary/elenchus",
       "verified_at": "2026-08-13",
-      "notes": "uh-KRAY-zee-uh per Collins. The unassisted phonemizer began with a full a vowel."
-    },
-    {
-      "term": "Rorschach",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "ɹˈɔːʃɑːk",
-        "en-us": "ɹˈɔːɹʃɑːk"
-      },
-      "source_url": "https://dictionary.cambridge.org/pronunciation/english/rorschach",
-      "verified_at": "2026-08-13",
-      "notes": "RAW-shark per Cambridge Dictionary. The unassisted phonemizer produced RAW-shatch."
-    },
-    {
-      "term": "Proust",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "pɹˈuːst",
-        "en-us": "pɹˈuːst"
-      },
-      "source_url": "https://dictionary.cambridge.org/pronunciation/english/proust",
-      "verified_at": "2026-08-13",
-      "notes": "PROOST per Cambridge Dictionary. The unassisted phonemizer produced PROWST."
-    },
-    {
-      "term": "Werther",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "vˈeətə",
-        "en-us": "vˈɛɹtɚ"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/The_Sorrows_of_Young_Werther",
-      "verified_at": "2026-08-13",
-      "notes": "German [ˈveːɐ̯tɐ], anglicised 'VAIR-ter' (as in the Werther effect, named for Goethe's novel). The unassisted phonemizer produced an English w and a voiced th (wˈɜːðə), both wrong."
-    },
-    {
-      "term": "Ichiro Kishimi",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "ˈiːtʃiɹəʊ kɪˈʃiːmi",
-        "en-us": "ˈiːtʃiɹoʊ kɪˈʃiːmi"
-      },
-      "source_url": "https://www.gentosha.jp/author/711",
-      "verified_at": "2026-08-13",
-      "notes": "ee-chee-roh kee-SHEE-mee. Gentosha gives the author's own name reading as 岸見一郎（きしみいちろう）. The unassisted British phonemizer produced ik-ee-AIR-oh KISH-i-mee."
-    },
-    {
-      "term": "Fumitake Koga",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "fˌuːmiˈtɑːkɛ kˈəʊɡə",
-        "en-us": "fˌuːmiˈtɑːkɛ kˈoʊɡə"
-      },
-      "source_url": "https://www.1101.com/n/s/school_lecture_34",
-      "verified_at": "2026-08-13",
-      "notes": "foo-mee-TAH-keh KOH-guh. Hobonichi gives the author's name reading as 古賀史健（こがふみたけ）. The unassisted British phonemizer said FYOO-mi-take."
-    },
-    {
-      "term": "Peugeot",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "pˈɜːʒəʊ",
-        "en-us": "pjˈuːʒoʊ"
-      },
-      "source_url": "https://en.wiktionary.org/wiki/Peugeot",
-      "verified_at": "2026-08-13",
-      "notes": "Wiktionary: UK /ˈpɜːʒəʊ/, US /ˈpjuːʒoʊ/ (French /pø.ʒo/). The unassisted phonemizer produced 'PYOO-ji-ott' (pjˈuːdʒɪˌɒt), which is wrong."
-    },
-    {
-      "term": "Gilgamesh",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "ɡˈɪlɡəmˌɛʃ",
-        "en-us": "ɡˈɪlɡəmˌɛʃ"
-      },
-      "source_url": "https://en.wiktionary.org/wiki/Gilgamesh",
-      "verified_at": "2026-08-13",
-      "notes": "Wiktionary: /ˈɡɪl.ɡə.mɛʃ/. The unassisted phonemizer produced 'GIL-gay-məsh' (ɡˈɪlɡeɪməʃ) with a wrong second vowel."
-    },
-    {
-      "term": "Nguyen",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "nwˈɪn",
-        "en-us": "nwˈɪn"
-      },
-      "source_url": "https://en.wiktionary.org/wiki/Nguyen",
-      "verified_at": "2026-08-13",
-      "notes": "Wiktionary anglicised: /wɪn/, /nwɪn/; 'noo-YEN' is listed only as a spelling pronunciation, and the unassisted phonemizer produced it (nˈuːjɛn)."
-    },
-    {
-      "term": "Cajamarca",
-      "aliases": [],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "kˌɑːhəmˈɑːkə",
-        "en-us": "kˌɑːhəmˈɑːɹkə"
-      },
-      "source_url": "https://en.wiktionary.org/wiki/Cajamarca",
-      "verified_at": "2026-08-13",
-      "notes": "Spanish /kaxaˈmaɾka/ (Wiktionary), anglicised 'kah-ha-MAR-ka' — the j is an h sound. The unassisted phonemizer produced 'ka-JAH-mah-ka' (kˈadʒɐmˌɑːkə), which is wrong."
-    },
-    {
-      "term": "Atahuallpa",
-      "aliases": [
-        "Atahualpa"
-      ],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "ˌætəˈwɑːlpə",
-        "en-us": "ˌɑtəˈwɑlpə"
-      },
-      "source_url": "https://www.collinsdictionary.com/us/dictionary/english/atahualpa",
-      "verified_at": "2026-08-13",
-      "notes": "Collins gives British /ˌætəˈwɑːlpə/ and American /ˌɑtəˈwɑlpə/. The unassisted phonemizer produced 'AT-ə-hyoo-al-pə', which is wrong."
-    },
-    {
-      "term": "amygdala",
-      "aliases": [
-        "amygdalae"
-      ],
-      "case_sensitive": false,
-      "phonemes": {
-        "en-gb": "əmˈɪɡdələ",
-        "en-us": "əmˈɪɡdələ"
-      },
-      "source_url": "https://dictionary.cambridge.org/pronunciation/english/amygdala",
-      "verified_at": "2026-08-13",
-      "notes": "Cambridge: /əˈmɪɡ.dəl.ə/ (ə-MIG-də-lə). The unassisted phonemizer produced 'am-ig-DAH-lə' (ˌamɪɡdˈɑːlə) with wrong stress and vowel."
-    },
-    {
-      "term": "Acemoglu",
-      "aliases": [
-        "Acemoğlu"
-      ],
-      "case_sensitive": true,
-      "phonemes": {
-        "en-gb": "ˌɑːdʒəmˈəʊluː",
-        "en-us": "ˌɑːdʒəmˈoʊluː"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Daron_Acemoglu",
-      "verified_at": "2026-08-13",
-      "notes": "Turkish [aˈdʒemoːɫu] (Wikipedia lead IPA): the c is a j sound and the ğ is silent — 'ah-jem-OH-loo'. The unassisted phonemizer produced 'a-SEM-oh-gloo' (ɐsˈɛməɡlˌuː), which is wrong."
+      "notes": "ih-LENG-kus, with the Greek chi as a hard k, per Merriam-Webster. The unassisted phonemizer produced ih-LEN-chus with a church-ch (ɪlˈɛntʃəs)."
     },
     {
       "term": "Epictetus",
@@ -381,16 +219,28 @@
       "notes": "Standard English /ˌɛpɪkˈtiːtəs/ 'ep-ik-TEE-təs'. The unassisted phonemizer stressed the first syllable with a short second vowel (ˈɛpɪktˌɛtəs)."
     },
     {
-      "term": "Commodus",
+      "term": "Febreze",
       "aliases": [],
       "case_sensitive": true,
       "phonemes": {
-        "en-gb": "kˈɒmədəs",
-        "en-us": "kˈɑːmədəs"
+        "en-gb": "fəbɹˈiːz",
+        "en-us": "fəbɹˈiːz"
       },
-      "source_url": "https://en.wiktionary.org/wiki/Commodus",
+      "source_url": "https://forvo.com/word/febreze/",
       "verified_at": "2026-08-13",
-      "notes": "Standard English /ˈkɒmədəs/ 'KOM-ə-dəs'. The unassisted phonemizer produced 'kə-MOD-əs' (kəmˈɒdəs) with wrong stress."
+      "notes": "fuh-BREEZ, supported by the recorded English pronunciations and phonetic spelling. The unassisted phonemizer produced FEB-rez (fˈɛbɹɛz)."
+    },
+    {
+      "term": "Fumitake Koga",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "fˌuːmiˈtɑːkɛ kˈəʊɡə",
+        "en-us": "fˌuːmiˈtɑːkɛ kˈoʊɡə"
+      },
+      "source_url": "https://www.1101.com/n/s/school_lecture_34",
+      "verified_at": "2026-08-13",
+      "notes": "foo-mee-TAH-keh KOH-guh. Hobonichi gives the author's name reading as 古賀史健（こがふみたけ）. The unassisted British phonemizer said FYOO-mi-take."
     },
     {
       "term": "Gigerenzer",
@@ -403,6 +253,226 @@
       "source_url": "https://en.wikipedia.org/wiki/Gerd_Gigerenzer",
       "verified_at": "2026-08-13",
       "notes": "German surname: hard g's and ts — 'GHEE-guh-rent-ser'. The unassisted phonemizer produced 'JY-jren-zə' (dʒˈaɪdʒɹɛnzə) with English j sounds, which is wrong."
+    },
+    {
+      "term": "Gilgamesh",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ɡˈɪlɡəmˌɛʃ",
+        "en-us": "ɡˈɪlɡəmˌɛʃ"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Gilgamesh",
+      "verified_at": "2026-08-13",
+      "notes": "Wiktionary: /ˈɡɪl.ɡə.mɛʃ/. The unassisted phonemizer produced 'GIL-gay-məsh' (ɡˈɪlɡeɪməʃ) with a wrong second vowel."
+    },
+    {
+      "term": "Guidara",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "ɡwɪdˈɑːɹə",
+        "en-us": "ɡwɪdˈɑːɹə"
+      },
+      "source_url": "https://forvo.com/word/will_guidara/",
+      "verified_at": "2026-08-13",
+      "notes": "gwi-DAR-ah, as the author says it in his own talks and podcast introductions. The unassisted phonemizer produced guy-DAR-ah (ɡaɪdˈɑːɹə)."
+    },
+    {
+      "term": "Ichiro Kishimi",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ˈiːtʃiɹəʊ kɪˈʃiːmi",
+        "en-us": "ˈiːtʃiɹoʊ kɪˈʃiːmi"
+      },
+      "source_url": "https://www.gentosha.jp/author/711",
+      "verified_at": "2026-08-13",
+      "notes": "ee-chee-roh kee-SHEE-mee. Gentosha gives the author's own name reading as 岸見一郎（きしみいちろう）. The unassisted British phonemizer produced ik-ee-AIR-oh KISH-i-mee."
+    },
+    {
+      "term": "Jay-Z",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "dʒˈeɪ zˈiː",
+        "en-us": "dʒˈeɪ zˈiː"
+      },
+      "source_url": "https://forvo.com/word/jay-z/",
+      "verified_at": "2026-08-13",
+      "notes": "The artist's name is universally jay-ZEE, including in British usage. The unassisted en-gb phonemizer produced jay-ZED (dʒˈeɪzˈɛd)."
+    },
+    {
+      "term": "Joost",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "jˈəʊst",
+        "en-us": "jˈoʊst"
+      },
+      "source_url": "https://forvo.com/word/joost/",
+      "verified_at": "2026-08-13",
+      "notes": "Dutch given name pronounced yohst, documented by Forvo's Dutch entries. The unassisted phonemizer produced 'juiced' (dʒˈuːst). Case-sensitive to avoid touching unrelated words."
+    },
+    {
+      "term": "Kanye",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "kˈɑːnjeɪ",
+        "en-us": "kˈɑːnjeɪ"
+      },
+      "source_url": "https://forvo.com/word/kanye_west/",
+      "verified_at": "2026-08-13",
+      "notes": "KAHN-yay, per the artist's own usage and pronunciation dictionaries. The unassisted phonemizer produced KAN-eye (kˈanaɪ)."
+    },
+    {
+      "term": "Kufa",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "kˈuːfə",
+        "en-us": "kˈuːfə"
+      },
+      "source_url": "https://www.dictionary.com/browse/kufa",
+      "verified_at": "2026-08-13",
+      "notes": "KOO-fuh for the Iraqi city, per Random House's pronunciation at Dictionary.com. The unassisted British phonemizer produced KYOO-fuh (kjˈuːfə)."
+    },
+    {
+      "term": "Michelin",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "mˈɪʃəlɪn",
+        "en-us": "mˈɪʃəlɪn"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/michelin",
+      "verified_at": "2026-08-13",
+      "notes": "MISH-uh-lin per Cambridge Dictionary. The unassisted phonemizer produced MITCH-i-lin (mˈɪtʃɪlˌɪn)."
+    },
+    {
+      "term": "Nguyen",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "nwˈɪn",
+        "en-us": "nwˈɪn"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Nguyen",
+      "verified_at": "2026-08-13",
+      "notes": "Wiktionary anglicised: /wɪn/, /nwɪn/; 'noo-YEN' is listed only as a spelling pronunciation, and the unassisted phonemizer produced it (nˈuːjɛn)."
+    },
+    {
+      "term": "Peugeot",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "pˈɜːʒəʊ",
+        "en-us": "pjˈuːʒoʊ"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Peugeot",
+      "verified_at": "2026-08-13",
+      "notes": "Wiktionary: UK /ˈpɜːʒəʊ/, US /ˈpjuːʒoʊ/ (French /pø.ʒo/). The unassisted phonemizer produced 'PYOO-ji-ott' (pjˈuːdʒɪˌɒt), which is wrong."
+    },
+    {
+      "term": "Plato",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "plˈeɪtəʊ",
+        "en-us": "plˈeɪtoʊ"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/plato",
+      "verified_at": "2026-08-13",
+      "notes": "PLAY-toe per Cambridge Dictionary. The unassisted British phonemizer produced PLAH-toe (plˈɑːtəʊ). Case-sensitive to avoid touching unrelated lowercase text."
+    },
+    {
+      "term": "Proust",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "pɹˈuːst",
+        "en-us": "pɹˈuːst"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/proust",
+      "verified_at": "2026-08-13",
+      "notes": "PROOST per Cambridge Dictionary. The unassisted phonemizer produced PROWST."
+    },
+    {
+      "term": "Rilke",
+      "aliases": [
+        "Rainer Maria Rilke"
+      ],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "ɹˈɪlkə",
+        "en-us": "ɹˈɪlkə"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Rilke",
+      "verified_at": "2026-08-15",
+      "notes": "Standard German [ˈʁɪlkə], two syllables with a final schwa. The unassisted phonemizer dropped the schwa entirely (ɹˈɪlk, 'rilk')."
+    },
+    {
+      "term": "Rorschach",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ɹˈɔːʃɑːk",
+        "en-us": "ɹˈɔːɹʃɑːk"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/rorschach",
+      "verified_at": "2026-08-13",
+      "notes": "RAW-shark per Cambridge Dictionary. The unassisted phonemizer produced RAW-shatch."
+    },
+    {
+      "term": "Rowling",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "ɹˈəʊlɪŋ",
+        "en-us": "ɹˈoʊlɪŋ"
+      },
+      "source_url": "https://dictionary.cambridge.org/pronunciation/english/rowling",
+      "verified_at": "2026-08-13",
+      "notes": "ROH-ling, like rolling without a strongly sounded second l. The unassisted British phonemizer produced ROU-ling with the vowel in 'out'."
+    },
+    {
+      "term": "Sforza",
+      "aliases": [],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "sfˈɔːtsə",
+        "en-us": "sfˈɔːɹtsə"
+      },
+      "source_url": "https://en.wiktionary.org/wiki/Sforza",
+      "verified_at": "2026-08-13",
+      "notes": "Italian surname, approximately SFORT-sa. The unassisted British phonemizer treated the initial letters as the word 'S' plus 'forza' and produced ess-FOR-za, so a dictionary override is required."
+    },
+    {
+      "term": "Sloterdijk",
+      "aliases": [
+        "Peter Sloterdijk"
+      ],
+      "case_sensitive": false,
+      "phonemes": {
+        "en-gb": "slˈəʊtədˌaɪk",
+        "en-us": "slˈoʊtɚdˌaɪk"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Peter_Sloterdijk",
+      "verified_at": "2026-08-15",
+      "notes": "English /ˈsloʊtərdaɪk/, German [ˈsloːtɐˌdaɪk]: the Dutch 'dijk' element rhymes with 'dike'. The unassisted phonemizer ended it '-dake' (slˈəʊtədˌeɪk)."
+    },
+    {
+      "term": "Werther",
+      "aliases": [],
+      "case_sensitive": true,
+      "phonemes": {
+        "en-gb": "vˈeətə",
+        "en-us": "vˈɛɹtɚ"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/The_Sorrows_of_Young_Werther",
+      "verified_at": "2026-08-13",
+      "notes": "German [ˈveːɐ̯tɐ], anglicised 'VAIR-ter' (as in the Werther effect, named for Goethe's novel). The unassisted phonemizer produced an English w and a voiced th (wˈɜːðə), both wrong."
     }
   ]
 }

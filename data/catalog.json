@@ -35,6 +35,16 @@
       "aliases": []
     },
     {
+      "id": "cass-sunstein",
+      "kind": "author",
+      "name": "Cass Sunstein",
+      "state": "catalogued",
+      "path": "library/authors/cass-sunstein/author.json",
+      "aliases": [
+        "Cass R. Sunstein"
+      ]
+    },
+    {
       "id": "charles-duhigg",
       "kind": "author",
       "name": "Charles Duhigg",
@@ -109,6 +119,16 @@
       "aliases": []
     },
     {
+      "id": "james-a-robinson",
+      "kind": "author",
+      "name": "James A. Robinson",
+      "state": "catalogued",
+      "path": "library/authors/james-a-robinson/author.json",
+      "aliases": [
+        "James Alan Robinson"
+      ]
+    },
+    {
       "id": "james-clear",
       "kind": "author",
       "name": "James Clear",
@@ -154,6 +174,14 @@
       "name": "Michael Greger",
       "state": "catalogued",
       "path": "library/authors/michael-greger/author.json",
+      "aliases": []
+    },
+    {
+      "id": "peter-sloterdijk",
+      "kind": "author",
+      "name": "Peter Sloterdijk",
+      "state": "catalogued",
+      "path": "library/authors/peter-sloterdijk/author.json",
       "aliases": []
     },
     {
@@ -605,23 +633,18 @@
       "aliases": []
     },
     {
-      "id": "james-a-robinson",
-      "kind": "author",
-      "name": "James A. Robinson",
+      "id": "you-must-change-your-life-sloterdijk",
+      "kind": "book",
+      "name": "You Must Change Your Life: On Anthropotechnics",
       "state": "catalogued",
-      "path": "library/authors/james-a-robinson/author.json",
+      "path": "library/books/you-must-change-your-life-sloterdijk/book.json",
+      "author_ids": [
+        "peter-sloterdijk"
+      ],
       "aliases": [
-        "James Alan Robinson"
-      ]
-    },
-    {
-      "id": "cass-sunstein",
-      "kind": "author",
-      "name": "Cass Sunstein",
-      "state": "catalogued",
-      "path": "library/authors/cass-sunstein/author.json",
-      "aliases": [
-        "Cass R. Sunstein"
+        "Du mußt dein Leben ändern",
+        "Du mußt dein Leben ändern: Über Anthropotechnik",
+        "You Must Change Your Life"
       ]
     }
   ]

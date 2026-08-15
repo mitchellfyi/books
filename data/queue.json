@@ -229,6 +229,14 @@
       "source": "discovery",
       "added_at": "2026-08-13",
       "notes": "Discovered from The Socratic Method and Don't Believe Everything You Think: the Stoic source both books' assessments point readers toward."
+    },
+    {
+      "book_id": "you-must-change-your-life-sloterdijk",
+      "priority": 31,
+      "status": "done",
+      "source": "user",
+      "added_at": "2026-08-15",
+      "notes": "German original 'Du mußt dein Leben ändern' (2009); Polity 2013 translation by Wieland Hoban."
     }
   ]
 }

@@ -1012,6 +1012,59 @@
         "library/books/the-choice-factory-richard-shotton/book.json"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "change-your-life-written-by-peter-sloterdijk",
+      "source_id": "you-must-change-your-life-sloterdijk",
+      "target_id": "peter-sloterdijk",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Peter Sloterdijk wrote You Must Change Your Life, published in German in 2009 and in Wieland Hoban's English translation in 2013.",
+      "source_refs": [
+        "library/books/you-must-change-your-life-sloterdijk/book.json#publisher-record",
+        "library/books/you-must-change-your-life-sloterdijk/book.json#book-encyclopedia"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "change-your-life-contrasts-with-atomic-habits",
+      "source_id": "you-must-change-your-life-sloterdijk",
+      "target_id": "atomic-habits-clear",
+      "type": "contrasts-with",
+      "basis": "inference",
+      "description": "Two opposite treatments of the same subject. Sloterdijk explains what practice is and why humans are formed by it, and offers no method; Clear supplies method and skips the philosophy. Read together they cover what each one leaves out.",
+      "source_refs": [],
+      "confidence": "high"
+    },
+    {
+      "id": "change-your-life-related-to-meditations",
+      "source_id": "you-must-change-your-life-sloterdijk",
+      "target_id": "meditations-aurelius",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Meditations is exactly the kind of text Sloterdijk's thesis reinterprets: not a statement of belief but a private training document, written to be rehearsed. His argument is the strongest case for reading it that way.",
+      "source_refs": [],
+      "confidence": "medium"
+    },
+    {
+      "id": "change-your-life-related-to-deep-work",
+      "source_id": "you-must-change-your-life-sloterdijk",
+      "target_id": "deep-work-newport",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Newport's ritualised training toward a demanding standard is a modern instance of the vertical tension Sloterdijk describes — a secular exercise system with a trainer's voice.",
+      "source_refs": [],
+      "confidence": "medium"
+    },
+    {
+      "id": "change-your-life-related-to-courage-to-be-disliked",
+      "source_id": "you-must-change-your-life-sloterdijk",
+      "target_id": "the-courage-to-be-disliked-kishimi",
+      "type": "related-to",
+      "basis": "inference",
+      "description": "Both argue that the self is made rather than found, and both are philosophy rather than technique; Kishimi's Adlerian dialogue is far more accessible about the same commitment.",
+      "source_refs": [],
+      "confidence": "medium"
     }
   ]
 }

@@ -1,0 +1,153 @@
+{
+  "$schema": "../../../schemas/author.schema.json",
+  "schema_version": 1,
+  "id": "peter-sloterdijk",
+  "type": "author",
+  "name": "Peter Sloterdijk",
+  "alternate_names": [],
+  "profile": {
+    "one_line": {
+      "text": "German philosopher and cultural theorist who reads human history as a record of training and self-formation rather than of ideas alone.",
+      "source_ids": [
+        "zkm-profile",
+        "college-de-france"
+      ],
+      "basis": "synthesis"
+    },
+    "biography": {
+      "text": "Born in Karlsruhe on 26 June 1947 to a German mother and a Dutch father, Sloterdijk studied philosophy, history and German at Munich and Hamburg between 1968 and 1974, completing a doctorate on Weimar-era autobiography in the mid-1970s. He lived at Bhagwan Shree Rajneesh's ashram in Pune between 1978 and 1980 and then worked as a freelance writer. His Critique of Cynical Reason (1983) became one of the best-selling philosophy books in post-war Germany. He became professor of philosophy and aesthetics at the Karlsruhe University of Arts and Design in 1992 and was its rector from 2001 to 2015, led cultural philosophy and media theory at the Academy of Fine Arts in Vienna from 1993 to 2008, and co-hosted the television discussion programme Das Philosophische Quartett from 2002 to 2012.",
+      "source_ids": [
+        "zkm-profile",
+        "college-de-france",
+        "author-encyclopedia"
+      ],
+      "basis": "synthesis"
+    },
+    "background": {
+      "text": "His training is in philosophy and literary studies rather than in any empirical discipline, and much of his career has been spent in art schools rather than philosophy faculties. That placement shows in the work: he writes as an essayist drawing on literature, religious history and cultural criticism, and he has had an unusually public profile in Germany through broadcasting and newspaper polemic.",
+      "source_ids": [
+        "zkm-profile",
+        "college-de-france",
+        "author-encyclopedia"
+      ],
+      "basis": "synthesis"
+    },
+    "expertise": {
+      "text": "His recognised expertise is in continental philosophy and cultural theory. The Spheres trilogy (1998–2004) is generally treated as his major work, reinterpreting human history through the spaces people build to live inside. Recurring subjects are cynicism, globalisation, anger, immunity and — in this book — practice and self-cultivation. He is a reader and synthesiser of other traditions rather than a producer of new empirical evidence.",
+      "source_ids": [
+        "zkm-profile",
+        "college-de-france",
+        "author-encyclopedia"
+      ],
+      "basis": "synthesis"
+    },
+    "perspective_and_limits": {
+      "text": "Sloterdijk is a deliberately provocative writer whose public interventions have twice drawn serious criticism: the 1999 'Rules for the Human Park' lecture on genetic selection, which led to a bitter exchange with Jürgen Habermas, and a 2009 argument that the welfare state amounts to 'fiscal kleptocracy' and that taxation should give way to voluntary giving. Both episodes attracted charges of elitism, and reviewers of this book raise the same charge about its contemplative ideal. His method is erudite association across literature, religion and history rather than systematic argument or evidence-gathering, which is why readers who want propositions tested rather than reframed often find him unsatisfying.",
+      "source_ids": [
+        "author-encyclopedia",
+        "radphil-power-author"
+      ],
+      "basis": "inference"
+    }
+  },
+  "selected_works": [
+    {
+      "title": "Critique of Cynical Reason",
+      "year": 1983,
+      "kind": "book",
+      "relationship": "His breakthrough book and best-known work.",
+      "source_ids": [
+        "zkm-profile",
+        "college-de-france"
+      ]
+    },
+    {
+      "title": "Spheres trilogy: Bubbles, Globes, Foams",
+      "year": 1998,
+      "kind": "book series",
+      "relationship": "Published 1998–2004 and generally treated as his major philosophical project.",
+      "source_ids": [
+        "college-de-france",
+        "author-encyclopedia"
+      ]
+    },
+    {
+      "title": "Rage and Time",
+      "year": 2006,
+      "kind": "book",
+      "relationship": "A companion study tracing a single passion across history.",
+      "source_ids": [
+        "college-de-france",
+        "author-encyclopedia"
+      ]
+    },
+    {
+      "title": "You Must Change Your Life",
+      "year": 2009,
+      "kind": "book",
+      "relationship": "The book profiled in this library.",
+      "source_ids": [
+        "author-encyclopedia"
+      ]
+    }
+  ],
+  "research": {
+    "sources": [
+      {
+        "id": "zkm-profile",
+        "title": "Peter Sloterdijk — person profile",
+        "author_or_publisher": "ZKM Center for Art and Media Karlsruhe",
+        "url": "https://zkm.de/en/persons/peter-sloterdijk",
+        "type": "employer",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-15",
+        "supports": "Birth date and place, parentage, studies at Munich and Hamburg 1968–1974, 1976 doctorate, the Pune years, the Karlsruhe professorship and rectorship, the Vienna post, and the broadcasting role.",
+        "limitations": "An institutional profile written to present him favourably; it records honours and omits the controversies."
+      },
+      {
+        "id": "college-de-france",
+        "title": "Peter Sloterdijk — biography and publications",
+        "author_or_publisher": "Collège de France",
+        "url": "https://www.college-de-france.fr/en/chair/peter-sloterdijk-the-invention-of-europe-through-languages-and-cultures-annual-chair/biography",
+        "type": "employer",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-08-15",
+        "supports": "Education and thesis subjects, the rectorship dates, the 2023–24 annual chair, and the list of major publications.",
+        "limitations": "Also an institutional profile. Its date for this book (2011) disagrees with the German first edition of 2009, so publication facts were taken from the publisher and encyclopedic records instead."
+      },
+      {
+        "id": "author-encyclopedia",
+        "title": "Peter Sloterdijk (encyclopedia article)",
+        "author_or_publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Peter_Sloterdijk",
+        "type": "secondary-summary",
+        "independence": "community",
+        "quality": "medium",
+        "accessed_at": "2026-08-15",
+        "supports": "The 1999 'Rules for the Human Park' dispute with Habermas, the 2009 welfare-state argument and the elitism charge, plus corroboration of positions and principal works.",
+        "limitations": "Community-edited; used for the existence and outline of the controversies, which are widely documented, rather than for adjudicating them."
+      },
+      {
+        "id": "radphil-power-author",
+        "title": "On your bike (review of You Must Change Your Life)",
+        "author_or_publisher": "Nina Power, Radical Philosophy 183",
+        "url": "https://www.radicalphilosophy.com/reviews/individual-reviews/on-your-bike",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-08-15",
+        "supports": "That the elitism charge is raised specifically against this book's contemplative ideal, and that women are almost absent from his cast of practitioners.",
+        "limitations": "A review of one book, written from a stated political position; evidence about this work rather than about his career as a whole."
+      }
+    ],
+    "citations": {}
+  },
+  "workflow": {
+    "status": "complete",
+    "coverage_notes": "Built from two official institutional profiles, an encyclopedic article for the documented controversies, and a specialist review for criticism specific to this book. No interviews were consulted, so his own account of his intent rests on his publisher-facing statements.",
+    "last_researched": "2026-08-15",
+    "next_steps": []
+  }
+}
