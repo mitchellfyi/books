@@ -147,12 +147,15 @@ def phonemize_with_dictionary(
             if normal:
                 pieces.append(normal)
         custom = entry["phonemes"][lang].strip()
+        if possessive:
+            custom += possessive_suffix(custom)
+        # Validate what is actually sent to the model, suffix included.
         if valid_symbols is not None:
             invalid = sorted(set(custom) - valid_symbols)
             if invalid:
                 rendered = " ".join(repr(item) for item in invalid)
                 raise ValueError(f"pronunciation for '{entry['term']}' has unsupported symbols: {rendered}")
-        pieces.append(custom + possessive_suffix(custom) if possessive else custom)
+        pieces.append(custom)
         used.append(entry["term"])
         cursor = match.end()
 
