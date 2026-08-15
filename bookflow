@@ -629,6 +629,11 @@ def inspect_pronunciation(args: argparse.Namespace) -> None:
     run_managed(command)
 
 
+# Room for far more playlists than a person will make, and small enough that a
+# runaway or hostile PUT cannot fill memory.
+MAX_PLAYLIST_BYTES = 2_000_000
+
+
 class LibraryHandler(SimpleHTTPRequestHandler):
     """Static server plus playlist persistence, audio seeking, and fresh data."""
 
@@ -664,15 +669,31 @@ class LibraryHandler(SimpleHTTPRequestHandler):
             self.no_cache = False
         super().end_headers()
 
+    def discard(self, length: int) -> None:
+        """Read and drop a body we will not use, so the client can read the reply.
+
+        Answering before the sender has finished sending breaks the pipe, and
+        it never learns why it was refused. Beyond the cap the connection is
+        not worth rescuing.
+        """
+        remaining = min(max(length, 0), 32 * 1024 * 1024)
+        while remaining > 0:
+            block = self.rfile.read(min(65536, remaining))
+            if not block:
+                return
+            remaining -= len(block)
+
     def do_PUT(self) -> None:  # noqa: N802
-        if self.path.split("?", 1)[0] != "/api/playlists":
-            self.send_error(404)
-            return
         try:
             length = int(self.headers.get("Content-Length", 0))
         except ValueError:
             length = -1
-        if length > 2_000_000:
+        if self.path.split("?", 1)[0] != "/api/playlists":
+            self.discard(length)
+            self.send_error(404)
+            return
+        if length > MAX_PLAYLIST_BYTES:
+            self.discard(length)
             self.send_error(413, "playlists payload too large")
             return
         if length <= 0:
