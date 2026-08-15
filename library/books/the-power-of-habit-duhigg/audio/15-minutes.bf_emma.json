@@ -13,14 +13,14 @@
   "output_format": "mp3",
   "source_script": "library/books/the-power-of-habit-duhigg/scripts/15-minutes.md",
   "source_script_sha256": "42c2bc62bc3f717a3d194368d096c889f5e952497f46acc3591802e10704e32f",
-  "pronunciation_dictionary_sha256": "bdc28e82b2ca5bbc57f1f6d80ad69ac5928a882d7fd33dd3be4ece5fa4bc8504",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Duhigg",
     "Febreze"
   ],
   "pronunciation_entries_sha256": "7882d06e61a89bdb3f69057d17bf55e2d0cf6edac2b9a92e3f5d5bbb20f6582f",
   "script_words": 2111,
-  "audio_seconds": 827.576,
-  "measured_wpm": 153.05,
-  "generated_at": "2026-08-13T12:07:53.317474+00:00"
+  "audio_seconds": 827.192,
+  "measured_wpm": 153.12,
+  "generated_at": "2026-08-15T15:01:18.904210+00:00"
 }
