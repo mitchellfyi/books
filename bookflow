@@ -330,7 +330,7 @@ def book_needs(book_id: str) -> str:
         if script["meta"].get("status") != "complete":
             missing_scripts.append(level)
         elif not any(p for p in (directory / "audio").glob(f"{level}.*")
-                     if p.suffix not in {".json", ".gitkeep"}):
+                     if p.suffix != ".json"):  # the rest of the pair is the sidecar
             missing_audio.append(level)
     if missing_scripts:
         needs.append("scripts: " + ", ".join(missing_scripts))
@@ -522,8 +522,8 @@ def build_app(_: argparse.Namespace | None = None) -> None:
             # audio variants per voice: <level>.<voice>.<format> + sidecar json
             variants = {}
             for audio in sorted((directory / "audio").glob(f"{level}.*")):
-                if audio.suffix in {".json", ".gitkeep"}:
-                    continue
+                if audio.suffix == ".json":
+                    continue  # the sidecar beside each recording
                 parts = audio.name.split(".")
                 voice = parts[1] if len(parts) == 3 else "unknown"
                 sidecar_path = directory / "audio" / f"{level}.{voice}.json"
