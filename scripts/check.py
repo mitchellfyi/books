@@ -79,7 +79,12 @@ def load_json(path: Path) -> dict | None:
 
 @lru_cache(maxsize=None)
 def load_json_once(path: Path) -> dict | None:
-    """load_json for documents several checks reach for, read once per run."""
+    """Read a library document once per run, whichever check asks first.
+
+    Several checks reach for the same book.json — the book pass, the queue
+    pass, a relationship source_ref — so this both saves the re-reads and
+    keeps a broken file from being reported once per reader.
+    """
     return load_json(path)
 
 
@@ -320,7 +325,7 @@ def check_relationships(relationships: dict, entities: dict) -> None:
 
 def check_authors() -> None:
     for d in library_dirs("library/authors"):
-        doc = load_json(d / "author.json")
+        doc = load_json_once(d / "author.json")
         if not doc:
             continue
         validate_schema(doc, "author.schema.json", d / "author.json")
@@ -349,7 +354,7 @@ def check_book_record(d: Path, doc: dict, entities: dict, tag_ids: set) -> None:
 def check_book_content(d: Path, doc: dict, rating_cfg: dict) -> dict | None:
     """The structured content and everything a 'complete' status promises."""
     content_path = d / "content.json"
-    content = load_json(content_path) if content_path.exists() else None
+    content = load_json_once(content_path) if content_path.exists() else None
     researched = doc.get("workflow", {}).get("status") != "stub"
 
     if content:
@@ -532,7 +537,7 @@ def check_books(only: str | None, audio_cfg: dict, rating_cfg: dict,
     for d in library_dirs("library/books"):
         if only and d.name != only:
             continue
-        doc = load_json(d / "book.json")
+        doc = load_json_once(d / "book.json")
         if not doc:
             continue
         check_book_record(d, doc, entities, tag_ids)
