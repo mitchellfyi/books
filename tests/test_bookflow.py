@@ -10,7 +10,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from fixtures import bookflow, bookflow_at, copy_into, empty_repository
+from fixtures import (
+    FIXTURE_BOOK,
+    bookflow,
+    bookflow_at,
+    copy_into,
+    empty_repository,
+    one_book_repository,
+    read,
+)
 
 
 class SlugTests(unittest.TestCase):
@@ -135,6 +143,102 @@ class InitBookTests(unittest.TestCase):
             self.assertEqual(sorted(p.stem for p in scripts.glob("*.md")), levels)
 
 
+class InitRefusalTests(unittest.TestCase):
+    """Every guardrail init has, and the words it refuses in.
+
+    These are the messages a person meets when they mistype something, so the
+    wording is the feature; mutation testing found all of them deletable
+    without a test noticing.
+    """
+
+    CASES = [
+        ({"title": "李白", "author": "Someone"},
+         "--title must contain at least one letter or number"),
+        ({"title": "A Book", "author": "李白"},
+         "--author must contain at least one letter or number"),
+        ({"title": "A Book", "author": "Someone", "book_id": "Not_Kebab"},
+         "--book-id must be lowercase kebab-case; try 'not-kebab'"),
+        ({"title": "A Book", "author": "Someone", "author_id": "Not_Kebab"},
+         "--author-id must be lowercase kebab-case"),
+        # Slugs to something, but the derived id does not: a surname with no
+        # ASCII leaves 'poems-'.
+        ({"title": "Poems", "author": "Bai 李白"},
+         "Could not derive a usable book id"),
+        ({"title": "Deep Work", "author": "Cal Newport"},
+         "Book already exists"),
+        ({"title": "Deep Work: Rules for Focused Success", "author": "Someone Else"},
+         "looks like the same work"),
+    ]
+
+    def test_each_refusal_says_why(self) -> None:
+        for fields, expected in self.CASES:
+            with self.subTest(expected), tempfile.TemporaryDirectory() as directory:
+                root = one_book_repository(Path(directory))
+                arguments = {"book_id": None, "author_id": None, "force": False,
+                             "note": "", "discovered": False, **fields}
+                with bookflow_at(root), self.assertRaises(SystemExit) as caught:
+                    with contextlib.redirect_stdout(io.StringIO()):
+                        bookflow.init_book(argparse.Namespace(**arguments))
+                self.assertIn(expected, str(caught.exception))
+
+    def test_force_overrides_the_similar_title_refusal(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            with bookflow_at(root):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    bookflow.init_book(argparse.Namespace(
+                        title="Deep Work: Rules for Focused Success", author="Someone Else",
+                        book_id=None, author_id=None, force=True, note="", discovered=False))
+            self.assertTrue((root / "library/books/deep-work-else").is_dir())
+
+
+class QueueTests(unittest.TestCase):
+    def queued(self, root: Path) -> list[dict]:
+        return read(root / "data/queue.json")["queue"]
+
+    def test_an_unknown_status_is_refused_by_name(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            with bookflow_at(root), self.assertRaises(SystemExit) as caught:
+                bookflow.cmd_queue(argparse.Namespace(set=[FIXTURE_BOOK, "sideways"]))
+        self.assertIn("status must be one of: ready, in-progress, done, blocked",
+                      str(caught.exception))
+
+    def test_setting_a_book_that_is_not_queued_says_so(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            with bookflow_at(root), self.assertRaises(SystemExit) as caught:
+                bookflow.cmd_queue(argparse.Namespace(set=["ghost", "done"]))
+        self.assertIn("not in queue: ghost", str(caught.exception))
+
+    def test_a_status_change_is_written(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            with bookflow_at(root):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    bookflow.cmd_queue(argparse.Namespace(set=[FIXTURE_BOOK, "blocked"]))
+            self.assertEqual([item["status"] for item in self.queued(root)], ["blocked"])
+
+    def test_queueing_a_book_twice_leaves_one_entry(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            with bookflow_at(root):
+                bookflow.queue_add(FIXTURE_BOOK, source="user", notes="second")
+                entries = self.queued(root)
+            self.assertEqual(len(entries), 1)
+            self.assertNotIn("notes", entries[0])
+
+    def test_a_new_book_goes_to_the_end_of_the_queue(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            with bookflow_at(root):
+                bookflow.queue_add("another-book", source="discovery", notes="a note")
+                entries = self.queued(root)
+        self.assertEqual([e["book_id"] for e in entries], [FIXTURE_BOOK, "another-book"])
+        self.assertEqual(entries[-1]["priority"], entries[0]["priority"] + 1)
+        self.assertEqual(entries[-1]["notes"], "a note")
+
+
 class LoadTests(unittest.TestCase):
     def test_invalid_json_names_the_file(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -199,6 +303,33 @@ class BookNeedsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             summary = self.needs(Path(directory), "some-book", {"book.json": "{not json"})
         self.assertIn("book.json (invalid JSON)", summary)
+
+    def test_a_finished_book_needs_nothing(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            with bookflow_at(root):
+                self.assertEqual(bookflow.book_needs(FIXTURE_BOOK),
+                                 "nothing — ready to mark done")
+
+    def test_a_draft_script_is_named_by_level(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            script = root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md"
+            script.write_text(script.read_text(encoding="utf-8").replace(
+                "status: complete", "status: draft"), encoding="utf-8")
+            with bookflow_at(root):
+                summary = bookflow.book_needs(FIXTURE_BOOK)
+        self.assertIn("scripts: 30-seconds", summary)
+        self.assertNotIn("audio: 30-seconds", summary)  # a draft is not owed audio yet
+
+    def test_a_complete_script_without_audio_is_named_by_level(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            for media in (root / "library/books" / FIXTURE_BOOK / "audio").glob("30-seconds.*.mp3"):
+                media.unlink()
+            with bookflow_at(root):
+                summary = bookflow.book_needs(FIXTURE_BOOK)
+        self.assertIn("audio: 30-seconds", summary)
 
     def test_missing_sources_are_reported_as_research(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
