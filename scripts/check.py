@@ -250,16 +250,17 @@ def check_configs(audio_cfg: dict, pronunciations_cfg: dict, pronunciations_path
         err(f"config/audio.json: default_voice '{audio_cfg['tts']['default_voice']}' "
             "is not listed in tts.voices")
 
-    spellings: dict[str, str] = {}
+    # Which entry claimed each spelling, so a collision names both entries.
+    # Two entries can share a spelling exactly, and "'X' collides with 'X'"
+    # left the reader searching a 38-entry file for the other one.
+    claimed_by: dict[str, str] = {}
     for entry in pronunciations_cfg["entries"]:
         for spelling in (entry["term"], *entry["aliases"]):
             folded = spelling.casefold()
-            if folded in spellings:
-                err(
-                    "config/pronunciations.json: spelling "
-                    f"'{spelling}' collides with '{spellings[folded]}'"
-                )
-            spellings[folded] = spelling
+            if folded in claimed_by:
+                err(f"config/pronunciations.json: spelling '{spelling}' in entry "
+                    f"'{entry['term']}' is already claimed by entry '{claimed_by[folded]}'")
+            claimed_by[folded] = entry["term"]
         # The entry's phonemes replace everything its spelling matched, so an
         # alias that adds words drops them from the narration: aliasing
         # 'Sloterdijk' to 'Peter Sloterdijk' voiced it without the 'Peter'.

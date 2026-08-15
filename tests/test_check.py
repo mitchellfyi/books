@@ -216,6 +216,18 @@ class LibraryCheckTests(unittest.TestCase):
         })
         write(path, document)
 
+    def test_a_spelling_claimed_twice_names_both_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            path = root / "config/pronunciations.json"
+            document = read(path)
+            owner = document["entries"][0]["term"]
+            document["entries"].append({**document["entries"][1], "term": owner})
+            write(path, document)
+            status, errors, _ = self.run_check(root)
+        self.assertEqual(status, 1)
+        self.assertTrue(any(f"is already claimed by entry '{owner}'" in e for e in errors), errors)
+
     def test_an_edge_that_links_a_book_to_itself_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = one_book_repository(Path(directory))
