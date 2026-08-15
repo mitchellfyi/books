@@ -94,6 +94,7 @@ async function start() {
       return response.json();
     });
     await loadPlaylists();
+    restoreQueue();
     if (!['rating', 'title'].includes(state.bookSort)) state.bookSort = 'rating';
     el('book-sort').value = state.bookSort;
     state.selectedBook = sortedBooks(state.library.books)[0] || null;
@@ -129,6 +130,11 @@ function route({moveFocus = false} = {}) {
     state.view = {type: 'book', id};
   } else {
     state.view = state.selectedBook ? {type: 'book', id: state.selectedBook.id} : null;
+    // Do not leave a bookmarkable URL naming something the page is not showing.
+    if (location.hash && state.view) {
+      history.replaceState(null, '', `#book/${state.view.id}`);
+      say('That link is not in the library; showing the selected book instead.');
+    }
   }
   renderList();
   renderDetail();
@@ -178,8 +184,13 @@ function bind() {
     localStorage.removeItem(positionKey());
     playNext();
   });
+  // timeupdate fires about four times a second; a whole-second resume point
+  // does not need that resolution.
+  let lastSaved = 0;
   audio.addEventListener('timeupdate', () => {
-    if (audio.currentTime > 5) localStorage.setItem(positionKey(), String(audio.currentTime));
+    if (audio.currentTime <= 5 || Math.abs(audio.currentTime - lastSaved) < 5) return;
+    lastSaved = audio.currentTime;
+    localStorage.setItem(positionKey(), String(audio.currentTime));
   });
 }
 
@@ -508,8 +519,11 @@ function bindScriptActions() {
 
 // --- queue and playback ---
 
+// Voice-scoped: the same brief in another voice is a different-length
+// recording, so its resume point does not transfer.
 function positionKey() {
-  return `position:${el('audio').dataset.book}:${el('audio').dataset.level}`;
+  const audio = el('audio');
+  return `position:${audio.dataset.book}:${audio.dataset.level}:${audio.dataset.voice}`;
 }
 
 // One queue entry per book: choosing another duration replaces the existing
@@ -519,6 +533,21 @@ function enqueue(item, {render = true} = {}) {
   if (at >= 0) state.queue[at] = item;
   else state.queue.push(item);
   if (render) renderPlaylist();
+}
+
+// The queue survives a reload like every other choice the app remembers.
+// Entries for books no longer in the library are dropped on the way back in.
+function saveQueue() {
+  localStorage.setItem('book-brief-queue',
+    JSON.stringify({items: state.queue, index: state.queueIndex}));
+}
+
+function restoreQueue() {
+  const stored = readStored('book-brief-queue');
+  if (!stored || !Array.isArray(stored.items)) return;
+  state.queue = stored.items.filter(item => item && findBook(item.bookId));
+  state.queueIndex = Number.isInteger(stored.index)
+    && stored.index >= 0 && stored.index < state.queue.length ? stored.index : -1;
 }
 
 function dedupeByBook(items) {
@@ -566,6 +595,7 @@ function playCurrent() {
   audio.src = url;
   audio.dataset.book = item.bookId;
   audio.dataset.level = item.level;
+  audio.dataset.voice = pickedAudio(book, item.level).voice;
   audio.playbackRate = Number(el('speed').value);
   const savedPosition = Number(localStorage.getItem(positionKey()) || 0);
   if (savedPosition > 5) audio.currentTime = savedPosition;
@@ -650,6 +680,7 @@ function saveQueueAsPlaylist() {
 }
 
 function renderPlaylist() {
+  saveQueue();  // every queue mutation ends here, so this is the one save point
   el('playlist-count').textContent = state.queue.length;
   el('playlist-save').disabled = !state.queue.length;
   el('playlist-clear').disabled = !state.queue.length;
@@ -715,6 +746,7 @@ function renderPlaylist() {
   }).join('') || '<li class="muted">None saved yet.</li>';
   el('saved-lists').querySelectorAll('[data-open]').forEach(button => button.addEventListener('click', () => {
     state.queue = dedupeByBook([...state.saved.playlists[Number(button.dataset.open)].items]);
+    if (!state.queue.length) { stopPlayback(); say('That playlist is empty.'); return; }
     state.queueIndex = 0;
     playCurrent();
   }));
