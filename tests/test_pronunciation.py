@@ -142,6 +142,10 @@ class PossessiveTests(unittest.TestCase):
     def test_typographic_apostrophe_is_matched(self) -> None:
         self.assertEqual(self.phonemes_for("Name’s book", "ɹˈɪlkə"), "ɹˈɪlkəz <book>")
 
+    def test_text_before_a_match_is_kept(self) -> None:
+        self.assertEqual(self.phonemes_for("Long before Name arrived", "ɹˈɪlkə"),
+                         "<Long before> ɹˈɪlkə <arrived>")
+
     def test_plain_term_is_unchanged(self) -> None:
         self.assertEqual(self.phonemes_for("Name wrote", "ɹˈɪlkə"), "ɹˈɪlkə <wrote>")
 
@@ -186,6 +190,12 @@ class FreshnessTests(unittest.TestCase):
         self.assertFalse(pronunciation_is_current(
             "Ada wrote", self.sidecar_with_signature(), changed,
         ))
+
+    def test_a_legacy_sidecar_that_applied_terms_is_always_stale(self) -> None:
+        # No signature to compare against, but it recorded terms whose entries
+        # may since have changed or gone: it cannot be shown to be current.
+        sidecar = {"lang": "en-gb", "pronunciation_terms": ["Ada"]}
+        self.assertFalse(pronunciation_is_current("Grace wrote", sidecar, self.entries))
 
     def test_legacy_sidecar_stays_current_when_no_entry_matches(self) -> None:
         sidecar = {"lang": "en-gb", "pronunciation_terms": []}

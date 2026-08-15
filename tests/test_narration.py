@@ -45,6 +45,15 @@ class FrontMatterTests(unittest.TestCase):
         self.assertEqual(meta, {})
         self.assertEqual(body, "Just prose.\n")
 
+    def test_a_rule_in_the_body_is_not_mistaken_for_front_matter(self) -> None:
+        # Front matter is only front matter at the very top; a --- line further
+        # down is prose, and swallowing everything above it would lose the text.
+        text = "An opening line.\n\n---\n\nAnd more after the rule.\n"
+        with tempfile.TemporaryDirectory() as directory:
+            meta, body = parse_front_matter(write_script(directory, text))
+        self.assertEqual(meta, {})
+        self.assertEqual(body, text)
+
     def test_unterminated_front_matter_returns_whole_text(self) -> None:
         text = "---\nstatus: draft\nNo closing fence.\n"
         with tempfile.TemporaryDirectory() as directory:

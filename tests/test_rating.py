@@ -80,6 +80,34 @@ class RatingTests(unittest.TestCase):
                             for p in rating_errors(self.complete(), rubric)),
                         rating_errors(self.complete(), rubric))
 
+    def test_each_completeness_rule_reports_itself(self) -> None:
+        cases = [
+            ("basis", lambda r: r.__setitem__("basis", "synthesis"),
+             "basis must be inference"),
+            ("duplicate ids", lambda r: r["dimensions"][1].__setitem__(
+                "id", r["dimensions"][0]["id"]), "dimension ids are not unique"),
+            ("order", lambda r: r["dimensions"].reverse(),
+             "dimensions must follow the order in config/rating.json"),
+            ("rationale", lambda r: r["dimensions"][0].__setitem__("rationale", "TODO"),
+             "rationale is incomplete"),
+            ("sources", lambda r: r["dimensions"][0].__setitem__("source_ids", []),
+             "has no supporting sources"),
+            ("dimensions type", lambda r: r.__setitem__("dimensions", "not a list"),
+             "dimensions must be a list"),
+        ]
+        for name, break_it, expected in cases:
+            with self.subTest(name):
+                rating = self.complete()
+                break_it(rating)
+                problems = rating_errors(rating, self.rubric)
+                self.assertTrue(any(expected in p for p in problems), (name, problems))
+
+    def test_a_rubric_with_repeated_dimension_ids_is_rejected(self) -> None:
+        dimensions = [dict(item) for item in self.rubric["dimensions"]]
+        dimensions[1]["id"] = dimensions[0]["id"]
+        self.assertIn("dimension ids are not unique",
+                      rubric_errors({**self.rubric, "dimensions": dimensions}))
+
     def test_every_reachable_total_has_a_band(self) -> None:
         # score_band raises on a score between bands, so a rubric edit that
         # left a gap would crash ./bookflow rate for some books and not others.
