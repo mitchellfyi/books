@@ -360,6 +360,13 @@ def edit_config(root: Path, name: str, mutate) -> None:
     write(path, document)
 
 
+def edit_relationships(root: Path, mutate) -> None:
+    path = root / "data/relationships.json"
+    document = read(path)
+    mutate(document)
+    write(path, document)
+
+
 class DefectTests(unittest.TestCase):
     """One row per rule check enforces on top of the schemas.
 
@@ -435,20 +442,125 @@ class DefectTests(unittest.TestCase):
                                lambda c: c["entries"][0]["aliases"].append(
                                    "Doctor " + c["entries"][0]["term"])),
          "has more words than term"),
+        ("script book_id",
+         lambda r: edit_script(r, "30-seconds", f"book_id: {FIXTURE_BOOK}",
+                               "book_id: elsewhere"),
+         "book_id front matter mismatch"),
+        ("researched without content",
+         lambda r: book_file(r, "content.json").unlink(),
+         "researched books require structured content"),
+        ("workflow status disagreement",
+         lambda r: edit(r, "content.json",
+                        lambda c: c["workflow"].__setitem__("status", "researched-partial")),
+         "workflow status differs from book.json"),
+        ("quality review undated",
+         lambda r: edit(r, "content.json",
+                        lambda c: c["workflow"]["quality_review"].__setitem__("reviewed_at", "")),
+         "requires a dated, passed quality review"),
+        ("quality review incomplete",
+         lambda r: edit(r, "content.json",
+                        lambda c: c["workflow"]["quality_review"]["checks"].pop("counterevidence")),
+         "quality review checks not passed: counterevidence"),
+        ("complete with a draft script",
+         lambda r: edit_script(r, "30-seconds", "status: complete", "status: draft"),
+         "scripts not complete: 30-seconds"),
+        ("citation map unknown source",
+         lambda r: edit(r, "book.json",
+                        lambda b: b["research"].setdefault("citations", {}).__setitem__(
+                            "/title", ["no-such-source"])),
+         "citations['/title'] cites unknown source 'no-such-source'"),
+        ("dictionary path",
+         lambda r: edit_config(r, "audio.json",
+                               lambda c: c["tts"].__setitem__(
+                                   "pronunciation_dictionary", "config/elsewhere.json")),
+         "pronunciation_dictionary must point to config/pronunciations.json"),
+        ("tag alias collides",
+         lambda r: (lambda p: write(p, {**read(p), "tags": [
+             {**read(p)["tags"][0], "aliases": [read(p)["tags"][1]["id"]]},
+             *read(p)["tags"][1:]]}))(r / "taxonomy/tags.json"),
+         "collides with a canonical tag id"),
+        ("catalogued without path",
+         lambda r: write(r / "data/catalog.json", {
+             **read(r / "data/catalog.json"),
+             "entities": [{k: v for k, v in e.items() if k != "path"}
+                          for e in read(r / "data/catalog.json")["entities"]]}),
+         "has no path"),
+        ("directory kind",
+         lambda r: write(r / "data/catalog.json", {
+             **read(r / "data/catalog.json"),
+             "entities": [{**e, "kind": "author" if e["kind"] == "book" else "book"}
+                          for e in read(r / "data/catalog.json")["entities"]]}),
+         "catalog entry kind mismatch"),
+        ("source_ref file missing",
+         lambda r: edit_relationships(r, lambda d: d["relationships"][0].__setitem__(
+             "source_refs", ["library/books/gone/book.json#anything"])),
+         "source_ref file missing: library/books/gone/book.json"),
+        ("source_ref fragment missing",
+         lambda r: edit_relationships(r, lambda d: d["relationships"][0].__setitem__(
+             "source_refs", [f"library/books/{FIXTURE_BOOK}/book.json#no-such-source"])),
+         "source_ref '#no-such-source' not found"),
+        ("playlist item is an author",
+         lambda r: write(r / "data/playlists.json", {
+             "$schema": "../schemas/playlists.schema.json", "schema_version": 1,
+             "playlists": [{"id": "p", "name": "P", "updated_at": "2026-01-01T00:00:00Z",
+                            "items": [{"book_id": read(book_file(r, "book.json"))["author_ids"][0],
+                                       "duration": "30-seconds"}]}]}),
+         "item is not a book"),
+        ("queue names an unknown book",
+         lambda r: (lambda p: write(p, {**read(p), "queue": [
+             {**read(p)["queue"][0], "book_id": "no-such-book"}]}))(r / "data/queue.json"),
+         "unknown book 'no-such-book'"),
+    ]
+
+    # Rules that report a warning: real but not disqualifying.
+    WARNING_CASES = [
+        ("explicit without refs",
+         lambda r: edit_relationships(r, lambda d: d["relationships"][0].update(
+             {"basis": "explicit", "source_refs": []})),
+         "is explicit but has no source_refs"),
+        # An author profile cites interpretive fields inline; adding a citation
+        # map entry for one of them records the same thing twice.
+        ("citation map duplicates inline",
+         lambda r: (lambda p: write(p, {**(d := read(p)), "research": {
+             **d["research"], "citations": {
+                 **d["research"].get("citations", {}),
+                 "/profile/biography": d["profile"]["biography"]["source_ids"]}}}))(
+                     next((r / "library/authors").glob("*/author.json"))),
+         "duplicates inline source_ids"),
+        ("queue done but book unfinished",
+         lambda r: edit(r, "book.json",
+                        lambda b: b["workflow"].__setitem__("status", "researched-partial")),
+         "is marked done but book.json status is 'researched-partial'"),
+        ("thin author sources",
+         lambda r: (lambda p: write(p, {**read(p), "research": {
+             **read(p)["research"], "sources": read(p)["research"]["sources"][:1]}}))(
+                 next((r / "library/authors").glob("*/author.json"))),
+         "useful author sources"),
     ]
 
     def test_each_rule_reports_its_own_defect(self) -> None:
         for name, break_it, expected in self.CASES:
-            with self.subTest(name), tempfile.TemporaryDirectory() as directory:
-                root = one_book_repository(Path(directory))
-                break_it(root)
-                with check_at(root):
-                    with contextlib.redirect_stdout(io.StringIO()):
-                        status = check.main(["--quiet"])
-                    found = list(check.errors)
-                self.assertEqual(status, 1, found)
-                self.assertTrue(any(expected in problem for problem in found),
-                                f"{name}: expected {expected!r} in {found}")
+            with self.subTest(name):
+                found, status = self.provoke(break_it)
+                self.assertEqual(status, 1, found[0])
+                self.assertTrue(any(expected in problem for problem in found[0]),
+                                f"{name}: expected {expected!r} in {found[0]}")
+
+    def test_each_warning_reports_its_own_concern(self) -> None:
+        for name, break_it, expected in self.WARNING_CASES:
+            with self.subTest(name):
+                found, _ = self.provoke(break_it)
+                self.assertTrue(any(expected in problem for problem in found[1]),
+                                f"{name}: expected {expected!r} in {found[1]}")
+
+    def provoke(self, break_it) -> tuple[tuple[list[str], list[str]], int]:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            break_it(root)
+            with check_at(root):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    status = check.main(["--quiet"])
+                return (list(check.errors), list(check.warnings)), status
 
 
 if __name__ == "__main__":

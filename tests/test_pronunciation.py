@@ -101,6 +101,21 @@ class PronunciationTests(unittest.TestCase):
         self.assertIsNone(spelling_matcher("en-us", entries))
         self.assertEqual(pronunciation_terms_in_text("Ada", "en-us", entries), [])
 
+    def test_a_term_whose_entry_has_gone_changes_the_signature(self) -> None:
+        # The sidecar names terms it applied; if one no longer has an entry for
+        # that language the audio cannot still be current.
+        entries = [{
+            "term": "Ada", "aliases": [], "case_sensitive": False,
+            "phonemes": {"en-gb": "A"},
+        }]
+        present = pronunciation_signature(["Ada"], "en-gb", entries)
+        self.assertNotEqual(present, pronunciation_signature(["Ada"], "en-gb", []))
+        self.assertNotEqual(present, pronunciation_signature(["Ada"], "en-us", entries))
+
+    def test_an_empty_dictionary_phonemises_the_whole_text(self) -> None:
+        applied, used = phonemize_with_dictionary("Ada wrote", "en-gb", [], ordinary)
+        self.assertEqual((applied, used), ("<Ada wrote>", []))
+
     def test_signature_ignores_unrelated_entries(self) -> None:
         entries = [{
             "term": "Ada",

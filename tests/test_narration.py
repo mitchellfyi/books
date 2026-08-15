@@ -39,6 +39,13 @@ class FrontMatterTests(unittest.TestCase):
         self.assertEqual(meta["title"], "Deep Work")
         self.assertEqual(body, "The body.")
 
+    def test_a_front_matter_line_without_a_colon_is_ignored(self) -> None:
+        text = "---\nstatus: complete\njust a stray line\n---\n\nThe body.\n"
+        with tempfile.TemporaryDirectory() as directory:
+            meta, body = parse_front_matter(write_script(directory, text))
+        self.assertEqual(meta, {"status": "complete"})
+        self.assertEqual(body, "The body.")
+
     def test_missing_front_matter_returns_whole_text(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             meta, body = parse_front_matter(write_script(directory, "Just prose.\n"))

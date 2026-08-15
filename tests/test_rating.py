@@ -94,6 +94,10 @@ class RatingTests(unittest.TestCase):
              "has no supporting sources"),
             ("dimensions type", lambda r: r.__setitem__("dimensions", "not a list"),
              "dimensions must be a list"),
+            ("missing dimension", lambda r: r["dimensions"].pop(),
+             "missing dimensions: "),
+            ("unknown dimension", lambda r: r["dimensions"].append(
+                {**r["dimensions"][0], "id": "vibes"}), "unknown dimensions: vibes"),
         ]
         for name, break_it, expected in cases:
             with self.subTest(name):
