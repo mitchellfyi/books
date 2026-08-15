@@ -51,6 +51,11 @@ ROOT = Path(__file__).resolve().parent.parent
 MODELS = ROOT / "models"
 MODEL_RELEASE = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0"
 SAMPLE_RATE = 24000
+# Silence inserted between sentence groups and between paragraphs. calibrate()
+# subtracts these before setting the speaking speed and render() then inserts
+# them, so the two must read the same numbers or every duration estimate drifts.
+CHUNK_GAP_SECONDS = 0.30
+PARAGRAPH_GAP_SECONDS = 0.55
 
 
 def load_config() -> dict:
@@ -156,8 +161,8 @@ class Synthesiser:
         total_words = sum(len(chunk.split()) for chunk in chunks)
         estimated_speech_seconds = total_words / speech_wpm * 60
         fixed_gap_seconds = (
-            sum(max(0, len(paragraph) - 1) for paragraph in paragraphs) * 0.30
-            + max(0, len(paragraphs) - 1) * 0.55
+            sum(max(0, len(paragraph) - 1) for paragraph in paragraphs) * CHUNK_GAP_SECONDS
+            + max(0, len(paragraphs) - 1) * PARAGRAPH_GAP_SECONDS
         )
         estimated_wpm = total_words / (estimated_speech_seconds + fixed_gap_seconds) * 60
         if abs(estimated_wpm - target_wpm) / target_wpm <= 0.05:
@@ -174,8 +179,8 @@ class Synthesiser:
         return adjusted
 
     def render(self, paragraphs: list[list[str]], speed: float) -> np.ndarray:
-        chunk_gap = np.zeros(int(0.30 * SAMPLE_RATE), dtype=np.float32)
-        paragraph_gap = np.zeros(int(0.55 * SAMPLE_RATE), dtype=np.float32)
+        chunk_gap = np.zeros(int(CHUNK_GAP_SECONDS * SAMPLE_RATE), dtype=np.float32)
+        paragraph_gap = np.zeros(int(PARAGRAPH_GAP_SECONDS * SAMPLE_RATE), dtype=np.float32)
         total = sum(len(p) for p in paragraphs)
         pieces: list[np.ndarray] = []
         done = 0
@@ -190,7 +195,9 @@ class Synthesiser:
                 pieces.append(paragraph_gap)
         print()
         if not pieces:
-            raise SystemExit("script produced no narration text")
+            # One empty script is that book's problem, not the run's: main
+            # counts it as a failure and carries on to the next.
+            raise ValueError("script produced no narration text")
         return np.concatenate(pieces)
 
 
