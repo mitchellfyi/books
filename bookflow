@@ -506,6 +506,7 @@ def build_app(_: argparse.Namespace | None = None) -> None:
     books = []
     built_audio: set[Path] = set()
     written = 0
+    unwritten = 0
     for book_path in sorted((ROOT / "library/books").glob("*/book.json")):
         directory = book_path.parent
         content_path = directory / "content.json"
@@ -513,6 +514,12 @@ def build_app(_: argparse.Namespace | None = None) -> None:
             continue
         book = load(book_path)
         content = load(content_path)
+        # A stub is scaffolding: every field still holds its TODO. Leaving it
+        # out keeps placeholders off a deployed site, and costs nothing to
+        # look at — a book being written is 'researched-partial' by then.
+        if content.get("workflow", {}).get("status") == "stub":
+            unwritten += 1
+            continue
         scripts = {}
         for level in config["levels"]:
             script_path = directory / "scripts" / f"{level}.md"
@@ -574,6 +581,8 @@ def build_app(_: argparse.Namespace | None = None) -> None:
     removed = prune_audio(dist, built_audio)
     print(f"Built dist/ with {len(books)} book(s) and {len(built_audio)} audio file(s); "
           "deploy the dist directory to any static host")
+    if unwritten:
+        print(f"  left out {unwritten} book(s) still at 'stub': nothing written to show yet")
     if written or removed:
         print(f"  audio: {written} written, {removed} removed, "
               f"{len(built_audio) - written} already current")

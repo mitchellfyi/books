@@ -115,6 +115,31 @@ class BuildTests(unittest.TestCase):
             library = json.loads((root / "dist/data/library.json").read_text(encoding="utf-8"))
         self.assertEqual(library["books"], [])
 
+    def test_a_stub_is_left_out_and_said_so(self) -> None:
+        # Every field still holds its TODO; a deployed site should not carry
+        # them, and there is nothing to preview.
+        with tempfile.TemporaryDirectory() as directory:
+            root = repository(Path(directory))
+            path = root / "library/books" / FIXTURE_BOOK / "content.json"
+            content = json.loads(path.read_text(encoding="utf-8"))
+            content["workflow"]["status"] = "stub"
+            path.write_text(json.dumps(content), encoding="utf-8")
+            report = build(root)
+            library = json.loads((root / "dist/data/library.json").read_text(encoding="utf-8"))
+        self.assertEqual(library["books"], [])
+        self.assertIn("left out 1 book(s) still at 'stub'", report)
+
+    def test_a_partly_written_book_is_kept(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = repository(Path(directory))
+            path = root / "library/books" / FIXTURE_BOOK / "content.json"
+            content = json.loads(path.read_text(encoding="utf-8"))
+            content["workflow"]["status"] = "researched-partial"
+            path.write_text(json.dumps(content), encoding="utf-8")
+            build(root)
+            library = json.loads((root / "dist/data/library.json").read_text(encoding="utf-8"))
+        self.assertEqual([book["id"] for book in library["books"]], [FIXTURE_BOOK])
+
     def test_a_book_missing_a_required_field_names_it(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = repository(Path(directory))
