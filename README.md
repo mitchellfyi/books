@@ -125,8 +125,8 @@ Inspect the phonemes and any shared-dictionary match for a difficult term:
 (`index.html` at the top, data and audio inside), so the app serves from `/`
 with no subpath. The page and data are rebuilt every time; audio is synced
 rather than recopied, so a rebuild moves only the recordings that changed and
-drops any the library no longer produces. Deploy that directory to any static
-host:
+drops any the library no longer produces. Books still at `stub` are left out —
+they hold nothing but placeholders. Deploy that directory to any static host:
 
 ```bash
 ./bookflow build
@@ -140,9 +140,9 @@ books or audio.
 
 ## Structure
 
-- `book.json`: identity, editions, discovery, research sources, and coverage.
-- `content.json`: the canonical argument, ideas, book map, rating, reading experience, critique, audience, and decision.
-- `scripts/*.md`: audio-ready presentations derived from the structured content.
+- `library/books/<book-id>/book.json`: identity, editions, discovery, research sources, and coverage.
+- `library/books/<book-id>/content.json`: the canonical argument, ideas, book map, rating, reading experience, critique, audience, and decision.
+- `library/books/<book-id>/scripts/*.md`: audio-ready presentations derived from the structured content.
 - `library/authors/<author-id>/author.json`: sourced author profiles behind the app's author pages.
 - `data/relationships.json`: traversable links between books and authors.
 - `taxonomy/tags.json`: controlled discovery terms.
