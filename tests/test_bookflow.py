@@ -151,6 +151,15 @@ class LoadTests(unittest.TestCase):
             path.write_text(json.dumps({"a": 1}), encoding="utf-8")
             self.assertEqual(bookflow.load(path), {"a": 1})
 
+    def test_an_unreadable_file_names_itself(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaises(SystemExit) as missing:
+                bookflow.load(Path(directory) / "absent.json")
+            with self.assertRaises(SystemExit) as unreadable:
+                bookflow.load(Path(directory))
+        self.assertIn("absent.json: file missing", str(missing.exception))
+        self.assertIn("cannot read", str(unreadable.exception))
+
     def test_read_json_reports_unreadable_files_as_none(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             broken = Path(directory) / "broken.json"

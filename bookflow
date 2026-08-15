@@ -35,10 +35,13 @@ def show(path: Path) -> str:
 
 
 def load(path: Path) -> dict:
-    """Read a JSON file, naming it if it will not parse."""
-    text = path.read_text(encoding="utf-8")
+    """Read a JSON file, naming it if it cannot be read or will not parse."""
     try:
-        return json.loads(text)
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError as error:
+        raise SystemExit(f"{show(path)}: file missing") from error
+    except OSError as error:
+        raise SystemExit(f"{show(path)}: cannot read ({error.strerror or error})") from error
     except json.JSONDecodeError as error:
         raise SystemExit(f"{show(path)}: invalid JSON ({error})") from error
 
@@ -285,13 +288,11 @@ def book_needs(book_id: str) -> str:
         return "scaffold missing"
     needs = []
     content_path = directory / "content.json"
-    content_text = content_path.read_text(encoding="utf-8") if content_path.exists() else None
-    try:
-        content = json.loads(content_text) if content_text else None
-    except json.JSONDecodeError:
+    content = read_json(content_path)
+    if content is None and content_path.exists():
         # One unparseable book must not hide the rest of the queue.
         return "content (invalid JSON)"
-    if content is None or "TODO" in content_text:
+    if content is None or "TODO" in json.dumps(content, ensure_ascii=False):
         needs.append("content")
     rating = (content or {}).get("assessment", {}).get("rating")
     if rating_errors(rating, load_config("rating.json")):
