@@ -45,6 +45,41 @@ class RatingTests(unittest.TestCase):
             rating_errors(rating, self.rubric, require_complete=False),
         )
 
+    def complete(self, **overrides) -> dict:
+        rating = self.rating([5.0] * self.dimension_count, 5.0)
+        rating.update({
+            "rubric_version": self.rubric["schema_version"],
+            "confidence": "medium", "summary": "A summary.", "basis": "inference",
+        })
+        for item in rating["dimensions"]:
+            item.update({"rationale": "Because.", "source_ids": ["s1"]})
+        rating.update(overrides)
+        return rating
+
+    def test_a_complete_rating_has_no_problems(self) -> None:
+        self.assertEqual(rating_errors(self.complete(), self.rubric), [])
+
+    def test_an_outdated_rubric_version_is_not_called_missing(self) -> None:
+        problems = rating_errors(self.complete(rubric_version=1), self.rubric)
+        self.assertIn("rubric_version does not match config/rating.json", problems)
+        self.assertNotIn("rubric_version is missing", problems)
+
+    def test_an_absent_rubric_version_is_called_missing(self) -> None:
+        rating = self.complete()
+        del rating["rubric_version"]
+        self.assertEqual(rating_errors(rating, self.rubric), ["rubric_version is missing"])
+
+    def test_messages_quote_the_configured_values_not_literals(self) -> None:
+        # A rubric edit is the scenario these rules exist for, so the messages
+        # must not hard-code the values they are checking against.
+        rubric = {**self.rubric, "confidence": {"unsure": {}, "certain": {}}}
+        self.assertIn("confidence must be one of: unsure, certain",
+                      rating_errors(self.complete(), rubric))
+        rubric = {**self.rubric, "scale": {**self.rubric["scale"], "maximum": 4}}
+        self.assertTrue(any("score 5.0 is outside 0–4" in p
+                            for p in rating_errors(self.complete(), rubric)),
+                        rating_errors(self.complete(), rubric))
+
     def test_every_reachable_total_has_a_band(self) -> None:
         # score_band raises on a score between bands, so a rubric edit that
         # left a gap would crash ./bookflow rate for some books and not others.

@@ -32,10 +32,14 @@ def rating_errors(
     if rating.get("rubric_version") not in (None, rubric.get("schema_version")):
         problems.append("rubric_version does not match config/rating.json")
     if require_complete:
-        if rating.get("rubric_version") != rubric.get("schema_version"):
+        # Only absence: a version that is present and wrong is already reported
+        # above, and calling it missing sent the reader looking for the wrong
+        # thing.
+        if rating.get("rubric_version") is None:
             problems.append("rubric_version is missing")
         if rating.get("confidence") not in rubric.get("confidence", {}):
-            problems.append("confidence must be low, medium, or high")
+            problems.append("confidence must be one of: "
+                            + ", ".join(rubric.get("confidence", {})))
         if not isinstance(rating.get("summary"), str) or not rating["summary"].strip() \
                 or "TODO" in rating["summary"]:
             problems.append("summary is incomplete")
@@ -68,7 +72,8 @@ def rating_errors(
             continue
         score = Decimal(str(item["score"]))
         if not minimum <= score <= maximum:
-            problems.append(f"{item.get('id', 'unknown')} score {score} is outside 0–10")
+            problems.append(f"{item.get('id', 'unknown')} score {score} is outside "
+                            f"{minimum}–{maximum}")
         if score % increment:
             problems.append(
                 f"{item.get('id', 'unknown')} score {score} is not in {increment}-point increments"
