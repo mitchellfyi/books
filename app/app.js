@@ -12,6 +12,16 @@ const esc = value => String(value ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','
 const label = value => value.replaceAll('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
 const list = values => `<ul class="compact-list">${values.map(v => `<li>${esc(v.text ?? v)}</li>`).join('')}</ul>`;
 const findBook = id => state.library.books.find(book => book.id === id);
+// One status line: announced to screen readers, and shown as a toast when it
+// carries a message. Empty means silent and invisible.
+let sayTimer = null;
+const say = message => {
+  const status = el('status');
+  status.textContent = message;
+  status.classList.toggle('visible', Boolean(message));
+  clearTimeout(sayTimer);
+  if (message) sayTimer = setTimeout(() => say(''), 6000);
+};
 // Authors are embedded per book; index them once with their library books attached.
 const authorsById = () => {
   if (!state.authorIndex) {
@@ -138,7 +148,7 @@ function bind() {
   });
   el('playlist-toggle').addEventListener('click', () => { el('playlist').hidden = false; });
   el('playlist-close').addEventListener('click', () => { el('playlist').hidden = true; });
-  el('playlist-clear').addEventListener('click', () => { state.queue = []; state.queueIndex = -1; renderPlaylist(); });
+  el('playlist-clear').addEventListener('click', () => { state.queue = []; stopPlayback(); });
   el('playlist-save').addEventListener('click', saveQueueAsPlaylist);
   el('speed').addEventListener('change', event => { el('audio').playbackRate = Number(event.target.value); });
   el('voice').addEventListener('change', event => {
@@ -491,10 +501,25 @@ function playItem(item) {
   playCurrent();
 }
 
+function stopPlayback() {
+  const audio = el('audio');
+  audio.pause();
+  audio.removeAttribute('src');
+  audio.load();
+  el('player').hidden = true;
+  state.queueIndex = -1;
+  renderPlaylist();
+}
+
 function playCurrent() {
   const item = state.queue[state.queueIndex];
   const url = item && audioUrl(item);
-  if (!url) { renderPlaylist(); return; }
+  if (!url) {
+    // The book left the library, or this level was never voiced.
+    say(item ? 'No audio for that brief yet. Generate it with ./bookflow audio.' : '');
+    renderPlaylist();
+    return;
+  }
   const book = findBook(item.bookId);
   const audio = el('audio');
   el('player').hidden = false;
@@ -506,14 +531,17 @@ function playCurrent() {
   audio.playbackRate = Number(el('speed').value);
   const savedPosition = Number(localStorage.getItem(positionKey()) || 0);
   if (savedPosition > 5) audio.currentTime = savedPosition;
-  audio.play();
+  audio.play().catch(() => say(`${book.title} would not start playing.`));
   renderPlaylist();
 }
 
+// Skip entries whose audio is missing rather than stalling the queue on them.
 function playNext() {
-  if (state.queueIndex < state.queue.length - 1) {
-    state.queueIndex += 1;
+  for (let next = state.queueIndex + 1; next < state.queue.length; next += 1) {
+    if (!audioUrl(state.queue[next])) continue;
+    state.queueIndex = next;
     playCurrent();
+    return;
   }
 }
 
@@ -535,7 +563,7 @@ async function loadPlaylists() {
     localStorage.removeItem('book-brief-playlist');
   }
   try {
-    const response = await fetch('/api/playlists', {cache: 'no-store'});
+    const response = await fetch('api/playlists', {cache: 'no-store'});
     if (response.ok) {
       const data = await response.json();
       state.saved = {schema_version: 1, playlists: data.playlists.map(p => ({...p, items: p.items.map(fromFile)}))};
@@ -552,8 +580,17 @@ async function persistPlaylists() {
   if (state.serverPlaylists) {
     const payload = {schema_version: 1,
       playlists: state.saved.playlists.map(p => ({...p, items: p.items.map(toFile)}))};
-    await fetch('/api/playlists', {method: 'PUT', headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(payload)}).catch(() => {});
+    // A failed save must not look like a successful one.
+    try {
+      const response = await fetch('api/playlists', {
+        method: 'PUT', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)});
+      if (!response.ok) throw new Error(String(response.status));
+    } catch (error) {
+      say('Could not save to the library; keeping these playlists in this browser.');
+      state.serverPlaylists = false;
+      localStorage.setItem('book-brief-saved', JSON.stringify(state.saved));
+    }
   } else {
     localStorage.setItem('book-brief-saved', JSON.stringify(state.saved));
   }
@@ -606,9 +643,15 @@ function renderPlaylist() {
   }));
   el('playlist-items').querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
     const index = Number(button.dataset.remove);
+    const removingCurrent = index === state.queueIndex;
     state.queue.splice(index, 1);
-    if (state.queueIndex >= index) state.queueIndex -= 1;
-    renderPlaylist();
+    // Dropping the playing entry stops playback; dropping one above it keeps
+    // the same entry current by shifting the index down with it.
+    if (removingCurrent) stopPlayback();
+    else {
+      if (state.queueIndex > index) state.queueIndex -= 1;
+      renderPlaylist();
+    }
   }));
 
   el('saved-lists').innerHTML = state.saved.playlists.map((playlist, index) => {
