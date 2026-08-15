@@ -19,6 +19,14 @@ const el = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const label = value => String(value ?? '').replaceAll('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
 const list = values => `<ul class="compact-list">${values.map(v => `<li>${esc(v.text ?? v)}</li>`).join('')}</ul>`;
+// Both pages list sources the same way. Every source records what it does not
+// cover, and the author page used to drop that line.
+const sourceList = sources => `<details><summary>${sources.length} research sources</summary>
+  <ol class="source-list">${sources.map(source => `<li>
+    <a href="${esc(source.url)}" target="_blank" rel="noreferrer">${esc(source.title)}</a>
+    <span class="source-meta">${esc(source.author_or_publisher)} · ${esc(source.independence)} · ${esc(source.quality)} quality</span>
+    <span class="source-meta">Limit: ${esc(source.limitations)}</span></li>`).join('')}</ol>
+</details>`;
 const findBook = id => state.library.books.find(book => book.id === id);
 // One status line: announced to screen readers, and shown as a toast when it
 // carries a message. Empty means silent and invisible.
@@ -444,9 +452,7 @@ function renderBook() {
       </details>
 
       <section class="section">
-        <details><summary>${sources.length} research sources</summary>
-          <ol class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noreferrer">${esc(source.title)}</a><span class="source-meta">${esc(source.author_or_publisher)} · ${esc(source.independence)} · ${esc(source.quality)} quality</span><span class="source-meta">Limit: ${esc(source.limitations)}</span></li>`).join('')}</ol>
-        </details>
+        ${sourceList(sources)}
       </section>
     </article>`;
 
@@ -514,9 +520,7 @@ function renderAuthor(id) {
       </section>` : ''}
 
       ${sources.length ? `<section class="section">
-        <details><summary>${sources.length} research sources</summary>
-          <ol class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noreferrer">${esc(source.title)}</a><span class="source-meta">${esc(source.author_or_publisher)} · ${esc(source.independence)} · ${esc(source.quality)} quality</span></li>`).join('')}</ol>
-        </details>
+        ${sourceList(sources)}
       </section>` : ''}
     </article>`;
 
