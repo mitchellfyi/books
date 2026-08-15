@@ -15,6 +15,7 @@ Exit code 1 on errors, 0 otherwise (warnings do not fail the run).
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -71,6 +72,33 @@ def load_json(path: Path) -> dict | None:
 
 
 @lru_cache(maxsize=None)
+def load_json_once(path: Path) -> dict | None:
+    """load_json for documents several checks reach for, read once per run."""
+    return load_json(path)
+
+
+def library_dirs(folder: str) -> list[Path]:
+    """The entity directories under a library folder, sorted, or none at all.
+
+    A repository without books yet is a valid one to validate, so an absent
+    folder is emptiness rather than a crash.
+    """
+    base = ROOT / folder
+    return sorted(d for d in base.iterdir() if d.is_dir()) if base.is_dir() else []
+
+
+def duplicates(values: list) -> list:
+    """The values appearing more than once, in a stable reported order."""
+    seen: set = set()
+    repeated: dict = {}
+    for value in values:
+        if value in seen:
+            repeated[value] = None
+        seen.add(value)
+    return list(repeated)
+
+
+@lru_cache(maxsize=None)
 def schema_validator(schema_name: str) -> Draft202012Validator:
     """Compile each schema once; a full run validates ~200 documents against nine."""
     schema = json.loads((ROOT / "schemas" / schema_name).read_text(encoding="utf-8"))
@@ -121,32 +149,41 @@ def has_inline_sources(doc: dict, pointer: str) -> bool:
     return False
 
 
-def check_research(doc: dict, path: Path) -> None:
-    sources = doc.get("research", {}).get("sources", [])
-    ids = [s["id"] for s in sources]
-    for dup in {i for i in ids if ids.count(i) > 1}:
-        err(f"{rel(path)}: duplicate source id '{dup}'")
-    known = set(ids)
+def check_source_ids(doc: dict, path: Path, known: set, *,
+                     require_sources: bool, skip: str | None = None) -> None:
+    """Report every source_ids list that is empty or names a source we lack.
 
-    def check_ids(source_ids: list, where: str) -> None:
-        for sid in source_ids:
-            if sid not in known:
-                err(f"{rel(path)}: {where} cites unknown source '{sid}'")
-
+    `known` is the pool a reference may draw on — a document's own sources for
+    book.json and author.json, the book's for content.json, which is why the
+    pool is passed in rather than read here. `skip` names the branch that
+    defines those sources instead of citing them.
+    """
     def walk(node: object, trail: str) -> None:
         if isinstance(node, dict):
-            if "source_ids" in node and trail != "/research":
-                if doc.get("workflow", {}).get("status") != "stub" and not node["source_ids"]:
+            if "source_ids" in node:
+                if require_sources and not node["source_ids"]:
                     err(f"{rel(path)}: {trail or '/'} has no supporting sources")
-                check_ids(node["source_ids"], trail or "/")
-            for k, v in node.items():
-                if k != "research":
-                    walk(v, f"{trail}/{k}")
+                for source_id in node["source_ids"]:
+                    if source_id not in known:
+                        err(f"{rel(path)}: {trail or '/'} cites unknown source '{source_id}'")
+            for key, value in node.items():
+                if key != skip:
+                    walk(value, f"{trail}/{key}")
         elif isinstance(node, list):
-            for i, v in enumerate(node):
-                walk(v, f"{trail}/{i}")
+            for index, value in enumerate(node):
+                walk(value, f"{trail}/{index}")
 
-    walk({k: v for k, v in doc.items() if k != "research"}, "")
+    walk(doc, "")
+
+
+def check_research(doc: dict, path: Path) -> None:
+    """A document's own research block: unique ids, live pointers, resolvable refs."""
+    ids = [s["id"] for s in doc.get("research", {}).get("sources", [])]
+    for dup in duplicates(ids):
+        err(f"{rel(path)}: duplicate source id '{dup}'")
+    known = set(ids)
+    check_source_ids(doc, path, known, skip="research",
+                     require_sources=doc.get("workflow", {}).get("status") != "stub")
 
     for pointer, source_ids in doc.get("research", {}).get("citations", {}).items():
         if not resolve_pointer(doc, pointer):
@@ -156,12 +193,25 @@ def check_research(doc: dict, path: Path) -> None:
                 f"{rel(path)}: citation map entry '{pointer}' duplicates inline source_ids; "
                 "keep the inline ones and drop the map entry"
             )
-        check_ids(source_ids, f"citations['{pointer}']")
+        for source_id in source_ids:
+            if source_id not in known:
+                err(f"{rel(path)}: citations['{pointer}'] cites unknown source '{source_id}'")
 
 
-def main() -> int:
-    quiet = "--quiet" in sys.argv
-    only = next((a for a in sys.argv[1:] if not a.startswith("-")), None)
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        prog="check.py",
+        description="Validate the library: schemas, cross-references, word counts, audio freshness.",
+        epilog="Exit code 1 on errors; warnings do not fail the run.",
+    )
+    parser.add_argument("book_id", nargs="?", help="limit book-level checks to one book")
+    parser.add_argument("--quiet", action="store_true", help="show only warnings and errors")
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    quiet, only = args.quiet, args.book_id
 
     # --- shared files ---
     audio_cfg = load_json(ROOT / "config/audio.json")
@@ -232,17 +282,15 @@ def main() -> int:
 
     # library dirs must be catalogued
     for kind, folder in (("book", "library/books"), ("author", "library/authors")):
-        base = ROOT / folder
-        if base.exists():
-            for d in sorted(base.iterdir()):
-                if d.is_dir() and d.name not in entities:
-                    err(f"{rel(d)}: directory has no catalog entry")
-                elif d.is_dir() and entities[d.name]["kind"] != kind:
-                    err(f"{rel(d)}: catalog entry kind mismatch")
+        for d in library_dirs(folder):
+            if d.name not in entities:
+                err(f"{rel(d)}: directory has no catalog entry")
+            elif entities[d.name]["kind"] != kind:
+                err(f"{rel(d)}: catalog entry kind mismatch")
 
     # --- relationships ---
     rel_ids = [r["id"] for r in relationships["relationships"]]
-    for dup in sorted({i for i in rel_ids if rel_ids.count(i) > 1}):
+    for dup in duplicates(rel_ids):
         err(f"data/relationships.json: duplicate relationship id '{dup}'")
     for r in relationships["relationships"]:
         for endpoint in (r["source_id"], r["target_id"]):
@@ -252,18 +300,22 @@ def main() -> int:
             warn(f"data/relationships.json: '{r['id']}' is explicit but has no source_refs")
         for ref in r["source_refs"]:
             file_part, _, fragment = ref.partition("#")
-            ref_doc = load_json(ROOT / file_part) if (ROOT / file_part).exists() else None
-            if ref_doc is None:
+            ref_path = ROOT / file_part
+            if not ref_path.exists():
                 err(f"data/relationships.json: '{r['id']}' source_ref file missing: {file_part}")
-            elif fragment and fragment not in {
+                continue
+            # 118 refs across 32 files, so read each once. A file that will
+            # not parse is reported by load_json, not called missing here.
+            ref_doc = load_json_once(ref_path)
+            if ref_doc is None:
+                continue
+            if fragment and fragment not in {
                 s["id"] for s in ref_doc.get("research", {}).get("sources", [])
             }:
                 err(f"data/relationships.json: '{r['id']}' source_ref '#{fragment}' not found in {file_part}")
 
     # --- authors ---
-    for d in sorted((ROOT / "library/authors").iterdir()):
-        if not d.is_dir():
-            continue
+    for d in library_dirs("library/authors"):
         doc = load_json(d / "author.json")
         if not doc:
             continue
@@ -283,8 +335,8 @@ def main() -> int:
     tolerance = audio_cfg["word_count_tolerance_percent"] / 100
     status_rows: dict[str, dict] = {}
 
-    for d in sorted((ROOT / "library/books").iterdir()):
-        if not d.is_dir() or (only and d.name != only):
+    for d in library_dirs("library/books"):
+        if only and d.name != only:
             continue
         doc = load_json(d / "book.json")
         if not doc:
@@ -309,30 +361,20 @@ def main() -> int:
             if content.get("content_type") != "non-fiction":
                 err(f"{rel(content_path)}: this library accepts non-fiction only")
             idea_ids = [i.get("id") for i in content.get("ideas", [])]
-            for dup in sorted({i for i in idea_ids if idea_ids.count(i) > 1}):
+            for dup in duplicates(idea_ids):
                 err(f"{rel(content_path)}: duplicate idea id '{dup}'")
             known_ideas = set(idea_ids)
             for section in content.get("book_map", []):
                 for idea_id in section.get("idea_ids", []):
                     if idea_id not in known_ideas:
                         err(f"{rel(content_path)}: book_map cites unknown idea '{idea_id}'")
-            known_sources = {s["id"] for s in doc.get("research", {}).get("sources", [])}
-
-            def check_content_sources(node: object, trail: str = "") -> None:
-                if isinstance(node, dict):
-                    if content.get("workflow", {}).get("status") != "stub" \
-                            and "source_ids" in node and not node["source_ids"]:
-                        err(f"{rel(content_path)}: {trail or '/'} has no supporting sources")
-                    for source_id in node.get("source_ids", []):
-                        if source_id not in known_sources:
-                            err(f"{rel(content_path)}: {trail or '/'} cites unknown source '{source_id}'")
-                    for key, value in node.items():
-                        check_content_sources(value, f"{trail}/{key}")
-                elif isinstance(node, list):
-                    for index, value in enumerate(node):
-                        check_content_sources(value, f"{trail}/{index}")
-
-            check_content_sources(content)
+            # content.json interprets the book; its citations resolve against
+            # the sources book.json records.
+            check_source_ids(
+                content, content_path,
+                {s["id"] for s in doc.get("research", {}).get("sources", [])},
+                require_sources=content.get("workflow", {}).get("status") != "stub",
+            )
             orders = [section.get("order") for section in content.get("book_map", [])]
             if orders != list(range(1, len(orders) + 1)):
                 err(f"{rel(content_path)}: book_map order must be consecutive from 1")
@@ -475,7 +517,7 @@ def main() -> int:
         if pl is not None:
             validate_schema(pl, "playlists.schema.json", playlists_path)
             playlist_ids = [p.get("id") for p in pl.get("playlists", [])]
-            for duplicate in sorted({i for i in playlist_ids if playlist_ids.count(i) > 1}):
+            for duplicate in duplicates(playlist_ids):
                 err(f"data/playlists.json: duplicate playlist id '{duplicate}'")
             for p in pl.get("playlists", []):
                 for item in p.get("items", []):
@@ -488,7 +530,7 @@ def main() -> int:
                         err(f"data/playlists.json: playlist '{p.get('name')}' has unknown duration "
                             f"'{item['duration']}'")
                 book_ids = [item["book_id"] for item in p.get("items", [])]
-                for duplicate in sorted({b for b in book_ids if book_ids.count(b) > 1}):
+                for duplicate in duplicates(book_ids):
                     warn(f"data/playlists.json: playlist '{p.get('name')}' lists '{duplicate}' "
                          "at more than one duration; playlists should hold one entry per book")
 
@@ -499,10 +541,10 @@ def main() -> int:
         if qdoc is not None:
             validate_schema(qdoc, "queue.schema.json", queue_path)
             queue_ids = [item["book_id"] for item in qdoc.get("queue", [])]
-            for duplicate in sorted({i for i in queue_ids if queue_ids.count(i) > 1}):
+            for duplicate in duplicates(queue_ids):
                 err(f"data/queue.json: '{duplicate}' is queued more than once")
             priorities = [item["priority"] for item in qdoc.get("queue", [])]
-            for duplicate in sorted({p for p in priorities if priorities.count(p) > 1}):
+            for duplicate in duplicates(priorities):
                 warn(f"data/queue.json: priority {duplicate} is used more than once; order is ambiguous")
             for item in qdoc.get("queue", []):
                 if item["book_id"] not in entities or entities[item["book_id"]]["kind"] != "book":

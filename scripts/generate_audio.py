@@ -84,7 +84,13 @@ def ensure_models(quantized: bool) -> tuple[Path, Path]:
         if not destination.exists() or destination.stat().st_size == 0:
             print(f"Downloading {name} (one-off) ...")
             partial = destination.with_suffix(destination.suffix + ".part")
-            urllib.request.urlretrieve(f"{MODEL_RELEASE}/{name}", partial)
+            try:
+                urllib.request.urlretrieve(f"{MODEL_RELEASE}/{name}", partial)
+            except BaseException:
+                # Interrupted or failed: drop the fragment so the next run
+                # downloads afresh instead of resuming into a broken model.
+                partial.unlink(missing_ok=True)
+                raise
             partial.rename(destination)
         paths.append(destination)
     return paths[0], paths[1]
@@ -289,6 +295,21 @@ def listening_priority(book_dir: Path, levels: list[str], level_config: dict) ->
     return first + [level for level in levels if level not in first]
 
 
+def resolve_books(parser: argparse.ArgumentParser, args: argparse.Namespace) -> list[Path]:
+    """The book directories this run will voice, or a usage error."""
+    books_root = ROOT / "library/books"
+    if not books_root.is_dir():
+        parser.error(f"no library at {books_root.relative_to(ROOT)}; run this from the repository root")
+    if args.all:
+        return sorted(path for path in books_root.iterdir() if path.is_dir())
+    if not args.book_id:
+        parser.error("give a book id or --all")
+    book_dir = books_root / args.book_id
+    if not book_dir.is_dir():
+        parser.error(f"no such book: {args.book_id}")
+    return [book_dir]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -311,6 +332,11 @@ def main() -> int:
     config = load_config()
     if args.level and args.level not in config["levels"]:
         parser.error(f"unknown level '{args.level}'; configured: {', '.join(config['levels'])}")
+
+    # Settle what to voice before touching the model: a mistyped book id
+    # should cost a message, not a 340 MB load or a first-run download.
+    books = [] if args.inspect_pronunciation else resolve_books(parser, args)
+
     voice = args.voice or config["voice"]
     if config["voices"] and voice not in config["voices"]:
         print(f"note: voice '{voice}' is not listed in config/audio.json voices; using it anyway")
@@ -329,15 +355,6 @@ def main() -> int:
         print(f"phonemes: {phonemes}")
         return 0
 
-    books_root = ROOT / "library/books"
-    if args.all:
-        books = sorted(path for path in books_root.iterdir() if path.is_dir())
-    elif args.book_id:
-        books = [books_root / args.book_id]
-        if not books[0].is_dir():
-            parser.error(f"no such book: {args.book_id}")
-    else:
-        parser.error("give a book id or --all")
     levels = [args.level] if args.level else list(config["levels"])
 
     failures = 0
