@@ -23,7 +23,7 @@ word rather than leaving a stray `'s` for the phonemiser to read as the letter
 "ess". The generator first phonemises normal
 text, substitutes verified entries, then sends the final phonemes to Kokoro.
 Its sidecar records the dictionary hash and the entries used. A dictionary
-change stales only audio whose script contains an affected term; unrelated
+change stales only audio whose narration speaks an affected term; unrelated
 audio stays fresh.
 
 That hash covers the dictionary's contents, not the code that applies it.

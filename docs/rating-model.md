@@ -45,7 +45,8 @@ craft judges the prose as experienced, anchored to documented reception.
 Agents assign every component in half-point steps using the common anchors.
 `bookflow` applies the configured weighted mean and rounds half up to one
 decimal place. Validation rejects missing dimensions, unknown dimensions,
-invalid steps, changed order, weights that do not total one, and stale totals.
+invalid steps, changed order, weights that do not total one, stale totals, and
+score bands that would leave a reachable total unlabelled.
 Confidence reports source coverage and never changes the score.
 
 The decimal makes close calculations visible; it does not imply laboratory
