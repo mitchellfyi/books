@@ -4,7 +4,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.narration import parse_front_matter, word_count
+from scripts.narration import (
+    chunked_paragraphs,
+    parse_front_matter,
+    spoken_text,
+    word_count,
+)
 
 
 def write_script(directory: str, text: str) -> Path:
@@ -48,6 +53,27 @@ class FrontMatterTests(unittest.TestCase):
         self.assertEqual(body, text)
 
 
+class SpokenTextTests(unittest.TestCase):
+    def test_markdown_syntax_is_removed(self) -> None:
+        self.assertEqual(
+            spoken_text("# Heading\n\n**Bold** and _quiet_ words."),
+            "Heading\n\nBold and quiet words.",
+        )
+
+    def test_link_text_survives_and_the_url_does_not(self) -> None:
+        self.assertEqual(
+            spoken_text("See [the study](https://example.org/x) today."),
+            "See the study today.",
+        )
+
+    def test_list_markers_are_not_spoken(self) -> None:
+        self.assertEqual(spoken_text("- first point\n2. second point"),
+                         "first point\nsecond point")
+
+    def test_paragraph_breaks_survive_for_chunking(self) -> None:
+        self.assertEqual(spoken_text("One.\n\nTwo."), "One.\n\nTwo.")
+
+
 class WordCountTests(unittest.TestCase):
     def test_counts_plain_words(self) -> None:
         self.assertEqual(word_count("Attention is the new capital."), 5)
@@ -57,6 +83,37 @@ class WordCountTests(unittest.TestCase):
 
     def test_link_text_counts_but_url_does_not(self) -> None:
         self.assertEqual(word_count("See [the study](https://example.org/x) today."), 4)
+
+    def test_counts_only_what_is_spoken(self) -> None:
+        # A bullet marker is punctuation on the page and silence in the ear;
+        # counting it would let a script pass its target on unspoken characters.
+        self.assertEqual(word_count("- first point\n- second point"), 4)
+
+
+class ChunkedParagraphTests(unittest.TestCase):
+    def test_one_list_of_chunks_per_paragraph(self) -> None:
+        self.assertEqual(
+            chunked_paragraphs("First one. First two.\n\nSecond one."),
+            [["First one. First two."], ["Second one."]],
+        )
+
+    def test_sentences_pack_up_to_the_character_limit(self) -> None:
+        text = "Aaa bbb ccc. Ddd eee fff. Ggg hhh iii."
+        self.assertEqual(
+            chunked_paragraphs(text, max_chars=26),
+            [["Aaa bbb ccc. Ddd eee fff.", "Ggg hhh iii."]],
+        )
+
+    def test_a_sentence_longer_than_the_limit_is_kept_whole(self) -> None:
+        # Splitting mid-sentence would break the phrasing the model needs, so
+        # an over-long sentence travels alone rather than being cut.
+        self.assertEqual(
+            chunked_paragraphs("Short. A single very long sentence indeed.", max_chars=10),
+            [["Short.", "A single very long sentence indeed."]],
+        )
+
+    def test_blank_input_produces_no_chunks(self) -> None:
+        self.assertEqual(chunked_paragraphs("   \n\n  "), [])
 
 
 if __name__ == "__main__":

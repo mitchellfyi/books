@@ -24,7 +24,7 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
-from narration import parse_front_matter, word_count
+from narration import parse_front_matter, spoken_text, word_count
 from pronunciation import pronunciation_is_current
 from rating import rating_errors, rubric_errors
 
@@ -383,8 +383,14 @@ def main() -> int:
         for duration in durations:
             entry = {"script": None, "words": None, "audio": None}
             sp = d / "scripts" / f"{duration}.md"
+            # The narration text, not the file: front matter carries the book id,
+            # whose slug can contain a dictionary name the script never speaks.
+            # Judging freshness on the file would strand such audio as
+            # permanently stale, because regeneration reads the body alone.
+            narration_text = ""
             if sp.exists():
                 meta, body = parse_front_matter(sp)
+                narration_text = spoken_text(body)
                 entry["script"] = meta.get("status", "?")
                 entry["words"] = word_count(body)
                 if meta.get("book_id") != d.name:
@@ -408,9 +414,7 @@ def main() -> int:
             audio_files = list((d / "audio").glob(f"{duration}.*")) if (d / "audio").exists() else []
             media = [a for a in audio_files if a.suffix != ".json"]
             sidecars = [a for a in audio_files if a.suffix == ".json"]
-            script_bytes = sp.read_bytes() if sp.exists() else None
-            script_sha = hashlib.sha256(script_bytes).hexdigest() if script_bytes is not None else None
-            script_text = script_bytes.decode("utf-8") if script_bytes is not None else ""
+            script_sha = hashlib.sha256(sp.read_bytes()).hexdigest() if sp.exists() else None
             for audio_file in media:
                 parts = audio_file.name.split(".")
                 if len(parts) != 3:
@@ -436,7 +440,7 @@ def main() -> int:
                     entry["audio"] = "stale"
                 elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha \
                         and not pronunciation_is_current(
-                            script_text, sidecar, pronunciations_cfg["entries"]):
+                            narration_text, sidecar, pronunciations_cfg["entries"]):
                     warn(f"{rel(audio_file)}: audio is stale (pronunciation dictionary changed "
                          "for a term this script uses)")
                     entry["audio"] = "stale"

@@ -40,7 +40,7 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 
-from narration import parse_front_matter
+from narration import chunked_paragraphs, parse_front_matter, spoken_text
 from pronunciation import (
     phonemize_with_dictionary,
     pronunciation_is_current,
@@ -73,34 +73,6 @@ def load_config() -> dict:
 def voice_lang(voice: str) -> str:
     """Kokoro voice ids start with the language: a* American, b* British."""
     return "en-us" if voice.startswith("a") else "en-gb"
-
-
-def narration(text: str) -> str:
-    text = re.sub(r"\[([^]]+)]\([^)]+\)", r"\1", text)
-    text = re.sub(r"^#+\s*", "", text, flags=re.MULTILINE)
-    text = re.sub(r"^\s*(?:[-*]|\d+\.)\s+", "", text, flags=re.MULTILINE)
-    text = re.sub(r"[*_`>#]", "", text)
-    return re.sub(r"[ \t]+", " ", text).strip()
-
-
-def chunked_paragraphs(text: str, max_chars: int = 350) -> list[list[str]]:
-    """Sentence-packed chunks per paragraph, kept below the model's comfort limit."""
-    paragraphs = [p.strip().replace("\n", " ") for p in re.split(r"\n\s*\n", text) if p.strip()]
-    result = []
-    for paragraph in paragraphs:
-        sentences = re.split(r"(?<=[.!?])\s+", paragraph)
-        chunks: list[str] = []
-        current = ""
-        for sentence in sentences:
-            if current and len(current) + len(sentence) + 1 > max_chars:
-                chunks.append(current)
-                current = sentence
-            else:
-                current = f"{current} {sentence}".strip()
-        if current:
-            chunks.append(current)
-        result.append(chunks)
-    return result
 
 
 def ensure_models(quantized: bool) -> tuple[Path, Path]:
@@ -224,7 +196,7 @@ def generate(book_dir: Path, level: str, synth: Synthesiser, config: dict,
     meta, body = parse_front_matter(script_path)
     if meta.get("status") != "complete" and not args.allow_draft:
         return f"skipped (status: {meta.get('status', 'unknown')})"
-    text = narration(body)
+    text = spoken_text(body)
     if not text or "TODO" in text:
         return "skipped (script empty or contains TODO)"
 
@@ -239,7 +211,9 @@ def generate(book_dir: Path, level: str, synth: Synthesiser, config: dict,
         existing = audio_dir / f"{level}.{voice}.{previous.get('output_format', 'wav')}"
         dictionary_ok = (
             previous.get("pronunciation_dictionary_sha256") == config["pronunciation_sha256"]
-            or pronunciation_is_current(body, previous, config["pronunciations"])
+            # Freshness is judged on what is spoken, so `check` and this
+            # skip agree and markdown syntax cannot hide or invent a term.
+            or pronunciation_is_current(text, previous, config["pronunciations"])
         )
         if previous.get("source_script_sha256") == script_sha and dictionary_ok \
                 and existing.exists():
