@@ -12,11 +12,12 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/how-not-to-age-greger/scripts/30-minutes.md",
-  "source_script_sha256": "c46481581946e5a6e12ea8be7d496af4bffc6ef20df5b65928aa31fe8d4f17eb",
-  "pronunciation_dictionary_sha256": "2fe3ec28dd1994ff8f73f3ed0d3dcacb4ff89f197f508837bfc49ca3a36ae7c0",
+  "source_script_sha256": "88b196dae45d552bce69a85041fb08f658eb763537f9dd873328cf067a1cf335",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [],
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
   "script_words": 4239,
-  "audio_seconds": 1812.432,
-  "measured_wpm": 140.33,
-  "generated_at": "2026-08-13T10:14:41.260320+00:00"
+  "audio_seconds": 1812.261,
+  "measured_wpm": 140.34,
+  "generated_at": "2026-08-14T06:54:05.320688+00:00"
 }

@@ -12,15 +12,15 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/sapiens-harari/scripts/15-minutes.md",
-  "source_script_sha256": "43c693d64ba45b719b019742645569efa57ecb440fd53ae87f559c6244e269a9",
-  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
+  "source_script_sha256": "24cc829dcb7a2a3d0312dd6ae0e99c627b28d576165ee9348f729aafdb1758e1",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Gilgamesh",
     "Peugeot"
   ],
   "pronunciation_entries_sha256": "c95c4224e22eb17393058fa8669354164e2b716606243d81b3ffcb336a9aeca0",
   "script_words": 2129,
-  "audio_seconds": 825.181,
-  "measured_wpm": 154.8,
-  "generated_at": "2026-08-13T13:57:43.450589+00:00"
+  "audio_seconds": 825.373,
+  "measured_wpm": 154.77,
+  "generated_at": "2026-08-14T08:48:48.625991+00:00"
 }

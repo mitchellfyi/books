@@ -12,12 +12,12 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/guns-germs-and-steel-diamond/scripts/30-seconds.md",
-  "source_script_sha256": "6cccdd4e07ba79c91c174c792fd96b1eb64b50663898dac39cd530c585be57bd",
-  "pronunciation_dictionary_sha256": "96108f5c4b3ea618349a2e118ee88b8a155cb71d2bcedd6a72631d1119d25851",
+  "source_script_sha256": "5a9b258ba55a6e91f8823d1ad3583dc58d7ec03249d998e9f8a470730c4d2f18",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [],
   "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
   "script_words": 75,
-  "audio_seconds": 31.297,
-  "measured_wpm": 143.78,
-  "generated_at": "2026-08-13T15:26:48.150516+00:00"
+  "audio_seconds": 31.233,
+  "measured_wpm": 144.08,
+  "generated_at": "2026-08-14T06:41:10.710694+00:00"
 }

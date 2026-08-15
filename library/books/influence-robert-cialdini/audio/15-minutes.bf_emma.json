@@ -12,15 +12,15 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/influence-robert-cialdini/scripts/15-minutes.md",
-  "source_script_sha256": "ad84f795103f971ea509b0d976648e18a91174e38494a7d5c76b4cf6e5432d46",
-  "pronunciation_dictionary_sha256": "09636851dc40f9d861f2b7a993ff82c8fd9df24f4152972007facc639a86a240",
+  "source_script_sha256": "ca64e1d89ddc8e51941a53ef44b8e7213ba3c00cd7106e5808bca59a074faec9",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Cialdini",
     "Werther"
   ],
   "pronunciation_entries_sha256": "1b3358d74995364411d0dbf2aa8a31d7ba13d53ad29e3d9ddf6c59a6cb707121",
-  "script_words": 2133,
-  "audio_seconds": 806.179,
-  "measured_wpm": 158.75,
-  "generated_at": "2026-08-13T16:18:12.770176+00:00"
+  "script_words": 2132,
+  "audio_seconds": 806.307,
+  "measured_wpm": 158.65,
+  "generated_at": "2026-08-14T06:57:33.977075+00:00"
 }

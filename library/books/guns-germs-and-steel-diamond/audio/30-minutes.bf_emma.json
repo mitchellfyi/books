@@ -12,15 +12,15 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/guns-germs-and-steel-diamond/scripts/30-minutes.md",
-  "source_script_sha256": "1478b423b260698e9c47ebdc046b42d002500fa4cfee5f5c7bd5718f0628703c",
-  "pronunciation_dictionary_sha256": "09636851dc40f9d861f2b7a993ff82c8fd9df24f4152972007facc639a86a240",
+  "source_script_sha256": "c8ae88add24ac4ac71241a55575250b1d0a24f96b7adb86c6f2ec9703e69e044",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Atahuallpa",
     "Cajamarca"
   ],
   "pronunciation_entries_sha256": "6d942534ea0a0bf91baec96a5f039992955ad0b10eb66a8b699504ed34acadbf",
   "script_words": 4188,
-  "audio_seconds": 1643.037,
+  "audio_seconds": 1642.995,
   "measured_wpm": 152.94,
-  "generated_at": "2026-08-13T15:52:54.729220+00:00"
+  "generated_at": "2026-08-14T06:40:55.054714+00:00"
 }

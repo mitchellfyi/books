@@ -12,14 +12,14 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/supercommunicators-duhigg/scripts/30-minutes.md",
-  "source_script_sha256": "f6eea6947019413cbe10de9f309d77fd1ee75deb6b10a7ad12c42427a83086f1",
-  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
+  "source_script_sha256": "40eff90c1a25a7f9753bf7a725d5da486f37a8455e72107ab727545737b01d25",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Duhigg"
   ],
   "pronunciation_entries_sha256": "12715679b39340e17e2f1a9793e74990c523b381de996614ba27d93910e6da60",
-  "script_words": 4188,
-  "audio_seconds": 1616.806,
-  "measured_wpm": 155.42,
-  "generated_at": "2026-08-13T13:33:55.175117+00:00"
+  "script_words": 4190,
+  "audio_seconds": 1617.318,
+  "measured_wpm": 155.44,
+  "generated_at": "2026-08-14T14:03:23.615007+00:00"
 }

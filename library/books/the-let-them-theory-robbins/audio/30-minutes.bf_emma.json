@@ -12,11 +12,12 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/the-let-them-theory-robbins/scripts/30-minutes.md",
-  "source_script_sha256": "3ebccbe988c39d4b759d82156858d774d74f43627edf57dad5d53550b0213f6e",
-  "pronunciation_dictionary_sha256": "942f4f6bc6c494dd0ead7a463d20b68a075c68d85972c521c86704bbd14d7607",
+  "source_script_sha256": "45e1076d9c8e824991ac9b49ac40b469401b41e73a3607957231002f30dff239",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [],
-  "script_words": 4338,
-  "audio_seconds": 1671.893,
-  "measured_wpm": 155.68,
-  "generated_at": "2026-08-13T07:48:30.532322+00:00"
+  "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "script_words": 4343,
+  "audio_seconds": 1673.365,
+  "measured_wpm": 155.72,
+  "generated_at": "2026-08-14T16:06:36.281932+00:00"
 }

@@ -12,14 +12,14 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/sapiens-harari/scripts/5-minutes.md",
-  "source_script_sha256": "f5b0a9d4869043f59697991cbf7af1e5425c0202f977227dab234e83bffc8e49",
-  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
+  "source_script_sha256": "37ae8caa0c1c7cd3bc51bf2405cd0457b01048dbf701aa84aaacf120e9bdc3f7",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Peugeot"
   ],
   "pronunciation_entries_sha256": "24b14a3a49d7ff45cc3a801c89448c43c82bf2c5b4f939985be648d4ce81afb3",
   "script_words": 702,
-  "audio_seconds": 279.345,
-  "measured_wpm": 150.78,
-  "generated_at": "2026-08-13T13:58:51.785680+00:00"
+  "audio_seconds": 279.452,
+  "measured_wpm": 150.72,
+  "generated_at": "2026-08-14T08:48:47.408059+00:00"
 }

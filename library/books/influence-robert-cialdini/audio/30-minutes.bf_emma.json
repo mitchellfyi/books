@@ -12,15 +12,15 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/influence-robert-cialdini/scripts/30-minutes.md",
-  "source_script_sha256": "39f3cfb20e6c14a202ade1b95054c84c9dc1d93b2cbd112aa4c80287ae4ce110",
-  "pronunciation_dictionary_sha256": "09636851dc40f9d861f2b7a993ff82c8fd9df24f4152972007facc639a86a240",
+  "source_script_sha256": "91b96d46813679037c782b45436df52fbb3b7624e88344c340e1fcd83db5d20b",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Cialdini",
     "Werther"
   ],
   "pronunciation_entries_sha256": "1b3358d74995364411d0dbf2aa8a31d7ba13d53ad29e3d9ddf6c59a6cb707121",
-  "script_words": 4191,
-  "audio_seconds": 1598.971,
-  "measured_wpm": 157.26,
-  "generated_at": "2026-08-13T16:37:26.775899+00:00"
+  "script_words": 4190,
+  "audio_seconds": 1599.099,
+  "measured_wpm": 157.21,
+  "generated_at": "2026-08-14T08:29:27.142259+00:00"
 }

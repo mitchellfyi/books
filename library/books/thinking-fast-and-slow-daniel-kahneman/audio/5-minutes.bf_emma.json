@@ -12,12 +12,12 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/thinking-fast-and-slow-daniel-kahneman/scripts/5-minutes.md",
-  "source_script_sha256": "6aa2a676205ab5229ad4f9a609a81aece801e505a375720be401ef874a523e05",
-  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
+  "source_script_sha256": "cb13465a4921306e06c306aa38f454d6ab0159c1ccc6ae2db14c6641cddb9aa8",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [],
   "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "script_words": 705,
-  "audio_seconds": 277.922,
-  "measured_wpm": 152.2,
-  "generated_at": "2026-08-13T14:47:34.159270+00:00"
+  "script_words": 707,
+  "audio_seconds": 278.797,
+  "measured_wpm": 152.15,
+  "generated_at": "2026-08-14T18:38:23.666782+00:00"
 }

@@ -12,14 +12,14 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/the-choice-factory-richard-shotton/scripts/30-minutes.md",
-  "source_script_sha256": "230ca88eb5f9772480b69cd0f9c4403031bf1f9c3d4bdb6c127bbedb2512ef4c",
+  "source_script_sha256": "ee1e2ad010325bbf23fe83d0a0172a1ba3c74913c825cad4f8cfbe1c7c5ce1ec",
   "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Cialdini"
   ],
   "pronunciation_entries_sha256": "b67801e4bdad3dcc9a6111f225a2c439d445ce6a5d30786f7e07cc77fe2a0cb1",
   "script_words": 4197,
-  "audio_seconds": 1629.621,
-  "measured_wpm": 154.53,
-  "generated_at": "2026-08-13T20:52:39.754769+00:00"
+  "audio_seconds": 1629.663,
+  "measured_wpm": 154.52,
+  "generated_at": "2026-08-14T06:58:58.411882+00:00"
 }

@@ -12,15 +12,15 @@
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/meditations-aurelius/scripts/15-minutes.md",
-  "source_script_sha256": "33db67439ba8c6a67c6ddb75a753e0da36bed6d416c22743ce6191a3abfbf2c5",
-  "pronunciation_dictionary_sha256": "3f3614933c80457f183cb71a6de6d464cf98d29f9a48ab5131c48dcb786a4fc0",
+  "source_script_sha256": "fa830e7a09e66ac3c0a2aa3914ddcbb4152ad7054138fa0b1584e7275f5c3547",
+  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
   "pronunciation_terms": [
     "Commodus",
     "Epictetus"
   ],
   "pronunciation_entries_sha256": "a64791d9904e4389668872ad49682d86d3d301647942f5be93110f262f5f6231",
-  "script_words": 2105,
-  "audio_seconds": 785.573,
-  "measured_wpm": 160.77,
-  "generated_at": "2026-08-13T20:13:59.303029+00:00"
+  "script_words": 2110,
+  "audio_seconds": 786.619,
+  "measured_wpm": 160.94,
+  "generated_at": "2026-08-14T06:38:23.020856+00:00"
 }
