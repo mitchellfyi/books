@@ -146,8 +146,20 @@ function bind() {
     localStorage.setItem('book-sort', state.bookSort);
     renderList();
   });
-  el('playlist-toggle').addEventListener('click', () => { el('playlist').hidden = false; });
-  el('playlist-close').addEventListener('click', () => { el('playlist').hidden = true; });
+  el('playlist-toggle').addEventListener('click', () => openPlaylist());
+  el('playlist-close').addEventListener('click', () => closePlaylist());
+  el('playlist').addEventListener('keydown', event => {
+    if (event.key === 'Escape') { closePlaylist(); return; }
+    if (event.key !== 'Tab') return;
+    // Keep Tab inside the panel while it behaves as a modal.
+    const focusable = [...el('playlist').querySelectorAll(
+      'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')];
+    if (!focusable.length) return;
+    const edge = event.shiftKey ? focusable[0] : focusable[focusable.length - 1];
+    if (document.activeElement !== edge) return;
+    event.preventDefault();
+    (event.shiftKey ? focusable[focusable.length - 1] : focusable[0]).focus();
+  });
   el('playlist-clear').addEventListener('click', () => { state.queue = []; stopPlayback(); });
   el('playlist-save').addEventListener('click', saveQueueAsPlaylist);
   el('speed').addEventListener('change', event => { el('audio').playbackRate = Number(event.target.value); });
@@ -168,6 +180,21 @@ function bind() {
   });
 }
 
+// The playlist is a slide-over modal: move focus in, trap Tab, and hand focus
+// back to the control that opened it.
+function openPlaylist() {
+  el('playlist').hidden = false;
+  el('playlist-toggle').setAttribute('aria-expanded', 'true');
+  el('playlist-close').focus();
+}
+
+function closePlaylist() {
+  if (el('playlist').hidden) return;
+  el('playlist').hidden = true;
+  el('playlist-toggle').setAttribute('aria-expanded', 'false');
+  el('playlist-toggle').focus();
+}
+
 function matches(book, query) {
   const haystack = [book.title, ...book.authors.map(a => a.name), ...book.discovery.tag_ids,
     ...book.content.assessment.audience.topics].join(' ').toLowerCase();
@@ -178,30 +205,36 @@ function renderList() {
   const query = el('search').value.trim();
   const books = sortedBooks(state.library.books.filter(book => matches(book, query)));
   el('filter-summary').textContent = `${books.length} non-fiction ${books.length === 1 ? 'book' : 'books'}`;
+  // Quick play is a sibling button, not a span inside the card button: nested
+  // buttons are invalid and the inner one can never be reached by keyboard.
   el('book-list').innerHTML = books.map(book => {
     const featured = featuredItem(book);
     const rating = bookRating(book);
+    const recommended = featured && featured.level === recommendedLevel(book);
     const chip = featured
-      ? `<span class="quickplay" data-quickplay title="Play the ${featured.level === recommendedLevel(book) ? 'recommended' : 'longest available'} brief">▶ ${timeLabel(levelSeconds(book, featured.level))}${featured.level === recommendedLevel(book) ? ' ★' : ''}</span>`
+      ? `<button class="quickplay" type="button" data-quickplay="${esc(book.id)}"
+          aria-label="Play the ${recommended ? 'recommended' : 'longest available'} brief for ${esc(book.title)}"
+          title="Play the ${recommended ? 'recommended' : 'longest available'} brief">▶ ${timeLabel(levelSeconds(book, featured.level))}${recommended ? ' ★' : ''}</button>`
       : '';
     return `
-    <button class="book-card" type="button" data-book="${book.id}" aria-current="${state.view?.type !== 'author' && book.id === state.selectedBook?.id}">
-      <strong>${esc(book.title)}</strong>
-      <span>${esc(book.authors.map(a => a.name).join(', '))}</span>
-      ${rating ? `<span class="rating-chip">${rating.score.toFixed(1)}/10</span>` : ''}
+    <div class="book-row">
+      <button class="book-card" type="button" data-book="${book.id}" aria-current="${state.view?.type !== 'author' && book.id === state.selectedBook?.id}">
+        <strong>${esc(book.title)}</strong>
+        <span>${esc(book.authors.map(a => a.name).join(', '))}</span>
+        ${rating ? `<span class="rating-chip">${rating.score.toFixed(1)}/10</span>` : ''}
+      </button>
       ${chip}
-    </button>`;
+    </div>`;
   }).join('');
-  el('book-list').querySelectorAll('[data-book]').forEach(button => button.addEventListener('click', event => {
-    const book = state.library.books.find(candidate => candidate.id === button.dataset.book);
-    if (event.target.closest('.quickplay')) {
-      playItem(featuredItem(book));
-      return;
-    }
+  el('book-list').querySelectorAll('[data-book]').forEach(button => button.addEventListener('click', () => {
+    const book = findBook(button.dataset.book);
     state.keepScrollOnNextRoute = true;
     if (location.hash === `#book/${book.id}`) { route(); }
     else location.hash = `book/${book.id}`;
     el('book-detail').focus({preventScroll: true});
+  }));
+  el('book-list').querySelectorAll('[data-quickplay]').forEach(button => button.addEventListener('click', () => {
+    playItem(featuredItem(findBook(button.dataset.quickplay)));
   }));
   if (!books.length) {
     el('book-detail').replaceChildren(el('empty-state').content.cloneNode(true));
@@ -369,7 +402,9 @@ function renderBook() {
   el('book-detail').querySelectorAll('[data-level]').forEach(button => button.addEventListener('click', () => {
     state.level = button.dataset.level;
     renderBook();
-    document.querySelector('.script-panel')?.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelector('.script-panel')?.scrollIntoView(
+      {behavior: smooth ? 'smooth' : 'auto', block: 'nearest'});
   }));
   bindScriptActions();
 }
