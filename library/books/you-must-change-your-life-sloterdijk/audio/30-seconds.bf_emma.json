@@ -13,13 +13,13 @@
   "output_format": "mp3",
   "source_script": "library/books/you-must-change-your-life-sloterdijk/scripts/30-seconds.md",
   "source_script_sha256": "b83522c614d8caaf78dda33a6a2510b4e8f20576712625311595d9aec1067e29",
-  "pronunciation_dictionary_sha256": "2476d3b13a96ef201c02c41bfbd2715aa076a9af450ab6d256960af539290ea7",
+  "pronunciation_dictionary_sha256": "5c3f86c5a5512d4127f6e76173f6138e7fbc85ef1637e66a0790b5f4c6698f34",
   "pronunciation_terms": [
     "Sloterdijk"
   ],
-  "pronunciation_entries_sha256": "50441a020a6fb21b2fab6ab024d3adf0a5dae8f7e4e72812100ce6901318a7f7",
+  "pronunciation_entries_sha256": "c2e3dd49e290e02edf942d1d9162552ad90132c9a416b8324fb6941b24728611",
   "script_words": 73,
-  "audio_seconds": 28.439,
-  "measured_wpm": 154.02,
-  "generated_at": "2026-08-15T13:07:21.992392+00:00"
+  "audio_seconds": 28.78,
+  "measured_wpm": 152.19,
+  "generated_at": "2026-08-15T13:36:11.548538+00:00"
 }

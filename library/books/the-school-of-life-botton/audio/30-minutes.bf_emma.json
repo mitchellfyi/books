@@ -13,7 +13,7 @@
   "output_format": "mp3",
   "source_script": "library/books/the-school-of-life-botton/scripts/30-minutes.md",
   "source_script_sha256": "15610db5ab4af5020d8e6b8ce425e2e7e7bd353102a114881059528855d63499",
-  "pronunciation_dictionary_sha256": "2476d3b13a96ef201c02c41bfbd2715aa076a9af450ab6d256960af539290ea7",
+  "pronunciation_dictionary_sha256": "5c3f86c5a5512d4127f6e76173f6138e7fbc85ef1637e66a0790b5f4c6698f34",
   "pronunciation_terms": [
     "akrasia",
     "Alain de Botton",
@@ -21,9 +21,9 @@
     "Rilke",
     "Rorschach"
   ],
-  "pronunciation_entries_sha256": "b73349bf12bc0d62bdc8f99ba4a0a8976f2097dfe6bc87ce421702e0624b593c",
+  "pronunciation_entries_sha256": "87462fef26a1e2e32fc5b02f092ded99d7031e09b87a1ae440aea142cb45b1a7",
   "script_words": 4185,
-  "audio_seconds": 1610.523,
-  "measured_wpm": 155.91,
-  "generated_at": "2026-08-15T13:22:03.147117+00:00"
+  "audio_seconds": 1611.099,
+  "measured_wpm": 155.86,
+  "generated_at": "2026-08-15T13:45:02.812917+00:00"
 }

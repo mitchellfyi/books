@@ -13,13 +13,13 @@
   "output_format": "mp3",
   "source_script": "library/books/supercommunicators-duhigg/scripts/15-minutes.md",
   "source_script_sha256": "eef16f334a98676ea85f5b19333133d747886e8e424deb62bc2b69a87938d558",
-  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Duhigg"
   ],
   "pronunciation_entries_sha256": "12715679b39340e17e2f1a9793e74990c523b381de996614ba27d93910e6da60",
   "script_words": 2095,
-  "audio_seconds": 842.217,
-  "measured_wpm": 149.25,
-  "generated_at": "2026-08-14T11:47:12.223708+00:00"
+  "audio_seconds": 842.067,
+  "measured_wpm": 149.28,
+  "generated_at": "2026-08-15T14:34:55.352076+00:00"
 }

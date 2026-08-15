@@ -8,18 +8,18 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.9,
+  "speed": 0.91,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/influence-robert-cialdini/scripts/5-minutes.md",
   "source_script_sha256": "c79262c43b64c639df73d9d133f83b37710d486ad15c998564f423e5b6f2a473",
-  "pronunciation_dictionary_sha256": "a2e6c9988d8bc8e6168c775061936cd555f1bbfff628c9f3e8fbcaabcae13908",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Cialdini"
   ],
   "pronunciation_entries_sha256": "b67801e4bdad3dcc9a6111f225a2c439d445ce6a5d30786f7e07cc77fe2a0cb1",
   "script_words": 801,
-  "audio_seconds": 306.405,
-  "measured_wpm": 156.85,
-  "generated_at": "2026-08-13T12:42:56.520643+00:00"
+  "audio_seconds": 304.506,
+  "measured_wpm": 157.83,
+  "generated_at": "2026-08-15T14:31:05.467889+00:00"
 }

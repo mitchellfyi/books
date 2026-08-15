@@ -13,7 +13,7 @@
   "output_format": "mp3",
   "source_script": "library/books/the-48-laws-of-power-greene/scripts/30-minutes.md",
   "source_script_sha256": "b051c5c6b4d0aef74757a22c33a700693e9196c41a466c08ecbd797ea1d73a58",
-  "pronunciation_dictionary_sha256": "4414c8d5c2a3b94f60fe2da2954b603b4d39bf00975414f3d69f694ba1cf32a4",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Cialdini",
     "Jay-Z",
@@ -22,7 +22,7 @@
   ],
   "pronunciation_entries_sha256": "b6894902a18cf1d3d7f99e821e09573141d9e93dc8c47f17ccc0a8c3d73284f4",
   "script_words": 4185,
-  "audio_seconds": 1651.36,
-  "measured_wpm": 152.06,
-  "generated_at": "2026-08-13T08:48:05.590837+00:00"
+  "audio_seconds": 1651.253,
+  "measured_wpm": 152.07,
+  "generated_at": "2026-08-15T14:47:36.829143+00:00"
 }

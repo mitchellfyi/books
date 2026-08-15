@@ -8,19 +8,19 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.91,
+  "speed": 0.9,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/influence-robert-cialdini/scripts/30-minutes.md",
   "source_script_sha256": "91b96d46813679037c782b45436df52fbb3b7624e88344c340e1fcd83db5d20b",
-  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Cialdini",
     "Werther"
   ],
   "pronunciation_entries_sha256": "1b3358d74995364411d0dbf2aa8a31d7ba13d53ad29e3d9ddf6c59a6cb707121",
   "script_words": 4190,
-  "audio_seconds": 1599.099,
-  "measured_wpm": 157.21,
-  "generated_at": "2026-08-14T08:29:27.142259+00:00"
+  "audio_seconds": 1610.064,
+  "measured_wpm": 156.14,
+  "generated_at": "2026-08-15T14:28:57.569148+00:00"
 }

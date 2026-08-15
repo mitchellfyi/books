@@ -13,13 +13,13 @@
   "output_format": "mp3",
   "source_script": "library/books/influence-robert-cialdini/scripts/30-seconds.md",
   "source_script_sha256": "9957e9bfc8a6222ff92acc03e281704fff6611f2403be8826129724a19057d55",
-  "pronunciation_dictionary_sha256": "a2e6c9988d8bc8e6168c775061936cd555f1bbfff628c9f3e8fbcaabcae13908",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Cialdini"
   ],
   "pronunciation_entries_sha256": "b67801e4bdad3dcc9a6111f225a2c439d445ce6a5d30786f7e07cc77fe2a0cb1",
   "script_words": 72,
-  "audio_seconds": 28.311,
-  "measured_wpm": 152.59,
-  "generated_at": "2026-08-13T12:41:47.209341+00:00"
+  "audio_seconds": 28.076,
+  "measured_wpm": 153.87,
+  "generated_at": "2026-08-15T14:29:11.983746+00:00"
 }

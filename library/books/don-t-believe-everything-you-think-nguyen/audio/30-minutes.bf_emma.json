@@ -13,13 +13,13 @@
   "output_format": "mp3",
   "source_script": "library/books/don-t-believe-everything-you-think-nguyen/scripts/30-minutes.md",
   "source_script_sha256": "37379ba4dab1eed76e8128d85b41a4496ecf5dacc1ad36fc9bc4d83ebf5c7c12",
-  "pronunciation_dictionary_sha256": "d0d39e4115e28197c5c851ecdcb91349878079782ae7e05828169c67f5b4c964",
+  "pronunciation_dictionary_sha256": "5c3f86c5a5512d4127f6e76173f6138e7fbc85ef1637e66a0790b5f4c6698f34",
   "pronunciation_terms": [
     "Nguyen"
   ],
   "pronunciation_entries_sha256": "f0029780c1f01280d17d47104072656e0a9a33a62e2c2d28ab654e02872c7ffd",
   "script_words": 4192,
-  "audio_seconds": 1616.541,
-  "measured_wpm": 155.59,
-  "generated_at": "2026-08-13T14:25:55.111052+00:00"
+  "audio_seconds": 1615.431,
+  "measured_wpm": 155.7,
+  "generated_at": "2026-08-15T14:11:21.557981+00:00"
 }
