@@ -178,7 +178,8 @@ def init_book(args: argparse.Namespace) -> None:
     (book_dir / "audio").mkdir()
     (book_dir / "audio/.gitkeep").touch()
 
-    if not author_dir.exists():
+    author_is_new = not author_dir.exists()
+    if author_is_new:
         shutil.copytree(ROOT / "templates/author", author_dir)
         replace_tree(author_dir, {
             "author-id": author_id,
@@ -187,34 +188,21 @@ def init_book(args: argparse.Namespace) -> None:
             "1970-01-01": date.today().isoformat(),
         })
 
-    author_entry = {
+    upsert_entity(catalog, by_id, {
         "id": author_id,
         "kind": "author",
         "name": args.author,
         "state": "catalogued",
         "path": f"library/authors/{author_id}/author.json",
-        "aliases": by_id.get(author_id, {}).get("aliases", []),
-    }
-    if author_id in by_id:
-        by_id[author_id].clear()
-        by_id[author_id].update(author_entry)
-    else:
-        catalog["entities"].append(author_entry)
-
-    book_entry = {
+    })
+    upsert_entity(catalog, by_id, {
         "id": book_id,
         "kind": "book",
         "name": args.title,
         "state": "catalogued",
         "path": f"library/books/{book_id}/book.json",
         "author_ids": [author_id],
-        "aliases": by_id.get(book_id, {}).get("aliases", []),
-    }
-    if book_id in by_id:
-        by_id[book_id].clear()
-        by_id[book_id].update(book_entry)
-    else:
-        catalog["entities"].append(book_entry)
+    })
     catalog["entities"].sort(key=lambda item: (item["kind"], item["name"].casefold()))
     save(catalog_path, catalog)
 
@@ -222,8 +210,28 @@ def init_book(args: argparse.Namespace) -> None:
               notes=args.note or "")
 
     print(f"Created {book_dir.relative_to(ROOT)} and queued it for processing")
+    # Author ids are derived from the name, so two different people can share
+    # one. Say which profile this book joined, so a collision is visible now
+    # rather than after research has been written into the wrong one.
+    print(f"Author profile: {author_dir.relative_to(ROOT)} "
+          + ("(new)" if author_is_new else "(existing — check it is the same person)"))
     print("\nResearch prompt for an agent:\n")
     print(research_prompt(args.title, args.author, book_id))
+
+
+def upsert_entity(catalog: dict, by_id: dict, entry: dict) -> None:
+    """Add a catalogue entry, or refresh one in place, keeping its aliases.
+
+    In place so a promoted stub holds its position until the list is sorted
+    again, and aliases survive because they are researched, not scaffolded.
+    """
+    existing = by_id.get(entry["id"])
+    entry = {**entry, "aliases": (existing or {}).get("aliases", [])}
+    if existing is None:
+        catalog["entities"].append(entry)
+    else:
+        existing.clear()
+        existing.update(entry)
 
 
 def research_prompt(title: str, author: str, book_id: str) -> str:
@@ -417,8 +425,53 @@ def cmd_rate(args: argparse.Namespace) -> None:
         print(f"  {configured['label']:30} {item['score']:>4.1f} × {configured['weight']:.0%}")
 
 
-DIST = ROOT / "dist"
 APP_ASSETS = ("index.html", "app.js", "styles.css")
+
+
+def clear_except_audio(dist: Path) -> None:
+    """Empty dist/ ready for a rebuild, leaving the audio for sync_audio.
+
+    Audio is almost all of the site and changes only when a book is re-voiced,
+    so deleting and recopying it would rewrite hundreds of megabytes to answer
+    an edit to one sentence — on every build, and on every serve, which builds
+    first.
+    """
+    for path in sorted(dist.iterdir()) if dist.exists() else ():
+        if path == dist / "audio":
+            continue
+        if path.is_dir():
+            shutil.rmtree(path)
+        else:
+            path.unlink()
+    (dist / "data").mkdir(parents=True, exist_ok=True)
+
+
+def sync_audio(source: Path, destination: Path) -> bool:
+    """Copy unless the destination already matches. True when it copied."""
+    if destination.exists():
+        there, here = destination.stat(), source.stat()
+        # copy2 carries the source mtime across, so equal size and mtime means
+        # this is the same recording; re-voicing a level always moves it.
+        if (there.st_size, int(there.st_mtime)) == (here.st_size, int(here.st_mtime)):
+            return False
+    shutil.copy2(source, destination)
+    return True
+
+
+def prune_audio(dist: Path, keep: set[Path]) -> int:
+    """Delete built audio the library no longer produces. Returns how many."""
+    audio_root = dist / "audio"
+    if not audio_root.exists():
+        return 0
+    removed = 0
+    for path in sorted(audio_root.rglob("*")):
+        if path.is_file() and path not in keep:
+            path.unlink()
+            removed += 1
+    for book_dir in sorted(audio_root.iterdir()):
+        if book_dir.is_dir() and not any(book_dir.iterdir()):
+            book_dir.rmdir()
+    return removed
 
 
 def build_app(_: argparse.Namespace | None = None) -> None:
@@ -433,14 +486,14 @@ def build_app(_: argparse.Namespace | None = None) -> None:
         author = load(path)
         authors[author["id"]] = author
 
-    if DIST.exists():
-        shutil.rmtree(DIST)
-    (DIST / "data").mkdir(parents=True)
+    dist = ROOT / "dist"
+    clear_except_audio(dist)
     for asset in APP_ASSETS:
-        shutil.copy2(ROOT / "app" / asset, DIST / asset)
+        shutil.copy2(ROOT / "app" / asset, dist / asset)
 
     books = []
-    audio_files = 0
+    built_audio: set[Path] = set()
+    written = 0
     for book_path in sorted((ROOT / "library/books").glob("*/book.json")):
         directory = book_path.parent
         content_path = directory / "content.json"
@@ -463,10 +516,10 @@ def build_app(_: argparse.Namespace | None = None) -> None:
                 voice = parts[1] if len(parts) == 3 else "unknown"
                 sidecar_path = directory / "audio" / f"{level}.{voice}.json"
                 seconds = load(sidecar_path).get("audio_seconds") if sidecar_path.exists() else None
-                destination = DIST / "audio" / book["id"]
-                destination.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(audio, destination / audio.name)
-                audio_files += 1
+                destination = dist / "audio" / book["id"] / audio.name
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                written += sync_audio(audio, destination)
+                built_audio.add(destination)
                 variants[voice] = {
                     "url": f"audio/{book['id']}/{audio.name}",
                     "seconds": seconds,
@@ -505,9 +558,13 @@ def build_app(_: argparse.Namespace | None = None) -> None:
         "catalog": catalog,
         "books": books,
     }
-    save(DIST / "data/library.json", output)
-    print(f"Built dist/ with {len(books)} book(s) and {audio_files} audio file(s); "
+    save(dist / "data/library.json", output)
+    removed = prune_audio(dist, built_audio)
+    print(f"Built dist/ with {len(books)} book(s) and {len(built_audio)} audio file(s); "
           "deploy the dist directory to any static host")
+    if written or removed:
+        print(f"  audio: {written} written, {removed} removed, "
+              f"{len(built_audio) - written} already current")
 
 
 def run_managed(command: list[str]) -> None:
@@ -701,7 +758,7 @@ class LibraryHandler(SimpleHTTPRequestHandler):
 def serve(args: argparse.Namespace) -> None:
     build_app()
     url = f"http://127.0.0.1:{args.port}/"
-    handler = partial(LibraryHandler, directory=str(DIST))
+    handler = partial(LibraryHandler, directory=str(ROOT / "dist"))
     try:
         server = ThreadingHTTPServer(("127.0.0.1", args.port), handler)
     except OSError as error:

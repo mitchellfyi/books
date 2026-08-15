@@ -249,8 +249,11 @@ Check the catalogue by title, author, alternate title, and ISBN to prevent dupli
 The command refuses titles that normalise to a different existing catalogue
 entry (`--force` overrides), promotes a matching recommendation stub when its
 ID is supplied, creates the book and author scaffolds and catalogue entries,
-then prints a research prompt. Add the cited written-by relationship during
-research. The command does not perform research.
+then prints a research prompt. It also reports whether the book joined a new
+author profile or an existing one: author IDs are derived from the name, so
+two different people can collide on one — check before researching into it.
+Add the cited written-by relationship during research. The command does not
+perform research.
 
 ### 2. Research
 

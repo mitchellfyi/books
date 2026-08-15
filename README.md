@@ -114,7 +114,10 @@ Inspect the phonemes and any shared-dictionary match for a difficult term:
 
 `./bookflow build` writes `dist/`: a complete, root-layout static site
 (`index.html` at the top, data and audio inside), so the app serves from `/`
-with no subpath. Deploy that directory to any static host:
+with no subpath. The page and data are rebuilt every time; audio is synced
+rather than recopied, so a rebuild moves only the recordings that changed and
+drops any the library no longer produces. Deploy that directory to any static
+host:
 
 ```bash
 ./bookflow build

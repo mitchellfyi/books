@@ -9,90 +9,12 @@ from __future__ import annotations
 
 import contextlib
 import io
-import json
-import shutil
-import sys
 import tempfile
 import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "scripts"))
-
-import check  # noqa: E402  (needs scripts/ on the path, as uv run gives it)
-
-FIXTURE_BOOK = "deep-work-newport"
-
-
-def build_repository(root: Path, book_id: str = FIXTURE_BOOK) -> Path:
-    """Assemble a valid single-book repository from the real one.
-
-    Audio media are stand-ins: check reads the committed sidecars for
-    provenance and only looks for a matching file beside them, so the fixture
-    does not depend on locally generated audio.
-    """
-    for folder in ("schemas", "config", "taxonomy"):
-        shutil.copytree(ROOT / folder, root / folder)
-    book_source = ROOT / "library/books" / book_id
-    book_target = root / "library/books" / book_id
-    shutil.copytree(book_source, book_target)
-
-    book = json.loads((book_source / "book.json").read_text(encoding="utf-8"))
-    author_ids = book["author_ids"]
-    for author_id in author_ids:
-        shutil.copytree(ROOT / "library/authors" / author_id,
-                        root / "library/authors" / author_id)
-
-    for sidecar in (book_target / "audio").glob("*.json"):
-        level, voice, _ = sidecar.name.split(".")
-        media = json.loads(sidecar.read_text(encoding="utf-8"))["output_format"]
-        (book_target / "audio" / f"{level}.{voice}.{media}").touch()
-
-    catalog = json.loads((ROOT / "data/catalog.json").read_text(encoding="utf-8"))
-    keep = {book_id, *author_ids}
-    catalog["entities"] = [e for e in catalog["entities"] if e["id"] in keep]
-    write(root / "data/catalog.json", catalog)
-
-    relationships = json.loads((ROOT / "data/relationships.json").read_text(encoding="utf-8"))
-    relationships["relationships"] = [
-        r for r in relationships["relationships"]
-        if {r["source_id"], r["target_id"]} <= keep
-    ]
-    write(root / "data/relationships.json", relationships)
-    write(root / "data/queue.json", {
-        "$schema": "../schemas/queue.schema.json", "schema_version": 1,
-        "queue": [{"book_id": book_id, "priority": 1, "status": "done",
-                   "source": "user", "added_at": "2026-01-01"}],
-    })
-    return root
-
-
-def write(path: Path, value: object) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-
-def read(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-@contextlib.contextmanager
-def repository_at(root: Path):
-    """Run check against a throwaway repository, with its module state reset."""
-    original = check.ROOT
-    check.ROOT = root
-    check.errors.clear()
-    check.warnings.clear()
-    check.schema_validator.cache_clear()
-    check.load_json_once.cache_clear()
-    try:
-        yield
-    finally:
-        check.ROOT = original
-        check.errors.clear()
-        check.warnings.clear()
-        check.schema_validator.cache_clear()
-        check.load_json_once.cache_clear()
+import check
+from fixtures import FIXTURE_BOOK, ROOT, check_at, one_book_repository, read, write
 
 
 class HelperTests(unittest.TestCase):
@@ -105,7 +27,7 @@ class HelperTests(unittest.TestCase):
 
     def test_library_dirs_of_a_missing_folder_is_empty(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            with repository_at(Path(directory)):
+            with check_at(Path(directory)):
                 self.assertEqual(check.library_dirs("library/books"), [])
 
     def test_library_dirs_ignores_loose_files(self) -> None:
@@ -113,7 +35,7 @@ class HelperTests(unittest.TestCase):
             root = Path(directory)
             (root / "library/books/one").mkdir(parents=True)
             (root / "library/books/.DS_Store").write_text("", encoding="utf-8")
-            with repository_at(root):
+            with check_at(root):
                 self.assertEqual([d.name for d in check.library_dirs("library/books")], ["one"])
 
 
@@ -148,7 +70,7 @@ class InlineSourceTests(unittest.TestCase):
 
 class SourceIdTests(unittest.TestCase):
     def collect(self, doc: dict, **options) -> list[str]:
-        with repository_at(ROOT):
+        with check_at(ROOT):
             check.check_source_ids(doc, ROOT / "book.json", {"s1"}, **options)
             return list(check.errors)
 
@@ -172,19 +94,19 @@ class LibraryCheckTests(unittest.TestCase):
     """End to end over a throwaway repository built from the real one."""
 
     def run_check(self, root: Path) -> tuple[int, list[str], list[str]]:
-        with repository_at(root):
+        with check_at(root):
             with contextlib.redirect_stdout(io.StringIO()):
                 status = check.main(["--quiet"])
             return status, list(check.errors), list(check.warnings)
 
     def test_a_complete_book_passes_cleanly(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            status, errors, warnings = self.run_check(build_repository(Path(directory)))
+            status, errors, warnings = self.run_check(one_book_repository(Path(directory)))
         self.assertEqual((status, errors, warnings), (0, [], []))
 
     def test_a_word_count_outside_tolerance_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             script = root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md"
             script.write_text(script.read_text(encoding="utf-8") + "\n\nAnd more. " * 40,
                               encoding="utf-8")
@@ -194,7 +116,7 @@ class LibraryCheckTests(unittest.TestCase):
 
     def test_narration_naming_the_product_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             script = root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md"
             meta, _, body = script.read_text(encoding="utf-8").partition("\n---\n")
             script.write_text(f"{meta}\n---\nThis summary explains the book.{body}",
@@ -205,7 +127,7 @@ class LibraryCheckTests(unittest.TestCase):
 
     def test_a_content_source_missing_from_book_json_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             path = root / "library/books" / FIXTURE_BOOK / "content.json"
             content = read(path)
             content["ideas"][0]["source_ids"] = ["not-a-real-source"]
@@ -216,7 +138,7 @@ class LibraryCheckTests(unittest.TestCase):
 
     def test_a_stale_stored_rating_total_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             path = root / "library/books" / FIXTURE_BOOK / "content.json"
             content = read(path)
             content["assessment"]["rating"]["score"] = 1.0
@@ -227,7 +149,7 @@ class LibraryCheckTests(unittest.TestCase):
 
     def test_an_uncatalogued_book_directory_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             (root / "library/books/ghost-book").mkdir()
             status, errors, _ = self.run_check(root)
         self.assertEqual(status, 1)
@@ -235,7 +157,7 @@ class LibraryCheckTests(unittest.TestCase):
 
     def test_a_changed_script_stales_its_audio(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             script = root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md"
             script.write_text(script.read_text(encoding="utf-8").replace("the", "The", 1),
                               encoding="utf-8")
@@ -247,7 +169,7 @@ class LibraryCheckTests(unittest.TestCase):
 
     def test_a_missing_sidecar_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             audio = root / "library/books" / FIXTURE_BOOK / "audio"
             next(audio.glob("30-seconds.*.json")).unlink()
             status, errors, _ = self.run_check(root)
@@ -256,7 +178,7 @@ class LibraryCheckTests(unittest.TestCase):
 
     def test_a_playlist_naming_an_unknown_book_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             write(root / "data/playlists.json", {
                 "$schema": "../schemas/playlists.schema.json", "schema_version": 1,
                 "playlists": [{"id": "p", "name": "P", "updated_at": "2026-01-01T00:00:00Z",
@@ -268,10 +190,10 @@ class LibraryCheckTests(unittest.TestCase):
 
     def test_naming_a_book_limits_the_book_level_checks(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            root = build_repository(Path(directory))
+            root = one_book_repository(Path(directory))
             (root / "library/books" / FIXTURE_BOOK / "content.json").write_text(
                 "{not json", encoding="utf-8")
-            with repository_at(root):
+            with check_at(root):
                 with contextlib.redirect_stdout(io.StringIO()):
                     status = check.main(["--quiet", "no-such-book"])
                 errors = list(check.errors)

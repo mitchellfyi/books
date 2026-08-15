@@ -7,56 +7,10 @@ import json
 import shutil
 import sys
 import tempfile
-import types
 import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-
-
-def load_bookflow() -> types.ModuleType:
-    """Import the extensionless bookflow script as a module."""
-    source = ROOT.joinpath("bookflow").read_text(encoding="utf-8")
-    module = types.ModuleType("bookflow_cli")
-    module.__file__ = str(ROOT / "bookflow")
-    sys.path.insert(0, str(ROOT))
-    try:
-        exec(compile(source, str(ROOT / "bookflow"), "exec"), module.__dict__)
-    finally:
-        sys.path.remove(str(ROOT))
-    return module
-
-
-bookflow = load_bookflow()
-
-
-@contextlib.contextmanager
-def repository_at(root: Path):
-    """Point bookflow at a throwaway repository for the duration of a test.
-
-    load_config caches by file name, not by root, so the cache is cleared on
-    the way in and out; leaving it warm would serve one test's config to the
-    next.
-    """
-    original = bookflow.ROOT
-    bookflow.ROOT = root
-    bookflow.load_config.cache_clear()
-    try:
-        yield root
-    finally:
-        bookflow.ROOT = original
-        bookflow.load_config.cache_clear()
-
-
-def copy_into(root: Path, *relatives: str) -> None:
-    """Copy real repository files into a throwaway root, keeping their paths."""
-    for relative in relatives:
-        source, target = ROOT / relative, root / relative
-        target.parent.mkdir(parents=True, exist_ok=True)
-        if source.is_dir():
-            shutil.copytree(source, target)
-        else:
-            shutil.copy2(source, target)
+from fixtures import bookflow, bookflow_at, copy_into, empty_repository
 
 
 class SlugTests(unittest.TestCase):
@@ -115,6 +69,7 @@ class ScaffoldScriptsTests(unittest.TestCase):
             self.assertFalse((book_dir / "scripts" / "99-minutes.md").exists())
             self.assertEqual(keep.read_text(encoding="utf-8"), "kept")
 
+
 class InitBookTests(unittest.TestCase):
     """init_book end to end against a throwaway copy of the repository.
 
@@ -124,16 +79,43 @@ class InitBookTests(unittest.TestCase):
     """
 
     def init(self, root: Path, title: str, author: str) -> Path:
-        copy_into(root, "templates", "config", "data/catalog.json", "data/queue.json")
-        (root / "library/books").mkdir(parents=True)
-        (root / "library/authors").mkdir(parents=True)
-        with repository_at(root):
+        self.report = self.init_reporting(root, title, author)
+        return root / "library/books"
+
+    def init_reporting(self, root: Path, title: str, author: str) -> str:
+        if not (root / "library/books").exists():
+            empty_repository(root)
+        with bookflow_at(root):
             # init_book prints a research prompt; keep it out of the test run.
-            with contextlib.redirect_stdout(io.StringIO()):
+            with contextlib.redirect_stdout(io.StringIO()) as output:
                 bookflow.init_book(argparse.Namespace(
                     title=title, author=author, book_id=None, author_id=None,
                     force=True, note="", discovered=False))
-        return root / "library/books"
+        return output.getvalue()
+
+    def test_joining_an_existing_author_profile_is_announced(self) -> None:
+        # Ids come from the name, so two different people can collide on one.
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            first = self.init_reporting(root, "One Book", "Jane Smith")
+            second = self.init_reporting(root, "Another Book", "Jane Smith")
+        self.assertIn("(new)", first)
+        self.assertIn("(existing", second)
+        self.assertIn("check it is the same person", second)
+
+    def test_catalogue_aliases_survive_a_re_initialised_entry(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.init_reporting(root, "One Book", "Jane Smith")
+            catalog = json.loads((root / "data/catalog.json").read_text(encoding="utf-8"))
+            for entity in catalog["entities"]:
+                entity["aliases"] = ["a researched alias"]
+            (root / "data/catalog.json").write_text(json.dumps(catalog), encoding="utf-8")
+            shutil.rmtree(root / "library/books/one-book-smith")
+            self.init_reporting(root, "One Book", "Jane Smith")
+            catalog = json.loads((root / "data/catalog.json").read_text(encoding="utf-8"))
+        self.assertEqual([e["aliases"] for e in catalog["entities"]],
+                         [["a researched alias"], ["a researched alias"]])
 
     def test_an_id_containing_the_placeholder_is_not_expanded_twice(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -186,14 +168,14 @@ class BookNeedsTests(unittest.TestCase):
         directory.mkdir(parents=True)
         for name, text in files.items():
             (directory / name).write_text(text, encoding="utf-8")
-        with repository_at(root):
+        with bookflow_at(root):
             return bookflow.book_needs(book_id)
 
     def test_a_missing_scaffold_is_named(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             copy_into(root, "config")
-            with repository_at(root):
+            with bookflow_at(root):
                 self.assertEqual(bookflow.book_needs("ghost"), "scaffold missing")
 
     def test_unparseable_content_is_reported_not_raised(self) -> None:
