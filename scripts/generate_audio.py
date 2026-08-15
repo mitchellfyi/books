@@ -292,7 +292,8 @@ def generate(book_dir: Path, level: str, synth: Synthesiser, config: dict,
         "measured_wpm": round(words / seconds * 60, 2),
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
-    sidecar_path.write_text(json.dumps(sidecar, indent=2) + "\n", encoding="utf-8")
+    sidecar_path.write_text(
+        json.dumps(sidecar, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return f"wrote audio/{output.name} ({seconds / 60:.1f} min at {sidecar['measured_wpm']:.0f} wpm)"
 
 
