@@ -337,5 +337,119 @@ class LibraryCheckTests(unittest.TestCase):
         self.assertEqual(errors, ["no such book: no-such-book"])
 
 
+def book_file(root: Path, name: str) -> Path:
+    return root / "library/books" / FIXTURE_BOOK / name
+
+
+def edit(root: Path, name: str, mutate) -> None:
+    path = book_file(root, name)
+    document = read(path)
+    mutate(document)
+    write(path, document)
+
+
+def edit_script(root: Path, level: str, old: str, new: str) -> None:
+    path = book_file(root, f"scripts/{level}.md")
+    path.write_text(path.read_text(encoding="utf-8").replace(old, new, 1), encoding="utf-8")
+
+
+def edit_config(root: Path, name: str, mutate) -> None:
+    path = root / "config" / name
+    document = read(path)
+    mutate(document)
+    write(path, document)
+
+
+class DefectTests(unittest.TestCase):
+    """One row per rule check enforces on top of the schemas.
+
+    Mutation testing found sixteen of these branches could be deleted without
+    a test noticing. Each row breaks one thing in an otherwise valid
+    repository and names the message that must come back.
+    """
+
+    CASES = [
+        ("content book_id",
+         lambda r: edit(r, "content.json", lambda c: c.__setitem__("book_id", "elsewhere")),
+         "book_id does not match directory name"),
+        ("fiction",
+         lambda r: edit(r, "content.json", lambda c: c.__setitem__("content_type", "fiction")),
+         "accepts non-fiction only"),
+        ("book_map order",
+         lambda r: edit(r, "content.json",
+                        lambda c: c["book_map"][0].__setitem__("order", 9)),
+         "book_map order must be consecutive from 1"),
+        ("book id",
+         lambda r: edit(r, "book.json", lambda b: b.__setitem__("id", "elsewhere")),
+         "does not match directory name"),
+        ("author id",
+         lambda r: (lambda p: write(p, {**read(p), "id": "someone-else"}))(
+             next((r / "library/authors").glob("*/author.json"))),
+         "author.json: id 'someone-else' does not match directory name"),
+        ("unknown tag",
+         lambda r: edit(r, "book.json",
+                        lambda b: b["discovery"]["tag_ids"].append("not-a-tag")),
+         "'not-a-tag' is not in taxonomy/tags.json"),
+        ("unknown author",
+         lambda r: edit(r, "book.json", lambda b: b["author_ids"].append("nobody")),
+         "unknown author id 'nobody'"),
+        ("citation pointer",
+         lambda r: edit(r, "book.json",
+                        lambda b: b["research"].setdefault("citations", {}).__setitem__(
+                            "/no/such/field", [b["research"]["sources"][0]["id"]])),
+         "citation pointer '/no/such/field' does not resolve"),
+        ("sidecar voice",
+         lambda r: edit(r, "audio/30-seconds.bf_emma.json",
+                        lambda s: s.__setitem__("voice", "bm_george")),
+         "does not match filename voice 'bf_emma'"),
+        ("audio filename",
+         lambda r: book_file(r, "audio/30-seconds.mp3").write_bytes(b""),
+         "must be named <level>.<voice>.<format>"),
+        ("script target_words",
+         lambda r: edit_script(r, "30-seconds", "target_words: 75", "target_words: 80"),
+         "target_words 80 != configured 75"),
+        ("script duration",
+         lambda r: edit_script(r, "30-seconds", "duration: 30-seconds", "duration: 5-minutes"),
+         "duration front matter does not match filename"),
+        ("script source",
+         lambda r: edit_script(r, "30-seconds", "source: content.json", "source: elsewhere"),
+         "source front matter must be 'content.json'"),
+        ("playlist duration",
+         lambda r: write(r / "data/playlists.json", {
+             "$schema": "../schemas/playlists.schema.json", "schema_version": 1,
+             "playlists": [{"id": "p", "name": "P", "updated_at": "2026-01-01T00:00:00Z",
+                            "items": [{"book_id": FIXTURE_BOOK, "duration": "99-hours"}]}]}),
+         "has unknown duration '99-hours'"),
+        ("catalogued path",
+         lambda r: write(r / "data/catalog.json", {
+             **read(r / "data/catalog.json"),
+             "entities": [{**e, "path": "library/books/gone/book.json"}
+                          for e in read(r / "data/catalog.json")["entities"]]}),
+         "does not exist: library/books/gone/book.json"),
+        ("rubric weights",
+         lambda r: edit_config(r, "rating.json",
+                               lambda c: c["dimensions"][0].__setitem__("weight", 0.9)),
+         "dimension weights total"),
+        ("alias longer than term",
+         lambda r: edit_config(r, "pronunciations.json",
+                               lambda c: c["entries"][0]["aliases"].append(
+                                   "Doctor " + c["entries"][0]["term"])),
+         "has more words than term"),
+    ]
+
+    def test_each_rule_reports_its_own_defect(self) -> None:
+        for name, break_it, expected in self.CASES:
+            with self.subTest(name), tempfile.TemporaryDirectory() as directory:
+                root = one_book_repository(Path(directory))
+                break_it(root)
+                with check_at(root):
+                    with contextlib.redirect_stdout(io.StringIO()):
+                        status = check.main(["--quiet"])
+                    found = list(check.errors)
+                self.assertEqual(status, 1, found)
+                self.assertTrue(any(expected in problem for problem in found),
+                                f"{name}: expected {expected!r} in {found}")
+
+
 if __name__ == "__main__":
     unittest.main()
