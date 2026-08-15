@@ -27,8 +27,21 @@ def slug(text: str) -> str:
     return re.sub(r"(^-|-$)", "", re.sub(r"[^a-z0-9]+", "-", text))
 
 
+def show(path: Path) -> str:
+    """Repository-relative path when possible; an error message must not throw."""
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
 def load(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8"))
+    """Read a JSON file, naming it if it will not parse."""
+    text = path.read_text(encoding="utf-8")
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError as error:
+        raise SystemExit(f"{show(path)}: invalid JSON ({error})") from error
 
 
 @lru_cache(maxsize=None)
@@ -208,7 +221,11 @@ def book_needs(book_id: str) -> str:
     needs = []
     content_path = directory / "content.json"
     content_text = content_path.read_text(encoding="utf-8") if content_path.exists() else None
-    content = json.loads(content_text) if content_text else None
+    try:
+        content = json.loads(content_text) if content_text else None
+    except json.JSONDecodeError:
+        # One unparseable book must not hide the rest of the queue.
+        return "content (invalid JSON)"
     if content is None or "TODO" in content_text:
         needs.append("content")
     rating = (content or {}).get("assessment", {}).get("rating")
