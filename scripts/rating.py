@@ -99,10 +99,36 @@ def rubric_errors(rubric: dict) -> list[str]:
     weight = sum(Decimal(str(item.get("weight", 0))) for item in dimensions)
     if weight != Decimal("1"):
         problems.append(f"dimension weights total {weight}, not 1")
-    bands = rubric.get("score_bands", [])
-    if bands and (bands[0].get("minimum") != 0 or bands[-1].get("maximum") != 10):
-        problems.append("score bands must span 0 through 10")
+    problems.extend(uncovered_scores(rubric))
     return problems
+
+
+def uncovered_scores(rubric: dict) -> list[str]:
+    """Report any score the scale can produce that no band would label.
+
+    score_band raises on a score between two bands, which would surface as a
+    crash in `./bookflow rate` for some books and not others. Bands are written
+    as one-decimal ranges (0–1.9, then 2–3.9), so contiguity is the wrong test:
+    what matters is that every score the configured precision can reach lands
+    in one.
+    """
+    bands = rubric.get("score_bands", [])
+    scale = rubric.get("scale", {})
+    if not bands or not scale:
+        return []
+    step = Decimal(1).scaleb(-int(scale.get("output_decimals", 1)))
+    limit = Decimal(str(scale.get("maximum", 10)))
+    score = Decimal(str(scale.get("minimum", 0)))
+    uncovered: list[str] = []
+    while score <= limit:
+        if not any(Decimal(str(band["minimum"])) <= score <= Decimal(str(band["maximum"]))
+                   for band in bands):
+            uncovered.append(str(score))
+        score += step
+    if not uncovered:
+        return []
+    shown = ", ".join(uncovered[:5]) + (", …" if len(uncovered) > 5 else "")
+    return [f"score_bands leave {len(uncovered)} reachable score(s) unlabelled: {shown}"]
 
 
 def score_band(score: float, rubric: dict) -> str:
