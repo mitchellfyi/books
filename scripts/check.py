@@ -19,6 +19,7 @@ import hashlib
 import json
 import re
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
@@ -69,9 +70,15 @@ def load_json(path: Path) -> dict | None:
     return None
 
 
-def validate_schema(doc: dict, schema_name: str, path: Path) -> bool:
+@lru_cache(maxsize=None)
+def schema_validator(schema_name: str) -> Draft202012Validator:
+    """Compile each schema once; a full run validates ~200 documents against nine."""
     schema = json.loads((ROOT / "schemas" / schema_name).read_text(encoding="utf-8"))
-    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    return Draft202012Validator(schema, format_checker=FormatChecker())
+
+
+def validate_schema(doc: dict, schema_name: str, path: Path) -> bool:
+    validator = schema_validator(schema_name)
     ok = True
     for e in validator.iter_errors(doc):
         loc = "/" + "/".join(str(p) for p in e.absolute_path)
