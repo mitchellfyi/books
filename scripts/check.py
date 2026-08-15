@@ -217,6 +217,19 @@ def check_configs(audio_cfg: dict, pronunciations_cfg: dict, pronunciations_path
     if ROOT / audio_cfg["tts"]["pronunciation_dictionary"] != pronunciations_path:
         err("config/audio.json: pronunciation_dictionary must point to config/pronunciations.json")
 
+    # Defaults that name something the same file does not offer fail silently:
+    # the player falls back to its first option, and the generator to whatever
+    # voice it can find, with nothing said either way.
+    speeds = audio_cfg["playback_speeds"]
+    if audio_cfg.get("default_playback_speed") not in speeds:
+        err(f"config/audio.json: default_playback_speed "
+            f"{audio_cfg.get('default_playback_speed')} is not one of playback_speeds "
+            f"({', '.join(str(speed) for speed in speeds)})")
+    voices = audio_cfg["tts"].get("voices", {})
+    if voices and audio_cfg["tts"]["default_voice"] not in voices:
+        err(f"config/audio.json: default_voice '{audio_cfg['tts']['default_voice']}' "
+            "is not listed in tts.voices")
+
     spellings: dict[str, str] = {}
     for entry in pronunciations_cfg["entries"]:
         for spelling in (entry["term"], *entry["aliases"]):

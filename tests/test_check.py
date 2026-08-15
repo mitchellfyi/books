@@ -176,6 +176,23 @@ class LibraryCheckTests(unittest.TestCase):
         self.assertEqual(status, 1)
         self.assertTrue(any("audio present without sidecar" in e for e in errors), errors)
 
+    def test_a_default_naming_something_the_config_does_not_offer_fails(self) -> None:
+        # Both fail silently at runtime: the player takes its first speed, the
+        # generator takes whatever voice it can find.
+        for change, expected in (
+            ({"default_playback_speed": 1.15}, "default_playback_speed"),
+            ({"tts": {"default_voice": "bf_nobody"}}, "default_voice"),
+        ):
+            with self.subTest(expected=expected), tempfile.TemporaryDirectory() as directory:
+                root = one_book_repository(Path(directory))
+                config = read(root / "config/audio.json")
+                for key, value in change.items():
+                    config[key] = {**config[key], **value} if isinstance(value, dict) else value
+                write(root / "config/audio.json", config)
+                status, errors, _ = self.run_check(root)
+                self.assertEqual(status, 1)
+                self.assertTrue(any(expected in e for e in errors), errors)
+
     def test_a_playlist_naming_an_unknown_book_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = one_book_repository(Path(directory))
