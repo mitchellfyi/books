@@ -9,7 +9,7 @@ const state = {
 };
 const el = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const label = value => value.replaceAll('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
+const label = value => String(value ?? '').replaceAll('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
 const list = values => `<ul class="compact-list">${values.map(v => `<li>${esc(v.text ?? v)}</li>`).join('')}</ul>`;
 const findBook = id => state.library.books.find(book => book.id === id);
 // One status line: announced to screen readers, and shown as a toast when it
@@ -122,16 +122,21 @@ async function start() {
 // entity the hash names; anything unrecognised falls back to the selected book.
 function route({moveFocus = false} = {}) {
   const [type, id] = decodeURIComponent(location.hash.slice(1)).split('/');
+  const entityLink = type === 'book' || type === 'author';
   if (type === 'author' && findAuthor(id)) {
     state.view = {type: 'author', id};
   } else if (type === 'book' && findBook(id)) {
     if (state.selectedBook?.id !== id) state.level = null;
     state.selectedBook = findBook(id);
     state.view = {type: 'book', id};
+  } else if (!entityLink && state.view) {
+    // Plain fragments like the skip link's #book-detail are in-page anchors,
+    // not library links: leave the URL and the rendered view alone.
+    return;
   } else {
     state.view = state.selectedBook ? {type: 'book', id: state.selectedBook.id} : null;
     // Do not leave a bookmarkable URL naming something the page is not showing.
-    if (location.hash && state.view) {
+    if (entityLink && state.view) {
       history.replaceState(null, '', `#book/${state.view.id}`);
       say('That link is not in the library; showing the selected book instead.');
     }
@@ -158,18 +163,13 @@ function bind() {
   el('playlist-toggle').addEventListener('click', () => openPlaylist());
   el('playlist-close').addEventListener('click', () => closePlaylist());
   el('playlist').addEventListener('keydown', event => {
-    if (event.key === 'Escape') { closePlaylist(); return; }
-    if (event.key !== 'Tab') return;
-    // Keep Tab inside the panel while it behaves as a modal.
-    const focusable = [...el('playlist').querySelectorAll(
-      'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')];
-    if (!focusable.length) return;
-    const edge = event.shiftKey ? focusable[0] : focusable[focusable.length - 1];
-    if (document.activeElement !== edge) return;
-    event.preventDefault();
-    (event.shiftKey ? focusable[focusable.length - 1] : focusable[0]).focus();
+    if (event.key === 'Escape') closePlaylist();
   });
-  el('playlist-clear').addEventListener('click', () => { state.queue = []; stopPlayback(); });
+  el('playlist-clear').addEventListener('click', () => {
+    state.queue = [];
+    stopPlayback();
+    el('playlist-close').focus();  // Clear disables itself, which would drop focus
+  });
   el('playlist-save').addEventListener('click', saveQueueAsPlaylist);
   el('speed').addEventListener('change', event => { el('audio').playbackRate = Number(event.target.value); });
   el('voice').addEventListener('change', event => {
@@ -194,8 +194,9 @@ function bind() {
   });
 }
 
-// The playlist is a slide-over modal: move focus in, trap Tab, and hand focus
-// back to the control that opened it.
+// The playlist is a non-modal slide-over: focus moves in on open and returns
+// to the toggle on close, but the page behind stays operable — trapping Tab
+// would put the player's own voice and speed controls out of keyboard reach.
 function openPlaylist() {
   el('playlist').hidden = false;
   el('playlist-toggle').setAttribute('aria-expanded', 'true');
@@ -542,12 +543,22 @@ function saveQueue() {
     JSON.stringify({items: state.queue, index: state.queueIndex}));
 }
 
+// Nothing is playing after a reload, so the queue comes back with no current
+// entry: restoring an index would mark a row as playing under a hidden player,
+// and any filtered-out entry would shift it onto the wrong book.
 function restoreQueue() {
+  if (state.queue.length) return;  // a migrated legacy queue wins; it is one-shot
   const stored = readStored('book-brief-queue');
   if (!stored || !Array.isArray(stored.items)) return;
-  state.queue = stored.items.filter(item => item && findBook(item.bookId));
-  state.queueIndex = Number.isInteger(stored.index)
-    && stored.index >= 0 && stored.index < state.queue.length ? stored.index : -1;
+  state.queue = stored.items.filter(playableEntry);
+  state.queueIndex = -1;
+}
+
+// Stored entries are only as trustworthy as the file or browser they came
+// from; a malformed one must not take the whole app down on render.
+function playableEntry(item) {
+  const book = item && findBook(item.bookId);
+  return Boolean(book && typeof item.level === 'string' && book.scripts[item.level]);
 }
 
 function dedupeByBook(items) {
@@ -582,9 +593,10 @@ function playCurrent() {
   const item = state.queue[state.queueIndex];
   const url = item && audioUrl(item);
   if (!url) {
-    // The book left the library, or this level was never voiced.
-    say(item ? 'No audio for that brief yet. Generate it with ./bookflow audio.' : '');
-    renderPlaylist();
+    // The book left the library, or this level was never voiced. Stop rather
+    // than leave the previous track playing under the new selection.
+    stopPlayback();
+    if (item) say('No audio for that brief yet. Generate it with ./bookflow audio.');
     return;
   }
   const book = findBook(item.bookId);
@@ -599,7 +611,11 @@ function playCurrent() {
   audio.playbackRate = Number(el('speed').value);
   const savedPosition = Number(localStorage.getItem(positionKey()) || 0);
   if (savedPosition > 5) audio.currentTime = savedPosition;
-  audio.play().catch(() => say(`${book.title} would not start playing.`));
+  // Changing src or calling load() aborts a pending play(); that is a normal
+  // consequence of switching tracks or stopping, not a playback failure.
+  audio.play().catch(error => {
+    if (error?.name !== 'AbortError') say(`${book.title} would not start playing.`);
+  });
   renderPlaylist();
 }
 
@@ -745,17 +761,20 @@ function renderPlaylist() {
     </li>`;
   }).join('') || '<li class="muted">None saved yet.</li>';
   el('saved-lists').querySelectorAll('[data-open]').forEach(button => button.addEventListener('click', () => {
-    state.queue = dedupeByBook([...state.saved.playlists[Number(button.dataset.open)].items]);
-    if (!state.queue.length) { stopPlayback(); say('That playlist is empty.'); return; }
+    state.queue = dedupeByBook(
+      state.saved.playlists[Number(button.dataset.open)].items.filter(playableEntry));
+    if (!state.queue.length) { stopPlayback(); say('Nothing in that playlist is playable.'); return; }
     state.queueIndex = 0;
     playCurrent();
   }));
   el('saved-lists').querySelectorAll('[data-append]').forEach(button => button.addEventListener('click', () => {
     // Render once at the end: rendering per item rebuilds this very button.
     const playlist = state.saved.playlists[Number(button.dataset.append)];
-    playlist.items.forEach(item => enqueue(item, {render: false}));
+    const before = state.queue.length;
+    playlist.items.filter(playableEntry).forEach(item => enqueue(item, {render: false}));
     renderPlaylist();
-    say(`Added ${playlist.items.length} to the queue.`);
+    const added = state.queue.length - before;  // queued books are replaced, not duplicated
+    say(added ? `Added ${added} to the queue.` : 'Those are already queued.');
   }));
   el('saved-lists').querySelectorAll('[data-delete]').forEach(button => button.addEventListener('click', () => {
     const playlist = state.saved.playlists[Number(button.dataset.delete)];

@@ -124,6 +124,13 @@ def init_book(args: argparse.Namespace) -> None:
     author_id = args.author_id or slug(args.author)
     short_title = args.title.split(":", 1)[0]
     book_id = args.book_id or f"{slug(short_title)}-{slug(args.author.split()[-1])}"
+    # A title or surname with no ASCII-able characters derives a malformed id
+    # (a CJK title gives '-surname'); ask for one rather than scaffold it.
+    for flag, value in (("--book-id", book_id), ("--author-id", author_id)):
+        if slug(value) != value:
+            raise SystemExit(
+                f"Could not derive a usable id from the title and author "
+                f"(got '{value}'). Pass {flag} explicitly.")
     book_dir = ROOT / "library/books" / book_id
     author_dir = ROOT / "library/authors" / author_id
     catalog_path = ROOT / "data/catalog.json"
