@@ -128,6 +128,20 @@ def scaffold_scripts(book_dir: Path, book_id: str) -> None:
         )
 
 
+def scaffold_replacements(names: dict[str, str]) -> dict[str, str]:
+    """Placeholder substitutions, plus the two every scaffold shares.
+
+    Kept in one place because both scaffolds need them and only one of the two
+    used to: a template sits two levels below the repository root and its copy
+    sits three, so the schema pointer moves with it. Keeping the template
+    pointer correct where it lives is what lets an editor validate the
+    template — nothing else does.
+    """
+    today = date.today().isoformat()
+    return {**names, "YYYY-MM-DD": today, "1970-01-01": today,
+            '"../../schemas/': '"../../../schemas/'}
+
+
 def init_book(args: argparse.Namespace) -> None:
     if not slug(args.title):
         raise SystemExit("--title must contain at least one letter or number")
@@ -168,13 +182,11 @@ def init_book(args: argparse.Namespace) -> None:
         )
 
     shutil.copytree(ROOT / "templates/book", book_dir)
-    replace_tree(book_dir, {
+    replace_tree(book_dir, scaffold_replacements({
         "book-id": book_id,
         "author-id": author_id,
         "Book title": args.title,
-        "YYYY-MM-DD": date.today().isoformat(),
-        "1970-01-01": date.today().isoformat(),
-    })
+    }))
     # After replace_tree: these carry the real id already, and substituting
     # into them again would expand an id that contains 'book-id' twice.
     scaffold_scripts(book_dir, book_id)
@@ -184,12 +196,10 @@ def init_book(args: argparse.Namespace) -> None:
     author_is_new = not author_dir.exists()
     if author_is_new:
         shutil.copytree(ROOT / "templates/author", author_dir)
-        replace_tree(author_dir, {
+        replace_tree(author_dir, scaffold_replacements({
             "author-id": author_id,
             "Author name": args.author,
-            "YYYY-MM-DD": date.today().isoformat(),
-            "1970-01-01": date.today().isoformat(),
-        })
+        }))
 
     upsert_entity(catalog, by_id, {
         "id": author_id,

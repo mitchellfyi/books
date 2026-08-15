@@ -114,6 +114,14 @@ def schema_validator(schema_name: str) -> Draft202012Validator:
 def validate_schema(doc: dict, schema_name: str, path: Path) -> bool:
     validator = schema_validator(schema_name)
     ok = True
+    # Editors validate as you type from this pointer, and it is relative, so
+    # moving a file to another depth breaks it silently. We already know which
+    # schema this document must satisfy: check the pointer agrees.
+    pointer = doc.get("$schema", "")
+    if pointer and not pointer.startswith("http"):
+        if (path.parent / pointer).resolve() != (ROOT / "schemas" / schema_name).resolve():
+            err(f"{rel(path)}: $schema '{pointer}' does not resolve to schemas/{schema_name}")
+            ok = False
     for e in validator.iter_errors(doc):
         loc = "/" + "/".join(str(p) for p in e.absolute_path)
         err(f"{rel(path)}: schema violation at {loc}: {e.message}")

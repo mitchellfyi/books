@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../schemas/book.schema.json",
+  "$schema": "../../schemas/book.schema.json",
   "schema_version": 1,
   "id": "book-id",
   "type": "book",

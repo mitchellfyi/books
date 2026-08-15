@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../schemas/author.schema.json",
+  "$schema": "../../schemas/author.schema.json",
   "schema_version": 1,
   "id": "author-id",
   "type": "author",

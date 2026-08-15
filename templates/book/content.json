@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../schemas/content.schema.json",
+  "$schema": "../../schemas/content.schema.json",
   "schema_version": 1,
   "book_id": "book-id",
   "content_type": "non-fiction",
