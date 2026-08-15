@@ -367,7 +367,7 @@ def check_book_content(d: Path, doc: dict, rating_cfg: dict) -> dict | None:
     """The structured content and everything a 'complete' status promises."""
     content_path = d / "content.json"
     content = load_json_once(content_path) if content_path.exists() else None
-    researched = doc.get("workflow", {}).get("status") != "stub"
+    book_status = doc.get("workflow", {}).get("status")
 
     if content:
         validate_schema(content, "content.schema.json", content_path)
@@ -402,17 +402,17 @@ def check_book_content(d: Path, doc: dict, rating_cfg: dict) -> dict | None:
             for problem in rating_errors(rating, rating_cfg,
                                          require_complete=content_researched):
                 err(f"{rel(content_path)}: assessment.rating {problem}")
-    elif researched:
+    elif book_status != "stub":
         err(f"{rel(content_path)}: researched books require structured content")
 
     coverage = doc.get("workflow", {}).get("coverage", "metadata-only")
-    if content and content.get("workflow", {}).get("status") != doc.get("workflow", {}).get("status"):
+    if content and content.get("workflow", {}).get("status") != book_status:
         err(f"{rel(content_path)}: workflow status differs from book.json")
     if content and content.get("workflow", {}).get("reviewed_against_full_book") \
             and coverage != "full-book":
         err(f"{rel(content_path)}: full-book review is true but book.json coverage is '{coverage}'")
 
-    if doc.get("workflow", {}).get("status") == "complete":
+    if book_status == "complete":
         # Coverage is recorded, not a gate (owner's decision): complete
         # profiles are allowed at any coverage, but the label must be true.
         sources = doc.get("research", {}).get("sources", [])
