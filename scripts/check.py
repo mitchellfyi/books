@@ -48,6 +48,12 @@ NARRATION_META_PATTERNS = {
     r"https?://": "contains a raw URL",
 }
 
+# docs/review-method.md defines these eight and what each one attests to.
+REQUIRED_QUALITY_CHECKS = {
+    "identity_and_metadata", "content_fidelity", "claim_support", "counterevidence",
+    "citation_entailment", "product_fit", "plain_language", "audio_pronunciation",
+}
+
 
 def err(msg: str) -> None:
     errors.append(msg)
@@ -198,47 +204,19 @@ def check_research(doc: dict, path: Path) -> None:
                 err(f"{rel(path)}: citations['{pointer}'] cites unknown source '{source_id}'")
 
 
-def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        prog="check.py",
-        description="Validate the library: schemas, cross-references, word counts, audio freshness.",
-        epilog="Exit code 1 on errors; warnings do not fail the run.",
-    )
-    parser.add_argument("book_id", nargs="?", help="limit book-level checks to one book")
-    parser.add_argument("--quiet", action="store_true", help="show only warnings and errors")
-    return parser.parse_args(argv)
-
-
-def main(argv: list[str] | None = None) -> int:
-    args = parse_args(argv)
-    quiet, only = args.quiet, args.book_id
-
-    # --- shared files ---
-    audio_cfg = load_json(ROOT / "config/audio.json")
-    pronunciations_path = ROOT / "config/pronunciations.json"
-    pronunciations_cfg = load_json(pronunciations_path)
-    rating_cfg = load_json(ROOT / "config/rating.json")
-    tags_doc = load_json(ROOT / "taxonomy/tags.json")
-    catalog = load_json(ROOT / "data/catalog.json")
-    relationships = load_json(ROOT / "data/relationships.json")
-    if not all([
-        audio_cfg, pronunciations_cfg, rating_cfg, tags_doc, catalog, relationships,
-    ]):
-        return report(quiet, {}, [])
-
+def check_configs(audio_cfg: dict, pronunciations_cfg: dict, pronunciations_path: Path,
+                  rating_cfg: dict, tags_doc: dict) -> str:
+    """Validate the shared configuration. Returns the pronunciation-file hash."""
     validate_schema(audio_cfg, "audio-config.schema.json", ROOT / "config/audio.json")
     validate_schema(pronunciations_cfg, "pronunciations.schema.json", pronunciations_path)
     validate_schema(rating_cfg, "rating-config.schema.json", ROOT / "config/rating.json")
     for problem in rubric_errors(rating_cfg):
         err(f"config/rating.json: {problem}")
     validate_schema(tags_doc, "tags.schema.json", ROOT / "taxonomy/tags.json")
-    validate_schema(catalog, "catalog.schema.json", ROOT / "data/catalog.json")
-    validate_schema(relationships, "relationships.schema.json", ROOT / "data/relationships.json")
 
-    configured_pronunciation_path = ROOT / audio_cfg["tts"]["pronunciation_dictionary"]
-    if configured_pronunciation_path != pronunciations_path:
+    if ROOT / audio_cfg["tts"]["pronunciation_dictionary"] != pronunciations_path:
         err("config/audio.json: pronunciation_dictionary must point to config/pronunciations.json")
-    pronunciation_sha = hashlib.sha256(pronunciations_path.read_bytes()).hexdigest()
+
     spellings: dict[str, str] = {}
     for entry in pronunciations_cfg["entries"]:
         for spelling in (entry["term"], *entry["aliases"]):
@@ -261,37 +239,40 @@ def main(argv: list[str] | None = None) -> int:
                 )
 
     tag_ids = {t["id"] for t in tags_doc["tags"]}
-    tag_aliases = [a for t in tags_doc["tags"] for a in t["aliases"]]
-    for alias in tag_aliases:
+    for alias in (a for t in tags_doc["tags"] for a in t["aliases"]):
         if alias in tag_ids:
             err(f"taxonomy/tags.json: alias '{alias}' collides with a canonical tag id")
 
-    entities = {e["id"]: e for e in catalog["entities"]}
-    if len(entities) != len(catalog["entities"]):
-        seen: set[str] = set()
-        for e in catalog["entities"]:
-            if e["id"] in seen:
-                err(f"data/catalog.json: duplicate entity id '{e['id']}'")
-            seen.add(e["id"])
-    for e in catalog["entities"]:
-        if e["state"] == "catalogued":
-            if "path" not in e:
-                err(f"data/catalog.json: catalogued entity '{e['id']}' has no path")
-            elif not (ROOT / e["path"]).exists():
-                err(f"data/catalog.json: path for '{e['id']}' does not exist: {e['path']}")
+    return hashlib.sha256(pronunciations_path.read_bytes()).hexdigest()
 
-    # library dirs must be catalogued
+
+def check_catalog(catalog: dict) -> dict:
+    """Validate the catalogue against the library on disk. Returns entities by id."""
+    validate_schema(catalog, "catalog.schema.json", ROOT / "data/catalog.json")
+    for duplicate in duplicates([e["id"] for e in catalog["entities"]]):
+        err(f"data/catalog.json: duplicate entity id '{duplicate}'")
+    entities = {e["id"]: e for e in catalog["entities"]}
+    for e in catalog["entities"]:
+        if e["state"] != "catalogued":
+            continue
+        if "path" not in e:
+            err(f"data/catalog.json: catalogued entity '{e['id']}' has no path")
+        elif not (ROOT / e["path"]).exists():
+            err(f"data/catalog.json: path for '{e['id']}' does not exist: {e['path']}")
+
     for kind, folder in (("book", "library/books"), ("author", "library/authors")):
         for d in library_dirs(folder):
             if d.name not in entities:
                 err(f"{rel(d)}: directory has no catalog entry")
             elif entities[d.name]["kind"] != kind:
                 err(f"{rel(d)}: catalog entry kind mismatch")
+    return entities
 
-    # --- relationships ---
-    rel_ids = [r["id"] for r in relationships["relationships"]]
-    for dup in duplicates(rel_ids):
-        err(f"data/relationships.json: duplicate relationship id '{dup}'")
+
+def check_relationships(relationships: dict, entities: dict) -> None:
+    validate_schema(relationships, "relationships.schema.json", ROOT / "data/relationships.json")
+    for duplicate in duplicates([r["id"] for r in relationships["relationships"]]):
+        err(f"data/relationships.json: duplicate relationship id '{duplicate}'")
     for r in relationships["relationships"]:
         for endpoint in (r["source_id"], r["target_id"]):
             if endpoint not in entities:
@@ -312,9 +293,11 @@ def main(argv: list[str] | None = None) -> int:
             if fragment and fragment not in {
                 s["id"] for s in ref_doc.get("research", {}).get("sources", [])
             }:
-                err(f"data/relationships.json: '{r['id']}' source_ref '#{fragment}' not found in {file_part}")
+                err(f"data/relationships.json: '{r['id']}' source_ref '#{fragment}' "
+                    f"not found in {file_part}")
 
-    # --- authors ---
+
+def check_authors() -> None:
     for d in library_dirs("library/authors"):
         doc = load_json(d / "author.json")
         if not doc:
@@ -327,243 +310,299 @@ def main(argv: list[str] | None = None) -> int:
                 and len(doc.get("research", {}).get("sources", [])) < 3:
             warn(f"{rel(d)}/author.json: fewer than three useful author sources")
 
-    # --- books ---
+
+def check_book_record(d: Path, doc: dict, entities: dict, tag_ids: set) -> None:
+    """The book's own identity, links into the catalogue and taxonomy, and sources."""
+    validate_schema(doc, "book.schema.json", d / "book.json")
+    if doc.get("id") != d.name:
+        err(f"{rel(d)}/book.json: id '{doc.get('id')}' does not match directory name")
+    for aid in doc.get("author_ids", []):
+        if aid not in entities or entities[aid]["kind"] != "author":
+            err(f"{rel(d)}/book.json: unknown author id '{aid}'")
+    for tid in doc.get("discovery", {}).get("tag_ids", []):
+        if tid not in tag_ids:
+            err(f"{rel(d)}/book.json: tag '{tid}' is not in taxonomy/tags.json")
+    check_research(doc, d / "book.json")
+
+
+def check_book_content(d: Path, doc: dict, rating_cfg: dict) -> dict | None:
+    """The structured content and everything a 'complete' status promises."""
+    content_path = d / "content.json"
+    content = load_json(content_path) if content_path.exists() else None
+    researched = doc.get("workflow", {}).get("status") != "stub"
+
+    if content:
+        validate_schema(content, "content.schema.json", content_path)
+        if content.get("book_id") != d.name:
+            err(f"{rel(content_path)}: book_id does not match directory name")
+        if content.get("content_type") != "non-fiction":
+            err(f"{rel(content_path)}: this library accepts non-fiction only")
+        idea_ids = [i.get("id") for i in content.get("ideas", [])]
+        for duplicate in duplicates(idea_ids):
+            err(f"{rel(content_path)}: duplicate idea id '{duplicate}'")
+        known_ideas = set(idea_ids)
+        for section in content.get("book_map", []):
+            for idea_id in section.get("idea_ids", []):
+                if idea_id not in known_ideas:
+                    err(f"{rel(content_path)}: book_map cites unknown idea '{idea_id}'")
+        # content.json interprets the book; its citations resolve against the
+        # sources book.json records.
+        content_researched = content.get("workflow", {}).get("status") != "stub"
+        check_source_ids(
+            content, content_path,
+            {s["id"] for s in doc.get("research", {}).get("sources", [])},
+            require_sources=content_researched,
+        )
+        orders = [section.get("order") for section in content.get("book_map", [])]
+        if orders != list(range(1, len(orders) + 1)):
+            err(f"{rel(content_path)}: book_map order must be consecutive from 1")
+        rating = content.get("assessment", {}).get("rating")
+        if content_researched or rating is not None:
+            for problem in rating_errors(rating, rating_cfg,
+                                         require_complete=content_researched):
+                err(f"{rel(content_path)}: assessment.rating {problem}")
+    elif researched:
+        err(f"{rel(content_path)}: researched books require structured content")
+
+    coverage = doc.get("workflow", {}).get("coverage", "metadata-only")
+    if content and content.get("workflow", {}).get("status") != doc.get("workflow", {}).get("status"):
+        err(f"{rel(content_path)}: workflow status differs from book.json")
+    if content and content.get("workflow", {}).get("reviewed_against_full_book") \
+            and coverage != "full-book":
+        err(f"{rel(content_path)}: full-book review is true but book.json coverage is '{coverage}'")
+
+    if doc.get("workflow", {}).get("status") == "complete":
+        # Coverage is recorded, not a gate (owner's decision): complete
+        # profiles are allowed at any coverage, but the label must be true.
+        sources = doc.get("research", {}).get("sources", [])
+        if len(sources) < 6:
+            err(f"{rel(d)}/book.json: complete status requires at least six useful sources")
+        independent_reception = [s for s in sources if s.get("independence") == "independent"
+                                 and s.get("type") in {"professional-review", "specialist-review"}]
+        if len(independent_reception) < 2:
+            err(f"{rel(d)}/book.json: complete status requires two independent reception sources")
+        review = (content or {}).get("workflow", {}).get("quality_review", {})
+        if review.get("status") != "passed" or not review.get("reviewed_at"):
+            err(f"{rel(content_path)}: complete status requires a dated, passed quality review")
+        incomplete = [name for name, passed in review.get("checks", {}).items() if not passed]
+        missing = REQUIRED_QUALITY_CHECKS - set(review.get("checks", {}))
+        if incomplete or missing:
+            names = sorted(set(incomplete) | missing)
+            err(f"{rel(content_path)}: quality review checks not passed: {', '.join(names)}")
+    return content
+
+
+def check_script(d: Path, duration: str, audio_cfg: dict, entry: dict) -> str:
+    """Validate one narration script. Returns the text a listener would hear."""
+    path = d / "scripts" / f"{duration}.md"
+    if not path.exists():
+        return ""
+    meta, body = parse_front_matter(path)
+    entry["script"] = meta.get("status", "?")
+    entry["words"] = word_count(body)
+    if meta.get("book_id") != d.name:
+        err(f"{rel(path)}: book_id front matter mismatch")
+    if meta.get("duration") != duration:
+        err(f"{rel(path)}: duration front matter does not match filename")
+    if meta.get("source") != "content.json":
+        err(f"{rel(path)}: source front matter must be 'content.json'")
+    target = audio_cfg["levels"][duration]["target_words"]
+    if meta.get("target_words") != target:
+        err(f"{rel(path)}: target_words {meta.get('target_words')} != configured {target}")
+    if meta.get("status") == "complete":
+        tolerance = audio_cfg["word_count_tolerance_percent"] / 100
+        if not target * (1 - tolerance) <= entry["words"] <= target * (1 + tolerance):
+            err(f"{rel(path)}: {entry['words']} words is outside {target}±{tolerance:.0%}")
+        for pattern, problem in NARRATION_META_PATTERNS.items():
+            if re.search(pattern, body, flags=re.IGNORECASE):
+                err(f"{rel(path)}: narration {problem}; keep research metadata out of audio")
+    return spoken_text(body)
+
+
+def check_audio(d: Path, duration: str, narration: str, audio_cfg: dict,
+                pronunciations: list[dict], pronunciation_sha: str, entry: dict) -> None:
+    """Audio and sidecar, one pair per voice: <level>.<voice>.<format> + .json."""
+    script_path = d / "scripts" / f"{duration}.md"
+    files = list((d / "audio").glob(f"{duration}.*")) if (d / "audio").exists() else []
+    media = [a for a in files if a.suffix != ".json"]
+    sidecars = [a for a in files if a.suffix == ".json"]
+    script_sha = hashlib.sha256(script_path.read_bytes()).hexdigest() \
+        if script_path.exists() else None
+
+    for audio_file in media:
+        parts = audio_file.name.split(".")
+        if len(parts) != 3:
+            err(f"{rel(audio_file)}: audio files must be named <level>.<voice>.<format>")
+            entry["audio"] = entry["audio"] or "fresh"
+            continue
+        voice = parts[1]
+        sidecar_path = d / "audio" / f"{duration}.{voice}.json"
+        if not sidecar_path.exists():
+            reporter = err if audio_cfg["tts"].get("metadata_sidecar_required") else warn
+            reporter(f"{rel(audio_file)}: audio present without sidecar {sidecar_path.name}")
+            entry["audio"] = entry["audio"] or "fresh"
+            continue
+        sidecar = load_json(sidecar_path)
+        if sidecar is None:
+            continue
+        validate_schema(sidecar, "audio-sidecar.schema.json", sidecar_path)
+        if sidecar.get("voice") != voice:
+            err(f"{rel(sidecar_path)}: sidecar voice '{sidecar.get('voice')}' "
+                f"does not match filename voice '{voice}'")
+        if sidecar.get("source_script_sha256") != script_sha:
+            warn(f"{rel(audio_file)}: audio is stale (script changed since generation)")
+            entry["audio"] = "stale"
+        elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha \
+                and not pronunciation_is_current(narration, sidecar, pronunciations):
+            warn(f"{rel(audio_file)}: audio is stale (pronunciation dictionary changed "
+                 "for a term this script uses)")
+            entry["audio"] = "stale"
+        else:
+            entry["audio"] = entry["audio"] or "fresh"
+
+    for orphan in sidecars:
+        stem = orphan.name[: -len(".json")]
+        if not any(m.name.startswith(stem + ".") for m in media):
+            warn(f"{rel(orphan)}: sidecar present but audio file missing")
+
+
+def check_required_levels(d: Path, durations: dict, levels: dict) -> None:
+    """A complete book owes a complete script and current audio at every required level."""
+    missing_scripts = [du for du, e in durations.items()
+                       if levels[du]["required"] and e["script"] != "complete"]
+    if missing_scripts:
+        err(f"{rel(d)}/book.json: status 'complete' but scripts not complete: "
+            f"{', '.join(missing_scripts)}")
+    missing_audio = [du for du, e in durations.items()
+                     if levels[du]["required"] and e["audio"] != "fresh"]
+    if missing_audio:
+        err(f"{rel(d)}/book.json: status 'complete' but local audio is missing or stale: "
+            f"{', '.join(missing_audio)}")
+
+
+def check_books(only: str | None, audio_cfg: dict, rating_cfg: dict,
+                pronunciations: list[dict], pronunciation_sha: str,
+                entities: dict, tag_ids: set) -> dict:
     if only and not (ROOT / "library/books" / only).is_dir():
         err(f"no such book: {only}")
-    levels = audio_cfg["levels"]
-    durations = list(levels)
-    tolerance = audio_cfg["word_count_tolerance_percent"] / 100
     status_rows: dict[str, dict] = {}
-
     for d in library_dirs("library/books"):
         if only and d.name != only:
             continue
         doc = load_json(d / "book.json")
         if not doc:
             continue
-        validate_schema(doc, "book.schema.json", d / "book.json")
-        if doc.get("id") != d.name:
-            err(f"{rel(d)}/book.json: id '{doc.get('id')}' does not match directory name")
-        for aid in doc.get("author_ids", []):
-            if aid not in entities or entities[aid]["kind"] != "author":
-                err(f"{rel(d)}/book.json: unknown author id '{aid}'")
-        for tid in doc.get("discovery", {}).get("tag_ids", []):
-            if tid not in tag_ids:
-                err(f"{rel(d)}/book.json: tag '{tid}' is not in taxonomy/tags.json")
-        check_research(doc, d / "book.json")
+        check_book_record(d, doc, entities, tag_ids)
+        check_book_content(d, doc, rating_cfg)
 
-        content_path = d / "content.json"
-        content = load_json(content_path)
-        if content:
-            validate_schema(content, "content.schema.json", content_path)
-            if content.get("book_id") != d.name:
-                err(f"{rel(content_path)}: book_id does not match directory name")
-            if content.get("content_type") != "non-fiction":
-                err(f"{rel(content_path)}: this library accepts non-fiction only")
-            idea_ids = [i.get("id") for i in content.get("ideas", [])]
-            for dup in duplicates(idea_ids):
-                err(f"{rel(content_path)}: duplicate idea id '{dup}'")
-            known_ideas = set(idea_ids)
-            for section in content.get("book_map", []):
-                for idea_id in section.get("idea_ids", []):
-                    if idea_id not in known_ideas:
-                        err(f"{rel(content_path)}: book_map cites unknown idea '{idea_id}'")
-            # content.json interprets the book; its citations resolve against
-            # the sources book.json records.
-            check_source_ids(
-                content, content_path,
-                {s["id"] for s in doc.get("research", {}).get("sources", [])},
-                require_sources=content.get("workflow", {}).get("status") != "stub",
-            )
-            orders = [section.get("order") for section in content.get("book_map", [])]
-            if orders != list(range(1, len(orders) + 1)):
-                err(f"{rel(content_path)}: book_map order must be consecutive from 1")
-            rating = content.get("assessment", {}).get("rating")
-            if content.get("workflow", {}).get("status") != "stub" or rating is not None:
-                for problem in rating_errors(
-                    rating,
-                    rating_cfg,
-                    require_complete=content.get("workflow", {}).get("status") != "stub",
-                ):
-                    err(f"{rel(content_path)}: assessment.rating {problem}")
-        elif doc.get("workflow", {}).get("status") != "stub":
-            err(f"{rel(content_path)}: researched books require structured content")
-
-        wf = doc.get("workflow", {})
-        coverage = wf.get("coverage", "metadata-only")
-        if content and content.get("workflow", {}).get("status") != wf.get("status"):
-            err(f"{rel(content_path)}: workflow status differs from book.json")
-        if content and content.get("workflow", {}).get("reviewed_against_full_book") and coverage != "full-book":
-            err(f"{rel(content_path)}: full-book review is true but book.json coverage is '{coverage}'")
-        if wf.get("status") == "complete":
-            # Coverage is recorded, not a gate (owner's decision): complete
-            # profiles are allowed at any coverage, but the label must be true.
-            sources = doc.get("research", {}).get("sources", [])
-            if len(sources) < 6:
-                err(f"{rel(d)}/book.json: complete status requires at least six useful sources")
-            independent_reception = [s for s in sources if s.get("independence") == "independent"
-                                     and s.get("type") in {"professional-review", "specialist-review"}]
-            if len(independent_reception) < 2:
-                err(f"{rel(d)}/book.json: complete status requires two independent reception sources")
-            review = (content or {}).get("workflow", {}).get("quality_review", {})
-            if review.get("status") != "passed" or not review.get("reviewed_at"):
-                err(f"{rel(content_path)}: complete status requires a dated, passed quality review")
-            incomplete_checks = [name for name, passed in review.get("checks", {}).items()
-                                 if not passed]
-            expected_checks = {
-                "identity_and_metadata", "content_fidelity", "claim_support",
-                "counterevidence", "citation_entailment", "product_fit",
-                "plain_language", "audio_pronunciation",
-            }
-            missing_checks = expected_checks - set(review.get("checks", {}))
-            if incomplete_checks or missing_checks:
-                names = sorted(set(incomplete_checks) | missing_checks)
-                err(f"{rel(content_path)}: quality review checks not passed: {', '.join(names)}")
-
-        # scripts + audio
-        row = {"book": doc, "durations": {}}
-        for duration in durations:
+        durations: dict[str, dict] = {}
+        for duration in audio_cfg["levels"]:
             entry = {"script": None, "words": None, "audio": None}
-            sp = d / "scripts" / f"{duration}.md"
-            # The narration text, not the file: front matter carries the book id,
-            # whose slug can contain a dictionary name the script never speaks.
-            # Judging freshness on the file would strand such audio as
-            # permanently stale, because regeneration reads the body alone.
-            narration_text = ""
-            if sp.exists():
-                meta, body = parse_front_matter(sp)
-                narration_text = spoken_text(body)
-                entry["script"] = meta.get("status", "?")
-                entry["words"] = word_count(body)
-                if meta.get("book_id") != d.name:
-                    err(f"{rel(sp)}: book_id front matter mismatch")
-                if meta.get("duration") != duration:
-                    err(f"{rel(sp)}: duration front matter does not match filename")
-                if meta.get("source") != "content.json":
-                    err(f"{rel(sp)}: source front matter must be 'content.json'")
-                target = levels[duration]["target_words"]
-                if meta.get("target_words") != target:
-                    err(f"{rel(sp)}: target_words {meta.get('target_words')} != configured {target}")
-                if meta.get("status") == "complete":
-                    low, high = target * (1 - tolerance), target * (1 + tolerance)
-                    if not (low <= entry["words"] <= high):
-                        err(f"{rel(sp)}: {entry['words']} words is outside {target}±{tolerance:.0%}")
-                    for pattern, problem in NARRATION_META_PATTERNS.items():
-                        if re.search(pattern, body, flags=re.IGNORECASE):
-                            err(f"{rel(sp)}: narration {problem}; keep research metadata out of audio")
+            narration = check_script(d, duration, audio_cfg, entry)
+            check_audio(d, duration, narration, audio_cfg,
+                        pronunciations, pronunciation_sha, entry)
+            durations[duration] = entry
+        status_rows[d.name] = {"book": doc, "durations": durations}
 
-            # audio + sidecar, one pair per voice: <level>.<voice>.<format> + .json
-            audio_files = list((d / "audio").glob(f"{duration}.*")) if (d / "audio").exists() else []
-            media = [a for a in audio_files if a.suffix != ".json"]
-            sidecars = [a for a in audio_files if a.suffix == ".json"]
-            script_sha = hashlib.sha256(sp.read_bytes()).hexdigest() if sp.exists() else None
-            for audio_file in media:
-                parts = audio_file.name.split(".")
-                if len(parts) != 3:
-                    err(f"{rel(audio_file)}: audio files must be named <level>.<voice>.<format>")
-                    entry["audio"] = entry["audio"] or "fresh"
-                    continue
-                voice = parts[1]
-                sidecar_path = d / "audio" / f"{duration}.{voice}.json"
-                if not sidecar_path.exists():
-                    reporter = err if audio_cfg["tts"].get("metadata_sidecar_required") else warn
-                    reporter(f"{rel(audio_file)}: audio present without sidecar {sidecar_path.name}")
-                    entry["audio"] = entry["audio"] or "fresh"
-                    continue
-                sidecar = load_json(sidecar_path)
-                if sidecar is None:
-                    continue
-                validate_schema(sidecar, "audio-sidecar.schema.json", sidecar_path)
-                if sidecar.get("voice") != voice:
-                    err(f"{rel(sidecar_path)}: sidecar voice '{sidecar.get('voice')}' "
-                        f"does not match filename voice '{voice}'")
-                if sidecar.get("source_script_sha256") != script_sha:
-                    warn(f"{rel(audio_file)}: audio is stale (script changed since generation)")
-                    entry["audio"] = "stale"
-                elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha \
-                        and not pronunciation_is_current(
-                            narration_text, sidecar, pronunciations_cfg["entries"]):
-                    warn(f"{rel(audio_file)}: audio is stale (pronunciation dictionary changed "
-                         "for a term this script uses)")
-                    entry["audio"] = "stale"
-                else:
-                    entry["audio"] = entry["audio"] or "fresh"
-            for orphan in sidecars:
-                stem = orphan.name[: -len(".json")]
-                if not any(m.name.startswith(stem + ".") for m in media):
-                    warn(f"{rel(orphan)}: sidecar present but audio file missing")
-            row["durations"][duration] = entry
-        status_rows[d.name] = row
+        if doc.get("workflow", {}).get("status") == "complete":
+            check_required_levels(d, durations, audio_cfg["levels"])
+    return status_rows
 
-        if wf.get("status") == "complete":
-            missing = [du for du, e in row["durations"].items()
-                       if levels[du]["required"] and e["script"] != "complete"]
-            if missing:
-                err(f"{rel(d)}/book.json: status 'complete' but scripts not complete: {', '.join(missing)}")
-            missing_audio = [
-                du for du, entry in row["durations"].items()
-                if levels[du]["required"] and entry["audio"] != "fresh"
-            ]
-            if missing_audio:
-                err(
-                    f"{rel(d)}/book.json: status 'complete' but local audio is missing or stale: "
-                    f"{', '.join(missing_audio)}"
-                )
 
-    # --- playlists ---
-    playlists_path = ROOT / "data/playlists.json"
-    if playlists_path.exists():
-        pl = load_json(playlists_path)
-        if pl is not None:
-            validate_schema(pl, "playlists.schema.json", playlists_path)
-            playlist_ids = [p.get("id") for p in pl.get("playlists", [])]
-            for duplicate in duplicates(playlist_ids):
-                err(f"data/playlists.json: duplicate playlist id '{duplicate}'")
-            for p in pl.get("playlists", []):
-                for item in p.get("items", []):
-                    if item["book_id"] not in entities:
-                        err(f"data/playlists.json: playlist '{p.get('name')}' references unknown book "
-                            f"'{item['book_id']}'")
-                    elif entities[item["book_id"]]["kind"] != "book":
-                        err(f"data/playlists.json: playlist '{p.get('name')}' item is not a book")
-                    if item["duration"] not in audio_cfg["levels"]:
-                        err(f"data/playlists.json: playlist '{p.get('name')}' has unknown duration "
-                            f"'{item['duration']}'")
-                book_ids = [item["book_id"] for item in p.get("items", [])]
-                for duplicate in duplicates(book_ids):
-                    warn(f"data/playlists.json: playlist '{p.get('name')}' lists '{duplicate}' "
-                         "at more than one duration; playlists should hold one entry per book")
+def check_playlists(audio_cfg: dict, entities: dict) -> None:
+    path = ROOT / "data/playlists.json"
+    if not path.exists():
+        return
+    doc = load_json(path)
+    if doc is None:
+        return
+    validate_schema(doc, "playlists.schema.json", path)
+    for duplicate in duplicates([p.get("id") for p in doc.get("playlists", [])]):
+        err(f"data/playlists.json: duplicate playlist id '{duplicate}'")
+    for playlist in doc.get("playlists", []):
+        name = playlist.get("name")
+        for item in playlist.get("items", []):
+            if item["book_id"] not in entities:
+                err(f"data/playlists.json: playlist '{name}' references unknown book "
+                    f"'{item['book_id']}'")
+            elif entities[item["book_id"]]["kind"] != "book":
+                err(f"data/playlists.json: playlist '{name}' item is not a book")
+            if item["duration"] not in audio_cfg["levels"]:
+                err(f"data/playlists.json: playlist '{name}' has unknown duration "
+                    f"'{item['duration']}'")
+        for duplicate in duplicates([item["book_id"] for item in playlist.get("items", [])]):
+            warn(f"data/playlists.json: playlist '{name}' lists '{duplicate}' "
+                 "at more than one duration; playlists should hold one entry per book")
 
-    # --- processing queue ---
-    queue_path = ROOT / "data/queue.json"
-    if queue_path.exists():
-        qdoc = load_json(queue_path)
-        if qdoc is not None:
-            validate_schema(qdoc, "queue.schema.json", queue_path)
-            queue_ids = [item["book_id"] for item in qdoc.get("queue", [])]
-            for duplicate in duplicates(queue_ids):
-                err(f"data/queue.json: '{duplicate}' is queued more than once")
-            priorities = [item["priority"] for item in qdoc.get("queue", [])]
-            for duplicate in duplicates(priorities):
-                warn(f"data/queue.json: priority {duplicate} is used more than once; order is ambiguous")
-            for item in qdoc.get("queue", []):
-                if item["book_id"] not in entities or entities[item["book_id"]]["kind"] != "book":
-                    err(f"data/queue.json: unknown book '{item['book_id']}'")
-                    continue
-                book_doc = load_json(ROOT / "library/books" / item["book_id"] / "book.json") \
-                    if (ROOT / "library/books" / item["book_id"] / "book.json").exists() else None
-                book_status = (book_doc or {}).get("workflow", {}).get("status")
-                if item["status"] == "done" and book_status != "complete":
-                    warn(f"data/queue.json: '{item['book_id']}' is marked done but book.json "
-                         f"status is '{book_status}'")
 
-    return report(quiet, status_rows, durations)
+def check_queue(entities: dict) -> None:
+    path = ROOT / "data/queue.json"
+    if not path.exists():
+        return
+    doc = load_json(path)
+    if doc is None:
+        return
+    validate_schema(doc, "queue.schema.json", path)
+    for duplicate in duplicates([item["book_id"] for item in doc.get("queue", [])]):
+        err(f"data/queue.json: '{duplicate}' is queued more than once")
+    for duplicate in duplicates([item["priority"] for item in doc.get("queue", [])]):
+        warn(f"data/queue.json: priority {duplicate} is used more than once; order is ambiguous")
+    for item in doc.get("queue", []):
+        if item["book_id"] not in entities or entities[item["book_id"]]["kind"] != "book":
+            err(f"data/queue.json: unknown book '{item['book_id']}'")
+            continue
+        book_path = ROOT / "library/books" / item["book_id"] / "book.json"
+        book_doc = load_json_once(book_path) if book_path.exists() else None
+        book_status = (book_doc or {}).get("workflow", {}).get("status")
+        if item["status"] == "done" and book_status != "complete":
+            warn(f"data/queue.json: '{item['book_id']}' is marked done but book.json "
+                 f"status is '{book_status}'")
+
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        prog="check.py",
+        description="Validate the library: schemas, cross-references, word counts, audio freshness.",
+        epilog="Exit code 1 on errors; warnings do not fail the run.",
+    )
+    parser.add_argument("book_id", nargs="?", help="limit book-level checks to one book")
+    parser.add_argument("--quiet", action="store_true", help="show only warnings and errors")
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+
+    pronunciations_path = ROOT / "config/pronunciations.json"
+    audio_cfg = load_json(ROOT / "config/audio.json")
+    pronunciations_cfg = load_json(pronunciations_path)
+    rating_cfg = load_json(ROOT / "config/rating.json")
+    tags_doc = load_json(ROOT / "taxonomy/tags.json")
+    catalog = load_json(ROOT / "data/catalog.json")
+    relationships = load_json(ROOT / "data/relationships.json")
+    # Every later check reads one of these, so a missing or broken one ends
+    # the run rather than producing a page of consequential errors.
+    if not all([audio_cfg, pronunciations_cfg, rating_cfg, tags_doc, catalog, relationships]):
+        return report(args.quiet, {}, [])
+
+    pronunciation_sha = check_configs(
+        audio_cfg, pronunciations_cfg, pronunciations_path, rating_cfg, tags_doc)
+    entities = check_catalog(catalog)
+    check_relationships(relationships, entities)
+    check_authors()
+    status_rows = check_books(
+        args.book_id, audio_cfg, rating_cfg, pronunciations_cfg["entries"],
+        pronunciation_sha, entities, {t["id"] for t in tags_doc["tags"]})
+    check_playlists(audio_cfg, entities)
+    check_queue(entities)
+    return report(args.quiet, status_rows, list(audio_cfg["levels"]))
 
 
 def report(quiet: bool, status_rows: dict, durations: list[str]) -> int:
     if not quiet and status_rows:
         print("Library status")
-        print(f"  {'book':40} {'status':20} {'coverage':22} " + " ".join(f"{d:>12}" for d in durations))
+        print(f"  {'book':40} {'status':20} {'coverage':22} "
+              + " ".join(f"{d:>12}" for d in durations))
         for book_id, row in status_rows.items():
             wf = row["book"].get("workflow", {})
             cells = []
