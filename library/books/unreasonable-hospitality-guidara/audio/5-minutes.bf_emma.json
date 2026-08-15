@@ -13,14 +13,14 @@
   "output_format": "mp3",
   "source_script": "library/books/unreasonable-hospitality-guidara/scripts/5-minutes.md",
   "source_script_sha256": "0bbf4d308035992255d5ff8277497a6233a6e08ca90cce61335b8cb00f0c02ba",
-  "pronunciation_dictionary_sha256": "749e2ab64539bcd1df7475cdbc1dc9db469a216689c70ea8f9964a12f11a650a",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Guidara",
     "Michelin"
   ],
   "pronunciation_entries_sha256": "07fc7280f0e391b9036935abc92a0e6c450e29786f67c7cee84e4e487bd26e30",
   "script_words": 704,
-  "audio_seconds": 274.899,
-  "measured_wpm": 153.66,
-  "generated_at": "2026-08-13T11:14:41.299444+00:00"
+  "audio_seconds": 274.707,
+  "measured_wpm": 153.76,
+  "generated_at": "2026-08-15T15:47:08.964420+00:00"
 }

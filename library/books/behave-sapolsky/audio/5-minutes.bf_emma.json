@@ -13,13 +13,13 @@
   "output_format": "mp3",
   "source_script": "library/books/behave-sapolsky/scripts/5-minutes.md",
   "source_script_sha256": "39b1764a41cfea7eec1c701c8eea218f10506a57185f9860f53256b78ced9a39",
-  "pronunciation_dictionary_sha256": "0d1420f84088ff81787bfcaa8e1e9a6dc3581882713261ebb0103d13dee71dbf",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "amygdala"
   ],
-  "pronunciation_entries_sha256": "c3357a3d86ce060895aca6b39708e399ee2a9cb6df418657e39cd8bf8e69040e",
+  "pronunciation_entries_sha256": "9e8b99a118d73da1672d6b9a9ffda48eb5bf1318c0cfffcb8186c26a71f709ae",
   "script_words": 782,
   "audio_seconds": 300.581,
   "measured_wpm": 156.1,
-  "generated_at": "2026-08-14T06:06:19.917299+00:00"
+  "generated_at": "2026-08-15T16:27:19.470418+00:00"
 }

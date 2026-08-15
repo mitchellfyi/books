@@ -13,7 +13,7 @@
   "output_format": "mp3",
   "source_script": "library/books/you-must-change-your-life-sloterdijk/scripts/30-minutes.md",
   "source_script_sha256": "4596b74b674e0c04077ead3340b69e67af84a0e424b7b4ff0036c33b005abea3",
-  "pronunciation_dictionary_sha256": "5c3f86c5a5512d4127f6e76173f6138e7fbc85ef1637e66a0790b5f4c6698f34",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Bourdieu",
     "Cioran",
@@ -23,7 +23,7 @@
   ],
   "pronunciation_entries_sha256": "1111121d3c53403641d0aaa18e3eb835b4349a856a88ea6740ece07df1034447",
   "script_words": 4329,
-  "audio_seconds": 1686.635,
-  "measured_wpm": 154.0,
-  "generated_at": "2026-08-15T13:41:11.527247+00:00"
+  "audio_seconds": 1684.928,
+  "measured_wpm": 154.15,
+  "generated_at": "2026-08-15T16:05:41.646660+00:00"
 }

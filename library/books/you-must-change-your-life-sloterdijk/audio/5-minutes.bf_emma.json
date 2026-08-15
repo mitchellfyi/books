@@ -8,12 +8,12 @@
   "model": "kokoro-v1.0.onnx",
   "voice": "bf_emma",
   "lang": "en-gb",
-  "speed": 0.86,
+  "speed": 0.85,
   "sample_rate": 24000,
   "output_format": "mp3",
   "source_script": "library/books/you-must-change-your-life-sloterdijk/scripts/5-minutes.md",
   "source_script_sha256": "dd8a176ff3c063732c866c95088d71d225c60fd6ebc18d4f395f551af8e1e363",
-  "pronunciation_dictionary_sha256": "5c3f86c5a5512d4127f6e76173f6138e7fbc85ef1637e66a0790b5f4c6698f34",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [
     "Bourdieu",
     "Cioran",
@@ -23,7 +23,7 @@
   ],
   "pronunciation_entries_sha256": "1111121d3c53403641d0aaa18e3eb835b4349a856a88ea6740ece07df1034447",
   "script_words": 774,
-  "audio_seconds": 296.22,
-  "measured_wpm": 156.78,
-  "generated_at": "2026-08-15T13:37:14.061797+00:00"
+  "audio_seconds": 299.527,
+  "measured_wpm": 155.04,
+  "generated_at": "2026-08-15T16:07:15.914556+00:00"
 }

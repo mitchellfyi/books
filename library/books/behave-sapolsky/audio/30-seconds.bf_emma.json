@@ -13,11 +13,11 @@
   "output_format": "mp3",
   "source_script": "library/books/behave-sapolsky/scripts/30-seconds.md",
   "source_script_sha256": "30bbfec79174192a3a5562d470b0329489d3f9aff5fc94a3be02f2bc97ec2ea3",
-  "pronunciation_dictionary_sha256": "6130478b0dfa77f66e6303a40897bb39c2d71819a66825fe4c9c7a5d5dfd2e5b",
+  "pronunciation_dictionary_sha256": "556f013f6d9d1db0270513fe7dc214caeaa8b174494f65555130569fa1f2339e",
   "pronunciation_terms": [],
   "pronunciation_entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
   "script_words": 70,
   "audio_seconds": 29.143,
   "measured_wpm": 144.12,
-  "generated_at": "2026-08-13T19:37:21.479692+00:00"
+  "generated_at": "2026-08-15T16:24:35.603290+00:00"
 }
