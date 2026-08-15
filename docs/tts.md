@@ -11,11 +11,26 @@ frontend is maintained separately as
 
 `config/pronunciations.json` stores exact terms and aliases with a phoneme
 sequence for each supported language. Longer matches take priority, so a full
-name can override one part of that name. The generator first phonemises normal
+name can override one part of that name — which means an alias must carry
+phonemes for everything it matches. Giving `Sloterdijk` an alias of
+`Peter Sloterdijk` while supplying only the surname's phonemes deletes the
+given name from the narration. Either add the full name as its own term with
+its own complete phonemes, as `Alain de Botton` does, or list no alias and let
+the surname match inside the longer name.
+
+A possessive is taken with the term it follows, so `Proust's` is voiced as one
+word rather than leaving a stray `'s` for the phonemiser to read as the letter
+"ess". The generator first phonemises normal
 text, substitutes verified entries, then sends the final phonemes to Kokoro.
 Its sidecar records the dictionary hash and the entries used. A dictionary
 change stales only audio whose script contains an affected term; unrelated
 audio stays fresh.
+
+That hash covers the dictionary's contents, not the code that applies it.
+Changing how `scripts/pronunciation.py` matches or renders entries therefore
+leaves existing audio looking fresh when its pronunciation would now differ.
+After such a change, work out which narrations it can affect and regenerate
+them with `--force`.
 
 ## Correction workflow
 
