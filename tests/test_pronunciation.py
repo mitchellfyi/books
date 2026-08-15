@@ -7,6 +7,7 @@ from scripts.pronunciation import (
     pronunciation_is_current,
     pronunciation_signature,
     pronunciation_terms_in_text,
+    spelling_matcher,
 )
 
 
@@ -80,6 +81,25 @@ class PronunciationTests(unittest.TestCase):
             pronunciation_terms_in_text("Cal Newport calculated", "en-gb", entries),
             ["Cal Newport"],
         )
+
+    def test_a_possessive_still_reports_the_plain_term(self) -> None:
+        # The freshness scan and the phonemiser share one pattern; recording
+        # "Ada's" as the applied term would stale the audio on every run.
+        entries = [{
+            "term": "Ada",
+            "aliases": [],
+            "case_sensitive": False,
+            "phonemes": {"en-gb": "A"},
+        }]
+        self.assertEqual(pronunciation_terms_in_text("Ada's work", "en-gb", entries), ["Ada"])
+
+    def test_a_language_the_dictionary_does_not_cover_has_no_matcher(self) -> None:
+        entries = [{
+            "term": "Ada", "aliases": [], "case_sensitive": False,
+            "phonemes": {"en-gb": "A"},
+        }]
+        self.assertIsNone(spelling_matcher("en-us", entries))
+        self.assertEqual(pronunciation_terms_in_text("Ada", "en-us", entries), [])
 
     def test_signature_ignores_unrelated_entries(self) -> None:
         entries = [{

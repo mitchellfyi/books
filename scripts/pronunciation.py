@@ -8,31 +8,53 @@ import re
 from collections.abc import Callable
 
 
-def pronunciation_terms_in_text(text: str, lang: str, entries: list[dict]) -> list[str]:
-    """Return the canonical dictionary terms that would affect this text."""
-    candidates: list[tuple[str, dict]] = []
-    for entry in entries:
-        if lang not in entry.get("phonemes", {}):
-            continue
-        for spelling in (entry["term"], *entry.get("aliases", [])):
-            candidates.append((spelling, entry))
+def spelling_matcher(lang: str, entries: list[dict]) -> tuple[re.Pattern, dict] | None:
+    """One pattern over every spelling with phonemes for this language.
+
+    None when the dictionary has nothing to say about the language. Longest
+    spelling first, so a full name wins over one of its parts. A trailing
+    possessive is part of the match: left behind, it would be phonemised on
+    its own and spoken as the letter "ess". Group 1 is always the spelling,
+    group 2 the possessive if there was one.
+
+    Every reader of the dictionary shares this, so the terms recorded on a
+    sidecar, the freshness test and the phonemes sent to the model can never
+    be computed by three slightly different regexes.
+    """
+    candidates = [
+        (spelling, entry)
+        for entry in entries if lang in entry.get("phonemes", {})
+        for spelling in (entry["term"], *entry.get("aliases", []))
+    ]
     if not candidates:
-        return []
+        return None
     candidates.sort(key=lambda item: (-len(item[0]), item[0].casefold()))
     alternatives = "|".join(re.escape(spelling) for spelling, _entry in candidates)
-    pattern = re.compile(rf"(?<!\w)({alternatives})(?!\w)", re.IGNORECASE)
+    pattern = re.compile(rf"(?<!\w)({alternatives})(['’]s)?(?!\w)", re.IGNORECASE)
     lookup: dict[str, dict] = {}
     for spelling, entry in candidates:
         lookup.setdefault(spelling.casefold(), entry)
+    return pattern, lookup
 
-    used: set[str] = set()
-    for match in pattern.finditer(text):
-        entry = lookup[match.group(0).casefold()]
-        if entry.get("case_sensitive") and match.group(0) not in {
-            entry["term"], *entry.get("aliases", [])
-        }:
-            continue
-        used.add(entry["term"])
+
+def entry_applies(entry: dict, spelling: str) -> bool:
+    """A case-sensitive entry only applies to the exact spellings it lists."""
+    return not entry.get("case_sensitive") or spelling in {
+        entry["term"], *entry.get("aliases", [])
+    }
+
+
+def pronunciation_terms_in_text(text: str, lang: str, entries: list[dict]) -> list[str]:
+    """Return the canonical dictionary terms that would affect this text."""
+    matcher = spelling_matcher(lang, entries)
+    if matcher is None:
+        return []
+    pattern, lookup = matcher
+    used = {
+        lookup[match.group(1).casefold()]["term"]
+        for match in pattern.finditer(text)
+        if entry_applies(lookup[match.group(1).casefold()], match.group(1))
+    }
     return sorted(used, key=str.casefold)
 
 
@@ -46,14 +68,8 @@ def dictionary_affects_script(script_text: str, sidecar: dict, entries: list[dic
     """
     if sidecar.get("pronunciation_terms"):
         return True
-    lang = sidecar.get("lang", "")
-    for entry in entries:
-        if lang not in entry.get("phonemes", {}):
-            continue
-        for spelling in (entry["term"], *entry.get("aliases", [])):
-            if re.search(rf"(?<!\w){re.escape(spelling)}(?!\w)", script_text, re.IGNORECASE):
-                return True
-    return False
+    matcher = spelling_matcher(sidecar.get("lang", ""), entries)
+    return bool(matcher and matcher[0].search(script_text))
 
 
 def pronunciation_is_current(script_text: str, sidecar: dict, entries: list[dict]) -> bool:
@@ -113,24 +129,10 @@ def phonemize_with_dictionary(
     valid_symbols: set[str] | None = None,
 ) -> tuple[str, list[str]]:
     """Return phonemes and canonical dictionary terms used in the text."""
-    candidates: list[tuple[str, dict]] = []
-    for entry in entries:
-        if lang not in entry.get("phonemes", {}):
-            continue
-        for spelling in (entry["term"], *entry.get("aliases", [])):
-            candidates.append((spelling, entry))
-    if not candidates:
+    matcher = spelling_matcher(lang, entries)
+    if matcher is None:
         return phonemize(text, lang), []
-
-    # Longest spelling wins when a full name and one of its parts both exist.
-    candidates.sort(key=lambda item: (-len(item[0]), item[0].casefold()))
-    alternatives = "|".join(re.escape(item[0]) for item in candidates)
-    # A trailing possessive is part of the match: left behind, it is phonemised
-    # on its own and spoken as the letter "ess".
-    pattern = re.compile(rf"(?<!\w)({alternatives})(['’]s)?(?!\w)", re.IGNORECASE)
-    lookup: dict[str, dict] = {}
-    for spelling, entry in candidates:
-        lookup.setdefault(spelling.casefold(), entry)
+    pattern, lookup = matcher
 
     pieces: list[str] = []
     used: list[str] = []
@@ -138,9 +140,7 @@ def phonemize_with_dictionary(
     for match in pattern.finditer(text):
         spelling, possessive = match.group(1), match.group(2)
         entry = lookup[spelling.casefold()]
-        if entry.get("case_sensitive") and spelling not in {
-            entry["term"], *entry.get("aliases", [])
-        }:
+        if not entry_applies(entry, spelling):
             continue
         if match.start() > cursor:
             normal = phonemize(text[cursor:match.start()], lang).strip()
