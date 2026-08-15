@@ -30,6 +30,35 @@ def load_bookflow() -> types.ModuleType:
 bookflow = load_bookflow()
 
 
+@contextlib.contextmanager
+def repository_at(root: Path):
+    """Point bookflow at a throwaway repository for the duration of a test.
+
+    load_config caches by file name, not by root, so the cache is cleared on
+    the way in and out; leaving it warm would serve one test's config to the
+    next.
+    """
+    original = bookflow.ROOT
+    bookflow.ROOT = root
+    bookflow.load_config.cache_clear()
+    try:
+        yield root
+    finally:
+        bookflow.ROOT = original
+        bookflow.load_config.cache_clear()
+
+
+def copy_into(root: Path, *relatives: str) -> None:
+    """Copy real repository files into a throwaway root, keeping their paths."""
+    for relative in relatives:
+        source, target = ROOT / relative, root / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if source.is_dir():
+            shutil.copytree(source, target)
+        else:
+            shutil.copy2(source, target)
+
+
 class SlugTests(unittest.TestCase):
     def test_transliterates_and_kebabs(self) -> None:
         self.assertEqual(bookflow.slug("Ünicode Bôok"), "unicode-book")
@@ -95,29 +124,15 @@ class InitBookTests(unittest.TestCase):
     """
 
     def init(self, root: Path, title: str, author: str) -> Path:
-        for relative in ("templates", "config", "data/catalog.json", "data/queue.json"):
-            source = ROOT / relative
-            target = root / relative
-            target.parent.mkdir(parents=True, exist_ok=True)
-            if source.is_dir():
-                shutil.copytree(source, target)
-            else:
-                shutil.copy2(source, target)
+        copy_into(root, "templates", "config", "data/catalog.json", "data/queue.json")
         (root / "library/books").mkdir(parents=True)
         (root / "library/authors").mkdir(parents=True)
-
-        original = bookflow.ROOT
-        bookflow.ROOT = root
-        bookflow.load_config.cache_clear()
-        try:
+        with repository_at(root):
             # init_book prints a research prompt; keep it out of the test run.
             with contextlib.redirect_stdout(io.StringIO()):
                 bookflow.init_book(argparse.Namespace(
                     title=title, author=author, book_id=None, author_id=None,
                     force=True, note="", discovered=False))
-        finally:
-            bookflow.ROOT = original
-            bookflow.load_config.cache_clear()
         return root / "library/books"
 
     def test_an_id_containing_the_placeholder_is_not_expanded_twice(self) -> None:
@@ -153,6 +168,65 @@ class LoadTests(unittest.TestCase):
             path = Path(directory) / "fine.json"
             path.write_text(json.dumps({"a": 1}), encoding="utf-8")
             self.assertEqual(bookflow.load(path), {"a": 1})
+
+    def test_read_json_reports_unreadable_files_as_none(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            broken = Path(directory) / "broken.json"
+            broken.write_text("{not json", encoding="utf-8")
+            self.assertIsNone(bookflow.read_json(broken))
+            self.assertIsNone(bookflow.read_json(Path(directory) / "absent.json"))
+
+
+class BookNeedsTests(unittest.TestCase):
+    """book_needs summarises one book; a broken file must not end the report."""
+
+    def needs(self, root: Path, book_id: str, files: dict[str, str]) -> str:
+        copy_into(root, "config")
+        directory = root / "library/books" / book_id
+        directory.mkdir(parents=True)
+        for name, text in files.items():
+            (directory / name).write_text(text, encoding="utf-8")
+        with repository_at(root):
+            return bookflow.book_needs(book_id)
+
+    def test_a_missing_scaffold_is_named(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            copy_into(root, "config")
+            with repository_at(root):
+                self.assertEqual(bookflow.book_needs("ghost"), "scaffold missing")
+
+    def test_unparseable_content_is_reported_not_raised(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            self.assertEqual(
+                self.needs(Path(directory), "some-book", {"content.json": "{not json"}),
+                "content (invalid JSON)",
+            )
+
+    def test_unparseable_book_json_is_reported_not_raised(self) -> None:
+        # An agent mid-write must cost this book its row, not the whole queue.
+        with tempfile.TemporaryDirectory() as directory:
+            summary = self.needs(Path(directory), "some-book", {"book.json": "{not json"})
+        self.assertIn("book.json (invalid JSON)", summary)
+
+    def test_missing_sources_are_reported_as_research(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            summary = self.needs(Path(directory), "some-book", {"book.json": "{}"})
+        self.assertIn("research", summary)
+
+
+class ManagedToolTests(unittest.TestCase):
+    def test_a_missing_uv_explains_itself(self) -> None:
+        with self.assertRaises(SystemExit) as caught:
+            bookflow.run_managed(["uv-that-is-not-installed"])
+        message = str(caught.exception)
+        self.assertIn("uv is not installed", message)
+        self.assertIn("https://docs.astral.sh/uv/", message)
+
+    def test_the_tool_exit_status_is_passed_through(self) -> None:
+        with self.assertRaises(SystemExit) as caught:
+            bookflow.run_managed([sys.executable, "-c", "raise SystemExit(3)"])
+        self.assertEqual(caught.exception.code, 3)
 
 
 if __name__ == "__main__":

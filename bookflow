@@ -8,7 +8,6 @@ import json
 import re
 import shutil
 import subprocess
-import sys
 import unicodedata
 import webbrowser
 from datetime import date
@@ -48,6 +47,19 @@ def load(path: Path) -> dict:
 def load_config(name: str) -> dict:
     """Load a config/ file once per (short-lived) CLI invocation."""
     return load(ROOT / "config" / name)
+
+
+def read_json(path: Path) -> dict | None:
+    """Parse a file that may be absent or mid-edit, without exiting.
+
+    Reporting on the library must survive one broken book: a file another
+    agent is halfway through writing should cost that book its row, not the
+    whole command.
+    """
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
 
 
 def save(path: Path, value: object) -> None:
@@ -231,6 +243,9 @@ def research_prompt(title: str, author: str, book_id: str) -> str:
     )
 
 
+QUEUE_STATUSES = ("ready", "in-progress", "done", "blocked")
+
+
 def load_queue() -> dict:
     path = ROOT / "data/queue.json"
     if path.exists():
@@ -279,8 +294,12 @@ def book_needs(book_id: str) -> str:
     ):
         needs.append("adversarial review")
     book_path = directory / "book.json"
-    if book_path.exists() and not load(book_path).get("research", {}).get("sources"):
-        needs.append("research")
+    if book_path.exists():
+        book = read_json(book_path)
+        if book is None:
+            needs.append("book.json (invalid JSON)")
+        elif not book.get("research", {}).get("sources"):
+            needs.append("research")
     config = load_config("audio.json")
     missing_scripts, missing_audio = [], []
     for level in config["levels"]:
@@ -304,9 +323,8 @@ def cmd_queue(args: argparse.Namespace) -> None:
     data = load_queue()
     if args.set:
         book_id, status = args.set
-        allowed = ("ready", "in-progress", "done", "blocked")
-        if status not in allowed:
-            raise SystemExit(f"status must be one of: {', '.join(allowed)}")
+        if status not in QUEUE_STATUSES:
+            raise SystemExit(f"status must be one of: {', '.join(QUEUE_STATUSES)}")
         for item in data["queue"]:
             if item["book_id"] == book_id:
                 item["status"] = status
@@ -364,7 +382,7 @@ def cmd_rate(args: argparse.Namespace) -> None:
     content_path = ROOT / "library/books" / args.book_id / "content.json"
     if not content_path.exists():
         raise SystemExit(f"content file missing: {content_path.relative_to(ROOT)}")
-    rubric = load(ROOT / "config/rating.json")
+    rubric = load_config("rating.json")
     problems = rubric_errors(rubric)
     if problems:
         raise SystemExit("Invalid config/rating.json:\n  " + "\n  ".join(problems))
@@ -405,8 +423,8 @@ APP_ASSETS = ("index.html", "app.js", "styles.css")
 
 def build_app(_: argparse.Namespace | None = None) -> None:
     """Assemble dist/: a root-layout static site deployable to any static host."""
-    config = load(ROOT / "config/audio.json")
-    rating_config = load(ROOT / "config/rating.json")
+    config = load_config("audio.json")
+    rating_config = load_config("rating.json")
     catalog = load(ROOT / "data/catalog.json")
     relations = load(ROOT / "data/relationships.json")["relationships"]
     tags = {tag["id"]: tag for tag in load(ROOT / "taxonomy/tags.json")["tags"]}
@@ -458,20 +476,26 @@ def build_app(_: argparse.Namespace | None = None) -> None:
                 "target_words": config["levels"][level]["target_words"],
                 "audio": variants,
             }
-        books.append({
-            "id": book["id"],
-            "title": book["title"],
-            "authors": [authors[aid] for aid in book["author_ids"] if aid in authors],
-            "bibliography": book["bibliography"],
-            "discovery": book["discovery"],
-            "tag_details": [tags[tid] for tid in book["discovery"]["tag_ids"] if tid in tags],
-            "research": book["research"],
-            "workflow": book["workflow"],
-            "content": content,
-            "scripts": scripts,
-            "relationships": [rel for rel in relations
-                              if book["id"] in (rel["source_id"], rel["target_id"])],
-        })
+        try:
+            books.append({
+                "id": book["id"],
+                "title": book["title"],
+                "authors": [authors[aid] for aid in book["author_ids"] if aid in authors],
+                "bibliography": book["bibliography"],
+                "discovery": book["discovery"],
+                "tag_details": [tags[tid] for tid in book["discovery"]["tag_ids"] if tid in tags],
+                "research": book["research"],
+                "workflow": book["workflow"],
+                "content": content,
+                "scripts": scripts,
+                "relationships": [rel for rel in relations
+                                  if book["id"] in (rel["source_id"], rel["target_id"])],
+            })
+        except KeyError as missing:
+            # check reports every such gap at once; build should point there
+            # rather than end in a traceback naming one key.
+            raise SystemExit(f"{show(book_path)}: required field {missing} is missing. "
+                             "Run ./bookflow check for the full report.") from None
 
     output = {
         "schema_version": 2,
@@ -486,18 +510,36 @@ def build_app(_: argparse.Namespace | None = None) -> None:
           "deploy the dist directory to any static host")
 
 
+def run_managed(command: list[str]) -> None:
+    """Run a uv-managed tool and exit with its status.
+
+    uv provides the dependencies these commands need, so a missing uv is a
+    setup problem with a one-line fix — not a traceback out of subprocess.
+    """
+    try:
+        completed = subprocess.run(command, cwd=ROOT)
+    except FileNotFoundError:
+        raise SystemExit(
+            "uv is not installed, and it provides this command's dependencies. "
+            "Install it from https://docs.astral.sh/uv/ and try again."
+        ) from None
+    raise SystemExit(completed.returncode)
+
+
 def check(args: argparse.Namespace) -> None:
     command = ["uv", "run", "scripts/check.py"]
     if args.quiet:
         command.append("--quiet")
     if args.book_id:
         command.append(args.book_id)
-    raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
+    run_managed(command)
 
 
 def run_tests(_: argparse.Namespace) -> None:
-    command = [sys.executable, "-m", "unittest", "discover", "-s", "tests"]
-    raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
+    # Through uv so the suite can import scripts/check.py, which needs
+    # jsonschema; the version tracks the one check.py declares for itself.
+    run_managed(["uv", "run", "--with", "jsonschema>=4.21",
+                 "python", "-m", "unittest", "discover", "-s", "tests"])
 
 
 def generate_audio(args: argparse.Namespace) -> None:
@@ -515,7 +557,7 @@ def generate_audio(args: argparse.Namespace) -> None:
     for flag in ("force", "allow_draft", "no_calibrate", "quantized"):
         if getattr(args, flag):
             command.append("--" + flag.replace("_", "-"))
-    raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
+    run_managed(command)
 
 
 def inspect_pronunciation(args: argparse.Namespace) -> None:
@@ -527,7 +569,7 @@ def inspect_pronunciation(args: argparse.Namespace) -> None:
         command.extend(["--voice", args.voice])
     if args.quantized:
         command.append("--quantized")
-    raise SystemExit(subprocess.run(command, cwd=ROOT).returncode)
+    run_managed(command)
 
 
 class LibraryHandler(SimpleHTTPRequestHandler):
@@ -548,9 +590,10 @@ class LibraryHandler(SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(body)
             return
-        if self.headers.get("Range") and self.range_file() is not None:
-            self.send_ranged(self.range_file())
-            return
+        if self.headers.get("Range"):
+            file = self.range_file()
+            if file is not None and self.send_ranged(file):
+                return
         # serve rebuilds dist on every start, so never let the browser hold a
         # stale copy of anything the build just rewrote. Audio is content-
         # addressed by name and stays cacheable.
@@ -600,22 +643,29 @@ class LibraryHandler(SimpleHTTPRequestHandler):
         candidate = Path(self.translate_path(self.path.split("?", 1)[0]))
         return candidate if candidate.is_file() else None
 
-    def send_ranged(self, file: Path) -> None:
+    def send_ranged(self, file: Path) -> bool:
+        """Answer a single-range request.
+
+        False when the header is not a single byte range this server can
+        honour — a multi-range or malformed header — so the caller serves the
+        whole file, which RFC 9110 permits and browsers expect.
+        """
         size = file.stat().st_size
         match = re.match(r"bytes=(\d*)-(\d*)$", self.headers["Range"].strip())
+        if not match or not (match.group(1) or match.group(2)):
+            return False
         start, end = 0, size - 1
-        if match and (match.group(1) or match.group(2)):
-            if match.group(1):
-                start = int(match.group(1))
-                if match.group(2):
-                    end = min(int(match.group(2)), size - 1)
-            else:
-                start = max(0, size - int(match.group(2)))
+        if match.group(1):
+            start = int(match.group(1))
+            if match.group(2):
+                end = min(int(match.group(2)), size - 1)
+        else:
+            start = max(0, size - int(match.group(2)))
         if start >= size or start > end:
             self.send_response(416)
             self.send_header("Content-Range", f"bytes */{size}")
             self.end_headers()
-            return
+            return True
         self.send_response(206)
         self.send_header("Content-Type", self.guess_type(str(file)))
         self.send_header("Accept-Ranges", "bytes")
@@ -632,8 +682,9 @@ class LibraryHandler(SimpleHTTPRequestHandler):
                 try:
                     self.wfile.write(block)
                 except (BrokenPipeError, ConnectionResetError):
-                    return
+                    return True  # the listener seeked away or closed the tab
                 remaining -= len(block)
+        return True
 
     def log_message(self, format: str, *args: object) -> None:
         if len(args) > 1 and str(args[1]).startswith(("2", "3")):
@@ -678,7 +729,7 @@ def parser() -> argparse.ArgumentParser:
 
     work = commands.add_parser("queue", help="show the processing queue and what each book needs")
     work.add_argument("--set", nargs=2, metavar=("BOOK_ID", "STATUS"),
-                      help="set a queue entry to ready, in-progress, done, or blocked")
+                      help="set a queue entry to " + ", ".join(QUEUE_STATUSES))
     work.set_defaults(run=cmd_queue)
 
     upcoming = commands.add_parser("next", help="show the next ready book and its research prompt")
