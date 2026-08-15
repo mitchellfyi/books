@@ -42,9 +42,7 @@
     },
     {
       "term": "amygdala",
-      "aliases": [
-        "amygdalae"
-      ],
+      "aliases": [],
       "case_sensitive": false,
       "phonemes": {
         "en-gb": "əmˈɪɡdələ",
@@ -52,7 +50,7 @@
       },
       "source_url": "https://dictionary.cambridge.org/pronunciation/english/amygdala",
       "verified_at": "2026-08-13",
-      "notes": "Cambridge: /əˈmɪɡ.dəl.ə/ (ə-MIG-də-lə). The unassisted phonemizer produced 'am-ig-DAH-lə' (ˌamɪɡdˈɑːlə) with wrong stress and vowel."
+      "notes": "Cambridge: /əˈmɪɡ.dəl.ə/ (ə-MIG-də-lə). The unassisted phonemizer produced 'am-ig-DAH-lə' (ˌamɪɡdˈɑːlə) with wrong stress and vowel. The plural 'amygdalae' is not an alias: these phonemes are the singular, so aliasing it would voice the plural as the singular. No script uses the plural; add it as its own entry with verified phonemes if one does."
     },
     {
       "term": "Atahuallpa",

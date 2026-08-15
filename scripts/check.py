@@ -199,6 +199,16 @@ def main() -> int:
                     f"'{spelling}' collides with '{spellings[folded]}'"
                 )
             spellings[folded] = spelling
+        # The entry's phonemes replace everything its spelling matched, so an
+        # alias that adds words drops them from the narration: aliasing
+        # 'Sloterdijk' to 'Peter Sloterdijk' voiced it without the 'Peter'.
+        for alias in entry["aliases"]:
+            if len(alias.split()) > len(entry["term"].split()):
+                err(
+                    f"config/pronunciations.json: alias '{alias}' has more words than "
+                    f"term '{entry['term']}', so its phonemes cannot cover them; give the "
+                    "longer form its own entry with complete phonemes"
+                )
 
     tag_ids = {t["id"] for t in tags_doc["tags"]}
     tag_aliases = [a for t in tags_doc["tags"] for a in t["aliases"]]

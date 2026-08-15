@@ -125,6 +125,19 @@ class PossessiveTests(unittest.TestCase):
     def test_plain_term_is_unchanged(self) -> None:
         self.assertEqual(self.phonemes_for("Name wrote", "ɹˈɪlkə"), "ɹˈɪlkə <wrote>")
 
+    def test_case_sensitive_term_keeps_its_possessive_rule(self) -> None:
+        entries = [{
+            "term": "Cal", "aliases": [], "case_sensitive": True,
+            "phonemes": {"en-gb": "kˈæl"},
+        }]
+        applied, used = phonemize_with_dictionary("Cal's desk", "en-gb", entries, ordinary)
+        self.assertEqual(applied, "kˈælz <desk>")
+        self.assertEqual(used, ["Cal"])
+        # The wrong case is skipped, possessive and all.
+        skipped, unused = phonemize_with_dictionary("cal's desk", "en-gb", entries, ordinary)
+        self.assertEqual(skipped, "<cal's desk>")
+        self.assertEqual(unused, [])
+
 
 class FreshnessTests(unittest.TestCase):
     entries = [{

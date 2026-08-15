@@ -709,27 +709,39 @@ function saveQueueAsPlaylist() {
   persistPlaylists();
 }
 
-// Rebuilding the lists destroys whatever the keyboard was on, so note the
-// control by its data attribute and put focus back on its replacement. When
-// the row itself is gone, fall back to the same control one row up.
+// Rebuilding the lists destroys whatever the keyboard was on. Note the control
+// by its data attribute, then put focus back on the same control in the
+// rebuilt list; the queue row's controls are tried in turn, then the row above.
+const ROW_CONTROLS = {
+  'data-play': ['data-play', 'data-up', 'data-remove'],
+  'data-up': ['data-up', 'data-play', 'data-remove'],
+  'data-remove': ['data-remove', 'data-up', 'data-play'],
+  'data-open': ['data-open', 'data-append', 'data-delete'],
+  'data-append': ['data-append', 'data-open', 'data-delete'],
+  'data-delete': ['data-delete', 'data-append', 'data-open'],
+};
+
 function focusedListControl() {
   const active = document.activeElement;
-  const attribute = ['data-play', 'data-up', 'data-remove', 'data-open', 'data-append', 'data-delete']
-    .find(name => active?.hasAttribute?.(name));
+  const attribute = Object.keys(ROW_CONTROLS).find(name => active?.hasAttribute?.(name));
   return attribute ? {attribute, index: Number(active.getAttribute(attribute))} : null;
 }
 
-function restoreListFocus(previous) {
-  if (!previous) return;
-  for (let index = previous.index; index >= 0; index -= 1) {
-    const candidate = document.querySelector(`[${previous.attribute}="${index}"]:not([disabled])`);
-    if (candidate) { candidate.focus(); return; }
+function restoreListFocus(target) {
+  if (!target) return;
+  for (let index = target.index; index >= 0; index -= 1) {
+    for (const attribute of ROW_CONTROLS[target.attribute]) {
+      const candidate = document.querySelector(`[${attribute}="${index}"]:not([disabled])`);
+      if (candidate) { candidate.focus(); return; }
+    }
   }
   if (!el('playlist').hidden) el('playlist-close').focus();
 }
 
-function renderPlaylist() {
-  const previousFocus = focusedListControl();
+// `focus` overrides where focus lands, for the one action that moves the item
+// away from the index it was activated at.
+function renderPlaylist({focus} = {}) {
+  const previousFocus = focus || focusedListControl();
   saveQueue();  // every queue mutation ends here, so this is the one save point
   el('playlist-count').textContent = state.queue.length;
   el('playlist-save').disabled = !state.queue.length;
@@ -763,7 +775,9 @@ function renderPlaylist() {
     [state.queue[index - 1], state.queue[index]] = [state.queue[index], state.queue[index - 1]];
     if (state.queueIndex === index) state.queueIndex = index - 1;
     else if (state.queueIndex === index - 1) state.queueIndex = index;
-    renderPlaylist();
+    // Focus follows the item to its new row, so repeated presses keep moving
+    // it up instead of alternating with the book it displaced.
+    renderPlaylist({focus: {attribute: 'data-up', index: index - 1}});
   }));
   el('playlist-items').querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
     const index = Number(button.dataset.remove);
