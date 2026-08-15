@@ -50,11 +50,13 @@ def pronunciation_terms_in_text(text: str, lang: str, entries: list[dict]) -> li
     if matcher is None:
         return []
     pattern, lookup = matcher
-    used = {
-        lookup[match.group(1).casefold()]["term"]
-        for match in pattern.finditer(text)
-        if entry_applies(lookup[match.group(1).casefold()], match.group(1))
-    }
+    used: set[str] = set()
+    # Read like phonemize_with_dictionary below: same matcher, same walk.
+    for match in pattern.finditer(text):
+        spelling = match.group(1)
+        entry = lookup[spelling.casefold()]
+        if entry_applies(entry, spelling):
+            used.add(entry["term"])
     return sorted(used, key=str.casefold)
 
 
