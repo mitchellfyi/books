@@ -709,7 +709,27 @@ function saveQueueAsPlaylist() {
   persistPlaylists();
 }
 
+// Rebuilding the lists destroys whatever the keyboard was on, so note the
+// control by its data attribute and put focus back on its replacement. When
+// the row itself is gone, fall back to the same control one row up.
+function focusedListControl() {
+  const active = document.activeElement;
+  const attribute = ['data-play', 'data-up', 'data-remove', 'data-open', 'data-append', 'data-delete']
+    .find(name => active?.hasAttribute?.(name));
+  return attribute ? {attribute, index: Number(active.getAttribute(attribute))} : null;
+}
+
+function restoreListFocus(previous) {
+  if (!previous) return;
+  for (let index = previous.index; index >= 0; index -= 1) {
+    const candidate = document.querySelector(`[${previous.attribute}="${index}"]:not([disabled])`);
+    if (candidate) { candidate.focus(); return; }
+  }
+  if (!el('playlist').hidden) el('playlist-close').focus();
+}
+
 function renderPlaylist() {
+  const previousFocus = focusedListControl();
   saveQueue();  // every queue mutation ends here, so this is the one save point
   el('playlist-count').textContent = state.queue.length;
   el('playlist-save').disabled = !state.queue.length;
@@ -798,6 +818,8 @@ function renderPlaylist() {
     state.saved.playlists.splice(Number(button.dataset.delete), 1);
     persistPlaylists();
   }));
+
+  restoreListFocus(previousFocus);
 }
 
 start();
