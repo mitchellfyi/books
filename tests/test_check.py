@@ -337,6 +337,97 @@ class LibraryCheckTests(unittest.TestCase):
         self.assertEqual(errors, ["no such book: no-such-book"])
 
 
+class BrokenInputTests(unittest.TestCase):
+    """check runs when files are half-written; that is when it is most needed.
+
+    Each case leaves the repository in a state an interrupted edit produces and
+    asserts check reports it and keeps going, rather than ending in a traceback
+    that hides everything else.
+    """
+
+    def run_check(self, root: Path, argv: list[str] | None = None) -> tuple[int, list, list, str]:
+        with check_at(root):
+            with contextlib.redirect_stdout(io.StringIO()) as output:
+                status = check.main(argv if argv is not None else ["--quiet"])
+            return status, list(check.errors), list(check.warnings), output.getvalue()
+
+    def broken(self, relative: str) -> tuple[int, list, list, str]:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            (root / relative).write_text("{not json", encoding="utf-8")
+            return self.run_check(root)
+
+    def test_an_unparseable_author_profile_is_named_once_and_survived(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            profile = next((root / "library/authors").glob("*/author.json"))
+            profile.write_text("{not json", encoding="utf-8")
+            status, errors, _, _ = self.run_check(root)
+        named = [e for e in errors if "invalid JSON" in e]
+        self.assertEqual(status, 1)
+        self.assertEqual(len(named), 1, errors)
+        self.assertIn(f"library/authors/{profile.parent.name}/author.json", named[0])
+
+    def test_an_unparseable_sidecar_is_named_and_survived(self) -> None:
+        status, errors, _, _ = self.broken(
+            f"library/books/{FIXTURE_BOOK}/audio/30-seconds.bf_emma.json")
+        self.assertEqual(status, 1)
+        self.assertTrue(any("30-seconds.bf_emma.json: invalid JSON" in e for e in errors), errors)
+
+    def test_unparseable_playlists_and_queue_are_named_and_survived(self) -> None:
+        for relative in ("data/playlists.json", "data/queue.json"):
+            with self.subTest(relative):
+                status, errors, _, _ = self.broken(relative)
+                self.assertEqual(status, 1)
+                self.assertTrue(any(f"{relative}: invalid JSON" in e for e in errors), errors)
+
+    def test_a_missing_queue_or_playlists_file_is_not_a_problem(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            (root / "data/queue.json").unlink()
+            status, errors, warnings, _ = self.run_check(root)
+        self.assertEqual((status, errors, warnings), (0, [], []))
+
+    def test_a_level_with_no_script_is_not_a_crash(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            (root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md").unlink()
+            status, errors, _, _ = self.run_check(root)
+        self.assertEqual(status, 1)
+        self.assertTrue(any("scripts not complete: 30-seconds" in e for e in errors), errors)
+
+    def test_a_source_ref_to_an_unparseable_file_is_not_called_missing(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            edit_relationships(root, lambda d: d["relationships"][0].__setitem__(
+                "source_refs", ["data/broken.json#anything"]))
+            (root / "data/broken.json").write_text("{not json", encoding="utf-8")
+            status, errors, _, _ = self.run_check(root)
+        self.assertEqual(status, 1)
+        self.assertTrue(any("data/broken.json: invalid JSON" in e for e in errors), errors)
+        self.assertFalse(any("source_ref file missing" in e for e in errors), errors)
+
+    def test_a_missing_shared_file_stops_before_the_consequences(self) -> None:
+        # Every later check reads one of these; carrying on would bury the one
+        # real problem under a page of errors caused by it.
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            (root / "taxonomy/tags.json").unlink()
+            status, errors, _, _ = self.run_check(root)
+        self.assertEqual(status, 1)
+        self.assertEqual(errors, ["taxonomy/tags.json: file missing"])
+
+    def test_the_status_table_is_printed_unless_quiet(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            _, _, _, loud = self.run_check(root, [])
+            _, _, _, quiet = self.run_check(root, ["--quiet"])
+        self.assertIn("Library status", loud)
+        self.assertIn(FIXTURE_BOOK, loud)
+        self.assertIn("script+audio", loud)
+        self.assertNotIn("Library status", quiet)
+
+
 def book_file(root: Path, name: str) -> Path:
     return root / "library/books" / FIXTURE_BOOK / name
 
