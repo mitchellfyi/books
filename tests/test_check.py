@@ -206,6 +206,21 @@ class LibraryCheckTests(unittest.TestCase):
                 self.assertEqual(status, 1)
                 self.assertTrue(any(expected in e for e in errors), errors)
 
+    def test_a_thin_source_list_blocks_a_complete_book(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            path = root / "library/books" / FIXTURE_BOOK / "book.json"
+            book = read(path)
+            kept = book["research"]["sources"][:1]
+            book["research"]["sources"] = kept
+            write(path, book)
+            status, errors, _ = self.run_check(root)
+        self.assertEqual(status, 1)
+        self.assertTrue(any(f"at least {check.MINIMUM_BOOK_SOURCES} useful sources" in e
+                            for e in errors), errors)
+        self.assertTrue(any(f"{check.MINIMUM_RECEPTION_SOURCES} independent reception" in e
+                            for e in errors), errors)
+
     def test_files_left_by_a_renamed_level_are_reported(self) -> None:
         # This library renamed a level once. Every other check iterates the
         # configured levels, so what the rename left behind is invisible.

@@ -48,6 +48,13 @@ NARRATION_META_PATTERNS = {
     r"https?://": "contains a raw URL",
 }
 
+# The research floors AGENTS.md states, named so a message cannot go on
+# quoting a number the check no longer uses.
+MINIMUM_BOOK_SOURCES = 6
+MINIMUM_RECEPTION_SOURCES = 2
+MINIMUM_AUTHOR_SOURCES = 3
+RECEPTION_TYPES = {"professional-review", "specialist-review"}
+
 # docs/review-method.md defines these eight and what each one attests to.
 REQUIRED_QUALITY_CHECKS = {
     "identity_and_metadata", "content_fidelity", "claim_support", "counterevidence",
@@ -333,8 +340,9 @@ def check_authors() -> None:
             err(f"{rel(d)}/author.json: id '{doc.get('id')}' does not match directory name")
         check_research(doc, d / "author.json")
         if doc.get("workflow", {}).get("status") != "stub" \
-                and len(doc.get("research", {}).get("sources", [])) < 3:
-            warn(f"{rel(d)}/author.json: fewer than three useful author sources")
+                and len(doc.get("research", {}).get("sources", [])) < MINIMUM_AUTHOR_SOURCES:
+            warn(f"{rel(d)}/author.json: fewer than {MINIMUM_AUTHOR_SOURCES} "
+                 "useful author sources")
 
 
 def check_book_record(d: Path, doc: dict, entities: dict, tag_ids: set) -> None:
@@ -401,12 +409,14 @@ def check_book_content(d: Path, doc: dict, rating_cfg: dict) -> dict | None:
         # Coverage is recorded, not a gate (owner's decision): complete
         # profiles are allowed at any coverage, but the label must be true.
         sources = doc.get("research", {}).get("sources", [])
-        if len(sources) < 6:
-            err(f"{rel(d)}/book.json: complete status requires at least six useful sources")
-        independent_reception = [s for s in sources if s.get("independence") == "independent"
-                                 and s.get("type") in {"professional-review", "specialist-review"}]
-        if len(independent_reception) < 2:
-            err(f"{rel(d)}/book.json: complete status requires two independent reception sources")
+        if len(sources) < MINIMUM_BOOK_SOURCES:
+            err(f"{rel(d)}/book.json: complete status requires at least "
+                f"{MINIMUM_BOOK_SOURCES} useful sources")
+        reception = [s for s in sources if s.get("independence") == "independent"
+                     and s.get("type") in RECEPTION_TYPES]
+        if len(reception) < MINIMUM_RECEPTION_SOURCES:
+            err(f"{rel(d)}/book.json: complete status requires "
+                f"{MINIMUM_RECEPTION_SOURCES} independent reception sources")
         review = (content or {}).get("workflow", {}).get("quality_review", {})
         if review.get("status") != "passed" or not review.get("reviewed_at"):
             err(f"{rel(content_path)}: complete status requires a dated, passed quality review")
