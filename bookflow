@@ -335,6 +335,7 @@ def cmd_rate(args: argparse.Namespace) -> None:
 
 
 DIST = ROOT / "dist"
+APP_ASSETS = ("index.html", "app.js", "styles.css")
 
 
 def build_app(_: argparse.Namespace | None = None) -> None:
@@ -352,7 +353,7 @@ def build_app(_: argparse.Namespace | None = None) -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
     (DIST / "data").mkdir(parents=True)
-    for asset in ("index.html", "app.js", "styles.css"):
+    for asset in APP_ASSETS:
         shutil.copy2(ROOT / "app" / asset, DIST / asset)
 
     books = []
@@ -485,7 +486,10 @@ class LibraryHandler(SimpleHTTPRequestHandler):
         if self.headers.get("Range") and self.range_file() is not None:
             self.send_ranged(self.range_file())
             return
-        if path.endswith("/data/library.json"):
+        # serve rebuilds dist on every start, so never let the browser hold a
+        # stale copy of anything the build just rewrote. Audio is content-
+        # addressed by name and stays cacheable.
+        if path.endswith("/data/library.json") or Path(path).name in APP_ASSETS or path == "/":
             self.no_cache = True
         super().do_GET()
 

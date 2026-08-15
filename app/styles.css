@@ -50,6 +50,7 @@ a { color: var(--accent); }
 .brand { color: var(--ink); font: 700 1.1rem Georgia, serif; text-decoration: none; }
 .search input { width: 100%; padding: .72rem 1rem; border: 1px solid var(--control-line); border-radius: 999px; background: white; }
 .quiet-button, .icon-button { border: 1px solid var(--control-line); border-radius: 999px; color: var(--ink); background: transparent; padding: .55rem .85rem; }
+.quiet-button:disabled { cursor: not-allowed; opacity: .5; }
 .topbar .quiet-button { justify-self: end; }
 .icon-button { border: 0; font-size: 1.6rem; padding: .1rem .45rem; }
 
@@ -135,6 +136,8 @@ main { min-width: 0; }
 details { margin-top: 1rem; }
 summary { cursor: pointer; font-weight: 650; }
 details.section > summary { font: 700 1.55rem Georgia, serif; }
+/* The heading carries the semantics; the summary keeps the visual size. */
+details.section > summary h2 { display: inline; margin: 0; font: inherit; }
 details.section[open] > summary { margin-bottom: 1rem; }
 .source-list li { margin-bottom: .85rem; }
 .source-meta { display: block; color: var(--muted); font-size: .82rem; }

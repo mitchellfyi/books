@@ -107,7 +107,9 @@ async function start() {
     el('voice').innerHTML = Object.entries(voiceNames).map(([id, name]) =>
       `<option value="${id}" ${id === state.voice ? 'selected' : ''}>${esc(name.split(' — ')[0])}</option>`).join('');
     bind();
-    window.addEventListener('hashchange', route);
+    // Following a link replaces the whole detail pane, which would drop focus
+    // to the body; move it to the new content instead.
+    window.addEventListener('hashchange', () => route({moveFocus: true}));
     route();
     renderPlaylist();
   } catch (error) {
@@ -117,7 +119,7 @@ async function start() {
 
 // Hash routes: #book/<id> and #author/<id>. The detail pane renders whichever
 // entity the hash names; anything unrecognised falls back to the selected book.
-function route() {
+function route({moveFocus = false} = {}) {
   const [type, id] = decodeURIComponent(location.hash.slice(1)).split('/');
   if (type === 'author' && findAuthor(id)) {
     state.view = {type: 'author', id};
@@ -130,6 +132,7 @@ function route() {
   }
   renderList();
   renderDetail();
+  if (moveFocus) el('book-detail').focus({preventScroll: true});
 }
 
 function renderDetail() {
@@ -166,7 +169,7 @@ function bind() {
   el('voice').addEventListener('change', event => {
     state.voice = event.target.value;
     localStorage.setItem('voice', state.voice);
-    renderBook();
+    renderDetail();  // not renderBook: that would replace an open author page
     const playing = state.queue[state.queueIndex] && !el('audio').paused;
     if (playing) playCurrent();  // position is restored from the saved position
   });
@@ -335,14 +338,14 @@ function renderBook() {
       </section>
 
       <details class="section">
-        <summary>What it is like to read</summary>
+        <summary><h2>What it is like to read</h2></summary>
         <dl class="reading-grid">${Object.entries(c.reading_experience)
           .filter(([key]) => !['source_ids', 'basis'].includes(key))
           .map(([key, value]) => `<dt>${esc(label(key.replaceAll('_', '-')))}</dt><dd>${esc(value)}</dd>`).join('')}</dl>
       </details>
 
       <details class="section">
-        <summary>Assessment</summary>
+        <summary><h2>Assessment</h2></summary>
         ${rating ? `
           <div class="rating-panel">
             <div><strong>${rating.score.toFixed(1)}/10</strong><span>${esc(rating.confidence)} confidence</span></div>
@@ -364,30 +367,30 @@ function renderBook() {
       </details>
 
       <details class="section">
-        <summary>Audience and topics</summary>
+        <summary><h2>Audience and topics</h2></summary>
         <h3>Best for</h3>${list(c.assessment.audience.best_for)}
         <h3>Not for</h3>${list(c.assessment.audience.not_for)}
         <h3>Topics</h3><div class="tags">${book.tag_details.map(tag => `<span>${esc(tag.label)}</span>`).join('')}</div>
       </details>
 
       <details class="section">
-        <summary>Book map</summary>
+        <summary><h2>Book map</h2></summary>
         <ol>${c.book_map.map(part => `<li><h3>${esc(part.title)}</h3><p>${esc(part.summary)}</p></li>`).join('')}</ol>
       </details>
 
       <details class="section">
-        <summary>Related books and authors</summary>
+        <summary><h2>Related books and authors</h2></summary>
         ${related.length ? `<ul class="related">${related.map(relatedItem).join('')}</ul>` : '<p>No relationships recorded yet.</p>'}
       </details>
 
       <details class="section">
-        <summary>Author</summary>
+        <summary><h2>Author</h2></summary>
         <p>${esc(c.assessment.author_and_purpose.text)}</p>
         ${book.authors.map(author => `<h3><a href="#author/${esc(author.id)}">${esc(author.name)}</a></h3><p>${esc(author.profile.biography.text)}</p><p>${esc(author.profile.perspective_and_limits.text)}</p><p><a href="#author/${esc(author.id)}">All of ${esc(author.name.split(' ').pop())}'s books in this library →</a></p>`).join('')}
       </details>
 
       <details class="section">
-        <summary>Remember and apply</summary>
+        <summary><h2>Remember and apply</h2></summary>
         <h3>Recall</h3>${list(c.retention.recall_prompts)}
         <h3>Application</h3>${list(c.retention.application_prompts)}
       </details>
@@ -481,7 +484,7 @@ function scriptPanel(book, level) {
   const playable = hasAudio(book, level);
   const voices = Object.keys(audioVariants(book, level));
   const voiceNames = state.library.config.tts.voices || {};
-  return `<section class="script-panel" aria-live="polite">
+  return `<section class="script-panel">
     <div class="action-row">
       <strong>${esc(label(level))} brief · ${script.words} words · ${esc(script.meta.status || 'unknown')}</strong>
       <button class="primary" id="play" type="button" ${playable ? '' : 'disabled'}>${playable ? 'Play audio' : 'Audio not generated'}</button>
@@ -511,11 +514,11 @@ function positionKey() {
 
 // One queue entry per book: choosing another duration replaces the existing
 // entry in place rather than adding a duplicate.
-function enqueue(item) {
+function enqueue(item, {render = true} = {}) {
   const at = state.queue.findIndex(existing => existing.bookId === item.bookId);
   if (at >= 0) state.queue[at] = item;
   else state.queue.push(item);
-  renderPlaylist();
+  if (render) renderPlaylist();
 }
 
 function dedupeByBook(items) {
@@ -639,12 +642,17 @@ function saveQueueAsPlaylist() {
   const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'playlist';
   const entry = {id, name, items: [...state.queue], updated_at: new Date().toISOString()};
   const existing = state.saved.playlists.find(p => p.id === id);
+  // Different names can slugify to the same id; overwriting is as destructive
+  // as deleting, so it asks in the same way deleting does.
+  if (existing && !confirm(`Replace the saved playlist "${existing.name}"?`)) return;
   if (existing) Object.assign(existing, entry); else state.saved.playlists.push(entry);
   persistPlaylists();
 }
 
 function renderPlaylist() {
   el('playlist-count').textContent = state.queue.length;
+  el('playlist-save').disabled = !state.queue.length;
+  el('playlist-clear').disabled = !state.queue.length;
   el('playlist-hint').textContent = state.serverPlaylists
     ? 'Saved playlists are stored in data/playlists.json.'
     : 'Saved playlists live in this browser. Start with ./bookflow serve to store them in the library.';
@@ -660,8 +668,8 @@ function renderPlaylist() {
         <span class="muted">${recommended ? '★ ' : ''}${esc(label(item.level))}${esc(timing)}</span>
       </button>
       <span>
-        <button type="button" data-up="${index}" aria-label="Move up" ${index === 0 ? 'disabled' : ''}>↑</button>
-        <button type="button" data-remove="${index}" aria-label="Remove">×</button>
+        <button type="button" data-up="${index}" aria-label="Move ${esc(book?.title || item.bookId)} up" ${index === 0 ? 'disabled' : ''}>↑</button>
+        <button type="button" data-remove="${index}" aria-label="Remove ${esc(book?.title || item.bookId)} from the queue">×</button>
       </span>
     </li>`;
   }).join('') || '<li class="muted">Nothing queued.</li>';
@@ -700,8 +708,8 @@ function renderPlaylist() {
         <span class="muted">${playlist.items.length} item${playlist.items.length === 1 ? '' : 's'} · ${timeLabel(totalSeconds)}</span>
       </button>
       <span>
-        <button type="button" data-append="${index}" aria-label="Append to queue">+</button>
-        <button type="button" data-delete="${index}" aria-label="Delete">×</button>
+        <button type="button" data-append="${index}" aria-label="Append ${esc(playlist.name)} to the queue">+</button>
+        <button type="button" data-delete="${index}" aria-label="Delete the playlist ${esc(playlist.name)}">×</button>
       </span>
     </li>`;
   }).join('') || '<li class="muted">None saved yet.</li>';
@@ -711,7 +719,11 @@ function renderPlaylist() {
     playCurrent();
   }));
   el('saved-lists').querySelectorAll('[data-append]').forEach(button => button.addEventListener('click', () => {
-    state.saved.playlists[Number(button.dataset.append)].items.forEach(enqueue);
+    // Render once at the end: rendering per item rebuilds this very button.
+    const playlist = state.saved.playlists[Number(button.dataset.append)];
+    playlist.items.forEach(item => enqueue(item, {render: false}));
+    renderPlaylist();
+    say(`Added ${playlist.items.length} to the queue.`);
   }));
   el('saved-lists').querySelectorAll('[data-delete]').forEach(button => button.addEventListener('click', () => {
     const playlist = state.saved.playlists[Number(button.dataset.delete)];
