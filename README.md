@@ -18,9 +18,12 @@ step.
 ./bookflow serve
 ```
 
-`./bookflow test` runs the unit tests for the shared tooling (rating
-arithmetic, pronunciation matching, and script parsing); run it after changing
-anything in `scripts/` or `bookflow`.
+`./bookflow test` runs the unit tests for the shared tooling — the CLI, the
+validator, the static build, the local server, rating arithmetic, pronunciation
+matching and script parsing — then lints it for unused imports and undefined
+names. Run it after changing anything in `scripts/` or `bookflow`. It tests the
+tooling only: no test asserts anything about the books, so a book mid-edit
+cannot fail it.
 
 `serve` builds the browser data and opens the local UI at `http://127.0.0.1:8042/`. It supports search, rating sort, layered briefs, transcripts, playback speed, book and author detail pages with linked relationships, queues, and saved playlists. Saved playlists use `data/playlists.json` under the local server and browser storage under a plain static server.
 

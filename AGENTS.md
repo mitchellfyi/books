@@ -55,7 +55,7 @@ schemas/                                  Machine-enforced structure
 scripts/                                  check.py and generate_audio.py (run via uv);
                                           narration.py, pronunciation.py and rating.py
                                           are shared modules imported by bookflow
-tests/                                    Unit tests for those shared modules
+tests/                                    Unit tests and lint for the tooling above
 taxonomy/tags.json                        Canonical discovery vocabulary
 templates/                                New entity scaffolds
 app/                                      Local search, reading, player, and playlist UI
@@ -386,8 +386,10 @@ Before handing off any change, run:
 ./bookflow build
 ```
 
-After changing shared tooling (`bookflow`, `scripts/`), also run
-`./bookflow test`.
+After changing shared tooling (`bookflow`, `scripts/`, `app/`), also run
+`./bookflow test`, which runs the unit tests and then lints the tooling.
+Those tests cover the tooling only — none of them asserts anything about a
+book, so they stay green while a profile is half-written.
 
 If the directory is a Git repository, also review `git status` and the diff
 (`rtk git status --short` and `rtk git diff` when RTK is installed); if it is

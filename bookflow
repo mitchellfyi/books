@@ -242,6 +242,7 @@ def upsert_entity(catalog: dict, by_id: dict, entry: dict) -> None:
     entry = {**entry, "aliases": (existing or {}).get("aliases", [])}
     if existing is None:
         catalog["entities"].append(entry)
+        by_id[entry["id"]] = entry  # so a second upsert updates rather than duplicates
     else:
         existing.clear()
         existing.update(entry)
@@ -578,20 +579,24 @@ def build_app(_: argparse.Namespace | None = None) -> None:
               f"{len(built_audio) - written} already current")
 
 
-def run_managed(command: list[str]) -> None:
-    """Run a uv-managed tool and exit with its status.
+def managed(command: list[str]) -> int:
+    """Run a uv-managed tool, returning its status.
 
     uv provides the dependencies these commands need, so a missing uv is a
     setup problem with a one-line fix — not a traceback out of subprocess.
     """
     try:
-        completed = subprocess.run(command, cwd=ROOT)
+        return subprocess.run(command, cwd=ROOT).returncode
     except FileNotFoundError:
         raise SystemExit(
             "uv is not installed, and it provides this command's dependencies. "
             "Install it from https://docs.astral.sh/uv/ and try again."
         ) from None
-    raise SystemExit(completed.returncode)
+
+
+def run_managed(command: list[str]) -> None:
+    """Run a uv-managed tool and exit with its status."""
+    raise SystemExit(managed(command))
 
 
 def check(args: argparse.Namespace) -> None:
@@ -604,10 +609,21 @@ def check(args: argparse.Namespace) -> None:
 
 
 def run_tests(_: argparse.Namespace) -> None:
+    """Unit tests, then a lint pass. Both run; the status reports either failing."""
     # Through uv so the suite can import scripts/check.py, which needs
     # jsonschema; the version tracks the one check.py declares for itself.
-    run_managed(["uv", "run", "--with", "jsonschema>=4.21",
-                 "python", "-m", "unittest", "discover", "-s", "tests"])
+    tests = managed(["uv", "run", "--with", "jsonschema>=4.21",
+                     "python", "-m", "unittest", "discover", "-s", "tests"])
+    sources = ["bookflow", *(str(p.relative_to(ROOT)) for p in
+                             sorted([*(ROOT / "scripts").glob("*.py"),
+                                     *(ROOT / "tests").glob("*.py")]))]
+    # Unused imports and undefined names, the two mistakes a hand-edited
+    # script hides best. Pinned to a major version so a future release cannot
+    # fail this command with a check nobody chose.
+    lint = managed(["uv", "run", "--with", "pyflakes>=3,<4",
+                    "python", "-m", "pyflakes", *sources])
+    print("Lint: clean" if lint == 0 else "Lint: see above")
+    raise SystemExit(tests or lint)
 
 
 def generate_audio(args: argparse.Namespace) -> None:

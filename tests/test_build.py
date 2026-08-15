@@ -15,7 +15,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from fixtures import FIXTURE_BOOK, bookflow, bookflow_at, copy_into, one_book_repository
+from fixtures import FIXTURE_BOOK, bookflow, bookflow_at, one_book_repository
 
 
 def build(root: Path) -> str:
