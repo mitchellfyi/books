@@ -206,6 +206,32 @@ class LibraryCheckTests(unittest.TestCase):
                 self.assertEqual(status, 1)
                 self.assertTrue(any(expected in e for e in errors), errors)
 
+    def edge(self, root: Path, **fields) -> None:
+        path = root / "data/relationships.json"
+        document = read(path)
+        document["relationships"].append({
+            "id": "probe", "type": "related-to", "basis": "inference",
+            "description": "A probe edge.", "source_refs": [], "confidence": "high",
+            **fields,
+        })
+        write(path, document)
+
+    def test_an_edge_that_links_a_book_to_itself_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            self.edge(root, source_id=FIXTURE_BOOK, target_id=FIXTURE_BOOK)
+            status, errors, _ = self.run_check(root)
+        self.assertEqual(status, 1)
+        self.assertTrue(any(f"'probe' links '{FIXTURE_BOOK}' to itself" in e for e in errors), errors)
+
+    def test_an_unknown_entity_at_both_ends_is_reported_once(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            self.edge(root, source_id="nowhere", target_id="nowhere")
+            _, errors, _ = self.run_check(root)
+        self.assertEqual([e for e in errors if "unknown entity 'nowhere'" in e],
+                         ["data/relationships.json: 'probe' references unknown entity 'nowhere'"])
+
     def test_each_book_map_part_names_itself_when_it_cites_a_lost_idea(self) -> None:
         # Renaming one idea usually breaks several parts at once; identical
         # lines would leave nothing to search for.

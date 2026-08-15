@@ -307,9 +307,12 @@ def check_relationships(relationships: dict, entities: dict) -> None:
     for duplicate in duplicates([r["id"] for r in relationships["relationships"]]):
         err(f"data/relationships.json: duplicate relationship id '{duplicate}'")
     for r in relationships["relationships"]:
-        for endpoint in (r["source_id"], r["target_id"]):
+        # Deduplicated: an edge with the same id at both ends said it twice.
+        for endpoint in dict.fromkeys((r["source_id"], r["target_id"])):
             if endpoint not in entities:
                 err(f"data/relationships.json: '{r['id']}' references unknown entity '{endpoint}'")
+        if r["source_id"] == r["target_id"]:
+            err(f"data/relationships.json: '{r['id']}' links '{r['source_id']}' to itself")
         if r["basis"] == "explicit" and not r["source_refs"]:
             warn(f"data/relationships.json: '{r['id']}' is explicit but has no source_refs")
         for ref in r["source_refs"]:
