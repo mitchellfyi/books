@@ -30,8 +30,10 @@ and separate confidence; it does not claim to apply GRADE to every kind of
 non-fiction.
 
 The dimensions and weights in `config/rating.json` are a product decision for
-this library. Evidence and reasoning receive the largest weight because weak
-support limits reliance. Explanatory power and insight measure understanding;
+this library. Evidence and reasoning and insight value carry the joint largest
+weight: weak support limits how far a reader can rely on the book, and a work
+that adds nothing non-obvious does not repay the time. Explanatory power and
+insight measure understanding;
 utility measures use; completeness checks limits and counterarguments;
 information efficiency protects the reader's time; and reading craft prices
 the experience of actually reading the book, because for trade non-fiction

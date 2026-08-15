@@ -8,7 +8,10 @@ basis is in [the content model](docs/research-and-content-model.md).
 
 ## Use it
 
-Requirements: Python 3.10 or later and [uv](https://docs.astral.sh/uv/). The library app itself has no JavaScript build step.
+Requirements: Python 3.10 or later and [uv](https://docs.astral.sh/uv/). Audio
+generation additionally needs Python 3.10–3.13, which uv provisions on its own
+when your default interpreter is newer. The library app has no JavaScript build
+step.
 
 ```bash
 ./bookflow check
@@ -16,8 +19,8 @@ Requirements: Python 3.10 or later and [uv](https://docs.astral.sh/uv/). The lib
 ```
 
 `./bookflow test` runs the unit tests for the shared tooling (rating
-arithmetic and pronunciation matching); run it after changing anything in
-`scripts/`.
+arithmetic, pronunciation matching, and script parsing); run it after changing
+anything in `scripts/` or `bookflow`.
 
 `serve` builds the browser data and opens the local UI at `http://127.0.0.1:8042/`. It supports search, rating sort, layered briefs, transcripts, playback speed, book and author detail pages with linked relationships, queues, and saved playlists. Saved playlists use `data/playlists.json` under the local server and browser storage under a plain static server.
 
@@ -83,7 +86,20 @@ Generate approved audio locally with the Apache-licensed [Kokoro model](https://
 ./bookflow audio --all                 # every approved script in the library
 ```
 
-The first run installs the declared Python packages and may download model data. Audio is stored under each book's `audio/` directory; audio and model weights stay local and are not committed. A JSON sidecar records how each file was made and becomes stale after a script or pronunciation-dictionary change. See [the TTS guide](docs/tts.md) before adding or correcting a pronunciation.
+Useful flags: `--voice <id>` picks another configured voice, `--force`
+regenerates audio the sidecar says is current, `--allow-draft` voices scripts
+not yet marked complete, `--no-calibrate` keeps the raw speed instead of
+matching `base_words_per_minute`, and `--quantized` uses the smaller int8
+model. `./bookflow serve` takes `--port` and `--no-open`; `./bookflow check`
+takes `--quiet`; `./bookflow init` takes `--book-id`, `--author-id`, `--note`,
+`--force` and `--discovered`.
+
+The first run installs the declared Python packages and may download model data. Audio is stored under each book's `audio/` directory; audio and model weights stay local and are not committed. A JSON sidecar records how each file was made: a script change makes that audio stale, and a pronunciation-dictionary change stales only the audio whose script uses an affected term. See [the TTS guide](docs/tts.md) before adding or correcting a pronunciation.
+
+Voices come from `tts.voices` in [`config/audio.json`](config/audio.json), with
+`tts.default_voice` used unless `--voice` says otherwise. Each level is voiced
+per voice as `<level>.<voice>.<format>` alongside a matching sidecar, and the
+player's voice selector switches between whichever voices a book has.
 
 Inspect the phonemes and any shared-dictionary match for a difficult term:
 

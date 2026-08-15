@@ -72,6 +72,21 @@ Check the work against the purpose of 5MinBooks:
   abbreviations, numbers and awkward pauses; confirmed errors are added to the
   shared pronunciation dictionary and regenerated.
 
-Set every `workflow.quality_review.checks` value only after that pass. A
-completed profile requires a dated `passed` review. Use `blocked` when a
-material conflict remains unresolved.
+## Recording the result
+
+`workflow.quality_review.checks` takes exactly these eight keys, and a
+`passed` review requires every one of them to be true:
+
+| Key | Set true when |
+| --- | --- |
+| `identity_and_metadata` | Title, authors, editions, dates and ISBNs verified. |
+| `content_fidelity` | The synopsis, ideas and book map match what the book argues. |
+| `claim_support` | Consequential claims trace to sources that support them. |
+| `counterevidence` | The strongest credible disagreement has been sought and represented. |
+| `citation_entailment` | Each cited source supports the exact wording it is attached to. |
+| `product_fit` | Verdict, decision advice and level choice serve the reader's decision. |
+| `plain_language` | Sentences are clear, spoken-natural, and necessary terms explained. |
+| `audio_pronunciation` | Generated audio sampled; confirmed errors dictionary-fixed and re-voiced. |
+
+Set them only after the passes above. A completed profile requires a dated
+`passed` review. Use `blocked` when a material conflict remains unresolved.

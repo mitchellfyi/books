@@ -33,11 +33,13 @@ This is not a contest to produce the most text. Use the shortest treatment that 
 ## Source of truth
 
 ```text
-bookflow                                  CLI: queue, rate, check, build, serve, audio
-config/audio.json                         Lengths, word targets, and TTS defaults
+bookflow                                  CLI: init, queue, next, rate, check, test,
+                                          build, serve, audio, pronunciation
+config/audio.json                         Lengths, word targets, voices, and TTS defaults
 config/pronunciations.json                Verified, language-specific TTS pronunciations
 config/rating.json                        Rating rubric (ideas and craft) and weights
 data/catalog.json                         Discoverable book and author nodes
+data/queue.json                           Work dispatcher: what to process, in what order
 data/relationships.json                   Typed connections between nodes
 data/playlists.json                       Saved listening playlists (written by the UI)
 docs/research-and-content-model.md        Why the levels and fields are what they are
@@ -50,7 +52,10 @@ library/books/<book-id>/content.json      Canonical ideas, book map, and assessm
 library/books/<book-id>/scripts/*.md      Derived, audio-ready treatments
 library/books/<book-id>/audio/             Generated audio and provenance sidecars
 schemas/                                   Machine-enforced structure
-scripts/                                   check.py and generate_audio.py (run via uv)
+scripts/                                   check.py and generate_audio.py (run via uv);
+                                           narration.py, pronunciation.py and rating.py
+                                           are shared modules imported by bookflow
+tests/                                     unit tests for those shared modules
 taxonomy/tags.json                         Canonical discovery vocabulary
 templates/                                 New entity scaffolds
 app/                                       Local search, reading, player, and playlist UI
@@ -307,8 +312,9 @@ approved script before marking `audio_pronunciation` passed. Check the author,
 title, technical terms, abbreviations and numbers. If Kokoro is wrong, add a
 language-specific entry to `config/pronunciations.json` only after verifying
 it from a reliable pronunciation source or the person's own speech. Never
-guess a phoneme string. Regenerate all affected audio; the dictionary hash
-makes older output stale automatically. Use the shared dictionary rather than
+guess a phoneme string. Then regenerate the affected audio: a dictionary
+change stales only the narrations whose script actually uses a changed term,
+so unrelated audio stays fresh and is not re-voiced. Use the shared dictionary rather than
 retraining or modifying the model, which keeps every correction reviewable
 and repeatable.
 
