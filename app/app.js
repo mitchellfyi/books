@@ -337,7 +337,7 @@ function renderBook() {
   el('book-detail').innerHTML = `
     <article>
       <header class="hero">
-        <div class="eyebrow">${esc(c.editorial.recommended_level)} recommended · ${esc(c.editorial.compression_fit)} compression fit</div>
+        <div class="eyebrow">${esc(label(recommendedLevel(book)))} recommended · ${esc(c.editorial.compression_fit)} compression fit</div>
         <h1>${esc(book.title)}</h1>
         <div class="byline">${authorLinks} · ${esc(book.bibliography.first_published || 'Date unknown')}</div>
         ${rating ? `<div class="rating-summary"><strong>${rating.score.toFixed(1)}/10</strong><span>${esc(rating.confidence)} confidence · ideas and craft, reputation excluded</span></div>` : ''}
@@ -472,7 +472,7 @@ function renderAuthor(id) {
     return `<li>
       <a href="#book/${esc(book.id)}">
         <strong>${esc(book.title)}</strong>
-        <span class="muted">${esc(book.bibliography.first_published || '')}${rating ? ` · ${rating.score.toFixed(1)}/10` : ''} · ${esc(recommendedLevel(book))} recommended</span>
+        <span class="muted">${esc(book.bibliography.first_published || '')}${rating ? ` · ${rating.score.toFixed(1)}/10` : ''} · ${esc(label(recommendedLevel(book)))} recommended</span>
       </a>
       ${featured ? `<button type="button" class="quickplay" data-play-book="${esc(book.id)}" title="Play the recommended brief">▶ ${timeLabel(levelSeconds(book, featured.level))}</button>` : ''}
     </li>`;
