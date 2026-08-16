@@ -1,0 +1,64 @@
+name: Deploy to GitHub Pages
+
+# Every push to main validates the library and publishes the static site.
+#
+# Narration audio is not committed — it is reproducible from the scripts, and
+# 619 MB of it would not belong in the repository — so the runner has none and
+# the published site carries none. Everything else works: search, ratings,
+# briefs, transcripts, book and author pages, playlists in browser storage. The
+# player says how to generate the audio rather than offering a dead button.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One publish at a time. A newer push waits rather than cancelling a run that
+# is already deploying, so the site is never left half-written.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10
+        with:
+          enable-cache: true
+
+      - name: Test and lint the tooling
+        run: ./bookflow test
+
+      - name: Validate the library
+        # --no-local-audio because the recordings are not committed, so their
+        # absence here is a fact about the runner, not a defect. Audio whose
+        # sidecar disagrees with its script is still an error: that mismatch is
+        # committed, so this is where a script edited without regenerating gets
+        # caught.
+        run: ./bookflow check --no-local-audio
+
+      - name: Build the site
+        run: ./bookflow build
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

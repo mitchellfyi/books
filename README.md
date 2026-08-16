@@ -141,8 +141,26 @@ they hold nothing but placeholders. Deploy that directory to any static host:
 
 ```bash
 ./bookflow build
-npx vercel deploy dist --prod    # or Netlify, GitHub Pages, any static host
+npx vercel deploy dist --prod    # or Netlify, or any static host
 ```
+
+### GitHub Pages, on every push
+
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) publishes to
+<https://mitchellfyi.github.io/books/> whenever `main` moves. It runs
+`./bookflow test`, then `./bookflow check --no-local-audio`, and only builds
+and deploys if both pass — so a broken tool or an invalid library stops the
+deploy rather than shipping.
+
+**The published site has no audio.** Recordings are not committed, so the
+runner cannot build them and the site carries transcripts without playback:
+search, ratings, briefs, book and author pages and playlists all work, and the
+player says how to generate the audio locally. Publishing audio needs one of:
+committing it (619 MB, against `commit_generated_audio` in
+[`config/audio.json`](config/audio.json)), generating it in the workflow (a
+340 MB model and hours per full run), or hosting it separately and pointing the
+app at it. Deploying `dist/` from a machine that has the audio — the Vercel
+line above — publishes it today.
 
 On a static host the app is read-only: playback, search, transcripts, and
 playlists all work, with playlists kept in the browser's own storage rather
