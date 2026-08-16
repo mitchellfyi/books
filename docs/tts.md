@@ -52,5 +52,7 @@ them with `--force`.
 The dictionary is a correction layer, not a speech-model training set. It is
 the preferred approach because the library needs repeatable pronunciation of
 book-specific names and terms, not a new voice or speaking style. Audio files
-remain under `library/books/<book-id>/audio/` on the local machine and are
-ignored by Git; their small provenance sidecars are kept.
+live under `library/books/<book-id>/audio/` beside their provenance sidecars,
+and both are committed so the published site can serve them. Regenerating a
+narration therefore adds its full weight to history for good — worth
+remembering before a library-wide `--force`.

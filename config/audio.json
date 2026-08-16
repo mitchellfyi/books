@@ -49,7 +49,7 @@
       "am_michael": "Michael — American male"
     },
     "metadata_sidecar_required": true,
-    "commit_generated_audio": false,
+    "commit_generated_audio": true,
     "commit_model_weights": false
   }
 }

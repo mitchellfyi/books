@@ -18,21 +18,23 @@ step.
 ./bookflow serve
 ```
 
-Narration audio is not committed — it is reproducible from the scripts — so a
-fresh clone has none, and a completed book without its audio is an error:
-`check` is the gate on the definition of done. Generate it with
-`./bookflow audio --all`, or, where the recordings could not be, run
-`./bookflow check --no-local-audio` to report their absence as a warning
-instead. Audio whose sidecar disagrees with its script is an error either way:
-that mismatch is committed, so it travels.
+Narration audio is committed, so a clone has it and the published site can
+carry it. A completed book without current audio is an error: `check` is the
+gate on the definition of done. Generate what is missing with
+`./bookflow audio --all`.
 
-That makes `check` usable as a build gate. On a machine with the audio, run it
-plain; anywhere that only has the repository — a fresh clone, or CI — run:
+That makes `check` usable as a build gate:
 
 ```bash
-./bookflow check --no-local-audio    # exit 1 on any error; warnings never fail
-./bookflow test                      # unit tests, then lint
+./bookflow check      # exit 1 on any error; warnings never fail
+./bookflow test       # unit tests, then lint
 ```
+
+Where the recordings genuinely are not present — a machine that has not
+generated them, or a future in which they move to object storage —
+`./bookflow check --no-local-audio` reports their absence as a warning
+instead. Audio whose sidecar disagrees with its script is an error either way:
+that mismatch is committed, so it travels.
 
 `./bookflow test` runs the unit tests for the shared tooling — the CLI, the
 validator, the static build, the local server, rating arithmetic, pronunciation
@@ -115,7 +117,7 @@ not yet marked complete, `--speed <n>` sets the base speed before calibration,
 `./bookflow init` takes `--book-id`, `--author-id`, `--note`, `--force` and
 `--discovered`.
 
-The first run installs the declared Python packages and may download model data. Audio is stored under each book's `audio/` directory; audio and model weights stay local and are not committed. A JSON sidecar records how each file was made: a script change makes that audio stale, and a pronunciation-dictionary change stales only the audio whose script uses an affected term. See [the TTS guide](docs/tts.md) before adding or correcting a pronunciation.
+The first run installs the declared Python packages and may download model data. Audio is stored under each book's `audio/` directory and is committed so the published site can serve it; the model weights are not — they are 340 MB and download on demand. A JSON sidecar records how each file was made: a script change makes that audio stale, and a pronunciation-dictionary change stales only the audio whose script uses an affected term. See [the TTS guide](docs/tts.md) before adding or correcting a pronunciation.
 
 Voices come from `tts.voices` in [`config/audio.json`](config/audio.json), with
 `tts.default_voice` used unless `--voice` says otherwise. Each level is voiced
@@ -152,15 +154,11 @@ npx vercel deploy dist --prod    # or Netlify, or any static host
 and deploys if both pass — so a broken tool or an invalid library stops the
 deploy rather than shipping.
 
-**The published site has no audio.** Recordings are not committed, so the
-runner cannot build them and the site carries transcripts without playback:
-search, ratings, briefs, book and author pages and playlists all work, and the
-player says how to generate the audio locally. Publishing audio needs one of:
-committing it (619 MB, against `commit_generated_audio` in
-[`config/audio.json`](config/audio.json)), generating it in the workflow (a
-340 MB model and hours per full run), or hosting it separately and pointing the
-app at it. Deploying `dist/` from a machine that has the audio — the Vercel
-line above — publishes it today.
+The published site carries the audio, because the audio is committed: the
+runner cannot generate 616 MB of speech, so the repository ships it. That puts
+the site around 620 MB against the 1 GB GitHub Pages limit, which is the thing
+to watch as the library grows. Moving the recordings to object storage and
+pointing the app at a base URL is the way out when it gets close.
 
 On a static host the app is read-only: playback, search, transcripts, and
 playlists all work, with playlists kept in the browser's own storage rather

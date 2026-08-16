@@ -315,7 +315,9 @@ speed is calibrated to `base_words_per_minute`. Each audio file (MP3 by
 default) receives a committed sidecar containing the script hash, engine,
 model, voice, speed, measured duration, and pronunciation-dictionary hash;
 `check` uses the hashes to flag stale audio. Audio is stored locally under the
-book's `audio/` directory. Do not commit model weights or the audio itself.
+book's `audio/` directory, and is committed so the published site can serve it
+— commit a book's audio with the book. Do not commit model weights: they are
+340 MB and download on demand.
 
 Follow `docs/tts.md` for pronunciation. Generate and listen to the shortest
 approved script before marking `audio_pronunciation` passed. Check the author,

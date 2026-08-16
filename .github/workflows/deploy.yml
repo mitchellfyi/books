@@ -2,11 +2,9 @@ name: Deploy to GitHub Pages
 
 # Every push to main validates the library and publishes the static site.
 #
-# Narration audio is not committed — it is reproducible from the scripts, and
-# 619 MB of it would not belong in the repository — so the runner has none and
-# the published site carries none. Everything else works: search, ratings,
-# briefs, transcripts, book and author pages, playlists in browser storage. The
-# player says how to generate the audio rather than offering a dead button.
+# Narration audio is committed, so the runner has it and the published site
+# serves it. That makes this checkout and artifact roughly 620 MB, against a
+# 1 GB GitHub Pages limit — the number to watch as the library grows.
 
 on:
   push:
@@ -31,7 +29,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7.0.1
 
@@ -50,12 +48,10 @@ jobs:
         run: ./bookflow test
 
       - name: Validate the library
-        # --no-local-audio because the recordings are not committed, so their
-        # absence here is a fact about the runner, not a defect. Audio whose
-        # sidecar disagrees with its script is still an error: that mismatch is
-        # committed, so this is where a script edited without regenerating gets
-        # caught.
-        run: ./bookflow check --no-local-audio
+        # Strict: the recordings are committed, so the runner has them and a
+        # completed book missing its audio is a real defect here, not a fact
+        # about the environment.
+        run: ./bookflow check
 
       - name: Build the site
         run: ./bookflow build
