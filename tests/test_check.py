@@ -166,8 +166,7 @@ class LibraryCheckTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = one_book_repository(Path(directory))
             script = root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md"
-            script.write_text(script.read_text(encoding="utf-8").replace("the", "The", 1),
-                              encoding="utf-8")
+            touch_script(script)
             status, errors, warnings = self.run_check(root)
         self.assertTrue(any("script changed since generation" in w for w in warnings), warnings)
         # A complete book with stale audio is an error, not only a warning.
@@ -201,14 +200,31 @@ class LibraryCheckTests(unittest.TestCase):
         self.assertEqual(len(warnings), 1, warnings)
         self.assertIn("no local audio for", warnings[0])
 
+    def test_a_stale_sidecar_is_caught_with_no_recordings_at_all(self) -> None:
+        # The CI case: a clone has every sidecar and none of the audio. A
+        # script edited without regenerating is still a committed mismatch, and
+        # it is the mistake most worth catching there.
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            for media in (root / "library/books" / FIXTURE_BOOK / "audio").glob("*.mp3"):
+                media.unlink()
+            touch_script(root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md")
+            with check_at(root):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    status = check.main(["--quiet", "--no-local-audio"])
+                errors, warnings = list(check.errors), list(check.warnings)
+        self.assertEqual(status, 1)
+        self.assertTrue(any("local audio is stale: 30-seconds" in e for e in errors), errors)
+        # And the level it is regenerating is not also reported as absent.
+        self.assertTrue(all("30-seconds" not in w or "stale" in w for w in warnings), warnings)
+
     def test_no_local_audio_still_fails_on_stale_audio(self) -> None:
         # Staleness is a disagreement between two committed files: it travels,
         # so it is a failure wherever it is checked.
         with tempfile.TemporaryDirectory() as directory:
             root = one_book_repository(Path(directory))
             script = root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md"
-            script.write_text(script.read_text(encoding="utf-8").replace("the", "The", 1),
-                              encoding="utf-8")
+            touch_script(script)
             with check_at(root):
                 with contextlib.redirect_stdout(io.StringIO()):
                     status = check.main(["--quiet", "--no-local-audio"])
@@ -462,6 +478,17 @@ class BrokenInputTests(unittest.TestCase):
         self.assertIn(FIXTURE_BOOK, loud)
         self.assertIn("script+audio", loud)
         self.assertNotIn("Library status", quiet)
+
+
+def touch_script(path: Path) -> None:
+    """Change a script's bytes without changing a word of it.
+
+    Freshness is a hash of the file, so a trailing newline is enough — and it
+    leaves the word count and the narration alone, so only the rule under test
+    can fire. Editing the words instead can silently do nothing, depending on
+    what the source book happens to say.
+    """
+    path.write_text(path.read_text(encoding="utf-8") + "\n", encoding="utf-8")
 
 
 def book_file(root: Path, name: str) -> Path:

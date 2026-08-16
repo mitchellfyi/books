@@ -9,6 +9,7 @@ without touching the library.
 from __future__ import annotations
 
 import contextlib
+import hashlib
 import json
 import shutil
 import sys
@@ -100,7 +101,15 @@ def one_book_repository(root: Path, book_id: str = FIXTURE_BOOK, *extra: str) ->
 
     for sidecar in (target / "audio").glob("*.json"):
         level, voice, _ = sidecar.name.split(".")
-        (target / "audio" / f"{level}.{voice}.{read(sidecar)['output_format']}").touch()
+        document = read(sidecar)
+        # Re-point the provenance at the copied script. The source book is a
+        # live one: if it were mid-edit — script rewritten, audio not yet
+        # regenerated — every test that starts from a valid repository would
+        # fail for a reason that has nothing to do with the tooling.
+        document["source_script_sha256"] = hashlib.sha256(
+            (target / "scripts" / f"{level}.md").read_bytes()).hexdigest()
+        write(sidecar, document)
+        (target / "audio" / f"{level}.{voice}.{document['output_format']}").touch()
 
     keep = {book_id, *book["author_ids"]}
     catalog = read(ROOT / "data/catalog.json")

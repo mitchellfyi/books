@@ -464,12 +464,42 @@ def check_script(d: Path, duration: str, audio_cfg: dict, entry: dict) -> str:
 
 def check_audio(d: Path, duration: str, narration: str, audio_cfg: dict,
                 pronunciations: list[dict], pronunciation_sha: str, entry: dict) -> None:
-    """Audio and sidecar, one pair per voice: <level>.<voice>.<format> + .json."""
+    """Audio and sidecar, one pair per voice: <level>.<voice>.<format> + .json.
+
+    Freshness is judged from the sidecars, not the recordings. Sidecars are
+    committed and recordings are not, so a script edited without regenerating
+    is visible to anyone with the repository — a fresh clone, a CI runner —
+    which is where that mistake most needs catching. The recordings then say
+    only whether the audio is here.
+    """
     script_path = d / "scripts" / f"{duration}.md"
     files = list((d / "audio").glob(f"{duration}.*")) if (d / "audio").exists() else []
     media = [a for a in files if a.suffix != ".json"]
     script_sha = hashlib.sha256(script_path.read_bytes()).hexdigest() \
         if script_path.exists() else None
+
+    stale_voices: set[str] = set()
+    for sidecar_path in sorted(a for a in files if a.suffix == ".json"):
+        voice = sidecar_path.name.split(".")[1] if sidecar_path.name.count(".") == 2 else None
+        sidecar = load_json(sidecar_path)
+        if sidecar is None:
+            continue
+        validate_schema(sidecar, "audio-sidecar.schema.json", sidecar_path)
+        if voice is not None and sidecar.get("voice") != voice:
+            err(f"{rel(sidecar_path)}: sidecar voice '{sidecar.get('voice')}' "
+                f"does not match filename voice '{voice}'")
+        if sidecar.get("source_script_sha256") != script_sha:
+            warn(f"{rel(sidecar_path)}: audio is stale (script changed since generation)")
+            stale_voices.add(voice)
+            entry["sidecar"] = "stale"
+        elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha \
+                and not pronunciation_is_current(narration, sidecar, pronunciations):
+            warn(f"{rel(sidecar_path)}: audio is stale (pronunciation dictionary changed "
+                 "for a term this script uses)")
+            stale_voices.add(voice)
+            entry["sidecar"] = "stale"
+        else:
+            entry["sidecar"] = entry["sidecar"] or "current"
 
     for audio_file in media:
         parts = audio_file.name.split(".")
@@ -478,26 +508,12 @@ def check_audio(d: Path, duration: str, narration: str, audio_cfg: dict,
             entry["audio"] = entry["audio"] or "fresh"
             continue
         voice = parts[1]
-        sidecar_path = d / "audio" / f"{duration}.{voice}.json"
-        if not sidecar_path.exists():
+        if not (d / "audio" / f"{duration}.{voice}.json").exists():
             reporter = err if audio_cfg["tts"].get("metadata_sidecar_required") else warn
-            reporter(f"{rel(audio_file)}: audio present without sidecar {sidecar_path.name}")
+            reporter(f"{rel(audio_file)}: audio present without sidecar "
+                     f"{duration}.{voice}.json")
             entry["audio"] = entry["audio"] or "fresh"
-            continue
-        sidecar = load_json(sidecar_path)
-        if sidecar is None:
-            continue
-        validate_schema(sidecar, "audio-sidecar.schema.json", sidecar_path)
-        if sidecar.get("voice") != voice:
-            err(f"{rel(sidecar_path)}: sidecar voice '{sidecar.get('voice')}' "
-                f"does not match filename voice '{voice}'")
-        if sidecar.get("source_script_sha256") != script_sha:
-            warn(f"{rel(audio_file)}: audio is stale (script changed since generation)")
-            entry["audio"] = "stale"
-        elif sidecar.get("pronunciation_dictionary_sha256") != pronunciation_sha \
-                and not pronunciation_is_current(narration, sidecar, pronunciations):
-            warn(f"{rel(audio_file)}: audio is stale (pronunciation dictionary changed "
-                 "for a term this script uses)")
+        elif voice in stale_voices:
             entry["audio"] = "stale"
         else:
             entry["audio"] = entry["audio"] or "fresh"
@@ -507,23 +523,27 @@ def check_required_levels(d: Path, durations: dict, levels: dict,
                           audio_expected: bool = True) -> None:
     """A complete book owes a complete script and current audio at every required level.
 
-    Stale audio is always an error: a sidecar that disagrees with the script
-    beside it is committed, portable and wrong. Absent audio is an error too,
-    because the definition of done requires it — but only where the recordings
-    could be. They are deliberately not committed, so a fresh clone and a CI
-    runner have none, and `--no-local-audio` says so rather than reporting 31
-    books as broken.
+    Stale audio is always an error, and it is read from the sidecars, so it is
+    caught with or without the recordings: a sidecar that disagrees with the
+    script beside it is committed, portable and wrong. Absent audio is an error
+    too, because the definition of done requires it — but only where the
+    recordings could be. They are deliberately not committed, so a fresh clone
+    and a CI runner have none, and `--no-local-audio` says so rather than
+    reporting 31 books as broken.
     """
     required = [du for du in durations if levels[du]["required"]]
     missing_scripts = [du for du in required if durations[du]["script"] != "complete"]
     if missing_scripts:
         err(f"{rel(d)}/book.json: status 'complete' but scripts not complete: "
             f"{', '.join(missing_scripts)}")
-    stale = [du for du in required if durations[du]["audio"] == "stale"]
+    stale = [du for du in required if durations[du]["sidecar"] == "stale"]
     if stale:
         err(f"{rel(d)}/book.json: status 'complete' but local audio is stale: "
             f"{', '.join(stale)}")
-    absent = [du for du in required if durations[du]["audio"] is None]
+    # A level already reported stale is being regenerated anyway; saying it is
+    # also absent adds a line and no information.
+    absent = [du for du in required
+              if durations[du]["audio"] is None and durations[du]["sidecar"] != "stale"]
     if absent:
         report = err if audio_expected else warn
         report(f"{rel(d)}/book.json: status 'complete' but no local audio for "
@@ -565,7 +585,7 @@ def check_books(only: str | None, audio_cfg: dict, rating_cfg: dict,
 
         durations: dict[str, dict] = {}
         for duration in audio_cfg["levels"]:
-            entry = {"script": None, "words": None, "audio": None}
+            entry = {"script": None, "words": None, "audio": None, "sidecar": None}
             narration = check_script(d, duration, audio_cfg, entry)
             check_audio(d, duration, narration, audio_cfg,
                         pronunciations, pronunciation_sha, entry)
