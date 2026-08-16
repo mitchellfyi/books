@@ -19,10 +19,20 @@ step.
 ```
 
 Narration audio is not committed — it is reproducible from the scripts — so a
-fresh clone has none, and `check` says so as a warning per book rather than an
-error. Generate it with `./bookflow audio --all`, or read and browse without
-it. Audio whose sidecar disagrees with its script *is* an error: that
-mismatch is committed, so it travels.
+fresh clone has none, and a completed book without its audio is an error:
+`check` is the gate on the definition of done. Generate it with
+`./bookflow audio --all`, or, where the recordings could not be, run
+`./bookflow check --no-local-audio` to report their absence as a warning
+instead. Audio whose sidecar disagrees with its script is an error either way:
+that mismatch is committed, so it travels.
+
+That makes `check` usable as a build gate. On a machine with the audio, run it
+plain; anywhere that only has the repository — a fresh clone, or CI — run:
+
+```bash
+./bookflow check --no-local-audio    # exit 1 on any error; warnings never fail
+./bookflow test                      # unit tests, then lint
+```
 
 `./bookflow test` runs the unit tests for the shared tooling — the CLI, the
 validator, the static build, the local server, rating arithmetic, pronunciation
@@ -101,8 +111,9 @@ not yet marked complete, `--speed <n>` sets the base speed before calibration,
 `--no-calibrate` keeps the raw speed instead of matching
 `base_words_per_minute`, and `--quantized` uses the smaller int8 model.
 `./bookflow serve` takes `--port` and `--no-open`; `./bookflow check` takes
-`--quiet` and an optional book id to check one book; `./bookflow init` takes
-`--book-id`, `--author-id`, `--note`, `--force` and `--discovered`.
+`--quiet`, `--no-local-audio`, and an optional book id to check one book;
+`./bookflow init` takes `--book-id`, `--author-id`, `--note`, `--force` and
+`--discovered`.
 
 The first run installs the declared Python packages and may download model data. Audio is stored under each book's `audio/` directory; audio and model weights stay local and are not committed. A JSON sidecar records how each file was made: a script change makes that audio stale, and a pronunciation-dictionary change stales only the audio whose script uses an affected term. See [the TTS guide](docs/tts.md) before adding or correcting a pronunciation.
 

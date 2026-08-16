@@ -174,18 +174,47 @@ class LibraryCheckTests(unittest.TestCase):
         self.assertEqual(status, 1)
         self.assertTrue(any("local audio is stale" in e for e in errors), errors)
 
-    def test_audio_that_was_never_generated_here_is_not_an_error(self) -> None:
-        # Recordings are deliberately not committed, so a fresh clone has none.
-        # Reporting that as an error on every book would make check untrusted.
+    def without_audio(self, argv: list[str]) -> tuple[int, list[str], list[str]]:
         with tempfile.TemporaryDirectory() as directory:
             root = one_book_repository(Path(directory))
             for media in (root / "library/books" / FIXTURE_BOOK / "audio").glob("*.mp3"):
                 media.unlink()
-            status, errors, warnings = self.run_check(root)
+            with check_at(root):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    status = check.main(argv)
+                return status, list(check.errors), list(check.warnings)
+
+    def test_a_complete_book_without_audio_fails_by_default(self) -> None:
+        # The definition of done requires current local audio for every level,
+        # so the command that gates it says so.
+        status, errors, _ = self.without_audio(["--quiet"])
+        self.assertEqual(status, 1)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("status 'complete' but no local audio for", errors[0])
+        self.assertIn(f"./bookflow audio {FIXTURE_BOOK}", errors[0])
+
+    def test_no_local_audio_downgrades_that_to_a_warning(self) -> None:
+        # Recordings are not committed, so a fresh clone and a CI runner have
+        # none; saying so must not turn every book into a failure.
+        status, errors, warnings = self.without_audio(["--quiet", "--no-local-audio"])
         self.assertEqual((status, errors), (0, []))
         self.assertEqual(len(warnings), 1, warnings)
         self.assertIn("no local audio for", warnings[0])
-        self.assertIn(f"./bookflow audio {FIXTURE_BOOK}", warnings[0])
+
+    def test_no_local_audio_still_fails_on_stale_audio(self) -> None:
+        # Staleness is a disagreement between two committed files: it travels,
+        # so it is a failure wherever it is checked.
+        with tempfile.TemporaryDirectory() as directory:
+            root = one_book_repository(Path(directory))
+            script = root / "library/books" / FIXTURE_BOOK / "scripts/30-seconds.md"
+            script.write_text(script.read_text(encoding="utf-8").replace("the", "The", 1),
+                              encoding="utf-8")
+            with check_at(root):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    status = check.main(["--quiet", "--no-local-audio"])
+                errors = list(check.errors)
+        self.assertEqual(status, 1)
+        self.assertTrue(any("local audio is stale" in e for e in errors), errors)
 
     def test_a_missing_sidecar_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

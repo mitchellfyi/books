@@ -612,6 +612,8 @@ def check(args: argparse.Namespace) -> None:
     command = ["uv", "run", "scripts/check.py"]
     if args.quiet:
         command.append("--quiet")
+    if args.no_local_audio:
+        command.append("--no-local-audio")
     if args.book_id:
         command.append(args.book_id)
     run_managed(command)
@@ -881,6 +883,9 @@ def parser() -> argparse.ArgumentParser:
     validate = commands.add_parser("check", help="validate schemas, references, and word counts")
     validate.add_argument("book_id", nargs="?")
     validate.add_argument("--quiet", action="store_true", help="show only warnings and errors")
+    validate.add_argument("--no-local-audio", action="store_true",
+                          help="warn instead of failing when audio has not been generated "
+                               "here; audio is not committed, so use this in CI")
     validate.set_defaults(run=check)
 
     verify = commands.add_parser("test", help="run the unit tests for the shared tooling")

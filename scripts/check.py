@@ -503,15 +503,16 @@ def check_audio(d: Path, duration: str, narration: str, audio_cfg: dict,
             entry["audio"] = entry["audio"] or "fresh"
 
 
-def check_required_levels(d: Path, durations: dict, levels: dict) -> None:
+def check_required_levels(d: Path, durations: dict, levels: dict,
+                          audio_expected: bool = True) -> None:
     """A complete book owes a complete script and current audio at every required level.
 
-    Stale audio is an error and absent audio is not, because only one of them
-    is a defect in the repository. A sidecar that disagrees with the script
-    beside it is committed, portable and wrong. Audio that is merely absent is
-    a fact about this machine: the recordings are deliberately not committed,
-    so a fresh clone has none, and reporting that as 31 errors would teach
-    everyone to distrust the command.
+    Stale audio is always an error: a sidecar that disagrees with the script
+    beside it is committed, portable and wrong. Absent audio is an error too,
+    because the definition of done requires it — but only where the recordings
+    could be. They are deliberately not committed, so a fresh clone and a CI
+    runner have none, and `--no-local-audio` says so rather than reporting 31
+    books as broken.
     """
     required = [du for du in durations if levels[du]["required"]]
     missing_scripts = [du for du in required if durations[du]["script"] != "complete"]
@@ -524,8 +525,9 @@ def check_required_levels(d: Path, durations: dict, levels: dict) -> None:
             f"{', '.join(stale)}")
     absent = [du for du in required if durations[du]["audio"] is None]
     if absent:
-        warn(f"{rel(d)}/book.json: no local audio for {', '.join(absent)}; "
-             f"generate it with ./bookflow audio {d.name}")
+        report = err if audio_expected else warn
+        report(f"{rel(d)}/book.json: status 'complete' but no local audio for "
+               f"{', '.join(absent)}; generate it with ./bookflow audio {d.name}")
 
 
 def check_unconfigured_levels(d: Path, levels: dict) -> None:
@@ -547,7 +549,7 @@ def check_unconfigured_levels(d: Path, levels: dict) -> None:
 
 def check_books(only: str | None, audio_cfg: dict, rating_cfg: dict,
                 pronunciations: list[dict], pronunciation_sha: str,
-                entities: dict, tag_ids: set) -> dict:
+                entities: dict, tag_ids: set, audio_expected: bool = True) -> dict:
     if only and not (ROOT / "library/books" / only).is_dir():
         err(f"no such book: {only}")
     status_rows: dict[str, dict] = {}
@@ -571,7 +573,7 @@ def check_books(only: str | None, audio_cfg: dict, rating_cfg: dict,
         status_rows[d.name] = {"book": doc, "durations": durations}
 
         if doc.get("workflow", {}).get("status") == "complete":
-            check_required_levels(d, durations, audio_cfg["levels"])
+            check_required_levels(d, durations, audio_cfg["levels"], audio_expected)
     return status_rows
 
 
@@ -633,6 +635,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("book_id", nargs="?", help="limit book-level checks to one book")
     parser.add_argument("--quiet", action="store_true", help="show only warnings and errors")
+    parser.add_argument(
+        "--no-local-audio", action="store_true",
+        help="this machine has no generated audio, so report its absence as a warning "
+             "rather than an error (audio is not committed: use this on a fresh clone "
+             "or in CI). Audio that is present but stale is still an error.")
     return parser.parse_args(argv)
 
 
@@ -658,7 +665,8 @@ def main(argv: list[str] | None = None) -> int:
     check_authors()
     status_rows = check_books(
         args.book_id, audio_cfg, rating_cfg, pronunciations_cfg["entries"],
-        pronunciation_sha, entities, {t["id"] for t in tags_doc["tags"]})
+        pronunciation_sha, entities, {t["id"] for t in tags_doc["tags"]},
+        audio_expected=not args.no_local_audio)
     check_playlists(audio_cfg, entities)
     check_queue(entities)
     return report(args.quiet, status_rows, list(audio_cfg["levels"]))
