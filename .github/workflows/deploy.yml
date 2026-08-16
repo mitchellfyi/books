@@ -24,14 +24,18 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+# Actions are pinned to exact releases, not floating majors: setup-uv is on
+# v10 and publishes no v10 tag to float against, and a deploy pipeline is the
+# last place to want a dependency moving under it.
+
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
 
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.0.1
         with:
           enable-cache: true
 
@@ -49,7 +53,7 @@ jobs:
       - name: Build the site
         run: ./bookflow build
 
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: dist
 
@@ -61,4 +65,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v5.0.0
