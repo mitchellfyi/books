@@ -38,6 +38,13 @@ jobs:
       - uses: astral-sh/setup-uv@v10.0.1
         with:
           enable-cache: true
+          # There is no lockfile: the dependencies live in check.py's inline
+          # script metadata and in the `uv run --with` lines that `test` uses.
+          # Without naming them the cache has nothing to key on and would never
+          # invalidate.
+          cache-dependency-glob: |
+            bookflow
+            scripts/check.py
 
       - name: Test and lint the tooling
         run: ./bookflow test
