@@ -49,6 +49,9 @@ class BuildTests(unittest.TestCase):
             self.assertIn(asset, built)
         self.assertEqual([book["id"] for book in library["books"]], [FIXTURE_BOOK])
         self.assertEqual(len([name for name in built if name.endswith(".mp3")]), 4)
+        index = built["index.html"].decode("utf-8")
+        self.assertIn("https://analytics.m12n.org/script.js", index)
+        self.assertIn("18c7fa24-0ce3-4ba1-8512-da57bf9cb68c", index)
         # Every audio url in the data must resolve to a file in the site.
         for book in library["books"]:
             for script in book["scripts"].values():
