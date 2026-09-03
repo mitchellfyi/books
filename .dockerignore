@@ -1,0 +1,5 @@
+.git
+.playwright-mcp
+dist
+__pycache__
+models

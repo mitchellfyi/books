@@ -1,10 +1,10 @@
-name: Deploy to GitHub Pages
+name: Deploy through Ops
 
-# Every push to main validates the library and publishes the static site.
+# Every push to main validates the library and asks Ops to build and publish
+# that immutable revision on the Ubuntu workload host.
 #
-# Narration audio is committed, so the runner has it and the published site
-# serves it. That makes this checkout and artifact roughly 620 MB, against a
-# 1 GB GitHub Pages limit — the number to watch as the library grows.
+# Narration audio is committed, so the runner and the deployment build both
+# have the recording files they need.
 
 on:
   push:
@@ -13,14 +13,11 @@ on:
 
 permissions:
   contents: read
-  pages: write
   id-token: write
 
-# One publish at a time. A newer push waits rather than cancelling a run that
-# is already deploying, so the site is never left half-written.
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: platform-9b33968b-ef5f-4d06-aaaa-934b1513cafe-${{ github.ref }}
+  cancel-in-progress: true
 
 # Actions are pinned to exact releases, not floating majors: setup-uv is on
 # v10 and publishes no v10 tag to float against, and a deploy pipeline is the
@@ -56,16 +53,34 @@ jobs:
       - name: Build the site
         run: ./bookflow build
 
-      - uses: actions/upload-pages-artifact@v5.0.0
-        with:
-          path: dist
-
   deploy:
     needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-24.04
+    environment: production
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5.0.0
+      - name: Queue the immutable commit with a short-lived GitHub identity
+        shell: bash
+        env:
+          PLATFORM_AUDIENCE: https://ops.m12n.org/deploy
+          PLATFORM_URL: https://ops.m12n.org
+          PLATFORM_WORKLOAD_ID: 9b33968b-ef5f-4d06-aaaa-934b1513cafe
+        run: |
+          set -Eeuo pipefail
+          request_headers="$(mktemp)"
+          deploy_headers="$(mktemp)"
+          deploy_payload="$(mktemp)"
+          trap 'rm -f "$request_headers" "$deploy_headers" "$deploy_payload"' EXIT
+          chmod 600 "$request_headers" "$deploy_headers" "$deploy_payload"
+          printf 'Authorization: bearer %s\n' "$ACTIONS_ID_TOKEN_REQUEST_TOKEN" > "$request_headers"
+          token_response="$(curl --fail --silent --show-error \
+            --header "@$request_headers" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=${PLATFORM_AUDIENCE}")"
+          oidc_token="$(jq -er '.value' <<<"$token_response")"
+          printf 'Authorization: Bearer %s\nContent-Type: application/json\n' \
+            "$oidc_token" > "$deploy_headers"
+          jq -nc --arg workload_id "$PLATFORM_WORKLOAD_ID" \
+            '{workload_id:$workload_id}' > "$deploy_payload"
+          curl --fail --silent --show-error \
+            --header "@$deploy_headers" \
+            --data-binary "@$deploy_payload" \
+            "$PLATFORM_URL/api/v1/deployments"
