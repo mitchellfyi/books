@@ -185,6 +185,14 @@
       "aliases": []
     },
     {
+      "id": "pierre-hadot",
+      "kind": "author",
+      "name": "Pierre Hadot",
+      "state": "catalogued",
+      "path": "library/authors/pierre-hadot/author.json",
+      "aliases": []
+    },
+    {
       "id": "richard-shotton",
       "kind": "author",
       "name": "Richard Shotton",
@@ -507,6 +515,21 @@
         "abraham-maslow"
       ],
       "aliases": []
+    },
+    {
+      "id": "the-inner-citadel-hadot",
+      "kind": "book",
+      "name": "The Inner Citadel: The Meditations of Marcus Aurelius",
+      "state": "catalogued",
+      "path": "library/books/the-inner-citadel-hadot/book.json",
+      "author_ids": [
+        "pierre-hadot"
+      ],
+      "aliases": [
+        "The Inner Citadel",
+        "La Citadelle intérieure",
+        "La Citadelle intérieure: Introduction aux Pensées de Marc Aurèle"
+      ]
     },
     {
       "id": "the-laws-of-human-nature-greene",
