@@ -1,0 +1,101 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "the-inner-citadel-hadot",
+  "type": "book",
+  "title": "The Inner Citadel: The Meditations of Marcus Aurelius",
+  "alternate_titles": [
+    "The Inner Citadel",
+    "La Citadelle intérieure",
+    "La Citadelle intérieure: Introduction aux Pensées de Marc Aurèle"
+  ],
+  "author_ids": ["pierre-hadot"],
+  "bibliography": {
+    "first_published": "1992-11-04",
+    "original_language": "fr",
+    "editions": [
+      {
+        "label": "French original",
+        "publisher": "Fayard",
+        "publication_date": "1992-11-04",
+        "isbn_10": null,
+        "isbn_13": "9782213029849",
+        "format": "print",
+        "pages": 386
+      },
+      {
+        "label": "English translation by Michael Chase",
+        "publisher": "Harvard University Press",
+        "publication_date": "1998",
+        "isbn_10": "0674461711",
+        "isbn_13": "9780674461710",
+        "format": "print",
+        "pages": 351
+      }
+    ],
+    "contents": []
+  },
+  "discovery": {
+    "tag_ids": [],
+    "audiences": [],
+    "formats_available": []
+  },
+  "research": {
+    "sources": [
+      {
+        "id": "fayard-french-edition",
+        "title": "La Citadelle intérieure: Introduction aux Pensées de Marc Aurèle",
+        "author_or_publisher": "Éditions Fayard",
+        "url": "https://www.fayard.fr/livre/la-citadelle-interieure-9782213029849/",
+        "type": "publisher",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-09-06",
+        "supports": "Original French title and subtitle, Pierre Hadot's authorship, publication on 4 November 1992, 386 pages and print ISBN 9782213029849; identifies the work as an introduction to Marcus Aurelius's Meditations and its Stoic practices.",
+        "limitations": "Authoritative for this French edition's metadata; the description is promotional and does not establish the correctness of Hadot's interpretation. The historical author biography is not a current employment record."
+      },
+      {
+        "id": "ccs-english-edition",
+        "title": "The inner citadel: the Meditations of Marcus Aurelius",
+        "author_or_publisher": "College for Creative Studies Library",
+        "url": "https://lib.ccsdetroit.edu/bib/46457",
+        "type": "library-catalogue",
+        "independence": "primary",
+        "quality": "high",
+        "accessed_at": "2026-09-06",
+        "supports": "English title, Pierre Hadot as author, Michael Chase as translator, French original language, Harvard University Press publication in 1998, x plus 351 pages, and ISBNs 0674461711 and 9780674461710; subject headings identify Meditations and Stoicism.",
+        "limitations": "A bibliographic record, not an independent assessment of the argument. It groups original print and paperback ISBNs, so its 1998 date is used only for the original English edition; the accompanying summary is publisher copy."
+      },
+      {
+        "id": "bmcr-kamtekar",
+        "title": "The Inner Citadel: The Meditations of Marcus Aurelius. Translated by Michael Chase",
+        "author_or_publisher": "Rachana Kamtekar, Bryn Mawr Classical Review",
+        "url": "https://bmcr.brynmawr.edu/1998/1998.11.35/",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "accessed_at": "2026-09-06",
+        "supports": "Directly identifies The Inner Citadel as Hadot's interpretation of Meditations as exercises in philosophical living; explains its treatment of judgement, desire and action and supplies independent grounds for linking the two books.",
+        "limitations": "One specialist's assessment of the English translation. It also challenges parts of Hadot's account of Stoic doctrine and his limited engagement with alternative interpretations; it supports the connection without settling those disputes."
+      }
+    ],
+    "citations": {
+      "/title": ["ccs-english-edition"],
+      "/alternate_titles": ["fayard-french-edition", "ccs-english-edition"],
+      "/author_ids": ["fayard-french-edition", "ccs-english-edition"],
+      "/bibliography/first_published": ["fayard-french-edition"],
+      "/bibliography/original_language": ["ccs-english-edition"],
+      "/bibliography/editions/0": ["fayard-french-edition"],
+      "/bibliography/editions/1": ["ccs-english-edition"]
+    }
+  },
+  "workflow": {
+    "status": "stub",
+    "coverage": "metadata-only",
+    "coverage_notes": "Discovery only: identity, editions and the connection to Meditations checked against publisher and library records and an independent specialist review. No book text has been assessed.",
+    "last_researched": "2026-09-06",
+    "next_steps": [
+      "Research the book and author when this queue entry is processed, checking Hadot's interpretation against primary Stoic texts and the objections in Kamtekar's review."
+    ]
+  }
+}
