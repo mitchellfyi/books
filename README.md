@@ -55,31 +55,35 @@ An AI agent then follows [AGENTS.md](AGENTS.md) to research and fill the structu
 
 ## Process the queue with an agent
 
-Start either CLI in the repository root, then invoke the project skill in its
-prompt. In Codex CLI:
+Start Codex CLI in the repository root, then invoke the project skill in its
+prompt:
 
 ```text
 $process-next-book
 ```
 
-In Claude Code:
-
-```text
-/process-next-book
-```
-
-The two commands use the same canonical
-[skill](.agents/skills/process-next-book/SKILL.md); the Claude project path is
-a symlink, so its instructions cannot drift. The skill claims one ready book,
+The [skill](.agents/skills/process-next-book/SKILL.md) claims one ready book,
 researches and reviews it, calculates its reputation-blind rating, derives every
 configured narration length, hands local audio generation to `bookflow`, validates
 the repository, and updates the queue. If a CLI session was already open when
 the skill directory was first added, restart it. As a discovery fallback, use
 this plain prompt: `Read .agents/skills/process-next-book/SKILL.md and follow it
 to process the next queued book.` See the official [Codex skill
-guide](https://developers.openai.com/codex/skills) and [Claude Code skill
-guide](https://code.claude.com/docs/en/slash-commands) for discovery and
-invocation details.
+guide](https://developers.openai.com/codex/skills) for discovery and invocation
+details.
+
+## Weekly discovery
+
+A private workflow in the Ops repository runs once a week with Codex CLI. It
+researches outward from relationships already visible in this app, selects one
+well-supported book, creates its standard scaffold, adds it to the queue, and
+opens a pull request here. The reusable Codex login stays on the protected Ops
+runner; this public repository never receives it.
+
+The workflow's output must pass
+[`scripts/validate_weekly_discovery.py`](scripts/validate_weekly_discovery.py).
+That check rejects duplicate or multiple additions, unrelated file changes,
+and discoveries that are not connected to an existing book.
 
 Narration contains the book treatment only. Sources, coverage, fact-checking
 notes and production details stay in the structured records and sidecars; they
