@@ -165,11 +165,18 @@ def load_at_revision(root: Path, revision: str, path: str) -> dict[str, Any]:
 
 
 def changed_paths(root: Path, revision: str) -> list[str]:
-    result = subprocess.run(
-        ["git", "diff", "--name-only", "--diff-filter=ACMRT", revision, "--"],
+    tracked = subprocess.run(
+        ["git", "diff", "--name-only", "--diff-filter=ACMRTD", revision, "--"],
         cwd=root, check=True, text=True, capture_output=True,
     )
-    return [line for line in result.stdout.splitlines() if line]
+    untracked = subprocess.run(
+        ["git", "ls-files", "--others", "--exclude-standard"],
+        cwd=root, check=True, text=True, capture_output=True,
+    )
+    return sorted({
+        line for output in (tracked.stdout, untracked.stdout)
+        for line in output.splitlines() if line
+    })
 
 
 def main() -> int:

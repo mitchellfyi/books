@@ -3,9 +3,16 @@
 from __future__ import annotations
 
 import copy
+import subprocess
+import tempfile
 import unittest
+from pathlib import Path
 
-from scripts.validate_weekly_discovery import ValidationError, validate_discovery
+from scripts.validate_weekly_discovery import (
+    ValidationError,
+    changed_paths,
+    validate_discovery,
+)
 
 
 def fixture_documents() -> tuple[dict, dict, dict]:
@@ -122,6 +129,30 @@ class WeeklyDiscoveryValidationTests(unittest.TestCase):
 
         with self.assertRaisesRegex(ValidationError, "manifest relationship"):
             self.validate(mutate=alter_manifest)
+
+    def test_changed_paths_include_new_untracked_scaffold_files(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.email", "test@example.com"],
+                           cwd=root, check=True)
+            subprocess.run(["git", "config", "user.name", "Test"],
+                           cwd=root, check=True)
+            tracked = root / "data.json"
+            tracked.write_text("before\n")
+            subprocess.run(["git", "add", "data.json"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "base"], cwd=root, check=True)
+            base = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root,
+                                  check=True, text=True,
+                                  capture_output=True).stdout.strip()
+            tracked.write_text("after\n")
+            new_file = root / "library" / "books" / "new" / "book.json"
+            new_file.parent.mkdir(parents=True)
+            new_file.write_text("{}\n")
+
+            self.assertEqual(changed_paths(root, base), [
+                "data.json", "library/books/new/book.json",
+            ])
 
 
 if __name__ == "__main__":
