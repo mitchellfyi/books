@@ -1065,6 +1065,32 @@
       "description": "Both argue that the self is made rather than found, and both are philosophy rather than technique; Kishimi's Adlerian dialogue is far more accessible about the same commitment.",
       "source_refs": [],
       "confidence": "medium"
+    },
+    {
+      "id": "meditations-recommended-next-inner-citadel",
+      "source_id": "meditations-aurelius",
+      "target_id": "the-inner-citadel-hadot",
+      "type": "recommended-next",
+      "basis": "inference",
+      "description": "Read The Inner Citadel after Meditations for Hadot's explanation of Marcus's repeated notes as Stoic exercises in judgement, desire and action, with the philosophical context behind them.",
+      "source_refs": [
+        "library/books/the-inner-citadel-hadot/book.json#fayard-french-edition",
+        "library/books/the-inner-citadel-hadot/book.json#bmcr-kamtekar"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "inner-citadel-written-by-pierre-hadot",
+      "source_id": "the-inner-citadel-hadot",
+      "target_id": "pierre-hadot",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Pierre Hadot wrote The Inner Citadel, first published in French as La Citadelle intérieure; Michael Chase translated the English edition.",
+      "source_refs": [
+        "library/books/the-inner-citadel-hadot/book.json#fayard-french-edition",
+        "library/books/the-inner-citadel-hadot/book.json#ccs-english-edition"
+      ],
+      "confidence": "high"
     }
   ]
 }

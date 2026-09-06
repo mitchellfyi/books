@@ -237,6 +237,14 @@
       "source": "user",
       "added_at": "2026-08-15",
       "notes": "German original 'Du mußt dein Leben ändern' (2009); Polity 2013 translation by Wieland Hoban."
+    },
+    {
+      "book_id": "the-inner-citadel-hadot",
+      "priority": 32,
+      "status": "ready",
+      "source": "discovery",
+      "added_at": "2026-09-06",
+      "notes": "Discovered from Meditations and its existing links on philosophical practice: Hadot explains the Stoic exercises behind Marcus Aurelius's notes; publisher and independent specialist evidence are recorded in the new book profile."
     }
   ]
 }
