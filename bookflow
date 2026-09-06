@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -13,7 +14,9 @@ import webbrowser
 from datetime import date
 from functools import lru_cache, partial
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+from html import escape
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from scripts.narration import parse_front_matter, word_count
 from scripts.rating import calculate_rating, rating_errors, rubric_errors, score_band
@@ -486,6 +489,21 @@ def prune_audio(dist: Path, keep: set[Path]) -> int:
     return removed
 
 
+def error_tracking_script(environment: dict[str, str]) -> str:
+    """Render only the public Ops ingestion settings, with escaped attributes."""
+    dsn = environment.get("NEXT_PUBLIC_SENTRY_DSN", "")
+    if not dsn:
+        return ""
+    endpoint = urlsplit(dsn)
+    if endpoint.scheme != "https" or endpoint.hostname != "errors.m12n.org" or endpoint.password:
+        raise ValueError("The error reporting DSN must point to Ops GlitchTip")
+    attributes = {"dsn": dsn,
+                  "project": environment.get("NEXT_PUBLIC_OPS_PROJECT_ID", ""),
+                  "release": environment.get("NEXT_PUBLIC_SENTRY_RELEASE", "")}
+    data = " ".join(f'data-{key}="{escape(value, quote=True)}"' for key, value in attributes.items())
+    return f'<script defer src="https://errors.m12n.org/static/ops-errors.v1.js" {data}></script>'
+
+
 def build_app(_: argparse.Namespace | None = None) -> None:
     """Assemble dist/: a root-layout static site deployable to any static host."""
     config = load_config("audio.json")
@@ -502,6 +520,9 @@ def build_app(_: argparse.Namespace | None = None) -> None:
     clear_except_audio(dist)
     for asset in APP_ASSETS:
         shutil.copy2(ROOT / "app" / asset, dist / asset)
+    index = dist / "index.html"
+    index.write_text(index.read_text(encoding="utf-8").replace(
+        "<!-- ops-error-tracking -->", error_tracking_script(os.environ)), encoding="utf-8")
 
     books = []
     built_audio: set[Path] = set()

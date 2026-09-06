@@ -4,6 +4,9 @@
 
 ## Mission
 
+For application code and deployments, follow `docs/error-tracking.md`.
+Preserve the Ops-provisioned GlitchTip browser reporter in the built site.
+
 Build a research-backed library of non-fiction books that helps a reader decide whether to read, listen to, borrow, or buy the original. Protect the reader's time and attention. Explain the useful argument faithfully, show what the full book is like to consume, and say plainly when the summary is enough or the book is unlikely to help.
 
 This is not a contest to produce the most text. Use the shortest treatment that preserves the book's useful distinctions, evidence, examples, limits, and reading experience.
