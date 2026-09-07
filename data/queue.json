@@ -245,6 +245,14 @@
       "source": "discovery",
       "added_at": "2026-09-06",
       "notes": "Discovered from Meditations and its existing links on philosophical practice: Hadot explains the Stoic exercises behind Marcus Aurelius's notes; publisher and independent specialist evidence are recorded in the new book profile."
+    },
+    {
+      "book_id": "free-agents-mitchell",
+      "priority": 33,
+      "status": "ready",
+      "source": "discovery",
+      "added_at": "2026-09-07",
+      "notes": "Extends the existing Determined–Behave connection: Carle and White explicitly compare Free Agents and Determined as contrasting accounts of human agency. The proposed work is absent from the supplied catalogue."
     }
   ]
 }

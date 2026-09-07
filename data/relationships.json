@@ -1091,6 +1091,32 @@
         "library/books/the-inner-citadel-hadot/book.json#ccs-english-edition"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "weekly-2026-w37-free-agents-mitchell-author",
+      "source_id": "free-agents-mitchell",
+      "target_id": "kevin-j-mitchell",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Kevin J. Mitchell wrote Free Agents: How Evolution Gave Us Free Will.",
+      "source_refs": [
+        "library/books/free-agents-mitchell/book.json#library-free-agents-title-page"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "weekly-2026-w37-free-agents-mitchell",
+      "source_id": "free-agents-mitchell",
+      "target_id": "determined-sapolsky",
+      "type": "contrasts-with",
+      "basis": "explicit",
+      "description": "Extends the existing Determined–Behave connection: Carle and White explicitly compare Free Agents and Determined as contrasting accounts of human agency. The proposed work is absent from the supplied catalogue.",
+      "source_refs": [
+        "library/books/free-agents-mitchell/book.json#cinii-free-agents",
+        "library/books/free-agents-mitchell/book.json#library-free-agents-title-page",
+        "library/books/free-agents-mitchell/book.json#carle-white-free-agents-determined"
+      ],
+      "confidence": "high"
     }
   ]
 }

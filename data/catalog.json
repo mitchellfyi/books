@@ -669,6 +669,27 @@
         "Du mußt dein Leben ändern: Über Anthropotechnik",
         "You Must Change Your Life"
       ]
+    },
+    {
+      "id": "kevin-j-mitchell",
+      "kind": "author",
+      "name": "Kevin J. Mitchell",
+      "state": "catalogued",
+      "path": "library/authors/kevin-j-mitchell/author.json",
+      "aliases": []
+    },
+    {
+      "id": "free-agents-mitchell",
+      "kind": "book",
+      "name": "Free Agents: How Evolution Gave Us Free Will",
+      "state": "catalogued",
+      "path": "library/books/free-agents-mitchell/book.json",
+      "aliases": [
+        "Free Agents"
+      ],
+      "author_ids": [
+        "kevin-j-mitchell"
+      ]
     }
   ]
 }
