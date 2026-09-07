@@ -1112,8 +1112,6 @@
       "basis": "explicit",
       "description": "Extends the existing Determined–Behave connection: Carle and White explicitly compare Free Agents and Determined as contrasting accounts of human agency. The proposed work is absent from the supplied catalogue.",
       "source_refs": [
-        "library/books/free-agents-mitchell/book.json#cinii-free-agents",
-        "library/books/free-agents-mitchell/book.json#library-free-agents-title-page",
         "library/books/free-agents-mitchell/book.json#carle-white-free-agents-determined"
       ],
       "confidence": "high"

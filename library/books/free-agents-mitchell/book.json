@@ -42,7 +42,7 @@
         "independence": "independent",
         "quality": "high",
         "supports": "Confirms title, Kevin J. Mitchell's authorship, English language, Princeton University Press publication in 2023 and hardback ISBN 9780691226231.",
-        "limitations": "Verified through the search-indexed catalogue record; direct retrieval failed. Bibliographic evidence only.",
+        "limitations": "Bibliographic evidence only. Direct retrieval was verified during the manual discovery review on 7 September 2026.",
         "accessed_at": "2026-09-07"
       },
       {
@@ -77,8 +77,8 @@
       "/author_ids": [
         "library-free-agents-title-page"
       ],
-      "/bibliography/editions/0": [
-        "library-free-agents-title-page"
+      "/bibliography/editions/0/isbn_13": [
+        "cinii-free-agents"
       ]
     }
   },
