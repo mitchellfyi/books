@@ -1,0 +1,45 @@
+name: Verify Books
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+          # There is no lockfile: the dependencies live in check.py's inline
+          # script metadata and in the `uv run --with` lines that `test` uses.
+          # Without naming them the cache has nothing to key on and would never
+          # invalidate.
+          cache-dependency-glob: |
+            bookflow
+            scripts/check.py
+
+      - name: Test and lint the tooling
+        run: ./bookflow test
+
+      - name: Validate the library
+        # Strict: the recordings are committed, so the runner has them and a
+        # completed book missing its audio is a real defect here, not a fact
+        # about the environment.
+        run: ./bookflow check
+
+      - name: Build the site
+        run: ./bookflow build

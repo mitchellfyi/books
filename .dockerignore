@@ -3,3 +3,14 @@
 dist
 __pycache__
 models
+
+.env
+.env.*
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+.venv
+.uv-cache
+.pytest_cache
+.ruff_cache
