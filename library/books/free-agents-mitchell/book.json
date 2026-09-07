@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "free-agents-mitchell",
+  "type": "book",
+  "title": "Free Agents: How Evolution Gave Us Free Will",
+  "alternate_titles": [
+    "Free Agents"
+  ],
+  "author_ids": [
+    "kevin-j-mitchell"
+  ],
+  "bibliography": {
+    "first_published": null,
+    "original_language": null,
+    "editions": [
+      {
+        "label": "Verified discovery edition",
+        "publisher": null,
+        "publication_date": null,
+        "isbn_10": null,
+        "isbn_13": "9780691226231",
+        "format": null,
+        "pages": null
+      }
+    ],
+    "contents": []
+  },
+  "discovery": {
+    "tag_ids": [],
+    "audiences": [],
+    "formats_available": []
+  },
+  "research": {
+    "sources": [
+      {
+        "id": "cinii-free-agents",
+        "title": "Free agents: how evolution gave us free will",
+        "author_or_publisher": "National Institute of Informatics, CiNii Books",
+        "url": "https://ci.nii.ac.jp/ncid/BD06376922",
+        "type": "library-catalogue",
+        "independence": "independent",
+        "quality": "high",
+        "supports": "Confirms title, Kevin J. Mitchell's authorship, English language, Princeton University Press publication in 2023 and hardback ISBN 9780691226231.",
+        "limitations": "Bibliographic evidence only. Direct retrieval was verified during the manual discovery review on 7 September 2026.",
+        "accessed_at": "2026-09-07"
+      },
+      {
+        "id": "library-free-agents-title-page",
+        "title": "Free Agents: title page and contents",
+        "author_or_publisher": "Princeton University Press; University of Bern Library host",
+        "url": "https://urn.ub.unibe.ch/urn:ch:slsp:zbz:0691226237:ihv:pdf",
+        "type": "library-catalogue",
+        "independence": "primary",
+        "quality": "high",
+        "supports": "The scanned title page directly confirms the title, subtitle, Kevin J. Mitchell's authorship and Princeton University Press imprint.",
+        "limitations": "Two-page bibliographic supplement; contains neither a printed ISBN nor the book's substantive text.",
+        "accessed_at": "2026-09-07"
+      },
+      {
+        "id": "carle-white-free-agents-determined",
+        "title": "Free Agents vs. Determined: Neuroscience and the Law of Personal Responsibility",
+        "author_or_publisher": "Susan D. Carle and Tara L. White, Rutgers University Law Review",
+        "url": "https://rutgerslawreview.com/wp-content/uploads/2025/04/Free-Agents-vs.-Determined-Neuroscience-and-the-Law-of-Personal-Responsibility.pdf",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "high",
+        "supports": "The introduction on page 358 explicitly pairs the books as contrasting perspectives on agency; section II.B examines Mitchell's position.",
+        "limitations": "Focuses on legal responsibility and advances the reviewers' own position. Both book authors commented on an earlier draft; the comparison does not settle the free-will debate.",
+        "accessed_at": "2026-09-07"
+      }
+    ],
+    "citations": {
+      "/title": [
+        "library-free-agents-title-page"
+      ],
+      "/author_ids": [
+        "library-free-agents-title-page"
+      ],
+      "/bibliography/editions/0/isbn_13": [
+        "cinii-free-agents"
+      ]
+    }
+  },
+  "workflow": {
+    "status": "stub",
+    "coverage": "metadata-only",
+    "coverage_notes": "Discovery only. Extends the existing Determined–Behave connection: Carle and White explicitly compare Free Agents and Determined as contrasting accounts of human agency. The proposed work is absent from the supplied catalogue.",
+    "last_researched": "2026-09-07",
+    "next_steps": [
+      "Research the book and author when this discovery queue entry is processed."
+    ]
+  }
+}
