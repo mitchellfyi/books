@@ -1,5 +1,17 @@
 @/Users/m12n/.codex/RTK.md
 
+## M12N working agreement
+
+Read [docs/m12n-standards.md](docs/m12n-standards.md) and
+[docs/project-brief.md](docs/project-brief.md) before work. They provide the
+shared delivery, research, security, cost and stewardship rules and this project's
+context. Work on main by default; use one worktree, branch and PR per repository
+when the owner requests portfolio PR delivery. Finish with verified main
+integration, green required CI and safe local/remote cleanup. Preserve this
+repository's domain rules and commands below. Weekly stewardship only creates
+an Ops decision issue; downstream work starts with a later owner assignment.
+
+
 # 5MinBooks agent guide
 
 ## Mission
