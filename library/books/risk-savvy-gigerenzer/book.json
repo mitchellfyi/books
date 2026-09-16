@@ -1,0 +1,109 @@
+{
+  "$schema": "../../../schemas/book.schema.json",
+  "schema_version": 1,
+  "id": "risk-savvy-gigerenzer",
+  "type": "book",
+  "title": "Risk Savvy: How to Make Good Decisions",
+  "alternate_titles": [
+    "Risk Savvy",
+    "Risiko: Wie man die richtigen Entscheidungen trifft",
+    "Imparare a rischiare: Come prendere decisioni giuste"
+  ],
+  "author_ids": [
+    "gerd-gigerenzer"
+  ],
+  "bibliography": {
+    "first_published": null,
+    "original_language": null,
+    "editions": [
+      {
+        "label": "Verified discovery edition",
+        "publisher": null,
+        "publication_date": null,
+        "isbn_10": null,
+        "isbn_13": "9780241954614",
+        "format": null,
+        "pages": null
+      }
+    ],
+    "contents": []
+  },
+  "discovery": {
+    "tag_ids": [],
+    "audiences": [],
+    "formats_available": []
+  },
+  "research": {
+    "sources": [
+      {
+        "id": "penguin-risk-savvy",
+        "title": "Risk Savvy",
+        "author_or_publisher": "Penguin Books UK",
+        "url": "https://www.penguin.co.uk/books/181878/risk-savvy-by-gigerenzer-gerd/9780241954614",
+        "type": "publisher",
+        "independence": "primary",
+        "quality": "high",
+        "supports": "The [publisher record](https://www.penguin.co.uk/books/181878/risk-savvy-by-gigerenzer-gerd/9780241954614) confirms the title, subtitle, authorship and UK paperback ISBN 9780241954614, published on 26 March 2015.",
+        "limitations": "Authoritative for this edition’s metadata; promotional description does not independently establish the relationship with Kahneman.",
+        "accessed_at": "2026-09-16"
+      },
+      {
+        "id": "gigerenzer-bibliography",
+        "title": "Gerd Gigerenzer: Publikationen",
+        "author_or_publisher": "Gerd Gigerenzer; Max Planck Institute for Human Development",
+        "url": "https://www.mpib-berlin.mpg.de/mitarbeiter/gerd-gigerenzer/publikationen?page=16",
+        "type": "author",
+        "independence": "primary",
+        "quality": "high",
+        "supports": "The [institutional bibliography](https://www.mpib-berlin.mpg.de/mitarbeiter/gerd-gigerenzer/publikationen?page=16) explicitly identifies the listed German and Italian titles as translations of Risk Savvy.",
+        "limitations": "Bibliographic confirmation of translation identities; does not evaluate their contents or establish the proposed relationship.",
+        "accessed_at": "2026-09-16"
+      },
+      {
+        "id": "newall-risk-savvy",
+        "title": "Gerd Gigerenzer – Risk Savvy",
+        "author_or_publisher": "pwnewall; Economics, Psychology, Policy",
+        "url": "https://economicspsychologypolicy.blogspot.com/2014/12/gerd-gigerenzer-risk-savvy.html",
+        "type": "specialist-review",
+        "independence": "independent",
+        "quality": "medium",
+        "supports": "This [independent comparison](https://economicspsychologypolicy.blogspot.com/2014/12/gerd-gigerenzer-risk-savvy.html) names both books and contrasts research on judgement errors with effective simple heuristics, while recognising practical agreement between the approaches.",
+        "limitations": "Personal academic blog review, not peer-reviewed; establishes the comparison without settling the underlying debate.",
+        "accessed_at": "2026-09-16"
+      },
+      {
+        "id": "the-risk-savvy",
+        "title": "Risk Savvy: How To Make Good Decisions, by Gerd Gigerenzer",
+        "author_or_publisher": "Omar Malik; Times Higher Education",
+        "url": "https://www.timeshighereducation.com/books/risk-savvy-how-to-make-good-decisions-by-gerd-gigerenzer/2012906.article",
+        "type": "professional-review",
+        "independence": "independent",
+        "quality": "high",
+        "supports": "The [review and accompanying interview](https://www.timeshighereducation.com/books/risk-savvy-how-to-make-good-decisions-by-gerd-gigerenzer/2012906.article) document the emphasis on risk literacy, statistics and intuition; Gigerenzer explicitly identifies Thinking, Fast and Slow as a point of disagreement.",
+        "limitations": "The direct opposition expressed in the interview is Gigerenzer’s own characterisation; the independent review does not adjudicate his account of Kahneman.",
+        "accessed_at": "2026-09-16"
+      }
+    ],
+    "citations": {
+      "/title": [
+        "penguin-risk-savvy",
+        "gigerenzer-bibliography"
+      ],
+      "/author_ids": [
+        "penguin-risk-savvy"
+      ],
+      "/bibliography/editions/0/isbn_13": [
+        "penguin-risk-savvy"
+      ]
+    }
+  },
+  "workflow": {
+    "status": "stub",
+    "coverage": "metadata-only",
+    "coverage_notes": "Discovery only. Risk Savvy offers a counterpoint to Thinking, Fast and Slow’s emphasis on judgement errors, exploring when simple rules succeed and how risk literacy can improve decisions. Reading them together sharpens the question of when to trust intuition and when to scrutinise it.",
+    "last_researched": "2026-09-16",
+    "next_steps": [
+      "Research the book and author when this discovery queue entry is processed."
+    ]
+  }
+}
