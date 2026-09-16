@@ -690,6 +690,29 @@
       "author_ids": [
         "kevin-j-mitchell"
       ]
+    },
+    {
+      "id": "gerd-gigerenzer",
+      "kind": "author",
+      "name": "Gerd Gigerenzer",
+      "state": "catalogued",
+      "path": "library/authors/gerd-gigerenzer/author.json",
+      "aliases": []
+    },
+    {
+      "id": "risk-savvy-gigerenzer",
+      "kind": "book",
+      "name": "Risk Savvy: How to Make Good Decisions",
+      "state": "catalogued",
+      "path": "library/books/risk-savvy-gigerenzer/book.json",
+      "aliases": [
+        "Risk Savvy",
+        "Risiko: Wie man die richtigen Entscheidungen trifft",
+        "Imparare a rischiare: Come prendere decisioni giuste"
+      ],
+      "author_ids": [
+        "gerd-gigerenzer"
+      ]
     }
   ]
 }

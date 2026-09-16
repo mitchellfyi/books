@@ -1115,6 +1115,31 @@
         "library/books/free-agents-mitchell/book.json#carle-white-free-agents-determined"
       ],
       "confidence": "high"
+    },
+    {
+      "id": "weekly-2026-w38-risk-savvy-gigerenzer-author",
+      "source_id": "risk-savvy-gigerenzer",
+      "target_id": "gerd-gigerenzer",
+      "type": "written-by",
+      "basis": "explicit",
+      "description": "Gerd Gigerenzer wrote Risk Savvy: How to Make Good Decisions.",
+      "source_refs": [
+        "library/books/risk-savvy-gigerenzer/book.json#penguin-risk-savvy"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "weekly-2026-w38-risk-savvy-gigerenzer",
+      "source_id": "risk-savvy-gigerenzer",
+      "target_id": "thinking-fast-and-slow-daniel-kahneman",
+      "type": "contrasts-with",
+      "basis": "explicit",
+      "description": "Risk Savvy offers a counterpoint to Thinking, Fast and Slow’s emphasis on judgement errors, exploring when simple rules succeed and how risk literacy can improve decisions. Reading them together sharpens the question of when to trust intuition and when to scrutinise it.",
+      "source_refs": [
+        "library/books/risk-savvy-gigerenzer/book.json#newall-risk-savvy",
+        "library/books/risk-savvy-gigerenzer/book.json#the-risk-savvy"
+      ],
+      "confidence": "high"
     }
   ]
 }
