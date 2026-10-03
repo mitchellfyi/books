@@ -1,0 +1,48 @@
+version: 2
+
+# Books has no root npm or pip manifest: the site is uncompiled JavaScript
+# and the Python tooling declares its packages inline (PEP 723 metadata and
+# `uv run --with` in bookflow), which Dependabot does not read. Its updatable
+# dependencies are the Dockerfile base images and the workflow actions.
+updates:
+  - package-ecosystem: docker
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 1
+    ignore:
+      # Stay on nginx's even-numbered stable line; odd minors are mainline.
+      # Digest refreshes for 1.30-alpine still arrive. Move to the next stable
+      # line (1.32, expected April 2027) by hand; review by 2027-05-01.
+      - dependency-name: nginx
+        update-types: ["version-update:semver-minor"]
+    groups:
+      all-images:
+        applies-to: version-updates
+        patterns:
+          - "*"
+      all-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  # The hosted-agent relay is published by Ops and verified byte for byte
+  # against .ops-agent/provenance.json, so its dependencies move only in an
+  # Ops relay release. A bare ignore also covers security updates.
+  - package-ecosystem: npm
+    directory: "/.ops-agent"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: "*"
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 1
+    groups:
+      all-actions:
+        patterns:
+          - "*"
