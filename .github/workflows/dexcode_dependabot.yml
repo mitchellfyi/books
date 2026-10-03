@@ -1,4 +1,4 @@
-# Managed by DexCode template dependabot-guard@1.5.0. Edit the template, not this file.
+# Managed by DexCode template dependabot-guard@1.5.1. Edit the template, not this file.
 #
 # What this does, and deliberately does not do.
 #
@@ -62,6 +62,10 @@ jobs:
       # add-label step then fails with "not found", which reads like a missing
       # label rather than a missing permission.
       issues: write
+      # GitHub's merge state is computed from the pull request's checks and
+      # commit statuses, which a token without these cannot read.
+      checks: read
+      statuses: read
     steps:
       - name: Read Dependabot's metadata for this pull request
         id: meta
@@ -208,6 +212,12 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
+      # statusCheckRollup reads check runs and commit statuses. Unlisted
+      # permissions are none, so 1.5.0 asked for data its token could not read
+      # ("Resource not accessible by integration") and the sweep would stop
+      # before deciding anything.
+      checks: read
+      statuses: read
     steps:
       - name: Apply the policy to every open Dependabot pull request
         env:
