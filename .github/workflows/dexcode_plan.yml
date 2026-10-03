@@ -1,0 +1,142 @@
+# Managed by DexCode template ticket-planner@3.16.1. Edit the template, not this file.
+name: DexCode plan ticket
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: DexCode run identifier
+        required: true
+        type: string
+      agent_definition:
+        description: Published DexCode planner definition
+        required: true
+        type: choice
+        options:
+          - codex-api-planner
+          - codex-access-planner
+          - claude-planner
+      prompt_ref:
+        description: Opaque DexCode work-item reference
+        required: true
+        type: string
+      trigger:
+        description: Planning trigger
+        required: true
+        type: choice
+        options: [manual, issue, schedule, cli]
+
+permissions: {}
+
+concurrency:
+  group: dexcode-plan-${{ inputs.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Verify the managed launcher without model credentials
+        run: |
+          node --check .dex/run-codex.mjs
+          node --test .dex/run-codex.plan.test.mjs .dex/run-codex.execution.test.mjs
+      - name: Fetch the run specification
+        env:
+          RUN_ID: ${{ inputs.run_id }}
+        run: |
+          mkdir -p .dex
+          OIDC_TOKEN="$(
+            curl --fail-with-body --silent --show-error \
+              --retry 2 --retry-all-errors --max-time 30 \
+              -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+              "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=dexcode%3Aplanning%3A${RUN_ID}%3Aspec" \
+              | jq -er '.value'
+          )"
+          curl --fail-with-body --silent --show-error \
+            --retry 2 --retry-all-errors --max-time 30 \
+            -H "Authorization: Bearer ${OIDC_TOKEN}" \
+            "https://dexcode.ai/api/v1/agent/runs/${RUN_ID}/spec" \
+            --output .dex/run-spec.json
+          unset OIDC_TOKEN
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: dexcode-plan-context-${{ inputs.run_id }}
+          path: .dex/run-spec.json
+          if-no-files-found: error
+          retention-days: 1
+
+  codex:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      result: ${{ steps.codex.outputs.result }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Install the trusted hosted client
+        run: npm ci --prefix .ops-agent --ignore-scripts --no-audit --no-fund
+      - name: Connect Codex calls to the Ops queue
+        uses: ./.ops-agent
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: dexcode-plan-context-${{ inputs.run_id }}
+          path: .dex
+      # Legacy definition names remain valid dispatch inputs while existing
+      # projects move to the shared hosted executor. Every route executes Codex.
+      - name: Plan with Codex OAuth
+        id: codex
+        env:
+          CODEX_MODEL: gpt-6-astra
+          CODEX_REASONING_EFFORT: max
+        run: node .dex/run-codex.mjs plan
+
+  report:
+    if: always() && needs.codex.result == 'success'
+    needs: codex
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      id-token: write
+    steps:
+      - name: Report the structured plan
+        env:
+          CODEX_RESULT: ${{ needs.codex.outputs.result }}
+          RUN_ID: ${{ inputs.run_id }}
+        run: |
+          printf '%s' "${CODEX_RESULT}" > "${RUNNER_TEMP}/planner-result.json"
+          OIDC_TOKEN="$(
+            curl --fail-with-body --silent --show-error \
+              --retry 2 --retry-all-errors --max-time 30 \
+              -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+              "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=dexcode%3Aplanning%3A${RUN_ID}%3Aresult" \
+              | jq -er '.value'
+          )"
+          curl --fail-with-body --silent --show-error \
+            --retry 2 --retry-all-errors --max-time 30 \
+            -H "Authorization: Bearer ${OIDC_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data-binary "@${RUNNER_TEMP}/planner-result.json" \
+            "https://dexcode.ai/api/v1/agent/runs/${RUN_ID}/result"
+          unset OIDC_TOKEN

@@ -1,0 +1,11 @@
+version: 1
+template: ticket-planner
+template_version: 3.16.1
+workflow: .github/workflows/dexcode_plan.yml
+prompt: .dex/prompts/dexcode_plan.md
+result_schema: .dex/planner-result.schema.json
+review_workflow: .github/workflows/dexcode_review.yml
+review_prompt: .dex/prompts/dexcode_review.md
+review_result_schema: .dex/review-result.schema.json
+services:
+  issues: project_management.primary
