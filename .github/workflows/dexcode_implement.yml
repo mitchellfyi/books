@@ -1,0 +1,137 @@
+# Candidate for the next managed template; installed only through a reviewed publication.
+name: DexCode implement approved plan
+run-name: dexcode-implementation:${{ inputs.run_id }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: DexCode implementation run identifier
+        required: true
+        type: string
+
+permissions: {}
+
+concurrency:
+  group: dexcode-implementation-${{ inputs.run_id }}
+  cancel-in-progress: false
+
+env:
+  IMPLEMENTATION_RUN_ID: ${{ inputs.run_id }}
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      base_sha: ${{ steps.context.outputs.base_sha }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Fetch and validate the approved specification
+        id: context
+        run: node .dex-implementation/implementation-client.mjs prepare
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: dexcode-implementation-context-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .dex-implementation-context/spec.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 1
+      - name: Remove the private specification
+        if: always()
+        run: rm -rf -- .dex-implementation-context
+
+  implement:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Install the trusted hosted client
+        run: npm ci --prefix .ops-agent --ignore-scripts --no-audit --no-fund
+      - name: Connect Codex calls to the Ops queue
+        uses: ./.ops-agent
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: dexcode-implementation-context-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .dex-implementation-context
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ needs.prepare.outputs.base_sha }}
+          path: implementation-target
+          persist-credentials: false
+      - name: Materialize the approved base without checkout conversions
+        run: node .dex-implementation/implementation-worker.mjs canonicalize
+      - name: Implement the approved plan
+        id: worker
+        env:
+          CODEX_MODEL: gpt-6-astra
+          CODEX_REASONING_EFFORT: max
+        run: node .dex-implementation/implementation-worker.mjs execute
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: dexcode-implementation-result-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ steps.worker.outputs.result_directory }}/patch.json
+            ${{ steps.worker.outputs.result_directory }}/result.json
+          if-no-files-found: error
+          retention-days: 1
+      - name: Remove the private working files
+        if: always()
+        run: |
+          rm -rf -- .dex-implementation-context implementation-target
+          rm -rf -- "${RUNNER_TEMP}/dexcode-implementation-result-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
+  report:
+    if: always()
+    needs: [prepare, implement]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        id: artifact
+        if: needs.implement.result == 'success'
+        continue-on-error: true
+        with:
+          name: dexcode-implementation-result-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/dexcode-implementation-report
+      - name: Report the verified outcome
+        id: report
+        env:
+          IMPLEMENTATION_JOB_RESULT: ${{ needs.implement.result }}
+          IMPLEMENTATION_ARTIFACT_RESULT: ${{ steps.artifact.outcome }}
+        run: node .dex-implementation/implementation-client.mjs report
+      - name: Remove downloaded output
+        if: always()
+        run: rm -rf -- "${RUNNER_TEMP}/dexcode-implementation-report"

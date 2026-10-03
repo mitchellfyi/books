@@ -1,0 +1,193 @@
+# Managed by DexCode template ticket-planner@3.16.1. Edit the template, not this file.
+name: DexCode review implementation
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: DexCode review run identifier
+        required: true
+        type: string
+      agent_definition:
+        description: Published DexCode reviewer definition
+        required: true
+        type: choice
+        options:
+          - codex-api-reviewer
+      prompt_ref:
+        description: Opaque DexCode review reference
+        required: true
+        type: string
+      trigger:
+        description: Review trigger
+        required: true
+        type: choice
+        options: [manual, implementation]
+
+permissions: {}
+
+concurrency:
+  group: dexcode-review-${{ inputs.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      head_sha: ${{ steps.context.outputs.head_sha }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Verify the managed launcher without model credentials
+        run: |
+          node --check .dex/run-codex.mjs
+          node --test .dex/run-codex.plan.test.mjs .dex/run-codex.execution.test.mjs
+      - name: Fetch the review specification
+        env:
+          RUN_ID: ${{ inputs.run_id }}
+        run: |
+          mkdir -p .dex
+          OIDC_TOKEN="$(
+            curl --fail-with-body --silent --show-error \
+              --retry 2 --retry-all-errors --max-time 30 \
+              -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+              "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=dexcode%3Areview%3A${RUN_ID}%3Aspec" \
+              | jq -er '.value'
+          )"
+          curl --fail-with-body --silent --show-error \
+            --retry 2 --retry-all-errors --max-time 30 \
+            -H "Authorization: Bearer ${OIDC_TOKEN}" \
+            "https://dexcode.ai/api/v1/agent/runs/${RUN_ID}/spec" \
+            --output .dex/review-run-spec.json
+          unset OIDC_TOKEN
+      - name: Validate the review context
+        id: context
+        run: |
+          HEAD_SHA="$(jq -er '.pull_request.head_sha' .dex/review-run-spec.json)"
+          BASE_SHA="$(jq -er '.pull_request.base_sha' .dex/review-run-spec.json)"
+          if [[ ! "${HEAD_SHA}" =~ ^[0-9a-f]{40}([0-9a-f]{24})?$ ]] ||
+             [[ ! "${BASE_SHA}" =~ ^[0-9a-f]{40}([0-9a-f]{24})?$ ]]; then
+            echo "The review specification names an unusable commit." >&2
+            exit 1
+          fi
+          echo "head_sha=${HEAD_SHA}" >> "${GITHUB_OUTPUT}"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: dexcode-review-context-${{ inputs.run_id }}
+          path: |
+            .dex/review-run-spec.json
+            .dex/prompts/dexcode_review.md
+            .dex/review-result.schema.json
+          if-no-files-found: error
+          retention-days: 1
+
+  review:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      result: ${{ steps.codex.outputs.result }}
+    steps:
+      # Keep the attested prompt and schema at the workspace root. The
+      # implementation under review is checked out into a separate directory,
+      # so it cannot replace the instructions that govern the reviewer.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      # Back under .dex, which is where the artifact came from and where the
+      # steps below look for it. upload-artifact roots an artifact at the
+      # least common ancestor of its paths, so the three uploaded files are
+      # stored with .dex stripped; restoring them to the workspace root would
+      # leave the run specification at ./review-run-spec.json and the copy
+      # below reading a path that does not exist.
+      - name: Install the trusted hosted client
+        run: npm ci --prefix .ops-agent --ignore-scripts --no-audit --no-fund
+      - name: Connect Codex calls to the Ops queue
+        uses: ./.ops-agent
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: dexcode-review-context-${{ inputs.run_id }}
+          path: .dex
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.prepare.outputs.head_sha }}
+          path: review-target
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Materialize the verified review revision without checkout conversions
+        run: node .dex/review-evidence.mjs canonicalize
+      - name: Place the bounded context inside the review workspace
+        run: |
+          if [[ ! -d review-target || -L review-target ]]; then
+            echo "The review checkout is not a directory." >&2
+            exit 1
+          fi
+          rm -rf review-target/.dex-review-context
+          mkdir review-target/.dex-review-context
+          cp .dex/review-run-spec.json review-target/.dex-review-context/run-spec.json
+          # The result contract travels with the run spec. The reviewer runs
+          # with review-target as its working directory and the :workspace
+          # profile, so a prompt naming .dex/review-result.schema.json reaches
+          # review-target/.dex — the pull request's own copy of a managed path,
+          # if the branch still has one. Naming the attested file from the
+          # control root is the whole reason that root is checked out
+          # separately, so the attested file is what gets placed here.
+          cp .dex/review-result.schema.json \
+            review-target/.dex-review-context/review-result.schema.json
+          cp .dex/prompts/dexcode_review.md \
+            review-target/.dex-review-context/prompt.md
+      # Repository commands belong inside the sandbox. Even npm --ignore-scripts
+      # can execute a Git helper selected by an untrusted .npmrc.
+      - name: Review with Codex OAuth
+        id: codex
+        env:
+          CODEX_MODEL: gpt-6-astra
+          CODEX_REASONING_EFFORT: max
+        run: node .dex/run-codex.mjs review
+
+  report:
+    if: always() && needs.review.result == 'success'
+    needs: review
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      id-token: write
+    steps:
+      - name: Report the structured review
+        env:
+          REVIEW_RESULT: ${{ needs.review.outputs.result }}
+          RUN_ID: ${{ inputs.run_id }}
+        run: |
+          printf '%s' "${REVIEW_RESULT}" > "${RUNNER_TEMP}/review-result.json"
+          OIDC_TOKEN="$(
+            curl --fail-with-body --silent --show-error \
+              --retry 2 --retry-all-errors --max-time 30 \
+              -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+              "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=dexcode%3Areview%3A${RUN_ID}%3Aresult" \
+              | jq -er '.value'
+          )"
+          curl --fail-with-body --silent --show-error \
+            --retry 2 --retry-all-errors --max-time 30 \
+            -H "Authorization: Bearer ${OIDC_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data-binary "@${RUNNER_TEMP}/review-result.json" \
+            "https://dexcode.ai/api/v1/agent/runs/${RUN_ID}/result"
+          unset OIDC_TOKEN

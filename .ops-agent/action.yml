@@ -1,0 +1,9 @@
+name: Ops hosted agent client
+description: Route a trusted workflow's Codex calls through the private Ops executor
+inputs:
+  workspace:
+    description: Optional separate implementation-target checkout
+    required: false
+runs:
+  using: node24
+  main: agent-relay-setup.mjs

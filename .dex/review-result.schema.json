@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "outcome",
+    "reviewedSha",
+    "summary",
+    "manualChecks",
+    "findings",
+    "testCoverageGaps",
+    "optimizations",
+    "acceptanceCriteria",
+    "verificationPlan",
+    "researchSources"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "outcome": { "type": "string", "enum": ["passed", "follow_up_required"] },
+    "reviewedSha": {
+      "type": "string",
+      "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+    },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 1500 },
+    "manualChecks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check", "outcome", "evidence"],
+        "properties": {
+          "check": { "type": "string", "minLength": 1, "maxLength": 500 },
+          "outcome": {
+            "type": "string",
+            "enum": ["passed", "failed", "not_run"]
+          },
+          "evidence": { "type": "string", "minLength": 1, "maxLength": 750 }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "title", "evidence", "recommendation"],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": ["blocking", "high", "medium", "low"]
+          },
+          "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "evidence": { "type": "string", "minLength": 1, "maxLength": 750 },
+          "recommendation": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 750
+          }
+        }
+      }
+    },
+    "testCoverageGaps": {
+      "type": "array",
+      "maxItems": 12,
+      "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+    },
+    "optimizations": {
+      "type": "array",
+      "maxItems": 12,
+      "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+    },
+    "acceptanceCriteria": {
+      "type": "array",
+      "maxItems": 16,
+      "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+    },
+    "verificationPlan": {
+      "type": "array",
+      "maxItems": 16,
+      "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+    },
+    "researchSources": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "url", "relevance"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+          "url": {
+            "type": "string",
+            "pattern": "^https://",
+            "maxLength": 1000
+          },
+          "relevance": { "type": "string", "minLength": 1, "maxLength": 500 }
+        }
+      }
+    }
+  }
+}
