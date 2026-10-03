@@ -1,12 +1,21 @@
-# Managed by DexCode template dependabot-guard@1.3.1. Edit the template, not this file.
+# Managed by DexCode template dependabot-guard@1.5.0. Edit the template, not this file.
 #
 # What this does, and deliberately does not do.
 #
-# Patch and minor updates are handed to GitHub's own auto-merge. That matters:
-# auto-merge waits for the branch's required checks and merges only when they
-# pass, so "green before merge" is enforced by the branch protection you
-# already have rather than by this workflow reading statuses and deciding for
-# itself. If a check fails, the pull request simply stays open.
+# Patch and minor updates are handed to GitHub's own auto-merge, and only when
+# GitHub's merge state says the merge will wait for green or already is green.
+# That matters because `gh pr merge --auto` merges outright whenever GitHub
+# reports a pull request as immediately mergeable, and without required checks
+# that includes one whose checks are still running or have failed. Before 1.5.0
+# this merged one repository's Rails update 14 seconds after Dependabot
+# opened it, ahead of a CI run that then failed.
+#
+# So the merge state decides. BLOCKED or BEHIND means branch protection holds
+# the merge, and auto-merge is queued behind it. CLEAN or HAS_HOOKS means
+# GitHub counts every check as passed; the update merges if at least one check
+# other than this workflow ran. Anything else — checks pending or failed, a
+# conflict, a state GitHub has not computed yet — is left for the scheduled
+# sweep to look at again. If a check fails, the pull request simply stays open.
 #
 # Major updates are never merged here. A major bump can pass every check and
 # still change behaviour, and a dependency file is the one place where a green
@@ -77,7 +86,7 @@ jobs:
         run: |
           set -euo pipefail
           touched="$(gh pr view "${PR_NUMBER}" --json files \
-            --jq '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/"))] | join(", ")')"
+            --jq '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/|^\\.dex-implementation/|^\\.github/workflows/platform-deploy\\.yml$|^\\.ops-agent/"))] | join(", ")')"
           if [ -n "${touched}" ]; then
             echo "touched=true" >> "${GITHUB_OUTPUT}"
             echo "paths=${touched}" >> "${GITHUB_OUTPUT}"
@@ -96,7 +105,7 @@ jobs:
           set -euo pipefail
           if ! output="$(gh label create "dexcode:managed-file" \
                 --color "0E8A16" \
-                --description "Changes a DexCode-managed file — update the template instead" 2>&1)"; then
+                --description "Changes a DexCode- or Ops-managed file — update the template instead" 2>&1)"; then
             case "${output}" in
               *"already exists"*) : ;;
               *) echo "::error::Could not create the label: ${output}"; exit 1 ;;
@@ -104,9 +113,9 @@ jobs:
           fi
           if ! gh pr view "$PR_URL" --json labels --jq '[.labels[].name]' | grep -q "dexcode:managed-file"; then
             gh pr edit "$PR_URL" --add-label "dexcode:managed-file"
-            gh pr comment "$PR_URL" --body "DexCode will not merge this: it changes \`${PATHS}\`, which DexCode publishes and verifies byte for byte before each planning run. Merging it would mark this repository's installation as drifted and every planning run would then be refused. The pin moves in a DexCode template release instead."
+            gh pr comment "$PR_URL" --body "DexCode will not merge this: it changes \`${PATHS}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay, and GitHub will not let this workflow merge workflow changes. The pin moves in a template release instead."
           fi
-          echo "::notice::Left alone: changes DexCode-managed ${PATHS}"
+          echo "::notice::Left alone: changes managed ${PATHS}"
 
       - name: Enable auto-merge for a patch or minor update
         if: |
@@ -115,23 +124,42 @@ jobs:
           steps.meta.outputs.update-type == 'version-update:semver-minor')
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # gh infers the repository from a git remote, and nothing is checked
           # out here on purpose. Without this it fails with "not a git
           # repository", which reads like a broken runner rather than a
           # missing argument.
           GH_REPO: ${{ github.repository }}
-        # --auto is the whole point: it queues the merge behind the required
-        # checks instead of merging now. Squash keeps one commit per update.
+        # --auto queues the merge behind the required checks, but only when
+        # there are some: gh merges outright when GitHub calls the pull request
+        # mergeable now, and with no required check that includes one whose
+        # checks are still running — this job's own check among them. So the
+        # merge is queued only while branch protection is holding it (BLOCKED
+        # or BEHIND). Otherwise the scheduled sweep merges it once GitHub
+        # reports every check as passed. Squash keeps one commit per update.
         #
         # It needs "Allow auto-merge" enabled on the repository. Without it
         # this fails with a GraphQL error naming an API mutation, which tells
-        # nobody what to switch on — and it fails only for the updates whose
-        # checks are still running, because gh merges outright when they have
-        # already passed. That makes the missing setting look intermittent.
+        # nobody what to switch on. The workflow names the setting instead.
         run: |
           set -euo pipefail
-          if ! output="$(gh pr merge --auto --squash "$PR_URL" 2>&1)"; then
+          # GitHub works the state out on request, so the first read of a new
+          # pull request usually says UNKNOWN. Asking again gives it time.
+          state="UNKNOWN"
+          for _ in 1 2 3 4 5; do
+            state="$(gh pr view "$PR_URL" --json mergeStateStatus --jq '.mergeStateStatus')"
+            [ "$state" = "UNKNOWN" ] || break
+            sleep 3
+          done
+          case "$state" in
+            BLOCKED|BEHIND) ;;
+            *)
+              echo "::notice::Not queued: merge state ${state}. No required check is holding this merge, so the scheduled sweep merges it once GitHub reports every check as passed."
+              exit 0
+              ;;
+          esac
+          if ! output="$(gh pr merge --auto --squash --match-head-commit "$HEAD_SHA" "$PR_URL" 2>&1)"; then
             case "$output" in
               *"Auto merge is not allowed"*)
                 echo "::error::Enable Settings → General → Allow auto-merge on this repository. Until then DexCode can only merge updates whose checks have already passed."
@@ -192,13 +220,14 @@ jobs:
         # out or runs the pull request's code.
         run: |
           set -euo pipefail
+          prs="${RUNNER_TEMP:-/tmp}/dexcode-dependabot.json"
 
           gh pr list \
             --author "app/dependabot" \
             --state open \
             --limit 100 \
-            --json number,title,body,labels,files,autoMergeRequest \
-            > /tmp/dexcode-dependabot.json
+            --json number,title,body,labels,files,autoMergeRequest,mergeStateStatus,headRefOid,statusCheckRollup \
+            > "${prs}"
 
           # Set when a pull request could not be queued for a reason that is
           # about the repository rather than that pull request. The sweep keeps
@@ -207,10 +236,10 @@ jobs:
           # reports it at the end.
           blocked=""
 
-          total="$(jq 'length' /tmp/dexcode-dependabot.json)"
+          total="$(jq 'length' "${prs}")"
           echo "Open Dependabot pull requests: ${total}"
 
-          for row in $(jq -r '.[] | @base64' /tmp/dexcode-dependabot.json); do
+          for row in $(jq -r '.[] | @base64' "${prs}"); do
             pr="$(echo "${row}" | base64 --decode)"
             number="$(echo "${pr}" | jq -r '.number')"
             title="$(echo "${pr}" | jq -r '.title')"
@@ -226,21 +255,21 @@ jobs:
             # before each planning run, so merging a bump inside one marks the
             # installation drifted and every run afterwards is refused. Same
             # rule as the event path above.
-            managed="$(echo "${pr}" | jq -r '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/"))] | join(", ")')"
+            managed="$(echo "${pr}" | jq -r '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/|^\\.dex-implementation/|^\\.github/workflows/platform-deploy\\.yml$|^\\.ops-agent/"))] | join(", ")')"
             if [ -n "${managed}" ]; then
               if ! echo "${pr}" | jq -e '[.labels[].name] | index("dexcode:managed-file")' >/dev/null; then
                 if ! output="$(gh label create "dexcode:managed-file" \
                       --color "0E8A16" \
-                      --description "Changes a DexCode-managed file — update the template instead" 2>&1)"; then
+                      --description "Changes a DexCode- or Ops-managed file — update the template instead" 2>&1)"; then
                   case "${output}" in
                     *"already exists"*) : ;;
                     *) echo "::error::Could not create the label: ${output}"; exit 1 ;;
                   esac
                 fi
                 gh pr edit "${number}" --add-label "dexcode:managed-file"
-                gh pr comment "${number}" --body "DexCode will not merge this: it changes \`${managed}\`, which DexCode publishes and verifies byte for byte before each planning run. Merging it would mark this repository's installation as drifted and every planning run would then be refused. The pin moves in a DexCode template release instead."
+                gh pr comment "${number}" --body "DexCode will not merge this: it changes \`${managed}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay, and GitHub will not let this workflow merge workflow changes. The pin moves in a template release instead."
               fi
-              echo "#${number}: left alone, changes DexCode-managed ${managed}"
+              echo "#${number}: left alone, changes managed ${managed}"
               continue
             fi
 
@@ -303,26 +332,65 @@ jobs:
             # 0.1.0 to 0.2.0 a minor update, and a sweep that disagreed with
             # the event path would make the outcome depend on which one got
             # there first.
-            if ! output="$(gh pr merge --auto --squash "${number}" 2>&1)"; then
+            #
+            # GitHub's merge state decides whether this merges, not a reading
+            # of individual statuses. gh merges outright when the state is
+            # CLEAN, HAS_HOOKS or UNSTABLE, and UNSTABLE means a check is
+            # still running or has failed, so that one must never reach it.
+            # CLEAN with nothing but this workflow's own check is no evidence
+            # either. --match-head-commit stops a push made after this list
+            # was read from merging on the strength of the old head's checks.
+            #
+            # GitHub works the state out on request, so a list read just after
+            # main moved reports UNKNOWN. Asking again gives it time.
+            state="$(echo "${pr}" | jq -r '.mergeStateStatus')"
+            for _ in 1 2 3 4 5; do
+              [ "${state}" = "UNKNOWN" ] || break
+              sleep 3
+              pr="$(gh pr view "${number}" --json mergeStateStatus,headRefOid,statusCheckRollup)"
+              state="$(echo "${pr}" | jq -r '.mergeStateStatus')"
+            done
+            case "${state}" in
+              BLOCKED|BEHIND)
+                outcome="auto-merge queued"
+                ;;
+              CLEAN|HAS_HOOKS)
+                passed="$(echo "${pr}" | jq --arg self "${GITHUB_WORKFLOW}" \
+                  '[.statusCheckRollup[]? | select((.workflowName // "") != $self) | select(.conclusion == "SUCCESS" or .state == "SUCCESS")] | length')"
+                if [ "${passed}" -eq 0 ]; then
+                  echo "::notice::#${number} left alone: no check other than this workflow has passed on it"
+                  continue
+                fi
+                outcome="merge requested with ${passed} passing checks"
+                ;;
+              *)
+                echo "#${number}: waiting, merge state ${state}"
+                continue
+                ;;
+            esac
+
+            head="$(echo "${pr}" | jq -r '.headRefOid')"
+            if ! output="$(gh pr merge --auto --squash --match-head-commit "${head}" "${number}" 2>&1)"; then
               case "${output}" in
                 *"Auto merge is not allowed"*)
                   blocked="Auto-merge is switched off. Enable Settings → General → Allow auto-merge."
                   continue
                   ;;
                 *"Protected branch rules not configured"*)
-                  # Auto-merge waits for a branch's required checks. With no
-                  # protection rule there is nothing to wait for, and GitHub
-                  # refuses. Merging anyway would drop the one guarantee this
-                  # workflow is built on — that green-before-merge comes from
-                  # the repository's own required checks and not from this
-                  # script reading statuses and deciding for itself.
-                  blocked="The default branch has no protection rule, so there are no required checks for auto-merge to wait for. Add a branch protection rule with at least one required check, and these will merge themselves."
+                  # The merge state said protection was holding this pull
+                  # request and GitHub disagrees. Merging anyway would merge
+                  # before the checks finish, so report it instead.
+                  blocked="The default branch has no protection rule, so there are no required checks for auto-merge to wait for. Updates still merge once GitHub reports every check as passed; add a branch protection rule with at least one required check to queue them sooner."
+                  continue
+                  ;;
+                *"Head branch was modified"*)
+                  echo "#${number}: pushed to since the list was read; the next sweep looks again"
                   continue
                   ;;
                 *) echo "::error::#${number}: ${output}"; exit 1 ;;
               esac
             fi
-            echo "#${number}: auto-merge queued"
+            echo "#${number}: ${outcome}"
           done
 
           if [ -n "${blocked}" ]; then
