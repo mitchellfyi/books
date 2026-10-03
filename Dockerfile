@@ -10,7 +10,9 @@ ENV NEXT_PUBLIC_OPS_PROJECT_ID=$NEXT_PUBLIC_OPS_PROJECT_ID
 ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
 RUN python bookflow build
 
-FROM nginx:1.27-alpine
+# nginx 1.30 is the supported stable line; 1.27-alpine stopped receiving
+# rebuilds in April 2025.
+FROM nginx:1.30-alpine
 
 COPY --from=build /site/dist/ /usr/share/nginx/html/
 EXPOSE 80
