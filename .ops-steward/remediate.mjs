@@ -184,13 +184,21 @@ export async function publish(env, services = {}) {
     return report(env, { outcome: 'failed', failed_step: 'publication policy',
       summary: protectedPath === undefined ? 'The patch changed no files.' : `The patch touched a protected path: ${clean(protectedPath, 200)}` }, services);
   }
-  git(cwd, ['apply', '--index', '--whitespace=nowarn', '--', patch]);
+  // A publication failure is reported with its stage, so the next attempt and
+  // the ledger know why instead of a withheld error.
+  const stage = (reason, operation) => {
+    try { operation(); return null; } catch { return reason; }
+  };
   const identity = { GIT_AUTHOR_NAME: 'github-actions[bot]', GIT_AUTHOR_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com',
     GIT_COMMITTER_NAME: 'github-actions[bot]', GIT_COMMITTER_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com' };
-  git(cwd, ['commit', '--no-verify', '-m', `fix(steward): resolve ${clean(env.REMEDIATION_KIND || 'a red signal', 40)}`,
-    '-m', `Ops steward remediation ${request.id}, attempt ${request.attempt}.`], { env: { ...process.env, ...identity } });
-  const head = git(cwd, ['rev-parse', 'HEAD']).trim();
-  git(cwd, ['push', 'origin', `HEAD:refs/heads/${branch}`]);
+  let head;
+  const problem = stage('The verified patch no longer applies to the current default branch, so it was not pushed.',
+    () => git(cwd, ['apply', '--index', '--whitespace=nowarn', '--', patch])) ||
+    stage('Committing the fix failed.', () => git(cwd, ['commit', '--no-verify', '-m', `fix(steward): resolve ${clean(env.REMEDIATION_KIND || 'a red signal', 40)}`,
+      '-m', `Ops steward remediation ${request.id}, attempt ${request.attempt}.`], { env: { ...process.env, ...identity } })) ||
+    stage('Reading the fix commit failed.', () => { head = git(cwd, ['rev-parse', 'HEAD']).trim(); }) ||
+    stage('GitHub refused the fix branch push.', () => git(cwd, ['push', 'origin', `HEAD:refs/heads/${branch}`]));
+  if (problem) return report(env, { outcome: 'failed', failed_step: 'publication', summary: `${problem} ${summary}`.trim() }, services);
   return report(env, { outcome: 'pushed', branch, head_sha: head, summary }, services);
 }
 
