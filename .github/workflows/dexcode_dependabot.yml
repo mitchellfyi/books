@@ -1,4 +1,4 @@
-# Managed by DexCode template dependabot-guard@1.5.1. Edit the template, not this file.
+# Managed by DexCode template dependabot-guard@1.5.3. Edit the template, not this file.
 #
 # What this does, and deliberately does not do.
 #
@@ -10,12 +10,11 @@
 # this merged one repository's Rails update 14 seconds after Dependabot
 # opened it, ahead of a CI run that then failed.
 #
-# So the merge state decides. BLOCKED or BEHIND means branch protection holds
-# the merge, and auto-merge is queued behind it. CLEAN or HAS_HOOKS means
-# GitHub counts every check as passed; the update merges if at least one check
-# other than this workflow ran. Anything else — checks pending or failed, a
-# conflict, a state GitHub has not computed yet — is left for the scheduled
-# sweep to look at again. If a check fails, the pull request simply stays open.
+# So the merge state and CI both decide. BLOCKED or BEHIND can queue behind
+# branch protection only after another CI check passed on the exact head;
+# CLEAN or HAS_HOOKS can merge only after independent CI passed. Failed,
+# pending, absent or unreadable checks never authorize a merge. Anything else
+# waits for the scheduled sweep to look again.
 #
 # Major updates are never merged here. A major bump can pass every check and
 # still change behaviour, and a dependency file is the one place where a green
@@ -49,6 +48,10 @@ concurrency:
 
 jobs:
   guard:
+    # Check-run names are job names, not workflow-qualified names. These two
+    # names identify this workflow's own checks in the CI gates below, so they
+    # must not be generic words such as "guard" that another workflow may use.
+    name: dexcode-dependabot-guard
     # Author, not title: anyone can open a pull request called "bump x".
     if: >-
       github.event_name == 'pull_request' &&
@@ -138,10 +141,11 @@ jobs:
         # --auto queues the merge behind the required checks, but only when
         # there are some: gh merges outright when GitHub calls the pull request
         # mergeable now, and with no required check that includes one whose
-        # checks are still running — this job's own check among them. So the
-        # merge is queued only while branch protection is holding it (BLOCKED
-        # or BEHIND). Otherwise the scheduled sweep merges it once GitHub
-        # reports every check as passed. Squash keeps one commit per update.
+        # checks are still running — this job's own check among them. Queue
+        # only while branch protection is holding it (BLOCKED or BEHIND),
+        # and only after another CI check has passed on this exact head.
+        # Otherwise the scheduled sweep rechecks CI. Squash keeps one commit
+        # per update.
         #
         # It needs "Allow auto-merge" enabled on the repository. Without it
         # this fails with a GraphQL error naming an API mutation, which tells
@@ -159,10 +163,53 @@ jobs:
           case "$state" in
             BLOCKED|BEHIND) ;;
             *)
-              echo "::notice::Not queued: merge state ${state}. No required check is holding this merge, so the scheduled sweep merges it once GitHub reports every check as passed."
+              echo "::notice::Not queued: merge state ${state}. The scheduled sweep will check CI before merging."
               exit 0
               ;;
           esac
+          # A review-only branch rule can also report BLOCKED. Do not queue
+          # auto-merge until a real CI check on this exact head has passed.
+          # The sweep below applies the same gate; keep the two jq programs
+          # identical.
+          ci="$(mktemp -d "${RUNNER_TEMP:-/tmp}/dexcode-ci.XXXXXX")"
+          if ! gh api --paginate --slurp "repos/${GH_REPO}/commits/${HEAD_SHA}/check-runs?per_page=100" > "${ci}/checks.json" ||
+             ! gh api --paginate --slurp "repos/${GH_REPO}/commits/${HEAD_SHA}/status?per_page=100" > "${ci}/statuses.json"; then
+            echo "::error::Cannot read CI for ${HEAD_SHA}; refusing auto-merge"
+            exit 1
+          fi
+          # Files, not --argjson: Linux caps one argument at 128 KiB, and a
+          # page of check runs with their output text can exceed that.
+          if ! passed="$(jq -en --slurpfile c "${ci}/checks.json" --slurpfile s "${ci}/statuses.json" '
+            if ($c | length) != 1 or ($s | length) != 1 or
+               ($c[0] | type) != "array" or ($s[0] | type) != "array" or
+               ($c[0] | length) == 0 or ($s[0] | length) == 0
+            then error("incomplete CI response") else . end |
+            $c[0] as $checks | $s[0] as $statuses |
+            if ($checks | any(.[]; (.check_runs | type) != "array" or (.total_count | type) != "number")) or
+               ($checks[0].total_count != ([$checks[].check_runs[]] | length)) or
+               ($statuses | any(.[]; (.statuses | type) != "array" or (.state | type) != "string"))
+            then error("incomplete CI response")
+            else
+              # Jobs of this workflow are neither CI evidence nor blockers.
+              [$checks[].check_runs[] | select(.app.slug != "github-actions" or (.name != "dexcode-dependabot-guard" and .name != "dexcode-dependabot-sweep"))] as $runs |
+              if any($runs[]; .status != "completed" or (.conclusion != "success" and .conclusion != "neutral" and .conclusion != "skipped")) or
+                 ($statuses[0].statuses | length > 0 and $statuses[0].state != "success")
+              then 0
+              # Before 1.5.3 these jobs were named guard and sweep. A check with
+              # either name may be this workflow, so it cannot count as CI
+              # evidence, but it may be another workflow, so its failure blocks.
+              else ([$runs[] | select(.conclusion == "success") | select(.app.slug != "github-actions" or (.name != "guard" and .name != "sweep"))] | length) +
+                   ([$statuses[0].statuses[] | select(.state == "success")] | length)
+              end
+            end
+          ')"; then
+            echo "::error::Incomplete CI response for ${HEAD_SHA}; refusing auto-merge"
+            exit 1
+          fi
+          if [ "$passed" -eq 0 ]; then
+            echo "::notice::Not queued: no successful CI check on ${HEAD_SHA}"
+            exit 0
+          fi
           if ! output="$(gh pr merge --auto --squash --match-head-commit "$HEAD_SHA" "$PR_URL" 2>&1)"; then
             case "$output" in
               *"Auto merge is not allowed"*)
@@ -206,16 +253,17 @@ jobs:
   # was installed never sends an event, so without this the existing backlog is
   # never touched and only new updates are handled.
   sweep:
+    # See the guard job: the CI gates exclude this exact check name.
+    name: dexcode-dependabot-sweep
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
       issues: write
-      # statusCheckRollup reads check runs and commit statuses. Unlisted
-      # permissions are none, so 1.5.0 asked for data its token could not read
-      # ("Resource not accessible by integration") and the sweep would stop
-      # before deciding anything.
+      # REST check runs and commit statuses need these reads. The GraphQL
+      # statusCheckRollup field also traverses Actions workflowRun, which needs
+      # a different permission and fails even with both of these granted.
       checks: read
       statuses: read
     steps:
@@ -231,12 +279,13 @@ jobs:
         run: |
           set -euo pipefail
           prs="${RUNNER_TEMP:-/tmp}/dexcode-dependabot.json"
+          ci="$(mktemp -d "${RUNNER_TEMP:-/tmp}/dexcode-ci.XXXXXX")"
 
           gh pr list \
             --author "app/dependabot" \
             --state open \
             --limit 100 \
-            --json number,title,body,labels,files,autoMergeRequest,mergeStateStatus,headRefOid,statusCheckRollup \
+            --json number,title,body,labels,files,autoMergeRequest,mergeStateStatus,headRefOid \
             > "${prs}"
 
           # Set when a pull request could not be queued for a reason that is
@@ -357,22 +406,12 @@ jobs:
             for _ in 1 2 3 4 5; do
               [ "${state}" = "UNKNOWN" ] || break
               sleep 3
-              pr="$(gh pr view "${number}" --json mergeStateStatus,headRefOid,statusCheckRollup)"
+              pr="$(gh pr view "${number}" --json mergeStateStatus,headRefOid)"
               state="$(echo "${pr}" | jq -r '.mergeStateStatus')"
             done
             case "${state}" in
-              BLOCKED|BEHIND)
-                outcome="auto-merge queued"
-                ;;
-              CLEAN|HAS_HOOKS)
-                passed="$(echo "${pr}" | jq --arg self "${GITHUB_WORKFLOW}" \
-                  '[.statusCheckRollup[]? | select((.workflowName // "") != $self) | select(.conclusion == "SUCCESS" or .state == "SUCCESS")] | length')"
-                if [ "${passed}" -eq 0 ]; then
-                  echo "::notice::#${number} left alone: no check other than this workflow has passed on it"
-                  continue
-                fi
-                outcome="merge requested with ${passed} passing checks"
-                ;;
+              BLOCKED|BEHIND) outcome="auto-merge queued" ;;
+              CLEAN|HAS_HOOKS) outcome="merge requested" ;;
               *)
                 echo "#${number}: waiting, merge state ${state}"
                 continue
@@ -380,6 +419,51 @@ jobs:
             esac
 
             head="$(echo "${pr}" | jq -r '.headRefOid')"
+            # gh's GraphQL statusCheckRollup expands each checkSuite.workflowRun,
+            # which needs Actions read even though checks and statuses are
+            # readable. REST reads the two resources directly without expanding
+            # workflow runs. A failed, pending, truncated or unreadable response
+            # must never become evidence of green CI. Ignore this guard's own
+            # jobs: a green guard alone does not establish application CI.
+            # Same gate as the event path; keep the two jq programs identical.
+            if ! gh api --paginate --slurp "repos/${GH_REPO}/commits/${head}/check-runs?per_page=100" > "${ci}/checks.json" ||
+               ! gh api --paginate --slurp "repos/${GH_REPO}/commits/${head}/status?per_page=100" > "${ci}/statuses.json"; then
+              echo "::error::#${number}: cannot read CI for ${head}; refusing auto-merge"
+              exit 1
+            fi
+            # Files, not --argjson: Linux caps one argument at 128 KiB, and a
+            # page of check runs with their output text can exceed that.
+            if ! passed="$(jq -en --slurpfile c "${ci}/checks.json" --slurpfile s "${ci}/statuses.json" '
+              if ($c | length) != 1 or ($s | length) != 1 or
+                 ($c[0] | type) != "array" or ($s[0] | type) != "array" or
+                 ($c[0] | length) == 0 or ($s[0] | length) == 0
+              then error("incomplete CI response") else . end |
+              $c[0] as $checks | $s[0] as $statuses |
+              if ($checks | any(.[]; (.check_runs | type) != "array" or (.total_count | type) != "number")) or
+                 ($checks[0].total_count != ([$checks[].check_runs[]] | length)) or
+                 ($statuses | any(.[]; (.statuses | type) != "array" or (.state | type) != "string"))
+              then error("incomplete CI response")
+              else
+                # Jobs of this workflow are neither CI evidence nor blockers.
+                [$checks[].check_runs[] | select(.app.slug != "github-actions" or (.name != "dexcode-dependabot-guard" and .name != "dexcode-dependabot-sweep"))] as $runs |
+                if any($runs[]; .status != "completed" or (.conclusion != "success" and .conclusion != "neutral" and .conclusion != "skipped")) or
+                   ($statuses[0].statuses | length > 0 and $statuses[0].state != "success")
+                then 0
+                # Before 1.5.3 these jobs were named guard and sweep. A check with
+                # either name may be this workflow, so it cannot count as CI
+                # evidence, but it may be another workflow, so its failure blocks.
+                else ([$runs[] | select(.conclusion == "success") | select(.app.slug != "github-actions" or (.name != "guard" and .name != "sweep"))] | length) +
+                     ([$statuses[0].statuses[] | select(.state == "success")] | length)
+                end
+              end
+            ')"; then
+              echo "::error::#${number}: incomplete CI response for ${head}; refusing auto-merge"
+              exit 1
+            fi
+            if [ "$passed" -eq 0 ]; then
+              echo "::notice::#${number} left alone: no completed, successful CI outside this guard"
+              continue
+            fi
             if ! output="$(gh pr merge --auto --squash --match-head-commit "${head}" "${number}" 2>&1)"; then
               case "${output}" in
                 *"Auto merge is not allowed"*)
