@@ -2,8 +2,8 @@
   "version": 1,
   "repository": "m12n-org/ops.m12n.org",
   "source": "automation/distribute-steward.mjs",
-  "template_version": "1.0.0",
+  "template_version": "1.1.0",
   "checksums": {
-    "remediate.mjs": "30bdac07e6e84533a2098e236005b31d100f0c10fb85debc5bdd8ad48614aeea"
+    "remediate.mjs": "bfad10508d53034cd40e697866f1dc45633af3b39788343eaa6ddc301bcf5808"
   }
 }
