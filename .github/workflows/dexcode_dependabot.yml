@@ -1,28 +1,28 @@
-# Managed by DexCode template dependabot-guard@1.5.3. Edit the template, not this file.
+# Managed by DexCode template dependabot-guard@1.6.1. Edit the template, not this file.
 #
 # What this does, and deliberately does not do.
 #
-# Patch and minor updates are handed to GitHub's own auto-merge, and only when
-# GitHub's merge state says the merge will wait for green or already is green.
-# That matters because `gh pr merge --auto` merges outright whenever GitHub
-# reports a pull request as immediately mergeable, and without required checks
-# that includes one whose checks are still running or have failed. Before 1.5.0
-# this merged one repository's Rails update 14 seconds after Dependabot
-# opened it, ahead of a CI run that then failed.
+# Patch and minor updates are merged by DexCode, not by this workflow. A merge
+# made with this workflow's GITHUB_TOKEN starts no CI and no deployment on the
+# default branch, so before 1.6.0 every update the guard merged reached
+# production only when somebody else next pushed. The sweep asks DexCode with
+# a GitHub OIDC token; DexCode re-checks the pull request and its CI itself and
+# merges with its GitHub App token, pinned to the head the sweep saw.
 #
-# So the merge state and CI both decide. BLOCKED or BEHIND can queue behind
-# branch protection only after another CI check passed on the exact head;
-# CLEAN or HAS_HOOKS can merge only after independent CI passed. Failed,
-# pending, absent or unreadable checks never authorize a merge. Anything else
-# waits for the scheduled sweep to look again.
+# The sweep asks only when GitHub reports the update CLEAN or HAS_HOOKS and CI
+# outside this workflow has passed on that exact head. Failed, pending, absent
+# or unreadable checks never lead to a merge. One update merges per run: each
+# merge moves main under the rest. A request whose outcome is unknown counts as
+# a possible merge, so it also ends the asking for that run. Everything left
+# open is named in the run summary with its reason.
 #
-# Major updates are never merged here. A major bump can pass every check and
-# still change behaviour, and a dependency file is the one place where a green
-# tick is weakest evidence. They are labelled and left for a person.
+# Major updates are never merged. A major bump can pass every check and still
+# change behaviour, and a dependency file is the one place where a green tick
+# is weakest evidence. They are labelled and left for a person.
 #
-# Nothing in this workflow checks out or executes the pull request's code. It
-# reads Dependabot's own metadata and calls the GitHub API, which is why it can
-# hold write permission safely on a branch it did not review.
+# Nothing in this workflow checks out or executes the pull request's code, and
+# it cannot write code or pull requests. It reads Dependabot's metadata, writes
+# labels and comments, and asks DexCode.
 name: DexCode Dependabot guard
 
 on:
@@ -33,7 +33,7 @@ on:
   # only new updates are handled. The offset minute is deliberate: GitHub drops
   # scheduled runs that pile up on the hour.
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 */3 * * *"
   workflow_dispatch:
 
 # Least privilege at the root; the jobs that need write say so themselves.
@@ -57,18 +57,14 @@ jobs:
       github.event_name == 'pull_request' &&
       github.event.pull_request.user.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
+    # This path only labels. Merging happens in the sweep, through DexCode,
+    # so nothing here can write code or pull requests.
     permissions:
-      contents: write
-      pull-requests: write
-      # Labels are an issues resource even on a pull request, so adding one
-      # needs issues: write. Without it `gh label create` is denied and the
-      # add-label step then fails with "not found", which reads like a missing
-      # label rather than a missing permission.
+      contents: read
+      pull-requests: read
+      # Labels and comments are issues resources even on a pull request, and
+      # are written through the issues API, which needs only this.
       issues: write
-      # GitHub's merge state is computed from the pull request's checks and
-      # commit statuses, which a token without these cannot read.
-      checks: read
-      statuses: read
     steps:
       - name: Read Dependabot's metadata for this pull request
         id: meta
@@ -104,7 +100,7 @@ jobs:
       - name: Leave a DexCode-managed file for a template release
         if: steps.managed.outputs.touched == 'true'
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           PATHS: ${{ steps.managed.outputs.paths }}
@@ -118,116 +114,19 @@ jobs:
               *) echo "::error::Could not create the label: ${output}"; exit 1 ;;
             esac
           fi
-          if ! gh pr view "$PR_URL" --json labels --jq '[.labels[].name]' | grep -q "dexcode:managed-file"; then
-            gh pr edit "$PR_URL" --add-label "dexcode:managed-file"
-            gh pr comment "$PR_URL" --body "DexCode will not merge this: it changes \`${PATHS}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay, and GitHub will not let this workflow merge workflow changes. The pin moves in a template release instead."
+          if ! gh pr view "${PR_NUMBER}" --json labels --jq '[.labels[].name]' | grep -q "dexcode:managed-file"; then
+            gh api --method POST "repos/${GH_REPO}/issues/${PR_NUMBER}/labels" -f "labels[]=dexcode:managed-file" > /dev/null
+            gh api --method POST "repos/${GH_REPO}/issues/${PR_NUMBER}/comments" > /dev/null \
+              -f body="DexCode will not merge this: it changes \`${PATHS}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay. The pin moves in a template release instead."
           fi
           echo "::notice::Left alone: changes managed ${PATHS}"
-
-      - name: Enable auto-merge for a patch or minor update
-        if: |
-          steps.managed.outputs.touched != 'true' && (
-          steps.meta.outputs.update-type == 'version-update:semver-patch' ||
-          steps.meta.outputs.update-type == 'version-update:semver-minor')
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # gh infers the repository from a git remote, and nothing is checked
-          # out here on purpose. Without this it fails with "not a git
-          # repository", which reads like a broken runner rather than a
-          # missing argument.
-          GH_REPO: ${{ github.repository }}
-        # --auto queues the merge behind the required checks, but only when
-        # there are some: gh merges outright when GitHub calls the pull request
-        # mergeable now, and with no required check that includes one whose
-        # checks are still running — this job's own check among them. Queue
-        # only while branch protection is holding it (BLOCKED or BEHIND),
-        # and only after another CI check has passed on this exact head.
-        # Otherwise the scheduled sweep rechecks CI. Squash keeps one commit
-        # per update.
-        #
-        # It needs "Allow auto-merge" enabled on the repository. Without it
-        # this fails with a GraphQL error naming an API mutation, which tells
-        # nobody what to switch on. The workflow names the setting instead.
-        run: |
-          set -euo pipefail
-          # GitHub works the state out on request, so the first read of a new
-          # pull request usually says UNKNOWN. Asking again gives it time.
-          state="UNKNOWN"
-          for _ in 1 2 3 4 5; do
-            state="$(gh pr view "$PR_URL" --json mergeStateStatus --jq '.mergeStateStatus')"
-            [ "$state" = "UNKNOWN" ] || break
-            sleep 3
-          done
-          case "$state" in
-            BLOCKED|BEHIND) ;;
-            *)
-              echo "::notice::Not queued: merge state ${state}. The scheduled sweep will check CI before merging."
-              exit 0
-              ;;
-          esac
-          # A review-only branch rule can also report BLOCKED. Do not queue
-          # auto-merge until a real CI check on this exact head has passed.
-          # The sweep below applies the same gate; keep the two jq programs
-          # identical.
-          ci="$(mktemp -d "${RUNNER_TEMP:-/tmp}/dexcode-ci.XXXXXX")"
-          if ! gh api --paginate --slurp "repos/${GH_REPO}/commits/${HEAD_SHA}/check-runs?per_page=100" > "${ci}/checks.json" ||
-             ! gh api --paginate --slurp "repos/${GH_REPO}/commits/${HEAD_SHA}/status?per_page=100" > "${ci}/statuses.json"; then
-            echo "::error::Cannot read CI for ${HEAD_SHA}; refusing auto-merge"
-            exit 1
-          fi
-          # Files, not --argjson: Linux caps one argument at 128 KiB, and a
-          # page of check runs with their output text can exceed that.
-          if ! passed="$(jq -en --slurpfile c "${ci}/checks.json" --slurpfile s "${ci}/statuses.json" '
-            if ($c | length) != 1 or ($s | length) != 1 or
-               ($c[0] | type) != "array" or ($s[0] | type) != "array" or
-               ($c[0] | length) == 0 or ($s[0] | length) == 0
-            then error("incomplete CI response") else . end |
-            $c[0] as $checks | $s[0] as $statuses |
-            if ($checks | any(.[]; (.check_runs | type) != "array" or (.total_count | type) != "number")) or
-               ($checks[0].total_count != ([$checks[].check_runs[]] | length)) or
-               ($statuses | any(.[]; (.statuses | type) != "array" or (.state | type) != "string"))
-            then error("incomplete CI response")
-            else
-              # Jobs of this workflow are neither CI evidence nor blockers.
-              [$checks[].check_runs[] | select(.app.slug != "github-actions" or (.name != "dexcode-dependabot-guard" and .name != "dexcode-dependabot-sweep"))] as $runs |
-              if any($runs[]; .status != "completed" or (.conclusion != "success" and .conclusion != "neutral" and .conclusion != "skipped")) or
-                 ($statuses[0].statuses | length > 0 and $statuses[0].state != "success")
-              then 0
-              # Before 1.5.3 these jobs were named guard and sweep. A check with
-              # either name may be this workflow, so it cannot count as CI
-              # evidence, but it may be another workflow, so its failure blocks.
-              else ([$runs[] | select(.conclusion == "success") | select(.app.slug != "github-actions" or (.name != "guard" and .name != "sweep"))] | length) +
-                   ([$statuses[0].statuses[] | select(.state == "success")] | length)
-              end
-            end
-          ')"; then
-            echo "::error::Incomplete CI response for ${HEAD_SHA}; refusing auto-merge"
-            exit 1
-          fi
-          if [ "$passed" -eq 0 ]; then
-            echo "::notice::Not queued: no successful CI check on ${HEAD_SHA}"
-            exit 0
-          fi
-          if ! output="$(gh pr merge --auto --squash --match-head-commit "$HEAD_SHA" "$PR_URL" 2>&1)"; then
-            case "$output" in
-              *"Auto merge is not allowed"*)
-                echo "::error::Enable Settings → General → Allow auto-merge on this repository. Until then DexCode can only merge updates whose checks have already passed."
-                gh pr comment "$PR_URL" --body "DexCode could not queue this update: **Allow auto-merge** is turned off for this repository (Settings → General). Turn it on and this will merge itself once the required checks pass." || true
-                exit 1
-                ;;
-              *) echo "::error::$output"; exit 1 ;;
-            esac
-          fi
-          echo "$output"
 
       - name: Leave a major update for a person
         if: |
           steps.managed.outputs.touched != 'true' &&
           steps.meta.outputs.update-type == 'version-update:semver-major'
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           DEPENDENCY: ${{ steps.meta.outputs.dependency-names }}
@@ -245,8 +144,9 @@ jobs:
               *) echo "::error::Could not create the label: $output"; exit 1 ;;
             esac
           fi
-          gh pr edit "$PR_URL" --add-label "dexcode:major-update"
-          gh pr comment "$PR_URL" --body "DexCode did not merge this automatically: \`${DEPENDENCY}\` is a major update, and a passing check run is weak evidence that a major bump is safe. Review it and merge when you are happy."
+          gh api --method POST "repos/${GH_REPO}/issues/${PR_NUMBER}/labels" -f "labels[]=dexcode:major-update" > /dev/null
+          gh api --method POST "repos/${GH_REPO}/issues/${PR_NUMBER}/comments" > /dev/null \
+            -f body="DexCode did not merge this automatically: \`${DEPENDENCY}\` is a major update, and a passing check run is weak evidence that a major bump is safe. Review it and merge when you are happy."
 
   # The same policy, applied to pull requests that were already open. The event
   # path above cannot reach them: a pull request opened before this workflow
@@ -258,19 +158,24 @@ jobs:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pull-requests: write
+      contents: read
+      pull-requests: read
       issues: write
       # REST check runs and commit statuses need these reads. The GraphQL
       # statusCheckRollup field also traverses Actions workflowRun, which needs
       # a different permission and fails even with both of these granted.
       checks: read
       statuses: read
+      # A GitHub OIDC token for DexCode's merge endpoint. DexCode merges with
+      # its GitHub App token: a merge made with this workflow's GITHUB_TOKEN
+      # starts no CI and no deployment on the default branch.
+      id-token: write
     steps:
       - name: Apply the policy to every open Dependabot pull request
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
+          DEXCODE_MERGE_URL: https://dexcode.ai/api/v1/dependabot/merge
         # dependabot/fetch-metadata reads the pull_request event payload, so it
         # cannot help here. The bump is read from Dependabot's own title
         # instead, which is the only thing this needs to decide: the policy
@@ -285,7 +190,7 @@ jobs:
             --author "app/dependabot" \
             --state open \
             --limit 100 \
-            --json number,title,body,labels,files,autoMergeRequest,mergeStateStatus,headRefOid \
+            --json number,title,body,labels,files,mergeStateStatus,headRefOid \
             > "${prs}"
 
           # Set when a pull request could not be queued for a reason that is
@@ -294,6 +199,30 @@ jobs:
           # meant a single misconfigured branch hid the whole backlog — and
           # reports it at the end.
           blocked=""
+          # Set once an update merges outright in this run. Each merge moves
+          # main under the rest of the list: sibling updates often edit the
+          # same lockfile lines and conflict, and GitHub recomputes merge
+          # state lazily. So one update merges per run; the next sweep reads
+          # the others against the new main. It also gives each merge's
+          # deployment time to finish before the next lands.
+          merged=""
+          # Set when DexCode answers 429; no further requests this run.
+          throttled=""
+          # Set when a request was sent but its outcome is unknown: no answer,
+          # a timeout, a server error, or an answer this guard cannot read.
+          # DexCode may still have merged that update and moved main, so it
+          # counts as a merge: no further requests this run.
+          uncertain=""
+          # Every pull request this run leaves open is named in the run
+          # summary with its reason, so a green run cannot quietly skip one
+          # for ever. Ops separately flags Dependabot pull requests that stay
+          # open for more than seven days.
+          left=""
+          acted=""
+          leave() {
+            echo "$1"
+            left="${left}- ${1#::notice::}"$'\n'
+          }
 
           total="$(jq 'length' "${prs}")"
           echo "Open Dependabot pull requests: ${total}"
@@ -303,13 +232,11 @@ jobs:
             number="$(echo "${pr}" | jq -r '.number')"
             title="$(echo "${pr}" | jq -r '.title')"
             body="$(echo "${pr}" | jq -r '.body // ""')"
-            queued="$(echo "${pr}" | jq -r '.autoMergeRequest != null')"
             labelled="$(echo "${pr}" | jq -r '[.labels[].name] | index("dexcode:major-update") != null')"
 
-            if [ "${queued}" = "true" ]; then
-              echo "#${number}: auto-merge already queued"
-              continue
-            fi
+            # An auto-merge queued by a guard before 1.6.0 is not a reason to
+            # skip: GitHub would complete it as this workflow's token, which
+            # starts no CI or deployment. DexCode merges it like any other.
             # DexCode publishes its own files and verifies them byte for byte
             # before each planning run, so merging a bump inside one marks the
             # installation drifted and every run afterwards is refused. Same
@@ -325,10 +252,10 @@ jobs:
                     *) echo "::error::Could not create the label: ${output}"; exit 1 ;;
                   esac
                 fi
-                gh pr edit "${number}" --add-label "dexcode:managed-file"
-                gh pr comment "${number}" --body "DexCode will not merge this: it changes \`${managed}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay, and GitHub will not let this workflow merge workflow changes. The pin moves in a template release instead."
+                gh api --method POST "repos/${GH_REPO}/issues/${number}/labels" -f "labels[]=dexcode:managed-file" > /dev/null
+                gh api --method POST "repos/${GH_REPO}/issues/${number}/comments" > /dev/null -f body="DexCode will not merge this: it changes \`${managed}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay. The pin moves in a template release instead."
               fi
-              echo "#${number}: left alone, changes managed ${managed}"
+              leave "#${number}: left alone, changes managed ${managed}"
               continue
             fi
 
@@ -339,7 +266,7 @@ jobs:
             # was missing from exactly the pull requests a person is most
             # likely to read and merge anyway.
             if [ "${labelled}" = "true" ]; then
-              echo "#${number}: already labelled for review"
+              leave "#${number}: already labelled for review"
               continue
             fi
 
@@ -354,7 +281,7 @@ jobs:
               | grep -oiE 'from[[:space:]]+v?[0-9]+[^[:space:]]*[[:space:]]+to[[:space:]]+v?[0-9]+[^[:space:]]*' \
               || true)"
             if [ -z "${versions}" ]; then
-              echo "::notice::#${number} left alone: no version range in its title or body (\"${title}\")"
+              leave "::notice::#${number} left alone: no version range in its title or body"
               continue
             fi
 
@@ -381,9 +308,9 @@ jobs:
                   *) echo "::error::Could not create the label: ${output}"; exit 1 ;;
                 esac
               fi
-              gh pr edit "${number}" --add-label "dexcode:major-update"
-              gh pr comment "${number}" --body "DexCode did not merge this automatically: this is a major update, and a passing check run is weak evidence that a major bump is safe. Review it and merge when you are happy."
-              echo "#${number}: labelled as a major update"
+              gh api --method POST "repos/${GH_REPO}/issues/${number}/labels" -f "labels[]=dexcode:major-update" > /dev/null
+              gh api --method POST "repos/${GH_REPO}/issues/${number}/comments" > /dev/null -f body="DexCode did not merge this automatically: this is a major update, and a passing check run is weak evidence that a major bump is safe. Review it and merge when you are happy."
+              leave "#${number}: labelled as a major update"
               continue
             fi
 
@@ -400,8 +327,11 @@ jobs:
             # either. --match-head-commit stops a push made after this list
             # was read from merging on the strength of the old head's checks.
             #
-            # GitHub works the state out on request, so a list read just after
-            # main moved reports UNKNOWN. Asking again gives it time.
+            # Decide from this pull request's current state, not the list's:
+            # the list was read before anything in this run changed main.
+            # GitHub works the state out on request, so a read just after main
+            # moved reports UNKNOWN. Asking again gives it time.
+            pr="$(gh pr view "${number}" --json mergeStateStatus,headRefOid)"
             state="$(echo "${pr}" | jq -r '.mergeStateStatus')"
             for _ in 1 2 3 4 5; do
               [ "${state}" = "UNKNOWN" ] || break
@@ -410,10 +340,25 @@ jobs:
               state="$(echo "${pr}" | jq -r '.mergeStateStatus')"
             done
             case "${state}" in
-              BLOCKED|BEHIND) outcome="auto-merge queued" ;;
-              CLEAN|HAS_HOOKS) outcome="merge requested" ;;
+              CLEAN|HAS_HOOKS)
+                if [ -n "${merged}" ]; then
+                  leave "#${number}: waiting, #${merged} merged earlier in this sweep and main moved; the next sweep reads it again"
+                  continue
+                fi
+                if [ -n "${uncertain}" ]; then
+                  leave "#${number}: waiting, the request for #${uncertain} had no clear answer and may have merged; the next sweep reads it again"
+                  continue
+                fi
+                if [ -n "${throttled}" ]; then
+                  leave "#${number}: waiting, DexCode asked this repository to slow down"
+                  continue
+                fi
+                ;;
               *)
-                echo "#${number}: waiting, merge state ${state}"
+                if [ "${state}" = "DIRTY" ]; then
+                  echo "::warning::#${number} conflicts with the default branch. Dependabot usually rebases it; if it stays this way, it needs a person."
+                fi
+                leave "#${number}: waiting, merge state ${state}"
                 continue
                 ;;
             esac
@@ -461,31 +406,93 @@ jobs:
               exit 1
             fi
             if [ "$passed" -eq 0 ]; then
-              echo "::notice::#${number} left alone: no completed, successful CI outside this guard"
+              leave "::notice::#${number} left alone: no completed, successful CI outside this guard"
               continue
             fi
-            if ! output="$(gh pr merge --auto --squash --match-head-commit "${head}" "${number}" 2>&1)"; then
-              case "${output}" in
-                *"Auto merge is not allowed"*)
-                  blocked="Auto-merge is switched off. Enable Settings → General → Allow auto-merge."
-                  continue
-                  ;;
-                *"Protected branch rules not configured"*)
-                  # The merge state said protection was holding this pull
-                  # request and GitHub disagrees. Merging anyway would merge
-                  # before the checks finish, so report it instead.
-                  blocked="The default branch has no protection rule, so there are no required checks for auto-merge to wait for. Updates still merge once GitHub reports every check as passed; add a branch protection rule with at least one required check to queue them sooner."
-                  continue
-                  ;;
-                *"Head branch was modified"*)
-                  echo "#${number}: pushed to since the list was read; the next sweep looks again"
-                  continue
-                  ;;
-                *) echo "::error::#${number}: ${output}"; exit 1 ;;
-              esac
+            # DexCode re-checks all of the above itself and merges with its
+            # GitHub App token, pinned to this head. A merge made with this
+            # workflow's GITHUB_TOKEN would start no CI and no deployment.
+            #
+            # One OIDC token per request, since DexCode accepts each token
+            # once. Tokens go through private header files so neither appears
+            # on a command line.
+            http="000"
+            sent=""
+            if ( umask 077; printf 'Authorization: bearer %s\n' "${ACTIONS_ID_TOKEN_REQUEST_TOKEN:-}" > "${ci}/oidc-headers" ) &&
+               token="$(curl -sS --fail --max-time 30 -H "@${ci}/oidc-headers" \
+                 "${ACTIONS_ID_TOKEN_REQUEST_URL:-missing}&audience=dexcode:dependabot-guard:merge" | jq -er '.value')" &&
+               ( umask 077; printf 'Authorization: Bearer %s\nContent-Type: application/json\n' "${token}" > "${ci}/dexcode-headers" ) &&
+               jq -nc --argjson number "${number}" --arg head "${head}" \
+                 '{pull_request_number: $number, head_sha: $head}' > "${ci}/request.json"; then
+              sent="yes"
+              http="$(curl -sS --max-time 120 -o "${ci}/response.json" -w '%{http_code}' \
+                -H "@${ci}/dexcode-headers" --data-binary "@${ci}/request.json" "${DEXCODE_MERGE_URL}" || true)"
             fi
-            echo "#${number}: ${outcome}"
+            rm -f "${ci}/oidc-headers" "${ci}/dexcode-headers"
+            token=""
+            case "${http}" in
+              200)
+                outcome="$(jq -r '.outcome // ""' "${ci}/response.json" 2>/dev/null || true)"
+                # Printed to the log and the run summary, so only plain
+                # characters: nothing that could start a workflow command.
+                reason="$(jq -r '.reason // ""' "${ci}/response.json" 2>/dev/null | tr -cd 'A-Za-z0-9 ._/(),+?-' | head -c 200 || true)"
+                case "${outcome}" in
+                  merged)
+                    merged="${number}"
+                    sha="$(jq -r '.merge_commit_sha // ""' "${ci}/response.json" | tr -cd '0-9a-f' | head -c 64)"
+                    echo "#${number}: merged by DexCode as ${sha}"
+                    acted="${acted}- #${number}: merged by DexCode as ${sha}"$'\n'
+                    ;;
+                  waiting) leave "#${number}: waiting, DexCode says ${reason}" ;;
+                  refused) leave "#${number}: left alone, DexCode says ${reason}" ;;
+                  *)
+                    uncertain="${number}"
+                    echo "::warning::#${number}: DexCode gave an answer this guard does not understand"
+                    leave "#${number}: waiting, DexCode's answer could not be read"
+                    ;;
+                esac
+                ;;
+              401|403)
+                # DexCode does not recognise this repository's guard. Nothing
+                # will merge until that is fixed, so the run says so in red.
+                blocked="DexCode refused this repository's request (HTTP ${http}). Check that the Dependabot guard installation in DexCode is active and current."
+                leave "#${number}: not merged, DexCode refused the request"
+                ;;
+              429)
+                throttled="yes"
+                echo "::warning::DexCode asked this repository to slow down; the next sweep continues"
+                leave "#${number}: waiting, DexCode asked this repository to slow down"
+                ;;
+              *)
+                # Without an identity token nothing was sent, so nothing can
+                # have merged. Once a request has gone, DexCode may have merged
+                # it before the answer was lost.
+                if [ -n "${sent}" ]; then
+                  uncertain="${number}"
+                fi
+                echo "::warning::#${number}: DexCode could not be reached or failed (HTTP ${http}); the next sweep asks again"
+                leave "#${number}: waiting, DexCode was unavailable"
+                ;;
+            esac
           done
+
+          {
+            echo "### Dependabot sweep"
+            echo
+            echo "Open Dependabot pull requests: ${total}"
+            if [ -n "${acted}" ]; then
+              echo
+              echo "Merged or queued in this run:"
+              echo
+              printf '%s' "${acted}"
+            fi
+            if [ -n "${left}" ]; then
+              echo
+              echo "Left open, with the reason:"
+              echo
+              printf '%s' "${left}"
+            fi
+          } >> "${GITHUB_STEP_SUMMARY:-/dev/null}"
 
           if [ -n "${blocked}" ]; then
             echo "::error::${blocked}"
