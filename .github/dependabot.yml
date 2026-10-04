@@ -6,6 +6,8 @@ version: 2
 # dependencies are the Dockerfile base images and the workflow actions.
 updates:
   - package-ecosystem: docker
+    cooldown:
+      default-days: 3
     directory: "/"
     schedule:
       interval: weekly
@@ -30,6 +32,8 @@ updates:
   # against .ops-agent/provenance.json, so its dependencies move only in an
   # Ops relay release. A bare ignore also covers security updates.
   - package-ecosystem: npm
+    cooldown:
+      default-days: 3
     directory: "/.ops-agent"
     schedule:
       interval: weekly
@@ -38,6 +42,8 @@ updates:
       - dependency-name: "*"
 
   - package-ecosystem: github-actions
+    cooldown:
+      default-days: 3
     directory: "/"
     schedule:
       interval: weekly
