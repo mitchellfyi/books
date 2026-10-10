@@ -1,4 +1,4 @@
-# Managed by DexCode template dependabot-guard@1.6.1. Edit the template, not this file.
+# Managed by DexCode template dependabot-guard@1.6.2. Edit the template, not this file.
 #
 # What this does, and deliberately does not do.
 #
@@ -18,11 +18,16 @@
 #
 # Major updates are never merged. A major bump can pass every check and still
 # change behaviour, and a dependency file is the one place where a green tick
-# is weakest evidence. They are labelled and left for a person.
+# is weakest evidence. They are left for a person, and labelled when GitHub
+# lets this workflow label them (see the permissions below). Whether an update
+# is a major comes from Dependabot's own `update-type` metadata in its commit,
+# the record DexCode checks too, never from the pull request's body.
 #
 # Nothing in this workflow checks out or executes the pull request's code, and
-# it cannot write code or pull requests. It reads Dependabot's metadata, writes
-# labels and comments, and asks DexCode.
+# it cannot write code or pull requests. It reads Dependabot's metadata, tries
+# to write labels and comments, and asks DexCode. A label or comment that
+# GitHub refuses is reported and never stops the run: merging the rest of the
+# backlog does not depend on either.
 name: DexCode Dependabot guard
 
 on:
@@ -62,8 +67,12 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
-      # Labels and comments are issues resources even on a pull request, and
-      # are written through the issues API, which needs only this.
+      # Creates the repository's labels. It does not let the token put a label
+      # or comment on a pull request: GitHub answered that with HTTP 403
+      # ("Resource not accessible by integration") on dayz.cx's 10 October
+      # 2026 sweep, because that needs `pull-requests: write`, which ADR 0014
+      # withholds on purpose. So labelling a pull request may be refused, and
+      # the steps below report that without failing.
       issues: write
     steps:
       - name: Read Dependabot's metadata for this pull request
@@ -106,18 +115,36 @@ jobs:
           PATHS: ${{ steps.managed.outputs.paths }}
         run: |
           set -euo pipefail
-          if ! output="$(gh label create "dexcode:managed-file" \
-                --color "0E8A16" \
-                --description "Changes a DexCode- or Ops-managed file — update the template instead" 2>&1)"; then
-            case "${output}" in
-              *"already exists"*) : ;;
-              *) echo "::error::Could not create the label: ${output}"; exit 1 ;;
-            esac
-          fi
+          # A label and a comment are a courtesy: the update is left alone
+          # either way. GitHub refuses them to a token without
+          # `pull-requests: write`, which this workflow does not hold, so a
+          # refusal is reported in flag_error and never fails the run. An
+          # earlier version exited here and turned a refused label into a
+          # failed run that stopped every other update from merging.
+          flag_error=""
+          flag() { # pull request, label, colour, description, comment
+            local out step
+            if ! out="$(gh label create "$2" --color "$3" --description "$4" 2>&1)" &&
+               [[ "${out}" != *"already exists"* ]]; then
+              step="not labelled"
+            elif ! out="$(gh api --method POST "repos/${GH_REPO}/issues/$1/labels" -f "labels[]=$2" 2>&1 > /dev/null)"; then
+              step="not labelled"
+            elif ! out="$(gh api --method POST "repos/${GH_REPO}/issues/$1/comments" -f body="$5" 2>&1 > /dev/null)"; then
+              step="labelled, but not commented"
+            else
+              return 0
+            fi
+            # Printed to the log and the run summary, so only plain
+            # characters: nothing that could start a workflow command.
+            flag_error="${step}: $(printf '%s' "${out}" | tr '\n' ' ' | tr -cd 'A-Za-z0-9 ._/(),+?-' | head -c 160 || true)"
+            return 1
+          }
           if ! gh pr view "${PR_NUMBER}" --json labels --jq '[.labels[].name]' | grep -q "dexcode:managed-file"; then
-            gh api --method POST "repos/${GH_REPO}/issues/${PR_NUMBER}/labels" -f "labels[]=dexcode:managed-file" > /dev/null
-            gh api --method POST "repos/${GH_REPO}/issues/${PR_NUMBER}/comments" > /dev/null \
-              -f body="DexCode will not merge this: it changes \`${PATHS}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay. The pin moves in a template release instead."
+            if ! flag "${PR_NUMBER}" "dexcode:managed-file" "0E8A16" \
+                "Changes a DexCode- or Ops-managed file — update the template instead" \
+                "DexCode will not merge this: it changes \`${PATHS}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay. The pin moves in a template release instead."; then
+              echo "::notice::#${PR_NUMBER}: ${flag_error}"
+            fi
           fi
           echo "::notice::Left alone: changes managed ${PATHS}"
 
@@ -132,21 +159,34 @@ jobs:
           DEPENDENCY: ${{ steps.meta.outputs.dependency-names }}
         run: |
           set -euo pipefail
-          # Created on demand so the workflow needs no repository setup before
-          # its first run. Only an "already exists" failure is ignored: the
-          # first version of this swallowed every error, so a permissions
-          # problem surfaced two lines later as a label that did not exist.
-          if ! output="$(gh label create "dexcode:major-update" \
-                --color "B60205" \
-                --description "Major dependency update — DexCode will not merge this automatically" 2>&1)"; then
-            case "$output" in
-              *"already exists"*) : ;;
-              *) echo "::error::Could not create the label: $output"; exit 1 ;;
-            esac
+          # The label is created on demand so the workflow needs no repository
+          # setup before its first run. Only "already exists" is ignored when
+          # creating it, and every other refusal is printed rather than
+          # swallowed, but none of them fails the run: the update is left for
+          # a person whether or not GitHub lets this workflow say so.
+          flag_error=""
+          flag() { # pull request, label, colour, description, comment
+            local out step
+            if ! out="$(gh label create "$2" --color "$3" --description "$4" 2>&1)" &&
+               [[ "${out}" != *"already exists"* ]]; then
+              step="not labelled"
+            elif ! out="$(gh api --method POST "repos/${GH_REPO}/issues/$1/labels" -f "labels[]=$2" 2>&1 > /dev/null)"; then
+              step="not labelled"
+            elif ! out="$(gh api --method POST "repos/${GH_REPO}/issues/$1/comments" -f body="$5" 2>&1 > /dev/null)"; then
+              step="labelled, but not commented"
+            else
+              return 0
+            fi
+            # Printed to the log and the run summary, so only plain
+            # characters: nothing that could start a workflow command.
+            flag_error="${step}: $(printf '%s' "${out}" | tr '\n' ' ' | tr -cd 'A-Za-z0-9 ._/(),+?-' | head -c 160 || true)"
+            return 1
+          }
+          if ! flag "${PR_NUMBER}" "dexcode:major-update" "B60205" \
+              "Major dependency update — DexCode will not merge this automatically" \
+              "DexCode did not merge this automatically: \`${DEPENDENCY}\` is a major update, and a passing check run is weak evidence that a major bump is safe. Review it and merge when you are happy."; then
+            echo "::notice::#${PR_NUMBER} is a major update left for a person (${flag_error})"
           fi
-          gh api --method POST "repos/${GH_REPO}/issues/${PR_NUMBER}/labels" -f "labels[]=dexcode:major-update" > /dev/null
-          gh api --method POST "repos/${GH_REPO}/issues/${PR_NUMBER}/comments" > /dev/null \
-            -f body="DexCode did not merge this automatically: \`${DEPENDENCY}\` is a major update, and a passing check run is weak evidence that a major bump is safe. Review it and merge when you are happy."
 
   # The same policy, applied to pull requests that were already open. The event
   # path above cannot reach them: a pull request opened before this workflow
@@ -160,6 +200,8 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
+      # As in the guard job: creates labels; labelling a pull request is
+      # attempted and may be refused, which the sweep reports and survives.
       issues: write
       # REST check runs and commit statuses need these reads. The GraphQL
       # statusCheckRollup field also traverses Actions workflowRun, which needs
@@ -177,27 +219,32 @@ jobs:
           GH_REPO: ${{ github.repository }}
           DEXCODE_MERGE_URL: https://dexcode.ai/api/v1/dependabot/merge
         # dependabot/fetch-metadata reads the pull_request event payload, so it
-        # cannot help here. The bump is read from Dependabot's own title
-        # instead, which is the only thing this needs to decide: the policy
-        # branches on major against everything else, and nothing below checks
-        # out or runs the pull request's code.
+        # cannot help here. The bump is read from the metadata block in
+        # Dependabot's own commit message instead, which is the only thing
+        # this needs to decide: the policy branches on major against everything
+        # else, and nothing below checks out or runs the pull request's code.
         run: |
           set -euo pipefail
           prs="${RUNNER_TEMP:-/tmp}/dexcode-dependabot.json"
           ci="$(mktemp -d "${RUNNER_TEMP:-/tmp}/dexcode-ci.XXXXXX")"
 
+          # No body: it carries the dependency's release notes, which mention
+          # other packages' versions. No commits either: they are read one
+          # pull request at a time through REST, since 100 pull requests times
+          # their commits times each commit's authors approaches GitHub's
+          # GraphQL node limit.
           gh pr list \
             --author "app/dependabot" \
             --state open \
             --limit 100 \
-            --json number,title,body,labels,files,mergeStateStatus,headRefOid \
+            --json number,title,labels,files,mergeStateStatus,headRefOid \
             > "${prs}"
 
           # Set when a pull request could not be queued for a reason that is
           # about the repository rather than that pull request. The sweep keeps
-          # going — labelling majors still works, and stopping at the first one
-          # meant a single misconfigured branch hid the whole backlog — and
-          # reports it at the end.
+          # going — reading and reporting the others still works, and stopping
+          # at the first one meant a single misconfigured branch hid the whole
+          # backlog — and reports it at the end.
           blocked=""
           # Set once an update merges outright in this run. Each merge moves
           # main under the rest of the list: sibling updates often edit the
@@ -223,6 +270,31 @@ jobs:
             echo "$1"
             left="${left}- ${1#::notice::}"$'\n'
           }
+          # Label and comment on a pull request, as a courtesy: the update is
+          # left alone either way. GitHub refuses both to a token without
+          # `pull-requests: write`, which this workflow does not hold (it
+          # answered HTTP 403 on dayz.cx), so a refusal is reported in
+          # flag_error and never ends the run. Version 1.6.1 exited here, which
+          # failed dayz.cx's sweep on every run from 5 October and skipped the
+          # run summary and every update after the refused one.
+          flag_error=""
+          flag() { # pull request, label, colour, description, comment
+            local out step
+            if ! out="$(gh label create "$2" --color "$3" --description "$4" 2>&1)" &&
+               [[ "${out}" != *"already exists"* ]]; then
+              step="not labelled"
+            elif ! out="$(gh api --method POST "repos/${GH_REPO}/issues/$1/labels" -f "labels[]=$2" 2>&1 > /dev/null)"; then
+              step="not labelled"
+            elif ! out="$(gh api --method POST "repos/${GH_REPO}/issues/$1/comments" -f body="$5" 2>&1 > /dev/null)"; then
+              step="labelled, but not commented"
+            else
+              return 0
+            fi
+            # Printed to the log and the run summary, so only plain
+            # characters: nothing that could start a workflow command.
+            flag_error="${step}: $(printf '%s' "${out}" | tr '\n' ' ' | tr -cd 'A-Za-z0-9 ._/(),+?-' | head -c 160 || true)"
+            return 1
+          }
 
           total="$(jq 'length' "${prs}")"
           echo "Open Dependabot pull requests: ${total}"
@@ -231,7 +303,6 @@ jobs:
             pr="$(echo "${row}" | base64 --decode)"
             number="$(echo "${pr}" | jq -r '.number')"
             title="$(echo "${pr}" | jq -r '.title')"
-            body="$(echo "${pr}" | jq -r '.body // ""')"
             labelled="$(echo "${pr}" | jq -r '[.labels[].name] | index("dexcode:major-update") != null')"
 
             # An auto-merge queued by a guard before 1.6.0 is not a reason to
@@ -243,19 +314,15 @@ jobs:
             # rule as the event path above.
             managed="$(echo "${pr}" | jq -r '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/|^\\.dex-implementation/|^\\.github/workflows/platform-deploy\\.yml$|^\\.ops-agent/"))] | join(", ")')"
             if [ -n "${managed}" ]; then
+              note=""
               if ! echo "${pr}" | jq -e '[.labels[].name] | index("dexcode:managed-file")' >/dev/null; then
-                if ! output="$(gh label create "dexcode:managed-file" \
-                      --color "0E8A16" \
-                      --description "Changes a DexCode- or Ops-managed file — update the template instead" 2>&1)"; then
-                  case "${output}" in
-                    *"already exists"*) : ;;
-                    *) echo "::error::Could not create the label: ${output}"; exit 1 ;;
-                  esac
+                if ! flag "${number}" "dexcode:managed-file" "0E8A16" \
+                    "Changes a DexCode- or Ops-managed file — update the template instead" \
+                    "DexCode will not merge this: it changes \`${managed}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay. The pin moves in a template release instead."; then
+                  note=" (${flag_error})"
                 fi
-                gh api --method POST "repos/${GH_REPO}/issues/${number}/labels" -f "labels[]=dexcode:managed-file" > /dev/null
-                gh api --method POST "repos/${GH_REPO}/issues/${number}/comments" > /dev/null -f body="DexCode will not merge this: it changes \`${managed}\`, which is published from a DexCode or Ops template. DexCode verifies its own files byte for byte before each planning run, so merging would mark this repository's installation as drifted and refuse every planning run; Ops renders the deploy workflow and agent relay. The pin moves in a template release instead."
               fi
-              leave "#${number}: left alone, changes managed ${managed}"
+              leave "#${number}: left alone, changes managed ${managed}${note}"
               continue
             fi
 
@@ -270,47 +337,93 @@ jobs:
               continue
             fi
 
-            # "Bump x from 1.2.3 to 2.0.0", with or without a conventional
-            # commit prefix. A grouped update says "bump the all-actions group
-            # with 7 updates" and carries no versions in its title at all —
-            # most of one repository's backlog was that shape — so the body is
-            # read too, where Dependabot lists every bump it made. Any single
-            # major in a group makes the whole group a major: the group merges
-            # as one commit, so the most dangerous member decides.
-            versions="$(printf '%s\n%s' "${title}" "${body}" \
-              | grep -oiE 'from[[:space:]]+v?[0-9]+[^[:space:]]*[[:space:]]+to[[:space:]]+v?[0-9]+[^[:space:]]*' \
-              || true)"
-            if [ -z "${versions}" ]; then
-              leave "::notice::#${number} left alone: no version range in its title or body"
+            # Dependabot's commit message carries the metadata block that
+            # dependabot/fetch-metadata reads on the event path: an
+            # `updated-dependencies:` list with one `update-type` for every
+            # dependency. DexCode decides from exactly that record, in the head
+            # commit alone, so the sweep reads it the same way: the head
+            # commit's block, nothing outside it and nothing from an earlier
+            # commit. The title and body do not decide. The body carries the
+            # dependency's release notes, and a changelog that says "bump
+            # other-library from 17 to 18" made dayz.cx's openai 7.25.0 to
+            # 7.27.0 look like a major. Any single major in a grouped update
+            # makes the whole group a major: the group merges as one commit, so
+            # the most dangerous member decides.
+            commit_head="$(echo "${pr}" | jq -r '.headRefOid')"
+            if ! message="$(gh api --paginate "repos/${GH_REPO}/pulls/${number}/commits?per_page=100" \
+                  | jq -r --arg head "${commit_head}" '.[] | select(.sha == $head) | .commit.message')"; then
+              blocked="Could not read the commits of #${number}, so its update type is unknown; refusing to guess."
+              leave "#${number}: waiting, its commits could not be read"
               continue
             fi
+            if [ -z "${message}" ]; then
+              leave "#${number}: waiting, its head commit is not in its commit list yet"
+              continue
+            fi
+            # One word per updated dependency: its update type, or "-" when the
+            # entry names none (an indirect dependency has no update-type) or
+            # names two. "-" cannot be a type, which DexCode's parser reads as
+            # [a-z]+. Nothing is printed unless the block is whole and well
+            # formed. The message goes in as a here-string, not a pipe: awk
+            # stops reading at the closing line, and under pipefail a writer
+            # killed by the closed pipe would fail the assignment.
+            entry_types="$(awk '
+              { sub(/\r$/, "") }
+              !inside && $0 == "updated-dependencies:" { inside = 1; next }
+              inside && $0 == "..." { closed = 1; exit }
+              inside && /^- dependency-name:/ { entries++; kind[entries] = "-"; typed[entries] = 0; next }
+              inside && /^  update-type: version-update:semver-[a-z]+$/ {
+                if (entries == 0) { bad = 1 }
+                else if (typed[entries]) { kind[entries] = "-" }
+                else { value = $0; sub(/^.*semver-/, "", value); kind[entries] = value; typed[entries] = 1 }
+                next
+              }
+              END { if (closed && !bad) for (i = 1; i <= entries; i++) print kind[i] }
+            ' <<< "${message}")"
 
             is_major="false"
-            while IFS= read -r range; do
-              [ -z "${range}" ] && continue
-              if [[ "${range}" =~ from[[:space:]]+v?([0-9]+)[^[:space:]]*[[:space:]]+to[[:space:]]+v?([0-9]+)[^[:space:]]* ]]; then
-                if [ "${BASH_REMATCH[1]}" != "${BASH_REMATCH[2]}" ]; then
-                  is_major="true"
-                  break
-                fi
+            if grep -qx 'major' <<< "${entry_types}"; then
+              is_major="true"
+            elif [ -n "${entry_types}" ] && ! grep -qvxE 'minor|patch' <<< "${entry_types}"; then
+              : # every updated dependency is a patch or a minor
+            else
+              # No update type: an update of an indirect dependency, which
+              # Dependabot records without one, or a commit that is not
+              # Dependabot's. The title is the only text left that Dependabot
+              # wrote, "Bump x from 1.2.3 to 2.0.0" with or without a
+              # conventional commit prefix. A grouped update's title has no
+              # versions at all, and then there is nothing to decide from.
+              # DexCode asks the same question of the commit and refuses what
+              # it cannot classify, so this only avoids asking in vain.
+              versions="$(printf '%s\n' "${title}" \
+                | grep -oiE 'from[[:space:]]+v?[0-9]+[^[:space:]]*[[:space:]]+to[[:space:]]+v?[0-9]+[^[:space:]]*' \
+                || true)"
+              if [ -z "${versions}" ]; then
+                leave "::notice::#${number} left alone: no update type in its commit metadata and no version range in its title"
+                continue
               fi
-            done <<< "${versions}"
+              while IFS= read -r range; do
+                [ -z "${range}" ] && continue
+                if [[ "${range}" =~ from[[:space:]]+v?([0-9]+)[^[:space:]]*[[:space:]]+to[[:space:]]+v?([0-9]+)[^[:space:]]* ]]; then
+                  if [ "${BASH_REMATCH[1]}" != "${BASH_REMATCH[2]}" ]; then
+                    is_major="true"
+                    break
+                  fi
+                fi
+              done <<< "${versions}"
+            fi
 
             if [ "${is_major}" = "true" ]; then
-              # Same treatment a major gets on the event path: labelled, never
-              # merged, and the comment happens once because the label above is
-              # checked first.
-              if ! output="$(gh label create "dexcode:major-update" \
-                    --color "B60205" \
-                    --description "Major dependency update — DexCode will not merge this automatically" 2>&1)"; then
-                case "${output}" in
-                  *"already exists"*) : ;;
-                  *) echo "::error::Could not create the label: ${output}"; exit 1 ;;
-                esac
+              # Same treatment a major gets on the event path: labelled when
+              # GitHub allows it, never merged, and the comment happens once
+              # because the label above is checked first.
+              if flag "${number}" "dexcode:major-update" "B60205" \
+                  "Major dependency update — DexCode will not merge this automatically" \
+                  "DexCode did not merge this automatically: this is a major update, and a passing check run is weak evidence that a major bump is safe. Review it and merge when you are happy."; then
+                leave "#${number}: labelled as a major update"
+              else
+                leave "#${number}: left alone, a major update (${flag_error})"
               fi
-              gh api --method POST "repos/${GH_REPO}/issues/${number}/labels" -f "labels[]=dexcode:major-update" > /dev/null
-              gh api --method POST "repos/${GH_REPO}/issues/${number}/comments" > /dev/null -f body="DexCode did not merge this automatically: this is a major update, and a passing check run is weak evidence that a major bump is safe. Review it and merge when you are happy."
-              leave "#${number}: labelled as a major update"
               continue
             fi
 
@@ -364,6 +477,12 @@ jobs:
             esac
 
             head="$(echo "${pr}" | jq -r '.headRefOid')"
+            # The update type was read from the head the list named. If a push
+            # moved it since, that reading is about another commit.
+            if [ "${head}" != "${commit_head}" ]; then
+              leave "#${number}: waiting, its head moved after the sweep read its commits; the next sweep reads it again"
+              continue
+            fi
             # gh's GraphQL statusCheckRollup expands each checkSuite.workflowRun,
             # which needs Actions read even though checks and statuses are
             # readable. REST reads the two resources directly without expanding
