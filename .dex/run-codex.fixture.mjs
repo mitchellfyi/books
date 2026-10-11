@@ -71,11 +71,16 @@ export async function reviewFixture(fixture) {
   const base = git('rev-parse', 'HEAD');
   await writeFile(join(target, 'source.txt'), 'after\n');
   git('add', 'source.txt'); git('commit', '-qm', 'head');
+  // The Control relay first, in an installed repository (../.control-agent) or in
+  // the template directory (./control-agent); the Ops relay only where it is the
+  // only one present.
   let protocol;
-  try { protocol = await readFile(new URL('../.ops-agent/agent-relay-protocol.mjs', import.meta.url)); }
-  catch { protocol = await readFile(new URL('./ops-agent/agent-relay-protocol.mjs', import.meta.url)); }
-  await mkdir(join(workspace, '.ops-agent'));
-  await writeFile(join(workspace, '.ops-agent/agent-relay-protocol.mjs'), protocol);
+  for (const location of ['../.control-agent/', './control-agent/', '../.ops-agent/', './ops-agent/']) {
+    try { protocol = await readFile(new URL(`${location}agent-relay-protocol.mjs`, import.meta.url)); break; } catch {}
+  }
+  if (!protocol) throw new Error('The relay protocol fixture was not found.');
+  await mkdir(join(workspace, '.control-agent'));
+  await writeFile(join(workspace, '.control-agent/agent-relay-protocol.mjs'), protocol);
   await mkdir(join(target, '.dex-review-context'));
   environment.GITHUB_REPOSITORY_ID = '123';
   environment.GITHUB_REPOSITORY = 'fixture/repository';

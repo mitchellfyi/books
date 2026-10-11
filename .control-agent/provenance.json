@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "repository": "m12n-org/control.m12n.org",
+  "source": "automation/distribute-agent-client.mjs",
+  "checksums": {
+    "action.yml": "c69d5f279d33f28e95af5546213fe335ce47bc94404b30d94d2c9489dff34a8f",
+    "agent-relay-client.mjs": "7f666c62be9196a82a6b832f070985ae164414dd0310868e3292a9bd60d9d933",
+    "agent-relay-protocol.mjs": "8af2833ccb86c9ad99cc32bbb0f6cac494158802e4858b7ab2df8ad2ec0bb05f",
+    "agent-relay-setup.mjs": "e06182f903ff1abdb7fcccead338f2ccf33faa1d1d4088abaecfbfe90ce8d0ea",
+    "agent-relay-transport.mjs": "96ebf21fa45ba3639449412a663e255b7004e661bc127ae84105723c4cca260f",
+    "agent_bundle.py": "f434bee159be7f3cace23a1a7307cef74fcd57e6de845b490d3ab4de50054ef2",
+    "package-lock.json": "a933fbba7ad75165a6cc6e1d9b51cb2fe5f13e92c12186deb7bc1676636a3cf0",
+    "package.json": "9f36b52e449bcf7c5e2fa55399630c228d0737f232eb2d96b1b5402afb03dacb"
+  }
+}

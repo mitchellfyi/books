@@ -1,4 +1,4 @@
-# Managed by DexCode template ticket-planner@3.16.1. Edit the template, not this file.
+# Managed by DexCode template ticket-planner@3.17.0. Edit the template, not this file.
 name: DexCode review implementation
 
 on:
@@ -119,9 +119,9 @@ jobs:
       # leave the run specification at ./review-run-spec.json and the copy
       # below reading a path that does not exist.
       - name: Install the trusted hosted client
-        run: npm ci --prefix .ops-agent --ignore-scripts --no-audit --no-fund
-      - name: Connect Codex calls to the Ops queue
-        uses: ./.ops-agent
+        run: npm ci --prefix .control-agent --ignore-scripts --no-audit --no-fund
+      - name: Connect Codex calls to the Control queue
+        uses: ./.control-agent
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: dexcode-review-context-${{ inputs.run_id }}
