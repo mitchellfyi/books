@@ -9,7 +9,7 @@ context. Work on main by default; use one worktree, branch and PR per repository
 when the owner requests portfolio PR delivery. Finish with verified main
 integration, green required CI and safe local/remote cleanup. Preserve this
 repository's domain rules and commands below. Weekly stewardship only creates
-an Ops decision issue; downstream work starts with a later owner assignment.
+a Control decision issue; downstream work starts with a later owner assignment.
 
 
 # 5MinBooks agent guide
@@ -17,7 +17,7 @@ an Ops decision issue; downstream work starts with a later owner assignment.
 ## Mission
 
 For application code and deployments, follow `docs/error-tracking.md`.
-Preserve the Ops-provisioned GlitchTip browser reporter in the built site.
+Preserve the Control-provisioned GlitchTip browser reporter in the built site.
 
 Build a research-backed library of non-fiction books that helps a reader decide whether to read, listen to, borrow, or buy the original. Protect the reader's time and attention. Explain the useful argument faithfully, show what the full book is like to consume, and say plainly when the summary is enough or the book is unlikely to help.
 

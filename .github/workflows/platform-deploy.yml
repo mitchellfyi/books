@@ -26,8 +26,8 @@ jobs:
     timeout-minutes: 90
     environment: "production"
     env:
-      PLATFORM_AUDIENCE: "https://ops.m12n.org/deploy"
-      PLATFORM_URL: "https://ops.m12n.org"
+      PLATFORM_AUDIENCE: "https://control.m12n.org/deploy"
+      PLATFORM_URL: "https://control.m12n.org"
       DOCKER_BUILD_RECORD_UPLOAD: "false"
       PLATFORM_WORKLOAD_ID: 9b33968b-ef5f-4d06-aaaa-934b1513cafe
     steps:
@@ -124,9 +124,9 @@ jobs:
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.revision=${{ github.sha }}
           build-args: ${{ steps.config.outputs.build_args }}
-          cache-from: type=gha,scope=ops-image
+          cache-from: type=gha,scope=control-image
           provenance: false
-      - name: Verify private maps from the image and hand them to Ops
+      - name: Verify private maps from the image and hand them to Control
         id: source_maps
         if: ${{ steps.config.outputs.source_maps == 'true' }}
         shell: bash
@@ -137,19 +137,19 @@ jobs:
         run: |
           set -Eeuo pipefail
           umask 077
-          private="$(mktemp -d "$RUNNER_TEMP/ops-source-maps.XXXXXX")"
+          private="$(mktemp -d "$RUNNER_TEMP/control-source-maps.XXXXXX")"
           container=""
           trap 'if [[ -n "$container" ]]; then docker rm "$container" >/dev/null || true; fi; rm -rf "$private"' EXIT
           image="$IMAGE_REPOSITORY@$IMAGE_DIGEST"
           docker pull --platform linux/amd64 "$image"
           container="$(docker create --platform linux/amd64 --entrypoint /bin/true "$image")"
           mkdir "$private/artifact"
-          docker cp "$container:/opt/ops-sourcemaps/." "$private/artifact"
+          docker cp "$container:/opt/control-sourcemaps/." "$private/artifact"
           curl --fail --silent --show-error --connect-timeout 10 --max-time 30 \
-            "$PLATFORM_URL/install/ops-sourcemaps.mjs" > "$private/ops-sourcemaps.mjs"
+            "$PLATFORM_URL/install/control-sourcemaps.mjs" > "$private/control-sourcemaps.mjs"
           [[ "$SOURCE_MAP_TOOL_SHA256" =~ ^[a-f0-9]{64}$ ]] || exit 1
-          printf '%s  %s\n' "$SOURCE_MAP_TOOL_SHA256" "$private/ops-sourcemaps.mjs" | sha256sum --check
-          node "$private/ops-sourcemaps.mjs" verify-image "$private/artifact" "$GITHUB_SHA" "$container"
+          printf '%s  %s\n' "$SOURCE_MAP_TOOL_SHA256" "$private/control-sourcemaps.mjs" | sha256sum --check
+          node "$private/control-sourcemaps.mjs" verify-image "$private/artifact" "$GITHUB_SHA" "$container"
           headers="$private/headers"
           authenticate() {
             printf 'Authorization: bearer %s\n' "$ACTIONS_ID_TOKEN_REQUEST_TOKEN" > "$headers"
@@ -172,7 +172,7 @@ jobs:
               --retry 3 --retry-delay 5 --header "@$headers" \
               "$PLATFORM_URL/api/v1/source_map_uploads/$upload_id" | jq -er '.status')"
             case "$status" in
-              verified) echo 'Ops verified the stored maps for this image'; exit 0 ;;
+              verified) echo 'Control verified the stored maps for this image'; exit 0 ;;
               failed) echo 'Source-map verification failed; deployment is blocked'; exit 1 ;;
               pending|processing) sleep 10 ;;
               *) echo 'Unexpected source-map status'; exit 1 ;;
@@ -181,7 +181,7 @@ jobs:
           echo 'Timed out verifying private source maps; deployment is blocked'
           exit 1
       - name: Deploy the digest and wait for public verification
-        if: ${{ !inputs.publish_only && vars.OPS_IMAGE_DEPLOY_ENABLED == 'true' }}
+        if: ${{ !inputs.publish_only && (vars.CONTROL_IMAGE_DEPLOY_ENABLED == 'true' || vars.OPS_IMAGE_DEPLOY_ENABLED == 'true') }}
         shell: bash
         env:
           IMAGE_REPOSITORY: ${{ steps.config.outputs.image_repository }}

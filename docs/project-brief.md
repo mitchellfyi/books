@@ -16,7 +16,7 @@ Readers looking for a concise, trustworthy introduction. Preserve factual sourci
 - CI: `verify.yml`: build, running tooling tests, content checks and the static build.
 - Start each session with current open issues/PRs, main CI and relevant release
   evidence. Reuse existing work; the issue tracker owns task status.
-- Service changes follow the project's documented Ops deployment and recovery
+- Service changes follow the project's documented Control deployment and recovery
   procedures. Verify affected integrations and deployed revisions when releasing.
 
 ## Evidence, cost and next decision
@@ -31,9 +31,9 @@ Proposed next experiment, subject to the owner's decision:
 
 Choose one existing summary and draft a clearer route to the original book. Propose a two-hour editorial/reader-journey review, no spend; measure useful onward clicks and return reading. Any affiliate or other commercial offer needs an explicit owner decision.
 
-Review this question in the next weekly Ops issue. The report itself authorizes
+Review this question in the next weekly Control issue. The report itself authorizes
 no execution. The owner records decisions there and later assigns an agent to
-carry out approved work, linking project issues/PRs and verification back to Ops.
+carry out approved work, linking project issues/PRs and verification back to Control.
 
 ## Context and shared agreement
 

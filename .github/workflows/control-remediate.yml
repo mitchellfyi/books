@@ -1,31 +1,31 @@
-# Managed by Ops steward template 1.1.0. Edit automation/distribute-steward.mjs in
-# m12n-org/ops.m12n.org and redistribute; do not edit this copy. Ops dispatches it
+# Managed by Control steward template 1.2.0. Edit automation/distribute-steward.mjs in
+# m12n-org/control.m12n.org and redistribute; do not edit this copy. Control dispatches it
 # only for a deterministic red signal, so healthy days run nothing.
-name: Ops remediation
-run-name: ops-remediate ${{ inputs.remediation_id }} attempt ${{ inputs.attempt }}
+name: Control remediation
+run-name: control-remediate ${{ inputs.remediation_id }} attempt ${{ inputs.attempt }}
 
 on:
   workflow_dispatch:
     inputs:
       remediation_id:
-        description: Ops steward remediation ID
+        description: Control steward remediation ID
         required: true
         type: string
       attempt:
-        description: Attempt number Ops dispatched
+        description: Attempt number Control dispatched
         required: true
         type: string
 
 permissions: {}
 
 concurrency:
-  group: ops-remediate-${{ inputs.remediation_id }}
+  group: control-remediate-${{ inputs.remediation_id }}
   cancel-in-progress: false
 
 env:
   REMEDIATION_ID: ${{ inputs.remediation_id }}
   REMEDIATION_ATTEMPT: ${{ inputs.attempt }}
-  TEMPLATE_VERSION: 1.1.0
+  TEMPLATE_VERSION: 1.2.0
 
 jobs:
   fix:
@@ -48,7 +48,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.workflow_sha }}
-          path: .ops-control
+          path: .control-repo
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
@@ -57,20 +57,20 @@ jobs:
       - name: Keep a trusted copy of the steward client
         run: |
           set -euo pipefail
-          install -d -m 700 "$RUNNER_TEMP/ops-steward-client"
-          cp .ops-control/.ops-steward/remediate.mjs .ops-control/.ops-steward/provenance.json "$RUNNER_TEMP/ops-steward-client/"
-      - name: Claim the attempt Ops dispatched
+          install -d -m 700 "$RUNNER_TEMP/control-steward-client"
+          cp .control-repo/.control-steward/remediate.mjs .control-repo/.control-steward/provenance.json "$RUNNER_TEMP/control-steward-client/"
+      - name: Claim the attempt Control dispatched
         id: brief
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          node "$RUNNER_TEMP/ops-steward-client/remediate.mjs" claim
-      - run: npm ci --prefix .ops-control/.ops-agent --ignore-scripts --no-audit --no-fund
+          node "$RUNNER_TEMP/control-steward-client/remediate.mjs" claim
+      - run: npm ci --prefix .control-repo/.control-agent --ignore-scripts --no-audit --no-fund
         if: steps.brief.outputs.skip == 'false'
-      - uses: ./.ops-control/.ops-agent
+      - uses: ./.control-repo/.control-agent
         if: steps.brief.outputs.skip == 'false'
-      - name: Check out the default branch Ops dispatched against
+      - name: Check out the default branch Control dispatched against
         if: steps.brief.outputs.skip == 'false'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -80,7 +80,7 @@ jobs:
         if: steps.brief.outputs.skip == 'false'
         with:
           enable-cache: false
-      - name: Fix the signal through the Ops executor
+      - name: Fix the signal through the Control executor
         if: steps.brief.outputs.skip == 'false'
         timeout-minutes: 110
         working-directory: .
@@ -90,23 +90,23 @@ jobs:
         run: |
           set -euo pipefail
           codex-ci --sandbox danger-full-access --ephemeral --ignore-user-config \
-            --output-last-message "$RUNNER_TEMP/agent-summary.md" < "$RUNNER_TEMP/ops-steward/prompt.md"
+            --output-last-message "$RUNNER_TEMP/agent-summary.md" < "$RUNNER_TEMP/control-steward/prompt.md"
       - name: Stage returned changes and refresh lockfiles
         if: steps.brief.outputs.skip == 'false'
         id: stage
         working-directory: .
         run: |
           set -euo pipefail
-          node --input-type=module -e 'const { pathToFileURL } = await import("node:url"); const { stageReturnedChanges } = await import(pathToFileURL(process.env.RUNNER_TEMP + "/ops-agent-runtime/agent-relay-client.mjs")); await stageReturnedChanges({ ...process.env, GITHUB_WORKSPACE: process.cwd() });'
-          install -d -m 700 "$RUNNER_TEMP/ops-steward-result"
+          node --input-type=module -e 'const { pathToFileURL } = await import("node:url"); const { stageReturnedChanges } = await import(pathToFileURL(process.env.RUNNER_TEMP + "/control-agent-runtime/agent-relay-client.mjs")); await stageReturnedChanges({ ...process.env, GITHUB_WORKSPACE: process.cwd() });'
+          install -d -m 700 "$RUNNER_TEMP/control-steward-result"
           touch "$RUNNER_TEMP/agent-summary.md"
-          head -c 4000 "$RUNNER_TEMP/agent-summary.md" > "$RUNNER_TEMP/ops-steward-result/summary.md"
+          head -c 4000 "$RUNNER_TEMP/agent-summary.md" > "$RUNNER_TEMP/control-steward-result/summary.md"
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git diff --cached --binary > "$RUNNER_TEMP/ops-steward-result/remediation.patch"
+            git diff --cached --binary > "$RUNNER_TEMP/control-steward-result/remediation.patch"
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "patch_sha256=$(sha256sum "$RUNNER_TEMP/ops-steward-result/remediation.patch" | cut -d" " -f1)" >> "$GITHUB_OUTPUT"
+            echo "patch_sha256=$(sha256sum "$RUNNER_TEMP/control-steward-result/remediation.patch" | cut -d" " -f1)" >> "$GITHUB_OUTPUT"
           fi
           echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - name: Report that no change was needed
@@ -115,35 +115,35 @@ jobs:
           REMEDIATION_OUTCOME: no_change
         run: |
           set -euo pipefail
-          node "$RUNNER_TEMP/ops-steward-client/remediate.mjs" report
+          node "$RUNNER_TEMP/control-steward-client/remediate.mjs" report
       - name: Run the repository checks on the fix
         if: steps.brief.outputs.skip == 'false' && steps.stage.outputs.changed == 'true'
         working-directory: .
         timeout-minutes: 45
         run: |
           set -euo pipefail
-          (./bookflow test) 2>&1 | tee -a "$RUNNER_TEMP/ops-steward-verify.log"
-          (./bookflow check) 2>&1 | tee -a "$RUNNER_TEMP/ops-steward-verify.log"
-          (./bookflow build) 2>&1 | tee -a "$RUNNER_TEMP/ops-steward-verify.log"
+          (./bookflow test) 2>&1 | tee -a "$RUNNER_TEMP/control-steward-verify.log"
+          (./bookflow check) 2>&1 | tee -a "$RUNNER_TEMP/control-steward-verify.log"
+          (./bookflow build) 2>&1 | tee -a "$RUNNER_TEMP/control-steward-verify.log"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: steps.brief.outputs.skip == 'false' && steps.stage.outputs.changed == 'true'
         with:
-          name: ops-steward-result-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ${{ runner.temp }}/ops-steward-result
+          name: control-steward-result-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/control-steward-result
           if-no-files-found: error
           retention-days: 1
       - name: Keep the failure evidence for the next attempt
         if: failure() && steps.brief.outputs.skip == 'false'
         run: |
           set -euo pipefail
-          install -d -m 700 "$RUNNER_TEMP/ops-steward-failure"
-          touch "$RUNNER_TEMP/ops-steward-verify.log"
-          tail -c 6000 "$RUNNER_TEMP/ops-steward-verify.log" > "$RUNNER_TEMP/ops-steward-failure/log.txt"
+          install -d -m 700 "$RUNNER_TEMP/control-steward-failure"
+          touch "$RUNNER_TEMP/control-steward-verify.log"
+          tail -c 6000 "$RUNNER_TEMP/control-steward-verify.log" > "$RUNNER_TEMP/control-steward-failure/log.txt"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: failure() && steps.brief.outputs.skip == 'false'
         with:
-          name: ops-steward-failure-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ${{ runner.temp }}/ops-steward-failure
+          name: control-steward-failure-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/control-steward-failure
           retention-days: 1
 
   publish:
@@ -158,7 +158,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.workflow_sha }}
-          path: .ops-control
+          path: .control-repo
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
@@ -171,19 +171,19 @@ jobs:
           path: target
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: ops-steward-result-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ${{ runner.temp }}/ops-steward-result
-      - name: Push the fix branch and hand it to Ops
+          name: control-steward-result-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/control-steward-result
+      - name: Push the fix branch and hand it to Control
         env:
           TARGET_WORKSPACE: ${{ github.workspace }}/target
-          RESULT_DIRECTORY: ${{ runner.temp }}/ops-steward-result
+          RESULT_DIRECTORY: ${{ runner.temp }}/control-steward-result
           PATCH_SHA256: ${{ needs.fix.outputs.patch_sha256 }}
           REMEDIATION_BRANCH: ${{ needs.fix.outputs.branch }}
           REMEDIATION_KIND: ${{ needs.fix.outputs.kind }}
         run: |
           set -euo pipefail
           test "$(sha256sum "$RESULT_DIRECTORY/remediation.patch" | cut -d" " -f1)" = "$PATCH_SHA256"
-          node .ops-control/.ops-steward/remediate.mjs publish
+          node .control-repo/.control-steward/remediate.mjs publish
 
   report:
     needs: [fix, publish]
@@ -198,7 +198,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.workflow_sha }}
-          path: .ops-control
+          path: .control-repo
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
@@ -207,13 +207,13 @@ jobs:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         continue-on-error: true
         with:
-          name: ops-steward-failure-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ${{ runner.temp }}/ops-steward-failure
-      - name: Report the failed attempt to Ops
+          name: control-steward-failure-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/control-steward-failure
+      - name: Report the failed attempt to Control
         env:
           REMEDIATION_OUTCOME: failed
           FAILED_STEP: ${{ needs.fix.result != 'success' && 'the fix job (verification or model)' || 'publication' }}
         run: |
           set -euo pipefail
-          if [ -f "$RUNNER_TEMP/ops-steward-failure/log.txt" ]; then REMEDIATION_SUMMARY="$(tail -c 3000 "$RUNNER_TEMP/ops-steward-failure/log.txt")"; export REMEDIATION_SUMMARY; fi
-          node .ops-control/.ops-steward/remediate.mjs report
+          if [ -f "$RUNNER_TEMP/control-steward-failure/log.txt" ]; then REMEDIATION_SUMMARY="$(tail -c 3000 "$RUNNER_TEMP/control-steward-failure/log.txt")"; export REMEDIATION_SUMMARY; fi
+          node .control-repo/.control-steward/remediate.mjs report
