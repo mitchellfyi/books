@@ -28,9 +28,20 @@ updates:
         patterns:
           - "*"
 
-  # The hosted-agent relay is published by Ops and verified byte for byte
-  # against .ops-agent/provenance.json, so its dependencies move only in an
-  # Ops relay release. A bare ignore also covers security updates.
+  # The hosted-agent relay is published by Control and verified byte for byte
+  # against .control-agent/provenance.json (and .ops-agent/provenance.json
+  # while DexCode still installs that copy), so its dependencies move only in a
+  # Control relay release. A bare ignore also covers security updates.
+  - package-ecosystem: npm
+    cooldown:
+      default-days: 3
+    directory: "/.control-agent"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: "*"
+
   - package-ecosystem: npm
     cooldown:
       default-days: 3

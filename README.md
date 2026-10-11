@@ -74,11 +74,11 @@ details.
 
 ## Weekly discovery
 
-A private workflow in the Ops repository runs each Wednesday at 08:17 UTC with
+A private workflow in the Control repository runs each Wednesday at 08:17 UTC with
 Codex CLI, Astra and maximum reasoning, authenticated through ChatGPT OAuth. It
 researches outward from relationships already visible in this app, selects one
 well-supported book, creates its standard scaffold, adds it to the queue, and
-opens a pull request here. The reusable Codex login stays on the protected Ops
+opens a pull request here. The reusable Codex login stays on the protected Control
 runner; this public repository never receives it.
 
 The workflow's output must pass
