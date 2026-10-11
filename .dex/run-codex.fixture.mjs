@@ -76,7 +76,7 @@ export async function reviewFixture(fixture) {
   // only one present.
   let protocol;
   for (const location of ['../.control-agent/', './control-agent/', '../.ops-agent/', './ops-agent/']) {
-    try { protocol = await readFile(new URL(`${location}agent-relay-protocol.mjs`, import.meta.url)); break; } catch {}
+    try { protocol = await readFile(new URL(`${location}agent-relay-protocol.mjs`, import.meta.url)); break; } catch { continue; }
   }
   if (!protocol) throw new Error('The relay protocol fixture was not found.');
   await mkdir(join(workspace, '.control-agent'));
