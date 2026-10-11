@@ -68,9 +68,9 @@ jobs:
           node-version: "24"
           package-manager-cache: false
       - name: Install the trusted hosted client
-        run: npm ci --prefix .ops-agent --ignore-scripts --no-audit --no-fund
-      - name: Connect Codex calls to the Ops queue
-        uses: ./.ops-agent
+        run: npm ci --prefix .control-agent --ignore-scripts --no-audit --no-fund
+      - name: Connect Codex calls to the Control queue
+        uses: ./.control-agent
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
           name: dexcode-implementation-context-${{ github.run_id }}-${{ github.run_attempt }}

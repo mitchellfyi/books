@@ -77,14 +77,65 @@ test('review evidence binds the complete safe diff and transmitted head bytes to
   assert.match(evidence.diff, /-before\n\+after\n/);
   assert.equal(evidence.files[0].sha256, createHash('sha256').update('after\n').digest('hex'));
   assert.equal(evidence.specSha256, createHash('sha256').update(await readFile(join(review.target, '.dex-review-context/run-spec.json'))).digest('hex'));
-  const protocol = await import(new URL('./ops-agent/agent-relay-protocol.mjs', import.meta.url).href).catch(() =>
-    import(new URL('../.ops-agent/agent-relay-protocol.mjs', import.meta.url).href));
+  const protocol = await import(new URL('./control-agent/agent-relay-protocol.mjs', import.meta.url).href).catch(() =>
+    import(new URL('../.control-agent/agent-relay-protocol.mjs', import.meta.url).href));
   const entries = await protocol.snapshot(review.target);
   assert.ok(entries.some(entry => entry.path === '.dex-review-context/review-evidence.json'));
   assert.equal(entries.some(entry => entry.path.startsWith('.git/')), false);
   const prepared = join(fixture.root, 'prepared');
   await protocol.materialize(entries, prepared);
   assert.deepEqual(JSON.parse(await readFile(join(prepared, '.dex-review-context/review-evidence.json'))), evidence);
+});
+
+// Template 3.17.0 installs the Control relay in .control-agent beside the Ops relay
+// in .ops-agent. Review evidence reads the Control one, and the Ops one only where
+// the Control file is absent. Each case builds its own workspace because Node caches
+// a module that failed to load, so one path cannot be a hostile file and then a good one.
+const relayRefusal = /Managed review evidence could not be verified\./;
+const hostileRelay = "throw new Error('hostile relay');\n";
+async function relayFixture(t) {
+  const fixture = await modelFixture(t);
+  const review = await reviewFixture(fixture);
+  const workspace = fixture.environment.GITHUB_WORKSPACE;
+  const control = join(workspace, '.control-agent/agent-relay-protocol.mjs');
+  const protocol = await readFile(control);
+  const ops = join(workspace, '.ops-agent/agent-relay-protocol.mjs');
+  const prepare = () => prepareReviewEvidence(workspace, review.target, fixture.environment);
+  return { workspace, control, protocol, ops, prepare, placeOps: async content => {
+    await mkdir(join(workspace, '.ops-agent')); await writeFile(ops, content);
+  } };
+}
+
+test('review evidence reads the Control relay and never loads an Ops relay beside it', async t => {
+  const { placeOps, prepare } = await relayFixture(t);
+  await placeOps(hostileRelay);
+  assert.deepEqual((await prepare()).changedPaths, ['source.txt']);
+});
+
+test('review evidence falls back to the Ops relay when the Control relay is absent', async t => {
+  const hostile = await relayFixture(t);
+  await rm(join(hostile.workspace, '.control-agent'), { recursive: true });
+  await hostile.placeOps(hostileRelay);
+  // Positive control: the Ops copy is the one loaded, so a bad copy there is refused.
+  await assert.rejects(hostile.prepare(), relayRefusal);
+  const good = await relayFixture(t);
+  await rm(join(good.workspace, '.control-agent'), { recursive: true });
+  await good.placeOps(good.protocol);
+  assert.deepEqual((await good.prepare()).changedPaths, ['source.txt']);
+});
+
+test('review evidence refuses a linked Control relay instead of using the Ops relay', async t => {
+  const { control, protocol, placeOps, prepare } = await relayFixture(t);
+  await placeOps(protocol);
+  await rm(control);
+  await symlink(join(control, '../../.ops-agent/agent-relay-protocol.mjs'), control);
+  await assert.rejects(prepare(), relayRefusal);
+});
+
+test('review evidence refuses a workspace with no relay', async t => {
+  const { workspace, prepare } = await relayFixture(t);
+  await rm(join(workspace, '.control-agent'), { recursive: true });
+  await assert.rejects(prepare(), relayRefusal);
 });
 
 async function convertedReviewFixture(t, conversion) {
@@ -363,7 +414,7 @@ test('review evidence includes additions deletions and mode changes without runn
 test('excluded base secrets and binary bytes cannot escape inside the review diff', async t => {
   const fixture = await modelFixture(t);
   const review = await reviewFixture(fixture);
-  const secrets = ['.env.production', '.npmrc', '.yarnrc.yml', '.ops-agent/private.js'];
+  const secrets = ['.env.production', '.npmrc', '.yarnrc.yml', '.ops-agent/private.js', '.control-agent/private.js'];
   for (const path of secrets) {
     await mkdir(join(review.target, path, '..'), { recursive: true });
     await writeFile(join(review.target, path), 'private-history-canary');
@@ -560,7 +611,7 @@ for (const drift of ['source-bytes', 'source-mode', 'new-file', 'deleted-file'])
     await cacheConvertedStat(review);
     await canonicalizeReviewCheckout(fixture.environment.GITHUB_WORKSPACE, review.target, fixture.environment);
     await placeContext();
-    const protocol = join(fixture.environment.GITHUB_WORKSPACE, '.ops-agent/agent-relay-protocol.mjs');
+    const protocol = join(fixture.environment.GITHUB_WORKSPACE, '.control-agent/agent-relay-protocol.mjs');
     await writeFile(join(protocol, '../snapshot-base.mjs'), await readFile(protocol));
     await writeFile(protocol, `
       import { snapshot as originalSnapshot, safePath } from './snapshot-base.mjs';
