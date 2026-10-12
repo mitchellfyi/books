@@ -1,4 +1,4 @@
-# Managed by DexCode template ticket-planner@3.17.1. Edit the template, not this file.
+# Managed by DexCode template ticket-planner@3.18.0. Edit the template, not this file.
 name: DexCode plan ticket
 
 on:
@@ -70,7 +70,7 @@ jobs:
             "https://dexcode.ai/api/v1/agent/runs/${RUN_ID}/spec" \
             --output .dex/run-spec.json
           unset OIDC_TOKEN
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: dexcode-plan-context-${{ inputs.run_id }}
           path: .dex/run-spec.json
@@ -108,8 +108,8 @@ jobs:
       - name: Plan with Codex OAuth
         id: codex
         env:
-          CODEX_MODEL: gpt-6-astra
-          CODEX_REASONING_EFFORT: max
+          CODEX_MODEL: gpt-6.1-sol
+          CODEX_REASONING_EFFORT: xhigh
         run: node .dex/run-codex.mjs plan
 
   report:

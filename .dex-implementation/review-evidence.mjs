@@ -89,18 +89,10 @@ export async function canonicalizeCheckout(workspace, target, head, environment 
   }
 }
 
-// The trusted relay the workflow installed. Template 3.17.0 installs the Control
-// client in .control-agent beside the Ops client in .ops-agent. Use the Control
-// copy, and fall back to the Ops copy only when the Control file is absent. A file
-// that is present but wrong (a link, or a file where the directory belongs) is
-// refused by the checks that follow, never skipped in favour of the other copy.
-async function relayProtocolPath(workspace) {
-  for (const directory of ['.control-agent', '.ops-agent']) {
-    const path = join(workspace, directory, 'agent-relay-protocol.mjs');
-    try { await lstat(path); } catch (error) { if (error?.code === 'ENOENT') continue; throw error; }
-    return path;
-  }
-  throw new Error();
+// Only the trusted Control relay installed by the workflow is allowed. An old
+// relay beside it must never be loaded, even when the Control copy is absent.
+function relayProtocolPath(workspace) {
+  return join(workspace, '.control-agent', 'agent-relay-protocol.mjs');
 }
 
 export async function prepareReviewEvidence(workspace, target, environment = process.env) {

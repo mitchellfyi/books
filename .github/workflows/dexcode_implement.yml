@@ -40,7 +40,7 @@ jobs:
       - name: Fetch and validate the approved specification
         id: context
         run: node .dex-implementation/implementation-client.mjs prepare
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: dexcode-implementation-context-${{ github.run_id }}-${{ github.run_attempt }}
           path: .dex-implementation-context/spec.json
@@ -85,10 +85,10 @@ jobs:
       - name: Implement the approved plan
         id: worker
         env:
-          CODEX_MODEL: gpt-6-astra
-          CODEX_REASONING_EFFORT: max
+          CODEX_MODEL: gpt-6.1-sol
+          CODEX_REASONING_EFFORT: xhigh
         run: node .dex-implementation/implementation-worker.mjs execute
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: dexcode-implementation-result-${{ github.run_id }}-${{ github.run_attempt }}
           path: |

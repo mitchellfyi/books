@@ -105,7 +105,7 @@ export async function runManagedModel(kind, environment = process.env, execute =
     ];
     await execute({ args, cwd: directory, timeoutMs: 150 * 60_000,
       env: { PATH: environment.PATH, HOME: home, RUNNER_TEMP: temporary, LANG: 'C.UTF-8',
-        CODEX_MODEL: 'gpt-6-astra', CODEX_REASONING_EFFORT: 'max' },
+        CODEX_MODEL: 'gpt-6.1-sol', CODEX_REASONING_EFFORT: 'xhigh' },
       input: `The repository root is ${JSON.stringify(target)}. Resolve every repository path in the instructions below against that root, and explicitly use that directory for repository commands. Your process starts outside the repository to exclude project configuration. Never read files outside the permitted workspace. Return at most 40000 UTF-8 bytes of JSON.\n\n${prompt}`,
     });
     const text = await boundedFile(resultFile, 40_000);

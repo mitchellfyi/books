@@ -6,6 +6,15 @@ import { spawnSync } from 'node:child_process';
 
 export const fail = () => new Error('Hosted agent request failed; private details withheld.');
 
+// The model and reasoning effort a caller names on its side of the relay. They are nominal: the executor
+// (codex-runtime.mjs, hosted-auth-session.mjs) runs its own and drops these, so this is a strict allow-list
+// of what callers may say, never what runs. This file is copied standalone into callers, so the values are
+// literals here and test/codex_runtime.test.mjs checks them against codex-runtime.mjs. The first of each is
+// the earlier pair (GPT-6 Astra at max) that callers on steward template 1.2.0 and the DexCode-managed relay
+// copies still send; the second is the model and effort the executor runs from 12 October 2026.
+export const NOMINAL_MODELS = Object.freeze(['gpt-6-astra', 'gpt-6.1-sol']);
+export const NOMINAL_EFFORTS = Object.freeze(['max', 'xhigh']);
+
 export function executionDiagnostic(stage, sourceRunId, execution = {}, label = 'Control') {
   const stages = ['preparation', 'context-upload', 'submission', 'polling', 'execution', 'head-verification',
     'result-download', 'result-validation', 'apply-changes', 'output'];
@@ -240,9 +249,11 @@ export async function normalizeInvocation(args, input, workspace, temporary, con
       // Caller permissions are replaced by the central workspace policy. Keep
       // only the stricter request to disable built-in search.
       if (value === 'web_search="disabled"') normalized.push('-c', value);
-      else if (!/^(?:default_permissions|permissions\.[a-z_]+\.(?:filesystem|network\.enabled)|approval_policy|project_doc_max_bytes|include_environment_context|shell_environment_policy\.inherit|model_reasoning_effort)=/.test(value)) throw fail();
+      else if (value.startsWith('model_reasoning_effort=')) {
+        if (!NOMINAL_EFFORTS.includes(value.slice('model_reasoning_effort='.length).replace(/^"([^"]*)"$/, '$1'))) throw fail();
+      } else if (!/^(?:default_permissions|permissions\.[a-z_]+\.(?:filesystem|network\.enabled)|approval_policy|project_doc_max_bytes|include_environment_context|shell_environment_policy\.inherit)=/.test(value)) throw fail();
     } else if (arg === '--model' || arg === '-m') {
-      if (value !== 'gpt-6-astra') throw fail();
+      if (!NOMINAL_MODELS.includes(value)) throw fail();
     } else if (arg === '--sandbox' || arg === '-s') {
       if (!['danger-full-access', 'workspace-write', 'read-only'].includes(value)) throw fail();
     } else throw fail();
