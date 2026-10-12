@@ -1,4 +1,4 @@
-# Managed by DexCode template dependabot-guard@1.7.0. Edit the template, not this file.
+# Managed by DexCode template dependabot-guard@1.8.0. Edit the template, not this file.
 #
 # What this does, and deliberately does not do.
 #
@@ -98,7 +98,7 @@ jobs:
         run: |
           set -euo pipefail
           touched="$(gh pr view "${PR_NUMBER}" --json files \
-            --jq '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/|^\\.dex-implementation/|^\\.github/workflows/platform-deploy\\.yml$|^\\.ops-agent/|^\\.control-agent/"))] | join(", ")')"
+            --jq '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/|^\\.dex-implementation/|^\\.github/workflows/platform-deploy\\.yml$|^\\.ops-agent/|^\\.ops-control/|^\\.control-agent/"))] | join(", ")')"
           if [ -n "${touched}" ]; then
             echo "touched=true" >> "${GITHUB_OUTPUT}"
             echo "paths=${touched}" >> "${GITHUB_OUTPUT}"
@@ -312,7 +312,7 @@ jobs:
             # before each planning run, so merging a bump inside one marks the
             # installation drifted and every run afterwards is refused. Same
             # rule as the event path above.
-            managed="$(echo "${pr}" | jq -r '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/|^\\.dex-implementation/|^\\.github/workflows/platform-deploy\\.yml$|^\\.ops-agent/|^\\.control-agent/"))] | join(", ")')"
+            managed="$(echo "${pr}" | jq -r '[.files[].path | select(test("^\\.github/workflows/dexcode_|^\\.dex/|^\\.dex-implementation/|^\\.github/workflows/platform-deploy\\.yml$|^\\.ops-agent/|^\\.ops-control/|^\\.control-agent/"))] | join(", ")')"
             if [ -n "${managed}" ]; then
               note=""
               if ! echo "${pr}" | jq -e '[.labels[].name] | index("dexcode:managed-file")' >/dev/null; then
