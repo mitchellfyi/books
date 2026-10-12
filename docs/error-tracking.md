@@ -4,7 +4,7 @@ Production browser exceptions go to the Control-hosted GlitchTip
 service at https://errors.m12n.org. Keep Umami for traffic analytics.
 
 Control provisions the project and supplies `NEXT_PUBLIC_SENTRY_DSN`, `NEXT_PUBLIC_CONTROL_PROJECT_ID` and `NEXT_PUBLIC_SENTRY_RELEASE`.
-The build reads the project ID from `NEXT_PUBLIC_CONTROL_PROJECT_ID` first and falls back to the older `NEXT_PUBLIC_OPS_PROJECT_ID`,
+The build reads the project ID only from `NEXT_PUBLIC_CONTROL_PROJECT_ID`
 and loads the reporter from `https://errors.m12n.org/static/control-errors.v1.js`.
 Use the existing DSN for every domain alias; never create a second project for
 an alias or copy another application's key. The release is the deployment's

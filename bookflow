@@ -498,8 +498,7 @@ def error_tracking_script(environment: dict[str, str]) -> str:
     if endpoint.scheme != "https" or endpoint.hostname != "errors.m12n.org" or endpoint.password:
         raise ValueError("The error reporting DSN must point to Control GlitchTip")
     attributes = {"dsn": dsn,
-                  "project": (environment.get("NEXT_PUBLIC_CONTROL_PROJECT_ID")
-                              or environment.get("NEXT_PUBLIC_OPS_PROJECT_ID", "")),
+                  "project": environment.get("NEXT_PUBLIC_CONTROL_PROJECT_ID", ""),
                   "release": environment.get("NEXT_PUBLIC_SENTRY_RELEASE", "")}
     data = " ".join(f'data-{key}="{escape(value, quote=True)}"' for key, value in attributes.items())
     return f'<script defer src="https://errors.m12n.org/static/control-errors.v1.js" {data}></script>'
@@ -523,7 +522,7 @@ def build_app(_: argparse.Namespace | None = None) -> None:
         shutil.copy2(ROOT / "app" / asset, dist / asset)
     index = dist / "index.html"
     index.write_text(index.read_text(encoding="utf-8").replace(
-        "<!-- ops-error-tracking -->", error_tracking_script(os.environ)), encoding="utf-8")
+        "<!-- control-error-tracking -->", error_tracking_script(os.environ)), encoding="utf-8")
 
     books = []
     built_audio: set[Path] = set()
