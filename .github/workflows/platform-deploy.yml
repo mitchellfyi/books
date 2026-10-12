@@ -1,4 +1,4 @@
-name: Build and deploy through Ops
+name: Build and deploy through Control
 
 on:
   push:
@@ -181,7 +181,7 @@ jobs:
           echo 'Timed out verifying private source maps; deployment is blocked'
           exit 1
       - name: Deploy the digest and wait for public verification
-        if: ${{ !inputs.publish_only && (vars.CONTROL_IMAGE_DEPLOY_ENABLED == 'true' || vars.OPS_IMAGE_DEPLOY_ENABLED == 'true') }}
+        if: ${{ !inputs.publish_only && vars.CONTROL_IMAGE_DEPLOY_ENABLED == 'true' }}
         shell: bash
         env:
           IMAGE_REPOSITORY: ${{ steps.config.outputs.image_repository }}
