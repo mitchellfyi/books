@@ -71,11 +71,9 @@ export async function reviewFixture(fixture) {
   const base = git('rev-parse', 'HEAD');
   await writeFile(join(target, 'source.txt'), 'after\n');
   git('add', 'source.txt'); git('commit', '-qm', 'head');
-  // The Control relay first, in an installed repository (../.control-agent) or in
-  // the template directory (./control-agent); the Ops relay only where it is the
-  // only one present.
+  // Read only the Control relay, in an installed repository or the template directory.
   let protocol;
-  for (const location of ['../.control-agent/', './control-agent/', '../.ops-agent/', './ops-agent/']) {
+  for (const location of ['../.control-agent/', './control-agent/']) {
     try { protocol = await readFile(new URL(`${location}agent-relay-protocol.mjs`, import.meta.url)); break; } catch { continue; }
   }
   if (!protocol) throw new Error('The relay protocol fixture was not found.');

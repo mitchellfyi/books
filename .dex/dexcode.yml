@@ -1,6 +1,6 @@
 version: 1
 template: ticket-planner
-template_version: 3.17.1
+template_version: 3.18.0
 workflow: .github/workflows/dexcode_plan.yml
 prompt: .dex/prompts/dexcode_plan.md
 result_schema: .dex/planner-result.schema.json

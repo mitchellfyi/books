@@ -22,7 +22,7 @@ for (const kind of ['plan', 'review']) {
     assert.equal(fixture.calls.length, 1);
     const invocation = fixture.calls[0];
     assert.deepEqual(invocation.env, { HOME: fixture.environment.HOME, RUNNER_TEMP: fixture.environment.RUNNER_TEMP,
-      PATH: fixture.environment.PATH, LANG: 'C.UTF-8', CODEX_MODEL: 'gpt-6-astra', CODEX_REASONING_EFFORT: 'max' });
+      PATH: fixture.environment.PATH, LANG: 'C.UTF-8', CODEX_MODEL: 'gpt-6.1-sol', CODEX_REASONING_EFFORT: 'xhigh' });
     assert.equal(JSON.stringify(invocation).includes('sentinel'), false);
     for (const arg of ['--ignore-user-config', '--ignore-rules', '--ephemeral',
       'permissions.managed.network.enabled=false', 'shell_environment_policy.inherit="none"']) {
@@ -87,10 +87,8 @@ test('review evidence binds the complete safe diff and transmitted head bytes to
   assert.deepEqual(JSON.parse(await readFile(join(prepared, '.dex-review-context/review-evidence.json'))), evidence);
 });
 
-// Template 3.17.0 installs the Control relay in .control-agent beside the Ops relay
-// in .ops-agent. Review evidence reads the Control one, and the Ops one only where
-// the Control file is absent. Each case builds its own workspace because Node caches
-// a module that failed to load, so one path cannot be a hostile file and then a good one.
+// Each case uses a fresh workspace because Node caches a module that failed to load.
+// A valid earlier relay must not substitute for the missing Control relay.
 const relayRefusal = /Managed review evidence could not be verified\./;
 const hostileRelay = "throw new Error('hostile relay');\n";
 async function relayFixture(t) {
@@ -112,16 +110,14 @@ test('review evidence reads the Control relay and never loads an Ops relay besid
   assert.deepEqual((await prepare()).changedPaths, ['source.txt']);
 });
 
-test('review evidence falls back to the Ops relay when the Control relay is absent', async t => {
-  const hostile = await relayFixture(t);
-  await rm(join(hostile.workspace, '.control-agent'), { recursive: true });
-  await hostile.placeOps(hostileRelay);
-  // Positive control: the Ops copy is the one loaded, so a bad copy there is refused.
-  await assert.rejects(hostile.prepare(), relayRefusal);
-  const good = await relayFixture(t);
-  await rm(join(good.workspace, '.control-agent'), { recursive: true });
-  await good.placeOps(good.protocol);
-  assert.deepEqual((await good.prepare()).changedPaths, ['source.txt']);
+test('review evidence refuses an earlier relay even when it is valid and Control is absent', async t => {
+  // Evidence preparation is single-use; the rejection needs its own untouched target.
+  const baseline = await relayFixture(t);
+  assert.deepEqual((await baseline.prepare()).changedPaths, ['source.txt']);
+  const { workspace, protocol, placeOps, prepare } = await relayFixture(t);
+  await placeOps(protocol);
+  await rm(join(workspace, '.control-agent'), { recursive: true });
+  await assert.rejects(prepare(), relayRefusal);
 });
 
 test('review evidence refuses a linked Control relay instead of using the Ops relay', async t => {
