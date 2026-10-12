@@ -12,8 +12,7 @@ without compilation or minification, so its source is already the served code;
 this project does not produce private source maps. Runtime credentials and local
 environment files are excluded from the build context.
 
-The initial image is published with `CONTROL_IMAGE_DEPLOY_ENABLED` (or the older
-`OPS_IMAGE_DEPLOY_ENABLED`) unset. Conversion of the existing Coolify application
+The initial image is published with `CONTROL_IMAGE_DEPLOY_ENABLED` unset. Conversion of the existing Coolify application
 follows Control's image deployment runbook after checking its domain, storage and
 runtime settings. Set `CONTROL_IMAGE_DEPLOY_ENABLED` to `true` only after the audited provider conversion and read-back pass. Manual
 `publish_only=true` builds never deploy.

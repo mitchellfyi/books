@@ -21,16 +21,17 @@ class ErrorTrackingTests(unittest.TestCase):
         self.assertIn("release&quot;&lt;unsafe&gt;", script)
         self.assertNotIn("never-include-me", script)
 
-    def test_the_old_project_id_variable_still_works_and_the_new_one_wins(self):
+    def test_only_the_control_project_id_variable_configures_the_reporter(self):
         dsn = "https://public@errors.m12n.org/14"
-        old_only = bookflow.error_tracking_script({
-            "NEXT_PUBLIC_SENTRY_DSN": dsn, "NEXT_PUBLIC_OPS_PROJECT_ID": "old-id"})
-        self.assertIn('data-project="old-id"', old_only)
-        both = bookflow.error_tracking_script({
-            "NEXT_PUBLIC_SENTRY_DSN": dsn, "NEXT_PUBLIC_OPS_PROJECT_ID": "old-id",
-            "NEXT_PUBLIC_CONTROL_PROJECT_ID": "new-id"})
-        self.assertIn('data-project="new-id"', both)
-        self.assertNotIn("old-id", both)
+        for project_environment, expected in (
+            ({"NEXT_PUBLIC_OPS_PROJECT_ID": "old-id"}, ""),
+            ({"NEXT_PUBLIC_OPS_PROJECT_ID": "old-id", "NEXT_PUBLIC_CONTROL_PROJECT_ID": ""}, ""),
+            ({"NEXT_PUBLIC_OPS_PROJECT_ID": "old-id", "NEXT_PUBLIC_CONTROL_PROJECT_ID": "new-id"}, "new-id"),
+            ({"NEXT_PUBLIC_CONTROL_PROJECT_ID": "new-id"}, "new-id"),
+        ):
+            script = bookflow.error_tracking_script({"NEXT_PUBLIC_SENTRY_DSN": dsn, **project_environment})
+            self.assertIn(f'data-project="{expected}"', script)
+            self.assertNotIn("old-id", script)
 
     def test_rejects_non_control_endpoints_and_passwords(self):
         for dsn in ["http://public@errors.m12n.org/14", "https://public@evil.test/14", "https://public:password@errors.m12n.org/14"]:
