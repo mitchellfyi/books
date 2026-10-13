@@ -139,10 +139,15 @@ export async function relay(args, input, env = process.env, services = {}) {
     if (!executionStatuses.has(execution.status)) throw fail();
     stage = 'polling';
     const deadline = Date.now() + 100 * 60_000;
+    // Control restarts for a minute or two on each deploy; an unanswered status read is waited out (five minutes of
+    // consecutive failures at most) instead of ending a run whose execution is still queued or running.
+    let unanswered = 0;
     while (!pollingStops.has(execution.status)) {
       if (cancelled || Date.now() > deadline) throw fail();
       await (services.delay || delay)(5000);
-      const next = await request(`/${executionId}`);
+      let next;
+      try { next = await request(`/${executionId}`); unanswered = 0; }
+      catch { if (++unanswered > 60) throw fail(); continue; }
       if (next?.id !== executionId || !executionStatuses.has(next.status)) throw fail();
       execution = next;
     }
