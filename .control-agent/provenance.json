@@ -4,7 +4,7 @@
   "source": "automation/distribute-agent-client.mjs",
   "checksums": {
     "action.yml": "c69d5f279d33f28e95af5546213fe335ce47bc94404b30d94d2c9489dff34a8f",
-    "agent-relay-client.mjs": "7f666c62be9196a82a6b832f070985ae164414dd0310868e3292a9bd60d9d933",
+    "agent-relay-client.mjs": "181a230a10c96fe769173194478876c2e7d79a440c201dd86d82ed30dceddd01",
     "agent-relay-protocol.mjs": "e4e202124c6f65a7d6477fd95fb96c2d47973e9c87fb21c5663d35263558924b",
     "agent-relay-setup.mjs": "e06182f903ff1abdb7fcccead338f2ccf33faa1d1d4088abaecfbfe90ce8d0ea",
     "agent-relay-transport.mjs": "96ebf21fa45ba3639449412a663e255b7004e661bc127ae84105723c4cca260f",
