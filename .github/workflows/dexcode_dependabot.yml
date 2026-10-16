@@ -1,4 +1,4 @@
-# Managed by DexCode template dependabot-guard@1.8.0. Edit the template, not this file.
+# Managed by DexCode template dependabot-guard@1.8.1. Edit the template, not this file.
 #
 # What this does, and deliberately does not do.
 #
@@ -61,7 +61,7 @@ jobs:
     if: >-
       github.event_name == 'pull_request' &&
       github.event.pull_request.user.login == 'dependabot[bot]'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # This path only labels. Merging happens in the sweep, through DexCode,
     # so nothing here can write code or pull requests.
     permissions:
@@ -196,7 +196,7 @@ jobs:
     # See the guard job: the CI gates exclude this exact check name.
     name: dexcode-dependabot-sweep
     if: github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       pull-requests: read
