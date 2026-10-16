@@ -1,4 +1,4 @@
-# Managed by DexCode template ticket-planner@3.19.0. Edit the template, not this file.
+# Managed by DexCode template ticket-planner@3.20.0. Edit the template, not this file.
 name: DexCode plan ticket
 
 on:
@@ -34,7 +34,7 @@ concurrency:
 
 jobs:
   prepare:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     permissions:
       contents: read
@@ -115,7 +115,7 @@ jobs:
   report:
     if: always() && needs.codex.result == 'success'
     needs: codex
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     permissions:
       id-token: write
