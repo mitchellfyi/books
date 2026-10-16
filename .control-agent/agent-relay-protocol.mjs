@@ -19,7 +19,10 @@ export function executionDiagnostic(stage, sourceRunId, execution = {}, label = 
   const stages = ['preparation', 'context-upload', 'submission', 'polling', 'execution', 'head-verification',
     'result-download', 'result-validation', 'apply-changes', 'output'];
   const statuses = ['queued', 'dispatching', 'running', 'succeeded', 'failed', 'cancelled', 'blocked'];
-  const codes = ['model_failed', 'checkpoint_failed', 'cancelled', 'invalid_result', 'dispatch_uncertain'];
+  // The last two are the relay's own: Control did not answer within the client's outage tolerance, or refused the
+  // request outright (HTTP or protocol refusal). Every other code is the execution's own error_code.
+  const codes = ['model_failed', 'checkpoint_failed', 'cancelled', 'invalid_result', 'dispatch_uncertain', 'result_unconfirmed',
+    'control_unreachable', 'control_refused'];
   const run = value => /^[1-9][0-9]{0,19}$/.test(String(value)) ? String(value) : 'unknown';
   const id = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(execution.id || '') ? execution.id : 'unknown';
   return `${label} execution failure: stage=${stages.includes(stage) ? stage : 'unknown'}; source_run=${run(sourceRunId)}; ` +
@@ -29,9 +32,15 @@ export function executionDiagnostic(stage, sourceRunId, execution = {}, label = 
 
 // The executor never reached a model verdict, so the pull request has not been
 // reviewed. Its content did not cause this and a later attempt can still work.
+// Reconciliation can recover a terminal artifact while Control restarts. That receipt has no error_code, unlike a
+// direct completion. A failed/cancelled receipt is still an unavailable execution, not a negative review verdict.
 export function executionUnavailable(line) {
-  const match = /^(?:Ops|Control) execution failure: stage=[a-z-]+; source_run=(?:[0-9]+|unknown); execution=(?:[a-f0-9-]+|unknown); executor_run=(?:[0-9]+|unknown); state=[a-z]+; code=([a-z_]+)\.$/.exec(line || '');
-  return ['model_failed', 'checkpoint_failed', 'cancelled', 'dispatch_uncertain'].includes(match?.[1]);
+  if (readExecutionDiagnostic(line) !== line) return false;
+  const match = /stage=([a-z-]+); .*; state=([a-z]+); code=([a-z_]+)\.$/.exec(line || '');
+  if (['model_failed', 'checkpoint_failed', 'cancelled', 'dispatch_uncertain', 'result_unconfirmed', 'control_unreachable'].includes(match?.[3])) return true;
+  // A failed or cancelled execution with no code is a receipt reconciliation recovered; the other `unknown` cases (the
+  // run deadline, a local failure) are not evidence about the executor and stay terminal.
+  return match?.[3] === 'unknown' && match[1] === 'execution' && ['failed', 'cancelled'].includes(match[2]);
 }
 
 export function readExecutionDiagnostic(text) {

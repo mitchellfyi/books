@@ -17,6 +17,41 @@ const terminalStatuses = new Set(['succeeded', 'failed', 'cancelled']);
 const pollingStops = new Set([...terminalStatuses, 'blocked']);
 const executionStatuses = new Set(['queued', 'dispatching', 'running', ...pollingStops]);
 
+// How long Control may go without answering before a run gives up, measured by the clock. Control restarts on every
+// deploy: the step that replaces it took 143 to 169 seconds in 35 deploys on 12 and 13 October 2026, and a whole deploy
+// run took up to 13.3 minutes. An outage (agent-relay-transport.mjs says which failures are one) is waited out for this
+// long; a refusal ends the run at once. docs/decisions/2026-10-13-relay-outage-tolerance.md has the evidence.
+export const OUTAGE_TOLERANCE_MS = 15 * 60_000;
+export const POLL_INTERVAL_MS = 5000;
+// Waits during an outage double from the poll interval to this cap, each drawn from its upper half (equal jitter), so
+// clients that lost Control together do not return together.
+export const RETRY_CAP_MS = 30_000;
+const reasons = new Set(['network', 'timeout', 'rate_limited', 'server_error', 'receipt_pending', 'invalid_response', 'refused']);
+
+// What a failed request means for the run, from the transport's fixed classification only. An error without one (an
+// injected service, an unexpected exception) counts as an outage: it is waited out, never retried forever.
+export function classifyFailure(error) {
+  const relay = error?.relay;
+  const known = relay && ['outage', 'refusal'].includes(relay.kind);
+  return {
+    kind: known ? relay.kind : 'outage',
+    reason: known && reasons.has(relay.reason) ? relay.reason : 'unclassified',
+    source: known && relay.source === 'identity' ? 'identity' : 'control',
+    status: known && Number.isInteger(relay.status) && relay.status >= 100 && relay.status <= 599 ? relay.status : null,
+    retryAfter: Number.isFinite(error?.retryAfter) && error.retryAfter > 0 ? error.retryAfter : 0,
+  };
+}
+
+// The jittered wait before the next attempt, after `failures` consecutive failures.
+export function outageWait(failures, random = Math.random, retryAfter = 0) {
+  const ceiling = Math.min(RETRY_CAP_MS, POLL_INTERVAL_MS * 2 ** Math.min(Math.max(failures, 1) - 1, 10));
+  const jittered = Math.round(ceiling / 2 + Math.min(Math.max(random(), 0), 1) * ceiling / 2);
+  return Math.max(jittered, retryAfter);
+}
+
+const seconds = milliseconds => Math.round(milliseconds / 1000);
+const facts = why => [`reason=${why.reason}`, `source=${why.source}`, ...(why.status ? [`http=${why.status}`] : [])].join('; ');
+
 export async function setup(env = process.env) {
   if (env.RUNNER_ENVIRONMENT !== 'github-hosted' || env.GITHUB_REF !== 'refs/heads/main' ||
       !/^[a-f0-9]{40}$/.test(env.GITHUB_WORKFLOW_SHA) || !isAbsolute(env.HOME) ||
@@ -91,7 +126,13 @@ export async function relay(args, input, env = process.env, services = {}) {
   const lockPath = join(env.HOME, '.control-agent-invocation.lock');
   const lock = await open(lockPath, 'wx', 0o600);
   const request = services.request || ((path, options) => controlRequest(runtime, path, options));
-  let execution, executionId, cancellation; let cancelled = false;
+  // Elapsed wall time on a monotonic clock: NTP adjustments cannot lengthen an outage budget.
+  const now = services.now || (() => performance.now()), random = services.random || Math.random;
+  const log = services.log || (line => process.stderr.write(`${line}\n`));
+  // A cancelled run stops waiting at once instead of finishing a backoff first.
+  const waiting = new AbortController();
+  const pause = milliseconds => (services.delay || delay)(milliseconds, undefined, { signal: waiting.signal }).catch(() => {});
+  let execution, executionId, cancellation, deadline = Infinity; let cancelled = false;
   let stage = 'preparation';
   const cancelAccepted = () => {
     if (cancellation) return cancellation;
@@ -109,7 +150,48 @@ export async function relay(args, input, env = process.env, services = {}) {
     })();
     return cancellation;
   };
-  const cancel = () => { cancelled = true; void cancelAccepted(); };
+  const cancel = () => { cancelled = true; waiting.abort(); void cancelAccepted(); };
+  const stop = code => Object.assign(fail(), { relayCode: code });
+  // Sends one Control request until Control answers it. An outage is waited out for OUTAGE_TOLERANCE_MS of clock time
+  // (or until the run's deadline) with jittered backoff and one line on stderr saying why; a refusal stops at once.
+  const patiently = async send => {
+    let since, failures = 0, logged = -Infinity, last;
+    const remaining = () => Math.min(OUTAGE_TOLERANCE_MS - (since === undefined ? 0 : now() - since), deadline - now());
+    const expired = () => {
+      log(`Control relay: giving up at stage=${stage}: no answer for ${seconds(now() - (since ?? now()))}s, outage limit=${seconds(OUTAGE_TOLERANCE_MS)}s, run deadline remaining=${Math.max(0, seconds(deadline - now()))}s (last ${facts(last || { reason: 'run_deadline', source: 'control' })}).`);
+      // Only a failed request makes Control unreachable. A run deadline that arrives before any failure (commonly while a poll
+      // sleep crosses it) is the run's own limit and stays terminal, not a restartable outage.
+      return last ? stop('control_unreachable') : fail();
+    };
+    // Sequential by design: the same execution is polled, never resubmitted or replayed as a new model call.
+    for (;;) {
+      if (cancelled) throw fail();
+      if (remaining() <= 0) throw expired();
+      const started = now();
+      try {
+        // Bound the in-flight fetch as well as the sleeps; a request may not consume another transport retry window.
+        const signal = AbortSignal.any([waiting.signal, AbortSignal.timeout(Math.max(1, Math.ceil(remaining())))]);
+        const answer = await send(signal);
+        if (failures) log(`Control relay: Control answered again at stage=${stage} after ${seconds(now() - since)}s (${failures} failed attempts).`);
+        return answer;
+      } catch (error) {
+        if (cancelled) throw fail();
+        const why = classifyFailure(error);
+        since ??= started; failures++; last = why;
+        if (why.kind === 'refusal') {
+          log(`Control relay: stopping at stage=${stage}: request refused (${facts(why)}); waiting cannot change a refusal.`);
+          throw stop('control_refused');
+        }
+        if (remaining() <= 0) throw expired();
+        const next = Math.min(outageWait(failures, random, why.retryAfter), remaining());
+        if (now() - logged >= 60_000) {
+          logged = now();
+          log(`Control relay: waiting out an outage at stage=${stage} (${facts(why)}; waited ${seconds(now() - since)}s of ${seconds(OUTAGE_TOLERANCE_MS)}s; next attempt in ${seconds(next)}s). Control restarts on every deploy.`);
+        }
+        await pause(next);
+      }
+    }
+  };
   process.once('SIGTERM', cancel); process.once('SIGINT', cancel);
   try {
     const workspace = runtime.GITHUB_WORKSPACE;
@@ -129,26 +211,28 @@ export async function relay(args, input, env = process.env, services = {}) {
     stage = 'context-upload';
     const artifact = await (services.upload || uploadBundle)(`agent-context-${runtime.GITHUB_RUN_ID}-${runtime.GITHUB_RUN_ATTEMPT}-${client_request_id}`, bundle, runtime);
     stage = 'submission';
+    deadline = now() + 100 * 60_000;
     const body = { client_request_id, target_sha, context_artifact_id: artifact.id, context_digest: artifact.digest, operation };
-    for (let attempt = 0; attempt < 3; attempt++) {
-      try { execution = await request('', { method: 'POST', body }); break; }
-      catch { if (attempt === 2) throw fail(); await delay(2000); }
+    // Repeating the submission is safe: Control returns the execution it already accepted for this client_request_id.
+    execution = await patiently(signal => request('', { method: 'POST', body, signal }));
+    if (!/^[a-f0-9-]{36}$/.test(execution?.id)) {
+      log('Control relay: stopping at stage=submission: invalid execution identity.'); throw stop('control_refused');
     }
-    if (!/^[a-f0-9-]{36}$/.test(execution?.id)) throw fail();
     executionId = execution.id;
-    if (!executionStatuses.has(execution.status)) throw fail();
+    if (!executionStatuses.has(execution.status)) {
+      log('Control relay: stopping at stage=submission: unsupported execution state.'); throw stop('control_refused');
+    }
     stage = 'polling';
-    const deadline = Date.now() + 100 * 60_000;
-    // Control restarts for a minute or two on each deploy; an unanswered status read is waited out (five minutes of
-    // consecutive failures at most) instead of ending a run whose execution is still queued or running.
-    let unanswered = 0;
+    // A read Control answers with another identity or an unknown status still fails at once. While Control is away the
+    // execution keeps running, and a terminal status recorded meanwhile is read when Control answers again.
     while (!pollingStops.has(execution.status)) {
-      if (cancelled || Date.now() > deadline) throw fail();
-      await (services.delay || delay)(5000);
-      let next;
-      try { next = await request(`/${executionId}`); unanswered = 0; }
-      catch { if (++unanswered > 60) throw fail(); continue; }
-      if (next?.id !== executionId || !executionStatuses.has(next.status)) throw fail();
+      if (cancelled || now() > deadline) throw fail();
+      await pause(POLL_INTERVAL_MS);
+      const next = await patiently(signal => request(`/${executionId}`, { attempts: 1, signal }));
+      if (next?.id !== executionId || !executionStatuses.has(next.status)) {
+        log(`Control relay: stopping at stage=polling: ${next?.id !== executionId ? 'execution identity changed' : 'unsupported execution state'}.`);
+        throw stop('control_refused');
+      }
       execution = next;
     }
     stage = 'execution';
@@ -156,7 +240,7 @@ export async function relay(args, input, env = process.env, services = {}) {
     stage = 'head-verification';
     if (head(checkout) !== target_sha) throw fail();
     stage = 'result-download';
-    const download = await request(`/${execution.id}/result`);
+    const download = await patiently(signal => request(`/${execution.id}/result`, { attempts: 1, signal }));
     const result = await (services.download || downloadBundle)(download.url, download.digest);
     stage = 'result-validation';
     if (result?.version !== 1 || result.execution_id !== execution.id || result.client_request_id !== client_request_id ||
@@ -186,7 +270,7 @@ export async function relay(args, input, env = process.env, services = {}) {
   } catch (error) {
     throw Object.assign(error instanceof Error ? error : fail(), {
       executionDiagnostic: executionDiagnostic(stage, runtime.GITHUB_RUN_ID,
-        { ...execution, id: executionId }),
+        { ...execution, id: executionId, ...(error?.relayCode ? { error_code: error.relayCode } : {}) }),
     });
   } finally {
     try { await cancelAccepted(); }
